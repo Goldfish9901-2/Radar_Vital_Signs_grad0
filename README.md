@@ -134,3 +134,7 @@ conda activate radar-gpu
 
 - 保留：`docs/README.md`、`docs/DATASETS.md`
 - 规划、实验矩阵、指标定义统一维护在本文件
+
+
+## docker
+ - 启动容器：docker run --rm -it --gpus all --name radar_dev -v $(pwd):/workspace radar_vital_signs bash

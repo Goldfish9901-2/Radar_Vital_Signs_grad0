@@ -17,3 +17,6 @@
   - 统一返回容器：`{"data": np.ndarray, "meta": {...}}`。
   - `meta` 至少包含：`dataset`、`shape`、`dtype`、`is_complex`、`axes`、`sample_rate/frame_rate`。
   - 短期不强行统一张量形状，仅统一语义描述（`axes`）；中期增加可选标准化输出（如 `NCHW` 或 `T,C,...`）。
+
+## 2026-03-18
+- 将radar_vital_signs继续完善后上传至dockerhub

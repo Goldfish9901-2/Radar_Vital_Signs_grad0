@@ -260,3 +260,5 @@ notebooks/temp/
 NOTES.md
 TODO_personal.md
 
+docker_assets/
+.venv-download/
