@@ -138,3 +138,8 @@ conda activate radar-gpu
 
 ## docker
  - 启动容器：docker run --rm -it --gpus all --name radar_dev -v $(pwd):/workspace radar_vital_signs bash
+ - 复用宿主机网络：docker run --rm -it --gpus all \
+  --network host \
+  --name radar_dev \
+  -v $(pwd):/workspace \
+  radar_vital_signs bash
