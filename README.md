@@ -137,9 +137,19 @@ conda activate radar-gpu
 
 
 ## docker
- - 启动容器：docker run --rm -it --gpus all --name radar_dev -v $(pwd):/workspace radar_vital_signs bash
- - 复用宿主机网络：docker run --rm -it --gpus all \
+ - 启动容器：docker run -it --gpus all --name radar_dev -v $(pwd):/workspace radar_vital_signs bash
+ - 复用宿主机网络：docker run -it --gpus all \
   --network host \
   --name radar_dev \
   -v $(pwd):/workspace \
+  radar_vital_signs bash
+- docker run -it --gpus all \
+  --name radar_dev \
+  -v $(pwd):/workspace \
+  -e http_proxy=$http_proxy \
+  -e https_proxy=$https_proxy \
+  -e HTTP_PROXY=$HTTP_PROXY \
+  -e HTTPS_PROXY=$HTTPS_PROXY \
+  -e no_proxy=$no_proxy \
+  -e NO_PROXY=$NO_PROXY \
   radar_vital_signs bash
