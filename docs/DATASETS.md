@@ -27,6 +27,10 @@ Dataset/
 - `load_reference_data(...) -> Dict[str, Any]`
 - `get_dataset_info() -> Dict[str, Any]`
 
+统一雷达张量维度顺序约定：
+
+- `load_radar_data` 默认返回 4D 张量，轴顺序为 `(frames, rx, chirps, samples)`。
+
 ## 4. 最小使用示例
 
 ```python

@@ -326,8 +326,14 @@ class FTUDataLoader(BaseDataLoader):
         q_data[:, :, 1::2] = grouped[:, :, :, 3]  # Q2, Q4, ...
 
         # 转为复数，并整理成 [RX, ADC, total_chirps]
-        complex_data = i_data + 1j * q_data  # [chirp, rx, adc]
-        return np.transpose(complex_data, (1, 2, 0)).astype(np.complex64)
+        complex_data = i_data + 1j * q_data  # [total_chirps, rx, samples]
+        frame_major = complex_data.reshape(
+            self.NUM_FRAMES,
+            self.NUM_CHIRPS,
+            self.NUM_RX,
+            self.NUM_ADC
+        )
+        return np.transpose(frame_major, (0, 2, 1, 3)).astype(np.complex64)
 
     def _convert_timestamps(self, timestamps: np.ndarray) -> np.ndarray:
         """将时间戳从HH:MM:SS格式转换为秒。

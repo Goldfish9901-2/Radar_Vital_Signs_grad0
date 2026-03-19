@@ -92,7 +92,7 @@ class BGT60TR13CDataLoader(BaseDataLoader):
         participant_id: int,
         distance: str,
         measurement_type: str = 'short',
-        apply_dc_correction: bool = True
+        apply_dc_correction: bool = False
     ) -> np.ndarray:
         """加载雷达原始数据。
         
