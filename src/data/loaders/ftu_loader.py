@@ -286,43 +286,48 @@ class FTUDataLoader(BaseDataLoader):
         return path
     
     def _reshape_radar_data(self, raw_data: np.ndarray) -> np.ndarray:
-        """将原始数据重塑为标准数据立方体格式。
-        
-        数据排列顺序（基于DCA1000 LVDS Lane格式）：
-            每8个int16值为一组: [RX0_I, RX0_Q, RX1_I, RX1_Q, RX2_I, RX2_Q, RX3_I, RX3_Q]
-        
-        处理步骤:
-            1. 重塑为 [总采样数, 8]
-            2. 提取每个RX通道的I和Q分量
-            3. 组合成复数
-            4. 重塑为数据立方体 [4, 250, 153600]
-        
-        Args:
-            raw_data: 原始int16数组
-        
-        Returns:
-            复数数据立方体，shape为(4, 250, 153600)
+        """按 chirp 展开顺序重排为 [RX, ADC, Frames*Chirps] 复数数据立方体。
+
+        对应顺序（与图示一致）：
+        1) 整体文件：chirp1 -> chirp2 -> ... -> chirpM
+        2) 每个 chirp 内：RX0 -> RX1 -> RX2 -> RX3
+        3) 每个 RX 内：I1 I2 Q1 Q2 I3 I4 Q3 Q4 ... I(N-1) I(N) Q(N-1) Q(N)
         """
-        total_samples = self.NUM_ADC * self.NUM_FRAMES * self.NUM_CHIRPS
-        
-        # 重塑为 [总采样数, 8]
-        data_reshaped = raw_data.reshape(total_samples, 8)
-        
-        # 提取每个RX通道的IQ数据
-        rx_data = np.zeros((self.NUM_RX, total_samples), dtype=np.complex64)
-        for rx in range(self.NUM_RX):
-            I = data_reshaped[:, rx*2].astype(np.float32)      # RX的I分量
-            Q = data_reshaped[:, rx*2 + 1].astype(np.float32)  # RX的Q分量
-            rx_data[rx, :] = I + 1j * Q
-        
-        # 重塑为最终数据立方体 [4, 250, 153600]
-        data_cube = rx_data.reshape(
+        total_chirps = self.NUM_FRAMES * self.NUM_CHIRPS
+        if self.NUM_ADC % 2 != 0:
+            raise ValueError(
+                f"当前实现要求 NUM_ADC 为偶数，得到: {self.NUM_ADC}"
+            )
+
+        # 每个 chirp 中，单个 RX 占用的 int16 数：NUM_ADC 个 I + NUM_ADC 个 Q
+        words_per_rx_per_chirp = self.NUM_ADC * 2
+        words_per_chirp = self.NUM_RX * words_per_rx_per_chirp
+        expected_words = total_chirps * words_per_chirp
+        if raw_data.size != expected_words:
+            raise ValueError(
+                f"原始数据长度与配置不匹配。期望 int16 数: {expected_words}, 实际: {raw_data.size}"
+            )
+
+        # 先按 chirp、RX、(I1 I2 Q1 Q2) 四元组拆分
+        # grouped 形状: [total_chirps, NUM_RX, NUM_ADC/2, 4]
+        grouped = raw_data.reshape(
+            total_chirps,
             self.NUM_RX,
-            self.NUM_ADC,
-            self.NUM_FRAMES * self.NUM_CHIRPS
-        )
-        
-        return data_cube
+            self.NUM_ADC // 2,
+            4
+        ).astype(np.float32)
+
+        # 还原每个 RX 的连续 I/Q 序列
+        i_data = np.empty((total_chirps, self.NUM_RX, self.NUM_ADC), dtype=np.float32)
+        q_data = np.empty((total_chirps, self.NUM_RX, self.NUM_ADC), dtype=np.float32)
+        i_data[:, :, 0::2] = grouped[:, :, :, 0]  # I1, I3, ...
+        i_data[:, :, 1::2] = grouped[:, :, :, 1]  # I2, I4, ...
+        q_data[:, :, 0::2] = grouped[:, :, :, 2]  # Q1, Q3, ...
+        q_data[:, :, 1::2] = grouped[:, :, :, 3]  # Q2, Q4, ...
+
+        # 转为复数，并整理成 [RX, ADC, total_chirps]
+        complex_data = i_data + 1j * q_data  # [chirp, rx, adc]
+        return np.transpose(complex_data, (1, 2, 0)).astype(np.complex64)
 
     def _convert_timestamps(self, timestamps: np.ndarray) -> np.ndarray:
         """将时间戳从HH:MM:SS格式转换为秒。
