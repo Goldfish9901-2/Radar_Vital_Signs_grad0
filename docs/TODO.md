@@ -34,3 +34,7 @@
   - `meta`：元信息（`dataset/axes/shape/dtype/is_complex/frame_rate/sample_rate/preprocess`）。
 - 明确保存预处理配置（窗函数、FFT 点数、去静态方法、归一化方法），确保可复现。
 - [ ] PhysDrive 真值统一：新增 `ECG/resp -> time/heart_rate/respiration_rate` 转换流程，输出与 FTU/BGT60 一致的参考格式（含时间戳和 bpm 序列）。
+
+
+## 3.23
+docker需新增pandas

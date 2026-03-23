@@ -1,7 +1,7 @@
 """4TU.ResearchD数据集加载器"""
 
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, List, Optional
 import numpy as np
 import pandas as pd
 
@@ -87,7 +87,8 @@ class FTUDataLoader(BaseDataLoader):
         participant_id: int,
         scenario: str,
         distance: str,
-        repeat: int
+        repeat: int,
+        max_frames: Optional[int] = None
     ) -> np.ndarray:
         """加载雷达原始数据。
         
@@ -96,12 +97,14 @@ class FTUDataLoader(BaseDataLoader):
             scenario: 场景类型 ('Distance', 'Orientation', 'Angle', 'Elevated')
             distance: 距离 (如 '80 cm')
             repeat: 重复次数 (1-4)
+            max_frames: 仅加载前N帧（用于快速验证/调试），默认None表示加载全部1200帧
         
         Returns:
-            雷达数据立方体，shape为(num_rx, num_adc, num_chirps)
+            雷达数据张量，shape为(num_frames, num_rx, num_chirps, num_adc)
+            - num_frames: max_frames 或 1200
             - num_rx: 4 (接收天线数)
+            - num_chirps: 128
             - num_adc: 250 (ADC采样点数)
-            - num_chirps: 153600 (1200帧 × 128 chirps/帧)
         
         Raises:
             ValueError: 如果参数无效
@@ -116,25 +119,30 @@ class FTUDataLoader(BaseDataLoader):
             participant_id, scenario, distance, repeat
         )
         
-        # 读取二进制文件
+        # 读取二进制文件（按需截取前N帧，避免全量加载造成内存压力）
         bin_file = file_path / 'data_Raw_0.bin'
+        num_frames = self.NUM_FRAMES if max_frames is None else max_frames
+        if not 1 <= num_frames <= self.NUM_FRAMES:
+            raise ValueError(
+                f"max_frames必须在1-{self.NUM_FRAMES}之间，得到: {num_frames}"
+            )
+
+        words_per_frame = self.NUM_ADC * self.NUM_RX * self.NUM_CHIRPS * 2
+        required_words = num_frames * words_per_frame
         try:
-            raw_data = np.fromfile(bin_file, dtype=np.int16)
+            raw_mm = np.memmap(bin_file, dtype=np.int16, mode='r')
         except Exception as e:
             raise IOError(f"读取雷达数据失败: {bin_file}, 错误: {e}")
-        
-        # 验证数据大小
-        expected_size = (
-            self.NUM_ADC * self.NUM_RX * 
-            self.NUM_FRAMES * self.NUM_CHIRPS * 2  # IQ
-        )
-        if len(raw_data) != expected_size:
+
+        # 验证并截取数据大小
+        if raw_mm.size < required_words:
             raise ValueError(
-                f"数据大小不匹配。期望: {expected_size}, 实际: {len(raw_data)}"
+                f"数据大小不足。期望至少: {required_words}, 实际: {raw_mm.size}"
             )
-        
+        raw_data = np.asarray(raw_mm[:required_words], dtype=np.int16)
+
         # 重塑数据为数据立方体
-        return self._reshape_radar_data(raw_data)
+        return self._reshape_radar_data(raw_data, num_frames=num_frames)
     
     def load_reference_data(
         self,
@@ -285,15 +293,20 @@ class FTUDataLoader(BaseDataLoader):
         
         return path
     
-    def _reshape_radar_data(self, raw_data: np.ndarray) -> np.ndarray:
-        """按 chirp 展开顺序重排为 [RX, ADC, Frames*Chirps] 复数数据立方体。
+    def _reshape_radar_data(
+        self,
+        raw_data: np.ndarray,
+        num_frames: Optional[int] = None
+    ) -> np.ndarray:
+        """按 chirp 展开顺序重排为 [frames, rx, chirps, adc] 复数数据张量。
 
         对应顺序（与图示一致）：
         1) 整体文件：chirp1 -> chirp2 -> ... -> chirpM
         2) 每个 chirp 内：RX0 -> RX1 -> RX2 -> RX3
         3) 每个 RX 内：I1 I2 Q1 Q2 I3 I4 Q3 Q4 ... I(N-1) I(N) Q(N-1) Q(N)
         """
-        total_chirps = self.NUM_FRAMES * self.NUM_CHIRPS
+        active_frames = self.NUM_FRAMES if num_frames is None else num_frames
+        total_chirps = active_frames * self.NUM_CHIRPS
         if self.NUM_ADC % 2 != 0:
             raise ValueError(
                 f"当前实现要求 NUM_ADC 为偶数，得到: {self.NUM_ADC}"
@@ -328,12 +341,91 @@ class FTUDataLoader(BaseDataLoader):
         # 转为复数，并整理成 [RX, ADC, total_chirps]
         complex_data = i_data + 1j * q_data  # [total_chirps, rx, samples]
         frame_major = complex_data.reshape(
-            self.NUM_FRAMES,
+            active_frames,
             self.NUM_CHIRPS,
             self.NUM_RX,
             self.NUM_ADC
         )
         return np.transpose(frame_major, (0, 2, 1, 3)).astype(np.complex64)
+
+    def list_available_samples(
+        self,
+        participant_id: Optional[int] = None,
+        scenario: Optional[str] = None,
+        limit: Optional[int] = None
+    ) -> List[Dict[str, Any]]:
+        """扫描并返回可加载的样本列表。
+
+        Args:
+            participant_id: 指定参与者ID（可选）
+            scenario: 指定场景（可选）
+            limit: 返回数量上限（可选）
+
+        Returns:
+            可加载样本列表，每个元素包含:
+            - participant_id
+            - scenario
+            - distance
+            - repeat
+            - radar_file
+            - hr_file
+        """
+        participants = (
+            [participant_id] if participant_id is not None else list(range(1, 11))
+        )
+        scenarios = (
+            [scenario] if scenario is not None else list(self.SCENARIO_MAP.keys())
+        )
+
+        records: List[Dict[str, Any]] = []
+        for pid in participants:
+            for scene in scenarios:
+                if scene not in self.SCENARIO_MAP:
+                    continue
+                scenario_folder = self.SCENARIO_MAP[scene]
+
+                radar_scenario_dir = (
+                    self.radar_data_path /
+                    f'Participant {pid}' /
+                    scenario_folder
+                )
+                if not radar_scenario_dir.exists():
+                    continue
+
+                for distance_dir in sorted(radar_scenario_dir.iterdir()):
+                    if not distance_dir.is_dir():
+                        continue
+
+                    for repeat_dir in sorted(distance_dir.iterdir()):
+                        if not repeat_dir.is_dir():
+                            continue
+                        try:
+                            rep = int(repeat_dir.name)
+                        except ValueError:
+                            continue
+
+                        radar_file = repeat_dir / 'data_Raw_0.bin'
+                        hr_file = (
+                            self.hr_ref_path /
+                            f'Participant {pid}' /
+                            scenario_folder /
+                            distance_dir.name /
+                            f'R{rep}.CSV'
+                        )
+
+                        if radar_file.exists() and hr_file.exists():
+                            records.append({
+                                'participant_id': pid,
+                                'scenario': scene,
+                                'distance': distance_dir.name,
+                                'repeat': rep,
+                                'radar_file': str(radar_file),
+                                'hr_file': str(hr_file)
+                            })
+                            if limit is not None and len(records) >= limit:
+                                return records
+
+        return records
 
     def _convert_timestamps(self, timestamps: np.ndarray) -> np.ndarray:
         """将时间戳从HH:MM:SS格式转换为秒。
@@ -378,4 +470,3 @@ class FTUDataLoader(BaseDataLoader):
                 'frame_rate': '20 fps'
             }
         }
-
