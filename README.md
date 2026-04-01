@@ -1,6 +1,6 @@
 ﻿# Radar Vital Signs 文档总览
 
-本文件是项目唯一主文档。
+本文件是项目主入口文档。
 
 ## 1. 项目目标
 
@@ -19,7 +19,7 @@
 - `src/data/loaders/physdrive_loader.py`
 - `src/data/loaders/bgt60_loader.py`
 
-数据结构细节见 [DATASETS.md](DATASETS.md)。
+数据结构细节见 [docs/DATASETS.md](docs/DATASETS.md)。
 
 ## 3. 未来整体项目规划（按实验包执行）
 
@@ -47,9 +47,9 @@
 
 要做的实验：
 
-1. 特征层域适应：DANN、MMD、CORAL。
-2. 数据层策略：噪声增强、幅度扰动、相位扰动、Mixup。
-3. 组合策略：增强+DANN、增强+MMD、DANN+MMD。
+1. 经典域适应基线：DANN、MMD、CORAL（作为主流对照组）。
+2. Source-Free 路线：Source-Free plain、Source-Free + WPL。
+3. 本项目升级版：Source-Free + WPL + 时序修正（回归任务替代Reverse-kNN）。
 
 交付：`reports/C_domain_adaptation.md`、方法对比表、最优组合配置。
 
@@ -75,22 +75,21 @@
 
 ## 4. 实验矩阵（可实施）
 
-说明：每行是一个可直接执行的实验单元，按 `ExpID` 建配置文件和结果目录。
+说明：每行是一个可直接执行的实验单元，按 `ExpID` 建配置文件和结果目录。  
+本版已合并重复项，突出“经典DA基线 -> Source-Free升级 -> 鲁棒性/消融”主线。
 
 | ExpID | 训练域 | 测试域 | 方法 | 主要输入 | 主要输出 | 核心指标 | 通过标准 | 实验目的（备注） |
 |---|---|---|---|---|---|---|---|---|
-| E01 | 4TU | 4TU | 传统信号基线 | 原始ADC + 参考心率 | HR/BR估计 | MAE, RMSE | MAE <= 6 bpm | 建立传统方法同域性能上界 |
-| E02 | 4TU | 4TU | 深度基线(CNN-LSTM) | 统一特征张量 | 预测序列 | MAE, r | MAE <= E01 | 建立深度模型同域基线并与E01对照 |
-| E03 | 4TU | PhysDrive | 直接迁移(无适配) | E02模型 | 跨域预测 | MAE, 降幅率 | 记录为跨域下界 | 量化4TU到车载场景的域偏移 |
-| E04 | 4TU | BGT60 | 直接迁移(无适配) | E02模型 | 跨域预测 | MAE, 降幅率 | 记录为跨域下界 | 量化跨雷达平台域偏移 |
-| E05 | 4TU | PhysDrive | DANN | 统一特征 + 域标签 | 跨域预测 | MAE, r | MAE较E03下降 >= 20% | 验证对抗域适应有效性 |
-| E06 | 4TU | PhysDrive | MMD | 统一特征 | 跨域预测 | MAE, r | MAE较E03下降 >= 20% | 验证分布对齐损失有效性 |
-| E07 | 4TU | PhysDrive | CORAL | 统一特征 | 跨域预测 | MAE, r | MAE较E03下降 >= 15% | 提供轻量域对齐对照方法 |
-| E08 | 4TU | PhysDrive | 增强 + DANN | 增强样本 + 域标签 | 跨域预测 | MAE, r | MAE较E03下降 >= 30% | 验证组合策略是否达到主目标提升 |
-| E09 | BGT60 | 4TU | 最优方法反向迁移 | 最优配置 | 跨域预测 | MAE, r | 验证双向有效 | 排除单向迁移偶然性，验证可迁移性 |
-| E10 | 最优模型 | 各域极端子集 | 鲁棒性测试 | 低/高心率与干扰片段 | 分场景误差 | 场景MAE波动 | 波动率 <= 25% | 验证模型在困难场景的稳定性 |
-| E11 | 最优模型 | BGT60长时数据 | 长时稳定性 | 连续长时序列 | 漂移曲线 | 分段MAE, 漂移量 | 漂移不过阈值 | 评估长时监测漂移与可用性 |
-| E12 | 最优模型 | 跨域测试集 | 消融实验 | 去除单模块配置 | 性能差异 | Delta MAE | 证明关键模块贡献 | 解释性能来源并支撑论文结论 |
+| E01 | 4TU | 4TU | 传统信号基线 | 原始ADC + 参考心率 | HR/BR估计 | MAE, RMSE | MAE <= 6 bpm | 建立信号处理上界与可解释参考 |
+| E02 | 4TU | 4TU | 深度基线(CNN-LSTM) | 统一特征张量 | 预测序列 | MAE, r | 不劣于E01 | 建立可迁移的源域监督模型 |
+| E03 | 4TU | PhysDrive + BGT60 | 直接迁移(无适配) | E02模型 | 跨域预测 | MAE, 降幅率 | 记录下界 | 统一作为跨域下界（合并原E03/E04） |
+| E04 | 4TU | PhysDrive + BGT60 | 经典DA基线组 | DANN / MMD / CORAL | 跨域预测 | MAE, r | 至少1种优于E03 | 合并原E05/E06/E07，保留主流对照 |
+| E05 | 4TU(源) | PhysDrive + BGT60(目标) | Source-Free plain | 源模型 + 目标无标签 | 跨域预测 | MAE, r | 接近E04最优 | 验证“无源数据适配”可行性 |
+| E06 | 4TU(源) | PhysDrive + BGT60(目标) | Source-Free + WPL | E05 + 置信度加权伪标签 | 跨域预测 | MAE, r | 优于E05 | 验证WPL抑制伪标签噪声有效 |
+| E07 | 4TU(源) | PhysDrive + BGT60(目标) | Source-Free + WPL + 时序修正 | E06 + Temporal Correction | 跨域预测 | MAE, r, 漂移量 | 优于E06或更稳 | 对应WPL-SFUDA思想的本项目版本 |
+| E08 | 最优模型 | 反向迁移(BGT60->4TU) | 方向一致性验证 | 最优配置 | 跨域预测 | MAE, r | 不出现明显反向失效 | 排除单向迁移偶然性（原E09简化） |
+| E09 | 最优模型 | 极端/干扰/长时子集 | 鲁棒性与稳定性 | 场景子集 + 长时序列 | 分场景误差 + 漂移曲线 | 场景波动率, 漂移斜率 | 波动率<=25%，漂移可控 | 合并原E10/E11，统一鲁棒性评估 |
+| E10 | 最优模型 | 跨域测试集 | 消融与统计检验 | 去除WPL/时序修正/前端模块 | Delta MAE, CI | 关键模块贡献显著 | 合并原E12并补统计显著性 |
 
 ## 5. 评估指标（精简且可落地）
 
@@ -118,25 +117,54 @@
 
 建议项目目标：最优跨域方法相对“直接迁移”基线，MAE 改进 >= 30%。
 
-## 6. 环境（Conda）
+## 6. 方法新颖性与参考文献
 
-```bash
-# CPU
-conda env create -f environment.yml
-conda activate radar
+### 6.1 经典基线（必须保留）
 
-# GPU
-conda env create -f environment.gpu.yml
-conda activate radar-gpu
-```
+- `DANN / MMD / CORAL` 仍是跨域任务中的主流强基线，适合本项目作为第一阶段可复现对照。
+- 新颖性有限：更适合做“可靠起点”，不建议作为论文唯一创新点。
+
+经典论文：
+
+- DANN (ICML 2015 / JMLR 2016): https://proceedings.mlr.press/v37/ganin15 / https://jmlr.org/papers/v17/15-239.html
+- DAN (MMD, ICML 2015): https://proceedings.mlr.press/v37/long15
+- Deep CORAL (ECCV-W 2016): https://arxiv.org/abs/1607.01719
+
+### 6.2 建议重点重写的升级方向（面向本项目）
+
+- `Source-Free UDA`（更贴近真实部署）：
+  - Radar HAR 代表案例：WPL-SFUDA (Pattern Recognition, 2026): https://www.sciencedirect.com/science/article/pii/S0031320325005266
+  - 价值：目标域无标签，且不需要访问源域原始数据，符合隐私约束和工程落地需求。
+- `对比学习 + 域对齐`（通常比纯 DANN 更稳）：
+  - mmWave gait 代表案例：GaitSADA (2023): https://arxiv.org/abs/2301.13384
+  - 价值：先学习更有判别性的表征，再进行分布对齐，在低标注场景更容易获得稳定提升。
+- `领域相关迁移学习`（跨模态/跨设备）：
+  - 与生理监测更接近：PSG -> FMCW radar 迁移 (2026): https://www.mdpi.com/2306-5354/13/3/283
+  - 领域直系早期工作：IR-UWB + ECG 的 SADA (2018): https://www.sciencedirect.com/science/article/pii/S1746809418301927
+  - 价值：能直接回答“跨设备、跨传感模态”下生命体征标签如何迁移的问题。
+- `鲁棒前端（物理先验）+ 轻量适配`：
+  - Pi-ViMo (mmWave vital signs, 2023): https://arxiv.org/abs/2303.13816
+  - 价值：先做生理信号提纯，再做域适配，通常比端到端硬对齐更稳，更适合噪声和场景扰动明显的数据。
+
+### 6.3 雷达生命体征基础综述（建议作为总览入口）
+
+- Proceedings of the IEEE 2023 Tutorial: https://proceedingsoftheieee.ieee.org/radar-based-monitoring-of-vital-signs/
+- 对应公开PDF: https://iris.unimore.it/retrieve/f7514021-8ae8-40e9-8410-1d4051db84a8/Radar-Based_Monitoring_of_Vital_Signs_A_Tutorial_Overview.pdf
+
+### 6.4 与本项目的适配建议
+
+- 当前规划中的 `DANN/MMD/CORAL` 保留为基线层。
+- 若要提升论文创新性，建议升级到：`基线DA + Source-Free/TTA + 雷达物理先验前端`。
+- 生命体征雷达中的公开跨域工作少于雷达 HAR，建议“主实验用生命体征数据，方法论借鉴 HAR 跨域”。
 
 ## 7. 文档边界
 
-- 保留：`docs/README.md`、`docs/DATASETS.md`
+- 保留：`docs/DATASETS.md`
 - 规划、实验矩阵、指标定义统一维护在本文件
 
 
-## docker
+## 8. docker
+```bash
 docker run -it --gpus all \
   --network host \
   --name radar_dev \
@@ -150,3 +178,6 @@ docker run -it --gpus all \
   -e NO_PROXY=$NO_PROXY \
   -w /Radar_Vital_Signs \
   radar_vital_signs bash
+```
+
+- 镜像地址：docker pull crpi-ojnb84j7hma95ay2.cn-shanghai.personal.cr.aliyuncs.com/hsun97282/radar:latest
