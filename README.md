@@ -146,24 +146,13 @@
   - Pi-ViMo (mmWave vital signs, 2023): https://arxiv.org/abs/2303.13816
   - 价值：先做生理信号提纯，再做域适配，通常比端到端硬对齐更稳，更适合噪声和场景扰动明显的数据。
 
-### 6.3 雷达生命体征基础综述（建议作为总览入口）
-
-- Proceedings of the IEEE 2023 Tutorial: https://proceedingsoftheieee.ieee.org/radar-based-monitoring-of-vital-signs/
-- 对应公开PDF: https://iris.unimore.it/retrieve/f7514021-8ae8-40e9-8410-1d4051db84a8/Radar-Based_Monitoring_of_Vital_Signs_A_Tutorial_Overview.pdf
-
 ### 6.4 与本项目的适配建议
 
 - 当前规划中的 `DANN/MMD/CORAL` 保留为基线层。
 - 若要提升论文创新性，建议升级到：`基线DA + Source-Free/TTA + 雷达物理先验前端`。
-- 生命体征雷达中的公开跨域工作少于雷达 HAR，建议“主实验用生命体征数据，方法论借鉴 HAR 跨域”。
-
-## 7. 文档边界
-
-- 保留：`docs/DATASETS.md`
-- 规划、实验矩阵、指标定义统一维护在本文件
 
 
-## 8. docker
+## 7. docker
 ```bash
 docker run -it --gpus all \
   --network host \
