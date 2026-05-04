@@ -13,6 +13,7 @@ dependencies:
   - h5py
   - pyyaml
   - tqdm
+  - ruff
   - pip:
       - neurokit2
 
