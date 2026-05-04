@@ -20,12 +20,17 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import sys
 import time
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
-import sys
 
 import numpy as np
+
+try:
+    import neurokit2 as nk  # type: ignore[import-not-found]
+except ImportError:
+    nk = None  # type: ignore[assignment]
 
 # 允许直接以脚本方式运行
 ROOT = Path(__file__).resolve().parents[3]
@@ -251,13 +256,11 @@ def build_manifest_failure(
 
 
 def _require_neurokit2():
-    try:
-        import neurokit2 as nk  # type: ignore[import-not-found]
-    except ImportError as exc:
+    if nk is None:
         raise ImportError(
             "PhysDrive HR/RR extraction requires neurokit2. "
             "Install it in the active environment, for example: pip install neurokit2"
-        ) from exc
+        )
     return nk
 
 
