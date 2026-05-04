@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import time
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 import sys
@@ -42,18 +43,18 @@ OUTPUT_DIR = ROOT / "exports"
 
 # 导出控制
 COMPRESS_OUTPUT = True
-BGT_INCLUDE_LONG = False
+BGT_INCLUDE_LONG = True
 UNIFY_TO_RDA = True
 BGT_LONG_FIXED_DISTANCE = "0.6m"
 
-# FTU 筛选（None 表示不筛选）
-# 例如：
+# FTU 筛选条件：默认 None 表示不过滤，导出全部可用样本
+# 如需只导出部分样本，可手动设置：
 # FTU_PARTICIPANT_ID = 1
 # FTU_SCENARIO = "Distance"
 # FTU_DISTANCE = "40 cm"
-FTU_PARTICIPANT_ID: Optional[int] = 1
-FTU_SCENARIO: Optional[str] = "Distance"
-FTU_DISTANCE: Optional[str] = "40 cm"
+FTU_PARTICIPANT_ID: Optional[int] = None
+FTU_SCENARIO: Optional[str] = None
+FTU_DISTANCE: Optional[str] = None
 
 # 统一输出配置
 TARGET_DOPPLER = 8
@@ -62,6 +63,12 @@ TARGET_RANGE = 8
 
 # 参考论文（arXiv:2507.19172）中 mmWave 对齐到 20Hz
 PHYSDRIVE_FRAME_RATE_HZ = 20.0
+PHYSDRIVE_ECG_PRIMARY_METHOD = "hamilton2002"
+PHYSDRIVE_ECG_FALLBACK_METHODS = ("pantompkins1985", "elgendi2010")
+PHYSDRIVE_RSP_PEAK_METHOD = "khodadad2018"
+PHYSDRIVE_ECG_RELIABLE_BPM = (45.0, 130.0)
+PHYSDRIVE_ECG_MIN_COVERAGE = 0.8
+PHYSDRIVE_ECG_MAX_INTERPOLATION_GAP_SECONDS = 2.0
 # ====================================================================
 
 
@@ -126,6 +133,40 @@ def write_manifest(path: Path, rows: Iterable[Dict[str, Any]]) -> None:
         writer = csv.DictWriter(f, fieldnames=headers)
         writer.writeheader()
         writer.writerows(rows)
+
+
+def print_stage(dataset_name: str, message: str) -> None:
+    print(f"\n[{dataset_name}] {message}", flush=True)
+
+
+def format_progress(current: int, total: int, width: int = 24) -> str:
+    if total <= 0:
+        return "[" + ("-" * width) + "]   0.0%"
+    ratio = min(max(current / total, 0.0), 1.0)
+    done = int(round(ratio * width))
+    bar = "#" * done + "-" * (width - done)
+    return f"[{bar}] {ratio * 100:5.1f}%"
+
+
+def print_sample_progress(
+    dataset_name: str,
+    current: int,
+    total: int,
+    sample_tag: str,
+    success: int,
+    failure: int,
+    started_at: float,
+    status: str,
+) -> None:
+    elapsed = time.monotonic() - started_at
+    print(
+        (
+            f"[{dataset_name}] {format_progress(current, total)} "
+            f"{current}/{total} ok={success} failed={failure} "
+            f"elapsed={elapsed:.1f}s status={status} sample={sample_tag}"
+        ),
+        flush=True,
+    )
 
 
 def build_export_payload(radar: np.ndarray, ref: Dict[str, np.ndarray]) -> Dict[str, np.ndarray]:
@@ -209,81 +250,162 @@ def build_manifest_failure(
     return row
 
 
-def _sanitize_vector(x: np.ndarray) -> np.ndarray:
-    arr = np.asarray(x, dtype=np.float32).reshape(-1)
-    arr[~np.isfinite(arr)] = 0.0
-    if arr.size == 0:
-        return arr
-    arr = arr - arr.mean()
-    std = arr.std()
-    if std > 1e-6:
-        arr = arr / std
-    return arr
+def _require_neurokit2():
+    try:
+        import neurokit2 as nk  # type: ignore[import-not-found]
+    except ImportError as exc:
+        raise ImportError(
+            "PhysDrive HR/RR extraction requires neurokit2. "
+            "Install it in the active environment, for example: pip install neurokit2"
+        ) from exc
+    return nk
 
 
-def _estimate_rate_series_from_signal(
-    signal: np.ndarray,
-    fs_hz: float,
-    min_hz: float,
-    max_hz: float,
-    min_peak_distance_sec: float,
-    peak_quantile: float = 0.7,
+def _clean_rate(rate: np.ndarray, min_bpm: float, max_bpm: float) -> np.ndarray:
+    out = np.asarray(rate, dtype=np.float32).copy()
+    invalid = (~np.isfinite(out)) | (out < min_bpm) | (out > max_bpm)
+    out[invalid] = np.nan
+    return out
+
+
+def _finite_coverage(values: np.ndarray) -> float:
+    if values.size == 0:
+        return 0.0
+    return float(np.isfinite(values).mean())
+
+
+def _rate_from_peak_intervals(
+    peaks: np.ndarray,
+    sampling_rate: float,
+    desired_length: int,
+    min_bpm: float,
+    max_bpm: float,
+    max_interpolation_gap_seconds: float,
 ) -> np.ndarray:
-    """从单通道生理信号估计逐时刻速率序列（bpm）。"""
-    x = _sanitize_vector(signal)
-    n = int(x.size)
-    if n == 0:
-        return np.array([], dtype=np.float32)
+    rate = np.full(desired_length, np.nan, dtype=np.float32)
+    peaks = np.asarray(peaks, dtype=np.int32).reshape(-1)
+    if peaks.size < 2:
+        return rate
 
-    time = np.arange(n, dtype=np.float32) / np.float32(fs_hz)
-    if n < 3 or fs_hz <= 0:
-        return np.full(n, np.nan, dtype=np.float32)
-
-    # 局部极大值 + 阈值
-    threshold = np.quantile(x, peak_quantile)
-    cands = np.where((x[1:-1] > x[:-2]) & (x[1:-1] >= x[2:]) & (x[1:-1] >= threshold))[0] + 1
-    min_dist = max(1, int(round(min_peak_distance_sec * fs_hz)))
-
-    # 非极大值抑制（按时间扫描，保留更强峰）
-    peaks: List[int] = []
-    for idx in cands.tolist():
-        if not peaks:
-            peaks.append(idx)
+    for left, right in zip(peaks[:-1], peaks[1:]):
+        if right <= left:
             continue
-        if idx - peaks[-1] >= min_dist:
-            peaks.append(idx)
-        elif x[idx] > x[peaks[-1]]:
-            peaks[-1] = idx
+        bpm = 60.0 * sampling_rate / float(right - left)
+        if min_bpm <= bpm <= max_bpm:
+            start = max(int(left), 0)
+            end = min(int(right) + 1, desired_length)
+            if start < end:
+                rate[start:end] = np.float32(bpm)
 
-    # 基于峰间距估计瞬时速率
-    if len(peaks) >= 2:
-        peak_arr = np.asarray(peaks, dtype=np.int32)
-        intervals = np.diff(peak_arr).astype(np.float32) / np.float32(fs_hz)
-        valid = (intervals >= (1.0 / max_hz)) & (intervals <= (1.0 / min_hz))
-        if np.any(valid):
-            mid_t = (peak_arr[:-1] + peak_arr[1:]).astype(np.float32) / (2.0 * np.float32(fs_hz))
-            bpm = 60.0 / intervals
-            mid_t = mid_t[valid]
-            bpm = bpm[valid]
-            if mid_t.size >= 2:
-                rate = np.interp(time, mid_t, bpm, left=bpm[0], right=bpm[-1]).astype(np.float32)
-                return rate
-            if mid_t.size == 1:
-                return np.full(n, bpm[0], dtype=np.float32)
+    finite_idx = np.flatnonzero(np.isfinite(rate))
+    if finite_idx.size < 2:
+        return rate
 
-    # 兜底：频域主频估计为常数序列
-    win = np.hanning(n).astype(np.float32)
-    y = x * win
-    fft_n = max(256, int(2 ** np.ceil(np.log2(max(8, n)))))
-    spec = np.abs(np.fft.rfft(y, n=fft_n)) ** 2
-    freqs = np.fft.rfftfreq(fft_n, d=(1.0 / fs_hz))
-    band = (freqs >= min_hz) & (freqs <= max_hz)
-    if np.any(band):
-        band_freqs = freqs[band]
-        band_spec = spec[band]
-        peak_hz = float(band_freqs[int(np.argmax(band_spec))])
-        return np.full(n, 60.0 * peak_hz, dtype=np.float32)
-    return np.full(n, np.nan, dtype=np.float32)
+    max_gap = int(round(max_interpolation_gap_seconds * sampling_rate))
+    x = np.arange(desired_length, dtype=np.float32)
+    interpolated = np.interp(x, finite_idx, rate[finite_idx]).astype(np.float32)
+    filled = rate.copy()
+    for idx in np.flatnonzero(~np.isfinite(rate)):
+        left_candidates = finite_idx[finite_idx < idx]
+        right_candidates = finite_idx[finite_idx > idx]
+        if left_candidates.size == 0 or right_candidates.size == 0:
+            continue
+        if int(right_candidates[0] - left_candidates[-1]) <= max_gap:
+            filled[idx] = interpolated[idx]
+    return filled
+
+
+def _detect_ecg_rate_candidate(
+    nk: Any,
+    cleaned_ecg: np.ndarray,
+    sampling_rate: float,
+    desired_length: int,
+    method: str,
+) -> np.ndarray:
+    try:
+        _, info = nk.ecg_peaks(
+            cleaned_ecg,
+            sampling_rate=sampling_rate,
+            method=method,
+        )
+        peaks = np.asarray(info.get("ECG_R_Peaks", []), dtype=np.int32)
+    except Exception:  # noqa: BLE001
+        return np.full(desired_length, np.nan, dtype=np.float32)
+    return _rate_from_peak_intervals(
+        peaks=peaks,
+        sampling_rate=sampling_rate,
+        desired_length=desired_length,
+        min_bpm=PHYSDRIVE_ECG_RELIABLE_BPM[0],
+        max_bpm=PHYSDRIVE_ECG_RELIABLE_BPM[1],
+        max_interpolation_gap_seconds=PHYSDRIVE_ECG_MAX_INTERPOLATION_GAP_SECONDS,
+    )
+
+
+def _neurokit_ecg_rate(
+    ecg: np.ndarray,
+    sampling_rate: float,
+    desired_length: int,
+) -> np.ndarray:
+    nk = _require_neurokit2()
+    try:
+        cleaned = nk.ecg_clean(ecg, sampling_rate=sampling_rate, method="neurokit")
+    except Exception:  # noqa: BLE001
+        return np.full(desired_length, np.nan, dtype=np.float32)
+
+    methods = (PHYSDRIVE_ECG_PRIMARY_METHOD, *PHYSDRIVE_ECG_FALLBACK_METHODS)
+    candidates = [
+        (
+            method,
+            _detect_ecg_rate_candidate(
+                nk=nk,
+                cleaned_ecg=cleaned,
+                sampling_rate=sampling_rate,
+                desired_length=desired_length,
+                method=method,
+            ),
+        )
+        for method in methods
+    ]
+
+    primary_rate = candidates[0][1]
+    primary_has_values = np.isfinite(primary_rate).any()
+    primary_median = np.nanmedian(primary_rate) if primary_has_values else np.nan
+    if (
+        _finite_coverage(primary_rate) >= PHYSDRIVE_ECG_MIN_COVERAGE
+        and np.isfinite(primary_median)
+    ):
+        return primary_rate
+
+    return max(
+        (rate for _, rate in candidates),
+        key=lambda rate: _finite_coverage(rate),
+    )
+
+
+def _neurokit_rsp_rate(
+    resp: np.ndarray,
+    sampling_rate: float,
+    desired_length: int,
+) -> np.ndarray:
+    nk = _require_neurokit2()
+    try:
+        cleaned = nk.rsp_clean(resp, sampling_rate=sampling_rate)
+        _, info = nk.rsp_peaks(
+            cleaned,
+            sampling_rate=sampling_rate,
+            method=PHYSDRIVE_RSP_PEAK_METHOD,
+        )
+        peaks = np.asarray(info.get("RSP_Peaks", []), dtype=np.int32)
+    except Exception:  # noqa: BLE001
+        return np.full(desired_length, np.nan, dtype=np.float32)
+    if peaks.size < 2:
+        return np.full(desired_length, np.nan, dtype=np.float32)
+    rate = nk.signal_rate(
+        peaks,
+        sampling_rate=sampling_rate,
+        desired_length=desired_length,
+    )
+    return np.asarray(rate, dtype=np.float32).reshape(-1)
 
 
 def build_physdrive_reference(ref: Dict[str, Any], frame_rate_hz: float) -> Dict[str, np.ndarray]:
@@ -294,21 +416,15 @@ def build_physdrive_reference(ref: Dict[str, Any], frame_rate_hz: float) -> Dict
     resp = resp[:n]
     time = np.arange(n, dtype=np.float32) / np.float32(frame_rate_hz)
 
-    heart_rate = _estimate_rate_series_from_signal(
-        ecg,
-        fs_hz=frame_rate_hz,
-        min_hz=0.6,
-        max_hz=3.0,
-        min_peak_distance_sec=0.30,
-        peak_quantile=0.70,
+    heart_rate = _clean_rate(
+        _neurokit_ecg_rate(ecg, sampling_rate=frame_rate_hz, desired_length=n),
+        min_bpm=PHYSDRIVE_ECG_RELIABLE_BPM[0],
+        max_bpm=PHYSDRIVE_ECG_RELIABLE_BPM[1],
     )
-    respiration_rate = _estimate_rate_series_from_signal(
-        resp,
-        fs_hz=frame_rate_hz,
-        min_hz=0.08,
-        max_hz=0.70,
-        min_peak_distance_sec=1.20,
-        peak_quantile=0.65,
+    respiration_rate = _clean_rate(
+        _neurokit_rsp_rate(resp, sampling_rate=frame_rate_hz, desired_length=n),
+        min_bpm=3.0,
+        max_bpm=60.0,
     )
     return {
         "time": time,
@@ -501,10 +617,13 @@ def export_ftu(
     scenario: Optional[str] = None,
     distance: Optional[str] = None,
 ) -> Tuple[int, int]:
+    started_at = time.monotonic()
+    print_stage("FTU", "Stage 1/4: initialize loader")
     loader = FTUDataLoader(str(dataset_root / "4TU.ResearchD"))
     dataset_out = output_dir / "FTU"
     manifest_rows: List[Dict[str, Any]] = []
 
+    print_stage("FTU", "Stage 2/4: discover samples")
     samples = loader.list_available_samples(
         participant_id=participant_id,
         scenario=scenario,
@@ -517,9 +636,11 @@ def export_ftu(
         print("[FTU] 没有匹配样本，跳过导出。")
         write_manifest(dataset_out / "manifest.csv", [])
         return 0, 0
+    print(f"[FTU] discovered {len(samples)} sample(s)", flush=True)
     success = 0
     failure = 0
 
+    print_stage("FTU", "Stage 3/4: export samples")
     for i, sample in enumerate(samples, start=1):
         pid = sample["participant_id"]
         scenario = sample["scenario"]
@@ -592,6 +713,7 @@ def export_ftu(
                 )
             )
             success += 1
+            status = "ok"
         except Exception as e:  # noqa: BLE001
             manifest_rows.append(
                 build_manifest_failure(
@@ -606,10 +728,25 @@ def export_ftu(
                 )
             )
             failure += 1
+            status = f"failed: {e}"
 
-        print(f"[FTU] {i}/{len(samples)} {sample_tag} done")
+        print_sample_progress(
+            dataset_name="FTU",
+            current=i,
+            total=len(samples),
+            sample_tag=sample_tag,
+            success=success,
+            failure=failure,
+            started_at=started_at,
+            status=status,
+        )
 
+    print_stage("FTU", "Stage 4/4: write manifest")
     write_manifest(dataset_out / "manifest.csv", manifest_rows)
+    print(
+        f"[FTU] finished: ok={success}, failed={failure}, elapsed={time.monotonic() - started_at:.1f}s",
+        flush=True,
+    )
     return success, failure
 
 
@@ -642,14 +779,19 @@ def export_bgt60(
     compress: bool,
     include_long: bool,
 ) -> Tuple[int, int]:
+    started_at = time.monotonic()
+    print_stage("BGT60", "Stage 1/4: initialize loader")
     loader = BGT60TR13CDataLoader(str(dataset_root / "BGT60TR13C"))
     dataset_out = output_dir / "BGT60TR13C"
     manifest_rows: List[Dict[str, Any]] = []
 
+    print_stage("BGT60", "Stage 2/4: discover samples")
     samples = iter_bgt_samples(loader, include_long=include_long)
+    print(f"[BGT60] discovered {len(samples)} sample(s)", flush=True)
     success = 0
     failure = 0
 
+    print_stage("BGT60", "Stage 3/4: export samples")
     for i, sample in enumerate(samples, start=1):
         pid = sample["participant_id"]
         distance = sample["distance"]
@@ -716,6 +858,7 @@ def export_bgt60(
                 )
             )
             success += 1
+            status = "ok"
         except Exception as e:  # noqa: BLE001
             manifest_rows.append(
                 build_manifest_failure(
@@ -729,10 +872,25 @@ def export_bgt60(
                 )
             )
             failure += 1
+            status = f"failed: {e}"
 
-        print(f"[BGT60] {i}/{len(samples)} {sample_tag} done")
+        print_sample_progress(
+            dataset_name="BGT60",
+            current=i,
+            total=len(samples),
+            sample_tag=sample_tag,
+            success=success,
+            failure=failure,
+            started_at=started_at,
+            status=status,
+        )
 
+    print_stage("BGT60", "Stage 4/4: write manifest")
     write_manifest(dataset_out / "manifest.csv", manifest_rows)
+    print(
+        f"[BGT60] finished: ok={success}, failed={failure}, elapsed={time.monotonic() - started_at:.1f}s",
+        flush=True,
+    )
     return success, failure
 
 
@@ -749,14 +907,19 @@ def export_physdrive(
     output_dir: Path,
     compress: bool,
 ) -> Tuple[int, int]:
+    started_at = time.monotonic()
+    print_stage("PhysDrive", "Stage 1/4: initialize loader")
     loader = PhysDriveDataLoader(str(dataset_root / "PhysDrive"))
     dataset_out = output_dir / "PhysDrive"
     manifest_rows: List[Dict[str, Any]] = []
 
+    print_stage("PhysDrive", "Stage 2/4: discover samples")
     samples = iter_phys_samples(loader)
+    print(f"[PhysDrive] discovered {len(samples)} sample(s)", flush=True)
     success = 0
     failure = 0
 
+    print_stage("PhysDrive", "Stage 3/4: export samples")
     for i, sample in enumerate(samples, start=1):
         session_id = sample["session_id"]
         sample_id = sample["sample_id"]
@@ -797,8 +960,19 @@ def export_physdrive(
                     axes=["frames", "doppler", "angle", "range"],
                 ),
                 **build_common_reference_meta(unified_ref),
-                "reference_source": "ecg_resp_converted",
+                "reference_source": "ecg_resp_neurokit2_derived",
                 "reference_frame_rate_hz": PHYSDRIVE_FRAME_RATE_HZ,
+                "reference_processing": {
+                    "library": "NeuroKit2",
+                    "heart_rate_method": "adaptive_rr_interval_qc",
+                    "heart_rate_primary_method": PHYSDRIVE_ECG_PRIMARY_METHOD,
+                    "heart_rate_fallback_methods": list(PHYSDRIVE_ECG_FALLBACK_METHODS),
+                    "respiration_rate_method": PHYSDRIVE_RSP_PEAK_METHOD,
+                    "heart_rate_reliable_bpm": list(PHYSDRIVE_ECG_RELIABLE_BPM),
+                    "heart_rate_min_coverage": PHYSDRIVE_ECG_MIN_COVERAGE,
+                    "heart_rate_max_interpolation_gap_seconds": PHYSDRIVE_ECG_MAX_INTERPOLATION_GAP_SECONDS,
+                    "respiration_rate_valid_bpm": [3.0, 60.0],
+                },
             }
             save_json(dataset_out / "meta" / f"{sample_tag}.json", meta)
 
@@ -815,6 +989,7 @@ def export_physdrive(
                 )
             )
             success += 1
+            status = "ok"
         except Exception as e:  # noqa: BLE001
             manifest_rows.append(
                 build_manifest_failure(
@@ -827,10 +1002,25 @@ def export_physdrive(
                 )
             )
             failure += 1
+            status = f"failed: {e}"
 
-        print(f"[PhysDrive] {i}/{len(samples)} {sample_tag} done")
+        print_sample_progress(
+            dataset_name="PhysDrive",
+            current=i,
+            total=len(samples),
+            sample_tag=sample_tag,
+            success=success,
+            failure=failure,
+            started_at=started_at,
+            status=status,
+        )
 
+    print_stage("PhysDrive", "Stage 4/4: write manifest")
     write_manifest(dataset_out / "manifest.csv", manifest_rows)
+    print(
+        f"[PhysDrive] finished: ok={success}, failed={failure}, elapsed={time.monotonic() - started_at:.1f}s",
+        flush=True,
+    )
     return success, failure
 
 
@@ -851,6 +1041,13 @@ def main() -> None:
         selected_datasets.append("PhysDrive")
     if not selected_datasets:
         selected_datasets = ["FTU", "BGT60TR13C", "PhysDrive"]
+
+    print_stage("Export", "Stage 0: configuration")
+    print(f"[Export] dataset_root: {dataset_root}", flush=True)
+    print(f"[Export] output_dir: {output_dir}", flush=True)
+    print(f"[Export] selected_datasets: {', '.join(selected_datasets)}", flush=True)
+    print(f"[Export] compress_output: {COMPRESS_OUTPUT}", flush=True)
+    print(f"[Export] unify_to_rda: {UNIFY_TO_RDA}", flush=True)
 
     if "FTU" in selected_datasets:
         ok, fail = export_ftu(

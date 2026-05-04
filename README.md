@@ -28,10 +28,67 @@
   - 三数据集导出统一字段：`radar`, `time`, `heart_rate`, `respiration_rate`。
   - 统一雷达特征域：将 FTU/BGT60 从 `(frames, rx, chirps, samples)` 转换到 PhysDrive 风格 `(frames, doppler, angle, range)`，默认对齐为 `8x16x8`。
   - PhysDrive 标签对齐：从 `ecg/respiration` 估计 `heart_rate/respiration_rate`，并补齐 `time`（当前按 `20 Hz` 对齐）。
+  - PhysDrive HR/RR 生成：使用 NeuroKit2 从 `ecg.mat` / `resp.mat` 派生，与论文处理流程保持一致。
   - FTU/BGT60 的 `range` 维选择已更新：由“逐帧 top-k”改为“全样本能量中心 + 连续窗口”，提升跨帧语义稳定性。
 - 说明：
   - PhysDrive 在当前公开包中是 processed mmWave，不是原始 ADC；FTU/BGT60 为原始或近原始数据，因此统一前必须走特征变换。
   - 详细背景与参数来源已同步到 `docs/DATASETS.md`。
+
+### 2.2 训练数据构建
+
+- 更新文件：`src/data/build_training_dataset.py`
+- 输入：`exports/{DATASET}/manifest.csv` 与 `exports/{DATASET}/samples/*.npz`
+- 输出：`training_exports/windows/{DATASET}/{train,val,test}/*.npz`、`training_exports/manifest.csv`、`build_config.json`、`summary.json`
+- 默认处理：
+  - 将统一导出的复数 RDA 转为 `log_magnitude`。
+  - 按固定长度窗口切片，默认 `window_size=256`、`stride=128`。
+  - 将参考 HR/RR 按雷达帧时间插值到逐帧标签。
+  - 对窗口标签做聚合，默认取均值。
+  - 默认在每个数据集内部独立按组划分 train/val/test，服务“一个数据集训练，另外两个数据集测试”的跨域实验主线：
+    - FTU：按 `participant_id` 分组。
+    - BGT60TR13C：按 `participant_id` 分组。
+    - PhysDrive：按 `session_id` 分组。
+  - `manifest.csv` 同时记录 `dataset` 与 `domain_split`。实验时用源数据集的 `train/val` 训练和选模，用目标数据集的 `test` 做跨域测试。
+  - BGT60TR13C long measurement 默认放入 `test`，用于长时测试，不参与训练集；为避免同一受试者泄漏，包含 long measurement 的 BGT60 participant 会整体放入 `test`。
+  - 默认要求心率标签可用；FTU 的呼吸率为 `NaN`，因此训练呼吸率或双任务时会自动过滤 FTU 对应窗口。
+
+示例：
+
+```bash
+python src/data/build_training_dataset.py \
+  --exports-dir exports \
+  --output-dir training_exports \
+  --target heart_rate \
+  --window-size 256 \
+  --stride 128 \
+  --normalize window_zscore
+```
+
+当前默认训练特征已切换为 `target_edacm_vmd`：
+
+- 从统一 complex RDA 窗口 `(256, 8, 16, 8)` 中选择能量最高的 `3` 个 `(doppler, angle, range)` 目标 bin。
+- 对每个目标 bin 的复数时间序列使用 EDACM 提取相位。
+- 对相位做线性去趋势与 z-score。
+- 按目标 bin 能量加权融合相位序列。
+- 对融合相位执行 VMD，默认 `K=7`。
+- 最终训练输入 `x.shape = (7, 256)`，每一行对应一个 VMD mode。
+
+如果需要回到旧的幅值基线，可以显式指定：
+
+```bash
+python src/data/build_training_dataset.py \
+  --representation log_magnitude \
+  --output-dir training_exports_logmag \
+  --overwrite
+```
+
+如需快速检查流程，可限制每个源样本最多输出少量窗口：
+
+```bash
+python src/data/build_training_dataset.py \
+  --overwrite \
+  --max-windows-per-sample 20
+```
 
 ## 3. 未来整体项目规划（按实验包执行）
 
