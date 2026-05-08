@@ -31,14 +31,15 @@ COPY docker_assets/wheels /tmp/wheels
 RUN pip install --no-cache-dir /tmp/wheels/* \
     && rm -rf /tmp/wheels
 
-RUN pip install --no-cache-dir numpy==2.1.3 pandas==2.2.3
+RUN pip install --no-cache-dir numpy==2.1.3 pandas==2.2.3 neurokit2
 
 WORKDIR /workspace
 
-CMD python -c "import torch, numpy, scipy, matplotlib; \
+CMD python -c "import torch, numpy, scipy, matplotlib, neurokit2; \
 print('torch=', torch.__version__); \
 print('cuda available=', torch.cuda.is_available()); \
 print('device count=', torch.cuda.device_count()); \
 print('numpy=', numpy.__version__); \
 print('scipy=', scipy.__version__); \
-print('matplotlib=', matplotlib.__version__)"
+print('matplotlib=', matplotlib.__version__); \
+print('neurokit2=', neurokit2.__version__)"

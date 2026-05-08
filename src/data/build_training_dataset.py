@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import itertools
 import json
 import shutil
 from pathlib import Path
@@ -45,6 +46,22 @@ DEFAULT_VMD_MAX_ITER = 120
 DEFAULT_VMD_TOL = 1e-5
 DEFAULT_SAMPLING_RATE_HZ = 20.0
 DEFAULT_RDA_REPRESENTATION = "log_magnitude"
+DEFAULT_SPLIT_MODE = "balanced_grouped"
+BALANCED_EXHAUSTIVE_MAX_GROUPS = 14
+FTU_SPECIAL_PARTICIPANTS = ("2", "5", "6")
+FTU_ELEVATED_HR_PARTICIPANTS = ("2", "3", "4", "6")
+DEFAULT_PARTICIPANT_SPLITS = {
+    "FTU": {
+        "train": ("2", "3", "4", "5", "7", "9"),
+        "val": ("6", "10"),
+        "test": ("1", "8"),
+    },
+    "BGT60TR13C": {
+        "train": ("1", "2", "4", "6", "7", "8"),
+        "val": ("5",),
+        "test": ("3",),
+    },
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -104,6 +121,15 @@ def parse_args() -> argparse.Namespace:
         nargs=3,
         default=list(DEFAULT_SPLIT_RATIOS),
         metavar=("TRAIN", "VAL", "TEST"),
+    )
+    parser.add_argument(
+        "--split-mode",
+        choices=["stable_grouped", "balanced_grouped"],
+        default=DEFAULT_SPLIT_MODE,
+        help=(
+            "stable_grouped keeps the old seed-hash group split; "
+            "balanced_grouped keeps groups intact and balances HR label distributions."
+        ),
     )
     parser.add_argument(
         "--overwrite",
@@ -228,15 +254,355 @@ def split_group_keys(
     return assignment
 
 
+def split_counts(n: int, ratios: Tuple[float, float, float]) -> Tuple[int, int, int]:
+    if n <= 0:
+        return 0, 0, 0
+    if n == 1:
+        return 1, 0, 0
+    if n == 2:
+        return 1, 0, 1
+    _, val_ratio, test_ratio = ratios
+    n_val = max(1, int(round(n * val_ratio)))
+    n_test = max(1, int(round(n * test_ratio)))
+    if n_val + n_test >= n:
+        n_val = 1
+        n_test = 1
+    n_train = n - n_val - n_test
+    return n_train, n_val, n_test
+
+
+def participant_id_from_group(group_key: str) -> Optional[str]:
+    parts = group_key.split("/")
+    if len(parts) >= 3 and parts[-2] == "participant":
+        return parts[-1]
+    return None
+
+
+def default_participant_split(
+    dataset: str,
+    group_keys: Sequence[str],
+    forced_test_groups: Optional[set[str]] = None,
+) -> Optional[Dict[str, str]]:
+    if forced_test_groups:
+        return None
+    spec = DEFAULT_PARTICIPANT_SPLITS.get(dataset)
+    if spec is None:
+        return None
+    unique_groups = sorted(set(group_keys))
+    group_by_participant = {
+        participant_id_from_group(group): group
+        for group in unique_groups
+        if participant_id_from_group(group) is not None
+    }
+    requested = {
+        participant_id
+        for participant_ids in spec.values()
+        for participant_id in participant_ids
+    }
+    if requested != set(group_by_participant):
+        return None
+    return {
+        group_by_participant[participant_id]: split
+        for split, participant_ids in spec.items()
+        for participant_id in participant_ids
+    }
+
+
+def stratified_group_split_by_label_range(
+    group_keys: Sequence[str],
+    ratios: Tuple[float, float, float],
+    seed: int,
+    group_label_means: Dict[str, float],
+    forced_test_groups: Optional[set[str]] = None,
+) -> Optional[Dict[str, str]]:
+    if forced_test_groups:
+        return None
+    unique_groups = sorted(set(group_keys))
+    if any(group not in group_label_means for group in unique_groups):
+        return None
+
+    n_train, n_val, n_test = split_counts(len(unique_groups), ratios)
+    n_eval = n_val + n_test
+    if n_eval <= 0 or n_train <= 0 or len(unique_groups) < n_eval * 2:
+        return None
+
+    ordered = sorted(
+        unique_groups,
+        key=lambda group: (group_label_means[group], stable_unit_interval(group, seed)),
+    )
+    base_size = len(ordered) // n_eval
+    remainder = len(ordered) % n_eval
+    strata: List[List[str]] = []
+    start = 0
+    for idx in range(n_eval):
+        size = base_size + int(idx < remainder)
+        strata.append(ordered[start : start + size])
+        start += size
+
+    assignment: Dict[str, str] = {}
+    val_count = 0
+    test_count = 0
+    for idx, stratum in enumerate(strata):
+        if not stratum:
+            continue
+        candidate_order = sorted(
+            stratum,
+            key=lambda group: (
+                abs(group_label_means[group] - float(np.mean([group_label_means[g] for g in stratum]))),
+                stable_unit_interval(group, seed),
+            ),
+        )
+        selected = candidate_order[0]
+        if val_count >= n_val:
+            split = "test"
+        elif test_count >= n_test:
+            split = "val"
+        elif val_count <= test_count:
+            split = "val"
+        else:
+            split = "test"
+        assignment[selected] = split
+        val_count += int(split == "val")
+        test_count += int(split == "test")
+
+    for group in unique_groups:
+        assignment.setdefault(group, "train")
+
+    if (
+        sum(1 for split in assignment.values() if split == "train") != n_train
+        or sum(1 for split in assignment.values() if split == "val") != n_val
+        or sum(1 for split in assignment.values() if split == "test") != n_test
+    ):
+        return None
+    return assignment
+
+
+def group_mean_label(sample: Dict[str, Any]) -> Optional[float]:
+    try:
+        data = np.load(Path(sample["npz_path"]), allow_pickle=False)
+        labels = np.asarray(data["heart_rate"], dtype=np.float32).reshape(-1)
+    except Exception:
+        return None
+    valid = labels[np.isfinite(labels)]
+    if valid.size == 0:
+        return None
+    return float(np.mean(valid))
+
+
+def compute_group_label_means(
+    samples: Sequence[Dict[str, Any]],
+    show_progress: bool = False,
+) -> Dict[str, float]:
+    values_by_group: Dict[str, List[float]] = {}
+    for idx, sample in enumerate(samples, start=1):
+        mean_label = group_mean_label(sample)
+        if mean_label is None:
+            if show_progress and (idx == 1 or idx == len(samples) or idx % 100 == 0):
+                print_progress(idx, len(samples), f"label mean scan: skip {sample['dataset']}/{sample['sample_tag']}")
+            continue
+        values_by_group.setdefault(get_group_key(sample), []).append(mean_label)
+        if show_progress and (idx == 1 or idx == len(samples) or idx % 100 == 0):
+            print_progress(idx, len(samples), f"label mean scan: {sample['dataset']}/{sample['sample_tag']}")
+    return {
+        group: float(np.mean(values))
+        for group, values in values_by_group.items()
+        if values
+    }
+
+
+def ftu_extreme_balance_penalty(split_groups: Dict[str, Sequence[str]]) -> float:
+    """Softly distribute known FTU special cases across train/val/test.
+
+    The 4TU/FTU paper marks participant 2 as an experienced meditator and
+    participants 5/6 as asthma cases. We avoid placing all such cases in one
+    split, while still letting HR distribution balance dominate.
+    """
+    special = set(FTU_SPECIAL_PARTICIPANTS)
+    counts: Dict[str, int] = {}
+    for split, groups in split_groups.items():
+        counts[split] = sum(
+            1
+            for group in groups
+            if participant_id_from_group(group) in special
+        )
+    missing_eval = int(counts.get("val", 0) == 0) + int(counts.get("test", 0) == 0)
+    missing_train = int(counts.get("train", 0) == 0)
+    concentration = max(counts.values(), default=0) - min(counts.values(), default=0)
+    return 2.0 * missing_eval + 1.0 * missing_train + 0.25 * concentration
+
+
+def greedy_balanced_split_group_keys(
+    group_keys: Sequence[str],
+    ratios: Tuple[float, float, float],
+    seed: int,
+    group_label_means: Dict[str, float],
+    forced_test_groups: Optional[set[str]] = None,
+) -> Dict[str, str]:
+    forced_test_groups = forced_test_groups or set()
+    unique_groups = sorted(set(group_keys))
+    assignment: Dict[str, str] = {g: "test" for g in forced_test_groups if g in unique_groups}
+    flexible_groups = [g for g in unique_groups if g not in forced_test_groups]
+    n_train, n_val, n_test_total = split_counts(len(unique_groups), ratios)
+    targets = {
+        "train": n_train,
+        "val": n_val,
+        "test": n_test_total,
+    }
+    targets["test"] = max(0, targets["test"] - len(assignment))
+    if targets["val"] + targets["test"] >= len(flexible_groups) and len(flexible_groups) >= 3:
+        targets["val"] = 1
+        targets["test"] = 1
+    targets["train"] = len(flexible_groups) - targets["val"] - targets["test"]
+    if targets["train"] <= 0:
+        return split_group_keys(group_keys, ratios, seed, forced_test_groups)
+
+    global_mean = float(np.mean([group_label_means[g] for g in flexible_groups]))
+    split_groups: Dict[str, List[str]] = {"train": [], "val": [], "test": sorted(assignment)}
+    split_sums = {
+        "train": 0.0,
+        "val": 0.0,
+        "test": sum(group_label_means[g] for g in assignment if g in group_label_means),
+    }
+    order = sorted(
+        flexible_groups,
+        key=lambda g: (-abs(group_label_means[g] - global_mean), stable_unit_interval(g, seed)),
+    )
+    for group in order:
+        best_split: Optional[str] = None
+        best_score: Optional[float] = None
+        for split in ("train", "val", "test"):
+            if len(split_groups[split]) >= targets[split]:
+                continue
+            next_count = len(split_groups[split]) + 1
+            next_mean = (split_sums[split] + group_label_means[group]) / next_count
+            fill_ratio = next_count / max(1, targets[split])
+            score = abs(next_mean - global_mean) - 0.01 * fill_ratio
+            if best_score is None or score < best_score:
+                best_score = score
+                best_split = split
+        if best_split is None:
+            best_split = "train"
+        split_groups[best_split].append(group)
+        split_sums[best_split] += group_label_means[group]
+
+    return {
+        group: split
+        for split, groups in split_groups.items()
+        for group in groups
+    }
+
+
+def balanced_split_group_keys(
+    dataset: str,
+    group_keys: Sequence[str],
+    ratios: Tuple[float, float, float],
+    seed: int,
+    group_label_means: Dict[str, float],
+    forced_test_groups: Optional[set[str]] = None,
+) -> Dict[str, str]:
+    forced_test_groups = forced_test_groups or set()
+    unique_groups = sorted(set(group_keys))
+    default_assignment = default_participant_split(dataset, group_keys, forced_test_groups)
+    if default_assignment is not None:
+        return default_assignment
+    if dataset == "PhysDrive":
+        stratified_assignment = stratified_group_split_by_label_range(
+            group_keys=group_keys,
+            ratios=ratios,
+            seed=seed,
+            group_label_means=group_label_means,
+            forced_test_groups=forced_test_groups,
+        )
+        if stratified_assignment is not None:
+            return stratified_assignment
+
+    assignment: Dict[str, str] = {g: "test" for g in forced_test_groups if g in unique_groups}
+    flexible_groups = [g for g in unique_groups if g not in forced_test_groups]
+    n_train, n_val, n_test_total = split_counts(len(unique_groups), ratios)
+    n_test_flexible = max(0, n_test_total - len(assignment))
+    if n_test_flexible + n_val >= len(flexible_groups) and len(flexible_groups) >= 3:
+        n_val = 1
+        n_test_flexible = 1
+    n_train_flexible = len(flexible_groups) - n_val - n_test_flexible
+    if n_train_flexible <= 0:
+        return split_group_keys(group_keys, ratios, seed, forced_test_groups)
+
+    missing = [g for g in flexible_groups if g not in group_label_means]
+    if missing:
+        return split_group_keys(group_keys, ratios, seed, forced_test_groups)
+
+    if len(flexible_groups) > BALANCED_EXHAUSTIVE_MAX_GROUPS:
+        return greedy_balanced_split_group_keys(
+            group_keys=group_keys,
+            ratios=ratios,
+            seed=seed,
+            group_label_means=group_label_means,
+            forced_test_groups=forced_test_groups,
+        )
+
+    best: Optional[Tuple[float, Dict[str, str]]] = None
+    flexible_set = set(flexible_groups)
+    forced_test = sorted(assignment)
+    for val_groups_tuple in itertools.combinations(flexible_groups, n_val):
+        val_groups = set(val_groups_tuple)
+        remaining_after_val = sorted(flexible_set - val_groups)
+        for test_groups_tuple in itertools.combinations(remaining_after_val, n_test_flexible):
+            test_groups = set(test_groups_tuple)
+            train_groups = sorted(flexible_set - val_groups - test_groups)
+            if len(train_groups) != n_train_flexible:
+                continue
+
+            split_groups = {
+                "train": train_groups,
+                "val": sorted(val_groups),
+                "test": sorted(test_groups | set(forced_test)),
+            }
+            split_means = {
+                split: float(np.mean([group_label_means[g] for g in groups]))
+                for split, groups in split_groups.items()
+                if groups
+            }
+            train_mean = split_means.get("train")
+            val_mean = split_means.get("val")
+            test_mean = split_means.get("test")
+            if train_mean is None or val_mean is None or test_mean is None:
+                continue
+            score = (
+                abs(val_mean - train_mean)
+                + abs(test_mean - train_mean)
+                + 0.5 * abs(val_mean - test_mean)
+            )
+            score += 1e-6 * sum(stable_unit_interval(g, seed) for groups in split_groups.values() for g in groups)
+            if dataset == "FTU":
+                score += ftu_extreme_balance_penalty(split_groups)
+
+            candidate_assignment = {
+                **{g: "train" for g in train_groups},
+                **{g: "val" for g in val_groups},
+                **{g: "test" for g in test_groups},
+                **assignment,
+            }
+            candidate = (score, candidate_assignment)
+            if best is None or candidate[0] < best[0]:
+                best = candidate
+
+    if best is None:
+        return split_group_keys(group_keys, ratios, seed, forced_test_groups)
+    return best[1]
+
+
 def build_domain_split_map(
     samples: Sequence[Dict[str, Any]],
     ratios: Tuple[float, float, float],
     seed: int,
     bgt_long_participants: set[str],
+    split_mode: str,
+    group_label_means: Optional[Dict[str, float]] = None,
 ) -> Dict[str, str]:
     groups_by_dataset: Dict[str, List[str]] = {}
     for sample in samples:
         groups_by_dataset.setdefault(sample["dataset"], []).append(get_group_key(sample))
+    group_label_means = group_label_means or {}
 
     split_map: Dict[str, str] = {}
     forced_test_groups = {
@@ -245,14 +611,26 @@ def build_domain_split_map(
     }
     for dataset, group_keys in groups_by_dataset.items():
         dataset_forced_test = forced_test_groups if dataset == "BGT60TR13C" else set()
-        split_map.update(
-            split_group_keys(
-                group_keys=group_keys,
-                ratios=ratios,
-                seed=seed,
-                forced_test_groups=dataset_forced_test,
+        if split_mode == "balanced_grouped":
+            split_map.update(
+                balanced_split_group_keys(
+                    dataset=dataset,
+                    group_keys=group_keys,
+                    ratios=ratios,
+                    seed=seed,
+                    group_label_means=group_label_means,
+                    forced_test_groups=dataset_forced_test,
+                )
             )
-        )
+        else:
+            split_map.update(
+                split_group_keys(
+                    group_keys=group_keys,
+                    ratios=ratios,
+                    seed=seed,
+                    forced_test_groups=dataset_forced_test,
+                )
+            )
     return split_map
 
 
@@ -679,13 +1057,19 @@ def build_training_dataset(args: argparse.Namespace) -> None:
     print_stage("Stage 1/4: collect exported samples")
     samples = collect_exported_samples(exports_dir, args.datasets)
     bgt_long_participants = collect_bgt_long_participants(samples)
+    print(f"[builder] collected {len(samples)} exported sample(s)", flush=True)
+    group_label_means: Dict[str, float] = {}
+    if args.split_mode == "balanced_grouped":
+        print_stage("Stage 1/4: scan group label means for balanced split")
+        group_label_means = compute_group_label_means(samples, show_progress=True)
     domain_split_map = build_domain_split_map(
         samples=samples,
         ratios=split_ratios,
         seed=args.seed,
         bgt_long_participants=bgt_long_participants,
+        split_mode=args.split_mode,
+        group_label_means=group_label_means,
     )
-    print(f"[builder] collected {len(samples)} exported sample(s)", flush=True)
     if bgt_long_participants:
         print(
             (
@@ -706,6 +1090,11 @@ def build_training_dataset(args: argparse.Namespace) -> None:
         "by_split": {"train": 0, "val": 0, "test": 0},
         "groups_by_dataset_split": {
             dataset: {"train": [], "val": [], "test": []}
+            for dataset in args.datasets
+        },
+        "group_label_means": {},
+        "split_label_means": {
+            dataset: {"train": None, "val": None, "test": None}
             for dataset in args.datasets
         },
     }
@@ -863,11 +1252,26 @@ def build_training_dataset(args: argparse.Namespace) -> None:
             "sampling_rate_hz": DEFAULT_SAMPLING_RATE_HZ,
             "x_rda_representation": DEFAULT_RDA_REPRESENTATION,
             "output_arrays": ["x", "x_time", "x_freq", "x_rda", "freq_hz"],
-            "split_mode": "within_dataset_grouped",
+            "split_mode": args.split_mode,
             "grouping": {
                 "FTU": "participant_id",
                 "BGT60TR13C": "participant_id",
                 "PhysDrive": "session_id",
+            },
+            "ftu_special_case_policy": {
+                "mode": "soft_balance_across_splits",
+                "special_participants": list(FTU_SPECIAL_PARTICIPANTS),
+                "special_participants_note": {
+                    "2": "experienced meditator",
+                    "5": "asthma",
+                    "6": "asthma",
+                },
+                "elevated_hr_participants": list(FTU_ELEVATED_HR_PARTICIPANTS),
+                "rule": (
+                    "Keep participant groups intact; softly prefer placing at least one "
+                    "known special participant in each of train/val/test when feasible, "
+                    "while balancing HR label means."
+                ),
             },
             "bgt_long_split": DEFAULT_BGT_LONG_SPLIT,
             "bgt_long_participants": sorted(bgt_long_participants),
@@ -881,6 +1285,13 @@ def build_training_dataset(args: argparse.Namespace) -> None:
     for dataset, splits in summary["groups_by_dataset_split"].items():
         for split in splits:
             summary["groups_by_dataset_split"][dataset][split] = sorted(splits[split])
+            groups = summary["groups_by_dataset_split"][dataset][split]
+            labels = [group_label_means[g] for g in groups if g in group_label_means]
+            if labels:
+                summary["split_label_means"][dataset][split] = float(np.mean(labels))
+            for group in groups:
+                if group in group_label_means:
+                    summary["group_label_means"][group] = group_label_means[group]
     write_json(output_dir / "summary.json", summary)
     print(json.dumps(summary, ensure_ascii=False, indent=2), flush=True)
     print(f"[builder] output_dir: {output_dir}", flush=True)

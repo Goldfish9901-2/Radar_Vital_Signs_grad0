@@ -267,3 +267,9 @@ docker_assets/
 /Radar_Heartbeats_8_27/
 /Radar_Heartbeats_8_27 (1)/
 /training_exports/
+.codex
+model_outputs/
+src/models/
+docs/TODO.md
+src/valid/validate_ftu_export.py
+src/valid/visualize_ftu_samples.py

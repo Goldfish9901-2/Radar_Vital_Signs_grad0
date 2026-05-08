@@ -27,6 +27,13 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import numpy as np
 
+from pathlib import Path
+import sys
+
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 from src.data.loaders.bgt60_loader import BGT60TR13CDataLoader
 from src.data.loaders.ftu_loader import FTUDataLoader
 from src.data.loaders.physdrive_loader import PhysDriveDataLoader
@@ -1035,15 +1042,16 @@ def main() -> None:
 
     summary: Dict[str, Dict[str, int]] = {}
 
+    export_order = ["PhysDrive", "FTU", "BGT60TR13C"]
     selected_datasets = []
+    if args.physdrive:
+        selected_datasets.append("PhysDrive")
     if args.ftu:
         selected_datasets.append("FTU")
     if args.bgt60:
         selected_datasets.append("BGT60TR13C")
-    if args.physdrive:
-        selected_datasets.append("PhysDrive")
     if not selected_datasets:
-        selected_datasets = ["FTU", "BGT60TR13C", "PhysDrive"]
+        selected_datasets = export_order
 
     print_stage("Export", "Stage 0: configuration")
     print(f"[Export] dataset_root: {dataset_root}", flush=True)
@@ -1052,33 +1060,32 @@ def main() -> None:
     print(f"[Export] compress_output: {COMPRESS_OUTPUT}", flush=True)
     print(f"[Export] unify_to_rda: {UNIFY_TO_RDA}", flush=True)
 
-    if "FTU" in selected_datasets:
-        ok, fail = export_ftu(
-            dataset_root=dataset_root,
-            output_dir=output_dir,
-            compress=COMPRESS_OUTPUT,
-            participant_id=FTU_PARTICIPANT_ID,
-            scenario=FTU_SCENARIO,
-            distance=FTU_DISTANCE,
-        )
-        summary["FTU"] = {"success": ok, "failed": fail}
-
-    if "BGT60TR13C" in selected_datasets:
-        ok, fail = export_bgt60(
-            dataset_root=dataset_root,
-            output_dir=output_dir,
-            compress=COMPRESS_OUTPUT,
-            include_long=BGT_INCLUDE_LONG,
-        )
-        summary["BGT60TR13C"] = {"success": ok, "failed": fail}
-
-    if "PhysDrive" in selected_datasets:
-        ok, fail = export_physdrive(
-            dataset_root=dataset_root,
-            output_dir=output_dir,
-            compress=COMPRESS_OUTPUT,
-        )
-        summary["PhysDrive"] = {"success": ok, "failed": fail}
+    for dataset_name in selected_datasets:
+        if dataset_name == "PhysDrive":
+            ok, fail = export_physdrive(
+                dataset_root=dataset_root,
+                output_dir=output_dir,
+                compress=COMPRESS_OUTPUT,
+            )
+        elif dataset_name == "FTU":
+            ok, fail = export_ftu(
+                dataset_root=dataset_root,
+                output_dir=output_dir,
+                compress=COMPRESS_OUTPUT,
+                participant_id=FTU_PARTICIPANT_ID,
+                scenario=FTU_SCENARIO,
+                distance=FTU_DISTANCE,
+            )
+        elif dataset_name == "BGT60TR13C":
+            ok, fail = export_bgt60(
+                dataset_root=dataset_root,
+                output_dir=output_dir,
+                compress=COMPRESS_OUTPUT,
+                include_long=BGT_INCLUDE_LONG,
+            )
+        else:
+            raise ValueError(f"Unsupported dataset: {dataset_name}")
+        summary[dataset_name] = {"success": ok, "failed": fail}
 
     save_json(output_dir / "export_summary.json", summary)
     print("\n=== Export Summary ===")
