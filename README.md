@@ -66,12 +66,13 @@ python src/data/build_training_dataset.py \
 
 当前默认训练特征已切换为 `target_edacm_vmd`：
 
-- 从统一 complex RDA 窗口 `(256, 8, 16, 8)` 中选择能量最高的 `3` 个 `(doppler, angle, range)` 目标 bin。
+- 从统一 complex RDA 窗口 `(256, 8, 16, 8)` 中选择 `3` 个生命体征稳定目标 bin；当前不再只按能量 top-k，而是综合空间能量、EDACM 相位稳定性、心率频带谱峰响应和窗口内 RDA 空间一致性评分。
 - 对每个目标 bin 的复数时间序列使用 EDACM 提取相位。
 - 对相位做线性去趋势与 z-score。
-- 按目标 bin 能量加权融合相位序列。
+- 按目标 bin 稳定性综合评分加权融合相位序列。
 - 对融合相位执行 VMD，默认 `K=7`。
 - 最终训练输入 `x.shape = (7, 256)`，每一行对应一个 VMD mode。
+- 窗口 `meta_json` 会记录 `rda_spatial_confidence` 与目标 bin 分项评分，可作为后续 Source-Free 目标域伪标签可靠性权重的一部分。
 
 如果需要回到旧的幅值基线，可以显式指定：
 
