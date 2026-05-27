@@ -30,13 +30,14 @@ import numpy as np
 from pathlib import Path
 import sys
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.data.loaders.bgt60_loader import BGT60TR13CDataLoader
-from src.data.loaders.ftu_loader import FTUDataLoader
-from src.data.loaders.physdrive_loader import PhysDriveDataLoader
+from .bgt60_loader import BGT60TR13CDataLoader
+from .ftu_loader import FTUDataLoader
+from .physdrive_loader import PhysDriveDataLoader
+
+# PROJECT_ROOT = Path(__file__).resolve().parents[3]
+# if str(PROJECT_ROOT) not in sys.path:
+#     sys.path.insert(0, str(PROJECT_ROOT))
 
 try:
     import neurokit2 as nk  # type: ignore[import-not-found]
@@ -50,7 +51,7 @@ if str(ROOT) not in sys.path:
 
 # ==================== Global Config (Manual Edit) ====================
 # 数据路径与输出路径
-DATASET_ROOT = ROOT / "Dataset"
+DATASET_ROOT = Path("V:/")
 OUTPUT_DIR = ROOT / "exports"
 
 # 导出控制
@@ -87,19 +88,31 @@ PHYSDRIVE_ECG_MAX_INTERPOLATION_GAP_SECONDS = 2.0
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Export FTU/BGT60/PhysDrive datasets")
     parser.add_argument(
+        "--dataset-root",
+        type=Path,
+        default=None,
+        help="数据集根目录路径(默认使用代码中的DATASET_ROOT配置)",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=None,
+        help="输出目录路径(默认使用代码中的OUTPUT_DIR配置)",
+    )
+    parser.add_argument(
         "--ftu",
         action="store_true",
-        help="仅导出 FTU（若与其它数据集参数同时出现，则按出现的数据集导出）",
+        help="仅导出 FTU(若与其它数据集参数同时出现,则按出现的数据集导出)",
     )
     parser.add_argument(
         "--bgt60",
         action="store_true",
-        help="仅导出 BGT60（若与其它数据集参数同时出现，则按出现的数据集导出）",
+        help="仅导出 BGT60(若与其它数据集参数同时出现,则按出现的数据集导出)",
     )
     parser.add_argument(
         "--physdrive",
         action="store_true",
-        help="仅导出 PhysDrive（若与其它数据集参数同时出现，则按出现的数据集导出）",
+        help="仅导出 PhysDrive(若与其它数据集参数同时出现,则按出现的数据集导出)",
     )
     return parser.parse_args()
 
@@ -1036,8 +1049,11 @@ def export_physdrive(
 
 def main() -> None:
     args = parse_args()
-    dataset_root = Path(DATASET_ROOT).resolve()
-    output_dir = Path(OUTPUT_DIR).resolve()
+    # 优先使用CLI参数,否则使用默认配置
+    dataset_root = (Path(args.dataset_root).resolve() if args.dataset_root 
+                    else Path(DATASET_ROOT).resolve())
+    output_dir = (Path(args.output_dir).resolve() if args.output_dir 
+                  else Path(OUTPUT_DIR).resolve())
     output_dir.mkdir(parents=True, exist_ok=True)
 
     summary: Dict[str, Dict[str, int]] = {}
