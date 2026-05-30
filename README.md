@@ -235,21 +235,13 @@ python src/data/build_training_dataset.py \
 - 提交前至少检查一次“代码实现 vs 文档描述”一致性，避免后续实验配置偏差。
 
 
-## 9. docker
+## 9. 容器启动
+
+使用 `compose.yml` 启动（参见 `AGENTS.md` 获取本机环境说明）：
+
 ```bash
-docker run -it --gpus all \
-  --network host \
-  --name radar_dev \
-  -v /home/sunny/code/Radar_Vital_Signs:/Radar_Vital_Signs \
-  -v /mnt/d/Dataset:/Radar_Vital_Signs/Dataset \
-  -e http_proxy=$http_proxy \
-  -e https_proxy=$https_proxy \
-  -e HTTP_PROXY=$HTTP_PROXY \
-  -e HTTPS_PROXY=$HTTPS_PROXY \
-  -e no_proxy=$no_proxy \
-  -e NO_PROXY=$NO_PROXY \
-  -w /Radar_Vital_Signs \
-  radar_vital_signs bash
+podman compose up -d
+podman exec -it radar_dev bash
 ```
 
-- 镜像地址：docker pull crpi-ojnb84j7hma95ay2.cn-shanghai.personal.cr.aliyuncs.com/hsun97282/radar:latest
+- 镜像地址：`crpi-ojnb84j7hma95ay2.cn-shanghai.personal.cr.aliyuncs.com/hsun97282/radar:latest`

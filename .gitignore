@@ -269,4 +269,6 @@ docker_assets/
 /training_exports/
 .codex
 model_outputs/
-docs/TODO.md
+# docs/TODO.md
+**/**.md
+!**/README.md

@@ -1,0 +1,26 @@
+services:
+  radar_dev:
+    image: crpi-ojnb84j7hma95ay2.cn-shanghai.personal.cr.aliyuncs.com/hsun97282/radar:latest
+    container_name: radar_dev
+    working_dir: /Radar_Vital_Signs
+    network_mode: host
+    stdin_open: true
+    tty: true
+    volumes:
+      # Project source — relative path resolves to the directory containing this file
+      - .:/Radar_Vital_Signs
+      # Datasets — mount from sshfs at /mnt/datasets (see AGENTS.md)
+      - /mnt/datasets:/Radar_Vital_Signs/Dataset
+    devices:
+      # NVIDIA GPU via CDI (requires nvidia-container-toolkit + podman >= 4.x)
+      # Fallback: replace with /dev/nvidia0,/dev/nvidiactl,/dev/nvidia-uvm if CDI unavailable
+      - nvidia.com/gpu=all
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - http_proxy=${http_proxy:-}
+      - https_proxy=${https_proxy:-}
+      - HTTP_PROXY=${HTTP_PROXY:-}
+      - HTTPS_PROXY=${HTTPS_PROXY:-}
+      - no_proxy=${no_proxy:-}
+      - NO_PROXY=${NO_PROXY:-}
