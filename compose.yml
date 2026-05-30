@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: radar_dev
+    image: radar_dev
     working_dir: /Radar_Vital_Signs
     network_mode: host
     stdin_open: true
