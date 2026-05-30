@@ -6,11 +6,14 @@ services:
     network_mode: host
     stdin_open: true
     tty: true
+    command: ["sleep", "infinity"]
     volumes:
       # Project source — relative path resolves to the directory containing this file
       - .:/Radar_Vital_Signs
       # Datasets — mount from sshfs at /mnt/datasets (see AGENTS.md)
       - /mnt/datasets:/Radar_Vital_Signs/Dataset
+      # Exports — also on sshfs (NAS), large intermediate files
+      - /mnt/radar_exports:/Radar_Vital_Signs/exports
     devices:
       # NVIDIA GPU via CDI (requires nvidia-container-toolkit + podman >= 4.x)
       # Fallback: replace with /dev/nvidia0,/dev/nvidiactl,/dev/nvidia-uvm if CDI unavailable
