@@ -1,0 +1,33 @@
+% ============================================================
+% E02 Decomposition Ablation Table + Discussion
+% Generated from experiments/batch_20260608_201045/ + hybrid_evmd_ewt_full/
+% All experiments: HeartTimeMixer, epochs=80/150, early-stop patience=12
+% Train: 9019 windows | Val: 1971 | Test: 3690 (identical splits)
+% ============================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Ablation of signal decomposition methods with HeartTimeMixer under fully supervised cross-domain evaluation. All models share identical train/val/test splits (9019/1971/3690 windows). Best Test MAE is \textbf{bolded}.}
+\label{tab:decomposition_ablation}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Decomposition} & \textbf{Val MAE} & \textbf{Test MAE} & \textbf{Within 3 BPM (\%)} & \textbf{Within 5 BPM (\%)} \\
+\midrule
+EVMD              & 8.48 & \textbf{12.50} & ---  & 17.7 \\
+VMD               & 8.37 & 12.97 & 10.5 & 17.2 \\
+SVMD              & 8.52 & 12.97 & ---  & 17.4 \\
+EWT               & 7.84 & 14.04 & ---  & 18.0 \\
+IAPVMD            & 8.13 & 14.96 & ---  & 15.5 \\
+Hybrid EVMD--EWT  & \textbf{7.42} & 16.74 & 9.5  & 15.6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Discussion: Supervised cross-domain overfitting bottleneck.}
+Table~\ref{tab:decomposition_ablation} reveals a consistent and severe overfitting pattern across all six decomposition frontends when paired with HeartTimeMixer under fully supervised training. Despite achieving validation MAE in the range of 7.4--8.5~BPM, test MAE degrades to 12.5--16.7~BPM, yielding a generalization gap of approximately 5--9~BPM. All models trigger early stopping between epochs 12--16, with best validation performance typically occurring within the first 1--5 epochs, indicating that the model rapidly memorizes source-domain-specific patterns that fail to transfer.
+
+Among the six methods, EVMD achieves the lowest test MAE (12.50~BPM), marginally outperforming the VMD baseline (12.97~BPM). The proposed Hybrid EVMD--EWT frontend---which uses a sigmoid gate on \texttt{rda\_spatial\_confidence} to dynamically blend EVMD and EWT decompositions---attains the \emph{best} validation MAE (7.42~BPM) yet the \emph{worst} test MAE (16.74~BPM), exhibiting the largest generalization gap (9.32~BPM) among all methods. Detailed per-group analysis reveals that BGT60TR13C participant~1 (a long measurement contributing 2242 of 3690 test windows, i.e.\ 60.8\% of the test set) dominates this result: the hybrid model predicts $\sim$84.7~BPM vs.\ labels of $\sim$62.7~BPM for this group (MAE 22.0~BPM), a systematic bias more severe than any single-decomposition baseline. This indicates that confidence-gated blending amplifies rather than mitigates domain-specific overfitting: the confidence signal itself carries domain-dependent statistics that the model exploits as a spurious shortcut during training.
+
+EWT attains the highest within-5~BPM accuracy (18.0\%) despite a higher MAE (14.04~BPM), suggesting that wavelet-based decomposition captures fine-grained physiological dynamics for well-behaved samples but lacks robustness under extreme domain shifts. IAPVMD performs worst among single-decomposition methods, indicating that its adaptive penalty mechanism does not generalize across heterogeneous radar hardware.
+
+Critically, the consistent overfitting pattern persists regardless of the decomposition frontend---whether fixed (VMD, EVMD, EWT) or adaptive (Hybrid)---demonstrating that the cross-domain generalization barrier is \emph{not} primarily attributable to the signal representation stage. Rather, the fundamental bottleneck lies in the supervised learning paradigm itself: when source and target domains exhibit systematic distributional shifts arising from different radar chipsets (Infineon BGT60TR13C vs.\ TI IWR6843 vs.\ TI IWR1443), antenna configurations, and measurement environments, the model learns domain-specific decision boundaries that cannot be resolved by frontend engineering alone. This observation directly motivates the introduction of Source-Free Unsupervised Domain Adaptation (SF-UDA) methods in subsequent experiments (E05--E07), which aim to adapt a pretrained source model to unlabeled target data without accessing the source dataset---thereby addressing the domain gap at the model adaptation stage rather than the feature extraction stage.

@@ -1,0 +1,33 @@
+% ============================================================
+% E05/E06 Source-Free UDA Results
+% Adaptation on PhysDrive + BGT60TR13C (target domains)
+% Evaluated on target test splits (2986 windows)
+% ============================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Source-Free Unsupervised Domain Adaptation (SF-UDA) results. All models adapt on unlabeled PhysDrive + BGT60TR13C training data and evaluate on their test splits (2986 windows). TENT (E05): test-time entropy minimization on ScaleNormalize parameters only. WPL (E06): weighted pseudo-label training with confidence gating. Best adapted MAE is \textbf{bolded}.}
+\label{tab:sfuda_results}
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Frontend} & \textbf{Method} & \textbf{Source MAE} & \textbf{Adapted MAE} & \textbf{$\Delta$ MAE} & \textbf{5 BPM (\%)} \\
+\midrule
+EVMD       & Source (no adapt) & 13.98 & ---    & ---    & 11.8 \\
+EVMD       & TENT (E05)        & 13.98 & 13.97  & $+0.01$ & 11.8 \\
+EVMD       & WPL  (E06)        & 13.98 & \textbf{13.89} & $\mathbf{+0.09}$ & 14.1 \\
+\midrule
+Hybrid     & Source (no adapt) & 19.27 & ---    & ---    & 7.6 \\
+Hybrid     & TENT (E05)        & 19.27 & 19.29  & $-0.02$ & 7.6 \\
+Hybrid     & WPL  (E06)        & 19.27 & 20.52  & $-1.25$ & 6.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Discussion: SF-UDA fails to bridge the cross-domain gap.}
+Table~\ref{tab:sfuda_results} presents the results of Source-Free Unsupervised Domain Adaptation applied to both the EVMD (best supervised baseline) and Hybrid EVMD--EWT (most overfitting) frontends. The adaptation targets are PhysDrive and BGT60TR13C, the two domains exhibiting the largest distributional shifts from the training distribution.
+
+Across all four configurations, SF-UDA produces negligible or negative improvements. TENT (E05), which adapts only the 112 ScaleNormalize affine parameters while freezing the remaining 672K parameters, achieves effectively zero change on both frontends ($\Delta$MAE $\leq 0.02$). The TENT loss---prediction consistency under Gaussian perturbation---remains flat across all 10 epochs, confirming that the frozen feature extractor produces representations too rigid for meaningful adaptation.
+
+WPL (E06) shows a marginal improvement on the EVMD frontend ($\Delta$MAE $+0.09$, within-5~BPM: 11.8\% $\to$ 14.1\%), but \emph{degrades} the Hybrid frontend by 1.25~BPM (19.27 $\to$ 20.52). This negative result on the Hybrid model is particularly revealing: the confidence-gated pseudo-labels inherit the same domain-dependent biases that caused the Hybrid model's poor supervised generalization in the first place (Table~\ref{tab:decomposition_ablation}). Specifically, BGT60TR13C participant~1 (2242 test windows, label $\sim$63~BPM) receives pseudo-labels of $\sim$85~BPM from the biased Hybrid source model, and WPL training on these pseudo-labels \emph{amplifies} rather than corrects the systematic offset.
+
+These results demonstrate a fundamental limitation of self-training--based SF-UDA for radar vital-signs estimation: when the source model's errors are \emph{systematic} rather than random (i.e., consistent bias toward a domain-specific mean), pseudo-label--based methods have no mechanism to detect or correct this bias. The model is confident in its wrong predictions because they are internally consistent, and the confidence weighting merely reinforces the bias. This observation motivates alternative adaptation strategies that do not rely on pseudo-label quality, such as contrastive domain alignment or physiology-informed priors that constrain predictions to plausible heart-rate dynamics.
