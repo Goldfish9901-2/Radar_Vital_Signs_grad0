@@ -40,8 +40,18 @@ def parse_args() -> argparse.Namespace:
         default="heart_timemixer",
         help="Model architecture to train.",
     )
-    parser.add_argument("--export-dir", type=Path, default=Path("training_exports"))
-    parser.add_argument("--output-dir", type=Path, default=Path("model_outputs/heart_timemixer"))
+    parser.add_argument(
+        "--export-dir",
+        type=Path,
+        default=Path("training_exports"),
+        help="Directory containing windowed training data (manifest.csv + windows/).",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path("model_outputs/heart_timemixer"),
+        help="Directory for saving checkpoints, history, and config.",
+    )
     parser.add_argument(
         "--datasets",
         nargs="+",
@@ -49,26 +59,31 @@ def parse_args() -> argparse.Namespace:
         choices=["FTU", "BGT60TR13C", "PhysDrive"],
         help="Optional dataset subset, for example: --datasets FTU",
     )
-    parser.add_argument("--epochs", type=int, default=80)
-    parser.add_argument("--batch-size", type=int, default=64)
-    parser.add_argument("--num-workers", type=int, default=2)
-    parser.add_argument("--lr", type=float, default=3e-4)
-    parser.add_argument("--weight-decay", type=float, default=1e-4)
-    parser.add_argument("--patience", type=int, default=12)
-    parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--d-model", type=int, default=64)
-    parser.add_argument("--d-ff", type=int, default=128)
-    parser.add_argument("--e-layers", type=int, default=2)
+    parser.add_argument("--epochs", type=int, default=80, help="Maximum number of training epochs.")
+    parser.add_argument("--batch-size", type=int, default=64, help="Training and evaluation batch size.")
+    parser.add_argument("--num-workers", type=int, default=2, help="DataLoader worker processes.")
+    parser.add_argument("--lr", type=float, default=3e-4, help="Initial learning rate for AdamW.")
+    parser.add_argument("--weight-decay", type=float, default=1e-4, help="AdamW weight decay (L2 penalty).")
+    parser.add_argument("--patience", type=int, default=12, help="Early-stopping patience (epochs without val MAE improvement).")
+    parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility.")
+    parser.add_argument("--d-model", type=int, default=64, help="Hidden dimension for HeartTimeMixer / Transformer.")
+    parser.add_argument("--d-ff", type=int, default=128, help="Feed-forward dimension for HeartTimeMixer / Transformer.")
+    parser.add_argument("--e-layers", type=int, default=2, help="Number of encoder layers (HeartTimeMixer).")
     parser.add_argument("--hidden-channels", type=int, default=48, help="TCN hidden channels.")
     parser.add_argument("--num-blocks", type=int, default=4, help="TCN temporal blocks.")
     parser.add_argument("--kernel-size", type=int, default=7, help="TCN convolution kernel size.")
     parser.add_argument("--nhead", type=int, default=4, help="Transformer attention heads.")
     parser.add_argument("--num-layers", type=int, default=2, help="Transformer encoder layers.")
-    parser.add_argument("--dropout", type=float, default=0.15)
-    parser.add_argument("--decomp-method", choices=["moving_avg", "dft"], default="moving_avg")
-    parser.add_argument("--top-k", type=int, default=5)
-    parser.add_argument("--moving-avg", type=int, default=25)
-    parser.add_argument("--down-sampling-layers", type=int, default=3)
+    parser.add_argument("--dropout", type=float, default=0.15, help="Dropout rate applied across all models.")
+    parser.add_argument(
+        "--decomp-method",
+        choices=["moving_avg", "dft"],
+        default="moving_avg",
+        help="Series decomposition method inside HeartTimeMixer.",
+    )
+    parser.add_argument("--top-k", type=int, default=5, help="Top-k frequency components for HeartTimeMixer.")
+    parser.add_argument("--moving-avg", type=int, default=25, help="Moving-average kernel size for HeartTimeMixer decomposition.")
+    parser.add_argument("--down-sampling-layers", type=int, default=3, help="Number of down-sampling layers (HeartTimeMixer).")
     parser.add_argument("--time-only", action="store_true", help="Disable the frequency branch.")
     parser.add_argument("--limit-batches", type=int, default=None, help="Debug only: cap batches per epoch.")
     return parser.parse_args()

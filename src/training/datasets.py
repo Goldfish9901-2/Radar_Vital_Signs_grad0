@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional
@@ -72,9 +73,11 @@ class RadarWindowDataset(Dataset):
         split: str,
         label_stats: Optional[LabelStats] = None,
         datasets: Optional[set[str]] = None,
+        load_meta: bool = False,
     ) -> None:
         self.export_dir = Path(export_dir)
         self.split = split
+        self.load_meta = load_meta
         manifest_path = self.export_dir / "manifest.csv"
         rows = read_manifest(manifest_path)
         self.rows = [
@@ -97,7 +100,7 @@ class RadarWindowDataset(Dataset):
             x_freq = torch.from_numpy(data["x_freq"].astype(np.float32, copy=False))
         y_bpm = torch.tensor(float(row["label_heart_rate"]), dtype=torch.float32)
         y = self.label_stats.normalize(y_bpm)
-        return {
+        result = {
             "x_time": x_time,
             "x_freq": x_freq,
             "y": y,
@@ -107,6 +110,17 @@ class RadarWindowDataset(Dataset):
             "sample_tag": row.get("sample_tag", ""),
             "window_path": str(path),
         }
+        if self.load_meta:
+            with np.load(path, allow_pickle=True) as meta_data:
+                if "meta_json" in meta_data:
+                    meta = json.loads(str(meta_data["meta_json"]))
+                    fm = meta.get("feature_meta", {})
+                    result["spatial_confidence"] = float(fm.get("rda_spatial_confidence", 0.5))
+                    result["target_bin_scores"] = fm.get("target_bin_scores", [])
+                else:
+                    result["spatial_confidence"] = 0.5
+                    result["target_bin_scores"] = []
+        return result
 
 
 def build_datasets(

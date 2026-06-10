@@ -54,7 +54,12 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Model architecture. Usually inferred from <model-dir>/run_config.json.",
     )
-    parser.add_argument("--export-dir", type=Path, default=Path("training_exports"))
+    parser.add_argument(
+        "--export-dir",
+        type=Path,
+        default=Path("training_exports"),
+        help="Directory containing windowed data (manifest.csv + windows/).",
+    )
     parser.add_argument(
         "--target-datasets",
         nargs="+",
@@ -62,9 +67,14 @@ def parse_args() -> argparse.Namespace:
         choices=["FTU", "BGT60TR13C", "PhysDrive"],
         help="Target dataset(s) to evaluate. Omit for all datasets in the selected split.",
     )
-    parser.add_argument("--split", choices=["train", "val", "test"], default="test")
-    parser.add_argument("--batch-size", type=int, default=128)
-    parser.add_argument("--num-workers", type=int, default=2)
+    parser.add_argument(
+        "--split",
+        choices=["train", "val", "test"],
+        default="test",
+        help="Data split to evaluate on.",
+    )
+    parser.add_argument("--batch-size", type=int, default=128, help="Evaluation batch size.")
+    parser.add_argument("--num-workers", type=int, default=2, help="DataLoader worker processes.")
     parser.add_argument(
         "--output-json",
         type=Path,
