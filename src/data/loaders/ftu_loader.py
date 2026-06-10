@@ -298,12 +298,17 @@ class FTUDataLoader(BaseDataLoader):
         raw_data: np.ndarray,
         num_frames: Optional[int] = None
     ) -> np.ndarray:
-        """按 chirp 展开顺序重排为 [frames, rx, chirps, adc] 复数数据张量。
+        r"""Reshape raw int16 binary stream into a complex ``[frames, rx, chirps, adc]`` tensor.
 
-        对应顺序（与图示一致）：
-        1) 整体文件：chirp1 -> chirp2 -> ... -> chirpM
-        2) 每个 chirp 内：RX0 -> RX1 -> RX2 -> RX3
-        3) 每个 RX 内：I1 I2 Q1 Q2 I3 I4 Q3 Q4 ... I(N-1) I(N) Q(N-1) Q(N)
+        The FTU binary format interleaves I/Q samples in groups of four:
+        $(I_1, I_2, Q_1, Q_2)$ for each pair of ADC samples.  This function
+        deinterleaves them and reconstructs complex samples:
+
+        $$z[s] = I[2s] + j\,Q[2s] \quad \text{(even samples)}$$
+        $$z[s] = I[2s-1] + j\,Q[2s-1] \quad \text{(odd samples)}$$
+
+        The output layout is ``[frames, rx, chirps, adc_samples]`` with dtype
+        ``complex64``.
         """
         active_frames = self.NUM_FRAMES if num_frames is None else num_frames
         total_chirps = active_frames * self.NUM_CHIRPS
@@ -428,13 +433,9 @@ class FTUDataLoader(BaseDataLoader):
         return records
 
     def _convert_timestamps(self, timestamps: np.ndarray) -> np.ndarray:
-        """将时间戳从HH:MM:SS格式转换为秒。
+        r"""Convert ``HH:MM:SS`` string timestamps to seconds.
 
-        Args:
-            timestamps: 时间戳字符串数组，格式为 "00:00:01"
-
-        Returns:
-            时间戳秒数数组
+        $$t = 3600\,h + 60\,m + s$$
         """
         seconds = []
         for ts in timestamps:

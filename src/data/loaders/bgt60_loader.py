@@ -302,13 +302,11 @@ class BGT60TR13CDataLoader(BaseDataLoader):
         return file_path
 
     def _apply_dc_correction(self, radar_data: np.ndarray) -> np.ndarray:
-        """应用DC偏移校正。
+        r"""Remove DC offset from raw ADC data.
 
-        Args:
-            radar_data: 原始雷达数据
+        Subtracts the global mean:
 
-        Returns:
-            校正后的雷达数据
+        $$\tilde{x}[n] = x[n] - \frac{1}{N}\sum_{n=1}^{N} x[n]$$
         """
         # 计算DC偏移（全局均值）
         dc_offset = radar_data.mean()

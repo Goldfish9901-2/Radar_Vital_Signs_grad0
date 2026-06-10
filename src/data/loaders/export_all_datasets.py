@@ -31,9 +31,9 @@ from pathlib import Path
 import sys
 
 
-from .bgt60_loader import BGT60TR13CDataLoader
-from .ftu_loader import FTUDataLoader
-from .physdrive_loader import PhysDriveDataLoader
+from src.data.loaders.bgt60_loader import BGT60TR13CDataLoader
+from src.data.loaders.ftu_loader import FTUDataLoader
+from src.data.loaders.physdrive_loader import PhysDriveDataLoader
 
 # PROJECT_ROOT = Path(__file__).resolve().parents[3]
 # if str(PROJECT_ROOT) not in sys.path:
@@ -285,6 +285,10 @@ def _require_neurokit2():
 
 
 def _clean_rate(rate: np.ndarray, min_bpm: float, max_bpm: float) -> np.ndarray:
+    r"""Clip heart/respiration rate to a physiologically plausible range.
+
+    Values outside $[r_{\min}, r_{\max}]$ are replaced with NaN.
+    """
     out = np.asarray(rate, dtype=np.float32).copy()
     invalid = (~np.isfinite(out)) | (out < min_bpm) | (out > max_bpm)
     out[invalid] = np.nan
@@ -292,6 +296,7 @@ def _clean_rate(rate: np.ndarray, min_bpm: float, max_bpm: float) -> np.ndarray:
 
 
 def _finite_coverage(values: np.ndarray) -> float:
+    r"""Fraction of finite (non-NaN) values: $c = \frac{1}{N}\sum_n \mathbf{1}[v_n \in \mathbb{R}]$."""
     if values.size == 0:
         return 0.0
     return float(np.isfinite(values).mean())
@@ -305,6 +310,16 @@ def _rate_from_peak_intervals(
     max_bpm: float,
     max_interpolation_gap_seconds: float,
 ) -> np.ndarray:
+    r"""Convert detected peak indices to a BPM time-series.
+
+    For each consecutive peak pair $(p_i, p_{i+1})$, the instantaneous rate is:
+
+    $$\text{BPM}_i = \frac{60 \cdot f_s}{p_{i+1} - p_i}$$
+
+    This rate is held constant between the two peaks.  Gaps shorter than
+    ``max_interpolation_gap_seconds`` are filled by linear interpolation;
+    longer gaps remain NaN.
+    """
     rate = np.full(desired_length, np.nan, dtype=np.float32)
     peaks = np.asarray(peaks, dtype=np.int32).reshape(-1)
     if peaks.size < 2:
@@ -345,6 +360,12 @@ def _detect_ecg_rate_candidate(
     desired_length: int,
     method: str,
 ) -> np.ndarray:
+    r"""Detect ECG R-peaks with a specific NeuroKit2 method and convert to BPM.
+
+    Uses ``nk.ecg_peaks(cleaned_ecg, method)`` to find R-peak indices
+    $\{p_i\}$, then delegates to :func:`_rate_from_peak_intervals` for
+    interval-to-rate conversion.
+    """
     try:
         _, info = nk.ecg_peaks(
             cleaned_ecg,
@@ -369,6 +390,14 @@ def _neurokit_ecg_rate(
     sampling_rate: float,
     desired_length: int,
 ) -> np.ndarray:
+    r"""Extract heart rate from an ECG signal using adaptive multi-method selection.
+
+    1. Clean the raw ECG with ``nk.ecg_clean(method="neurokit")``.
+    2. Run a primary peak detector (``hamilton2002``) and one or more fallback
+       detectors (``pantompkins1985``, ``elgendi2010``).
+    3. If the primary result has coverage $\ge$ threshold, use it; otherwise
+       pick the candidate with the highest coverage $c$.
+    """
     nk = _require_neurokit2()
     try:
         cleaned = nk.ecg_clean(ecg, sampling_rate=sampling_rate, method="neurokit")
@@ -410,6 +439,11 @@ def _neurokit_rsp_rate(
     sampling_rate: float,
     desired_length: int,
 ) -> np.ndarray:
+    r"""Extract respiration rate from a respiratory signal.
+
+    Pipeline: ``nk.rsp_clean`` $\to$ ``nk.rsp_peaks`` $\to$ ``nk.signal_rate``.
+    The rate is interpolated to ``desired_length`` samples by NeuroKit2.
+    """
     nk = _require_neurokit2()
     try:
         cleaned = nk.rsp_clean(resp, sampling_rate=sampling_rate)
@@ -432,6 +466,14 @@ def _neurokit_rsp_rate(
 
 
 def build_physdrive_reference(ref: Dict[str, Any], frame_rate_hz: float) -> Dict[str, np.ndarray]:
+    r"""Build unified reference signals (time, HR, RR) from PhysDrive raw ECG and respiration.
+
+    ECG is processed via :func:`_neurokit_ecg_rate` and respiration via
+    :func:`_neurokit_rsp_rate`.  Both rates are clipped to physiologically
+    plausible ranges and the time axis is:
+
+    $$t_n = \frac{n}{f_s}, \quad n = 0, \ldots, N-1$$
+    """
     ecg = np.asarray(ref["ecg"], dtype=np.float32).reshape(-1)
     resp = np.asarray(ref["respiration"], dtype=np.float32).reshape(-1)
     n = min(ecg.size, resp.size)
@@ -461,6 +503,18 @@ def to_unified_reference(
     ref: Dict[str, Any],
     frame_rate_hz: Optional[float] = None,
 ) -> Dict[str, np.ndarray]:
+    r"""Convert dataset-specific reference data to a unified format.
+
+    All outputs are truncated to the minimum length across time/HR/RR arrays.
+
+    | Dataset | Source | Notes |
+    |---|---|---|
+    | FTU | CSV heart_rate + timestamps | ``respiration_rate`` filled with NaN |
+    | BGT60TR13C | CSV time + heart_rate + respiration_rate | Direct passthrough |
+    | PhysDrive | ECG + respiration waveforms | NeuroKit2 pipeline via :func:`build_physdrive_reference` |
+
+    Returns dict with keys ``time``, ``heart_rate``, ``respiration_rate``.
+    """
     if dataset_name == "FTU":
         time = np.asarray(ref["timestamps"], dtype=np.float32).reshape(-1)
         heart_rate = np.asarray(ref["heart_rate"], dtype=np.float32).reshape(-1)
@@ -491,12 +545,19 @@ def to_unified_reference(
 
 
 def _select_even_indices(length: int, target: int) -> np.ndarray:
+    r"""Select evenly-spaced indices for sub-sampling an axis.
+
+    When ``target`` $< $ ``length``, returns $M$ indices:
+
+    $$i_m = \mathrm{round}\!\left(m \cdot \frac{L - 1}{M - 1}\right), \quad m = 0, \ldots, M-1$$
+    """
     if target >= length:
         return np.arange(length, dtype=np.int32)
     return np.linspace(0, length - 1, num=target, dtype=np.int32)
 
 
 def _crop_or_pad_last_axis(arr: np.ndarray, target: int) -> np.ndarray:
+    r"""Crop (centre) or zero-pad the last axis to ``target`` elements."""
     cur = arr.shape[-1]
     if cur == target:
         return arr
@@ -511,6 +572,11 @@ def _crop_or_pad_last_axis(arr: np.ndarray, target: int) -> np.ndarray:
 
 
 def _range_window_indices(total_bins: int, target_bins: int, center_bin: int) -> np.ndarray:
+    r"""Compute a contiguous range-bin window centred on ``center_bin``.
+
+    Returns indices $[c - \lfloor W/2 \rfloor, \; c + \lceil W/2 \rceil)$
+    clamped to $[0, B)$ where $B$ is ``total_bins`` and $W$ is ``target_bins``.
+    """
     if target_bins >= total_bins:
         return np.arange(total_bins, dtype=np.int32)
     half = target_bins // 2
@@ -532,7 +598,22 @@ def _build_rda_cube_from_frame(
     target_doppler: int,
     target_angle: int,
 ) -> np.ndarray:
-    """将单帧原始 (rx,chirps,samples) 转为 (doppler,angle,range_full)。"""
+    r"""Convert one raw frame ``(rx, chirps, samples)`` to an RDA cube ``(doppler, angle, range)``.
+
+    The pipeline applies three successive FFTs:
+
+    1. **Slow-time clutter removal**: subtract the chirp-axis mean
+       $\tilde{x}[r, c, s] = x[r, c, s] - \frac{1}{C}\sum_c x[r, c, s]$
+    2. **Range FFT** along the sample axis:
+       $R[r, c, k] = \sum_{s} \tilde{x}[r, c, s]\, e^{-j2\pi sk/S}$,
+       keeping only the positive half ($k < S/2$).
+    3. **Doppler FFT** along the chirp axis (zero-padded to ``target_doppler``):
+       $D[r, d, k] = \sum_{c} R[r, c, k]\, e^{-j2\pi cd/C'}$
+    4. **Angle FFT** along the RX axis (zero-padded to ``target_angle``):
+       $A[a, d, k] = \sum_{r} D[r, d, k]\, e^{-j2\pi ra/R'}$
+
+    Returns shape ``(doppler, angle, range_full)``.
+    """
     frame = np.asarray(frame_data, dtype=np.complex64)[:, chirp_idx][:, :, sample_idx]  # (rx,c,s)
     frame = frame - frame.mean(axis=1, keepdims=True)  # slow-time clutter suppression
     range_fft = np.fft.fft(frame, axis=-1)
@@ -554,13 +635,25 @@ def convert_adc_cube_to_rda(
     target_angle: int = TARGET_ANGLE,
     target_range: int = TARGET_RANGE,
 ) -> Tuple[np.ndarray, np.ndarray, int]:
-    """将 (frames, rx, chirps, samples) 转为 (frames, doppler, angle, range)。
+    r"""Convert an ADC cube ``(frames, rx, chirps, samples)`` to a unified RDA cube.
 
-    与旧版不同：range 维采用“全样本统一目标窗口”，而非逐帧 top-k。
-    返回:
-        - rda: (frames, target_doppler, target_angle, target_range)
-        - selected_range_bins: 连续窗口对应的原始 range bin 索引
-        - center_range_bin: 目标中心 range bin（由全样本能量估计）
+    **Pass 1 -- global range-bin estimation**: accumulate mean energy across
+    all frames and Doppler/Angle bins to find the dominant range bin:
+
+    $$E[r] = \frac{1}{F}\sum_{f=1}^{F}\frac{1}{D \cdot A}\sum_{d,a} |X_f[d,a,r]|^2$$
+
+    $$r^* = \arg\max_r E[r]$$
+
+    A contiguous window of ``target_range`` bins centred on $r^*$ is selected.
+
+    **Pass 2 -- fixed-window extraction**: each frame's full-range RDA cube is
+    sliced to the selected bins, producing the output tensor of shape
+    ``(frames, target_doppler, target_angle, target_range)``.
+
+    Returns:
+        - ``rda``: complex64 RDA cube
+        - ``selected_range_bins``: the contiguous range-bin indices used
+        - ``center_range_bin``: $r^*$
     """
     if radar.ndim != 4:
         raise ValueError(f"期望 4D 雷达张量，实际 ndim={radar.ndim}")
@@ -618,7 +711,14 @@ def align_rda_shape(
     target_angle: int = TARGET_ANGLE,
     target_range: int = TARGET_RANGE,
 ) -> np.ndarray:
-    """将现有 RDA 数据对齐到统一的 (frames, d, a, r) 尺寸。"""
+    r"""Resize an existing RDA cube to the unified target dimensions.
+
+    Doppler and angle axes are resampled via zero-padded / truncated FFT:
+
+    $$X'[d'] = \sum_{d} X[d]\,e^{-j2\pi d d'/D_{\text{target}}}$$
+
+    The range axis is centre-cropped or zero-padded to ``target_range``.
+    """
     if radar_rda.ndim != 4:
         raise ValueError(f"期望 PhysDrive RDA 为 4D，实际 ndim={radar_rda.ndim}")
     x = np.asarray(radar_rda, dtype=np.complex64)

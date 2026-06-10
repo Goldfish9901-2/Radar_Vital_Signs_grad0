@@ -439,7 +439,13 @@ class PhysDriveDataLoader(BaseDataLoader):
         mmwave: np.ndarray,
         target_frames: int,
     ) -> np.ndarray:
-        """将 mmwave 的帧数标准化到 target_frames。"""
+        r"""Normalise the frame axis to ``target_frames``.
+
+        Truncates when $F > F_{\text{target}}$; zero-pads the trailing frames
+        when $F < F_{\text{target}}$:
+
+        $$\tilde{x}[f] = \begin{cases} x[f] & f < F \\ 0 & F \le f < F_{\text{target}} \end{cases}$$
+        """
         cur = int(mmwave.shape[0])
         if cur == target_frames:
             return mmwave
@@ -452,14 +458,14 @@ class PhysDriveDataLoader(BaseDataLoader):
         return np.concatenate([mmwave, pad], axis=0)
 
     def _convert_to_complex(self, mmwave: np.ndarray) -> np.ndarray:
-        """将实部/虚部分离的数据转换为复数格式。
+        r"""Merge separated real/imag channels into a complex array.
 
-        Args:
-            mmwave: 形状为(600, 2, 8, 16, 8)的数组
-                   其中第2维: [0]=实部, [1]=虚部
+        Given input of shape ``(F, 2, D, A, R)`` where axis-1 holds
+        $[\Re, \Im]$, returns:
 
-        Returns:
-            形状为(600, 8, 16, 8)的复数数组
+        $$z[f, d, a, r] = x[f, 0, d, a, r] + j\,x[f, 1, d, a, r]$$
+
+        Output shape: ``(F, D, A, R)`` with dtype ``complex128``.
         """
         real_part = mmwave[:, 0, :, :, :]  # (600, 8, 16, 8)
         imag_part = mmwave[:, 1, :, :, :]  # (600, 8, 16, 8)

@@ -13,21 +13,25 @@ Output:
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path, PureWindowsPath
+
+# Add project root to path BEFORE importing src modules
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 import argparse
 import csv
 import hashlib
 import itertools
 import json
 import shutil
-from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
-import sys
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[2]
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
+from src.data.decompositions import decompose as signal_decompose
 
 
 DEFAULT_EXPORTS_DIR = ROOT / "exports"
@@ -48,6 +52,7 @@ DEFAULT_VMD_ALPHA = 2000.0
 DEFAULT_VMD_MAX_ITER = 120
 DEFAULT_VMD_TOL = 1e-5
 DEFAULT_SAMPLING_RATE_HZ = 20.0
+DEFAULT_DECOMPOSITION = "vmd"
 DEFAULT_RDA_REPRESENTATION = "log_magnitude"
 DEFAULT_SPLIT_MODE = "balanced_grouped"
 BALANCED_EXHAUSTIVE_MAX_GROUPS = 14
@@ -71,8 +76,18 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Build fixed-window training dataset from unified exports."
     )
-    parser.add_argument("--exports-dir", type=Path, default=DEFAULT_EXPORTS_DIR)
-    parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument(
+        "--exports-dir",
+        type=Path,
+        default=DEFAULT_EXPORTS_DIR,
+        help="Input directory containing per-dataset exports (manifest.csv + samples/*.npz).",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=DEFAULT_OUTPUT_DIR,
+        help="Output directory for windowed training data, manifest, and config.",
+    )
     parser.add_argument(
         "--datasets",
         nargs="+",
@@ -80,11 +95,21 @@ def parse_args() -> argparse.Namespace:
         choices=list(DEFAULT_DATASETS),
         help="Datasets to include.",
     )
-    parser.add_argument("--window-size", type=int, default=DEFAULT_WINDOW_SIZE)
-    parser.add_argument("--stride", type=int, default=DEFAULT_STRIDE)
+    parser.add_argument(
+        "--window-size",
+        type=int,
+        default=DEFAULT_WINDOW_SIZE,
+        help="Number of frames per sliding window.",
+    )
+    parser.add_argument(
+        "--stride",
+        type=int,
+        default=DEFAULT_STRIDE,
+        help="Step size (in frames) between consecutive windows.",
+    )
     parser.add_argument(
         "--representation",
-        choices=["target_edacm_vmd", "target_edacm", "log_magnitude", "magnitude", "real_imag"],
+        choices=["target_edacm_vmd", "target_edacm", "log_magnitude", "magnitude", "real_imag", "hybrid_evmd_ewt"],
         default=DEFAULT_REPRESENTATION,
         help="How to convert complex radar tensors for model input.",
     )
@@ -112,18 +137,36 @@ def parse_args() -> argparse.Namespace:
         help="Feature normalization applied after representation conversion.",
     )
     parser.add_argument(
+        "--decomposition",
+        choices=["vmd", "svmd", "iapvmd", "evmd", "ewt"],
+        default=DEFAULT_DECOMPOSITION,
+        help="Signal decomposition algorithm for target_edacm_vmd representation.",
+    )
+    parser.add_argument(
+        "--decomp-k",
+        type=int,
+        default=DEFAULT_VMD_K,
+        help="Number of output modes for decomposition (padded/truncated to this size).",
+    )
+    parser.add_argument(
         "--max-windows-per-sample",
         type=int,
         default=None,
         help="Optional cap for quick experiments/debugging.",
     )
-    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=42,
+        help="Random seed for reproducible group-to-split assignment.",
+    )
     parser.add_argument(
         "--split-ratios",
         type=float,
         nargs=3,
         default=list(DEFAULT_SPLIT_RATIOS),
         metavar=("TRAIN", "VAL", "TEST"),
+        help="Train/val/test ratios (3 floats, auto-normalized to sum to 1).",
     )
     parser.add_argument(
         "--split-mode",
@@ -138,6 +181,12 @@ def parse_args() -> argparse.Namespace:
         "--overwrite",
         action="store_true",
         help="Allow writing into a non-empty output directory.",
+    )
+    parser.add_argument(
+        "--confidence-threshold",
+        type=float,
+        default=0.5,
+        help="Spatial confidence threshold for hybrid_evmd_ewt. Above → EWT weight, below → EVMD weight.",
     )
     return parser.parse_args()
 
@@ -223,6 +272,7 @@ def split_group_keys(
     seed: int,
     forced_test_groups: Optional[set[str]] = None,
 ) -> Dict[str, str]:
+    """使用稳定哈希方法将组键分配到训练/验证/测试集。"""
     forced_test_groups = forced_test_groups or set()
     unique_groups = sorted(set(group_keys))
     flexible_groups = [g for g in unique_groups if g not in forced_test_groups]
@@ -258,6 +308,7 @@ def split_group_keys(
 
 
 def split_counts(n: int, ratios: Tuple[float, float, float]) -> Tuple[int, int, int]:
+    """根据比例计算训练/验证/测试集的数量。"""
     if n <= 0:
         return 0, 0, 0
     if n == 1:
@@ -275,6 +326,7 @@ def split_counts(n: int, ratios: Tuple[float, float, float]) -> Tuple[int, int, 
 
 
 def participant_id_from_group(group_key: str) -> Optional[str]:
+    """从组键中提取参与者ID。"""
     parts = group_key.split("/")
     if len(parts) >= 3 and parts[-2] == "participant":
         return parts[-1]
@@ -286,6 +338,7 @@ def default_participant_split(
     group_keys: Sequence[str],
     forced_test_groups: Optional[set[str]] = None,
 ) -> Optional[Dict[str, str]]:
+    """获取数据集的默认参与者分割方案。"""
     if forced_test_groups:
         return None
     spec = DEFAULT_PARTICIPANT_SPLITS.get(dataset)
@@ -318,6 +371,9 @@ def stratified_group_split_by_label_range(
     group_label_means: Dict[str, float],
     forced_test_groups: Optional[set[str]] = None,
 ) -> Optional[Dict[str, str]]:
+    """根据标签范围对组进行分层分割，平衡各分割集的标签分布。"""
+    """根据标签范围对组进行分层分割，平衡各分割集的标签分布。"""
+    """根据标签范围对组进行分层分割，平衡各分割集的标签分布。"""
     if forced_test_groups:
         return None
     unique_groups = sorted(set(group_keys))
@@ -381,6 +437,7 @@ def stratified_group_split_by_label_range(
 
 
 def group_mean_label(sample: Dict[str, Any]) -> Optional[float]:
+    """计算单个样本的平均心率标签。"""
     try:
         data = np.load(Path(sample["npz_path"]), allow_pickle=False)
         labels = np.asarray(data["heart_rate"], dtype=np.float32).reshape(-1)
@@ -396,6 +453,9 @@ def compute_group_label_means(
     samples: Sequence[Dict[str, Any]],
     show_progress: bool = False,
 ) -> Dict[str, float]:
+    """计算每个组的平均标签值。"""
+    """计算每个组的平均标签值。"""
+    """计算每个组的平均标签值。"""
     values_by_group: Dict[str, List[float]] = {}
     for idx, sample in enumerate(samples, start=1):
         mean_label = group_mean_label(sample)
@@ -414,11 +474,10 @@ def compute_group_label_means(
 
 
 def ftu_extreme_balance_penalty(split_groups: Dict[str, Sequence[str]]) -> float:
-    """Softly distribute known FTU special cases across train/val/test.
+    """将已知的FTU特殊案例适度分布到训练/验证/测试集中。
 
-    The 4TU/FTU paper marks participant 2 as an experienced meditator and
-    participants 5/6 as asthma cases. We avoid placing all such cases in one
-    split, while still letting HR distribution balance dominate.
+    4TU/FTU论文将参与者2标记为有经验的冥想者，参与者5/6标记为哮喘病例。
+    我们避免将所有这些案例放在一个分割中，同时仍让心率分布平衡占主导地位。
     """
     special = set(FTU_SPECIAL_PARTICIPANTS)
     counts: Dict[str, int] = {}
@@ -441,6 +500,7 @@ def greedy_balanced_split_group_keys(
     group_label_means: Dict[str, float],
     forced_test_groups: Optional[set[str]] = None,
 ) -> Dict[str, str]:
+    """使用贪心算法进行平衡的组分割。"""
     forced_test_groups = forced_test_groups or set()
     unique_groups = sorted(set(group_keys))
     assignment: Dict[str, str] = {g: "test" for g in forced_test_groups if g in unique_groups}
@@ -503,6 +563,8 @@ def balanced_split_group_keys(
     group_label_means: Dict[str, float],
     forced_test_groups: Optional[set[str]] = None,
 ) -> Dict[str, str]:
+    """根据数据集类型执行平衡的组分割。"""
+
     forced_test_groups = forced_test_groups or set()
     unique_groups = sorted(set(group_keys))
     default_assignment = default_participant_split(dataset, group_keys, forced_test_groups)
@@ -602,6 +664,8 @@ def build_domain_split_map(
     split_mode: str,
     group_label_means: Optional[Dict[str, float]] = None,
 ) -> Dict[str, str]:
+    """为所有样本构建域分割映射。"""
+
     groups_by_dataset: Dict[str, List[str]] = {}
     for sample in samples:
         groups_by_dataset.setdefault(sample["dataset"], []).append(get_group_key(sample))
@@ -638,6 +702,7 @@ def build_domain_split_map(
 
 
 def get_group_key(sample: Dict[str, Any]) -> str:
+    """获取样本的组键。"""
     dataset = sample["dataset"]
     row = sample.get("source_row", {})
     sample_tag = sample["sample_tag"]
@@ -653,6 +718,7 @@ def get_group_key(sample: Dict[str, Any]) -> str:
 
 
 def is_bgt_long_sample(sample: Dict[str, Any]) -> bool:
+    """判断样本是否为BGT长测量样本。"""
     return (
         sample.get("dataset") == "BGT60TR13C"
         and sample.get("source_row", {}).get("measurement_type") == "long"
@@ -660,6 +726,7 @@ def is_bgt_long_sample(sample: Dict[str, Any]) -> bool:
 
 
 def collect_bgt_long_participants(samples: Sequence[Dict[str, Any]]) -> set[str]:
+    """收集所有BGT长测量参与者。"""
     participants: set[str] = set()
     for sample in samples:
         if not is_bgt_long_sample(sample):
@@ -671,19 +738,22 @@ def collect_bgt_long_participants(samples: Sequence[Dict[str, Any]]) -> set[str]
 
 
 def resolve_npz_path(row: Dict[str, str], exports_dir: Path, dataset: str) -> Optional[Path]:
+    """解析NPZ文件路径，支持多种路径格式。"""
     raw = row.get("npz_path", "")
     if not raw:
         return None
     path = Path(raw)
     if path.exists():
         return path
-    candidate = exports_dir / dataset / "samples" / path.name
+    filename = PureWindowsPath(raw).name if "\\" in raw else path.name
+    candidate = exports_dir / dataset / "samples" / filename
     if candidate.exists():
         return candidate
     return path
 
 
 def collect_exported_samples(exports_dir: Path, datasets: Sequence[str]) -> List[Dict[str, Any]]:
+    """从导出目录收集所有样本。"""
     samples: List[Dict[str, Any]] = []
     seen_npz: set[Tuple[str, str]] = set()
     for dataset in datasets:
@@ -711,6 +781,16 @@ def collect_exported_samples(exports_dir: Path, datasets: Sequence[str]) -> List
 
 
 def detrend_linear(x: np.ndarray) -> np.ndarray:
+    r"""
+    通过最小二乘法从一维信号中去除线性趋势。
+
+    将一阶多项式 $y(t) = a\,t + b$ 拟合成有效样本，其中
+    $t \in [-1, 1]$ 是归一化时间轴，然后返回残差：
+
+    $\hat{x}[n] = x[n] - (\hat{a}\,t_n + \hat{b})$
+
+    去趋势后，NaN样本填充为零。
+    """
     y = np.asarray(x, dtype=np.float32).reshape(-1)
     if y.size <= 1:
         return y - np.nanmean(y)
@@ -725,6 +805,16 @@ def detrend_linear(x: np.ndarray) -> np.ndarray:
 
 
 def zscore_1d(x: np.ndarray) -> np.ndarray:
+    r"""
+    将一维信号标准化为零均值和单位方差。
+
+    $\hat{x}[n] = \frac{x[n] - \mu}{\sigma}$
+
+    其中 $\mu = \frac{1}{N}\sum_n x[n]$，
+    $\sigma = \sqrt{\frac{1}{N}\sum_n (x[n]-\mu)^2}$。
+    如果 $\sigma < 10^{-6}$，则仅减去均值而不进行缩放。
+    NaN值替换为零。
+    """
     y = np.asarray(x, dtype=np.float32).copy()
     if y.size == 0 or not np.isfinite(y).any():
         return np.zeros_like(y, dtype=np.float32)
@@ -739,6 +829,20 @@ def zscore_1d(x: np.ndarray) -> np.ndarray:
 
 
 def edacm_phase(z: np.ndarray, eps: float = 1e-6) -> np.ndarray:
+    r"""
+    通过增强分治法(EDACM)从复IQ信号中提取瞬时相位。
+
+    给定 $z[n] = I[n] + j\,Q[n]$，相位增量计算为：
+
+    $\Delta\phi[n] = \frac{I[n]\,\Delta Q[n] - Q[n]\,\Delta I[n]}{I[n]^2 + Q[n]^2 + \varepsilon}$
+
+    其中 $\Delta I[n] = I[n] - I[n-1]$，$\Delta Q[n] = Q[n] - Q[n-1]$。
+    展开的相位是累积和：
+
+    $\phi[n] = \sum_{m=0}^{n} \Delta\phi[m]$
+
+    返回前从 $\phi$ 中去除线性趋势（参见 :func:`detrend_linear`）。
+    """
     series = np.asarray(z, dtype=np.complex64).reshape(-1)
     i = np.real(series).astype(np.float32)
     q = np.imag(series).astype(np.float32)
@@ -751,6 +855,13 @@ def edacm_phase(z: np.ndarray, eps: float = 1e-6) -> np.ndarray:
 
 
 def minmax_score(values: np.ndarray) -> np.ndarray:
+    r"""
+    通过最小-最大归一化将值缩放到 $[0, 1]$。
+
+    $\hat{x}_i = \frac{x_i - \min(\mathbf{x})}{\max(\mathbf{x}) - \min(\mathbf{x})}$
+
+    当范围接近零（$< 10^{-8}$）时返回全1数组。
+    """
     x = np.asarray(values, dtype=np.float32)
     if x.size == 0:
         return x
@@ -767,6 +878,19 @@ def minmax_score(values: np.ndarray) -> np.ndarray:
 
 
 def phase_stability_score(phase: np.ndarray) -> float:
+    r"""
+    对相位信号的时间稳定性进行评分。
+
+    从z评分相位的连续差的标准差计算粗糙度指标：
+
+    $\rho = \mathrm{std}\!\bigl(\Delta\hat\phi\bigr), \quad \Delta\hat\phi[n] = \hat\phi[n] - \hat\phi[n-1]$
+
+    稳定性分数是映射到 $[0, 1]$ 的反sigmoid函数：
+
+    $s = \frac{1}{1 + \rho}$
+
+    值越高表示相位信号越平滑（更稳定）。
+    """
     y = zscore_1d(phase)
     if y.size < 4:
         return 0.0
@@ -782,6 +906,19 @@ def hr_band_peak_score(
     sampling_rate_hz: float = DEFAULT_SAMPLING_RATE_HZ,
     band_hz: Tuple[float, float] = DEFAULT_HR_BAND_HZ,
 ) -> float:
+    r"""
+    根据心率频段的频谱能量集中度对相位信号评分。
+
+    对z评分的相位应用Hann窗口 $w[n]$，计算RFFT幅度谱 $|X[k]|$，然后评估：
+
+    1. **频段能量比**：$R = \frac{\sum_{k \in \mathcal{B}} |X[k]|}{\sum_{k>0} |X[k]|}$
+       其中 $\mathcal{B} = \{k : f_{\text{lo}} \le f_k \le f_{\text{hi}}\}$。
+    2. **峰值集中度**：$C = \frac{\max_{k \in \mathcal{B}} |X[k]|}{\mathrm{mean}_{k \in \mathcal{B}} |X[k]|}$
+
+    最终分数综合两者：
+
+    $s = \ln(1 + C) \cdot R$
+    """
     y = zscore_1d(phase)
     n = int(y.size)
     if n < 8:
@@ -807,6 +944,19 @@ def segment_peak_bins(
     radar: np.ndarray,
     segments: int = DEFAULT_RDA_STABILITY_SEGMENTS,
 ) -> np.ndarray:
+    r"""
+    在多普勒-角度-距离空间中按时间分段查找峰值能量bin。
+
+    帧轴被分成 $S$ 个相等的段。对于每个段 $s$，平均能量图为：
+
+    $E_s[d, a, r] = \frac{1}{N_s}\sum_{n \in \text{seg}_s} |x[n, d, a, r]|^2$
+
+    峰值bin索引为：
+
+    $(d^*, a^*, r^*)_s = \arg\max_{d,a,r}\; E_s[d, a, r]$
+
+    返回形状为 ``(S, 3)`` 的数组，包含每个段的 $(d, a, r)$ 索引。
+    """
     n_frames = int(radar.shape[0])
     n_segments = min(max(1, int(segments)), max(1, n_frames))
     peaks: List[np.ndarray] = []
@@ -824,6 +974,19 @@ def segment_peak_bins(
 
 
 def spatial_consistency_scores(candidate_bins: np.ndarray, peak_bins: np.ndarray) -> np.ndarray:
+    r"""
+    对候选bin和分段峰值bin之间的空间一致性进行评分。
+
+    对于每个候选bin $\mathbf{c}$，到每个时间分段峰值 $\mathbf{p}_s$ 的归一化欧几里得距离为：
+
+    $d_s = \left\| \frac{\mathbf{p}_s - \mathbf{c}}{\mathbf{s}} \right\|_2$
+
+    其中 $\mathbf{s}$ 是峰值bin的每轴范围(ptp)，钳位到最小值1。一致性分数是平均指数衰减：
+
+    $\text{score}(\mathbf{c}) = \frac{1}{S}\sum_{s=1}^{S} e^{-d_s}$
+
+    值在 $(0, 1]$ 范围内；值越高表示候选bin在空间上越接近所有段的主导bin。
+    """
     candidates = np.asarray(candidate_bins, dtype=np.float32)
     peaks = np.asarray(peak_bins, dtype=np.float32)
     if candidates.size == 0 or peaks.size == 0:
@@ -840,6 +1003,24 @@ def select_target_bin_indices(
     radar: np.ndarray,
     top_bins: int,
 ) -> Tuple[np.ndarray, np.ndarray, Dict[str, Any]]:
+    r"""
+    选择用于生命体征提取的最优多普勒-角度-距离bin。
+
+    一组高能量候选bin通过四个标准评分，每个标准都进行最小-最大归一化到 $[0, 1]$：
+
+    | 标准 | 权重 | 描述 |
+    |---|---|---|
+    | 能量 | $w_e = 0.35$ | $\ln(1 + E)$，其中 $E = \frac{1}{N}\sum_n \|x[n,d,a,r]\|^2$ |
+    | 相位稳定性 | $w_p = 0.25$ | 差分粗糙度的反sigmoid函数（参见 :func:`phase_stability_score`） |
+    | 心率频段峰值 | $w_h = 0.25$ | 心率频段的频谱集中度（参见 :func:`hr_band_peak_score`） |
+    | 空间一致性 | $w_s = 0.15$ | 与分段峰值bin的接近程度（参见 :func:`spatial_consistency_scores`） |
+
+    综合分数为：
+
+    $S_i = w_e\,\tilde{e}_i + w_p\,\tilde{p}_i + w_h\,\tilde{h}_i + w_s\,\tilde{s}_i$
+
+    返回按 $S_i$ 排序的前$K$个bin，以及用于加权相位融合的softmax归一化权重 $w_k = S_k / \sum_j S_j$。
+    """
     energy = np.mean(np.abs(radar) ** 2, axis=0)
     flat = energy.reshape(-1)
     count = min(max(1, int(top_bins)), int(flat.size))
@@ -905,6 +1086,18 @@ def target_edacm_signal(
     radar: np.ndarray,
     top_bins: int = DEFAULT_EDACM_TOP_BINS,
 ) -> Tuple[np.ndarray, Dict[str, Any]]:
+    r"""通过EDACM从最佳RDA bin中提取融合的生命体征相位信号。
+
+    对于每个选定的bin $k$，提取EDACM相位 $\phi_k[n]$（参见 :func:`edacm_phase`）。
+    相位经过线性去趋势处理，然后通过稳定性加权求和进行融合：
+
+    $\phi_{\text{fused}}[n] = \sum_{k=1}^{K} w_k\,\phi_k[n]$
+
+    其中 $w_k$ 是来自 :func:`select_target_bin_indices` 的归一化分数。
+    融合后的信号最终进行z评分。
+
+    返回 ``(fused_phase, metadata_dict)``。
+    """
     selected_bins, weights, score_meta = select_target_bin_indices(radar, top_bins=top_bins)
     phases = []
     for d_idx, a_idx, r_idx in selected_bins:
@@ -931,7 +1124,26 @@ def vmd_decompose(
     max_iter: int = DEFAULT_VMD_MAX_ITER,
     tol: float = DEFAULT_VMD_TOL,
 ) -> np.ndarray:
-    """Variational mode decomposition for one real-valued fixed-length signal."""
+    r"""
+    变分模态分解(VMD)，用于处理单个实值信号。
+
+    通过求解以下优化问题将 $x[n]$ 分解为 $K$ 个固有模态函数(IMF)：
+
+    $\min_{\{u_k\},\{\omega_k\}} \sum_{k=1}^{K} \left\| \partial_t \!\left[ \left(\delta(t) + \frac{j}{\pi t}\right) * u_k(t) \right] e^{-j\omega_k t} \right\|_2^2$
+
+    约束条件为 $\sum_k u_k = x$。在频域中，每个模态作为维纳滤波器更新：
+
+    $\hat{u}_k[f] = \frac{X[f] - \sum_{i \neq k} \hat{u}_i[f] - \hat\lambda[f]/2}{1 + \alpha\,(f - \omega_k)^2}$
+
+    其中 $\alpha$ 控制带宽约束。中心频率通过功率加权均值更新：
+
+    $\omega_k = \frac{\sum_{f \geq 0} f\,|\hat{u}_k[f]|^2}{\sum_{f \geq 0} |\hat{u}_k[f]|^2}$
+
+    对偶变量 $\hat\lambda$ 通过步长 $\tau$（这里设为0以实现无约束收敛）强制精确重建。
+    当相对变化低于 ``tol`` 或达到 ``max_iter`` 时迭代停止。
+
+    返回前对每个输出模态进行z评分。输出形状：``(K, N)``。
+    """
     x = zscore_1d(signal)
     n = int(x.size)
     if n == 0:
@@ -981,6 +1193,18 @@ def frequency_features(
     modes: np.ndarray,
     sampling_rate_hz: float = DEFAULT_SAMPLING_RATE_HZ,
 ) -> Tuple[np.ndarray, np.ndarray, Dict[str, Any]]:
+    r"""将时域VMD模态转换为频域特征。
+
+    每个模态 $u_k[n]$ 乘以Hann窗口 $w[n]$，然后计算实值FFT：
+
+    $U_k[f] = \sum_{n=0}^{N-1} u_k[n]\,w[n]\,e^{-j2\pi fn/N}$
+
+    对数幅度谱为：
+
+    $\tilde{U}_k[f] = \ln\!\bigl(1 + |U_k[f]|\bigr)$
+
+    每行独立进行z评分。返回 ``(x_freq, freq_hz, meta)``，其中 ``x_freq`` 的形状为 ``(K, N//2+1)``。
+    """
     time_modes = np.asarray(modes, dtype=np.float32)
     if time_modes.ndim == 1:
         time_modes = time_modes[None, :]
@@ -1013,13 +1237,34 @@ def frequency_features(
 
 
 def rda_log_magnitude(radar: np.ndarray) -> np.ndarray:
+    r"""复数RDA立方体的对数幅度。
+
+    $y[d,a,r,n] = \ln\!\bigl(1 + |x[n,d,a,r]|\bigr)$
+    """
     return np.log1p(np.abs(radar)).astype(np.float32)
 
 
 def radar_to_feature_bundle(
     radar: np.ndarray,
     representation: str,
+    decomposition: str = DEFAULT_DECOMPOSITION,
+    decomp_k: int = DEFAULT_VMD_K,
+    confidence_threshold: float = 0.5,
 ) -> Dict[str, Any]:
+    r"""将复数RDA窗口转换为特征包。
+
+    支持的表示方式：
+
+    | 键 | 输出 | 公式 |
+    |---|---|---|
+    | ``real_imag`` | $(2, F, D, A, R)$ | $[\Re(x),\;\Im(x)]$ 堆叠 |
+    | ``magnitude`` | $(F, D, A, R)$ | $\|x\|$ |
+    | ``log_magnitude`` | $(F, D, A, R)$ | $\ln(1 + \|x\|)$ |
+    | ``target_edacm`` | $(1, N)$ | 加权EDACM相位（参见 :func:`target_edacm_signal`） |
+    | ``target_edacm_vmd`` | dict | 分解模态 $+$ 频域特征 $+$ RDA对数幅度 |
+
+    返回包含键 ``x``（主要特征）和 ``meta``（参数）的字典。
+    """
     if representation == "real_imag":
         x = np.stack([np.real(radar), np.imag(radar)], axis=0).astype(np.float32)
     elif representation == "magnitude":
@@ -1032,12 +1277,21 @@ def radar_to_feature_bundle(
         return {"x": x, "meta": phase_meta}
     elif representation == "target_edacm_vmd":
         phase, phase_meta = target_edacm_signal(radar)
-        x_time = vmd_decompose(phase, k=DEFAULT_VMD_K)
+        x_time = signal_decompose(
+            phase,
+            method=decomposition,
+            k=decomp_k,
+            alpha=DEFAULT_VMD_ALPHA,
+            max_iter=DEFAULT_VMD_MAX_ITER,
+            tol=DEFAULT_VMD_TOL,
+            sampling_rate_hz=DEFAULT_SAMPLING_RATE_HZ,
+        )
         x_freq, freq_hz, freq_meta = frequency_features(x_time)
         x_rda = rda_log_magnitude(radar)
         phase_meta.update(
             {
-                "vmd_k": DEFAULT_VMD_K,
+                "decomposition": decomposition,
+                "vmd_k": decomp_k,
                 "vmd_alpha": DEFAULT_VMD_ALPHA,
                 "vmd_max_iter": DEFAULT_VMD_MAX_ITER,
                 "vmd_tol": DEFAULT_VMD_TOL,
@@ -1058,12 +1312,58 @@ def radar_to_feature_bundle(
             "freq_hz": freq_hz.astype(np.float32),
             "meta": phase_meta,
         }
+    elif representation == "hybrid_evmd_ewt":
+        phase, phase_meta = target_edacm_signal(radar)
+        x_evmd = signal_decompose(
+            phase, method="evmd", k=decomp_k,
+            alpha=DEFAULT_VMD_ALPHA, max_iter=DEFAULT_VMD_MAX_ITER, tol=DEFAULT_VMD_TOL,
+        )
+        x_ewt = signal_decompose(
+            phase, method="ewt", k=decomp_k,
+            alpha=DEFAULT_VMD_ALPHA, max_iter=DEFAULT_VMD_MAX_ITER, tol=DEFAULT_VMD_TOL,
+            sampling_rate_hz=DEFAULT_SAMPLING_RATE_HZ,
+        )
+        confidence = float(phase_meta.get("rda_spatial_confidence", 0.5))
+        threshold = confidence_threshold
+        ewt_weight = 1.0 / (1.0 + np.exp(-10.0 * (confidence - threshold)))
+        x_time = (1.0 - ewt_weight) * x_evmd + ewt_weight * x_ewt
+        x_freq, freq_hz, freq_meta = frequency_features(x_time)
+        x_rda = rda_log_magnitude(radar)
+        phase_meta.update({
+            "decomposition": "hybrid_evmd_ewt",
+            "vmd_k": decomp_k,
+            "confidence": confidence,
+            "confidence_threshold": threshold,
+            "ewt_weight": float(ewt_weight),
+            "feature_domains": ["time", "frequency"],
+            "x_time_shape": list(x_time.shape),
+            "x_freq_shape": list(x_freq.shape),
+            "x_rda_shape": list(x_rda.shape),
+            "x_rda_representation": DEFAULT_RDA_REPRESENTATION,
+            **freq_meta,
+        })
+        return {
+            "x": x_time.astype(np.float32),
+            "x_time": x_time.astype(np.float32),
+            "x_freq": x_freq.astype(np.float32),
+            "x_rda": x_rda.astype(np.float32),
+            "freq_hz": freq_hz.astype(np.float32),
+            "meta": phase_meta,
+        }
     else:
         raise ValueError(f"Unsupported representation: {representation}")
     return {"x": x, "meta": {}}
 
 
 def normalize_features(x: np.ndarray, mode: str) -> np.ndarray:
+    r"""归一化特征张量。
+
+    ``"window_zscore"`` 在整个张量上应用逐元素标准化：
+
+    $ \hat{x} = \frac{x - \mu}{\sigma} $
+
+    ``"none"`` 返回不变的输入。
+    """
     if mode == "none":
         return x.astype(np.float32, copy=False)
     if mode != "window_zscore":
@@ -1080,6 +1380,13 @@ def normalize_features(x: np.ndarray, mode: str) -> np.ndarray:
 
 
 def build_frame_times(time: np.ndarray, n_frames: int) -> np.ndarray:
+    r"""从参考时间戳构建帧时间向量。
+
+    如果参考数组长度与 ``n_frames`` 匹配，则原样返回。
+    否则，生成 $N$ 个均匀间隔的时间：
+
+    $t_n = t_{\min} + n \cdot \frac{t_{\max} - t_{\min}}{N - 1}, \quad n = 0, \ldots, N-1$
+    """
     ref_time = np.asarray(time, dtype=np.float32).reshape(-1)
     if n_frames <= 0:
         return np.array([], dtype=np.float32)
@@ -1098,6 +1405,14 @@ def interpolate_label_to_frames(
     ref_time: np.ndarray,
     frame_time: np.ndarray,
 ) -> np.ndarray:
+    r"""通过线性插值将稀疏标签时间序列重采样到密集帧时间。
+
+    给定参考时间 $t_i$ 处的标签值 $y_i$，每个帧时间 $\tau_n$ 处的标签为：
+
+    $y(\tau_n) = y_j + \frac{y_{j+1} - y_j}{t_{j+1} - t_j}(\tau_n - t_j)$
+
+    其中 $t_j \le \tau_n < t_{j+1}$。参考范围外的帧时间设为NaN。
+    """
     y = np.asarray(label, dtype=np.float32).reshape(-1)
     t = np.asarray(ref_time, dtype=np.float32).reshape(-1)
     n = min(y.size, t.size)
@@ -1122,6 +1437,16 @@ def interpolate_label_to_frames(
 
 
 def reduce_label(values: np.ndarray, mode: str) -> float:
+    r"""将窗口内的标签值缩减为单个标量。
+
+    | 模式 | 公式 |
+    |---|---|
+    | ``"mean"`` | $\bar{y} = \frac{1}{N}\sum_{n} y[n]$ |
+    | ``"median"`` | $\tilde{y} = \mathrm{median}(y)$ |
+    | ``"center"`` | $y[\lfloor N/2 \rfloor]$ |
+
+    聚合前排除NaN值。
+    """
     valid = values[np.isfinite(values)]
     if valid.size == 0:
         return float("nan")
@@ -1138,12 +1463,23 @@ def reduce_label(values: np.ndarray, mode: str) -> float:
 
 
 def label_coverage(values: np.ndarray) -> float:
+    r"""标签数组中有限（非NaN）值的比例。
+
+    $c = \frac{|\{n : y[n] \in \mathbb{R}\}|}{N}$
+    """
     if values.size == 0:
         return 0.0
     return float(np.isfinite(values).sum() / values.size)
 
 
 def iter_window_starts(n_frames: int, window_size: int, stride: int) -> List[int]:
+    r"""生成滑动窗口的起始索引。
+
+    $s_i = i \cdot \text{stride}, \quad i = 0, 1, \ldots, \left\lfloor \frac{N - W}{\text{stride}} \right\rfloor$
+
+    其中 $N$ 是 ``n_frames``，$W$ 是 ``window_size``。
+    当 $N < W$ 时返回空列表。
+    """
     if n_frames < window_size:
         return []
     return list(range(0, n_frames - window_size + 1, stride))
@@ -1156,6 +1492,7 @@ def save_window(
     label_series: Dict[str, np.ndarray],
     meta: Dict[str, Any],
 ) -> None:
+    """将窗口数据保存为压缩的NPZ文件。"""
     arrays: Dict[str, Any] = {
         "label_heart_rate": np.float32(labels.get("heart_rate", np.nan)),
         "label_series_heart_rate": label_series["heart_rate"].astype(np.float32),
@@ -1169,10 +1506,11 @@ def save_window(
 
 
 def prepare_output_dir(output_dir: Path, overwrite: bool) -> None:
+    """准备输出目录，如果需要则清空现有内容。"""
     if output_dir.exists() and any(output_dir.iterdir()):
         if not overwrite:
             raise FileExistsError(
-                f"Output directory is not empty: {output_dir}. Use --overwrite to continue."
+                f"输出目录不为空: {output_dir}。使用 --overwrite 参数继续。"
             )
         shutil.rmtree(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -1180,6 +1518,7 @@ def prepare_output_dir(output_dir: Path, overwrite: bool) -> None:
 
 
 def build_training_dataset(args: argparse.Namespace) -> None:
+    """构建训练数据集的主函数。"""
     exports_dir = Path(args.exports_dir).resolve()
     output_dir = Path(args.output_dir).resolve()
     split_ratios = validate_split_ratios(args.split_ratios)
@@ -1298,7 +1637,12 @@ def build_training_dataset(args: argparse.Namespace) -> None:
                 continue
 
             radar_window = radar[start:end]
-            feature_bundle = radar_to_feature_bundle(radar_window, args.representation)
+            feature_bundle = radar_to_feature_bundle(
+                radar_window, args.representation,
+                decomposition=args.decomposition,
+                decomp_k=args.decomp_k,
+                confidence_threshold=args.confidence_threshold,
+            )
             feature_bundle["x"] = normalize_features(feature_bundle["x"], args.normalize)
             if "x_time" in feature_bundle:
                 feature_bundle["x_time"] = normalize_features(feature_bundle["x_time"], args.normalize)
@@ -1395,7 +1739,9 @@ def build_training_dataset(args: argparse.Namespace) -> None:
             },
             "hr_band_hz": list(DEFAULT_HR_BAND_HZ),
             "rda_stability_segments": DEFAULT_RDA_STABILITY_SEGMENTS,
-            "vmd_k": DEFAULT_VMD_K,
+            "decomposition": args.decomposition,
+            "decomp_k": args.decomp_k,
+            "vmd_k": args.decomp_k,
             "vmd_alpha": DEFAULT_VMD_ALPHA,
             "vmd_max_iter": DEFAULT_VMD_MAX_ITER,
             "vmd_tol": DEFAULT_VMD_TOL,
@@ -1448,6 +1794,7 @@ def build_training_dataset(args: argparse.Namespace) -> None:
 
 
 def main() -> None:
+    """程序入口。"""
     args = parse_args()
     build_training_dataset(args)
 
