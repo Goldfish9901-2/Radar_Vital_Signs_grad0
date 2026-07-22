@@ -4,6 +4,7 @@ This folder contains the model training and evaluation entry points:
 
 - `train_model.py`: train HeartTimeMixer, TCN, or Transformer.
 - `evaluate_model.py`: evaluate a trained checkpoint on any exported dataset split, including cross-dataset testing.
+- `adapt_source_free.py`: adapt a source model to an unlabeled target domain with Source-Free + WPL + temporal correction.
 - `datasets.py`: read samples generated under `training_exports`.
 
 Run commands inside the `radar_dev` container from `/Radar_Vital_Signs`.
@@ -135,6 +136,30 @@ python3 /Radar_Vital_Signs/src/training/evaluate_model.py \
   --target-datasets PhysDrive \
   --split test \
   --batch-size 128
+```
+
+## Source-Free Domain Adaptation
+
+Adapt an FTU-trained TCN to unlabeled PhysDrive train windows, then evaluate on PhysDrive test:
+
+```bash
+python3 /Radar_Vital_Signs/src/training/adapt_source_free.py \
+  --source-model-dir /Radar_Vital_Signs/model_outputs/tcn_ftu_test \
+  --export-dir /Radar_Vital_Signs/training_exports \
+  --target-datasets PhysDrive \
+  --adapt-split train \
+  --eval-split test \
+  --output-dir /Radar_Vital_Signs/model_outputs/tcn_ftu_to_physdrive_sf_wpl_tc \
+  --epochs 20 \
+  --batch-size 64 \
+  --lr 0.0001 \
+  --temporal-window 5
+```
+
+The adapted checkpoint is saved as:
+
+```text
+/Radar_Vital_Signs/model_outputs/tcn_ftu_to_physdrive_sf_wpl_tc/best.pt
 ```
 
 Cross-dataset evaluation, for example FTU-trained TCN tested on BGT60TR13C:

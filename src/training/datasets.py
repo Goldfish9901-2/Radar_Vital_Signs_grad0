@@ -98,6 +98,7 @@ class RadarWindowDataset(Dataset):
         y_bpm = torch.tensor(float(row["label_heart_rate"]), dtype=torch.float32)
         y = self.label_stats.normalize(y_bpm)
         return {
+            "row_index": torch.tensor(index, dtype=torch.long),
             "x_time": x_time,
             "x_freq": x_freq,
             "y": y,
@@ -105,6 +106,8 @@ class RadarWindowDataset(Dataset):
             "dataset": row.get("dataset", ""),
             "group_key": row.get("group_key", ""),
             "sample_tag": row.get("sample_tag", ""),
+            "window_start": row.get("window_start", ""),
+            "window_end": row.get("window_end", ""),
             "window_path": str(path),
         }
 

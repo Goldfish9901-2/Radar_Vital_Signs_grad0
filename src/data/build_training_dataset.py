@@ -38,7 +38,7 @@ DEFAULT_STRIDE = 128
 DEFAULT_MIN_LABEL_COVERAGE = 0.8
 DEFAULT_SPLIT_RATIOS = (0.7, 0.15, 0.15)
 DEFAULT_BGT_LONG_SPLIT = "test"
-DEFAULT_REPRESENTATION = "target_edacm_vmd"
+DEFAULT_REPRESENTATION = "target_edacm_hr_adavmd"
 DEFAULT_EDACM_TOP_BINS = 3
 DEFAULT_EDACM_CANDIDATE_MULTIPLIER = 8
 DEFAULT_HR_BAND_HZ = (0.75, 2.5)
@@ -48,11 +48,26 @@ DEFAULT_VMD_ALPHA = 2000.0
 DEFAULT_VMD_MAX_ITER = 120
 DEFAULT_VMD_TOL = 1e-5
 DEFAULT_SAMPLING_RATE_HZ = 20.0
+DEFAULT_HR_BAND_HZ = (0.75, 2.5)
+DEFAULT_RESP_BAND_HZ = (0.1, 0.6)
 DEFAULT_RDA_REPRESENTATION = "log_magnitude"
 DEFAULT_SPLIT_MODE = "balanced_grouped"
 BALANCED_EXHAUSTIVE_MAX_GROUPS = 14
 FTU_SPECIAL_PARTICIPANTS = ("2", "5", "6")
 FTU_ELEVATED_HR_PARTICIPANTS = ("2", "3", "4", "6")
+METHOD_PIPELINE = (
+    "radar_rda_features",
+    "edacm_phase_representation",
+    "hr_adavmd_decomposition",
+    "time_frequency_feature_construction",
+    "source_free_wpl_temporal_domain_adaptation",
+    "heart_rate_regression",
+)
+INNOVATION_MODULES = (
+    "HR-AdaVMD radar micro-motion representation",
+    "Source-Free WPL temporal domain adaptation for cross-dataset heart-rate estimation",
+)
+DOMAIN_ADAPTATION_METHOD = "Source-Free + WPL + temporal correction"
 DEFAULT_PARTICIPANT_SPLITS = {
     "FTU": {
         "train": ("2", "3", "4", "5", "7", "9"),
@@ -84,7 +99,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--stride", type=int, default=DEFAULT_STRIDE)
     parser.add_argument(
         "--representation",
-        choices=["target_edacm_vmd", "target_edacm", "log_magnitude", "magnitude", "real_imag"],
+        choices=[
+            "target_edacm_hr_adavmd",
+            "target_edacm_vmd",
+            "target_edacm",
+            "log_magnitude",
+            "magnitude",
+            "real_imag",
+        ],
         default=DEFAULT_REPRESENTATION,
         help="How to convert complex radar tensors for model input.",
     )
@@ -930,6 +952,7 @@ def vmd_decompose(
     alpha: float = DEFAULT_VMD_ALPHA,
     max_iter: int = DEFAULT_VMD_MAX_ITER,
     tol: float = DEFAULT_VMD_TOL,
+    init_omega: Optional[np.ndarray] = None,
 ) -> np.ndarray:
     """Variational mode decomposition for one real-valued fixed-length signal."""
     x = zscore_1d(signal)
@@ -944,7 +967,13 @@ def vmd_decompose(
     positive = freqs >= 0
 
     u_hat = np.zeros((k, n), dtype=np.complex64)
-    omega = np.linspace(0.0, 0.5, k + 2, dtype=np.float32)[1:-1]
+    if init_omega is None:
+        omega = np.linspace(0.0, 0.5, k + 2, dtype=np.float32)[1:-1]
+    else:
+        omega = np.asarray(init_omega, dtype=np.float32).reshape(-1)
+        if omega.size != k:
+            raise ValueError(f"init_omega must contain {k} value(s)")
+        omega = np.clip(omega, 0.0, 0.5).astype(np.float32)
     lambda_hat = np.zeros(n, dtype=np.complex64)
     tau = 0.0
 
@@ -975,6 +1004,130 @@ def vmd_decompose(
     modes = np.real(np.fft.ifft(u_hat, axis=1)).astype(np.float32)
     modes[~np.isfinite(modes)] = 0.0
     return np.stack([zscore_1d(mode) for mode in modes], axis=0).astype(np.float32)
+
+
+def hr_adavmd_initial_omega(
+    k: int,
+    sampling_rate_hz: float = DEFAULT_SAMPLING_RATE_HZ,
+) -> np.ndarray:
+    """Physiology-guided VMD center-frequency initialization."""
+    base_hz = np.asarray([0.2, 0.45, 0.8, 1.1, 1.45, 1.9, 2.4, 3.2, 4.2], dtype=np.float32)
+    if k <= base_hz.size:
+        centers_hz = base_hz[:k]
+    else:
+        extra = np.linspace(float(base_hz[-1]), sampling_rate_hz / 2.0, k - base_hz.size + 2, dtype=np.float32)[1:-1]
+        centers_hz = np.concatenate([base_hz, extra])
+    return np.clip(centers_hz / float(sampling_rate_hz), 0.0, 0.5).astype(np.float32)
+
+
+def band_energy(power: np.ndarray, freq_hz: np.ndarray, band_hz: Tuple[float, float]) -> float:
+    mask = (freq_hz >= float(band_hz[0])) & (freq_hz <= float(band_hz[1]))
+    if not np.any(mask):
+        return 0.0
+    return float(np.sum(power[mask]))
+
+
+def hr_adavmd_mode_scores(
+    modes: np.ndarray,
+    sampling_rate_hz: float = DEFAULT_SAMPLING_RATE_HZ,
+    hr_band_hz: Tuple[float, float] = DEFAULT_HR_BAND_HZ,
+    resp_band_hz: Tuple[float, float] = DEFAULT_RESP_BAND_HZ,
+) -> Tuple[np.ndarray, np.ndarray, Dict[str, Any]]:
+    time_modes = np.asarray(modes, dtype=np.float32)
+    n = int(time_modes.shape[-1])
+    if n <= 1:
+        weights = np.ones(time_modes.shape[0], dtype=np.float32)
+        scores = np.ones(time_modes.shape[0], dtype=np.float32)
+        return weights, scores, {
+            "hr_band_hz": list(hr_band_hz),
+            "resp_band_hz": list(resp_band_hz),
+            "mode_scores": scores.tolist(),
+            "mode_weights": weights.tolist(),
+        }
+
+    freq_hz = np.fft.rfftfreq(n, d=1.0 / float(sampling_rate_hz)).astype(np.float32)
+    raw_scores: List[float] = []
+    diagnostics: List[Dict[str, float]] = []
+    for mode in time_modes:
+        spectrum = np.fft.rfft(zscore_1d(mode) * np.hanning(n).astype(np.float32))
+        power = np.abs(spectrum).astype(np.float32) ** 2
+        total = float(np.sum(power)) + 1e-12
+        hr_energy = band_energy(power, freq_hz, hr_band_hz)
+        resp_energy = band_energy(power, freq_hz, resp_band_hz)
+        high_energy = band_energy(power, freq_hz, (float(hr_band_hz[1]), float(freq_hz[-1]) if freq_hz.size else hr_band_hz[1]))
+        hr_mask = (freq_hz >= float(hr_band_hz[0])) & (freq_hz <= float(hr_band_hz[1]))
+        if np.any(hr_mask):
+            hr_power = power[hr_mask]
+            peak_sharpness = float(np.max(hr_power) / (np.mean(hr_power) + 1e-12))
+        else:
+            peak_sharpness = 0.0
+        hr_ratio = hr_energy / total
+        resp_ratio = resp_energy / total
+        high_ratio = high_energy / total
+        score = 0.70 * hr_ratio + 0.20 * np.tanh(peak_sharpness / 5.0) - 0.25 * resp_ratio - 0.10 * high_ratio
+        raw_scores.append(float(score))
+        diagnostics.append(
+            {
+                "hr_ratio": float(hr_ratio),
+                "resp_ratio": float(resp_ratio),
+                "high_ratio": float(high_ratio),
+                "peak_sharpness": float(peak_sharpness),
+                "score": float(score),
+            }
+        )
+
+    scores = np.asarray(raw_scores, dtype=np.float32)
+    scores = scores - float(np.min(scores))
+    if float(np.max(scores)) > 1e-6:
+        scores = scores / float(np.max(scores))
+    else:
+        scores = np.ones_like(scores, dtype=np.float32)
+    weights = 0.5 + 0.5 * scores
+    return weights.astype(np.float32), scores.astype(np.float32), {
+        "hr_band_hz": list(hr_band_hz),
+        "resp_band_hz": list(resp_band_hz),
+        "mode_scores": [float(x) for x in scores.tolist()],
+        "mode_weights": [float(x) for x in weights.tolist()],
+        "mode_diagnostics": diagnostics,
+    }
+
+
+def hr_adavmd_decompose(
+    signal: np.ndarray,
+    k: int = DEFAULT_VMD_K,
+    alpha: float = DEFAULT_VMD_ALPHA,
+    max_iter: int = DEFAULT_VMD_MAX_ITER,
+    tol: float = DEFAULT_VMD_TOL,
+    sampling_rate_hz: float = DEFAULT_SAMPLING_RATE_HZ,
+) -> Tuple[np.ndarray, Dict[str, Any]]:
+    """Heart-rate-aware adaptive VMD for radar micro-motion signals."""
+    init_omega = hr_adavmd_initial_omega(k=k, sampling_rate_hz=sampling_rate_hz)
+    modes = vmd_decompose(
+        signal=signal,
+        k=k,
+        alpha=alpha,
+        max_iter=max_iter,
+        tol=tol,
+        init_omega=init_omega,
+    )
+    weights, scores, score_meta = hr_adavmd_mode_scores(
+        modes,
+        sampling_rate_hz=sampling_rate_hz,
+    )
+    weighted_modes = (modes * weights[:, None]).astype(np.float32)
+    meta = {
+        "decomposition_method": "HR-AdaVMD",
+        "hr_adavmd_components": [
+            "physiology_guided_frequency_initialization",
+            "heart_band_mode_scoring",
+            "adaptive_mode_weighting",
+        ],
+        "hr_adavmd_init_omega": [float(x) for x in init_omega.tolist()],
+        "hr_adavmd_init_center_hz": [float(x * sampling_rate_hz) for x in init_omega.tolist()],
+        **score_meta,
+        "selected_mode_count": int(k),
+    }
+    return weighted_modes, meta
 
 
 def frequency_features(
@@ -1030,18 +1183,24 @@ def radar_to_feature_bundle(
         phase, phase_meta = target_edacm_signal(radar)
         x = phase[None, :].astype(np.float32)
         return {"x": x, "meta": phase_meta}
-    elif representation == "target_edacm_vmd":
+    elif representation in {"target_edacm_hr_adavmd", "target_edacm_vmd"}:
         phase, phase_meta = target_edacm_signal(radar)
-        x_time = vmd_decompose(phase, k=DEFAULT_VMD_K)
+        x_time, hr_adavmd_meta = hr_adavmd_decompose(phase, k=DEFAULT_VMD_K)
         x_freq, freq_hz, freq_meta = frequency_features(x_time)
         x_rda = rda_log_magnitude(radar)
         phase_meta.update(
             {
+                "method_pipeline": list(METHOD_PIPELINE),
+                "innovation_modules": list(INNOVATION_MODULES),
+                "domain_adaptation_method": DOMAIN_ADAPTATION_METHOD,
+                "representation_method": "EDACM phase representation + HR-AdaVMD decomposition + FFT spectrum",
+                "representation_alias": representation,
                 "vmd_k": DEFAULT_VMD_K,
                 "vmd_alpha": DEFAULT_VMD_ALPHA,
                 "vmd_max_iter": DEFAULT_VMD_MAX_ITER,
                 "vmd_tol": DEFAULT_VMD_TOL,
                 "vmd_output_shape": list(x_time.shape),
+                **hr_adavmd_meta,
                 "feature_domains": ["time", "frequency"],
                 "x_time_shape": list(x_time.shape),
                 "x_freq_shape": list(x_freq.shape),
@@ -1399,9 +1558,14 @@ def build_training_dataset(args: argparse.Namespace) -> None:
             "vmd_alpha": DEFAULT_VMD_ALPHA,
             "vmd_max_iter": DEFAULT_VMD_MAX_ITER,
             "vmd_tol": DEFAULT_VMD_TOL,
+            "hr_band_hz": list(DEFAULT_HR_BAND_HZ),
+            "resp_band_hz": list(DEFAULT_RESP_BAND_HZ),
             "sampling_rate_hz": DEFAULT_SAMPLING_RATE_HZ,
             "x_rda_representation": DEFAULT_RDA_REPRESENTATION,
             "output_arrays": ["x", "x_time", "x_freq", "x_rda", "freq_hz"],
+            "method_pipeline": list(METHOD_PIPELINE),
+            "innovation_modules": list(INNOVATION_MODULES),
+            "domain_adaptation_method": DOMAIN_ADAPTATION_METHOD,
             "split_mode": args.split_mode,
             "grouping": {
                 "FTU": "participant_id",
