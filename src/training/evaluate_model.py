@@ -5,11 +5,10 @@ from __future__ import annotations
 import argparse
 import json
 import math
-import re
 from dataclasses import asdict
 from pathlib import Path
 import sys
-from typing import Any, Dict, Iterable
+from typing import Any, Dict
 
 import torch
 from torch import nn
@@ -19,19 +18,10 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from src.models import (
-    HeartTimeMixer,
-    HeartTimeMixerConfig,
-    TCNConfig,
-    TCNHeartRateModel,
-    TransformerConfig,
-    TransformerHeartRateModel,
-)
-from src.models.heart_timemixer import count_parameters
+from src.models.factory import MODEL_CHOICES, count_parameters, create_model
+from src.training.common.checkpoints import load_run_config, resolve_checkpoint as resolve_checkpoint_path
+from src.training.common.metrics import aggregate, append_prediction_rows
 from src.training.datasets import LabelStats, RadarWindowDataset
-
-
-MODEL_CHOICES = ("heart_timemixer", "tcn", "transformer")
 
 
 def parse_args() -> argparse.Namespace:
@@ -74,109 +64,6 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_run_config(model_dir: Path | None) -> Dict[str, Any]:
-    if model_dir is None:
-        return {}
-    path = model_dir / "run_config.json"
-    if not path.exists():
-        return {}
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def resolve_checkpoint(args: argparse.Namespace) -> Path:
-    if args.checkpoint is not None:
-        return args.checkpoint
-    if args.model_dir is None:
-        raise ValueError("Either --model-dir or --checkpoint must be provided.")
-    return args.model_dir / "best.pt"
-
-
-def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
-    if model_name == "heart_timemixer":
-        return HeartTimeMixer(HeartTimeMixerConfig(**config))
-    if model_name == "tcn":
-        return TCNHeartRateModel(TCNConfig(**config))
-    if model_name == "transformer":
-        return TransformerHeartRateModel(TransformerConfig(**config))
-    raise ValueError(f"Unsupported model: {model_name}")
-
-
-def denormalize(value: torch.Tensor, stats: LabelStats) -> torch.Tensor:
-    return value * stats.std + stats.mean
-
-
-def participant_id(dataset: str, group_key: str, sample_tag: str) -> str:
-    if "/participant/" in group_key:
-        return group_key.rsplit("/", 1)[-1]
-    if "/session/" in group_key:
-        return group_key.rsplit("/", 1)[-1]
-    if dataset in {"FTU", "BGT60TR13C"}:
-        match = re.match(r"p0?(\d+)", sample_tag)
-        if match:
-            return match.group(1)
-    if dataset == "PhysDrive":
-        return sample_tag.split("_", 1)[0]
-    return group_key or sample_tag or "unknown"
-
-
-def append_rows(
-    store: list[Dict[str, Any]],
-    batch: Dict[str, Any],
-    pred_norm: torch.Tensor,
-    stats: LabelStats,
-) -> None:
-    pred_bpm = denormalize(pred_norm.detach().cpu(), stats)
-    y_bpm = batch["y_bpm"].detach().cpu()
-    size = int(y_bpm.numel())
-    for idx in range(size):
-        dataset = batch["dataset"][idx]
-        group_key = batch["group_key"][idx]
-        sample_tag = batch["sample_tag"][idx]
-        store.append(
-            {
-                "dataset": dataset,
-                "group_key": group_key,
-                "participant_id": participant_id(dataset, group_key, sample_tag),
-                "sample_tag": sample_tag,
-                "label_bpm": float(y_bpm[idx]),
-                "pred_bpm": float(pred_bpm[idx]),
-                "abs_error_bpm": abs(float(pred_bpm[idx]) - float(y_bpm[idx])),
-            }
-        )
-
-
-def aggregate(rows: Iterable[Dict[str, Any]], key: str | None = None) -> Dict[str, Any]:
-    buckets: Dict[str, list[Dict[str, Any]]] = {}
-    if key is None:
-        buckets["overall"] = list(rows)
-    else:
-        for row in rows:
-            buckets.setdefault(str(row.get(key, "")), []).append(row)
-
-    metrics: Dict[str, Any] = {}
-    for name, values in buckets.items():
-        errors = [row["abs_error_bpm"] for row in values]
-        labels = [row["label_bpm"] for row in values]
-        preds = [row["pred_bpm"] for row in values]
-        metrics[name] = {
-            "count": len(values),
-            "mae_bpm": float(sum(errors) / len(errors)) if errors else math.nan,
-            "within_3bpm_percent": (
-                float(100.0 * sum(error <= 3.0 for error in errors) / len(errors))
-                if errors
-                else math.nan
-            ),
-            "within_5bpm_percent": (
-                float(100.0 * sum(error <= 5.0 for error in errors) / len(errors))
-                if errors
-                else math.nan
-            ),
-            "label_mean_bpm": float(sum(labels) / len(labels)) if labels else math.nan,
-            "pred_mean_bpm": float(sum(preds) / len(preds)) if preds else math.nan,
-        }
-    return metrics
-
-
 def default_output_path(args: argparse.Namespace, target_datasets: set[str] | None) -> Path | None:
     if args.output_json is not None:
         return args.output_json
@@ -189,7 +76,7 @@ def default_output_path(args: argparse.Namespace, target_datasets: set[str] | No
 def main() -> None:
     args = parse_args()
     run_config = load_run_config(args.model_dir)
-    checkpoint_path = resolve_checkpoint(args)
+    checkpoint_path = resolve_checkpoint_path(args.model_dir, args.checkpoint)
     if not checkpoint_path.exists():
         raise FileNotFoundError(checkpoint_path)
 
@@ -228,7 +115,7 @@ def main() -> None:
             pred = model(x_time, x_freq)
             total_loss += float(criterion(pred, y))
             seen += int(y.numel())
-            append_rows(rows, batch, pred, label_stats)
+            append_prediction_rows(rows, batch, pred, label_stats)
 
     result = {
         "model": model_name,
