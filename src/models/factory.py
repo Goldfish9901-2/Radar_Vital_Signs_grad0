@@ -25,15 +25,18 @@ from src.models import (
     TimesNetHeartRateModel,
     TransformerConfig,
     TransformerHeartRateModel,
+    TSLANetConfig,
+    TSLANetHeartRateModel,
 )
 
 MODEL_CHOICES = (
     "cycleformer",
-    "tcn",
-    "transformer",
-    "patchtst",
-    "timesnet",
     "heart_timemixer",
+    "patchtst",
+    "tcn",
+    "timesnet",
+    "transformer",
+    "tslanet",
 )
 ModelConfig = (
     CycleFormerConfig
@@ -42,6 +45,7 @@ ModelConfig = (
     | TCNConfig
     | TimesNetConfig
     | TransformerConfig
+    | TSLANetConfig
 )
 
 
@@ -59,6 +63,8 @@ def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
         return TimesNetHeartRateModel(TimesNetConfig(**config))
     if model_name == "transformer":
         return TransformerHeartRateModel(TransformerConfig(**config))
+    if model_name == "tslanet":
+        return TSLANetHeartRateModel(TSLANetConfig(**config))
     raise ValueError(f"Unsupported model: {model_name}")
 
 
@@ -142,6 +148,25 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             use_frequency_domain=not args.time_only,
         )
         return TransformerHeartRateModel(cfg), cfg
+    if args.model == "tslanet":
+        # Phase 2a: TSLANet hyperparameters are now CLI-overridable. The frequency
+        # branch is intentionally NOT enabled here (R8 is deferred); we keep
+        # use_frequency_domain=False regardless of --time-only so we never silently
+        # exercise the semantically-questionable spectrum-through-ASB path.
+        cfg = TSLANetConfig(
+            emb_dim=args.emb_dim,
+            depth=args.tslanet_depth,
+            patch_len=args.tslanet_patch_len,
+            patch_stride=args.tslanet_patch_stride,
+            dropout=args.tslanet_dropout,
+            use_asb=args.use_asb,
+            use_icb=args.use_icb,
+            adaptive_filter=args.adaptive_filter,
+            normalize=args.normalize,
+            channel_mode=args.channel_mode,
+            use_frequency_domain=False,
+        )
+        return TSLANetHeartRateModel(cfg), cfg
     raise ValueError(f"Unsupported model: {args.model}")
 
 

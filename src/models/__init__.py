@@ -6,6 +6,7 @@ from src.models.patchtst import PatchTSTConfig, PatchTSTHeartRateModel
 from src.models.tcn import TCNConfig, TCNHeartRateModel
 from src.models.timesnet import TimesNetConfig, TimesNetHeartRateModel
 from src.models.transformer import TransformerConfig, TransformerHeartRateModel
+from src.models.tslanet import TSLANetConfig, TSLANetHeartRateModel
 
 __all__ = [
     "CycleFormerConfig",
@@ -20,4 +21,6 @@ __all__ = [
     "TimesNetHeartRateModel",
     "TransformerConfig",
     "TransformerHeartRateModel",
+    "TSLANetConfig",
+    "TSLANetHeartRateModel",
 ]

@@ -26,6 +26,12 @@ def mae_bpm(pred_norm: torch.Tensor, y_norm: torch.Tensor, stats: LabelStats) ->
     return torch.mean(torch.abs(denormalize(pred_norm, stats) - denormalize(y_norm, stats)))
 
 
+def rmse_bpm(pred_norm: torch.Tensor, y_norm: torch.Tensor, stats: LabelStats) -> torch.Tensor:
+    """Compute root-mean-square error in BPM from normalized tensors."""
+    err = denormalize(pred_norm, stats) - denormalize(y_norm, stats)
+    return torch.sqrt(torch.mean(err.pow(2)))
+
+
 def participant_id(dataset: str, group_key: str, sample_tag: str) -> str:
     """Resolve a stable participant/session identifier across datasets."""
     if "/participant/" in group_key:
