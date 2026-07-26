@@ -19,6 +19,7 @@ from src.models import (
     CycleFormerHeartRateModel,
     HeartTimeMixer,
     HeartTimeMixerConfig,
+    LinearBaselineConfig,
     MambaConfig,
     MambaHeartRateModel,
     PatchTSTConfig,
@@ -33,13 +34,17 @@ from src.models import (
     TransformerHeartRateModel,
     TSLANetConfig,
     TSLANetHeartRateModel,
+    DLinearHeartRateModel,
+    NLinearHeartRateModel,
 )
 
 MODEL_CHOICES = (
     "contiformer",
     "cycleformer",
+    "dlinear",
     "heart_timemixer",
     "mamba",
+    "nlinear",
     "patchtst",
     "tcn",
     "timesnet",
@@ -51,10 +56,11 @@ ModelConfig = (
     ContiFormerConfig
     | CycleFormerConfig
     | HeartTimeMixerConfig
+    | LinearBaselineConfig
     | MambaConfig
     | PatchTSTConfig
     | TCNConfig
-    |     TimesNetConfig
+    | TimesNetConfig
     | TransformerConfig
     | TSLANetConfig
     | TSMixerConfig
@@ -67,6 +73,10 @@ def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
         return ContiFormerHeartRateModel(ContiFormerConfig(**config))
     if model_name == "cycleformer":
         return CycleFormerHeartRateModel(CycleFormerConfig(**config))
+    if model_name == "dlinear":
+        return DLinearHeartRateModel(LinearBaselineConfig(**config))
+    if model_name == "nlinear":
+        return NLinearHeartRateModel(LinearBaselineConfig(**config))
     if model_name == "heart_timemixer":
         return HeartTimeMixer(HeartTimeMixerConfig(**config))
     if model_name == "patchtst":
@@ -98,6 +108,22 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             use_frequency_domain=not args.time_only,
         )
         return ContiFormerHeartRateModel(cfg), cfg
+    if args.model == "dlinear":
+        cfg = LinearBaselineConfig(
+            variant="dlinear",
+            moving_avg=getattr(args, "moving_avg", 25),
+            dropout=args.dropout,
+            use_frequency_domain=not args.time_only,
+        )
+        return DLinearHeartRateModel(cfg), cfg
+    if args.model == "nlinear":
+        cfg = LinearBaselineConfig(
+            variant="nlinear",
+            moving_avg=getattr(args, "moving_avg", 25),
+            dropout=args.dropout,
+            use_frequency_domain=not args.time_only,
+        )
+        return NLinearHeartRateModel(cfg), cfg
     if args.model == "cycleformer":
         heart_periods = (
             args.heart_periods

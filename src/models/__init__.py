@@ -3,6 +3,11 @@
 from src.models.contiformer import ContiFormerConfig, ContiFormerHeartRateModel
 from src.models.cycleformer import CycleFormerConfig, CycleFormerHeartRateModel
 from src.models.heart_timemixer import HeartTimeMixer, HeartTimeMixerConfig
+from src.models.linear_baseline import (
+    DLinearHeartRateModel,
+    LinearBaselineConfig,
+    NLinearHeartRateModel,
+)
 from src.models.mamba import MambaConfig, MambaHeartRateModel
 from src.models.patchtst import PatchTSTConfig, PatchTSTHeartRateModel
 from src.models.tcn import TCNConfig, TCNHeartRateModel
@@ -18,8 +23,11 @@ __all__ = [
     "CycleFormerHeartRateModel",
     "HeartTimeMixer",
     "HeartTimeMixerConfig",
+    "LinearBaselineConfig",
     "MambaConfig",
     "MambaHeartRateModel",
+    "DLinearHeartRateModel",
+    "NLinearHeartRateModel",
     "PatchTSTConfig",
     "PatchTSTHeartRateModel",
     "TCNConfig",
