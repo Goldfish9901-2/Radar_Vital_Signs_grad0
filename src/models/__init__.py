@@ -2,6 +2,7 @@
 
 from src.models.cycleformer import CycleFormerConfig, CycleFormerHeartRateModel
 from src.models.heart_timemixer import HeartTimeMixer, HeartTimeMixerConfig
+from src.models.mamba import MambaConfig, MambaHeartRateModel
 from src.models.patchtst import PatchTSTConfig, PatchTSTHeartRateModel
 from src.models.tcn import TCNConfig, TCNHeartRateModel
 from src.models.timesnet import TimesNetConfig, TimesNetHeartRateModel
@@ -13,6 +14,8 @@ __all__ = [
     "CycleFormerHeartRateModel",
     "HeartTimeMixer",
     "HeartTimeMixerConfig",
+    "MambaConfig",
+    "MambaHeartRateModel",
     "PatchTSTConfig",
     "PatchTSTHeartRateModel",
     "TCNConfig",
