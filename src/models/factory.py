@@ -26,6 +26,8 @@ from src.models import (
     TimesNetConfig,
     TimesNetHeartRateModel,
     TransformerConfig,
+    TSMixerConfig,
+    TSMixerHeartRateModel,
     TransformerHeartRateModel,
     TSLANetConfig,
     TSLANetHeartRateModel,
@@ -40,6 +42,7 @@ MODEL_CHOICES = (
     "timesnet",
     "transformer",
     "tslanet",
+    "tsmixer",
 )
 ModelConfig = (
     CycleFormerConfig
@@ -47,9 +50,10 @@ ModelConfig = (
     | MambaConfig
     | PatchTSTConfig
     | TCNConfig
-    | TimesNetConfig
+    |     TimesNetConfig
     | TransformerConfig
     | TSLANetConfig
+    | TSMixerConfig
 )
 
 
@@ -69,6 +73,8 @@ def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
         return TransformerHeartRateModel(TransformerConfig(**config))
     if model_name == "tslanet":
         return TSLANetHeartRateModel(TSLANetConfig(**config))
+    if model_name == "tsmixer":
+        return TSMixerHeartRateModel(TSMixerConfig(**config))
     if model_name == "mamba":
         return MambaHeartRateModel(MambaConfig(**config))
     raise ValueError(f"Unsupported model: {model_name}")
@@ -183,6 +189,16 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             use_frequency_domain=not args.time_only,
         )
         return MambaHeartRateModel(cfg), cfg
+    if args.model == "tsmixer":
+        # All-MLP mixers. Reuses the shared CLI args (d_model, num_layers,
+        # dropout, --time-only) so train_model.py needs no change.
+        cfg = TSMixerConfig(
+            d_model=args.d_model,
+            num_layers=args.num_layers,
+            dropout=args.dropout,
+            use_frequency_domain=not args.time_only,
+        )
+        return TSMixerHeartRateModel(cfg), cfg
     raise ValueError(f"Unsupported model: {args.model}")
 
 
