@@ -13,6 +13,8 @@ from typing import Any, Dict, Tuple
 from torch import nn
 
 from src.models import (
+    ContiFormerConfig,
+    ContiFormerHeartRateModel,
     CycleFormerConfig,
     CycleFormerHeartRateModel,
     HeartTimeMixer,
@@ -34,6 +36,7 @@ from src.models import (
 )
 
 MODEL_CHOICES = (
+    "contiformer",
     "cycleformer",
     "heart_timemixer",
     "mamba",
@@ -45,7 +48,8 @@ MODEL_CHOICES = (
     "tsmixer",
 )
 ModelConfig = (
-    CycleFormerConfig
+    ContiFormerConfig
+    | CycleFormerConfig
     | HeartTimeMixerConfig
     | MambaConfig
     | PatchTSTConfig
@@ -59,6 +63,8 @@ ModelConfig = (
 
 def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
     """Instantiate a model from a serialized config dictionary."""
+    if model_name == "contiformer":
+        return ContiFormerHeartRateModel(ContiFormerConfig(**config))
     if model_name == "cycleformer":
         return CycleFormerHeartRateModel(CycleFormerConfig(**config))
     if model_name == "heart_timemixer":
@@ -82,6 +88,16 @@ def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
 
 def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
     """Build a model and config from training CLI arguments."""
+    if args.model == "contiformer":
+        cfg = ContiFormerConfig(
+            d_model=args.d_model,
+            nhead=args.nhead,
+            num_layers=args.num_layers,
+            dim_feedforward=args.d_ff,
+            dropout=args.dropout,
+            use_frequency_domain=not args.time_only,
+        )
+        return ContiFormerHeartRateModel(cfg), cfg
     if args.model == "cycleformer":
         heart_periods = (
             args.heart_periods

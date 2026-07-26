@@ -1,5 +1,6 @@
 """Model definitions for Radar Vital Signs."""
 
+from src.models.contiformer import ContiFormerConfig, ContiFormerHeartRateModel
 from src.models.cycleformer import CycleFormerConfig, CycleFormerHeartRateModel
 from src.models.heart_timemixer import HeartTimeMixer, HeartTimeMixerConfig
 from src.models.mamba import MambaConfig, MambaHeartRateModel
@@ -11,6 +12,8 @@ from src.models.transformer import TransformerConfig, TransformerHeartRateModel
 from src.models.tslanet import TSLANetConfig, TSLANetHeartRateModel
 
 __all__ = [
+    "ContiFormerConfig",
+    "ContiFormerHeartRateModel",
     "CycleFormerConfig",
     "CycleFormerHeartRateModel",
     "HeartTimeMixer",
