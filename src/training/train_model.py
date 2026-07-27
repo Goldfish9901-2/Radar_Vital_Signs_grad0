@@ -129,6 +129,27 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--down-sampling-layers", type=int, default=3)
     parser.add_argument("--time-only", action="store_true", help="Disable the frequency branch.")
     parser.add_argument("--limit-batches", type=int, default=None, help="Debug only: cap batches per epoch.")
+    parser.add_argument(
+        "--dump-predictions",
+        action="store_true",
+        help="Write per-sample (label, prediction) rows for the test split to "
+        "predictions_test.csv in the output dir (needed for scatter/histogram "
+        "and overall Pearson plots in the unified benchmark).",
+    )
+    resume_grp = parser.add_mutually_exclusive_group()
+    resume_grp.add_argument(
+        "--resume",
+        action="store_true",
+        help="Resume training from <output-dir>/best.pt if it exists (restores "
+        "model, optimizer, scheduler, epoch, best_val, stale_epochs, history).",
+    )
+    resume_grp.add_argument(
+        "--resume-from",
+        type=Path,
+        default=None,
+        help="Resume training from an explicit checkpoint path instead of "
+        "<output-dir>/best.pt.",
+    )
     return parser.parse_args()
 
 
@@ -190,6 +211,8 @@ def run_epoch(
         metrics.update(tolerance_metrics(detail_rows))
         metrics["by_participant"] = aggregate(detail_rows, "participant_id")
         metrics["by_group"] = aggregate(detail_rows, "group_key")
+        # Keep the raw per-sample rows so callers can dump them for plots / overall Pearson.
+        metrics["detail_rows"] = detail_rows
     return metrics
 
 
@@ -200,6 +223,11 @@ def save_checkpoint(
     stats: LabelStats,
     metrics: Dict[str, Any],
     epoch: int,
+    optimizer: torch.optim.Optimizer | None = None,
+    scheduler: torch.optim.lr_scheduler.LRScheduler | None = None,
+    best_val: float | None = None,
+    stale_epochs: int | None = None,
+    history: list | None = None,
 ) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     torch.save(
@@ -209,6 +237,11 @@ def save_checkpoint(
             "label_stats": asdict(stats),
             "metrics": metrics,
             "epoch": epoch,
+            "optimizer_state": optimizer.state_dict() if optimizer is not None else None,
+            "scheduler_state": scheduler.state_dict() if scheduler is not None else None,
+            "best_val": best_val,
+            "stale_epochs": stale_epochs,
+            "history": history,
         },
         path,
     )
@@ -253,11 +286,29 @@ def main() -> None:
     (args.output_dir / "run_config.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
     print(json.dumps(metadata, indent=2), flush=True)
 
+    # --- optional checkpoint resume (for long / interruptible runs) ---
+    start_epoch = 1
     best_val = float("inf")
     stale_epochs = 0
     history = []
+    resume_path = args.resume_from or (args.output_dir / "best.pt")
+    if (args.resume or args.resume_from is not None) and resume_path.exists():
+        print(f"resuming from {resume_path}", flush=True)
+        ckpt = torch.load(resume_path, map_location=device, weights_only=False)
+        model.load_state_dict(ckpt["model_state"])
+        if ckpt.get("optimizer_state") is not None:
+            optimizer.load_state_dict(ckpt["optimizer_state"])
+        if ckpt.get("scheduler_state") is not None:
+            scheduler.load_state_dict(ckpt["scheduler_state"])
+        start_epoch = int(ckpt["epoch"]) + 1
+        best_val = float(ckpt.get("best_val", float("inf")))
+        stale_epochs = int(ckpt.get("stale_epochs", 0))
+        history = list(ckpt.get("history", []))
+        print(f"resumed: start_epoch={start_epoch}, best_val={best_val:.4f}, "
+              f"stale_epochs={stale_epochs}, history_len={len(history)}", flush=True)
+
     start = time.time()
-    for epoch in range(1, args.epochs + 1):
+    for epoch in range(start_epoch, args.epochs + 1):
         train_metrics = run_epoch(
             model, train_loader, criterion, device, stats, optimizer=optimizer, limit_batches=args.limit_batches
         )
@@ -265,6 +316,9 @@ def main() -> None:
         scheduler.step(val_metrics["mae_bpm"])
         row = {"epoch": epoch, "train": train_metrics, "val": val_metrics, "lr": optimizer.param_groups[0]["lr"]}
         history.append(row)
+        # Flush history every epoch (including the early-stop epoch) so the on-disk
+        # record is never one epoch behind the actual stop point.
+        (args.output_dir / "history.json").write_text(json.dumps(history, indent=2), encoding="utf-8")
         print(
             f"epoch {epoch:03d} | train MAE {train_metrics['mae_bpm']:.3f} RMSE {train_metrics['rmse_bpm']:.3f} BPM "
             f"| val MAE {val_metrics['mae_bpm']:.3f} RMSE {val_metrics['rmse_bpm']:.3f} BPM | lr {row['lr']:.2e}",
@@ -274,14 +328,16 @@ def main() -> None:
         if val_metrics["mae_bpm"] < best_val:
             best_val = val_metrics["mae_bpm"]
             stale_epochs = 0
-            save_checkpoint(args.output_dir / "best.pt", model, cfg, stats, val_metrics, epoch)
+            save_checkpoint(
+                args.output_dir / "best.pt", model, cfg, stats, val_metrics, epoch,
+                optimizer=optimizer, scheduler=scheduler,
+                best_val=best_val, stale_epochs=stale_epochs, history=history,
+            )
         else:
             stale_epochs += 1
             if stale_epochs >= args.patience:
                 print(f"early stopping at epoch {epoch}", flush=True)
                 break
-
-        (args.output_dir / "history.json").write_text(json.dumps(history, indent=2), encoding="utf-8")
 
     checkpoint = torch.load(args.output_dir / "best.pt", map_location=device, weights_only=False)
     model.load_state_dict(checkpoint["model_state"])
@@ -301,6 +357,18 @@ def main() -> None:
     (args.output_dir / "eval_test.json").write_text(
         json.dumps(test_metrics, indent=2), encoding="utf-8"
     )
+    if args.dump_predictions:
+        detail_rows = test_metrics.get("detail_rows", [])
+        pred_path = args.output_dir / "predictions_test.csv"
+        pred_cols = ["dataset", "group_key", "sample_tag", "participant_id",
+                     "label_bpm", "pred_bpm", "abs_error_bpm"]
+        with open(pred_path, "w", newline="", encoding="utf-8") as pf:
+            import csv as _csv
+            w = _csv.DictWriter(pf, fieldnames=pred_cols)
+            w.writeheader()
+            for row in detail_rows:
+                w.writerow({c: row.get(c, "") for c in pred_cols})
+        print(f"wrote {len(detail_rows)} per-sample predictions -> {pred_path}", flush=True)
     print(json.dumps(summary, indent=2), flush=True)
 
 
