@@ -34,6 +34,8 @@ from src.models import (
     TransformerHeartRateModel,
     TSLANetConfig,
     TSLANetHeartRateModel,
+    XLSTMConfig,
+    XLSTMHeartRateModel,
     DLinearHeartRateModel,
     NLinearHeartRateModel,
 )
@@ -51,6 +53,7 @@ MODEL_CHOICES = (
     "transformer",
     "tslanet",
     "tsmixer",
+    "xlstm",
 )
 ModelConfig = (
     ContiFormerConfig
@@ -61,9 +64,10 @@ ModelConfig = (
     | PatchTSTConfig
     | TCNConfig
     | TimesNetConfig
-    | TransformerConfig
+    |     TransformerConfig
     | TSLANetConfig
     | TSMixerConfig
+    | XLSTMConfig
 )
 
 
@@ -93,6 +97,8 @@ def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
         return TSMixerHeartRateModel(TSMixerConfig(**config))
     if model_name == "mamba":
         return MambaHeartRateModel(MambaConfig(**config))
+    if model_name == "xlstm":
+        return XLSTMHeartRateModel(XLSTMConfig(**config))
     raise ValueError(f"Unsupported model: {model_name}")
 
 
@@ -241,6 +247,17 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             use_frequency_domain=not args.time_only,
         )
         return TSMixerHeartRateModel(cfg), cfg
+    if args.model == "xlstm":
+        # xLSTM (sLSTM + mLSTM). Reuses the shared CLI args (d_model, num_layers,
+        # d_ff, dropout, --time-only) so train_model.py needs no change.
+        cfg = XLSTMConfig(
+            d_model=args.d_model,
+            num_layers=args.num_layers,
+            d_ff=args.d_ff,
+            dropout=args.dropout,
+            use_frequency_domain=not args.time_only,
+        )
+        return XLSTMHeartRateModel(cfg), cfg
     raise ValueError(f"Unsupported model: {args.model}")
 
 
