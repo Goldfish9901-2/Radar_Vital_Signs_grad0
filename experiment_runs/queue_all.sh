@@ -39,10 +39,12 @@ declare -A BS=(
   [timesnet]=16
   [transformer]=16
   [tslanet]=32
+  [xlstm]=16
+  [frets]=32
 )
 
 DATASETS="FTU BGT60TR13C PhysDrive"
-MODELS="contiformer cycleformer dlinear heart_timemixer mamba nlinear patchtst tcn timesnet transformer tslanet tsmixer"
+MODELS="contiformer cycleformer dlinear heart_timemixer mamba nlinear patchtst tcn timesnet transformer tslanet tsmixer xlstm frets"
 
 train() {
   local model="$1"; local ds="$2"; local bs="$3"
