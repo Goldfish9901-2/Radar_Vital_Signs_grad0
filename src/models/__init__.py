@@ -16,6 +16,7 @@ from src.models.timesnet import TimesNetConfig, TimesNetHeartRateModel
 from src.models.transformer import TransformerConfig, TransformerHeartRateModel
 from src.models.tslanet import TSLANetConfig, TSLANetHeartRateModel
 from src.models.xlstm import XLSTMConfig, XLSTMHeartRateModel
+from src.models.frets import FreTSConfig, FreTSHeartRateModel
 
 __all__ = [
     "ContiFormerConfig",
@@ -43,4 +44,6 @@ __all__ = [
     "TSLANetHeartRateModel",
     "XLSTMConfig",
     "XLSTMHeartRateModel",
+    "FreTSConfig",
+    "FreTSHeartRateModel",
 ]

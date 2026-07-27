@@ -36,6 +36,8 @@ from src.models import (
     TSLANetHeartRateModel,
     XLSTMConfig,
     XLSTMHeartRateModel,
+    FreTSConfig,
+    FreTSHeartRateModel,
     DLinearHeartRateModel,
     NLinearHeartRateModel,
 )
@@ -54,6 +56,7 @@ MODEL_CHOICES = (
     "tslanet",
     "tsmixer",
     "xlstm",
+    "frets",
 )
 ModelConfig = (
     ContiFormerConfig
@@ -68,6 +71,7 @@ ModelConfig = (
     | TSLANetConfig
     | TSMixerConfig
     | XLSTMConfig
+    | FreTSConfig
 )
 
 
@@ -115,6 +119,8 @@ def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
         return MambaHeartRateModel(MambaConfig(**config))
     if model_name == "xlstm":
         return XLSTMHeartRateModel(XLSTMConfig(**config))
+    if model_name == "frets":
+        return FreTSHeartRateModel(FreTSConfig(**config))
     raise ValueError(f"Unsupported model: {model_name}")
 
 
@@ -287,6 +293,17 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
         )
         cfg = _apply_channels(cfg, args)
         return XLSTMHeartRateModel(cfg), cfg
+    if args.model == "frets":
+        # FreTS (frequency-domain MLP). Reuses the shared CLI args (d_model,
+        # num_layers, dropout, --time-only) so train_model.py needs no change.
+        cfg = FreTSConfig(
+            d_model=args.d_model,
+            num_layers=args.num_layers,
+            dropout=args.dropout,
+            use_frequency_domain=not args.time_only,
+        )
+        cfg = _apply_channels(cfg, args)
+        return FreTSHeartRateModel(cfg), cfg
     raise ValueError(f"Unsupported model: {args.model}")
 
 
