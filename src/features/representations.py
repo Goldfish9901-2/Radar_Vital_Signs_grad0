@@ -12,13 +12,19 @@ from typing import Any, Dict, Tuple
 
 import numpy as np
 
-from src.features.edacm import target_edacm_signal, zscore_1d
+from src.features.edacm import (
+    select_target_bin_indices,
+    target_edacm_signal,
+    zscore_1d,
+)
 from src.features.hr_adavmd import (
     DEFAULT_VMD_ALPHA,
     DEFAULT_VMD_K,
     DEFAULT_VMD_MAX_ITER,
     DEFAULT_VMD_TOL,
     hr_adavmd_decompose,
+    hr_adavmd_initial_omega,
+    vmd_decompose,
 )
 
 DEFAULT_SAMPLING_RATE_HZ = 20.0
@@ -79,6 +85,53 @@ def rda_log_magnitude(radar: np.ndarray) -> np.ndarray:
     return np.log1p(np.abs(radar)).astype(np.float32)
 
 
+def _raw_target_bin_signal(radar: np.ndarray) -> np.ndarray:
+    """Raw complex (L,) signal at the SAME single target bin EDACM selects.
+
+    Using EDACM's target-bin criterion (vital-sign stability score) but the raw
+    signal keeps the raw-vs-EDACM comparison fair: the only difference is the
+    signal processing (raw magnitude/complex vs EDACM phase + VMD), not *which*
+    radar bin is read.
+    """
+    selected_bins, _weights, _meta = select_target_bin_indices(radar, top_bins=1)
+    d, a, r = int(selected_bins[0][0]), int(selected_bins[0][1]), int(selected_bins[0][2])
+    return radar[:, d, a, r].astype(np.complex64)
+
+
+def _time_freq_bundle(
+    x_time: np.ndarray,
+    representation_alias: str,
+    base_meta: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Build the standard (x_time, x_freq) bundle for a time-domain tensor.
+
+    Every ablation representation emits BOTH x_time (C, L) and x_freq (C, 129)
+    so the dual time+freq backbones consume them uniformly — this is what makes
+    the representation factorial comparable. x_freq is the Hann-windowed, log
+    RFFT of x_time with per-channel z-scoring (see :func:`frequency_features`).
+    """
+    x_time = np.asarray(x_time, dtype=np.float32)
+    x_freq, freq_hz, freq_meta = frequency_features(x_time)
+    meta = dict(base_meta)
+    meta.update(
+        {
+            "representation_method": representation_alias,
+            "representation_alias": representation_alias,
+            "feature_domains": ["time", "frequency"],
+            "x_time_shape": list(x_time.shape),
+            "x_freq_shape": list(x_freq.shape),
+            **freq_meta,
+        }
+    )
+    return {
+        "x": x_time,
+        "x_time": x_time,
+        "x_freq": x_freq,
+        "freq_hz": freq_hz,
+        "meta": meta,
+    }
+
+
 def radar_to_feature_bundle(
     radar: np.ndarray,
     representation: str,
@@ -127,7 +180,67 @@ def radar_to_feature_bundle(
             "freq_hz": freq_hz.astype(np.float32),
             "meta": phase_meta,
         }
+    # --- Representation ablation branches (all emit x_time + x_freq) ---
+    elif representation == "edacm_only":
+        # EDACM phase, NO VMD. Isolates the contribution of the micro-motion
+        # decomposition relative to "proposed".
+        phase, phase_meta = target_edacm_signal(radar)
+        x_time = phase[None, :].astype(np.float32)  # (1, L)
+        return _time_freq_bundle(x_time, "edacm_only", phase_meta)
+    elif representation == "raw_logmag":
+        # Raw RDA log-magnitude at the EDACM-selected target bin, NO EDACM, NO VMD.
+        # Lowest-effort baseline; isolates the value of the EDACM phase pipeline.
+        sig = _raw_target_bin_signal(radar)
+        x_time = rda_log_magnitude(sig)[None, :].astype(np.float32)  # (1, L)
+        return _time_freq_bundle(x_time, "raw_logmag", {})
+    elif representation == "raw_real_imag":
+        # Raw RDA complex (real+imag) at the EDACM-selected target bin, NO EDACM, NO VMD.
+        sig = _raw_target_bin_signal(radar)
+        x_time = np.stack([np.real(sig), np.imag(sig)], axis=0).astype(np.float32)  # (2, L)
+        return _time_freq_bundle(x_time, "raw_real_imag", {})
+    elif representation == "edacm_vmd_fixed":
+        # EDACM + plain VMD with EQUAL mode weights (no HR-aware adaptive
+        # weighting). Isolates the value of the adaptive weighting in "proposed".
+        phase, phase_meta = target_edacm_signal(radar)
+        init_omega = hr_adavmd_initial_omega(k=DEFAULT_VMD_K)
+        modes = vmd_decompose(signal=phase, k=DEFAULT_VMD_K, init_omega=init_omega)
+        x_time = modes.astype(np.float32)  # (K, L)
+        return _time_freq_bundle(x_time, "edacm_vmd_fixed", phase_meta)
     else:
         raise ValueError(f"Unsupported representation: {representation}")
     return {"x": x, "meta": {}}
+
+
+# Representations used for the input-representation ablation (factorial vs backbone).
+# "proposed" is the control (the full method); the others ablate one component.
+REPRESENTATION_ABLATION_CHOICES = (
+    "proposed",
+    "edacm_only",
+    "raw_logmag",
+    "raw_real_imag",
+    "edacm_vmd_fixed",
+)
+
+
+# (time_channels, freq_channels) produced by each representation. Backbones are
+# built to match these so the dual time+freq contract stays consistent and the
+# representation factorial is comparable across backbones.
+REPRESENTATION_INPUT_CHANNELS = {
+    "proposed": (7, 7),
+    "target_edacm_vmd": (7, 7),
+    "target_edacm_hr_adavmd": (7, 7),  # legacy 7-mode name used by the headline export
+    "edacm_only": (1, 1),
+    "raw_logmag": (1, 1),
+    "raw_real_imag": (2, 2),
+    "edacm_vmd_fixed": (7, 7),
+}
+
+
+def representation_input_channels(representation: str) -> "tuple[int, int]":
+    """Return ``(time_channels, freq_channels)`` for a representation name."""
+    if representation in REPRESENTATION_INPUT_CHANNELS:
+        return REPRESENTATION_INPUT_CHANNELS[representation]
+    # Unknown representations default to the canonical 7-channel layout (matches the
+    # model defaults and the headline "proposed"/"target_edacm_hr_adavmd" data).
+    return (7, 7)
 

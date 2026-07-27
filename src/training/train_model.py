@@ -128,6 +128,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--moving-avg", type=int, default=25)
     parser.add_argument("--down-sampling-layers", type=int, default=3)
     parser.add_argument("--time-only", action="store_true", help="Disable the frequency branch.")
+    parser.add_argument(
+        "--time-channels", type=int, default=7,
+        help="Input time-branch channel count. Normally auto-derived from the "
+        "representation baked into --export-dir/build_config.json; override only "
+        "for ad-hoc experiments.",
+    )
+    parser.add_argument(
+        "--freq-channels", type=int, default=7,
+        help="Input frequency-branch channel count (see --time-channels).",
+    )
     parser.add_argument("--limit-batches", type=int, default=None, help="Debug only: cap batches per epoch.")
     parser.add_argument(
         "--dump-predictions",
@@ -250,6 +260,24 @@ def save_checkpoint(
 def main() -> None:
     args = parse_args()
     seed_everything(args.seed)
+
+    # Derive input channel counts from the representation baked into the export,
+    # so backbones are built to match the data. "proposed" -> (7, 7); the raw /
+    # EDACM-only ablation reps produce 1 or 2 channels. Falls back to the CLI
+    # defaults (7, 7) if the export metadata is unavailable.
+    try:
+        bc_path = Path(args.export_dir) / "build_config.json"
+        if bc_path.exists():
+            rep = json.loads(bc_path.read_text()).get("representation")
+            if rep:
+                from src.features.representations import representation_input_channels
+                t_ch, f_ch = representation_input_channels(rep)
+                args.time_channels = t_ch
+                args.freq_channels = f_ch
+                print(f"[channels] representation={rep} -> time={t_ch} freq={f_ch}", flush=True)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[channels] keep default (7,7): {exc}", flush=True)
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     args.output_dir.mkdir(parents=True, exist_ok=True)
 

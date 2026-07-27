@@ -71,6 +71,22 @@ ModelConfig = (
 )
 
 
+def _apply_channels(cfg: ModelConfig, args: Any) -> ModelConfig:
+    """Override a config's input channel counts from CLI / export-derived args.
+
+    Every backbone reads ``time_channels``/``freq_channels`` to size its input
+    projection, but those defaults are 7 (matching the ``proposed`` 7-mode VMD
+    representation). When a representation produces a different channel count
+    (e.g. ``raw_logmag`` -> 1, ``raw_real_imag`` -> 2), the model must be built
+    to match, otherwise the tensor shapes mismatch at the first linear layer.
+    """
+    if hasattr(cfg, "time_channels"):
+        cfg.time_channels = args.time_channels
+    if hasattr(cfg, "freq_channels"):
+        cfg.freq_channels = args.freq_channels
+    return cfg
+
+
 def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
     """Instantiate a model from a serialized config dictionary."""
     if model_name == "contiformer":
@@ -113,6 +129,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             dropout=args.dropout,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return ContiFormerHeartRateModel(cfg), cfg
     if args.model == "dlinear":
         cfg = LinearBaselineConfig(
@@ -121,6 +138,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             dropout=args.dropout,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return DLinearHeartRateModel(cfg), cfg
     if args.model == "nlinear":
         cfg = LinearBaselineConfig(
@@ -129,6 +147,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             dropout=args.dropout,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return NLinearHeartRateModel(cfg), cfg
     if args.model == "cycleformer":
         heart_periods = (
@@ -154,6 +173,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             heart_periods=tuple(heart_periods),
             respiration_periods=tuple(respiration_periods),
         )
+        cfg = _apply_channels(cfg, args)
         return CycleFormerHeartRateModel(cfg), cfg
     if args.model == "heart_timemixer":
         cfg = HeartTimeMixerConfig(
@@ -167,6 +187,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             down_sampling_layers=args.down_sampling_layers,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return HeartTimeMixer(cfg), cfg
     if args.model == "tcn":
         cfg = TCNConfig(
@@ -176,6 +197,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             dropout=args.dropout,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return TCNHeartRateModel(cfg), cfg
     if args.model == "patchtst":
         cfg = PatchTSTConfig(
@@ -188,6 +210,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             patch_stride=args.patch_stride,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return PatchTSTHeartRateModel(cfg), cfg
     if args.model == "timesnet":
         cfg = TimesNetConfig(
@@ -197,6 +220,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             dropout=args.dropout,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return TimesNetHeartRateModel(cfg), cfg
     if args.model == "transformer":
         cfg = TransformerConfig(
@@ -207,6 +231,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             dropout=args.dropout,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return TransformerHeartRateModel(cfg), cfg
     if args.model == "tslanet":
         # Phase 2a: TSLANet hyperparameters are now CLI-overridable. The frequency
@@ -226,6 +251,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             channel_mode=args.channel_mode,
             use_frequency_domain=False,
         )
+        cfg = _apply_channels(cfg, args)
         return TSLANetHeartRateModel(cfg), cfg
     if args.model == "mamba":
         # Pure-PyTorch selective-scan SSM. Reuses the shared CLI args (d_model,
@@ -236,6 +262,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             dropout=args.dropout,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return MambaHeartRateModel(cfg), cfg
     if args.model == "tsmixer":
         # All-MLP mixers. Reuses the shared CLI args (d_model, num_layers,
@@ -246,6 +273,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             dropout=args.dropout,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return TSMixerHeartRateModel(cfg), cfg
     if args.model == "xlstm":
         # xLSTM (sLSTM + mLSTM). Reuses the shared CLI args (d_model, num_layers,
@@ -257,6 +285,7 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             dropout=args.dropout,
             use_frequency_domain=not args.time_only,
         )
+        cfg = _apply_channels(cfg, args)
         return XLSTMHeartRateModel(cfg), cfg
     raise ValueError(f"Unsupported model: {args.model}")
 
