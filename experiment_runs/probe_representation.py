@@ -161,8 +161,14 @@ def main() -> None:
     ap.add_argument("--export-dir", type=Path, default=EXPORT_DIR)
     ap.add_argument("--model-outputs", type=Path, default=MODEL_OUTPUTS)
     ap.add_argument("--folds", type=int, default=3)
+    ap.add_argument("--json", type=Path, default=None,
+                    help="optional path to dump per-dataset probe metrics as JSON")
     args = ap.parse_args()
 
+    cache: Dict[str, object] = {
+        "representation": args.representation,
+        "datasets": {},
+    }
     print(f"# Information probe — representation: {args.representation}\n")
     print(f"{'dataset':<12} {'probe MAE':>9} {'deep MAE':>9} {'Δ(deep-probe)':>13} {'pearson_r':>10} {'R²':>7}  verdict")
     print("-" * 92)
@@ -182,6 +188,17 @@ def main() -> None:
         print(f"{ds:<12} {m['mae']:>9.2f} {deep:>9.2f} {delta:>+13.2f} {m['pearson_r']:>10.3f} "
               f"{m['r2']:>7.3f}  {verdict}")
         print(f"            (n_train={m['n_train']}, n_test={m['n_test']}, lambda={m['lambda']:.3g})")
+        cache["datasets"][ds] = {
+            "probe_mae": m["mae"], "deep_mae": deep, "delta_deep_probe": delta,
+            "pearson_r": m["pearson_r"], "r2": m["r2"], "lambda": m["lambda"],
+            "n_train": m["n_train"], "n_test": m["n_test"], "verdict": verdict,
+        }
+
+    if args.json is not None:
+        import json as _json
+        args.json.parent.mkdir(parents=True, exist_ok=True)
+        args.json.write_text(_json.dumps(cache, indent=2), encoding="utf-8")
+        print(f"\n[written] {args.json}")
 
     print("\nInterpretation: probe ≈ deep  => the representation is the ceiling (backbones cannot "
           "recover missing signal). deep >> probe => the backbone extracts real structure, so "
