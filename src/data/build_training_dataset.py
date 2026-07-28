@@ -913,6 +913,12 @@ def build_training_dataset(args: argparse.Namespace) -> None:
     }
 
     print_stage("Stage 2/4: build fixed windows")
+    # Capture the real channel/length geometry from the first dual-input
+    # representation bundle, so build_config.json records it. Models then size
+    # themselves from this (data-derived) geometry instead of a name->shape
+    # registry, so a new method emitting a different channel count works with no
+    # code change. Remains None for representations that emit no x_time/x_freq.
+    rep_dims = None
     for sample_idx, sample in enumerate(samples, start=1):
         dataset = sample["dataset"]
         sample_tag = sample["sample_tag"]
@@ -972,6 +978,15 @@ def build_training_dataset(args: argparse.Namespace) -> None:
 
             radar_window = radar[start:end]
             feature_bundle = radar_to_feature_bundle(radar_window, args.representation)
+            if rep_dims is None and feature_bundle.get("x_time") is not None:
+                _xt = feature_bundle["x_time"]
+                _xf = feature_bundle.get("x_freq")
+                rep_dims = (
+                    int(_xt.shape[0]),
+                    int(_xt.shape[1]),
+                    int(_xf.shape[0]) if _xf is not None else int(_xt.shape[0]),
+                    int(_xf.shape[1]) if _xf is not None else None,
+                )
             feature_bundle["x"] = normalize_features(feature_bundle["x"], args.normalize)
             if "x_time" in feature_bundle:
                 feature_bundle["x_time"] = normalize_features(feature_bundle["x_time"], args.normalize)
@@ -1052,6 +1067,12 @@ def build_training_dataset(args: argparse.Namespace) -> None:
             "window_size": args.window_size,
             "stride": args.stride,
             "representation": args.representation,
+            # Real, data-derived geometry of the representation (may be None for
+            # representations that do not emit a dual time/freq bundle).
+            "time_channels": rep_dims[0] if rep_dims else None,
+            "time_length": rep_dims[1] if rep_dims else None,
+            "freq_channels": rep_dims[2] if rep_dims else None,
+            "freq_length": rep_dims[3] if rep_dims else None,
             "target": args.target,
             "required_targets": list(required),
             "label_reduction": args.label_reduction,

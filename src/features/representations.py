@@ -8,10 +8,11 @@ representations are retained here as baselines for comparison experiments.
 
 from __future__ import annotations
 
-from typing import Any, Dict, Tuple
+from typing import Any, Dict, Optional, Tuple
 
 import numpy as np
 
+from src.features.base import RadarRepresentation
 from src.features.edacm import (
     select_target_bin_indices,
     target_edacm_signal,
@@ -29,6 +30,10 @@ from src.features.hr_adavmd import (
 
 DEFAULT_SAMPLING_RATE_HZ = 20.0
 DEFAULT_RDA_REPRESENTATION = "log_magnitude"
+# Bumped when the representation generator logic changes in a way that affects
+# what is written to disk. Recorded in build_config.json / meta for exact
+# reproducibility of every experiment.
+REPRESENTATION_GENERATOR_VERSION = "1.0"
 METHOD_PIPELINE = (
     "radar_rda_features",
     "edacm_phase_representation",
@@ -98,11 +103,47 @@ def _raw_target_bin_signal(radar: np.ndarray) -> np.ndarray:
     return radar[:, d, a, r].astype(np.complex64)
 
 
+def _wrap(
+    representation_name: str,
+    x_time: Optional[np.ndarray] = None,
+    x_freq: Optional[np.ndarray] = None,
+    x: Optional[np.ndarray] = None,
+    x_rda: Optional[np.ndarray] = None,
+    freq_hz: Optional[np.ndarray] = None,
+    meta: Optional[Dict[str, Any]] = None,
+) -> RadarRepresentation:
+    """Build a :class:`RadarRepresentation` with a fixed-schema ``meta``.
+
+    Always records the channel/length geometry so the training pipeline can size
+    models from the data instead of a name->shape registry.
+    """
+    meta = dict(meta or {})
+    meta["sample_rate"] = float(DEFAULT_SAMPLING_RATE_HZ)
+    meta["representation"] = representation_name
+    meta["generator_version"] = REPRESENTATION_GENERATOR_VERSION
+    if x_time is not None:
+        meta["time_channels"] = int(x_time.shape[0])
+        meta["window_size"] = int(x_time.shape[1])
+    if x_freq is not None:
+        meta["freq_channels"] = int(x_freq.shape[0])
+        meta["freq_length"] = int(x_freq.shape[1])
+    return RadarRepresentation(
+        x_time=x_time,
+        x_freq=x_freq,
+        representation_name=representation_name,
+        representation_version=REPRESENTATION_GENERATOR_VERSION,
+        meta=meta,
+        x=x,
+        x_rda=x_rda,
+        freq_hz=freq_hz,
+    )
+
+
 def _time_freq_bundle(
     x_time: np.ndarray,
     representation_alias: str,
     base_meta: Dict[str, Any],
-) -> Dict[str, Any]:
+) -> RadarRepresentation:
     """Build the standard (x_time, x_freq) bundle for a time-domain tensor.
 
     Every ablation representation emits BOTH x_time (C, L) and x_freq (C, 129)
@@ -113,39 +154,34 @@ def _time_freq_bundle(
     x_time = np.asarray(x_time, dtype=np.float32)
     x_freq, freq_hz, freq_meta = frequency_features(x_time)
     meta = dict(base_meta)
-    meta.update(
-        {
-            "representation_method": representation_alias,
-            "representation_alias": representation_alias,
-            "feature_domains": ["time", "frequency"],
-            "x_time_shape": list(x_time.shape),
-            "x_freq_shape": list(x_freq.shape),
-            **freq_meta,
-        }
+    meta.update(freq_meta)
+    return _wrap(
+        representation_alias,
+        x_time=x_time,
+        x_freq=x_freq,
+        x=x_time,
+        freq_hz=freq_hz,
+        meta=meta,
     )
-    return {
-        "x": x_time,
-        "x_time": x_time,
-        "x_freq": x_freq,
-        "freq_hz": freq_hz,
-        "meta": meta,
-    }
 
 
 def radar_to_feature_bundle(
     radar: np.ndarray,
     representation: str,
-) -> Dict[str, Any]:
+) -> RadarRepresentation:
     if representation == "real_imag":
         x = np.stack([np.real(radar), np.imag(radar)], axis=0).astype(np.float32)
+        return _wrap("real_imag", x=x, meta={})
     elif representation == "magnitude":
         x = np.abs(radar).astype(np.float32)
+        return _wrap("magnitude", x=x, meta={})
     elif representation == "log_magnitude":
         x = np.log1p(np.abs(radar)).astype(np.float32)
+        return _wrap("log_magnitude", x=x, meta={})
     elif representation == "target_edacm":
         phase, phase_meta = target_edacm_signal(radar)
         x = phase[None, :].astype(np.float32)
-        return {"x": x, "meta": phase_meta}
+        return _wrap("target_edacm", x=x, meta=phase_meta)
     elif representation in {"proposed", "target_edacm_vmd"}:
         phase, phase_meta = target_edacm_signal(radar)
         x_time, hr_adavmd_meta = hr_adavmd_decompose(phase, k=DEFAULT_VMD_K)
@@ -172,14 +208,15 @@ def radar_to_feature_bundle(
                 **freq_meta,
             }
         )
-        return {
-            "x": x_time.astype(np.float32),
-            "x_time": x_time.astype(np.float32),
-            "x_freq": x_freq.astype(np.float32),
-            "x_rda": x_rda.astype(np.float32),
-            "freq_hz": freq_hz.astype(np.float32),
-            "meta": phase_meta,
-        }
+        return _wrap(
+            representation,
+            x_time=x_time.astype(np.float32),
+            x_freq=x_freq.astype(np.float32),
+            x=x_time.astype(np.float32),
+            x_rda=x_rda.astype(np.float32),
+            freq_hz=freq_hz.astype(np.float32),
+            meta=phase_meta,
+        )
     # --- Representation ablation branches (all emit x_time + x_freq) ---
     elif representation == "edacm_only":
         # EDACM phase, NO VMD. Isolates the contribution of the micro-motion
@@ -208,7 +245,6 @@ def radar_to_feature_bundle(
         return _time_freq_bundle(x_time, "edacm_vmd_fixed", phase_meta)
     else:
         raise ValueError(f"Unsupported representation: {representation}")
-    return {"x": x, "meta": {}}
 
 
 # Representations used for the input-representation ablation (factorial vs backbone).

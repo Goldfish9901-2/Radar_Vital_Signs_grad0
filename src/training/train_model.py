@@ -262,19 +262,27 @@ def main() -> None:
     seed_everything(args.seed)
 
     # Derive input channel counts from the representation baked into the export,
-    # so backbones are built to match the data. "proposed" -> (7, 7); the raw /
-    # EDACM-only ablation reps produce 1 or 2 channels. Falls back to the CLI
-    # defaults (7, 7) if the export metadata is unavailable.
+    # so backbones are built to match the data (a new method emitting a different
+    # channel count works with no code change). Prefer the data-derived geometry
+    # written by build_training_dataset.py; fall back to the name->shape registry
+    # for legacy exports that lack it; finally fall back to CLI defaults (7, 7).
     try:
         bc_path = Path(args.export_dir) / "build_config.json"
         if bc_path.exists():
-            rep = json.loads(bc_path.read_text()).get("representation")
-            if rep:
+            bc = json.loads(bc_path.read_text())
+            t_ch = bc.get("time_channels")
+            f_ch = bc.get("freq_channels")
+            rep = bc.get("representation")
+            if t_ch is not None and f_ch is not None:
+                args.time_channels = int(t_ch)
+                args.freq_channels = int(f_ch)
+                print(f"[channels] build_config -> time={t_ch} freq={f_ch}", flush=True)
+            elif rep:
                 from src.features.representations import representation_input_channels
                 t_ch, f_ch = representation_input_channels(rep)
                 args.time_channels = t_ch
                 args.freq_channels = f_ch
-                print(f"[channels] representation={rep} -> time={t_ch} freq={f_ch}", flush=True)
+                print(f"[channels] registry({rep}) -> time={t_ch} freq={f_ch}", flush=True)
     except Exception as exc:  # noqa: BLE001
         print(f"[channels] keep default (7,7): {exc}", flush=True)
 
