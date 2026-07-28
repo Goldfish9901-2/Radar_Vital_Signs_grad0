@@ -47,6 +47,54 @@ docs/                    数据集、方法和实验说明
 
 HeartTimeMixer 和旧表征代码保留以兼容历史实验，但新版方法和实验文档以 CycleFormer 为主线。
 
+## 表征扩展（开发者须知）
+
+表征（representation）是“原始雷达 -> 神经网络”的唯一边界，已是项目的一等公民（不再只是 dict 里的几个字段）。新增信号处理算法时请遵循以下约定，避免改动 `proposed`、模型或 benchmark 主流程。
+
+### 1. 不要修改 `proposed`
+
+已有表征仅用于可复现性，请勿直接替换其中的 HR-AdaVMD 或 EDACM。新的信号处理方法应作为**新的表征名**加入（例如 `--representation new_method`），历史实验因此不受影响。
+
+### 2. 输出接口是 `RadarRepresentation`，而不是“7 个通道”
+
+所有表征经 `src/features/representations.py::radar_to_feature_bundle` 返回 `src/features/base.py::RadarRepresentation`：
+
+```python
+RadarRepresentation(
+    x_time=x_time,   # (C, T)
+    x_freq=x_freq,   # (C, F)
+    representation_name="new_method",
+    representation_version="1.0",
+    meta={...},      # 固定字段见 base.py（sample_rate / time_channels / ...）
+)
+```
+
+- `x_time` / `x_freq` 分别为 `(C, T)` / `(C, F)`；**通道数 `C` 由表征自身决定，不必等于 7**（新算法输出 12 通道也完全合法）。
+- 通道数会在导出时写入 `training_exports/build_config.json` 的 `time_channels` / `freq_channels`，训练时 `train_model.py` 直接据此构建模型，无需改动任何代码。
+- 若参与表征消融，把新名字加入 `REPRESENTATION_ABLATION_CHOICES`。
+
+### 3. 先验证表征，再上 GPU
+
+新增表征后、启动训练前，请先用 CPU 脚本诊断表征质量：
+
+```bash
+python experiment_runs/validate_representation.py --representation new_method --source raw
+```
+
+该脚本检查形状一致性、NaN/Inf、通道塌缩、频谱健康度以及与 HR 的相关性，并输出 HTML 报告。只有当结构性检查通过、确认表征确实携带 HR 信号后，才应启动 backbone 实验。研究流程因此从：
+
+```text
+新算法 -> 直接训练 80 epochs -> MAE 差 -> 不明原因
+```
+
+转变为：
+
+```text
+新算法 -> validate_representation -> 无 HR 信号则停止 / 有信号再比较 backbone
+```
+
+这与本项目的核心结论一致：**PhysDrive 主要受表征限制，而非 backbone 限制**；表征质量应先于 backbone 比较被独立诊断。
+
 ## 常用命令
 
 创建环境：
