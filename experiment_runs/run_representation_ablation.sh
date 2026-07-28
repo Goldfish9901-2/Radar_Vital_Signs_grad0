@@ -30,12 +30,15 @@ RUN="uv run python src/training/train_model.py"
 BUILD="uv run python src/data/build_training_dataset.py"
 
 REPS="proposed edacm_only raw_logmag raw_real_imag edacm_vmd_fixed"
-# linear / conv / attention / recurrent — one archetype per paradigm.
-MODELS="dlinear tcn transformer xlstm"
+# 4-backbone sanity matrix (per research plan, Message-5): linear / attention / attention /
+# attention. contiformer + cycleformer cover the temporal-attention paradigms; dlinear is the
+# linear baseline. xlstm and frets are DEFERRED to last (run separately) and intentionally
+# excluded here so the first ablation pass follows the named sanity set.
+MODELS="dlinear contiformer cycleformer transformer"
 
 # per-model batch size (4 GB T600)
 declare -A BS=(
-  [dlinear]=64 [tcn]=32 [transformer]=16 [xlstm]=16
+  [dlinear]=64 [contiformer]=16 [cycleformer]=16 [transformer]=16
 )
 
 train() {
