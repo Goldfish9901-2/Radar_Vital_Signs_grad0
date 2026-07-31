@@ -1,11 +1,10 @@
-"""Training loop for heart-rate regression models."""
+"""Training loop for radar heart-rate regression models."""
 
 from __future__ import annotations
 
 import argparse
 import json
 import math
-import re
 import time
 from dataclasses import asdict
 from pathlib import Path
@@ -20,28 +19,27 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from src.models import (
-    HeartTimeMixer,
-    HeartTimeMixerConfig,
-    TCNConfig,
-    TCNHeartRateModel,
-    TransformerConfig,
-    TransformerHeartRateModel,
+from src.models.factory import (
+    MODEL_CHOICES,
+    ModelConfig,
+    config_to_dict,
+    count_parameters,
+    create_model_and_config,
 )
-from src.models.heart_timemixer import count_parameters
+from src.training.common.metrics import aggregate, append_prediction_rows, mae_bpm, tolerance_metrics
 from src.training.datasets import LabelStats, build_datasets
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Train HeartTimeMixer on training_exports.")
+    parser = argparse.ArgumentParser(description="Train radar HR regression models on training_exports.")
     parser.add_argument(
         "--model",
-        choices=["heart_timemixer", "tcn", "transformer"],
-        default="heart_timemixer",
+        choices=MODEL_CHOICES,
+        default="cycleformer",
         help="Model architecture to train.",
     )
     parser.add_argument("--export-dir", type=Path, default=Path("training_exports"))
-    parser.add_argument("--output-dir", type=Path, default=Path("model_outputs/heart_timemixer"))
+    parser.add_argument("--output-dir", type=Path, default=Path("model_outputs/cycleformer"))
     parser.add_argument(
         "--datasets",
         nargs="+",
@@ -64,6 +62,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--kernel-size", type=int, default=7, help="TCN convolution kernel size.")
     parser.add_argument("--nhead", type=int, default=4, help="Transformer attention heads.")
     parser.add_argument("--num-layers", type=int, default=2, help="Transformer encoder layers.")
+    parser.add_argument("--patch-len", type=int, default=16, help="PatchTST patch length.")
+    parser.add_argument("--patch-stride", type=int, default=8, help="PatchTST patch stride.")
+    parser.add_argument(
+        "--heart-periods",
+        type=int,
+        nargs="+",
+        default=None,
+        help="CycleFormer heart-period candidates in samples.",
+    )
+    parser.add_argument(
+        "--respiration-periods",
+        type=int,
+        nargs="+",
+        default=None,
+        help="CycleFormer respiration-period candidates in samples.",
+    )
     parser.add_argument("--dropout", type=float, default=0.15)
     parser.add_argument("--decomp-method", choices=["moving_avg", "dft"], default="moving_avg")
     parser.add_argument("--top-k", type=int, default=5)
@@ -77,57 +91,6 @@ def parse_args() -> argparse.Namespace:
 def seed_everything(seed: int) -> None:
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
-
-
-def mae_bpm(pred_norm: torch.Tensor, y_norm: torch.Tensor, stats: LabelStats) -> torch.Tensor:
-    pred = pred_norm * stats.std + stats.mean
-    y = y_norm * stats.std + stats.mean
-    return torch.mean(torch.abs(pred - y))
-
-
-def participant_id(dataset: str, group_key: str, sample_tag: str) -> str:
-    if "/participant/" in group_key:
-        return group_key.rsplit("/", 1)[-1]
-    if "/session/" in group_key:
-        return group_key.rsplit("/", 1)[-1]
-    if dataset in {"FTU", "BGT60TR13C"}:
-        match = re.match(r"p0?(\d+)", sample_tag)
-        if match:
-            return match.group(1)
-    if dataset == "PhysDrive":
-        return sample_tag.split("_", 1)[0]
-    return group_key or sample_tag or "unknown"
-
-
-def aggregate_errors(rows: list[Dict[str, float | str]], key: str) -> Dict[str, Dict[str, float | int]]:
-    buckets: Dict[str, list[Dict[str, float | str]]] = {}
-    for row in rows:
-        buckets.setdefault(str(row[key]), []).append(row)
-
-    metrics: Dict[str, Dict[str, float | int]] = {}
-    for name, values in buckets.items():
-        errors = [float(row["abs_error_bpm"]) for row in values]
-        labels = [float(row["label_bpm"]) for row in values]
-        preds = [float(row["pred_bpm"]) for row in values]
-        metrics[name] = {
-            "count": len(values),
-            "mae_bpm": sum(errors) / len(errors),
-            "within_3bpm_percent": 100.0 * sum(error <= 3.0 for error in errors) / len(errors),
-            "within_5bpm_percent": 100.0 * sum(error <= 5.0 for error in errors) / len(errors),
-            "label_mean_bpm": sum(labels) / len(labels),
-            "pred_mean_bpm": sum(preds) / len(preds),
-        }
-    return metrics
-
-
-def tolerance_metrics(rows: list[Dict[str, float | str]]) -> Dict[str, float]:
-    if not rows:
-        return {"within_3bpm_percent": math.nan, "within_5bpm_percent": math.nan}
-    errors = [float(row["abs_error_bpm"]) for row in rows]
-    return {
-        "within_3bpm_percent": 100.0 * sum(error <= 3.0 for error in errors) / len(errors),
-        "within_5bpm_percent": 100.0 * sum(error <= 5.0 for error in errors) / len(errors),
-    }
 
 
 def run_epoch(
@@ -168,24 +131,7 @@ def run_epoch(
         total_mae += float(mae_bpm(pred.detach(), y.detach(), stats)) * batch_size
         seen += batch_size
         if collect_participant_metrics:
-            pred_bpm = stats.denormalize(pred.detach().cpu())
-            y_bpm = batch["y_bpm"].detach().cpu()
-            for idx in range(batch_size):
-                dataset = batch["dataset"][idx]
-                group_key = batch["group_key"][idx]
-                sample_tag = batch["sample_tag"][idx]
-                label = float(y_bpm[idx])
-                prediction = float(pred_bpm[idx])
-                detail_rows.append(
-                    {
-                        "dataset": dataset,
-                        "group_key": group_key,
-                        "participant_id": participant_id(dataset, group_key, sample_tag),
-                        "label_bpm": label,
-                        "pred_bpm": prediction,
-                        "abs_error_bpm": abs(prediction - label),
-                    }
-                )
+            append_prediction_rows(detail_rows, batch, pred, stats)
 
     if seen == 0:
         return {"loss": math.nan, "mae_bpm": math.nan}
@@ -195,15 +141,15 @@ def run_epoch(
     }
     if collect_participant_metrics:
         metrics.update(tolerance_metrics(detail_rows))
-        metrics["by_participant"] = aggregate_errors(detail_rows, "participant_id")
-        metrics["by_group"] = aggregate_errors(detail_rows, "group_key")
+        metrics["by_participant"] = aggregate(detail_rows, "participant_id")
+        metrics["by_group"] = aggregate(detail_rows, "group_key")
     return metrics
 
 
 def save_checkpoint(
     path: Path,
     model: nn.Module,
-    cfg: HeartTimeMixerConfig | TCNConfig | TransformerConfig,
+    cfg: ModelConfig,
     stats: LabelStats,
     metrics: Dict[str, Any],
     epoch: int,
@@ -212,7 +158,7 @@ def save_checkpoint(
     torch.save(
         {
             "model_state": model.state_dict(),
-            "config": asdict(cfg),
+            "config": config_to_dict(cfg),
             "label_stats": asdict(stats),
             "metrics": metrics,
             "epoch": epoch,
@@ -245,7 +191,7 @@ def main() -> None:
     criterion = nn.SmoothL1Loss(beta=0.5)
 
     metadata = {
-        "config": asdict(cfg),
+        "config": config_to_dict(cfg),
         "model": args.model,
         "label_stats": asdict(stats),
         "train_size": len(train_ds),
@@ -306,41 +252,6 @@ def main() -> None:
     (args.output_dir / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2), flush=True)
 
-
-def create_model_and_config(args: argparse.Namespace) -> tuple[nn.Module, HeartTimeMixerConfig | TCNConfig | TransformerConfig]:
-    if args.model == "heart_timemixer":
-        cfg = HeartTimeMixerConfig(
-            d_model=args.d_model,
-            d_ff=args.d_ff,
-            e_layers=args.e_layers,
-            dropout=args.dropout,
-            decomp_method=args.decomp_method,
-            top_k=args.top_k,
-            moving_avg=args.moving_avg,
-            down_sampling_layers=args.down_sampling_layers,
-            use_frequency_domain=not args.time_only,
-        )
-        return HeartTimeMixer(cfg), cfg
-    if args.model == "tcn":
-        cfg = TCNConfig(
-            hidden_channels=args.hidden_channels,
-            num_blocks=args.num_blocks,
-            kernel_size=args.kernel_size,
-            dropout=args.dropout,
-            use_frequency_domain=not args.time_only,
-        )
-        return TCNHeartRateModel(cfg), cfg
-    if args.model == "transformer":
-        cfg = TransformerConfig(
-            d_model=args.d_model,
-            nhead=args.nhead,
-            num_layers=args.num_layers,
-            dim_feedforward=args.d_ff,
-            dropout=args.dropout,
-            use_frequency_domain=not args.time_only,
-        )
-        return TransformerHeartRateModel(cfg), cfg
-    raise ValueError(f"Unsupported model: {args.model}")
 
 
 if __name__ == "__main__":
