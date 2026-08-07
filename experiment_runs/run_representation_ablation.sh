@@ -61,12 +61,20 @@ train() {
 mkdir -p "$OUT"
 for rep in $REPS; do
   exp="$EXPORT_ROOT/$rep"
+  mkdir -p "$exp"
   if [ ! -f "$exp/build_config.json" ]; then
     echo "---------------- building window export for rep=$rep ----------------"
-    $BUILD --exports-dir "$RAW_EXPORTS" --output-dir "$exp" --datasets FTU \
-           --representation "$rep" --overwrite > "$exp/build.log" 2>&1 \
-      && echo "export built: $exp" \
-      || { echo "################ export FAILED for $rep (see $exp/build.log)"; continue; }
+    # The export writes a large window set to a flaky mount and can be killed by a
+    # transient mount drop mid-write. Retry a few times; each attempt re-exports the
+    # rep from scratch (--overwrite) so a partial/failed dir is harmless.
+    ok=0
+    for attempt in $(seq 1 60); do
+      $BUILD --exports-dir "$RAW_EXPORTS" --output-dir "$exp" --datasets FTU \
+             --representation "$rep" --overwrite > "$exp/build.log" 2>&1 \
+        && { echo "export built: $exp"; ok=1; break; } \
+        || { echo "################ export attempt $attempt FAILED for $rep (see $exp/build.log); retry in 30s"; sleep 30; }
+    done
+    [ "$ok" = 1 ] || { echo "################ export FAILED for $rep after retries; skipping"; continue; }
   fi
   for model in $MODELS; do
     train "$model" "$rep" "${BS[$model]}" "$exp" || true
