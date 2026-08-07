@@ -30,12 +30,15 @@ RUN="uv run python src/training/train_model.py"
 BUILD="uv run python src/data/build_training_dataset.py"
 
 REPS="proposed edacm_only raw_logmag raw_real_imag edacm_vmd_fixed"
-# linear / conv / attention / recurrent — one archetype per paradigm.
-MODELS="dlinear tcn transformer xlstm"
+# 4-backbone sanity matrix (per research plan, Message-5): linear / attention / attention /
+# attention. contiformer + cycleformer cover the temporal-attention paradigms; dlinear is the
+# linear baseline. xlstm and frets are DEFERRED to last (run separately) and intentionally
+# excluded here so the first ablation pass follows the named sanity set.
+MODELS="dlinear contiformer cycleformer transformer"
 
 # per-model batch size (4 GB T600)
 declare -A BS=(
-  [dlinear]=64 [tcn]=32 [transformer]=16 [xlstm]=16
+  [dlinear]=64 [contiformer]=16 [cycleformer]=16 [transformer]=16
 )
 
 train() {
@@ -58,12 +61,20 @@ train() {
 mkdir -p "$OUT"
 for rep in $REPS; do
   exp="$EXPORT_ROOT/$rep"
+  mkdir -p "$exp"
   if [ ! -f "$exp/build_config.json" ]; then
     echo "---------------- building window export for rep=$rep ----------------"
-    $BUILD --exports-dir "$RAW_EXPORTS" --output-dir "$exp" --datasets FTU \
-           --representation "$rep" --overwrite > "$exp/build.log" 2>&1 \
-      && echo "export built: $exp" \
-      || { echo "################ export FAILED for $rep (see $exp/build.log)"; continue; }
+    # The export writes a large window set to a flaky mount and can be killed by a
+    # transient mount drop mid-write. Retry a few times; each attempt re-exports the
+    # rep from scratch (--overwrite) so a partial/failed dir is harmless.
+    ok=0
+    for attempt in $(seq 1 60); do
+      $BUILD --exports-dir "$RAW_EXPORTS" --output-dir "$exp" --datasets FTU \
+             --representation "$rep" --overwrite > "$exp/build.log" 2>&1 \
+        && { echo "export built: $exp"; ok=1; break; } \
+        || { echo "################ export attempt $attempt FAILED for $rep (see $exp/build.log); retry in 30s"; sleep 30; }
+    done
+    [ "$ok" = 1 ] || { echo "################ export FAILED for $rep after retries; skipping"; continue; }
   fi
   for model in $MODELS; do
     train "$model" "$rep" "${BS[$model]}" "$exp" || true

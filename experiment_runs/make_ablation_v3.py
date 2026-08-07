@@ -41,7 +41,7 @@ from src.training.common import stats as S
 ABLATION_ROOT = ROOT / "model_outputs_ablation"
 OUT = ABLATION_ROOT / "analysis"
 # canonical order for readable tables
-BACKBONES = ["dlinear", "tcn", "transformer", "xlstm"]
+BACKBONES = ["dlinear", "contiformer", "cycleformer", "transformer"]
 REPS = ["proposed", "edacm_only", "raw_logmag", "raw_real_imag", "edacm_vmd_fixed"]
 REP_LABEL = {
     "proposed": "EDACM+HR-AdaVMD (7)",
@@ -172,8 +172,7 @@ def main() -> None:
     if decomp:
         md.append("\n## Variance decomposition (two-way ANOVA on cell MAE)\n")
         md.append(f"- grand mean MAE: **{decomp['grand_mean_mae']} BPM** over {decomp['n_cells']} cells\n")
-        md.append("| effect | sum of squares | % of total |",
-                  "|---|---|---|")
+        md.append("| effect | sum of squares | % of total |\n|---|---|---|")
         md.append(f"| backbone | {decomp['ss_backbone']} | **{decomp['pct_backbone']}%** |")
         md.append(f"| representation | {decomp['ss_representation']} | **{decomp['pct_representation']}%** |")
         md.append(f"| interaction | {decomp['ss_interaction']} | {decomp['pct_interaction']}% |")
