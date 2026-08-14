@@ -107,6 +107,15 @@ def parse_args() -> argparse.Namespace:
             "raw_logmag",
             "raw_real_imag",
             "edacm_vmd_fixed",
+            # Phase C: post-RDA full-cube complex->real mappings (see representations.py)
+            "rda_real",
+            "rda_imag",
+            "rda_magnitude",
+            "rda_phase",
+            "rda_real_imag",
+            "rda_mag_phase",
+            # Phase A: inter-frame phase difference
+            "rda_phase_diff",
         ],
         default=DEFAULT_REPRESENTATION,
         help="How to convert complex radar tensors for model input.",

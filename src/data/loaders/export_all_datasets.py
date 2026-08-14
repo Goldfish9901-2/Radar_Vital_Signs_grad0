@@ -114,6 +114,18 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="仅导出 PhysDrive(若与其它数据集参数同时出现,则按出现的数据集导出)",
     )
+    parser.add_argument(
+        "--max-samples",
+        type=int,
+        default=None,
+        help="每个数据集最多导出的样本数(快速实验/避免在不稳定挂载上长时间运行)",
+    )
+    parser.add_argument(
+        "--max-samples-per-session",
+        type=int,
+        default=None,
+        help="每个会话最多导出的样本数(用于跨会话均匀抽样, 避免测试集只来自少数会话)",
+    )
     return parser.parse_args()
 
 
@@ -917,10 +929,13 @@ def export_bgt60(
     return success, failure
 
 
-def iter_phys_samples(loader: PhysDriveDataLoader) -> List[Dict[str, Any]]:
+def iter_phys_samples(loader: PhysDriveDataLoader, max_per_session: Optional[int] = None) -> List[Dict[str, Any]]:
     rows: List[Dict[str, Any]] = []
     for session_id in loader.list_sessions():
-        for sample_id in loader.list_samples(session_id):
+        sample_ids = loader.list_samples(session_id)
+        if max_per_session is not None and max_per_session >= 0 and len(sample_ids) > max_per_session:
+            sample_ids = sample_ids[:max_per_session]
+        for sample_id in sample_ids:
             rows.append({"session_id": session_id, "sample_id": sample_id})
     return rows
 
@@ -929,6 +944,8 @@ def export_physdrive(
     dataset_root: Path,
     output_dir: Path,
     compress: bool,
+    max_samples: Optional[int] = None,
+    max_per_session: Optional[int] = None,
 ) -> Tuple[int, int]:
     started_at = time.monotonic()
     print_stage("PhysDrive", "Stage 1/4: initialize loader")
@@ -937,7 +954,10 @@ def export_physdrive(
     manifest_rows: List[Dict[str, Any]] = []
 
     print_stage("PhysDrive", "Stage 2/4: discover samples")
-    samples = iter_phys_samples(loader)
+    samples = iter_phys_samples(loader, max_per_session=max_per_session)
+    if max_samples is not None and max_samples >= 0 and len(samples) > max_samples:
+        print(f"[PhysDrive] capping {len(samples)} -> {max_samples} samples", flush=True)
+        samples = samples[:max_samples]
     print(f"[PhysDrive] discovered {len(samples)} sample(s)", flush=True)
     success = 0
     failure = 0
@@ -1082,6 +1102,8 @@ def main() -> None:
                 dataset_root=dataset_root,
                 output_dir=output_dir,
                 compress=COMPRESS_OUTPUT,
+                max_samples=args.max_samples,
+                max_per_session=args.max_samples_per_session,
             )
         elif dataset_name == "FTU":
             ok, fail = export_ftu(

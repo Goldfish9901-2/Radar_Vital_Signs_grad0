@@ -106,7 +106,8 @@ def _best_deep_mae(dataset: str, model_outputs: Path) -> float:
 
 
 # --------------------------------------------------------------------------- #
-def probe_dataset(dataset: str, export_dir: Path, n_folds: int = 3, model_outputs: Path = MODEL_OUTPUTS):
+def probe_dataset(dataset: str, export_dir: Path, n_folds: int = 3, model_outputs: Path = MODEL_OUTPUTS,
+                  pca_components: int | None = None):
     Xtr, ytr = _load_split(export_dir, dataset, "train")
     Xte, yte = _load_split(export_dir, dataset, "test")
     if Xtr is None:
@@ -116,8 +117,27 @@ def probe_dataset(dataset: str, export_dir: Path, n_folds: int = 3, model_output
     if Xte is None:
         return None
 
-    Xtr_s, mu, sd = _standardize(Xtr)
-    Xte_s, _, _ = _standardize(Xte, mu, sd)
+    # PCA compression guard: full-cube representations (e.g. 1024 spatial channels
+    # x 256 window ~ 260k raw features) would OOM the closed-form Ridge. Truncated
+    # SVD is a linear compressor, so the probe stays a *linear* probe; it only
+    # bounds the feature dimension. Fitted on TRAIN only (no test leakage).
+    # IMPORTANT: we standardize the RAW features first, then compress, and use the
+    # components directly. TruncatedSVD components are already mean-zero; do NOT
+    # re-standardize them -- their variance decays across components, and z-scoring
+    # the tiny-variance tail divides by ~0 and blows the Ridge predictions up.
+    # Only compress when the raw dim is genuinely huge, so small-control reps
+    # (e.g. 'proposed', ~2.7k features) keep their exact historical behavior.
+    _PCA_THRESHOLD = 50_000
+    if pca_components is not None and pca_components > 0 and Xtr.shape[1] > _PCA_THRESHOLD:
+        Xtr_s, mu, sd = _standardize(Xtr)
+        Xte_s, _, _ = _standardize(Xte, mu, sd)
+        from sklearn.decomposition import TruncatedSVD
+        svd = TruncatedSVD(n_components=min(pca_components, Xtr_s.shape[0] - 1), random_state=0)
+        Xtr_s = svd.fit_transform(Xtr_s)
+        Xte_s = svd.transform(Xte_s)
+    else:
+        Xtr_s, mu, sd = _standardize(Xtr)
+        Xte_s, _, _ = _standardize(Xte, mu, sd)
 
     # Implicit intercept via target centering on the TRAIN mean: when the probe
     # has no signal (w->0) it predicts the train mean, i.e. MAE ~= MAD — the
@@ -161,6 +181,11 @@ def main() -> None:
     ap.add_argument("--export-dir", type=Path, default=EXPORT_DIR)
     ap.add_argument("--model-outputs", type=Path, default=MODEL_OUTPUTS)
     ap.add_argument("--folds", type=int, default=3)
+    ap.add_argument("--pca-components", type=int, default=None,
+                    help="Optional linear compression (TruncatedSVD) of the flattened "
+                         "window features before Ridge. Needed for full-cube reps whose "
+                         "raw feature dim (~260k) would OOM the closed-form Ridge. The "
+                         "probe stays linear; only the feature dim is bounded.")
     ap.add_argument("--json", type=Path, default=None,
                     help="optional path to dump per-dataset probe metrics as JSON")
     args = ap.parse_args()
@@ -173,7 +198,7 @@ def main() -> None:
     print(f"{'dataset':<12} {'probe MAE':>9} {'deep MAE':>9} {'Δ(deep-probe)':>13} {'pearson_r':>10} {'R²':>7}  verdict")
     print("-" * 92)
     for ds in args.datasets:
-        m = probe_dataset(ds, args.export_dir, args.folds, args.model_outputs)
+        m = probe_dataset(ds, args.export_dir, args.folds, args.model_outputs, args.pca_components)
         if m is None:
             print(f"{ds:<12} no windows")
             continue

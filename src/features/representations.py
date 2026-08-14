@@ -132,6 +132,46 @@ def _time_freq_bundle(
     }
 
 
+def _complex_mapping_bundle(
+    radar: np.ndarray,
+    components,
+    alias: str,
+    base_meta: Dict[str, Any] | None = None,
+) -> Dict[str, Any]:
+    """Full-cube complex->real mapping kept as a multi-channel time series.
+
+    IMPORTANT (scope / naming): this is NOT a re-derivation of RDA from raw ADC.
+    For PhysDrive the input ``radar`` is already the publisher-processed RDA cube
+    (Case C: static removal + localization + crop already applied upstream). So
+    these mappings are *post-RDA re-representations* of the official cube: they
+    change only how the complex tensor is turned into real model inputs.
+
+    Design: keep the frame axis as the time axis (HR lives in the temporal
+    oscillation at 20 Hz) and treat every spatial (D, A, R) cell as its own
+    channel. x_time therefore has shape (n_components * D*A*R, F). This
+    deliberately preserves ALL spatial bins, unlike EDACM which collapses to a
+    single target bin, so we can test whether HR information is lost when the
+    complex->real mapping discards bins. The dual time+freq contract is kept via
+    :func:`_time_freq_bundle` (Hann RFFT over the frame axis per channel).
+
+    Hypothesis gate (Phase C): if a full-cube mapping recovers HR signal that the
+    single-bin EDACM phase mapping misses, then the information loss is in the
+    complex->feature step, not the backbone.
+    """
+    base_meta = base_meta or {}
+    comps = [fn(radar) for fn in components]  # each (F, D, A, R) real
+    chans = [c.reshape(-1, c.shape[0]).astype(np.float32) for c in comps]  # (D*A*R, F)
+    x_time = np.concatenate(chans, axis=0).astype(np.float32)  # (n*D*A*R, F)
+    meta = dict(base_meta)
+    meta.update({
+        "complex_mapping": alias,
+        "spatial_cells": int(chans[0].shape[0]),
+        "time_length": int(chans[0].shape[1]),
+        "note": "post-RDA complex->real re-representation (not raw-ADC RDA re-derivation)",
+    })
+    return _time_freq_bundle(x_time, alias, meta)
+
+
 def radar_to_feature_bundle(
     radar: np.ndarray,
     representation: str,
@@ -206,6 +246,38 @@ def radar_to_feature_bundle(
         modes = vmd_decompose(signal=phase, k=DEFAULT_VMD_K, init_omega=init_omega)
         x_time = modes.astype(np.float32)  # (K, L)
         return _time_freq_bundle(x_time, "edacm_vmd_fixed", phase_meta)
+    # --- Phase C: full-cube complex->real mappings (post-RDA re-representations) ---
+    # Hypothesis: EDACM's single-target-bin phase selection may discard HR-bearing
+    # energy present in other bins / other complex components. These preserve the
+    # whole (D,A,R) cube as parallel channels so the probe can locate that signal.
+    elif representation == "rda_real":
+        return _complex_mapping_bundle(radar, [np.real], "rda_real")
+    elif representation == "rda_imag":
+        return _complex_mapping_bundle(radar, [np.imag], "rda_imag")
+    elif representation == "rda_magnitude":
+        return _complex_mapping_bundle(radar, [np.abs], "rda_magnitude")
+    elif representation == "rda_phase":
+        return _complex_mapping_bundle(radar, [np.angle], "rda_phase")
+    elif representation == "rda_real_imag":
+        return _complex_mapping_bundle(radar, [np.real, np.imag], "rda_real_imag")
+    elif representation == "rda_mag_phase":
+        return _complex_mapping_bundle(radar, [np.abs, np.angle], "rda_mag_phase")
+    # --- Phase A: inter-frame phase difference (micro-motion) ---
+    # angle(x[t] * conj(x[t-1])) per spatial cell captures the *change* in complex
+    # reflection between consecutive 20 Hz frames -- the cardioballistic
+    # micro-Doppler that the absolute complex state (magnitude/phase) smears.
+    # Real-valued, fed as a multi-channel time series (no EDACM). Post-RDA
+    # re-representation (Case C): PhysDrive's cube is publisher-processed RDA.
+    elif representation == "rda_phase_diff":
+        phase_diff = np.angle(radar[1:] * np.conj(radar[:-1]))  # (F-1, D, A, R) real
+        x_time = phase_diff.reshape(-1, phase_diff.shape[0]).astype(np.float32)  # (D*A*R, F-1)
+        meta = {
+            "complex_mapping": "rda_phase_diff",
+            "spatial_cells": int(x_time.shape[0]),
+            "time_length": int(x_time.shape[1]),
+            "note": "inter-frame phase difference (micro-motion); post-RDA re-representation (not raw-ADC RDA)",
+        }
+        return _time_freq_bundle(x_time, "rda_phase_diff", meta)
     else:
         raise ValueError(f"Unsupported representation: {representation}")
     return {"x": x, "meta": {}}
@@ -233,7 +305,34 @@ REPRESENTATION_INPUT_CHANNELS = {
     "raw_logmag": (1, 1),
     "raw_real_imag": (2, 2),
     "edacm_vmd_fixed": (7, 7),
+    # Phase C full-cube complex->real mappings. Channel count = n_real_components
+    # * (D*A*R). For the unified RDA cube (D=8, A=16, R=8) that is 1024 per real
+    # component; two components => 2048. Time axis = frames (length F).
+    "rda_real": (1024, 1024),
+    "rda_imag": (1024, 1024),
+    "rda_magnitude": (1024, 1024),
+    "rda_phase": (1024, 1024),
+    "rda_real_imag": (2048, 2048),
+    "rda_mag_phase": (2048, 2048),
+    # Phase A inter-frame phase difference: real (F-1, D, A, R) -> (D*A*R, F-1).
+    "rda_phase_diff": (1024, 1024),
 }
+
+
+# Phase C: post-RDA complex->real re-representations (see _complex_mapping_bundle).
+# Used to test whether HR information is lost in the complex->feature mapping
+# (EDACM collapses to a single target bin + phase) rather than in the backbone.
+# These are NOT raw-ADC RDA re-derivations; for PhysDrive the input is the
+# publisher-processed RDA cube.
+COMPLEX_MAPPING_CHOICES = (
+    "rda_real",
+    "rda_imag",
+    "rda_magnitude",
+    "rda_phase",
+    "rda_real_imag",
+    "rda_mag_phase",
+    "rda_phase_diff",  # Phase A
+)
 
 
 def representation_input_channels(representation: str) -> "tuple[int, int]":

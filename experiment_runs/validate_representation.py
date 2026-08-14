@@ -55,7 +55,7 @@ def _iter_raw(dataset: str, raw_dir: Path):
         if "radar" not in data:
             continue
         radar = data["radar"]
-        hr = float(np.mean(np.asarray(data["heart_rate"], dtype=np.float32))) if "heart_rate" in data else np.nan
+        hr = float(np.nanmean(np.asarray(data["heart_rate"], dtype=np.float32))) if "heart_rate" in data else np.nan
         yield radar, hr
 
 
