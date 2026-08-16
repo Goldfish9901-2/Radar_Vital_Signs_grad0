@@ -37,6 +37,7 @@ if str(ROOT) not in __import__("sys").path:
     __import__("sys").path.insert(0, str(ROOT))
 
 from src.features.representations import radar_to_feature_bundle  # noqa: E402
+from src.radar import RDAConfig, apply_rda_pipeline  # noqa: E402
 
 DATASETS = ["FTU", "BGT60TR13C", "PhysDrive"]
 HR_BAND_HZ = (0.5, 3.667)  # ~30..220 bpm
@@ -74,7 +75,7 @@ def _iter_export(dataset: str, export_dir: Path):
             yield x_time, x_freq, hr
 
 
-def collect(representation: str, dataset: str, source: str, raw_dir: Path, export_dir: Path, max_windows: int):
+def collect(representation: str, dataset: str, source: str, raw_dir: Path, export_dir: Path, max_windows: int, rda_config=None):
     """Yield (x_time, x_freq, hr) triples for one dataset (capped at max_windows)."""
     if source == "raw":
         gen = _iter_raw(dataset, raw_dir)
@@ -83,6 +84,8 @@ def collect(representation: str, dataset: str, source: str, raw_dir: Path, expor
     for item in itertools.islice(gen, max_windows):
         if source == "raw":
             radar, hr = item
+            if rda_config is not None:
+                radar = apply_rda_pipeline(radar, rda_config)
             rep = radar_to_feature_bundle(radar, representation)
             xt, xf = rep["x_time"], rep["x_freq"]
             if xt is None:
@@ -108,11 +111,11 @@ def _spectrum(x_time: np.ndarray, sr: float) -> Tuple[np.ndarray, np.ndarray]:
 
 
 def check_dataset(representation: str, dataset: str, source: str, raw_dir: Path, export_dir: Path,
-                  max_windows: int, sr: float) -> Dict[str, Any]:
+                  max_windows: int, sr: float, rda_config=None) -> Dict[str, Any]:
     out: Dict[str, Any] = {"dataset": dataset, "n_windows": 0, "dual": True,
                            "checks": [], "shapes": set(), "freq_shapes": set()}
     xt_list, xf_list, hrs = [], [], []
-    for xt, xf, hr in collect(representation, dataset, source, raw_dir, export_dir, max_windows):
+    for xt, xf, hr in collect(representation, dataset, source, raw_dir, export_dir, max_windows, rda_config=rda_config):
         if xt is None:
             out["dual"] = False
             continue
@@ -243,6 +246,9 @@ def render_html(representation: str, results: List[Dict[str, Any]], src: str) ->
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--representation", required=True)
+    ap.add_argument("--rda-config", type=str, default=None,
+                    help="Optional RDA front-end pool config as a JSON string; "
+                         "applied to the raw cube before representation conversion.")
     ap.add_argument("--datasets", nargs="+", default=DATASETS)
     ap.add_argument("--source", choices=["raw", "export"], default="raw",
                     help="raw = run radar_to_feature_bundle on raw RDA exports (exercises the method); "
@@ -256,14 +262,22 @@ def main() -> None:
     ap.add_argument("--out", type=Path, default=None, help="HTML report path")
     args = ap.parse_args()
 
-    out_path = args.out or (ROOT / "experiment_runs" / "benchmark_v3" / f"representation_report_{args.representation}.html")
+    rda_config = None
+    if args.rda_config:
+        import json as _json
+
+        rda_config = RDAConfig.from_dict(_json.loads(args.rda_config))
+        rda_config.validate()
+
+    rep_label = args.representation + (f"|rda={args.rda_config}" if args.rda_config else "")
+    out_path = args.out or (ROOT / "experiment_runs" / "benchmark_v3" / f"representation_report_{rep_label}.html")
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     results = []
     for ds in args.datasets:
-        print(f"[validate] {args.representation} / {ds} (source={args.source}) ...", flush=True)
+        print(f"[validate] {rep_label} / {ds} (source={args.source}) ...", flush=True)
         r = check_dataset(args.representation, ds, args.source, args.raw_dir, args.export_dir,
-                          args.max_windows, args.sample_rate)
+                          args.max_windows, args.sample_rate, rda_config=rda_config)
         results.append(r)
         status = {c[0]: c[1] for c in r["checks"]}
         print(f"  n={r['n_windows']} dual={r.get('dual')} -> "

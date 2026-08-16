@@ -5,9 +5,13 @@
   2. 安装运行依赖（neurokit2 等）
   3. 合成 PhysDrive 兼容小样本数据
   4. 统一导出（export_all_datasets.py --physdrive）
-  5. 构建训练窗口（build_training_dataset.py）
+  5. 构建训练窗口（build_training_dataset.py；可选 RDA 前端池：env RDA_CONFIG_JSON）
   6. 训练 TCN 基线（train_model.py）
   7. 评估（evaluate_model.py）
+
+RDA 前端池（src/radar）：在 5 构建窗口前可选插入可替换 RDA 算法池，用于
+Phase 2 单行 backbone 筛选。设环境变量 RDA_CONFIG_JSON 为一个 RDAConfig 的
+JSON 字符串即可启用；留空则保持当前基线行为。
 
 所有数据获取与处理均在 Kaggle 完成，本地只负责代码准备。
 """
@@ -73,20 +77,26 @@ def main() -> None:
 
     step("5/8 构建训练窗口")
     train_exports_dir = WORK / "training_exports"
-    run(
-        [
-            sys.executable,
-            "-m",
-            "src.data.build_training_dataset",
-            "--exports-dir", str(exports_dir),
-            "--output-dir", str(train_exports_dir),
-            "--target", "heart_rate",
-            "--window-size", "256",
-            "--stride", "128",
-            "--normalize", "window_zscore",
-            "--max-windows-per-sample", "10",
-        ]
-    )
+    build_cmd = [
+        sys.executable,
+        "-m",
+        "src.data.build_training_dataset",
+        "--exports-dir", str(exports_dir),
+        "--output-dir", str(train_exports_dir),
+        "--target", "heart_rate",
+        "--window-size", "256",
+        "--stride", "128",
+        "--normalize", "window_zscore",
+        "--max-windows-per-sample", "10",
+    ]
+    # Phase 2 RDA front-end hook: set RDA_CONFIG_JSON to a JSON string selecting
+    # one method per stage (e.g. '{"clutter":"mti","localization":"hr_band",
+    # "range_selection":"hr_band","beamforming":"mvdr"}'). Empty/unset => baseline.
+    rda_config = os.environ.get("RDA_CONFIG_JSON")
+    if rda_config:
+        build_cmd += ["--rda-config", rda_config]
+        print(f"[rda] using front-end pool config: {rda_config}", flush=True)
+    run(build_cmd)
 
     step("6/8 训练 TCN 基线")
     model_out = WORK / "model_outputs" / "tcn_smoke"

@@ -50,6 +50,7 @@ from src.features.representations import (
     DEFAULT_RDA_REPRESENTATION,
     radar_to_feature_bundle,
 )
+from src.radar import RDAConfig, apply_rda_pipeline
 
 
 DEFAULT_EXPORTS_DIR = ROOT / "exports"
@@ -124,6 +125,18 @@ def parse_args() -> argparse.Namespace:
         "--target",
         default="heart_rate",
         help="Training target. This builder currently supports heart_rate only.",
+    )
+    parser.add_argument(
+        "--rda-config",
+        type=str,
+        default=None,
+        help=(
+            "Optional RDA front-end config as a JSON string selecting one method "
+            "per stage, e.g. '{\"clutter\":\"mti\",\"localization\":\"hr_band\","
+            "\"range_selection\":\"hr_band\",\"beamforming\":\"mvdr\"}'. "
+            "Applies the replaceable RDA pool (src.radar) before the representation "
+            "conversion. Default (None) = current baseline behaviour."
+        ),
     )
     parser.add_argument(
         "--label-reduction",
@@ -867,6 +880,15 @@ def build_training_dataset(args: argparse.Namespace) -> None:
     split_ratios = validate_split_ratios(args.split_ratios)
     required = required_targets(args.target)
 
+    # Optional replaceable RDA front-end pool (src.radar). None => current baseline.
+    rda_config = None
+    if getattr(args, "rda_config", None):
+        import json as _json
+
+        rda_config = RDAConfig.from_dict(_json.loads(args.rda_config))
+        rda_config.validate()
+        print_stage(f"RDA front-end pool enabled: {rda_config.to_dict()}")
+
     if args.window_size <= 0:
         raise ValueError("--window-size must be positive")
     if args.stride <= 0:
@@ -980,6 +1002,8 @@ def build_training_dataset(args: argparse.Namespace) -> None:
                 continue
 
             radar_window = radar[start:end]
+            if rda_config is not None:
+                radar_window = apply_rda_pipeline(radar_window, rda_config)
             feature_bundle = radar_to_feature_bundle(radar_window, args.representation)
             feature_bundle["x"] = normalize_features(feature_bundle["x"], args.normalize)
             if "x_time" in feature_bundle:
@@ -1005,6 +1029,7 @@ def build_training_dataset(args: argparse.Namespace) -> None:
                 "window_size": int(args.window_size),
                 "stride": int(args.stride),
                 "representation": args.representation,
+                "rda_frontend": rda_config.to_dict() if rda_config is not None else None,
                 "normalize": args.normalize,
                 "label_reduction": args.label_reduction,
                 "label_coverage": coverage,
@@ -1061,6 +1086,7 @@ def build_training_dataset(args: argparse.Namespace) -> None:
             "window_size": args.window_size,
             "stride": args.stride,
             "representation": args.representation,
+            "rda_frontend": rda_config.to_dict() if rda_config is not None else None,
             "target": args.target,
             "required_targets": list(required),
             "label_reduction": args.label_reduction,
