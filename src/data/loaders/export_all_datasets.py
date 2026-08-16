@@ -126,6 +126,12 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="每个会话最多导出的样本数(用于跨会话均匀抽样, 避免测试集只来自少数会话)",
     )
+    parser.add_argument(
+        "--session-prefix",
+        type=str,
+        default=None,
+        help="仅导出 session_id 以该前缀开头的 PhysDrive 样本(如 A 表示平坦路段, C 表示颠簸拥挤路段)",
+    )
     return parser.parse_args()
 
 
@@ -376,11 +382,35 @@ def _detect_ecg_rate_candidate(
     )
 
 
+def _detect_ecg_peaks(
+    nk: Any,
+    cleaned_ecg: np.ndarray,
+    sampling_rate: float,
+    method: str,
+) -> np.ndarray:
+    """返回 R 峰索引；失败返回空数组。"""
+    try:
+        _, info = nk.ecg_peaks(
+            cleaned_ecg,
+            sampling_rate=sampling_rate,
+            method=method,
+        )
+        return np.asarray(info.get("ECG_R_Peaks", []), dtype=np.int32)
+    except Exception:  # noqa: BLE001
+        return np.array([], dtype=np.int32)
+
+
 def _neurokit_ecg_rate(
     ecg: np.ndarray,
     sampling_rate: float,
     desired_length: int,
 ) -> np.ndarray:
+    """对 PhysDrive 20Hz ECG 输出段级平均 HR（整段恒定）。
+
+    20Hz ECG 的 QRS 仅 1~2 个采样点，逐帧 R-R 插值会把检测误差放大。PhysDrive
+    官方代码对每段输出 60000/mean(RR) 的标量 HR；这里统一输出段级平均心率，
+    覆盖整段 600 帧，作为该段所有训练窗口的 HR 标签。
+    """
     nk = _require_neurokit2()
     try:
         cleaned = nk.ecg_clean(ecg, sampling_rate=sampling_rate, method="neurokit")
@@ -388,33 +418,82 @@ def _neurokit_ecg_rate(
         return np.full(desired_length, np.nan, dtype=np.float32)
 
     methods = (PHYSDRIVE_ECG_PRIMARY_METHOD, *PHYSDRIVE_ECG_FALLBACK_METHODS)
-    candidates = [
-        (
-            method,
-            _detect_ecg_rate_candidate(
-                nk=nk,
-                cleaned_ecg=cleaned,
-                sampling_rate=sampling_rate,
-                desired_length=desired_length,
-                method=method,
-            ),
+    per_frame_candidates: List[Tuple[str, np.ndarray]] = []
+    peak_candidates: List[Tuple[str, np.ndarray]] = []
+    for method in methods:
+        peaks = _detect_ecg_peaks(nk=nk, cleaned_ecg=cleaned, sampling_rate=sampling_rate, method=method)
+        peak_candidates.append((method, peaks))
+        per_frame_candidates.append(
+            (
+                method,
+                _rate_from_peak_intervals(
+                    peaks=peaks,
+                    sampling_rate=sampling_rate,
+                    desired_length=desired_length,
+                    min_bpm=PHYSDRIVE_ECG_RELIABLE_BPM[0],
+                    max_bpm=PHYSDRIVE_ECG_RELIABLE_BPM[1],
+                    max_interpolation_gap_seconds=PHYSDRIVE_ECG_MAX_INTERPOLATION_GAP_SECONDS,
+                ),
+            )
         )
-        for method in methods
-    ]
 
-    primary_rate = candidates[0][1]
+    # 主方法优先：若覆盖率和段级 HR 都有效，直接用其段级均值
+    primary_method, primary_peaks = peak_candidates[0]
+    primary_rate = per_frame_candidates[0][1]
     primary_has_values = np.isfinite(primary_rate).any()
     primary_median = np.nanmedian(primary_rate) if primary_has_values else np.nan
     if (
         _finite_coverage(primary_rate) >= PHYSDRIVE_ECG_MIN_COVERAGE
         and np.isfinite(primary_median)
     ):
+        segment_hr = _segment_hr_from_peaks(
+            primary_peaks,
+            sampling_rate=sampling_rate,
+            min_bpm=PHYSDRIVE_ECG_RELIABLE_BPM[0],
+            max_bpm=PHYSDRIVE_ECG_RELIABLE_BPM[1],
+        )
+        if segment_hr is not None:
+            return np.full(desired_length, segment_hr, dtype=np.float32)
         return primary_rate
 
-    return max(
-        (rate for _, rate in candidates),
-        key=lambda rate: _finite_coverage(rate),
+    # fallback：选覆盖率最高的方法，再取其段级均值
+    best_method, best_rate = max(per_frame_candidates, key=lambda x: _finite_coverage(x[1]))
+    best_peaks = next(peaks for m, peaks in peak_candidates if m == best_method)
+    segment_hr = _segment_hr_from_peaks(
+        best_peaks,
+        sampling_rate=sampling_rate,
+        min_bpm=PHYSDRIVE_ECG_RELIABLE_BPM[0],
+        max_bpm=PHYSDRIVE_ECG_RELIABLE_BPM[1],
     )
+    if segment_hr is not None:
+        return np.full(desired_length, segment_hr, dtype=np.float32)
+    return best_rate
+
+
+def _segment_hr_from_peaks(
+    peaks: np.ndarray,
+    sampling_rate: float,
+    min_bpm: float,
+    max_bpm: float,
+) -> Optional[float]:
+    """由整段 R-R 间隔计算段级平均心率（与 PhysDrive 官方口径一致）。
+
+    官方 PhysDrive 代码对每段输出单一标量：60000 / mean(RR_ms)。这里等价使用
+    60 / mean(RR_s)。对异常 R-R 用 min/max bpm 做质量控制。
+    """
+    peaks = np.asarray(peaks, dtype=np.int32).reshape(-1)
+    if peaks.size < 2:
+        return None
+    rr_samples = np.diff(peaks).astype(np.float32)
+    rr_s = rr_samples / float(sampling_rate)
+    rr_s = rr_s[rr_s > 0.0]
+    if rr_s.size == 0:
+        return None
+    bpm = 60.0 / rr_s
+    valid = (bpm >= min_bpm) & (bpm <= max_bpm)
+    if valid.sum() == 0:
+        return None
+    return float(np.mean(bpm[valid]))
 
 
 def _neurokit_rsp_rate(
@@ -929,9 +1008,15 @@ def export_bgt60(
     return success, failure
 
 
-def iter_phys_samples(loader: PhysDriveDataLoader, max_per_session: Optional[int] = None) -> List[Dict[str, Any]]:
+def iter_phys_samples(
+    loader: PhysDriveDataLoader,
+    max_per_session: Optional[int] = None,
+    session_prefix: Optional[str] = None,
+) -> List[Dict[str, Any]]:
     rows: List[Dict[str, Any]] = []
     for session_id in loader.list_sessions():
+        if session_prefix is not None and not session_id.startswith(session_prefix):
+            continue
         sample_ids = loader.list_samples(session_id)
         if max_per_session is not None and max_per_session >= 0 and len(sample_ids) > max_per_session:
             sample_ids = sample_ids[:max_per_session]
@@ -946,6 +1031,7 @@ def export_physdrive(
     compress: bool,
     max_samples: Optional[int] = None,
     max_per_session: Optional[int] = None,
+    session_prefix: Optional[str] = None,
 ) -> Tuple[int, int]:
     started_at = time.monotonic()
     print_stage("PhysDrive", "Stage 1/4: initialize loader")
@@ -954,7 +1040,7 @@ def export_physdrive(
     manifest_rows: List[Dict[str, Any]] = []
 
     print_stage("PhysDrive", "Stage 2/4: discover samples")
-    samples = iter_phys_samples(loader, max_per_session=max_per_session)
+    samples = iter_phys_samples(loader, max_per_session=max_per_session, session_prefix=session_prefix)
     if max_samples is not None and max_samples >= 0 and len(samples) > max_samples:
         print(f"[PhysDrive] capping {len(samples)} -> {max_samples} samples", flush=True)
         samples = samples[:max_samples]
@@ -1104,6 +1190,7 @@ def main() -> None:
                 compress=COMPRESS_OUTPUT,
                 max_samples=args.max_samples,
                 max_per_session=args.max_samples_per_session,
+                session_prefix=args.session_prefix,
             )
         elif dataset_name == "FTU":
             ok, fail = export_ftu(
