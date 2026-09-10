@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import re
+import subprocess
 import time
 from dataclasses import asdict
 from pathlib import Path
@@ -77,6 +79,65 @@ def parse_args() -> argparse.Namespace:
 def seed_everything(seed: int) -> None:
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+
+
+def get_git_commit(repo_root: Path) -> str:
+    """Return the current git commit hash of the canonical upstream repo.
+
+    The run copy under /app/work/run/upstream is a `cp -r` of /app/work/upstream,
+    so both may carry a .git. We try the run root first, then fall back to the
+    canonical upstream path so provenance always reflects the true source version.
+    Git may refuse to run as root on a repo owned by another user ("dubious
+    ownership"); we pass `-c safe.directory=*` and also parse .git/HEAD directly.
+    """
+    for root in (repo_root, Path("/app/work/upstream")):
+        try:
+            out = subprocess.run(
+                ["git", "-c", "safe.directory=*", "rev-parse", "HEAD"],
+                cwd=str(root),
+                capture_output=True,
+                text=True,
+                timeout=10,
+            )
+            if out.returncode == 0 and out.stdout.strip():
+                return out.stdout.strip()
+        except Exception:
+            pass
+        try:
+            head = (root / ".git" / "HEAD").read_text(encoding="utf-8").strip()
+            if head.startswith("ref:"):
+                ref = head[4:].strip()
+                packed = root / ".git" / "packed-refs"
+                if packed.exists():
+                    for line in packed.read_text(encoding="utf-8").splitlines():
+                        if line.startswith("#"):
+                            continue
+                        parts = line.split()
+                        if len(parts) == 2 and parts[1] == ref:
+                            return parts[0]
+                refp = root / ".git" / Path(*ref.split("/"))
+                if refp.exists():
+                    return refp.read_text(encoding="utf-8").strip()
+            elif head:
+                return head
+        except Exception:
+            pass
+    return "unknown"
+
+
+def sha256_of(path: Path) -> str:
+    try:
+        return hashlib.sha256(Path(path).read_bytes()).hexdigest()[:16]
+    except Exception:
+        return "unknown"
+
+
+def read_representation(export_dir: Path) -> str:
+    try:
+        cfg = json.loads(Path(export_dir, "build_config.json").read_text(encoding="utf-8"))
+        return cfg.get("representation", "unknown")
+    except Exception:
+        return "unknown"
 
 
 def mae_bpm(pred_norm: torch.Tensor, y_norm: torch.Tensor, stats: LabelStats) -> torch.Tensor:
@@ -256,6 +317,14 @@ def main() -> None:
         "device": str(device),
         "torch_version": torch.__version__,
         "args": vars(args) | {"export_dir": str(args.export_dir), "output_dir": str(args.output_dir)},
+    }
+    metadata["provenance"] = {
+        "git_commit": get_git_commit(ROOT),
+        "representation": read_representation(args.export_dir),
+        "dataset_dir": str(args.export_dir),
+        "dataset_manifest_sha256": sha256_of(args.export_dir / "manifest.csv"),
+        "seed": args.seed,
+        "model": args.model,
     }
     (args.output_dir / "run_config.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
     print(json.dumps(metadata, indent=2), flush=True)

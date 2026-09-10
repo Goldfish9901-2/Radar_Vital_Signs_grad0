@@ -11,6 +11,7 @@ from pathlib import Path
 import sys
 from typing import Any, Dict, Iterable
 
+import numpy as np
 import torch
 from torch import nn
 from torch.utils.data import DataLoader
@@ -158,9 +159,23 @@ def aggregate(rows: Iterable[Dict[str, Any]], key: str | None = None) -> Dict[st
         errors = [row["abs_error_bpm"] for row in values]
         labels = [row["label_bpm"] for row in values]
         preds = [row["pred_bpm"] for row in values]
+        if errors:
+            mae_bpm = float(sum(errors) / len(errors))
+            rmse_bpm = float(math.sqrt(sum(e * e for e in errors) / len(errors)))
+        else:
+            mae_bpm = math.nan
+            rmse_bpm = math.nan
+        pearson = math.nan
+        if len(labels) >= 2:
+            arr_l = np.asarray(labels, dtype=np.float64)
+            arr_p = np.asarray(preds, dtype=np.float64)
+            if np.std(arr_l) > 1e-9 and np.std(arr_p) > 1e-9:
+                pearson = float(np.corrcoef(arr_l, arr_p)[0, 1])
         metrics[name] = {
             "count": len(values),
-            "mae_bpm": float(sum(errors) / len(errors)) if errors else math.nan,
+            "mae_bpm": mae_bpm,
+            "rmse_bpm": rmse_bpm,
+            "pearson_r": pearson,
             "within_3bpm_percent": (
                 float(100.0 * sum(error <= 3.0 for error in errors) / len(errors))
                 if errors
@@ -233,6 +248,7 @@ def main() -> None:
     result = {
         "model": model_name,
         "checkpoint": str(checkpoint_path),
+        "provenance": run_config.get("provenance"),
         "source_label_stats": asdict(label_stats),
         "target": {
             "export_dir": str(args.export_dir),

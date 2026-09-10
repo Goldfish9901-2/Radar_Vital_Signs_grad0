@@ -962,31 +962,32 @@ def vmd_decompose(
     if not np.isfinite(x).any():
         return np.zeros((k, n), dtype=np.float32)
 
-    freqs = np.fft.fftfreq(n).astype(np.float32)
-    spectrum = np.fft.fft(x).astype(np.complex64)
+    freqs = np.fft.fftfreq(n).astype(np.float64)
+    # 归一化频谱 (除以 n), 避免 FFT 幅值随 n 增长导致数值溢出
+    spectrum = (np.fft.fft(x) / n).astype(np.complex128)
     positive = freqs >= 0
 
-    u_hat = np.zeros((k, n), dtype=np.complex64)
+    u_hat = np.zeros((k, n), dtype=np.complex128)
     if init_omega is None:
-        omega = np.linspace(0.0, 0.5, k + 2, dtype=np.float32)[1:-1]
+        omega = np.linspace(0.0, 0.5, k + 2, dtype=np.float64)[1:-1]
     else:
-        omega = np.asarray(init_omega, dtype=np.float32).reshape(-1)
+        omega = np.asarray(init_omega, dtype=np.float64).reshape(-1)
         if omega.size != k:
             raise ValueError(f"init_omega must contain {k} value(s)")
-        omega = np.clip(omega, 0.0, 0.5).astype(np.float32)
-    lambda_hat = np.zeros(n, dtype=np.complex64)
-    tau = 0.0
+        omega = np.clip(omega, 0.0, 0.5).astype(np.float64)
+    lambda_hat = np.zeros(n, dtype=np.complex128)
+    tau = 1e-3  # 对偶上升步长 (原为 0, 导致约束永不生效)
 
     for _ in range(max_iter):
         previous = u_hat.copy()
-        sum_modes = np.sum(u_hat, axis=0)
         for mode_idx in range(k):
-            residual = spectrum - (sum_modes - u_hat[mode_idx]) - lambda_hat / 2.0
+            # 注意: others 需即时计算 (mode 间竞争), 不能用循环外的旧 sum
+            others = np.sum(u_hat, axis=0) - u_hat[mode_idx]
+            residual = spectrum - others - lambda_hat / 2.0
             denom = 1.0 + alpha * (freqs - omega[mode_idx]) ** 2
             update = residual / denom
             update = np.nan_to_num(update, nan=0.0, posinf=0.0, neginf=0.0)
-            update = np.clip(update.real, -1e6, 1e6) + 1j * np.clip(update.imag, -1e6, 1e6)
-            u_hat[mode_idx] = update.astype(np.complex64)
+            u_hat[mode_idx] = update
             power = np.abs(u_hat[mode_idx, positive]) ** 2
             power_sum = float(np.sum(power))
             if np.isfinite(power_sum) and power_sum > 1e-12:
@@ -1001,7 +1002,7 @@ def vmd_decompose(
         if diff < tol:
             break
 
-    modes = np.real(np.fft.ifft(u_hat, axis=1)).astype(np.float32)
+    modes = np.real(np.fft.ifft(u_hat, axis=1) * n).astype(np.float64)
     modes[~np.isfinite(modes)] = 0.0
     return np.stack([zscore_1d(mode) for mode in modes], axis=0).astype(np.float32)
 

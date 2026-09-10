@@ -267,6 +267,7 @@ docker_assets/
 /Radar_Heartbeats_8_27/
 /Radar_Heartbeats_8_27 (1)/
 /training_exports/
+/training_exports_ablation/
 .codex
 model_outputs/
 docs/TODO.md
