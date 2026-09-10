@@ -1,155 +1,90 @@
 # Model Training and Evaluation
 
-This folder contains the model training and evaluation entry points:
+This folder contains the training and evaluation entry points for the current CycleFormer-based radar HR task.
 
-- `train_model.py`: train HeartTimeMixer, TCN, or Transformer.
-- `evaluate_model.py`: evaluate a trained checkpoint on any exported dataset split, including cross-dataset testing.
-- `adapt_source_free.py`: adapt a source model to an unlabeled target domain with Source-Free + WPL + temporal correction.
+- `train_model.py`: train CycleFormer, TCN, Transformer, PatchTST, TimesNet, or the retained HeartTimeMixer.
+- `evaluate_model.py`: evaluate a trained checkpoint on any exported dataset split.
+- `evaluate_signal_baselines.py`: evaluate FFT/STFT baselines without training.
+- `adapt_source_free.py`: run pseudo-label adaptation on unlabeled target-domain windows.
 - `datasets.py`: read samples generated under `training_exports`.
 
-Run commands inside the `radar_dev` container from `/Radar_Vital_Signs`.
-
-## HeartTimeMixer
-
-FTU training:
+## Main Model: CycleFormer
 
 ```bash
-python3 /Radar_Vital_Signs/src/training/train_model.py \
-  --model heart_timemixer \
+python3 src/training/train_model.py \
+  --model cycleformer \
   --datasets FTU \
-  --export-dir /Radar_Vital_Signs/training_exports \
-  --output-dir /Radar_Vital_Signs/model_outputs/htm_ftu_test \
+  --export-dir training_exports \
+  --output-dir model_outputs/cycleformer_ftu_source \
   --epochs 80 \
   --batch-size 32 \
-  --d-model 32 \
-  --d-ff 64 \
-  --e-layers 1 \
-  --dropout 0.15 \
-  --down-sampling-layers 3
-```
-
-All exported datasets:
-
-```bash
-python3 /Radar_Vital_Signs/src/training/train_model.py \
-  --model heart_timemixer \
-  --export-dir /Radar_Vital_Signs/training_exports \
-  --output-dir /Radar_Vital_Signs/model_outputs/heart_timemixer_all \
-  --epochs 80 \
-  --batch-size 64 \
-  --d-model 32 \
-  --d-ff 64 \
-  --e-layers 1 \
-  --dropout 0.2 \
-  --down-sampling-layers 3
-```
-
-## TCN
-
-Recommended FTU baseline:
-
-```bash
-python3 /Radar_Vital_Signs/src/training/train_model.py \
-  --model tcn \
-  --datasets FTU \
-  --export-dir /Radar_Vital_Signs/training_exports \
-  --output-dir /Radar_Vital_Signs/model_outputs/tcn_ftu_test \
-  --epochs 80 \
-  --batch-size 32 \
-  --hidden-channels 32 \
-  --num-blocks 3 \
-  --kernel-size 7 \
-  --dropout 0.2
-```
-
-Larger TCN:
-
-```bash
-python3 /Radar_Vital_Signs/src/training/train_model.py \
-  --model tcn \
-  --datasets FTU \
-  --export-dir /Radar_Vital_Signs/training_exports \
-  --output-dir /Radar_Vital_Signs/model_outputs/tcn_ftu_balanced \
-  --epochs 80 \
-  --batch-size 32 \
-  --hidden-channels 48 \
-  --num-blocks 4 \
-  --kernel-size 7 \
-  --dropout 0.2
-```
-
-Time-domain only TCN:
-
-```bash
-python3 /Radar_Vital_Signs/src/training/train_model.py \
-  --model tcn \
-  --datasets FTU \
-  --export-dir /Radar_Vital_Signs/training_exports \
-  --output-dir /Radar_Vital_Signs/model_outputs/tcn_ftu_balanced_time_only \
-  --epochs 80 \
-  --batch-size 32 \
-  --hidden-channels 48 \
-  --num-blocks 4 \
-  --kernel-size 7 \
-  --dropout 0.2 \
-  --time-only
-```
-
-## Transformer
-
-FTU training:
-
-```bash
-python3 /Radar_Vital_Signs/src/training/train_model.py \
-  --model transformer \
-  --datasets FTU \
-  --export-dir /Radar_Vital_Signs/training_exports \
-  --output-dir /Radar_Vital_Signs/model_outputs/transformer_ftu_balanced \
-  --epochs 80 \
-  --batch-size 32 \
-  --d-model 48 \
+  --d-model 64 \
   --d-ff 128 \
   --num-layers 2 \
-  --nhead 4 \
-  --dropout 0.2
+  --nhead 4
 ```
 
-## Evaluation
-
-Evaluate the checkpoint on its own test split:
+## Representative Deep Baselines
 
 ```bash
-python3 /Radar_Vital_Signs/src/training/evaluate_model.py \
-  --model-dir /Radar_Vital_Signs/model_outputs/tcn_ftu_test \
-  --export-dir /Radar_Vital_Signs/training_exports \
-  --target-datasets FTU \
+python3 src/training/train_model.py \
+  --model tcn \
+  --datasets FTU \
+  --export-dir training_exports \
+  --output-dir model_outputs/tcn_ftu_source \
+  --epochs 80 \
+  --batch-size 32
+```
+
+Use the same template with:
+
+```text
+transformer
+patchtst
+timesnet
+```
+
+## FFT/STFT Baselines
+
+```bash
+python3 src/training/evaluate_signal_baselines.py \
+  --method fft \
+  --export-dir training_exports \
+  --target-datasets PhysDrive \
   --split test \
-  --batch-size 128
+  --output-json model_outputs/signal_baselines/fft_physdrive_test.json
 ```
 
-Cross-dataset evaluation, for example FTU-trained TCN tested on PhysDrive:
+```bash
+python3 src/training/evaluate_signal_baselines.py \
+  --method stft \
+  --export-dir training_exports \
+  --target-datasets PhysDrive \
+  --split test \
+  --output-json model_outputs/signal_baselines/stft_physdrive_test.json
+```
+
+## Source Only Evaluation
 
 ```bash
-python3 /Radar_Vital_Signs/src/training/evaluate_model.py \
-  --model-dir /Radar_Vital_Signs/model_outputs/tcn_ftu_test \
-  --export-dir /Radar_Vital_Signs/training_exports \
+python3 src/training/evaluate_model.py \
+  --model-dir model_outputs/cycleformer_ftu_source \
+  --export-dir training_exports \
   --target-datasets PhysDrive \
   --split test \
   --batch-size 128
 ```
 
-## Source-Free Domain Adaptation
-
-Adapt an FTU-trained TCN to unlabeled PhysDrive train windows, then evaluate on PhysDrive test:
+## Pseudo-label Adaptation
 
 ```bash
-python3 /Radar_Vital_Signs/src/training/adapt_source_free.py \
-  --source-model-dir /Radar_Vital_Signs/model_outputs/tcn_ftu_test \
-  --export-dir /Radar_Vital_Signs/training_exports \
+python3 src/training/adapt_source_free.py \
+  --source-model-dir model_outputs/cycleformer_ftu_source \
+  --export-dir training_exports \
   --target-datasets PhysDrive \
   --adapt-split train \
   --eval-split test \
-  --output-dir /Radar_Vital_Signs/model_outputs/tcn_ftu_to_physdrive_sf_wpl_tc \
+  --output-dir model_outputs/cycleformer_ftu_to_physdrive_pseudo \
   --epochs 20 \
   --batch-size 64 \
   --lr 0.0001 \
@@ -159,34 +94,18 @@ python3 /Radar_Vital_Signs/src/training/adapt_source_free.py \
 The adapted checkpoint is saved as:
 
 ```text
-/Radar_Vital_Signs/model_outputs/tcn_ftu_to_physdrive_sf_wpl_tc/best.pt
+model_outputs/cycleformer_ftu_to_physdrive_pseudo/best.pt
 ```
 
-Cross-dataset evaluation, for example FTU-trained TCN tested on BGT60TR13C:
-
-```bash
-python3 /Radar_Vital_Signs/src/training/evaluate_model.py \
-  --model-dir /Radar_Vital_Signs/model_outputs/htm_ftu_test \
-  --export-dir /Radar_Vital_Signs/training_exports \
-  --target-datasets BGT60TR13C \
-  --split test \
-  --batch-size 128
-```
+## Metrics
 
 Evaluation output includes:
 
-- `overall`: global loss, MAE, and tolerance hit rates.
+- `overall`: global MAE, RMSE, Pearson `r`, and tolerance hit rates.
 - `by_dataset`: metrics by dataset.
 - `by_participant`: metrics by participant/session id.
 - `by_group`: metrics by manifest group key.
-- `within_3bpm_percent`: percentage of predictions with absolute error <= 3 BPM.
-- `within_5bpm_percent`: percentage of predictions with absolute error <= 5 BPM.
-
-The JSON is saved automatically under the model output directory, for example:
-
-```text
-/Radar_Vital_Signs/model_outputs/tcn_ftu_balanced_small/eval_test_PhysDrive.json
-```
+- `within_5bpm_percent` and `within_10bpm_percent`: practical tolerance rates.
 
 ## Useful Options
 

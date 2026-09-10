@@ -29,6 +29,28 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from src.features.edacm import (
+    DEFAULT_EDACM_CANDIDATE_MULTIPLIER,
+    DEFAULT_EDACM_TOP_BINS,
+    DEFAULT_HR_BAND_HZ,
+    DEFAULT_RDA_STABILITY_SEGMENTS,
+)
+from src.features.hr_adavmd import (
+    DEFAULT_RESP_BAND_HZ,
+    DEFAULT_SAMPLING_RATE_HZ,
+    DEFAULT_VMD_ALPHA,
+    DEFAULT_VMD_K,
+    DEFAULT_VMD_MAX_ITER,
+    DEFAULT_VMD_TOL,
+)
+from src.features.representations import (
+    DOMAIN_ADAPTATION_METHOD,
+    INNOVATION_MODULES,
+    METHOD_PIPELINE,
+    DEFAULT_RDA_REPRESENTATION,
+    radar_to_feature_bundle,
+)
+
 
 DEFAULT_EXPORTS_DIR = ROOT / "exports"
 DEFAULT_OUTPUT_DIR = ROOT / "training_exports"
@@ -38,36 +60,11 @@ DEFAULT_STRIDE = 128
 DEFAULT_MIN_LABEL_COVERAGE = 0.8
 DEFAULT_SPLIT_RATIOS = (0.7, 0.15, 0.15)
 DEFAULT_BGT_LONG_SPLIT = "test"
-DEFAULT_REPRESENTATION = "target_edacm_hr_adavmd"
-DEFAULT_EDACM_TOP_BINS = 3
-DEFAULT_EDACM_CANDIDATE_MULTIPLIER = 8
-DEFAULT_HR_BAND_HZ = (0.75, 2.5)
-DEFAULT_RDA_STABILITY_SEGMENTS = 4
-DEFAULT_VMD_K = 7
-DEFAULT_VMD_ALPHA = 2000.0
-DEFAULT_VMD_MAX_ITER = 120
-DEFAULT_VMD_TOL = 1e-5
-DEFAULT_SAMPLING_RATE_HZ = 20.0
-DEFAULT_HR_BAND_HZ = (0.75, 2.5)
-DEFAULT_RESP_BAND_HZ = (0.1, 0.6)
-DEFAULT_RDA_REPRESENTATION = "log_magnitude"
+DEFAULT_REPRESENTATION = "proposed"
 DEFAULT_SPLIT_MODE = "balanced_grouped"
 BALANCED_EXHAUSTIVE_MAX_GROUPS = 14
 FTU_SPECIAL_PARTICIPANTS = ("2", "5", "6")
 FTU_ELEVATED_HR_PARTICIPANTS = ("2", "3", "4", "6")
-METHOD_PIPELINE = (
-    "radar_rda_features",
-    "edacm_phase_representation",
-    "hr_adavmd_decomposition",
-    "time_frequency_feature_construction",
-    "source_free_wpl_temporal_domain_adaptation",
-    "heart_rate_regression",
-)
-INNOVATION_MODULES = (
-    "HR-AdaVMD radar micro-motion representation",
-    "Source-Free WPL temporal domain adaptation for cross-dataset heart-rate estimation",
-)
-DOMAIN_ADAPTATION_METHOD = "Source-Free + WPL + temporal correction"
 DEFAULT_PARTICIPANT_SPLITS = {
     "FTU": {
         "train": ("2", "3", "4", "5", "7", "9"),
@@ -100,7 +97,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--representation",
         choices=[
-            "target_edacm_hr_adavmd",
+            "proposed",
             "target_edacm_vmd",
             "target_edacm",
             "log_magnitude",
@@ -732,6 +729,8 @@ def collect_exported_samples(exports_dir: Path, datasets: Sequence[str]) -> List
     return samples
 
 
+# Feature extraction is implemented in src.features.* so this builder stays focused on
+# window slicing, label alignment, split assignment, and artifact writing.
 def detrend_linear(x: np.ndarray) -> np.ndarray:
     y = np.asarray(x, dtype=np.float32).reshape(-1)
     if y.size <= 1:

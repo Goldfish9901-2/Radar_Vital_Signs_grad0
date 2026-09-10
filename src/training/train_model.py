@@ -1,4 +1,4 @@
-"""Training loop for heart-rate regression models."""
+"""Training loop for radar heart-rate regression models."""
 
 from __future__ import annotations
 
@@ -6,7 +6,6 @@ import argparse
 import hashlib
 import json
 import math
-import re
 import subprocess
 import time
 from dataclasses import asdict
@@ -22,28 +21,27 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from src.models import (
-    HeartTimeMixer,
-    HeartTimeMixerConfig,
-    TCNConfig,
-    TCNHeartRateModel,
-    TransformerConfig,
-    TransformerHeartRateModel,
+from src.models.factory import (
+    MODEL_CHOICES,
+    ModelConfig,
+    config_to_dict,
+    count_parameters,
+    create_model_and_config,
 )
-from src.models.heart_timemixer import count_parameters
+from src.training.common.metrics import aggregate, append_prediction_rows, mae_bpm, rmse_bpm, tolerance_metrics
 from src.training.datasets import LabelStats, build_datasets
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Train HeartTimeMixer on training_exports.")
+    parser = argparse.ArgumentParser(description="Train radar HR regression models on training_exports.")
     parser.add_argument(
         "--model",
-        choices=["heart_timemixer", "tcn", "transformer"],
-        default="heart_timemixer",
+        choices=MODEL_CHOICES,
+        default="cycleformer",
         help="Model architecture to train.",
     )
     parser.add_argument("--export-dir", type=Path, default=Path("training_exports"))
-    parser.add_argument("--output-dir", type=Path, default=Path("model_outputs/heart_timemixer"))
+    parser.add_argument("--output-dir", type=Path, default=Path("model_outputs/cycleformer"))
     parser.add_argument(
         "--datasets",
         nargs="+",
@@ -66,6 +64,66 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--kernel-size", type=int, default=7, help="TCN convolution kernel size.")
     parser.add_argument("--nhead", type=int, default=4, help="Transformer attention heads.")
     parser.add_argument("--num-layers", type=int, default=2, help="Transformer encoder layers.")
+    parser.add_argument("--patch-len", type=int, default=16, help="PatchTST patch length.")
+    parser.add_argument("--patch-stride", type=int, default=8, help="PatchTST patch stride.")
+    # TSLANet-specific hyperparameters (kept separate from shared args so other
+    # backbones are unaffected). None of these enable the frequency branch (R8
+    # is deferred); use_frequency_domain stays False for tslanet.
+    parser.add_argument("--emb-dim", type=int, default=64, help="TSLANet embedding dimension.")
+    parser.add_argument("--tslanet-depth", type=int, default=3, help="TSLANet encoder depth.")
+    parser.add_argument("--tslanet-patch-len", type=int, default=16, help="TSLANet patch length.")
+    parser.add_argument("--tslanet-patch-stride", type=int, default=8, help="TSLANet patch stride.")
+    parser.add_argument(
+        "--tslanet-dropout",
+        type=float,
+        default=0.5,
+        help="TSLANet dropout (official default, higher than the shared --dropout).",
+    )
+    parser.add_argument(
+        "--use-asb",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Enable TSLANet adaptive spectral block.",
+    )
+    parser.add_argument(
+        "--use-icb",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Enable TSLANet interactive convolution block.",
+    )
+    parser.add_argument(
+        "--adaptive-filter",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Enable TSLANet adaptive high-frequency mask.",
+    )
+    parser.add_argument(
+        "--normalize",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Apply RevIN-style input normalization in TSLANet.",
+    )
+    parser.add_argument(
+        "--channel-mode",
+        choices=["joint", "official"],
+        default="joint",
+        help="TSLANet channel handling: 'joint' mixes channels in the patch "
+        "projection; 'official' is channel-independent (F1 experimental factor).",
+    )
+    parser.add_argument(
+        "--heart-periods",
+        type=int,
+        nargs="+",
+        default=None,
+        help="CycleFormer heart-period candidates in samples.",
+    )
+    parser.add_argument(
+        "--respiration-periods",
+        type=int,
+        nargs="+",
+        default=None,
+        help="CycleFormer respiration-period candidates in samples.",
+    )
     parser.add_argument("--dropout", type=float, default=0.15)
     parser.add_argument("--decomp-method", choices=["moving_avg", "dft"], default="moving_avg")
     parser.add_argument("--top-k", type=int, default=5)
@@ -205,6 +263,7 @@ def run_epoch(
     model.train(training)
     total_loss = 0.0
     total_mae = 0.0
+    total_rmse = 0.0
     seen = 0
     detail_rows: list[Dict[str, float | str]] = []
 
@@ -227,44 +286,29 @@ def run_epoch(
         batch_size = int(y.numel())
         total_loss += float(loss.detach()) * batch_size
         total_mae += float(mae_bpm(pred.detach(), y.detach(), stats)) * batch_size
+        total_rmse += float(rmse_bpm(pred.detach(), y.detach(), stats)) * batch_size
         seen += batch_size
         if collect_participant_metrics:
-            pred_bpm = stats.denormalize(pred.detach().cpu())
-            y_bpm = batch["y_bpm"].detach().cpu()
-            for idx in range(batch_size):
-                dataset = batch["dataset"][idx]
-                group_key = batch["group_key"][idx]
-                sample_tag = batch["sample_tag"][idx]
-                label = float(y_bpm[idx])
-                prediction = float(pred_bpm[idx])
-                detail_rows.append(
-                    {
-                        "dataset": dataset,
-                        "group_key": group_key,
-                        "participant_id": participant_id(dataset, group_key, sample_tag),
-                        "label_bpm": label,
-                        "pred_bpm": prediction,
-                        "abs_error_bpm": abs(prediction - label),
-                    }
-                )
+            append_prediction_rows(detail_rows, batch, pred, stats)
 
     if seen == 0:
-        return {"loss": math.nan, "mae_bpm": math.nan}
+        return {"loss": math.nan, "mae_bpm": math.nan, "rmse_bpm": math.nan}
     metrics: Dict[str, float | Dict[str, Dict[str, float | int]]] = {
         "loss": total_loss / seen,
         "mae_bpm": total_mae / seen,
+        "rmse_bpm": total_rmse / seen,
     }
     if collect_participant_metrics:
         metrics.update(tolerance_metrics(detail_rows))
-        metrics["by_participant"] = aggregate_errors(detail_rows, "participant_id")
-        metrics["by_group"] = aggregate_errors(detail_rows, "group_key")
+        metrics["by_participant"] = aggregate(detail_rows, "participant_id")
+        metrics["by_group"] = aggregate(detail_rows, "group_key")
     return metrics
 
 
 def save_checkpoint(
     path: Path,
     model: nn.Module,
-    cfg: HeartTimeMixerConfig | TCNConfig | TransformerConfig,
+    cfg: ModelConfig,
     stats: LabelStats,
     metrics: Dict[str, Any],
     epoch: int,
@@ -273,7 +317,7 @@ def save_checkpoint(
     torch.save(
         {
             "model_state": model.state_dict(),
-            "config": asdict(cfg),
+            "config": config_to_dict(cfg),
             "label_stats": asdict(stats),
             "metrics": metrics,
             "epoch": epoch,
@@ -306,7 +350,7 @@ def main() -> None:
     criterion = nn.SmoothL1Loss(beta=0.5)
 
     metadata = {
-        "config": asdict(cfg),
+        "config": config_to_dict(cfg),
         "model": args.model,
         "label_stats": asdict(stats),
         "train_size": len(train_ds),
@@ -342,8 +386,8 @@ def main() -> None:
         row = {"epoch": epoch, "train": train_metrics, "val": val_metrics, "lr": optimizer.param_groups[0]["lr"]}
         history.append(row)
         print(
-            f"epoch {epoch:03d} | train MAE {train_metrics['mae_bpm']:.3f} BPM "
-            f"| val MAE {val_metrics['mae_bpm']:.3f} BPM | lr {row['lr']:.2e}",
+            f"epoch {epoch:03d} | train MAE {train_metrics['mae_bpm']:.3f} RMSE {train_metrics['rmse_bpm']:.3f} BPM "
+            f"| val MAE {val_metrics['mae_bpm']:.3f} RMSE {val_metrics['rmse_bpm']:.3f} BPM | lr {row['lr']:.2e}",
             flush=True,
         )
 
@@ -373,43 +417,12 @@ def main() -> None:
     save_checkpoint(args.output_dir / "final.pt", model, cfg, stats, test_metrics, int(checkpoint["epoch"]))
     summary = {"best_val_mae_bpm": best_val, "test": test_metrics, "elapsed_sec": time.time() - start}
     (args.output_dir / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    # Per the experiment results-spec, also emit a standalone eval artifact.
+    (args.output_dir / "eval_test.json").write_text(
+        json.dumps(test_metrics, indent=2), encoding="utf-8"
+    )
     print(json.dumps(summary, indent=2), flush=True)
 
-
-def create_model_and_config(args: argparse.Namespace) -> tuple[nn.Module, HeartTimeMixerConfig | TCNConfig | TransformerConfig]:
-    if args.model == "heart_timemixer":
-        cfg = HeartTimeMixerConfig(
-            d_model=args.d_model,
-            d_ff=args.d_ff,
-            e_layers=args.e_layers,
-            dropout=args.dropout,
-            decomp_method=args.decomp_method,
-            top_k=args.top_k,
-            moving_avg=args.moving_avg,
-            down_sampling_layers=args.down_sampling_layers,
-            use_frequency_domain=not args.time_only,
-        )
-        return HeartTimeMixer(cfg), cfg
-    if args.model == "tcn":
-        cfg = TCNConfig(
-            hidden_channels=args.hidden_channels,
-            num_blocks=args.num_blocks,
-            kernel_size=args.kernel_size,
-            dropout=args.dropout,
-            use_frequency_domain=not args.time_only,
-        )
-        return TCNHeartRateModel(cfg), cfg
-    if args.model == "transformer":
-        cfg = TransformerConfig(
-            d_model=args.d_model,
-            nhead=args.nhead,
-            num_layers=args.num_layers,
-            dim_feedforward=args.d_ff,
-            dropout=args.dropout,
-            use_frequency_domain=not args.time_only,
-        )
-        return TransformerHeartRateModel(cfg), cfg
-    raise ValueError(f"Unsupported model: {args.model}")
 
 
 if __name__ == "__main__":

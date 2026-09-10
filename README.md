@@ -1,58 +1,68 @@
-﻿# Radar Vital Signs 文档总览
+# Radar Vital Signs
 
-本文件是项目主入口文档。
+本项目面向毫米波雷达生命体征估计，主线任务是跨数据集心率回归。当前重点方法为 CycleFormer 周期 token 建模：
 
-## 1. 项目目标
+```text
+RDA 统一特征 -> EDACM 目标相位表征 -> HR-AdaVMD 心率自适应分解
+-> 时频特征 -> CycleFormer 心率回归 -> Pseudo-label Adaptation 跨域适配
+```
 
-在毫米波雷达生命体征检测任务中，构建可复用、可迁移的方法体系，重点解决：
+## 目录结构
 
-- 跨平台：AWR1642 与 BGT60TR13C
-- 跨场景：实验室与车载
-- 跨时长：短时样本与长时连续监测
+```text
+src/data/loaders/        原始数据集加载器
+src/data/build_training_dataset.py  训练窗口构建入口
+src/features/            主流程特征模块与基线表征
+src/models/              CycleFormer、TCN、Transformer、PatchTST、TimesNet 和模型工厂
+src/training/            训练、评估、源无关域适配入口
+src/training/common/     checkpoint、指标等公共训练工具
+docs/                    数据集、方法和实验说明
+```
 
-## 2. 当前代码范围
+本地生成物不进入版本控制：`Dataset/`、`exports/`、`training_exports/`、`model_outputs/`、`tmp/`。`docker_assets/` 当前保留用于本地 Docker 构建。
 
-已实现：
+## 主流程方法
 
-- `src/data/loaders/base_loader.py`
-- `src/data/loaders/ftu_loader.py`
-- `src/data/loaders/physdrive_loader.py`
-- `src/data/loaders/bgt60_loader.py`
+主方法拆为独立模块，便于查看和修改：
 
-数据结构细节见 [docs/DATASETS.md](docs/DATASETS.md)。
+- `src/features/edacm.py`：从 complex RDA 窗口中选择稳定目标 bin，提取并融合 EDACM 相位。
+- `src/features/hr_adavmd.py`：对融合相位执行 HR-AdaVMD，包含生理频带初始化、心率模态评分和自适应加权。
+- `src/features/representations.py`：组装模型输入，默认表征为 `proposed`，同时保留其他基线表征。
+- `src/models/cycleformer.py`：周期 token 驱动的 Transformer 主模型。
+- `src/training/evaluate_signal_baselines.py`：FFT/STFT 传统信号处理 baseline。
+- `src/training/adapt_source_free.py`：使用目标域无标签数据执行 pseudo-label adaptation。
 
-### 2.1 近期统一导出更新（2026-04-11）
+## 对比实验方法
 
-- 更新文件：`src/data/loaders/export_all_datasets.py`
-- 统一目标：
-  - 三数据集导出统一字段：`radar`, `time`, `heart_rate`, `respiration_rate`。
-  - 统一雷达特征域：将 FTU/BGT60 从 `(frames, rx, chirps, samples)` 转换到 PhysDrive 风格 `(frames, doppler, angle, range)`，默认对齐为 `8x16x8`。
-  - PhysDrive 标签对齐：从 `ecg/respiration` 估计 `heart_rate/respiration_rate`，并补齐 `time`（当前按 `20 Hz` 对齐）。
-  - PhysDrive HR/RR 生成：使用 NeuroKit2 从 `ecg.mat` / `resp.mat` 派生，与论文处理流程保持一致。
-  - FTU/BGT60 的 `range` 维选择已更新：由“逐帧 top-k”改为“全样本能量中心 + 连续窗口”，提升跨帧语义稳定性。
-- 说明：
-  - PhysDrive 在当前公开包中是 processed mmWave，不是原始 ADC；FTU/BGT60 为原始或近原始数据，因此统一前必须走特征变换。
-  - 详细背景与参数来源已同步到 `docs/DATASETS.md`。
+当前对比方法固定为：
 
-### 2.2 训练数据构建
+- FFT
+- STFT
+- TCN
+- Transformer
+- PatchTST
+- TimesNet
+- Source Only
+- Pseudo-label Adaptation
 
-- 更新文件：`src/data/build_training_dataset.py`
-- 输入：`exports/{DATASET}/manifest.csv` 与 `exports/{DATASET}/samples/*.npz`
-- 输出：`training_exports/windows/{DATASET}/{train,val,test}/*.npz`、`training_exports/manifest.csv`、`build_config.json`、`summary.json`
-- 默认处理：
-  - 将统一导出的复数 RDA 转为 `log_magnitude`。
-  - 按固定长度窗口切片，默认 `window_size=256`、`stride=128`。
-  - 将参考 HR/RR 按雷达帧时间插值到逐帧标签。
-  - 对窗口标签做聚合，默认取均值。
-  - 默认在每个数据集内部独立按组划分 train/val/test，服务“一个数据集训练，另外两个数据集测试”的跨域实验主线：
-    - FTU：按 `participant_id` 分组。
-    - BGT60TR13C：按 `participant_id` 分组。
-    - PhysDrive：按 `session_id` 分组。
-  - `manifest.csv` 同时记录 `dataset` 与 `domain_split`。实验时用源数据集的 `train/val` 训练和选模，用目标数据集的 `test` 做跨域测试。
-  - BGT60TR13C long measurement 默认放入 `test`，用于长时测试，不参与训练集；为避免同一受试者泄漏，包含 long measurement 的 BGT60 participant 会整体放入 `test`。
-  - 默认要求心率标签可用；FTU 的呼吸率为 `NaN`，因此训练呼吸率或双任务时会自动过滤 FTU 对应窗口。
+HeartTimeMixer 和旧表征代码保留以兼容历史实验，但新版方法和实验文档以 CycleFormer 为主线。
 
-示例：
+## 常用命令
+
+创建环境：
+
+```bash
+conda env create -f environment.yml
+conda activate radarnet
+```
+
+统一导出数据：
+
+```bash
+python src/data/loaders/export_all_datasets.py
+```
+
+构建训练窗口：
 
 ```bash
 python src/data/build_training_dataset.py \
@@ -64,34 +74,29 @@ python src/data/build_training_dataset.py \
   --normalize window_zscore
 ```
 
-当前默认训练特征已切换为 `target_edacm_vmd`：
-
-- 从统一 complex RDA 窗口 `(256, 8, 16, 8)` 中选择 `3` 个生命体征稳定目标 bin；当前不再只按能量 top-k，而是综合空间能量、EDACM 相位稳定性、心率频带谱峰响应和窗口内 RDA 空间一致性评分。
-- 对每个目标 bin 的复数时间序列使用 EDACM 提取相位。
-- 对相位做线性去趋势与 z-score。
-- 按目标 bin 稳定性综合评分加权融合相位序列。
-- 对融合相位执行 VMD，默认 `K=7`。
-- 最终训练输入 `x.shape = (7, 256)`，每一行对应一个 VMD mode。
-- 窗口 `meta_json` 会记录 `rda_spatial_confidence` 与目标 bin 分项评分，可作为后续 Source-Free 目标域伪标签可靠性权重的一部分。
-
-如果需要回到旧的幅值基线，可以显式指定：
+训练源域模型：
 
 ```bash
-python src/data/build_training_dataset.py \
-  --representation log_magnitude \
-  --output-dir training_exports_logmag \
-  --overwrite
+python src/training/train_model.py \
+  --model cycleformer \
+  --datasets FTU \
+  --export-dir training_exports \
+  --output-dir model_outputs/cycleformer_ftu_source \
+  --epochs 80 \
+  --batch-size 32
 ```
 
-如需快速检查流程，可限制每个源样本最多输出少量窗口：
+直接跨域评估：
 
 ```bash
-python src/data/build_training_dataset.py \
-  --overwrite \
-  --max-windows-per-sample 20
+python src/training/evaluate_model.py \
+  --model-dir model_outputs/cycleformer_ftu_source \
+  --export-dir training_exports \
+  --target-datasets PhysDrive \
+  --split test
 ```
 
-## 3. 未来整体项目规划（按实验包执行）
+源无关域适配：
 
 ### 包A：数据统一与质量分析
 
@@ -235,21 +240,19 @@ python src/data/build_training_dataset.py \
 - 提交前至少检查一次“代码实现 vs 文档描述”一致性，避免后续实验配置偏差。
 
 
-## 9. docker
+## 9. 容器启动
+
+使用 `compose.yml` 启动（参见 `AGENTS.md` 获取本机环境说明）：
+
 ```bash
-docker run -it --gpus all \
-  --network host \
-  --name radar_dev \
-  -v /home/sunny/code/Radar_Vital_Signs:/Radar_Vital_Signs \
-  -v /mnt/d/Dataset:/Radar_Vital_Signs/Dataset \
-  -e http_proxy=$http_proxy \
-  -e https_proxy=$https_proxy \
-  -e HTTP_PROXY=$HTTP_PROXY \
-  -e HTTPS_PROXY=$HTTPS_PROXY \
-  -e no_proxy=$no_proxy \
-  -e NO_PROXY=$NO_PROXY \
-  -w /Radar_Vital_Signs \
-  radar_vital_signs bash
+podman compose up -d
+podman exec -it radar_dev bash
 ```
 
-- 镜像地址：docker pull crpi-ojnb84j7hma95ay2.cn-shanghai.personal.cr.aliyuncs.com/hsun97282/radar:latest
+- 镜像地址：`crpi-ojnb84j7hma95ay2.cn-shanghai.personal.cr.aliyuncs.com/hsun97282/radar:latest`
+
+## 文档
+
+- `docs/DATASETS.md`：三数据集格式、统一导出字段和注意事项。
+- `docs/METHOD_PIPELINE.md`：主方法流程和代码模块对应关系。
+- `docs/EXPERIMENTS.md`：实验矩阵、baseline、消融和指标。

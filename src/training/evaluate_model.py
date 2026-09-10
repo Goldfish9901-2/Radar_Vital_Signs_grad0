@@ -5,11 +5,10 @@ from __future__ import annotations
 import argparse
 import json
 import math
-import re
 from dataclasses import asdict
 from pathlib import Path
 import sys
-from typing import Any, Dict, Iterable
+from typing import Any, Dict
 
 import numpy as np
 import torch
@@ -20,19 +19,10 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from src.models import (
-    HeartTimeMixer,
-    HeartTimeMixerConfig,
-    TCNConfig,
-    TCNHeartRateModel,
-    TransformerConfig,
-    TransformerHeartRateModel,
-)
-from src.models.heart_timemixer import count_parameters
+from src.models.factory import MODEL_CHOICES, count_parameters, create_model
+from src.training.common.checkpoints import load_run_config, resolve_checkpoint as resolve_checkpoint_path
+from src.training.common.metrics import aggregate, append_prediction_rows
 from src.training.datasets import LabelStats, RadarWindowDataset
-
-
-MODEL_CHOICES = ("heart_timemixer", "tcn", "transformer")
 
 
 def parse_args() -> argparse.Namespace:
@@ -204,7 +194,7 @@ def default_output_path(args: argparse.Namespace, target_datasets: set[str] | No
 def main() -> None:
     args = parse_args()
     run_config = load_run_config(args.model_dir)
-    checkpoint_path = resolve_checkpoint(args)
+    checkpoint_path = resolve_checkpoint_path(args.model_dir, args.checkpoint)
     if not checkpoint_path.exists():
         raise FileNotFoundError(checkpoint_path)
 
@@ -243,7 +233,7 @@ def main() -> None:
             pred = model(x_time, x_freq)
             total_loss += float(criterion(pred, y))
             seen += int(y.numel())
-            append_rows(rows, batch, pred, label_stats)
+            append_prediction_rows(rows, batch, pred, label_stats)
 
     result = {
         "model": model_name,

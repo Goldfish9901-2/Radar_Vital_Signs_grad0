@@ -263,11 +263,30 @@ TODO_personal.md
 docker_assets/
 .venv-download/
 
+/datasets/
 /exports/
 /Radar_Heartbeats_8_27/
 /Radar_Heartbeats_8_27 (1)/
 /training_exports/
 /training_exports_ablation/
+/training_exports_hybrid/
+/radar_exports/
+/radar_exports
+/experiments/
+/evmd/
+/ewt/
+/iapvmd/
+/svmd/
+experiment_inventory.json
 .codex
 model_outputs/
-docs/TODO.md
+# docs/TODO.md
+**/**.md
+!**/README.md
+.qoder/
+.marscode/
+exports
+**.ipynb
+visuals/
+scripts/
+ref/

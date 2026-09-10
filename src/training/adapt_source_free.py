@@ -1,14 +1,13 @@
-"""Source-free WPL adaptation with temporal correction for HR regression."""
+"""Pseudo-label adaptation with temporal confidence weighting for HR regression."""
 
 from __future__ import annotations
 
 import argparse
 import json
 import math
-from dataclasses import asdict
 from pathlib import Path
 import sys
-from typing import Any, Dict, Iterable
+from typing import Any, Dict
 
 import numpy as np
 import torch
@@ -19,23 +18,14 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from src.models import (
-    HeartTimeMixer,
-    HeartTimeMixerConfig,
-    TCNConfig,
-    TCNHeartRateModel,
-    TransformerConfig,
-    TransformerHeartRateModel,
-)
-from src.models.heart_timemixer import count_parameters
+from src.models.factory import MODEL_CHOICES, count_parameters, create_model
+from src.training.common.checkpoints import load_run_config, resolve_checkpoint
+from src.training.common.metrics import aggregate, append_prediction_rows
 from src.training.datasets import LabelStats, RadarWindowDataset
 
 
-MODEL_CHOICES = ("heart_timemixer", "tcn", "transformer")
-
-
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Source-free WPL temporal adaptation on target-domain data.")
+    parser = argparse.ArgumentParser(description="Pseudo-label temporal adaptation on unlabeled target-domain data.")
     parser.add_argument("--source-model-dir", type=Path, required=True)
     parser.add_argument("--checkpoint", type=Path, default=None, help="Defaults to <source-model-dir>/best.pt.")
     parser.add_argument("--model", choices=MODEL_CHOICES, default=None)
@@ -54,23 +44,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--min-weight", type=float, default=0.05)
     parser.add_argument("--seed", type=int, default=42)
     return parser.parse_args()
-
-
-def load_run_config(model_dir: Path) -> Dict[str, Any]:
-    path = model_dir / "run_config.json"
-    if not path.exists():
-        return {}
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
-    if model_name == "heart_timemixer":
-        return HeartTimeMixer(HeartTimeMixerConfig(**config))
-    if model_name == "tcn":
-        return TCNHeartRateModel(TCNConfig(**config))
-    if model_name == "transformer":
-        return TransformerHeartRateModel(TransformerConfig(**config))
-    raise ValueError(f"Unsupported model: {model_name}")
 
 
 def moving_average(values: np.ndarray, window: int) -> np.ndarray:
@@ -192,44 +165,6 @@ def weighted_adaptation_epoch(
     }
 
 
-def append_eval_rows(rows: list[Dict[str, Any]], batch: Dict[str, Any], pred_norm: torch.Tensor, stats: LabelStats) -> None:
-    pred_bpm = stats.denormalize(pred_norm.detach().cpu())
-    y_bpm = batch["y_bpm"].detach().cpu()
-    for idx in range(int(y_bpm.numel())):
-        label = float(y_bpm[idx])
-        pred = float(pred_bpm[idx])
-        rows.append(
-            {
-                "dataset": batch["dataset"][idx],
-                "group_key": batch["group_key"][idx],
-                "label_bpm": label,
-                "pred_bpm": pred,
-                "abs_error_bpm": abs(pred - label),
-            }
-        )
-
-
-def aggregate(rows: Iterable[Dict[str, Any]], key: str | None = None) -> Dict[str, Any]:
-    buckets: Dict[str, list[Dict[str, Any]]] = {}
-    if key is None:
-        buckets["overall"] = list(rows)
-    else:
-        for row in rows:
-            buckets.setdefault(str(row.get(key, "")), []).append(row)
-    metrics: Dict[str, Any] = {}
-    for name, values in buckets.items():
-        errors = [float(row["abs_error_bpm"]) for row in values]
-        metrics[name] = {
-            "count": len(values),
-            "mae_bpm": float(np.mean(errors)) if errors else math.nan,
-            "within_3bpm_percent": float(100.0 * np.mean(np.asarray(errors) <= 3.0)) if errors else math.nan,
-            "within_5bpm_percent": float(100.0 * np.mean(np.asarray(errors) <= 5.0)) if errors else math.nan,
-            "label_mean_bpm": float(np.mean([row["label_bpm"] for row in values])) if values else math.nan,
-            "pred_mean_bpm": float(np.mean([row["pred_bpm"] for row in values])) if values else math.nan,
-        }
-    return metrics
-
-
 def evaluate(model: nn.Module, loader: DataLoader, stats: LabelStats, device: torch.device) -> Dict[str, Any]:
     model.eval()
     rows: list[Dict[str, Any]] = []
@@ -244,7 +179,7 @@ def evaluate(model: nn.Module, loader: DataLoader, stats: LabelStats, device: to
             pred = model(x_time, x_freq)
             total_loss += float(criterion(pred, y))
             seen += int(y.numel())
-            append_eval_rows(rows, batch, pred, stats)
+            append_prediction_rows(rows, batch, pred, stats, include_participant=False)
     result = aggregate(rows)["overall"]
     result["loss"] = total_loss / seen if seen else math.nan
     result["by_group"] = aggregate(rows, "group_key")
@@ -259,7 +194,7 @@ def main() -> None:
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     run_config = load_run_config(args.source_model_dir)
-    checkpoint_path = args.checkpoint or args.source_model_dir / "best.pt"
+    checkpoint_path = resolve_checkpoint(args.source_model_dir, args.checkpoint)
     checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
     model_name = args.model or run_config.get("model")
     if model_name not in MODEL_CHOICES:
@@ -303,7 +238,7 @@ def main() -> None:
         row = {"epoch": epoch, **metrics}
         history.append(row)
         print(
-            f"epoch {epoch:03d} | WPL loss {metrics['loss']:.4f} | mean weight {metrics['mean_weight']:.3f}",
+            f"epoch {epoch:03d} | pseudo-label loss {metrics['loss']:.4f} | mean weight {metrics['mean_weight']:.3f}",
             flush=True,
         )
 
@@ -320,7 +255,7 @@ def main() -> None:
         "label_stats": checkpoint["label_stats"],
         "source_checkpoint": str(checkpoint_path),
         "adaptation": {
-            "method": "Source-Free + WPL + Temporal Correction",
+            "method": "Pseudo-label Adaptation + Temporal Confidence Weighting",
             "target_datasets": sorted(target_datasets),
             "adapt_split": args.adapt_split,
             "eval_split": args.eval_split,
@@ -334,7 +269,7 @@ def main() -> None:
         "model": model_name,
         "parameters": count_parameters(model),
         "source_checkpoint": str(checkpoint_path),
-        "method": "Source-Free + WPL + Temporal Correction",
+        "method": "Pseudo-label Adaptation + Temporal Confidence Weighting",
         "pseudo_summary": pseudo_summary,
         "before_adaptation": before_eval,
         "after_adaptation": after_eval,
@@ -345,7 +280,7 @@ def main() -> None:
         "config": checkpoint["config"],
         "label_stats": checkpoint["label_stats"],
         "parameters": count_parameters(model),
-        "adaptation_method": "Source-Free + WPL + Temporal Correction",
+        "adaptation_method": "Pseudo-label Adaptation + Temporal Confidence Weighting",
         "source_checkpoint": str(checkpoint_path),
         "target_datasets": sorted(target_datasets),
         "args": serializable_args,
