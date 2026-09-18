@@ -73,6 +73,14 @@ def append_prediction_rows(
         }
         if include_participant:
             row["participant_id"] = participant_id(dataset, group_key, sample_tag)
+        # window_start keeps the temporal order inside a sample so downstream
+        # trajectory / within-subject analyses can sort windows without re-reading npz.
+        raw_start = batch.get("window_start")
+        if raw_start is not None:
+            try:
+                row["window_start"] = int(raw_start[idx])
+            except (TypeError, ValueError):
+                row["window_start"] = -1
         rows.append(row)
 
 

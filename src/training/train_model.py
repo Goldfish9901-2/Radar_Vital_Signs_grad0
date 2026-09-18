@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import math
+import re
 import subprocess
 import time
 from dataclasses import asdict

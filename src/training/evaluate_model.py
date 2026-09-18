@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import math
+import re
 from dataclasses import asdict
 from pathlib import Path
 import sys
-from typing import Any, Dict
+from typing import Any, Dict, Iterable
 
 import numpy as np
 import torch
@@ -62,6 +64,13 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional path for writing evaluation metrics. Defaults to <model-dir>/eval_<split>_<datasets>.json.",
     )
+    parser.add_argument(
+        "--dump-predictions",
+        type=Path,
+        default=None,
+        help="Optional CSV path for the per-window prediction rows (needed by the "
+             "within-subject / trajectory re-analysis).",
+    )
     return parser.parse_args()
 
 
@@ -80,16 +89,6 @@ def resolve_checkpoint(args: argparse.Namespace) -> Path:
     if args.model_dir is None:
         raise ValueError("Either --model-dir or --checkpoint must be provided.")
     return args.model_dir / "best.pt"
-
-
-def create_model(model_name: str, config: Dict[str, Any]) -> nn.Module:
-    if model_name == "heart_timemixer":
-        return HeartTimeMixer(HeartTimeMixerConfig(**config))
-    if model_name == "tcn":
-        return TCNHeartRateModel(TCNConfig(**config))
-    if model_name == "transformer":
-        return TransformerHeartRateModel(TransformerConfig(**config))
-    raise ValueError(f"Unsupported model: {model_name}")
 
 
 def denormalize(value: torch.Tensor, stats: LabelStats) -> torch.Tensor:
@@ -255,6 +254,19 @@ def main() -> None:
         "by_participant": aggregate(rows, "participant_id"),
         "by_group": aggregate(rows, "group_key"),
     }
+
+    if args.dump_predictions is not None:
+        args.dump_predictions.parent.mkdir(parents=True, exist_ok=True)
+        fieldnames = [
+            "dataset", "group_key", "participant_id", "sample_tag", "window_start",
+            "label_bpm", "pred_bpm", "abs_error_bpm",
+        ]
+        with args.dump_predictions.open("w", encoding="utf-8", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore")
+            writer.writeheader()
+            for row in rows:
+                writer.writerow(row)
+        result["predictions_csv"] = str(args.dump_predictions)
 
     output_path = default_output_path(args, target_datasets)
     if output_path is not None:

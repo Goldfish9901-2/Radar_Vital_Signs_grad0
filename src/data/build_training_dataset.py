@@ -136,6 +136,14 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional cap for quick experiments/debugging.",
     )
+    parser.add_argument(
+        "--drop-rda",
+        action="store_true",
+        help=(
+            "Do not persist the per-window RDA cube (x_rda). No training entrypoint "
+            "reads x_rda; dropping it saves ~1 MB and measurable I/O per window."
+        ),
+    )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument(
         "--split-ratios",
@@ -1169,59 +1177,6 @@ def rda_log_magnitude(radar: np.ndarray) -> np.ndarray:
     return np.log1p(np.abs(radar)).astype(np.float32)
 
 
-def radar_to_feature_bundle(
-    radar: np.ndarray,
-    representation: str,
-) -> Dict[str, Any]:
-    if representation == "real_imag":
-        x = np.stack([np.real(radar), np.imag(radar)], axis=0).astype(np.float32)
-    elif representation == "magnitude":
-        x = np.abs(radar).astype(np.float32)
-    elif representation == "log_magnitude":
-        x = np.log1p(np.abs(radar)).astype(np.float32)
-    elif representation == "target_edacm":
-        phase, phase_meta = target_edacm_signal(radar)
-        x = phase[None, :].astype(np.float32)
-        return {"x": x, "meta": phase_meta}
-    elif representation in {"target_edacm_hr_adavmd", "target_edacm_vmd"}:
-        phase, phase_meta = target_edacm_signal(radar)
-        x_time, hr_adavmd_meta = hr_adavmd_decompose(phase, k=DEFAULT_VMD_K)
-        x_freq, freq_hz, freq_meta = frequency_features(x_time)
-        x_rda = rda_log_magnitude(radar)
-        phase_meta.update(
-            {
-                "method_pipeline": list(METHOD_PIPELINE),
-                "innovation_modules": list(INNOVATION_MODULES),
-                "domain_adaptation_method": DOMAIN_ADAPTATION_METHOD,
-                "representation_method": "EDACM phase representation + HR-AdaVMD decomposition + FFT spectrum",
-                "representation_alias": representation,
-                "vmd_k": DEFAULT_VMD_K,
-                "vmd_alpha": DEFAULT_VMD_ALPHA,
-                "vmd_max_iter": DEFAULT_VMD_MAX_ITER,
-                "vmd_tol": DEFAULT_VMD_TOL,
-                "vmd_output_shape": list(x_time.shape),
-                **hr_adavmd_meta,
-                "feature_domains": ["time", "frequency"],
-                "x_time_shape": list(x_time.shape),
-                "x_freq_shape": list(x_freq.shape),
-                "x_rda_shape": list(x_rda.shape),
-                "x_rda_representation": DEFAULT_RDA_REPRESENTATION,
-                **freq_meta,
-            }
-        )
-        return {
-            "x": x_time.astype(np.float32),
-            "x_time": x_time.astype(np.float32),
-            "x_freq": x_freq.astype(np.float32),
-            "x_rda": x_rda.astype(np.float32),
-            "freq_hz": freq_hz.astype(np.float32),
-            "meta": phase_meta,
-        }
-    else:
-        raise ValueError(f"Unsupported representation: {representation}")
-    return {"x": x, "meta": {}}
-
-
 def normalize_features(x: np.ndarray, mode: str) -> np.ndarray:
     if mode == "none":
         return x.astype(np.float32, copy=False)
@@ -1464,7 +1419,12 @@ def build_training_dataset(args: argparse.Namespace) -> None:
             if "x_freq" in feature_bundle:
                 feature_bundle["x_freq"] = normalize_features(feature_bundle["x_freq"], args.normalize)
             if "x_rda" in feature_bundle:
-                feature_bundle["x_rda"] = normalize_features(feature_bundle["x_rda"], args.normalize)
+                if args.drop_rda:
+                    feature_bundle.pop("x_rda", None)
+                else:
+                    feature_bundle["x_rda"] = normalize_features(
+                        feature_bundle["x_rda"], args.normalize
+                    )
             x = np.asarray(feature_bundle["x"], dtype=np.float32)
             x_freq = feature_bundle.get("x_freq")
             x_rda = feature_bundle.get("x_rda")
