@@ -93,6 +93,55 @@ def radar_to_feature_bundle(
         phase, phase_meta = target_edacm_signal(radar)
         x = phase[None, :].astype(np.float32)
         return {"x": x, "meta": phase_meta}
+    elif representation == "plain_vmd":
+        # Ablation baseline for HR-AdaVMD: standard VMD with uniform frequency
+        # initialisation and equal mode weights (no physiology prior, no
+        # heart-band mode scoring). Shape-compatible with ``proposed`` so the
+        # same models train unchanged -- the only difference is the
+        # decomposition front-end.
+        #
+        # NOTE: we use a smaller iteration budget than HR-AdaVMD because
+        # uniform-frequency initialisation converges much more slowly on the
+        # large FTU dataset. 30 iters keeps the export step within Kaggle's
+        # CPU-time envelope while still giving a fair "standard VMD" baseline.
+        from src.data.build_training_dataset import vmd_decompose  # lazy: avoid cycle
+
+        PLAIN_VMD_MAX_ITER = 30
+        phase, phase_meta = target_edacm_signal(radar)
+        x_time = vmd_decompose(
+            phase, k=DEFAULT_VMD_K, max_iter=PLAIN_VMD_MAX_ITER
+        )
+        x_freq, freq_hz, freq_meta = frequency_features(x_time)
+        x_rda = rda_log_magnitude(radar)
+        phase_meta.update(
+            {
+                "method_pipeline": list(METHOD_PIPELINE),
+                "innovation_modules": list(INNOVATION_MODULES),
+                "domain_adaptation_method": DOMAIN_ADAPTATION_METHOD,
+                "representation_method": "EDACM phase representation + plain VMD (uniform init, equal weights) + FFT spectrum",
+                "representation_alias": representation,
+                "vmd_k": DEFAULT_VMD_K,
+                "vmd_alpha": DEFAULT_VMD_ALPHA,
+                "vmd_max_iter": PLAIN_VMD_MAX_ITER,
+                "vmd_tol": DEFAULT_VMD_TOL,
+                "decomposition_method": "plain_VMD",
+                "vmd_output_shape": list(x_time.shape),
+                "feature_domains": ["time", "frequency"],
+                "x_time_shape": list(x_time.shape),
+                "x_freq_shape": list(x_freq.shape),
+                "x_rda_shape": list(x_rda.shape),
+                "x_rda_representation": DEFAULT_RDA_REPRESENTATION,
+                **freq_meta,
+            }
+        )
+        return {
+            "x": x_time.astype(np.float32),
+            "x_time": x_time.astype(np.float32),
+            "x_freq": x_freq.astype(np.float32),
+            "x_rda": x_rda.astype(np.float32),
+            "freq_hz": freq_hz.astype(np.float32),
+            "meta": phase_meta,
+        }
     elif representation in {"proposed", "target_edacm_vmd"}:
         phase, phase_meta = target_edacm_signal(radar)
         x_time, hr_adavmd_meta = hr_adavmd_decompose(phase, k=DEFAULT_VMD_K)

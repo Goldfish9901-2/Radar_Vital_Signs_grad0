@@ -98,6 +98,7 @@ def parse_args() -> argparse.Namespace:
         "--representation",
         choices=[
             "proposed",
+            "plain_vmd",
             "target_edacm_vmd",
             "target_edacm",
             "log_magnitude",
