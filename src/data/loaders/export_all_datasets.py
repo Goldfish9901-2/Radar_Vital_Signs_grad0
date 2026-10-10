@@ -116,6 +116,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--adc-doppler-mode", choices=("legacy", "full_fft_crop"), default="legacy")
     parser.add_argument("--adc-clutter-mode", choices=("chirp_mean", "none"), default="chirp_mean")
+    parser.add_argument("--adc-fast-time-dc", choices=("none", "mean"), default="none")
     parser.add_argument("--adc-sampling-mode", choices=("legacy", "native"), default="legacy",
                         help="Independent sampling policy for FTU/BGT60 ADC ablations")
     return parser.parse_args()
@@ -537,6 +538,7 @@ def _build_rda_cube_from_frame(
     target_angle: int,
     doppler_mode: str = "legacy",
     clutter_mode: str = "chirp_mean",
+    fast_time_dc: str = "none",
 ) -> np.ndarray:
     """将单帧原始 (rx,chirps,samples) 转为 (doppler,angle,range_full)。"""
     frame = np.asarray(frame_data, dtype=np.complex64)[:, chirp_idx][:, :, sample_idx]  # (rx,c,s)
@@ -544,6 +546,10 @@ def _build_rda_cube_from_frame(
         raise ValueError(f"Unknown doppler_mode: {doppler_mode}")
     if clutter_mode not in {"chirp_mean", "none"}:
         raise ValueError(f"Unknown clutter_mode: {clutter_mode}")
+    if fast_time_dc not in {"none", "mean"}:
+        raise ValueError(f"Unknown fast_time_dc: {fast_time_dc}")
+    if fast_time_dc == "mean":
+        frame = frame - frame.mean(axis=-1, keepdims=True)
     if clutter_mode == "chirp_mean":
         frame = frame - frame.mean(axis=1, keepdims=True)
     range_fft = np.fft.fft(frame, axis=-1)
@@ -574,6 +580,7 @@ def convert_adc_cube_to_rda(
     clutter_mode: str = "chirp_mean",
     sampling_mode: str = "legacy",
     range_center_bin: Optional[int] = None,
+    fast_time_dc: str = "none",
 ) -> Tuple[np.ndarray, np.ndarray, int]:
     """将 (frames, rx, chirps, samples) 转为 (frames, doppler, angle, range)。
 
@@ -599,6 +606,8 @@ def convert_adc_cube_to_rda(
         raise ValueError(f"Unknown clutter_mode: {clutter_mode}")
     if sampling_mode not in {"legacy", "native"}:
         raise ValueError(f"Unknown sampling_mode: {sampling_mode}")
+    if fast_time_dc not in {"none", "mean"}:
+        raise ValueError(f"Unknown fast_time_dc: {fast_time_dc}")
     frames, _, chirps, samples = radar.shape
     out = np.empty((frames, target_doppler, target_angle, target_range), dtype=np.complex64)
 
@@ -627,6 +636,7 @@ def convert_adc_cube_to_rda(
             target_angle=target_angle,
             doppler_mode=doppler_mode,
             clutter_mode=clutter_mode,
+            fast_time_dc=fast_time_dc,
         )  # (d,a,rfull)
         energy = np.mean(np.abs(cube_full), axis=(0, 1))
         if global_range_energy is None:
@@ -654,6 +664,7 @@ def convert_adc_cube_to_rda(
             target_angle=target_angle,
             doppler_mode=doppler_mode,
             clutter_mode=clutter_mode,
+            fast_time_dc=fast_time_dc,
         )  # (d,a,rfull)
         cube = cube_full[:, :, selected_range_bins]
         out[fi] = _crop_or_pad_last_axis(cube, target_range).astype(np.complex64)
@@ -1104,7 +1115,8 @@ def main() -> None:
     args = parse_args()
     adc_options = dict(doppler_mode=args.adc_doppler_mode,
                        clutter_mode=args.adc_clutter_mode,
-                       sampling_mode=args.adc_sampling_mode)
+                       sampling_mode=args.adc_sampling_mode,
+                       fast_time_dc=args.adc_fast_time_dc)
     # 优先使用CLI参数,否则使用默认配置
     dataset_root = (Path(args.dataset_root).resolve() if args.dataset_root 
                     else Path(DATASET_ROOT).resolve())

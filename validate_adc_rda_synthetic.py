@@ -79,6 +79,7 @@ class SyntheticADCChecks(unittest.TestCase):
     def test_invalid_arguments(self):
         for kwargs in [dict(doppler_mode="typo"), dict(clutter_mode="typo"),
                        dict(sampling_mode="typo"), dict(range_center_bin=-1),
+                       dict(fast_time_dc="typo"),
                        dict(range_center_bin=64), dict(range_center_bin=1.5),
                        dict(target_doppler=0)]:
             with self.assertRaises(ValueError):
@@ -113,6 +114,19 @@ class SyntheticADCChecks(unittest.TestCase):
         signal = adc()*np.exp(2j*np.pi*.25*np.arange(4))[None, :, None, None]
         cube, _, _ = convert(signal, doppler_mode="full_fft_crop", clutter_mode="none")
         self.assertEqual(np.abs(cube[0]).sum(axis=(0, 2)).argmax(), 12)
+
+    def test_fast_time_dc_is_separate_from_chirp_mean(self):
+        signal = adc() + 100
+        contaminated, _, center = convert(signal, clutter_mode="none", sampling_mode="native")
+        self.assertEqual(center, 0)
+        clean, bins, center = convert(signal, clutter_mode="none", sampling_mode="native",
+                                      fast_time_dc="mean")
+        self.assertEqual(center, 12)
+        peak = np.abs(clean[0]).sum(axis=(0, 1)).argmax()
+        self.assertEqual(bins[peak], 12)
+        self.assertGreater(np.abs(clean).max(), 1)
+        removed, _, _ = convert(signal, clutter_mode="chirp_mean", fast_time_dc="mean")
+        self.assertLess(np.abs(removed).max(), np.abs(clean).max()*1e-5)
 
 
 if __name__ == "__main__":

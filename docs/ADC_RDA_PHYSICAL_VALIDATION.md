@@ -38,6 +38,8 @@ this assumption.
 - `doppler_mode="full_fft_crop"`: FFT all selected chirps, zero-pad only if fewer
   than the requested bins, then retain the bins around shifted DC.
 - `clutter_mode="chirp_mean"` or `"none"`: independent frame-internal suppression.
+- `fast_time_dc="none"` or `"mean"`: independently remove the fast-time ADC
+  mean per RX/chirp, before range FFT. This is separate from chirp mean removal.
 - `sampling_mode="legacy"`: historical evenly selected ≤64 chirps and ≤256 ADC
   samples; `"native"` preserves all chirps and contiguous ADC samples.
 - `range_center_bin=<int>`: reuse a baseline center for a controlled comparison.
