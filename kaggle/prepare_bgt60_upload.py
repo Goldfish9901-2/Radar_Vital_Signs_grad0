@@ -7,7 +7,8 @@ import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-DIAGNOSTICS = "--diagnostics" in sys.argv[1:]
+PHASE = "--phase" in sys.argv[1:]
+DIAGNOSTICS = "--diagnostics" in sys.argv[1:] or PHASE
 STAGING = ROOT / "tmp" / ("bgt60_diagnostic_upload" if DIAGNOSTICS else "bgt60_frontend_upload")
 DATASET = STAGING / "dataset"
 KERNEL = STAGING / "kernel"
@@ -19,6 +20,8 @@ files = list((ROOT / "src").rglob("*.py")) + [
     ROOT / "kaggle/run_bgt60_frontend.py",
     ROOT / "validate_bgt60_diagnostic.py", ROOT / "kaggle/run_bgt60_diagnostics.py",
     ROOT / "docs/BGT60_CONFIGURATION_SEARCH.md",
+    ROOT / "kaggle/run_bgt60_phase.py",
+    ROOT / "validate_bgt60_phase.py",
 ]
 calibration = ROOT / "kaggle/bgt60_calibration.json"
 if calibration.is_file():
@@ -33,11 +36,11 @@ metadata = {
     "isPrivate": True, "licenses": [{"name": "other"}],
 }
 (DATASET / "dataset-metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
-RUNNER = "run_bgt60_diagnostics.py" if DIAGNOSTICS else "run_bgt60_frontend.py"
+RUNNER = "run_bgt60_phase.py" if PHASE else ("run_bgt60_diagnostics.py" if DIAGNOSTICS else "run_bgt60_frontend.py")
 shutil.copy2(ROOT / "kaggle" / RUNNER, KERNEL)
 kernel = {
-    "id": "goldfish9901/bgt60-adc-roi-phase-diagnostics" if DIAGNOSTICS else "goldfish9901/bgt60-cycleformer-frontend-ablation",
-    "title": "BGT60 ADC ROI Phase Diagnostics" if DIAGNOSTICS else "BGT60 CycleFormer Frontend Ablation",
+    "id": "goldfish9901/bgt60-direct-phase-audit" if PHASE else ("goldfish9901/bgt60-adc-roi-phase-diagnostics" if DIAGNOSTICS else "goldfish9901/bgt60-cycleformer-frontend-ablation"),
+    "title": "BGT60 Direct Phase Audit" if PHASE else ("BGT60 ADC ROI Phase Diagnostics" if DIAGNOSTICS else "BGT60 CycleFormer Frontend Ablation"),
     "code_file": RUNNER, "language": "python", "kernel_type": "script",
     "is_private": True, "enable_gpu": not DIAGNOSTICS, "enable_internet": True,
     "dataset_sources": ["goldfish9901/bgt60-frontend-code", "goldfish9901/bgt60tr13c-vital-signs"],
