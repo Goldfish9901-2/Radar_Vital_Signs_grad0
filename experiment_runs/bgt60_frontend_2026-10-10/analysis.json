@@ -1,0 +1,670 @@
+{
+  "metrics": {
+    "legacy_mean_retrained": {
+      "mae_bpm": 5.250692740730617,
+      "rmse_bpm": 6.51585890133281,
+      "prediction_mean_bpm": 83.84182131808737,
+      "prediction_std_bpm": 0.2830924251494331,
+      "prediction_span_bpm": 1.55120849609375,
+      "label_std_bpm": 4.743783325023062,
+      "raw_pearson_r": 0.0875873106946404,
+      "reported_pearson_r": 0.0875873106946404,
+      "near_constant": false,
+      "mean_prediction_as_constant_mae_bpm": 5.2474981900198925,
+      "train_mean_constant_mae_bpm": 7.881601727527121,
+      "subjects": [
+        "2"
+      ],
+      "windows": 368,
+      "checkpoint_sha256": "0e3474d5e16ff08037130eb8b98a9862a8deb9baf29e8e2288117784af5810ce"
+    },
+    "legacy_mean_frozen_legacy": {
+      "mae_bpm": 5.250692740730617,
+      "rmse_bpm": 6.51585890133281,
+      "prediction_mean_bpm": 83.84182131808737,
+      "prediction_std_bpm": 0.2830924251494331,
+      "prediction_span_bpm": 1.55120849609375,
+      "label_std_bpm": 4.743783325023062,
+      "raw_pearson_r": 0.0875873106946404,
+      "reported_pearson_r": 0.0875873106946404,
+      "near_constant": false,
+      "mean_prediction_as_constant_mae_bpm": 5.2474981900198925,
+      "train_mean_constant_mae_bpm": 7.881601727527121,
+      "subjects": [
+        "2"
+      ],
+      "windows": 368,
+      "checkpoint_sha256": "0e3474d5e16ff08037130eb8b98a9862a8deb9baf29e8e2288117784af5810ce"
+    },
+    "full_mean_retrained": {
+      "mae_bpm": 5.325906421827233,
+      "rmse_bpm": 6.614774563928366,
+      "prediction_mean_bpm": 83.75915094043897,
+      "prediction_std_bpm": 0.29732861872145305,
+      "prediction_span_bpm": 1.657318115234375,
+      "label_std_bpm": 4.743783325023062,
+      "raw_pearson_r": -0.10885079645457023,
+      "reported_pearson_r": -0.10885079645457023,
+      "near_constant": false,
+      "mean_prediction_as_constant_mae_bpm": 5.303515685528576,
+      "train_mean_constant_mae_bpm": 7.881601727527121,
+      "subjects": [
+        "2"
+      ],
+      "windows": 368,
+      "checkpoint_sha256": "66ac7f84d95a52fa9e1d4f9a6f915cf1daa87f96a24f49b8b93e2c4edd87e288"
+    },
+    "full_mean_frozen_legacy": {
+      "mae_bpm": 5.255226798679518,
+      "rmse_bpm": 6.532309878624645,
+      "prediction_mean_bpm": 83.84645410206006,
+      "prediction_std_bpm": 0.2916461885563187,
+      "prediction_span_bpm": 1.8750991821289062,
+      "label_std_bpm": 4.743783325023062,
+      "raw_pearson_r": -0.005789290114466147,
+      "reported_pearson_r": -0.005789290114466147,
+      "near_constant": false,
+      "mean_prediction_as_constant_mae_bpm": 5.244376096473077,
+      "train_mean_constant_mae_bpm": 7.881601727527121,
+      "subjects": [
+        "2"
+      ],
+      "windows": 368,
+      "checkpoint_sha256": "0e3474d5e16ff08037130eb8b98a9862a8deb9baf29e8e2288117784af5810ce"
+    },
+    "legacy_none_retrained": {
+      "mae_bpm": 5.226713740307352,
+      "rmse_bpm": 6.506543231372026,
+      "prediction_mean_bpm": 83.87274932861328,
+      "prediction_std_bpm": 0.0,
+      "prediction_span_bpm": 0.0,
+      "label_std_bpm": 4.743783325023062,
+      "raw_pearson_r": NaN,
+      "reported_pearson_r": null,
+      "near_constant": true,
+      "mean_prediction_as_constant_mae_bpm": 5.226713740307352,
+      "train_mean_constant_mae_bpm": 7.881601727527121,
+      "subjects": [
+        "2"
+      ],
+      "windows": 368,
+      "checkpoint_sha256": "93f2bcd9f6931fb76ffde0fc188c9031a16fba77b5058df35cb18e1f366c0af8"
+    },
+    "legacy_none_frozen_legacy": {
+      "mae_bpm": 6.23570556225984,
+      "rmse_bpm": 7.498906324849331,
+      "prediction_mean_bpm": 82.51825714111328,
+      "prediction_std_bpm": 0.0,
+      "prediction_span_bpm": 0.0,
+      "label_std_bpm": 4.743783325023062,
+      "raw_pearson_r": NaN,
+      "reported_pearson_r": null,
+      "near_constant": true,
+      "mean_prediction_as_constant_mae_bpm": 6.23570556225984,
+      "train_mean_constant_mae_bpm": 7.881601727527121,
+      "subjects": [
+        "2"
+      ],
+      "windows": 368,
+      "checkpoint_sha256": "0e3474d5e16ff08037130eb8b98a9862a8deb9baf29e8e2288117784af5810ce"
+    },
+    "full_none_retrained": {
+      "mae_bpm": 4.067714919214663,
+      "rmse_bpm": 5.182431521456288,
+      "prediction_mean_bpm": 90.41267627218495,
+      "prediction_std_bpm": 3.510518362379775e-06,
+      "prediction_span_bpm": 7.62939453125e-06,
+      "label_std_bpm": 4.743783325023062,
+      "raw_pearson_r": 0.47605918519871676,
+      "reported_pearson_r": null,
+      "near_constant": true,
+      "mean_prediction_as_constant_mae_bpm": 4.067716217221294,
+      "train_mean_constant_mae_bpm": 7.881601727527121,
+      "subjects": [
+        "2"
+      ],
+      "windows": 368,
+      "checkpoint_sha256": "dc072da5b27337089d979d8be161cab366d5963ec3737e10f182ad9367d416c4"
+    },
+    "full_none_frozen_legacy": {
+      "mae_bpm": 6.23570556225984,
+      "rmse_bpm": 7.498906324849331,
+      "prediction_mean_bpm": 82.51825714111328,
+      "prediction_std_bpm": 0.0,
+      "prediction_span_bpm": 0.0,
+      "label_std_bpm": 4.743783325023062,
+      "raw_pearson_r": NaN,
+      "reported_pearson_r": null,
+      "near_constant": true,
+      "mean_prediction_as_constant_mae_bpm": 6.23570556225984,
+      "train_mean_constant_mae_bpm": 7.881601727527121,
+      "subjects": [
+        "2"
+      ],
+      "windows": 368,
+      "checkpoint_sha256": "0e3474d5e16ff08037130eb8b98a9862a8deb9baf29e8e2288117784af5810ce"
+    }
+  },
+  "paired_test_windows": true,
+  "frozen_checkpoint_identical": true,
+  "range_centers": {
+    "samples": 32,
+    "unique_centers": [
+      0
+    ]
+  },
+  "split_subjects": {
+    "train": [
+      "BGT60TR13C/participant/1",
+      "BGT60TR13C/participant/3",
+      "BGT60TR13C/participant/5",
+      "BGT60TR13C/participant/6",
+      "BGT60TR13C/participant/7",
+      "BGT60TR13C/participant/8"
+    ],
+    "test": [
+      "BGT60TR13C/participant/2"
+    ],
+    "val": [
+      "BGT60TR13C/participant/4"
+    ]
+  },
+  "sampled_feature_audit": [
+    {
+      "variant": "full_mean",
+      "sample": "BGT60TR13C__p02_0_3m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          5,
+          7,
+          1
+        ],
+        [
+          5,
+          7,
+          0
+        ],
+        [
+          3,
+          9,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 1.0,
+          "nonzero": 1792
+        },
+        "x_freq": {
+          "std": 1.0,
+          "nonzero": 903
+        }
+      }
+    },
+    {
+      "variant": "full_mean",
+      "sample": "BGT60TR13C__p02_0_6m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          5,
+          7,
+          1
+        ],
+        [
+          5,
+          6,
+          1
+        ],
+        [
+          5,
+          7,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 1.0,
+          "nonzero": 1792
+        },
+        "x_freq": {
+          "std": 1.0,
+          "nonzero": 903
+        }
+      }
+    },
+    {
+      "variant": "full_mean",
+      "sample": "BGT60TR13C__p02_0_9m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          5,
+          7,
+          1
+        ],
+        [
+          5,
+          6,
+          1
+        ],
+        [
+          5,
+          8,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 1.0,
+          "nonzero": 1792
+        },
+        "x_freq": {
+          "std": 1.0,
+          "nonzero": 903
+        }
+      }
+    },
+    {
+      "variant": "full_mean",
+      "sample": "BGT60TR13C__p02_1_2m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          5,
+          7,
+          0
+        ],
+        [
+          5,
+          7,
+          1
+        ],
+        [
+          3,
+          9,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 1.0,
+          "nonzero": 1792
+        },
+        "x_freq": {
+          "std": 1.0,
+          "nonzero": 903
+        }
+      }
+    },
+    {
+      "variant": "full_none",
+      "sample": "BGT60TR13C__p02_0_3m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          8,
+          0
+        ],
+        [
+          4,
+          9,
+          0
+        ],
+        [
+          4,
+          7,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 0.0,
+          "nonzero": 0
+        },
+        "x_freq": {
+          "std": 0.0,
+          "nonzero": 0
+        }
+      }
+    },
+    {
+      "variant": "full_none",
+      "sample": "BGT60TR13C__p02_0_6m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          8,
+          0
+        ],
+        [
+          4,
+          9,
+          0
+        ],
+        [
+          4,
+          7,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 0.0,
+          "nonzero": 0
+        },
+        "x_freq": {
+          "std": 0.0,
+          "nonzero": 0
+        }
+      }
+    },
+    {
+      "variant": "full_none",
+      "sample": "BGT60TR13C__p02_0_9m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          8,
+          0
+        ],
+        [
+          4,
+          9,
+          0
+        ],
+        [
+          4,
+          7,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 0.0,
+          "nonzero": 0
+        },
+        "x_freq": {
+          "std": 0.0,
+          "nonzero": 0
+        }
+      }
+    },
+    {
+      "variant": "full_none",
+      "sample": "BGT60TR13C__p02_1_2m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          8,
+          0
+        ],
+        [
+          4,
+          9,
+          0
+        ],
+        [
+          4,
+          7,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 0.0,
+          "nonzero": 0
+        },
+        "x_freq": {
+          "std": 0.0,
+          "nonzero": 0
+        }
+      }
+    },
+    {
+      "variant": "legacy_mean",
+      "sample": "BGT60TR13C__p02_0_3m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          7,
+          1
+        ],
+        [
+          4,
+          6,
+          1
+        ],
+        [
+          2,
+          7,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 1.0,
+          "nonzero": 1792
+        },
+        "x_freq": {
+          "std": 1.0,
+          "nonzero": 903
+        }
+      }
+    },
+    {
+      "variant": "legacy_mean",
+      "sample": "BGT60TR13C__p02_0_6m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          7,
+          1
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 1.0,
+          "nonzero": 1792
+        },
+        "x_freq": {
+          "std": 1.0,
+          "nonzero": 903
+        }
+      }
+    },
+    {
+      "variant": "legacy_mean",
+      "sample": "BGT60TR13C__p02_0_9m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          7,
+          1
+        ],
+        [
+          4,
+          8,
+          1
+        ],
+        [
+          6,
+          8,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 1.0,
+          "nonzero": 1792
+        },
+        "x_freq": {
+          "std": 1.0,
+          "nonzero": 903
+        }
+      }
+    },
+    {
+      "variant": "legacy_mean",
+      "sample": "BGT60TR13C__p02_1_2m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          7,
+          1
+        ],
+        [
+          4,
+          8,
+          1
+        ],
+        [
+          4,
+          6,
+          1
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 1.0,
+          "nonzero": 1792
+        },
+        "x_freq": {
+          "std": 1.0,
+          "nonzero": 903
+        }
+      }
+    },
+    {
+      "variant": "legacy_none",
+      "sample": "BGT60TR13C__p02_0_3m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          8,
+          0
+        ],
+        [
+          4,
+          9,
+          0
+        ],
+        [
+          4,
+          7,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 0.0,
+          "nonzero": 0
+        },
+        "x_freq": {
+          "std": 0.0,
+          "nonzero": 0
+        }
+      }
+    },
+    {
+      "variant": "legacy_none",
+      "sample": "BGT60TR13C__p02_0_6m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          8,
+          0
+        ],
+        [
+          4,
+          9,
+          0
+        ],
+        [
+          4,
+          7,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 0.0,
+          "nonzero": 0
+        },
+        "x_freq": {
+          "std": 0.0,
+          "nonzero": 0
+        }
+      }
+    },
+    {
+      "variant": "legacy_none",
+      "sample": "BGT60TR13C__p02_0_9m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          8,
+          0
+        ],
+        [
+          4,
+          9,
+          0
+        ],
+        [
+          4,
+          7,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 0.0,
+          "nonzero": 0
+        },
+        "x_freq": {
+          "std": 0.0,
+          "nonzero": 0
+        }
+      }
+    },
+    {
+      "variant": "legacy_none",
+      "sample": "BGT60TR13C__p02_1_2m_short__w00000.npz",
+      "target_bins_dar": [
+        [
+          4,
+          8,
+          0
+        ],
+        [
+          4,
+          9,
+          0
+        ],
+        [
+          4,
+          7,
+          0
+        ]
+      ],
+      "arrays": {
+        "x_time": {
+          "std": 0.0,
+          "nonzero": 0
+        },
+        "x_freq": {
+          "std": 0.0,
+          "nonzero": 0
+        }
+      }
+    }
+  ]
+}

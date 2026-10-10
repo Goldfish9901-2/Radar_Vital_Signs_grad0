@@ -1,0 +1,239 @@
+{
+  "variants": {
+    "legacy_mean": [
+      "legacy",
+      "chirp_mean"
+    ],
+    "full_mean": [
+      "full_fft_crop",
+      "chirp_mean"
+    ],
+    "legacy_none": [
+      "legacy",
+      "none"
+    ],
+    "full_none": [
+      "full_fft_crop",
+      "none"
+    ]
+  },
+  "sampling_mode": "legacy",
+  "roi": "legacy_mean fixed per sample",
+  "raw_frame_rate_hz": 30,
+  "representation_frame_rate_hz": 20,
+  "frame_resampling": "complex polyphase 2/3, after RDA, all variants",
+  "reference_alignment": "frame index / 30 s, assumes shared acquisition start; no ECG oracle",
+  "split_mode": "stable_grouped",
+  "seed": 42,
+  "window_size": 256,
+  "stride": 128,
+  "model": "cycleformer_v3_small",
+  "epochs": 80,
+  "patience": 12,
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "long_duration": "excluded",
+  "inputs": [
+    {
+      "participant": 1,
+      "distance": "0.3m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_1/Radar_Data/Participant1/0.3m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_1/HR_Ref_Data/Participant1/0.3m/HR_ref.csv"
+    },
+    {
+      "participant": 1,
+      "distance": "0.6m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_1/Radar_Data/Participant1/0.6m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_1/HR_Ref_Data/Participant1/0.6m/HR_ref.csv"
+    },
+    {
+      "participant": 1,
+      "distance": "0.9m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_1/Radar_Data/Participant1/0.9m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_1/HR_Ref_Data/Participant1/0.9m/HR_ref.csv"
+    },
+    {
+      "participant": 1,
+      "distance": "1.2m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_1/Radar_Data/Participant1/1.2m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_1/HR_Ref_Data/Participant1/1.2m/HR_ref.csv"
+    },
+    {
+      "participant": 2,
+      "distance": "0.3m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_2/Radar_Data/Participant2/0.3m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_2/HR_Ref_Data/Participant2/0.3m/HR_ref.csv"
+    },
+    {
+      "participant": 2,
+      "distance": "0.6m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_2/Radar_Data/Participant2/0.6m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_2/HR_Ref_Data/Participant2/0.6m/HR_ref.csv"
+    },
+    {
+      "participant": 2,
+      "distance": "0.9m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_2/Radar_Data/Participant2/0.9m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_2/HR_Ref_Data/Participant2/0.9m/HR_ref.csv"
+    },
+    {
+      "participant": 2,
+      "distance": "1.2m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_2/Radar_Data/Participant2/1.2m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_2/HR_Ref_Data/Participant2/1.2m/HR_ref.csv"
+    },
+    {
+      "participant": 3,
+      "distance": "0.3m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_3/Radar_Data/Participant3/0.3m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_3/HR_Ref_Data/Participant3/0.3m/HR_ref.csv"
+    },
+    {
+      "participant": 3,
+      "distance": "0.6m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_3/Radar_Data/Participant3/0.6m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_3/HR_Ref_Data/Participant3/0.6m/HR_ref.csv"
+    },
+    {
+      "participant": 3,
+      "distance": "0.9m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_3/Radar_Data/Participant3/0.9m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_3/HR_Ref_Data/Participant3/0.9m/HR_ref.csv"
+    },
+    {
+      "participant": 3,
+      "distance": "1.2m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_3/Radar_Data/Participant3/1.2m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_3/HR_Ref_Data/Participant3/1.2m/HR_ref.csv"
+    },
+    {
+      "participant": 4,
+      "distance": "0.3m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_4/Radar_Data/Participant4/0.3m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_4/HR_Ref_Data/Participant4/0.3m/HR_ref.csv"
+    },
+    {
+      "participant": 4,
+      "distance": "0.6m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_4/Radar_Data/Participant4/0.6m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_4/HR_Ref_Data/Participant4/0.6m/HR_ref.csv"
+    },
+    {
+      "participant": 4,
+      "distance": "0.9m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_4/Radar_Data/Participant4/0.9m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_4/HR_Ref_Data/Participant4/0.9m/HR_ref.csv"
+    },
+    {
+      "participant": 4,
+      "distance": "1.2m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_4/Radar_Data/Participant4/1.2m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_4/HR_Ref_Data/Participant4/1.2m/HR_ref.csv"
+    },
+    {
+      "participant": 5,
+      "distance": "0.3m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_5/Radar_Data/Participant5/0.3m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_5/HR_Ref_Data/Participant5/0.3m/HR_ref.csv"
+    },
+    {
+      "participant": 5,
+      "distance": "0.6m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_5/Radar_Data/Participant5/0.6m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_5/HR_Ref_Data/Participant5/0.6m/HR_ref.csv"
+    },
+    {
+      "participant": 5,
+      "distance": "0.9m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_5/Radar_Data/Participant5/0.9m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_5/HR_Ref_Data/Participant5/0.9m/HR_ref.csv"
+    },
+    {
+      "participant": 5,
+      "distance": "1.2m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_5/Radar_Data/Participant5/1.2m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_5/HR_Ref_Data/Participant5/1.2m/HR_ref.csv"
+    },
+    {
+      "participant": 6,
+      "distance": "0.3m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_6/Radar_Data/Participant6/0.3m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_6/HR_Ref_Data/Participant6/0.3m/HR_ref.csv"
+    },
+    {
+      "participant": 6,
+      "distance": "0.6m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_6/Radar_Data/Participant6/0.6m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_6/HR_Ref_Data/Participant6/0.6m/HR_ref.csv"
+    },
+    {
+      "participant": 6,
+      "distance": "0.9m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_6/Radar_Data/Participant6/0.9m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_6/HR_Ref_Data/Participant6/0.9m/HR_ref.csv"
+    },
+    {
+      "participant": 6,
+      "distance": "1.2m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_6/Radar_Data/Participant6/1.2m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_6/HR_Ref_Data/Participant6/1.2m/HR_ref.csv"
+    },
+    {
+      "participant": 7,
+      "distance": "0.3m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_7/Radar_Data/Participant7/0.3m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_7/HR_Ref_Data/Participant7/0.3m/HR_ref.csv"
+    },
+    {
+      "participant": 7,
+      "distance": "0.6m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_7/Radar_Data/Participant7/0.6m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_7/HR_Ref_Data/Participant7/0.6m/HR_ref.csv"
+    },
+    {
+      "participant": 7,
+      "distance": "0.9m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_7/Radar_Data/Participant7/0.9m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_7/HR_Ref_Data/Participant7/0.9m/HR_ref.csv"
+    },
+    {
+      "participant": 7,
+      "distance": "1.2m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_7/Radar_Data/Participant7/1.2m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_7/HR_Ref_Data/Participant7/1.2m/HR_ref.csv"
+    },
+    {
+      "participant": 8,
+      "distance": "0.3m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_8/Radar_Data/Participant8/0.3m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_8/HR_Ref_Data/Participant8/0.3m/HR_ref.csv"
+    },
+    {
+      "participant": 8,
+      "distance": "0.6m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_8/Radar_Data/Participant8/0.6m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_8/HR_Ref_Data/Participant8/0.6m/HR_ref.csv"
+    },
+    {
+      "participant": 8,
+      "distance": "0.9m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_8/Radar_Data/Participant8/0.9m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_8/HR_Ref_Data/Participant8/0.9m/HR_ref.csv"
+    },
+    {
+      "participant": 8,
+      "distance": "1.2m",
+      "radar": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_8/Radar_Data/Participant8/1.2m/radar_raw_data.npy",
+      "reference": "/kaggle/input/datasets/goldfish9901/bgt60tr13c-vital-signs/participant_8/HR_Ref_Data/Participant8/1.2m/HR_ref.csv"
+    }
+  ],
+  "production_source_sha256": "4326b93f8e0d5cd886b80ca6759614ca4e62a0d4bcbfa6e705823a49f8462fb1"
+}

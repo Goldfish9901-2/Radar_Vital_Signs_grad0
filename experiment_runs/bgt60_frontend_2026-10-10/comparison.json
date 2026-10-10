@@ -1,0 +1,650 @@
+{
+  "legacy_mean_retrained": {
+    "prediction_std_bpm": 0.2830924251494331,
+    "constant_train_mean_bpm": 80.63712310791016,
+    "constant_mae_bpm": 7.881601727527121,
+    "checkpoint_sha256": "0e3474d5e16ff08037130eb8b98a9862a8deb9baf29e8e2288117784af5810ce",
+    "evaluation": {
+      "model": "cycleformer",
+      "checkpoint": "/kaggle/working/models/legacy_mean/best.pt",
+      "provenance": {
+        "git_commit": "unknown",
+        "representation": "proposed",
+        "dataset_dir": "/kaggle/working/training_exports/legacy_mean",
+        "dataset_manifest_sha256": "95472fa78b8b56f6",
+        "seed": 42,
+        "model": "cycleformer"
+      },
+      "source_label_stats": {
+        "mean": 80.63712310791016,
+        "std": 11.670076370239258
+      },
+      "target": {
+        "export_dir": "/kaggle/working/training_exports/legacy_mean",
+        "split": "test",
+        "datasets": [
+          "BGT60TR13C"
+        ],
+        "size": 368
+      },
+      "parameters": 326501,
+      "device": "cuda",
+      "torch_version": "2.11.0+cu128",
+      "loss": 0.2538982914841693,
+      "overall": {
+        "count": 368,
+        "mae_bpm": 5.250692740730617,
+        "rmse_bpm": 6.51585890133281,
+        "pearson_r": 0.0875873106946404,
+        "within_3bpm_percent": 33.96739130434783,
+        "within_5bpm_percent": 53.26086956521739,
+        "label_mean_bpm": 88.32602055176444,
+        "pred_mean_bpm": 83.84182131808737
+      },
+      "by_dataset": {
+        "BGT60TR13C": {
+          "count": 368,
+          "mae_bpm": 5.250692740730617,
+          "rmse_bpm": 6.51585890133281,
+          "pearson_r": 0.0875873106946404,
+          "within_3bpm_percent": 33.96739130434783,
+          "within_5bpm_percent": 53.26086956521739,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.84182131808737
+        }
+      },
+      "by_participant": {
+        "2": {
+          "count": 368,
+          "mae_bpm": 5.250692740730617,
+          "rmse_bpm": 6.51585890133281,
+          "pearson_r": 0.0875873106946404,
+          "within_3bpm_percent": 33.96739130434783,
+          "within_5bpm_percent": 53.26086956521739,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.84182131808737
+        }
+      },
+      "by_group": {
+        "BGT60TR13C/participant/2": {
+          "count": 368,
+          "mae_bpm": 5.250692740730617,
+          "rmse_bpm": 6.51585890133281,
+          "pearson_r": 0.0875873106946404,
+          "within_3bpm_percent": 33.96739130434783,
+          "within_5bpm_percent": 53.26086956521739,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.84182131808737
+        }
+      },
+      "predictions_csv": "/kaggle/working/evaluations/legacy_mean_retrained.csv"
+    }
+  },
+  "legacy_mean_frozen_legacy": {
+    "prediction_std_bpm": 0.2830924251494331,
+    "constant_train_mean_bpm": 80.63712310791016,
+    "constant_mae_bpm": 7.881601727527121,
+    "checkpoint_sha256": "0e3474d5e16ff08037130eb8b98a9862a8deb9baf29e8e2288117784af5810ce",
+    "evaluation": {
+      "model": "cycleformer",
+      "checkpoint": "/kaggle/working/models/legacy_mean/best.pt",
+      "provenance": {
+        "git_commit": "unknown",
+        "representation": "proposed",
+        "dataset_dir": "/kaggle/working/training_exports/legacy_mean",
+        "dataset_manifest_sha256": "95472fa78b8b56f6",
+        "seed": 42,
+        "model": "cycleformer"
+      },
+      "source_label_stats": {
+        "mean": 80.63712310791016,
+        "std": 11.670076370239258
+      },
+      "target": {
+        "export_dir": "/kaggle/working/training_exports/legacy_mean",
+        "split": "test",
+        "datasets": [
+          "BGT60TR13C"
+        ],
+        "size": 368
+      },
+      "parameters": 326501,
+      "device": "cuda",
+      "torch_version": "2.11.0+cu128",
+      "loss": 0.2538982914841693,
+      "overall": {
+        "count": 368,
+        "mae_bpm": 5.250692740730617,
+        "rmse_bpm": 6.51585890133281,
+        "pearson_r": 0.0875873106946404,
+        "within_3bpm_percent": 33.96739130434783,
+        "within_5bpm_percent": 53.26086956521739,
+        "label_mean_bpm": 88.32602055176444,
+        "pred_mean_bpm": 83.84182131808737
+      },
+      "by_dataset": {
+        "BGT60TR13C": {
+          "count": 368,
+          "mae_bpm": 5.250692740730617,
+          "rmse_bpm": 6.51585890133281,
+          "pearson_r": 0.0875873106946404,
+          "within_3bpm_percent": 33.96739130434783,
+          "within_5bpm_percent": 53.26086956521739,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.84182131808737
+        }
+      },
+      "by_participant": {
+        "2": {
+          "count": 368,
+          "mae_bpm": 5.250692740730617,
+          "rmse_bpm": 6.51585890133281,
+          "pearson_r": 0.0875873106946404,
+          "within_3bpm_percent": 33.96739130434783,
+          "within_5bpm_percent": 53.26086956521739,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.84182131808737
+        }
+      },
+      "by_group": {
+        "BGT60TR13C/participant/2": {
+          "count": 368,
+          "mae_bpm": 5.250692740730617,
+          "rmse_bpm": 6.51585890133281,
+          "pearson_r": 0.0875873106946404,
+          "within_3bpm_percent": 33.96739130434783,
+          "within_5bpm_percent": 53.26086956521739,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.84182131808737
+        }
+      },
+      "predictions_csv": "/kaggle/working/evaluations/legacy_mean_frozen_legacy.csv"
+    }
+  },
+  "full_mean_retrained": {
+    "prediction_std_bpm": 0.29732861872145294,
+    "constant_train_mean_bpm": 80.63712310791016,
+    "constant_mae_bpm": 7.881601727527121,
+    "checkpoint_sha256": "66ac7f84d95a52fa9e1d4f9a6f915cf1daa87f96a24f49b8b93e2c4edd87e288",
+    "evaluation": {
+      "model": "cycleformer",
+      "checkpoint": "/kaggle/working/models/full_mean/best.pt",
+      "provenance": {
+        "git_commit": "unknown",
+        "representation": "proposed",
+        "dataset_dir": "/kaggle/working/training_exports/full_mean",
+        "dataset_manifest_sha256": "a1c7a2c28f6caef1",
+        "seed": 42,
+        "model": "cycleformer"
+      },
+      "source_label_stats": {
+        "mean": 80.63712310791016,
+        "std": 11.670076370239258
+      },
+      "target": {
+        "export_dir": "/kaggle/working/training_exports/full_mean",
+        "split": "test",
+        "datasets": [
+          "BGT60TR13C"
+        ],
+        "size": 368
+      },
+      "parameters": 326501,
+      "device": "cuda",
+      "torch_version": "2.11.0+cu128",
+      "loss": 0.260100561639537,
+      "overall": {
+        "count": 368,
+        "mae_bpm": 5.325906421827233,
+        "rmse_bpm": 6.614774563928366,
+        "pearson_r": -0.10885079645457023,
+        "within_3bpm_percent": 32.608695652173914,
+        "within_5bpm_percent": 52.98913043478261,
+        "label_mean_bpm": 88.32602055176444,
+        "pred_mean_bpm": 83.75915094043897
+      },
+      "by_dataset": {
+        "BGT60TR13C": {
+          "count": 368,
+          "mae_bpm": 5.325906421827233,
+          "rmse_bpm": 6.614774563928366,
+          "pearson_r": -0.10885079645457023,
+          "within_3bpm_percent": 32.608695652173914,
+          "within_5bpm_percent": 52.98913043478261,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.75915094043897
+        }
+      },
+      "by_participant": {
+        "2": {
+          "count": 368,
+          "mae_bpm": 5.325906421827233,
+          "rmse_bpm": 6.614774563928366,
+          "pearson_r": -0.10885079645457023,
+          "within_3bpm_percent": 32.608695652173914,
+          "within_5bpm_percent": 52.98913043478261,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.75915094043897
+        }
+      },
+      "by_group": {
+        "BGT60TR13C/participant/2": {
+          "count": 368,
+          "mae_bpm": 5.325906421827233,
+          "rmse_bpm": 6.614774563928366,
+          "pearson_r": -0.10885079645457023,
+          "within_3bpm_percent": 32.608695652173914,
+          "within_5bpm_percent": 52.98913043478261,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.75915094043897
+        }
+      },
+      "predictions_csv": "/kaggle/working/evaluations/full_mean_retrained.csv"
+    }
+  },
+  "full_mean_frozen_legacy": {
+    "prediction_std_bpm": 0.2916461885563187,
+    "constant_train_mean_bpm": 80.63712310791016,
+    "constant_mae_bpm": 7.881601727527121,
+    "checkpoint_sha256": "0e3474d5e16ff08037130eb8b98a9862a8deb9baf29e8e2288117784af5810ce",
+    "evaluation": {
+      "model": "cycleformer",
+      "checkpoint": "/kaggle/working/models/legacy_mean/best.pt",
+      "provenance": {
+        "git_commit": "unknown",
+        "representation": "proposed",
+        "dataset_dir": "/kaggle/working/training_exports/legacy_mean",
+        "dataset_manifest_sha256": "95472fa78b8b56f6",
+        "seed": 42,
+        "model": "cycleformer"
+      },
+      "source_label_stats": {
+        "mean": 80.63712310791016,
+        "std": 11.670076370239258
+      },
+      "target": {
+        "export_dir": "/kaggle/working/training_exports/full_mean",
+        "split": "test",
+        "datasets": [
+          "BGT60TR13C"
+        ],
+        "size": 368
+      },
+      "parameters": 326501,
+      "device": "cuda",
+      "torch_version": "2.11.0+cu128",
+      "loss": 0.2547687758570132,
+      "overall": {
+        "count": 368,
+        "mae_bpm": 5.255226798679518,
+        "rmse_bpm": 6.532309878624645,
+        "pearson_r": -0.005789290114466147,
+        "within_3bpm_percent": 34.78260869565217,
+        "within_5bpm_percent": 53.80434782608695,
+        "label_mean_bpm": 88.32602055176444,
+        "pred_mean_bpm": 83.84645410206006
+      },
+      "by_dataset": {
+        "BGT60TR13C": {
+          "count": 368,
+          "mae_bpm": 5.255226798679518,
+          "rmse_bpm": 6.532309878624645,
+          "pearson_r": -0.005789290114466147,
+          "within_3bpm_percent": 34.78260869565217,
+          "within_5bpm_percent": 53.80434782608695,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.84645410206006
+        }
+      },
+      "by_participant": {
+        "2": {
+          "count": 368,
+          "mae_bpm": 5.255226798679518,
+          "rmse_bpm": 6.532309878624645,
+          "pearson_r": -0.005789290114466147,
+          "within_3bpm_percent": 34.78260869565217,
+          "within_5bpm_percent": 53.80434782608695,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.84645410206006
+        }
+      },
+      "by_group": {
+        "BGT60TR13C/participant/2": {
+          "count": 368,
+          "mae_bpm": 5.255226798679518,
+          "rmse_bpm": 6.532309878624645,
+          "pearson_r": -0.005789290114466147,
+          "within_3bpm_percent": 34.78260869565217,
+          "within_5bpm_percent": 53.80434782608695,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.84645410206006
+        }
+      },
+      "predictions_csv": "/kaggle/working/evaluations/full_mean_frozen_legacy.csv"
+    }
+  },
+  "legacy_none_retrained": {
+    "prediction_std_bpm": 0.0,
+    "constant_train_mean_bpm": 80.63712310791016,
+    "constant_mae_bpm": 7.881601727527121,
+    "checkpoint_sha256": "93f2bcd9f6931fb76ffde0fc188c9031a16fba77b5058df35cb18e1f366c0af8",
+    "evaluation": {
+      "model": "cycleformer",
+      "checkpoint": "/kaggle/working/models/legacy_none/best.pt",
+      "provenance": {
+        "git_commit": "unknown",
+        "representation": "proposed",
+        "dataset_dir": "/kaggle/working/training_exports/legacy_none",
+        "dataset_manifest_sha256": "e844316bcfb84f16",
+        "seed": 42,
+        "model": "cycleformer"
+      },
+      "source_label_stats": {
+        "mean": 80.63712310791016,
+        "std": 11.670076370239258
+      },
+      "target": {
+        "export_dir": "/kaggle/working/training_exports/legacy_none",
+        "split": "test",
+        "datasets": [
+          "BGT60TR13C"
+        ],
+        "size": 368
+      },
+      "parameters": 326501,
+      "device": "cuda",
+      "torch_version": "2.11.0+cu128",
+      "loss": 0.2529290551724641,
+      "overall": {
+        "count": 368,
+        "mae_bpm": 5.226713740307352,
+        "rmse_bpm": 6.506543231372026,
+        "pearson_r": NaN,
+        "within_3bpm_percent": 33.96739130434783,
+        "within_5bpm_percent": 53.26086956521739,
+        "label_mean_bpm": 88.32602055176444,
+        "pred_mean_bpm": 83.87274932861328
+      },
+      "by_dataset": {
+        "BGT60TR13C": {
+          "count": 368,
+          "mae_bpm": 5.226713740307352,
+          "rmse_bpm": 6.506543231372026,
+          "pearson_r": NaN,
+          "within_3bpm_percent": 33.96739130434783,
+          "within_5bpm_percent": 53.26086956521739,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.87274932861328
+        }
+      },
+      "by_participant": {
+        "2": {
+          "count": 368,
+          "mae_bpm": 5.226713740307352,
+          "rmse_bpm": 6.506543231372026,
+          "pearson_r": NaN,
+          "within_3bpm_percent": 33.96739130434783,
+          "within_5bpm_percent": 53.26086956521739,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.87274932861328
+        }
+      },
+      "by_group": {
+        "BGT60TR13C/participant/2": {
+          "count": 368,
+          "mae_bpm": 5.226713740307352,
+          "rmse_bpm": 6.506543231372026,
+          "pearson_r": NaN,
+          "within_3bpm_percent": 33.96739130434783,
+          "within_5bpm_percent": 53.26086956521739,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 83.87274932861328
+        }
+      },
+      "predictions_csv": "/kaggle/working/evaluations/legacy_none_retrained.csv"
+    }
+  },
+  "legacy_none_frozen_legacy": {
+    "prediction_std_bpm": 0.0,
+    "constant_train_mean_bpm": 80.63712310791016,
+    "constant_mae_bpm": 7.881601727527121,
+    "checkpoint_sha256": "0e3474d5e16ff08037130eb8b98a9862a8deb9baf29e8e2288117784af5810ce",
+    "evaluation": {
+      "model": "cycleformer",
+      "checkpoint": "/kaggle/working/models/legacy_mean/best.pt",
+      "provenance": {
+        "git_commit": "unknown",
+        "representation": "proposed",
+        "dataset_dir": "/kaggle/working/training_exports/legacy_mean",
+        "dataset_manifest_sha256": "95472fa78b8b56f6",
+        "seed": 42,
+        "model": "cycleformer"
+      },
+      "source_label_stats": {
+        "mean": 80.63712310791016,
+        "std": 11.670076370239258
+      },
+      "target": {
+        "export_dir": "/kaggle/working/training_exports/legacy_none",
+        "split": "test",
+        "datasets": [
+          "BGT60TR13C"
+        ],
+        "size": 368
+      },
+      "parameters": 326501,
+      "device": "cuda",
+      "torch_version": "2.11.0+cu128",
+      "loss": 0.3258585307909095,
+      "overall": {
+        "count": 368,
+        "mae_bpm": 6.23570556225984,
+        "rmse_bpm": 7.498906324849331,
+        "pearson_r": NaN,
+        "within_3bpm_percent": 25.27173913043478,
+        "within_5bpm_percent": 41.57608695652174,
+        "label_mean_bpm": 88.32602055176444,
+        "pred_mean_bpm": 82.51825714111328
+      },
+      "by_dataset": {
+        "BGT60TR13C": {
+          "count": 368,
+          "mae_bpm": 6.23570556225984,
+          "rmse_bpm": 7.498906324849331,
+          "pearson_r": NaN,
+          "within_3bpm_percent": 25.27173913043478,
+          "within_5bpm_percent": 41.57608695652174,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 82.51825714111328
+        }
+      },
+      "by_participant": {
+        "2": {
+          "count": 368,
+          "mae_bpm": 6.23570556225984,
+          "rmse_bpm": 7.498906324849331,
+          "pearson_r": NaN,
+          "within_3bpm_percent": 25.27173913043478,
+          "within_5bpm_percent": 41.57608695652174,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 82.51825714111328
+        }
+      },
+      "by_group": {
+        "BGT60TR13C/participant/2": {
+          "count": 368,
+          "mae_bpm": 6.23570556225984,
+          "rmse_bpm": 7.498906324849331,
+          "pearson_r": NaN,
+          "within_3bpm_percent": 25.27173913043478,
+          "within_5bpm_percent": 41.57608695652174,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 82.51825714111328
+        }
+      },
+      "predictions_csv": "/kaggle/working/evaluations/legacy_none_frozen_legacy.csv"
+    }
+  },
+  "full_none_retrained": {
+    "prediction_std_bpm": 3.5105183558409283e-06,
+    "constant_train_mean_bpm": 80.63712310791016,
+    "constant_mae_bpm": 7.881601727527121,
+    "checkpoint_sha256": "dc072da5b27337089d979d8be161cab366d5963ec3737e10f182ad9367d416c4",
+    "evaluation": {
+      "model": "cycleformer",
+      "checkpoint": "/kaggle/working/models/full_none/best.pt",
+      "provenance": {
+        "git_commit": "unknown",
+        "representation": "proposed",
+        "dataset_dir": "/kaggle/working/training_exports/full_none",
+        "dataset_manifest_sha256": "c47a178df0c0e8f8",
+        "seed": 42,
+        "model": "cycleformer"
+      },
+      "source_label_stats": {
+        "mean": 80.63712310791016,
+        "std": 11.670076370239258
+      },
+      "target": {
+        "export_dir": "/kaggle/working/training_exports/full_none",
+        "split": "test",
+        "datasets": [
+          "BGT60TR13C"
+        ],
+        "size": 368
+      },
+      "parameters": 326501,
+      "device": "cuda",
+      "torch_version": "2.11.0+cu128",
+      "loss": 0.17191987970600958,
+      "overall": {
+        "count": 368,
+        "mae_bpm": 4.067714919214663,
+        "rmse_bpm": 5.182431521456288,
+        "pearson_r": 0.47605918519871676,
+        "within_3bpm_percent": 47.28260869565217,
+        "within_5bpm_percent": 68.20652173913044,
+        "label_mean_bpm": 88.32602055176444,
+        "pred_mean_bpm": 90.41267627218495
+      },
+      "by_dataset": {
+        "BGT60TR13C": {
+          "count": 368,
+          "mae_bpm": 4.067714919214663,
+          "rmse_bpm": 5.182431521456288,
+          "pearson_r": 0.47605918519871676,
+          "within_3bpm_percent": 47.28260869565217,
+          "within_5bpm_percent": 68.20652173913044,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 90.41267627218495
+        }
+      },
+      "by_participant": {
+        "2": {
+          "count": 368,
+          "mae_bpm": 4.067714919214663,
+          "rmse_bpm": 5.182431521456288,
+          "pearson_r": 0.47605918519871676,
+          "within_3bpm_percent": 47.28260869565217,
+          "within_5bpm_percent": 68.20652173913044,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 90.41267627218495
+        }
+      },
+      "by_group": {
+        "BGT60TR13C/participant/2": {
+          "count": 368,
+          "mae_bpm": 4.067714919214663,
+          "rmse_bpm": 5.182431521456288,
+          "pearson_r": 0.47605918519871676,
+          "within_3bpm_percent": 47.28260869565217,
+          "within_5bpm_percent": 68.20652173913044,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 90.41267627218495
+        }
+      },
+      "predictions_csv": "/kaggle/working/evaluations/full_none_retrained.csv"
+    }
+  },
+  "full_none_frozen_legacy": {
+    "prediction_std_bpm": 0.0,
+    "constant_train_mean_bpm": 80.63712310791016,
+    "constant_mae_bpm": 7.881601727527121,
+    "checkpoint_sha256": "0e3474d5e16ff08037130eb8b98a9862a8deb9baf29e8e2288117784af5810ce",
+    "evaluation": {
+      "model": "cycleformer",
+      "checkpoint": "/kaggle/working/models/legacy_mean/best.pt",
+      "provenance": {
+        "git_commit": "unknown",
+        "representation": "proposed",
+        "dataset_dir": "/kaggle/working/training_exports/legacy_mean",
+        "dataset_manifest_sha256": "95472fa78b8b56f6",
+        "seed": 42,
+        "model": "cycleformer"
+      },
+      "source_label_stats": {
+        "mean": 80.63712310791016,
+        "std": 11.670076370239258
+      },
+      "target": {
+        "export_dir": "/kaggle/working/training_exports/full_none",
+        "split": "test",
+        "datasets": [
+          "BGT60TR13C"
+        ],
+        "size": 368
+      },
+      "parameters": 326501,
+      "device": "cuda",
+      "torch_version": "2.11.0+cu128",
+      "loss": 0.3258585307909095,
+      "overall": {
+        "count": 368,
+        "mae_bpm": 6.23570556225984,
+        "rmse_bpm": 7.498906324849331,
+        "pearson_r": NaN,
+        "within_3bpm_percent": 25.27173913043478,
+        "within_5bpm_percent": 41.57608695652174,
+        "label_mean_bpm": 88.32602055176444,
+        "pred_mean_bpm": 82.51825714111328
+      },
+      "by_dataset": {
+        "BGT60TR13C": {
+          "count": 368,
+          "mae_bpm": 6.23570556225984,
+          "rmse_bpm": 7.498906324849331,
+          "pearson_r": NaN,
+          "within_3bpm_percent": 25.27173913043478,
+          "within_5bpm_percent": 41.57608695652174,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 82.51825714111328
+        }
+      },
+      "by_participant": {
+        "2": {
+          "count": 368,
+          "mae_bpm": 6.23570556225984,
+          "rmse_bpm": 7.498906324849331,
+          "pearson_r": NaN,
+          "within_3bpm_percent": 25.27173913043478,
+          "within_5bpm_percent": 41.57608695652174,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 82.51825714111328
+        }
+      },
+      "by_group": {
+        "BGT60TR13C/participant/2": {
+          "count": 368,
+          "mae_bpm": 6.23570556225984,
+          "rmse_bpm": 7.498906324849331,
+          "pearson_r": NaN,
+          "within_3bpm_percent": 25.27173913043478,
+          "within_5bpm_percent": 41.57608695652174,
+          "label_mean_bpm": 88.32602055176444,
+          "pred_mean_bpm": 82.51825714111328
+        }
+      },
+      "predictions_csv": "/kaggle/working/evaluations/full_none_frozen_legacy.csv"
+    }
+  }
+}

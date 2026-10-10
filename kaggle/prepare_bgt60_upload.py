@@ -1,0 +1,43 @@
+"""Build a small private Kaggle code dataset and GPU kernel upload folder."""
+import hashlib
+import json
+from pathlib import Path
+import shutil
+import zipfile
+
+ROOT = Path(__file__).resolve().parents[1]
+STAGING = ROOT / "tmp" / "bgt60_frontend_upload"
+DATASET = STAGING / "dataset"
+KERNEL = STAGING / "kernel"
+DATASET.mkdir(parents=True, exist_ok=True)
+KERNEL.mkdir(parents=True, exist_ok=True)
+files = list((ROOT / "src").rglob("*.py")) + [
+    ROOT / "requirements.txt", ROOT / "validate_adc_rda_synthetic.py",
+    ROOT / "docs/ADC_RDA_PHYSICAL_VALIDATION.md",
+    ROOT / "kaggle/run_bgt60_frontend.py",
+]
+archive_path = DATASET / "radar_vital_signs_code.zip"
+with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+    for path in sorted(files):
+        archive.write(path, "Radar_Vital_Signs_grad0/" + path.relative_to(ROOT).as_posix())
+metadata = {
+    "id": "goldfish9901/bgt60-frontend-code",
+    "title": "BGT60 Frontend Ablation Code",
+    "isPrivate": True, "licenses": [{"name": "other"}],
+}
+(DATASET / "dataset-metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
+shutil.copy2(ROOT / "kaggle/run_bgt60_frontend.py", KERNEL)
+kernel = {
+    "id": "goldfish9901/bgt60-cycleformer-frontend-ablation",
+    "title": "BGT60 CycleFormer Frontend Ablation",
+    "code_file": "run_bgt60_frontend.py", "language": "python", "kernel_type": "script",
+    "is_private": True, "enable_gpu": True, "enable_internet": True,
+    "dataset_sources": ["goldfish9901/bgt60-frontend-code", "goldfish9901/bgt60tr13c-vital-signs"],
+    "competition_sources": [], "kernel_sources": [], "model_sources": [],
+}
+(KERNEL / "kernel-metadata.json").write_text(json.dumps(kernel, indent=2), encoding="utf-8")
+receipt = {"files": len(files), "zip_bytes": archive_path.stat().st_size,
+           "sha256": hashlib.sha256(archive_path.read_bytes()).hexdigest(),
+           "dataset": metadata["id"], "kernel": kernel["id"]}
+(STAGING / "bundle_receipt.json").write_text(json.dumps(receipt, indent=2), encoding="utf-8")
+print(json.dumps(receipt, indent=2))

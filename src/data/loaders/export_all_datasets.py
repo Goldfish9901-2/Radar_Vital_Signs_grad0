@@ -114,6 +114,10 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="仅导出 PhysDrive(若与其它数据集参数同时出现,则按出现的数据集导出)",
     )
+    parser.add_argument("--adc-doppler-mode", choices=("legacy", "full_fft_crop"), default="legacy")
+    parser.add_argument("--adc-clutter-mode", choices=("chirp_mean", "none"), default="chirp_mean")
+    parser.add_argument("--adc-sampling-mode", choices=("legacy", "native"), default="legacy",
+                        help="Independent sampling policy for FTU/BGT60 ADC ablations")
     return parser.parse_args()
 
 
@@ -531,16 +535,28 @@ def _build_rda_cube_from_frame(
     sample_idx: np.ndarray,
     target_doppler: int,
     target_angle: int,
+    doppler_mode: str = "legacy",
+    clutter_mode: str = "chirp_mean",
 ) -> np.ndarray:
     """将单帧原始 (rx,chirps,samples) 转为 (doppler,angle,range_full)。"""
     frame = np.asarray(frame_data, dtype=np.complex64)[:, chirp_idx][:, :, sample_idx]  # (rx,c,s)
-    frame = frame - frame.mean(axis=1, keepdims=True)  # slow-time clutter suppression
+    if doppler_mode not in {"legacy", "full_fft_crop"}:
+        raise ValueError(f"Unknown doppler_mode: {doppler_mode}")
+    if clutter_mode not in {"chirp_mean", "none"}:
+        raise ValueError(f"Unknown clutter_mode: {clutter_mode}")
+    if clutter_mode == "chirp_mean":
+        frame = frame - frame.mean(axis=1, keepdims=True)
     range_fft = np.fft.fft(frame, axis=-1)
     range_fft = range_fft[..., : max(1, range_fft.shape[-1] // 2)]  # positive range half
+    # Full mode uses all selected chirps, then crops around shifted DC.
+    fft_length = target_doppler if doppler_mode == "legacy" else max(
+        range_fft.shape[1], target_doppler
+    )
     doppler_fft = np.fft.fftshift(
-        np.fft.fft(range_fft, n=target_doppler, axis=1),
-        axes=1,
-    )  # (rx,d,r)
+        np.fft.fft(range_fft, n=fft_length, axis=1), axes=1,
+    )
+    start = fft_length // 2 - target_doppler // 2
+    doppler_fft = doppler_fft[:, start:start + target_doppler, :]
     angle_fft = np.fft.fftshift(
         np.fft.fft(doppler_fft, n=target_angle, axis=0),
         axes=0,
@@ -553,10 +569,18 @@ def convert_adc_cube_to_rda(
     target_doppler: int = TARGET_DOPPLER,
     target_angle: int = TARGET_ANGLE,
     target_range: int = TARGET_RANGE,
+    *,
+    doppler_mode: str = "legacy",
+    clutter_mode: str = "chirp_mean",
+    sampling_mode: str = "legacy",
+    range_center_bin: Optional[int] = None,
 ) -> Tuple[np.ndarray, np.ndarray, int]:
     """将 (frames, rx, chirps, samples) 转为 (frames, doppler, angle, range)。
 
     与旧版不同：range 维采用“全样本统一目标窗口”，而非逐帧 top-k。
+    默认 legacy/chirp_mean/legacy 复现已有导出；sampling_mode=native 使用全部采样，
+    完整 Doppler FFT 后截取 DC 附近 bins；none 关闭帧内 chirp 均值消除。
+    full_fft_crop 并非全速度谱降采样，频率坐标和幅值尺度可能变化。
     返回:
         - rda: (frames, target_doppler, target_angle, target_range)
         - selected_range_bins: 连续窗口对应的原始 range bin 索引
@@ -565,21 +589,44 @@ def convert_adc_cube_to_rda(
     if radar.ndim != 4:
         raise ValueError(f"期望 4D 雷达张量，实际 ndim={radar.ndim}")
 
+    if any(size <= 0 for size in radar.shape):
+        raise ValueError("ADC dimensions must be nonempty")
+    if min(target_doppler, target_angle, target_range) <= 0:
+        raise ValueError("Target dimensions must be positive")
+    if doppler_mode not in {"legacy", "full_fft_crop"}:
+        raise ValueError(f"Unknown doppler_mode: {doppler_mode}")
+    if clutter_mode not in {"chirp_mean", "none"}:
+        raise ValueError(f"Unknown clutter_mode: {clutter_mode}")
+    if sampling_mode not in {"legacy", "native"}:
+        raise ValueError(f"Unknown sampling_mode: {sampling_mode}")
     frames, _, chirps, samples = radar.shape
     out = np.empty((frames, target_doppler, target_angle, target_range), dtype=np.complex64)
 
-    chirp_idx = _select_even_indices(chirps, min(chirps, 64))
-    sample_idx = _select_even_indices(samples, min(samples, 256))
+    # Sampling is independent of FFT policy to permit one-factor comparisons.
+    chirp_idx = (_select_even_indices(chirps, min(chirps, 64))
+                 if sampling_mode == "legacy" else np.arange(chirps))
+    sample_idx = (_select_even_indices(samples, min(samples, 256))
+                  if sampling_mode == "legacy" else np.arange(samples))
+    total_range_bins = max(1, len(sample_idx) // 2)
+    if range_center_bin is not None and (
+        not isinstance(range_center_bin, (int, np.integer))
+        or not 0 <= range_center_bin < total_range_bins
+    ):
+        raise ValueError("range_center_bin must index the selected sampling grid")
 
     # pass-1: 全样本估计目标中心 range bin（语义稳定）
     global_range_energy: Optional[np.ndarray] = None
     for fi in range(frames):
+        if range_center_bin is not None:
+            break
         cube_full = _build_rda_cube_from_frame(
             frame_data=radar[fi],
             chirp_idx=chirp_idx,
             sample_idx=sample_idx,
             target_doppler=target_doppler,
             target_angle=target_angle,
+            doppler_mode=doppler_mode,
+            clutter_mode=clutter_mode,
         )  # (d,a,rfull)
         energy = np.mean(np.abs(cube_full), axis=(0, 1))
         if global_range_energy is None:
@@ -587,12 +634,12 @@ def convert_adc_cube_to_rda(
         else:
             global_range_energy += energy
 
-    if global_range_energy is None or global_range_energy.size == 0:
+    if range_center_bin is None and (global_range_energy is None or global_range_energy.size == 0):
         raise ValueError("无法估计 range 能量分布。")
 
-    center_range_bin = int(np.argmax(global_range_energy))
+    center_range_bin = int(np.argmax(global_range_energy)) if range_center_bin is None else int(range_center_bin)
     selected_range_bins = _range_window_indices(
-        total_bins=int(global_range_energy.size),
+        total_bins=total_range_bins,
         target_bins=target_range,
         center_bin=center_range_bin,
     )
@@ -605,6 +652,8 @@ def convert_adc_cube_to_rda(
             sample_idx=sample_idx,
             target_doppler=target_doppler,
             target_angle=target_angle,
+            doppler_mode=doppler_mode,
+            clutter_mode=clutter_mode,
         )  # (d,a,rfull)
         cube = cube_full[:, :, selected_range_bins]
         out[fi] = _crop_or_pad_last_axis(cube, target_range).astype(np.complex64)
@@ -639,6 +688,7 @@ def export_ftu(
     participant_id: Optional[int] = None,
     scenario: Optional[str] = None,
     distance: Optional[str] = None,
+    adc_options: Optional[Dict[str, str]] = None,
 ) -> Tuple[int, int]:
     started_at = time.monotonic()
     print_stage("FTU", "Stage 1/4: initialize loader")
@@ -690,7 +740,7 @@ def export_ftu(
             selected_range_bins: Optional[np.ndarray] = None
             center_range_bin: Optional[int] = None
             if UNIFY_TO_RDA:
-                radar_out, selected_range_bins, center_range_bin = convert_adc_cube_to_rda(radar)
+                radar_out, selected_range_bins, center_range_bin = convert_adc_cube_to_rda(radar, **(adc_options or {}))
             else:
                 radar_out = radar
 
@@ -703,6 +753,7 @@ def export_ftu(
 
             meta = {
                 "dataset": "FTU",
+                "adc_conversion": {"doppler_mode": "legacy", "clutter_mode": "chirp_mean", "sampling_mode": "legacy", **(adc_options or {})},
                 "participant_id": pid,
                 "scenario": scenario,
                 "distance": distance,
@@ -801,6 +852,7 @@ def export_bgt60(
     output_dir: Path,
     compress: bool,
     include_long: bool,
+    adc_options: Optional[Dict[str, str]] = None,
 ) -> Tuple[int, int]:
     started_at = time.monotonic()
     print_stage("BGT60", "Stage 1/4: initialize loader")
@@ -837,7 +889,7 @@ def export_bgt60(
             selected_range_bins: Optional[np.ndarray] = None
             center_range_bin: Optional[int] = None
             if UNIFY_TO_RDA:
-                radar_out, selected_range_bins, center_range_bin = convert_adc_cube_to_rda(radar)
+                radar_out, selected_range_bins, center_range_bin = convert_adc_cube_to_rda(radar, **(adc_options or {}))
             else:
                 radar_out = radar
 
@@ -850,6 +902,7 @@ def export_bgt60(
 
             meta = {
                 "dataset": "BGT60TR13C",
+                "adc_conversion": {"doppler_mode": "legacy", "clutter_mode": "chirp_mean", "sampling_mode": "legacy", **(adc_options or {})},
                 "participant_id": pid,
                 "distance": distance,
                 "measurement_type": measurement_type,
@@ -1049,6 +1102,9 @@ def export_physdrive(
 
 def main() -> None:
     args = parse_args()
+    adc_options = dict(doppler_mode=args.adc_doppler_mode,
+                       clutter_mode=args.adc_clutter_mode,
+                       sampling_mode=args.adc_sampling_mode)
     # 优先使用CLI参数,否则使用默认配置
     dataset_root = (Path(args.dataset_root).resolve() if args.dataset_root 
                     else Path(DATASET_ROOT).resolve())
@@ -1091,6 +1147,7 @@ def main() -> None:
                 participant_id=FTU_PARTICIPANT_ID,
                 scenario=FTU_SCENARIO,
                 distance=FTU_DISTANCE,
+                adc_options=adc_options,
             )
         elif dataset_name == "BGT60TR13C":
             ok, fail = export_bgt60(
@@ -1098,6 +1155,7 @@ def main() -> None:
                 output_dir=output_dir,
                 compress=COMPRESS_OUTPUT,
                 include_long=BGT_INCLUDE_LONG,
+                adc_options=adc_options,
             )
         else:
             raise ValueError(f"Unsupported dataset: {dataset_name}")
