@@ -1,0 +1,1652 @@
+{
+  "legacy_mean__auto_energy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.4954529445997,
+        "prediction_std_bpm": 1.7187558220453691,
+        "pearson_r": 0.08429848620577954,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.013876870470557,
+        "prediction_std_bpm": 3.336584947320873,
+        "pearson_r": 0.12335716835454322,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.34451315416015,
+        "prediction_std_bpm": 3.815421904800842,
+        "pearson_r": -0.07576139704034672,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.585972584094955,
+        "prediction_std_bpm": 3.338844331933221,
+        "pearson_r": 0.02931111269593455,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.423217775969865,
+        "prediction_std_bpm": 3.2037504637865957,
+        "pearson_r": -0.018962625180083553,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.145227843382483,
+        "prediction_std_bpm": 3.4222232118405547,
+        "pearson_r": -0.008218271639579434,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 8.603269190779418,
+        "prediction_std_bpm": 3.140963821192292,
+        "pearson_r": 0.05031485637364083,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.658575756137182,
+        "prediction_std_bpm": 3.2431111643121695,
+        "pearson_r": 0.08616988163196047,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.28376326494929,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.058878275997025,
+      16.10298967029416
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_mean__auto_nonDC_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.942362743823637,
+        "prediction_std_bpm": 1.8091711657326839,
+        "pearson_r": -0.08449185895166124,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.073417161188091,
+        "prediction_std_bpm": 3.3529871549034245,
+        "pearson_r": -0.03670933045298066,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.492375493921089,
+        "prediction_std_bpm": 3.9283709802423465,
+        "pearson_r": -0.10444743918437398,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.419104421364386,
+        "prediction_std_bpm": 3.2156254493093623,
+        "pearson_r": 0.08639777386667662,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.453669927705004,
+        "prediction_std_bpm": 3.45532591562763,
+        "pearson_r": 0.010788926331624005,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.670829720929346,
+        "prediction_std_bpm": 3.5703884471596963,
+        "pearson_r": -0.034085074735505885,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 10.355043394005243,
+        "prediction_std_bpm": 4.400497416553583,
+        "pearson_r": -0.0713157538792627,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.16371908339167,
+        "prediction_std_bpm": 3.337668008040832,
+        "pearson_r": 0.06561782495979981,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.571315243291057,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.316430843522605,
+      16.42972191009183
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "legacy_mean__fixed_legacy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.4954529445997,
+        "prediction_std_bpm": 1.7187558220453691,
+        "pearson_r": 0.08429848620577954,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.013876870470557,
+        "prediction_std_bpm": 3.336584947320873,
+        "pearson_r": 0.12335716835454322,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.34451315416015,
+        "prediction_std_bpm": 3.815421904800842,
+        "pearson_r": -0.07576139704034672,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.585972584094955,
+        "prediction_std_bpm": 3.338844331933221,
+        "pearson_r": 0.02931111269593455,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.423217775969865,
+        "prediction_std_bpm": 3.2037504637865957,
+        "pearson_r": -0.018962625180083553,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.145227843382483,
+        "prediction_std_bpm": 3.4222232118405547,
+        "pearson_r": -0.008218271639579434,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 8.603269190779418,
+        "prediction_std_bpm": 3.140963821192292,
+        "pearson_r": 0.05031485637364083,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.658575756137182,
+        "prediction_std_bpm": 3.2431111643121695,
+        "pearson_r": 0.08616988163196047,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.28376326494929,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.058878275997025,
+      16.10298967029416
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "native_mean_dc__auto_nonDC_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.781569305644908,
+        "prediction_std_bpm": 1.7204273213042445,
+        "pearson_r": -0.11699931963424733,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.086527315255564,
+        "prediction_std_bpm": 3.7374036195290414,
+        "pearson_r": -0.05924859374751184,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.789828291596532,
+        "prediction_std_bpm": 4.274542183000206,
+        "pearson_r": -0.10093066012537318,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.443476232805882,
+        "prediction_std_bpm": 3.2485809786925457,
+        "pearson_r": 0.12087219340988863,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.432787805761727,
+        "prediction_std_bpm": 3.4014253298653676,
+        "pearson_r": -0.04867560779888134,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.408230049176458,
+        "prediction_std_bpm": 3.7156228102989224,
+        "pearson_r": -0.0008222324144646064,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 10.331007664039834,
+        "prediction_std_bpm": 4.452641927795354,
+        "pearson_r": -0.07865232706816637,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.226116332878233,
+        "prediction_std_bpm": 3.5232672498480886,
+        "pearson_r": 0.007024621745651803,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.562442874644892,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.3520316997145185,
+      16.358723882382847
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_mean_dc__auto_nonDC_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.942362743823637,
+        "prediction_std_bpm": 1.8091711657326839,
+        "pearson_r": -0.08449185895166124,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.073417161188091,
+        "prediction_std_bpm": 3.3529871549034245,
+        "pearson_r": -0.03670933045298066,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.492375493921089,
+        "prediction_std_bpm": 3.9283709802423465,
+        "pearson_r": -0.10444743918437398,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.419104421364386,
+        "prediction_std_bpm": 3.2156254493093623,
+        "pearson_r": 0.08639777386667662,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.453669927705004,
+        "prediction_std_bpm": 3.45532591562763,
+        "pearson_r": 0.010788926331624005,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.670829720929346,
+        "prediction_std_bpm": 3.5703884471596963,
+        "pearson_r": -0.034085074735505885,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 10.355043394005243,
+        "prediction_std_bpm": 4.400497416553583,
+        "pearson_r": -0.0713157538792627,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.16371908339167,
+        "prediction_std_bpm": 3.337668008040832,
+        "pearson_r": 0.06561782495979981,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.571315243291057,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.316430843522605,
+      16.42972191009183
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_mean__auto_energy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.546766076567515,
+        "prediction_std_bpm": 1.930641271882859,
+        "pearson_r": 0.0037638268384686023,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 5.786106570014207,
+        "prediction_std_bpm": 3.083465559844364,
+        "pearson_r": 0.09386525463953152,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 3.9093731591751624,
+        "prediction_std_bpm": 3.6670364203820522,
+        "pearson_r": 0.04542800109520875,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.849757641061615,
+        "prediction_std_bpm": 3.4860102531944483,
+        "pearson_r": 0.006902808868213056,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.366505763201651,
+        "prediction_std_bpm": 3.7107797295674607,
+        "pearson_r": 0.033868357508377,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.41168800320277,
+        "prediction_std_bpm": 4.018903013445744,
+        "pearson_r": -0.029321569048255742,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 9.080621274442484,
+        "prediction_std_bpm": 3.163608464504568,
+        "pearson_r": 0.01837641949444333,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.467944577762443,
+        "prediction_std_bpm": 3.7855911298458693,
+        "pearson_r": 0.0327357112256915,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.30234538317848,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      5.988849370856947,
+      16.165978725502576
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_mean_dc__auto_energy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.572916540763078,
+        "prediction_std_bpm": 1.6763316980541383,
+        "pearson_r": -0.049217819582485035,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.314037919997692,
+        "prediction_std_bpm": 2.7995396539449144,
+        "pearson_r": 0.008744782151271233,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 3.6627666538949377,
+        "prediction_std_bpm": 2.9941078158048833,
+        "pearson_r": 0.022551458205615316,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.692136013291499,
+        "prediction_std_bpm": 2.9582831867996977,
+        "pearson_r": -0.003260183980443639,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.251341004669311,
+        "prediction_std_bpm": 3.143943784777514,
+        "pearson_r": 0.04807221277114771,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.077671792568298,
+        "prediction_std_bpm": 3.145884570523088,
+        "pearson_r": 0.012087063675818742,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 8.851973770641099,
+        "prediction_std_bpm": 2.8298471038819826,
+        "pearson_r": 0.0020415872125755354,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.90182371397871,
+        "prediction_std_bpm": 3.1813831426550903,
+        "pearson_r": 0.0019239209798765195,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.290583426225577,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      5.97510523237583,
+      16.113140195832973
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "legacy_none__auto_energy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.781492912082854,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 5.9244581280406665,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 2.7969996045717953,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.810674581699384,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 3.25272223377353,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.057652500990884,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 9.234065922069282,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.599130500578996,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.057149547975925,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      5.478274498346744,
+      16.105375230769862
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_none_dc__auto_nonDC_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 29.204408232789778,
+        "prediction_std_bpm": 2.4117023345137953,
+        "pearson_r": 0.2791134051515544,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 5.797243057103537,
+        "prediction_std_bpm": 4.190867061218168,
+        "pearson_r": 0.1778005430862357,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.236301519884636,
+        "prediction_std_bpm": 4.25979331468837,
+        "pearson_r": 0.0997802994286901,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.359384461533624,
+        "prediction_std_bpm": 4.4181659418774215,
+        "pearson_r": 0.07108809279179402,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.708099710683279,
+        "prediction_std_bpm": 4.803958184189503,
+        "pearson_r": 0.1202788571399232,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.880439456425235,
+        "prediction_std_bpm": 4.40309559503542,
+        "pearson_r": 0.07075339947626517,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 8.984032528178671,
+        "prediction_std_bpm": 4.783059826378891,
+        "pearson_r": -0.0024667972037015463,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 10.193552898806368,
+        "prediction_std_bpm": 5.175757378238051,
+        "pearson_r": 0.09392144851551988,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.670432733175641,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.336515326969861,
+      16.5661516729211
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "legacy_none__fixed_legacy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.781492912082854,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 5.9244581280406665,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 2.7969996045717953,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.810674581699384,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 3.25272223377353,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.057652500990884,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 9.234065922069282,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.599130500578996,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.057149547975925,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      5.478274498346744,
+      16.105375230769862
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_mean_dc__fixed_legacy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.572916540763078,
+        "prediction_std_bpm": 1.6763316980541383,
+        "pearson_r": -0.049217819582485035,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.314037919997692,
+        "prediction_std_bpm": 2.7995396539449144,
+        "pearson_r": 0.008744782151271233,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 3.6627666538949377,
+        "prediction_std_bpm": 2.9941078158048833,
+        "pearson_r": 0.022551458205615316,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.692136013291499,
+        "prediction_std_bpm": 2.9582831867996977,
+        "pearson_r": -0.003260183980443639,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.251341004669311,
+        "prediction_std_bpm": 3.143943784777514,
+        "pearson_r": 0.04807221277114771,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.077671792568298,
+        "prediction_std_bpm": 3.145884570523088,
+        "pearson_r": 0.012087063675818742,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 8.851973770641099,
+        "prediction_std_bpm": 2.8298471038819826,
+        "pearson_r": 0.0020415872125755354,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.90182371397871,
+        "prediction_std_bpm": 3.1813831426550903,
+        "pearson_r": 0.0019239209798765195,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.290583426225577,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      5.97510523237583,
+      16.113140195832973
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_none_dc__auto_energy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 29.768690495209167,
+        "prediction_std_bpm": 2.3422684442698283,
+        "pearson_r": 0.09545325251457559,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.430232870703498,
+        "prediction_std_bpm": 3.9505648626400434,
+        "pearson_r": 0.00890978336089482,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.494156198718742,
+        "prediction_std_bpm": 4.156595697806969,
+        "pearson_r": -0.05635247526969318,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 15.468641646852195,
+        "prediction_std_bpm": 4.505416519339408,
+        "pearson_r": 0.007265867070880931,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.641062047557928,
+        "prediction_std_bpm": 4.627731414207221,
+        "pearson_r": 0.10755363433330958,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 8.757319620543843,
+        "prediction_std_bpm": 4.008459884094003,
+        "pearson_r": 0.030694695653439692,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 9.394519077958673,
+        "prediction_std_bpm": 4.700198826394817,
+        "pearson_r": -0.09755843962347957,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 9.637896178226153,
+        "prediction_std_bpm": 4.020855554006875,
+        "pearson_r": 0.17706158669645847,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 11.074064766971274,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.628722093939503,
+      17.113871403792373
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_none__auto_energy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.781492912082854,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 5.9244581280406665,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 2.7969996045717953,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.810674581699384,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 3.25272223377353,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.057652500990884,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 9.234065922069282,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.599130500578996,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.057149547975925,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      5.478274498346744,
+      16.105375230769862
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "legacy_mean__auto_nonDC_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.623067346544392,
+        "prediction_std_bpm": 1.6919822725951772,
+        "pearson_r": 0.06557718361409384,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.307049055288549,
+        "prediction_std_bpm": 3.0122786715463175,
+        "pearson_r": 0.06908885085651978,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.0458386072907135,
+        "prediction_std_bpm": 3.426778188349429,
+        "pearson_r": -0.07432264333772241,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.665834169537762,
+        "prediction_std_bpm": 2.579800803477644,
+        "pearson_r": 0.000679888291368399,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.060756917765012,
+        "prediction_std_bpm": 3.204893418956082,
+        "pearson_r": 0.01641067951900743,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.250274871349167,
+        "prediction_std_bpm": 3.128635483886335,
+        "pearson_r": -0.016249149955184533,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 9.221726729522421,
+        "prediction_std_bpm": 2.733453251525401,
+        "pearson_r": 0.001846575440697045,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.711158270504944,
+        "prediction_std_bpm": 3.157844815255425,
+        "pearson_r": 0.018339557815836006,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.360713245975369,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.062138258006493,
+      16.220504335979772
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "native_none_dc__auto_energy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 29.757547689228176,
+        "prediction_std_bpm": 2.3359419270018833,
+        "pearson_r": 0.11233564923534911,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.238786829733059,
+        "prediction_std_bpm": 3.925474204455388,
+        "pearson_r": 0.01938539613814769,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.428993702230285,
+        "prediction_std_bpm": 4.108919651386299,
+        "pearson_r": -0.033810551489805815,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 15.535661543090024,
+        "prediction_std_bpm": 4.603588191612134,
+        "pearson_r": -0.017655898133668985,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.715368053839648,
+        "prediction_std_bpm": 4.7463811538410825,
+        "pearson_r": 0.08744419259479902,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 8.700751745277776,
+        "prediction_std_bpm": 4.035814150555364,
+        "pearson_r": 0.03386681533714498,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 9.382785176603702,
+        "prediction_std_bpm": 4.641296483273797,
+        "pearson_r": -0.08473682965598027,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 9.620643706349302,
+        "prediction_std_bpm": 3.992136007159906,
+        "pearson_r": 0.17152305296590886,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 11.047567305793997,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.600554959165304,
+      17.06822748268988
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "native_none_dc__auto_nonDC_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 29.18677401274173,
+        "prediction_std_bpm": 2.3986303127086193,
+        "pearson_r": 0.29862901378511186,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 5.74957437577965,
+        "prediction_std_bpm": 4.187754614132182,
+        "pearson_r": 0.20257856445516276,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.355434699626948,
+        "prediction_std_bpm": 4.313149535225601,
+        "pearson_r": 0.05723646659092469,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.305753190907437,
+        "prediction_std_bpm": 4.402825094038074,
+        "pearson_r": 0.04701852677550845,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.861962343319365,
+        "prediction_std_bpm": 4.843544298874768,
+        "pearson_r": 0.12079961565047231,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.752471193113003,
+        "prediction_std_bpm": 4.29182013506537,
+        "pearson_r": 0.07187805864238474,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 8.976005331558568,
+        "prediction_std_bpm": 4.762525939719685,
+        "pearson_r": -0.01838676944621052,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 10.217705670980502,
+        "prediction_std_bpm": 5.297068179900393,
+        "pearson_r": 0.07176169972584333,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.675710102253401,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.372207145696147,
+      16.554064928585266
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "native_mean_dc__auto_energy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.54794436708961,
+        "prediction_std_bpm": 1.8969507392557377,
+        "pearson_r": 0.00013942016271167415,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.478484741333188,
+        "prediction_std_bpm": 3.2132096009497566,
+        "pearson_r": 0.014027314775059562,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 3.791130453680626,
+        "prediction_std_bpm": 3.1407889326711533,
+        "pearson_r": -0.005670082972797699,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.676749709983552,
+        "prediction_std_bpm": 2.859088308535287,
+        "pearson_r": -0.01322616593866768,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.0612208968517525,
+        "prediction_std_bpm": 3.0007801243091694,
+        "pearson_r": 0.054214823716287004,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.0210525184896895,
+        "prediction_std_bpm": 3.219147699423443,
+        "pearson_r": 0.039188190973874965,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 8.829183677042984,
+        "prediction_std_bpm": 3.0806133332798726,
+        "pearson_r": 0.04733992644602079,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.512827582883885,
+        "prediction_std_bpm": 3.1019882540159416,
+        "pearson_r": 0.02098346008667417,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.23982424341941,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      5.959007556535182,
+      16.059347130418693
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_none__fixed_legacy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.781492912082854,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 5.9244581280406665,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 2.7969996045717953,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.810674581699384,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 3.25272223377353,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.057652500990884,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 9.234065922069282,
+        "prediction_std_bpm": 0.0,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.599130500578996,
+        "prediction_std_bpm": 1.4210854715202004e-14,
+        "pearson_r": null,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.057149547975925,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      5.478274498346744,
+      16.105375230769862
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_mean__fixed_legacy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 28.546766076567515,
+        "prediction_std_bpm": 1.930641271882859,
+        "pearson_r": 0.0037638268384686023,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 5.786106570014207,
+        "prediction_std_bpm": 3.083465559844364,
+        "pearson_r": 0.09386525463953152,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 3.9093731591751624,
+        "prediction_std_bpm": 3.6670364203820522,
+        "pearson_r": 0.04542800109520875,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.849757641061615,
+        "prediction_std_bpm": 3.4860102531944483,
+        "pearson_r": 0.006902808868213056,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.366505763201651,
+        "prediction_std_bpm": 3.7107797295674607,
+        "pearson_r": 0.033868357508377,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.41168800320277,
+        "prediction_std_bpm": 4.018903013445744,
+        "pearson_r": -0.029321569048255742,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 9.080621274442484,
+        "prediction_std_bpm": 3.163608464504568,
+        "pearson_r": 0.01837641949444333,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 8.467944577762443,
+        "prediction_std_bpm": 3.7855911298458693,
+        "pearson_r": 0.0327357112256915,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.30234538317848,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      5.988849370856947,
+      16.165978725502576
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "legacy_none__auto_nonDC_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 29.08955662457294,
+        "prediction_std_bpm": 2.3034162863687295,
+        "pearson_r": 0.3360933446506689,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.302676622265519,
+        "prediction_std_bpm": 4.411681271344108,
+        "pearson_r": 0.11278974375467006,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.0390860985270205,
+        "prediction_std_bpm": 3.9776743048091605,
+        "pearson_r": 0.06570349199646473,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.171122083389301,
+        "prediction_std_bpm": 4.458634814528975,
+        "pearson_r": 0.03705367211014743,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 5.081587373897718,
+        "prediction_std_bpm": 4.977636619643094,
+        "pearson_r": 0.06731903388455662,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.962703276288333,
+        "prediction_std_bpm": 4.088749600268379,
+        "pearson_r": 0.0002449827431634817,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 8.987757179431345,
+        "prediction_std_bpm": 4.543848301688668,
+        "pearson_r": 0.028102793190803478,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 9.824358675957344,
+        "prediction_std_bpm": 4.850594447771113,
+        "pearson_r": 0.10167227489346121,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.68235599179119,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.462916306329228,
+      16.53171214841402
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_none_dc__fixed_legacy_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 29.768690495209167,
+        "prediction_std_bpm": 2.3422684442698283,
+        "pearson_r": 0.09545325251457559,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 6.430232870703498,
+        "prediction_std_bpm": 3.9505648626400434,
+        "pearson_r": 0.00890978336089482,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.494156198718742,
+        "prediction_std_bpm": 4.156595697806969,
+        "pearson_r": -0.05635247526969318,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 15.468641646852195,
+        "prediction_std_bpm": 4.505416519339408,
+        "pearson_r": 0.007265867070880931,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.641062047557928,
+        "prediction_std_bpm": 4.627731414207221,
+        "pearson_r": 0.10755363433330958,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 8.757319620543843,
+        "prediction_std_bpm": 4.008459884094003,
+        "pearson_r": 0.030694695653439692,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 9.394519077958673,
+        "prediction_std_bpm": 4.700198826394817,
+        "pearson_r": -0.09755843962347957,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 9.637896178226153,
+        "prediction_std_bpm": 4.020855554006875,
+        "pearson_r": 0.17706158669645847,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 11.074064766971274,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.628722093939503,
+      17.113871403792373
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  },
+  "full_none__auto_nonDC_probe": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 368,
+        "mae_bpm": 29.204408232789778,
+        "prediction_std_bpm": 2.4117023345137953,
+        "pearson_r": 0.2791134051515544,
+        "train_mean_constant_mae_bpm": 28.781492912082854
+      },
+      {
+        "subject": 2,
+        "windows": 368,
+        "mae_bpm": 5.797243057103537,
+        "prediction_std_bpm": 4.190867061218168,
+        "pearson_r": 0.1778005430862357,
+        "train_mean_constant_mae_bpm": 5.9244581280406665
+      },
+      {
+        "subject": 3,
+        "windows": 368,
+        "mae_bpm": 4.236301519884636,
+        "prediction_std_bpm": 4.25979331468837,
+        "pearson_r": 0.0997802994286901,
+        "train_mean_constant_mae_bpm": 2.7969996045717953
+      },
+      {
+        "subject": 4,
+        "windows": 368,
+        "mae_bpm": 14.359384461533624,
+        "prediction_std_bpm": 4.4181659418774215,
+        "pearson_r": 0.07108809279179402,
+        "train_mean_constant_mae_bpm": 14.810674581699384
+      },
+      {
+        "subject": 5,
+        "windows": 368,
+        "mae_bpm": 4.708099710683279,
+        "prediction_std_bpm": 4.803958184189503,
+        "pearson_r": 0.1202788571399232,
+        "train_mean_constant_mae_bpm": 3.25272223377353
+      },
+      {
+        "subject": 6,
+        "windows": 368,
+        "mae_bpm": 7.880439456425235,
+        "prediction_std_bpm": 4.40309559503542,
+        "pearson_r": 0.07075339947626517,
+        "train_mean_constant_mae_bpm": 7.057652500990884
+      },
+      {
+        "subject": 7,
+        "windows": 368,
+        "mae_bpm": 8.984032528178671,
+        "prediction_std_bpm": 4.783059826378891,
+        "pearson_r": -0.0024667972037015463,
+        "train_mean_constant_mae_bpm": 9.234065922069282
+      },
+      {
+        "subject": 8,
+        "windows": 368,
+        "mae_bpm": 10.193552898806368,
+        "prediction_std_bpm": 5.175757378238051,
+        "pearson_r": 0.09392144851551988,
+        "train_mean_constant_mae_bpm": 8.599130500578996
+      }
+    ],
+    "subject_macro_mae_bpm": 10.670432733175641,
+    "subject_bootstrap_macro_mae_95pct_ci": [
+      6.336515326969861,
+      16.5661516729211
+    ],
+    "alpha": 10,
+    "evaluation": "leave-one-subject-out; all eight subjects; scaler fitted on training subjects"
+  }
+}

@@ -285,6 +285,7 @@ model_outputs/
 !docs/ADC_RDA_PHYSICAL_VALIDATION.md
 !docs/BGT60_CONFIGURATION_SEARCH.md
 !experiment_runs/bgt60_frontend_2026-10-10/REPORT.md
+!experiment_runs/bgt60_adc_diagnostics_2026-10-10/REPORT.md
 !**/README.md
 .qoder/
 .marscode/

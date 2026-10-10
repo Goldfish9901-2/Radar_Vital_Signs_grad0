@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "legacy_mean": [
+      "legacy",
+      "chirp_mean",
+      "none",
+      "legacy"
+    ],
+    "full_mean": [
+      "full_fft_crop",
+      "chirp_mean",
+      "none",
+      "legacy"
+    ],
+    "legacy_none": [
+      "legacy",
+      "none",
+      "none",
+      "legacy"
+    ],
+    "full_none": [
+      "full_fft_crop",
+      "none",
+      "none",
+      "legacy"
+    ],
+    "full_none_dc": [
+      "full_fft_crop",
+      "none",
+      "mean",
+      "legacy"
+    ],
+    "full_mean_dc": [
+      "full_fft_crop",
+      "chirp_mean",
+      "mean",
+      "legacy"
+    ],
+    "native_none_dc": [
+      "full_fft_crop",
+      "none",
+      "mean",
+      "native"
+    ],
+    "native_mean_dc": [
+      "full_fft_crop",
+      "chirp_mean",
+      "mean",
+      "native"
+    ]
+  },
+  "training": "none; optional grouped Ridge probes only on Kaggle",
+  "window_size": 256,
+  "stride": 128,
+  "source_frame_rate_hz": 30,
+  "analysis_frame_rate_hz": 20,
+  "frame_rate_source": "candidate original HeartTimeMixer publication; acquisition JSON not recovered",
+  "calibration": null,
+  "physical_roi_status": "skipped: missing acquisition slope",
+  "nonDC_first_bin": 2,
+  "physical_roi_half_width_m": 0.15,
+  "reference_alignment": "shared start assumed; labels used only after ROI selection",
+  "sampling_note": "legacy grid is nonuniform: no metric distance axis; do not transfer integer ROI to native"
+}

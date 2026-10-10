@@ -1,0 +1,178 @@
+{
+  "legacy_mean/auto_energy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.006112455048838376,
+    "hr_band_energy_median": 10.319749233160778,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 29.598733977034588
+  },
+  "legacy_mean/fixed_legacy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.006112455048838376,
+    "hr_band_energy_median": 10.319749233160778,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 29.598733977034588
+  },
+  "legacy_mean/auto_nonDC": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.1607624287856867,
+    "hr_band_energy_median": 173.49166312981276,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 29.334146610673248
+  },
+  "full_mean/auto_energy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.04119770108434245,
+    "hr_band_energy_median": 52.115746892526744,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 28.877602751358697
+  },
+  "full_mean/fixed_legacy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.04119770108434245,
+    "hr_band_energy_median": 52.115746892526744,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 28.877602751358697
+  },
+  "full_mean/auto_nonDC": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.24241131551930398,
+    "hr_band_energy_median": 238.78078383314485,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 29.011296019698207
+  },
+  "legacy_none/auto_energy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 0.0,
+    "phase_variance_median": 0.0,
+    "hr_band_energy_median": 0.0,
+    "fft_valid_windows": 0,
+    "fft_mae_bpm": null
+  },
+  "legacy_none/fixed_legacy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 0.0,
+    "phase_variance_median": 0.0,
+    "hr_band_energy_median": 0.0,
+    "fft_valid_windows": 0,
+    "fft_mae_bpm": null
+  },
+  "legacy_none/auto_nonDC": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 4.590716425290896e-06,
+    "hr_band_energy_median": 0.014341860358906743,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 25.07092517242769
+  },
+  "full_none/auto_energy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 0.0,
+    "phase_variance_median": 0.0,
+    "hr_band_energy_median": 0.0,
+    "fft_valid_windows": 0,
+    "fft_mae_bpm": null
+  },
+  "full_none/fixed_legacy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 0.0,
+    "phase_variance_median": 0.0,
+    "hr_band_energy_median": 0.0,
+    "fft_valid_windows": 0,
+    "fft_mae_bpm": null
+  },
+  "full_none/auto_nonDC": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 4.3416428282634755e-06,
+    "hr_band_energy_median": 0.01329580343535711,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 25.060694717710827
+  },
+  "full_none_dc/fixed_legacy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 7.889435655605915e-07,
+    "hr_band_energy_median": 0.0024989278030095406,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 25.355238876398996
+  },
+  "full_none_dc/auto_energy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 7.889435655605915e-07,
+    "hr_band_energy_median": 0.0024989278030095406,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 25.355238876398996
+  },
+  "full_none_dc/auto_nonDC": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 4.3416428282634755e-06,
+    "hr_band_energy_median": 0.01329580343535711,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 25.060694717710827
+  },
+  "full_mean_dc/fixed_legacy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.026425131910460635,
+    "hr_band_energy_median": 39.53094752558511,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 28.15741808335396
+  },
+  "full_mean_dc/auto_energy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.026425131910460635,
+    "hr_band_energy_median": 39.53094752558511,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 28.15741808335396
+  },
+  "full_mean_dc/auto_nonDC": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.24241131551930398,
+    "hr_band_energy_median": 238.78078383314485,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 29.011296019698207
+  },
+  "native_none_dc/auto_energy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 7.986370582127209e-07,
+    "hr_band_energy_median": 0.0025330933405332367,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 25.37512094586231
+  },
+  "native_none_dc/auto_nonDC": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 4.3235327780365735e-06,
+    "hr_band_energy_median": 0.013358645218484351,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 25.071837348909877
+  },
+  "native_mean_dc/auto_energy": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.02592272548987274,
+    "hr_band_energy_median": 38.70891725631922,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 28.133381040006675
+  },
+  "native_mean_dc/auto_nonDC": {
+    "windows": 2944,
+    "nonzero_feature_fraction": 1.0,
+    "phase_variance_median": 0.23098568345513387,
+    "hr_band_energy_median": 228.73471204515982,
+    "fft_valid_windows": 2944,
+    "fft_mae_bpm": 28.858480041099103
+  }
+}

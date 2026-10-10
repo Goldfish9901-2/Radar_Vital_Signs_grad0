@@ -1,0 +1,5678 @@
+{
+  "legacy_mean/auto_energy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005202005205798339,
+      "hr_band_energy_median": 14.039313535446198,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.251960177551585
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0038391519591418847,
+      "hr_band_energy_median": 6.5196747352720585,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.96905146059783
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0043478951365342345,
+      "hr_band_energy_median": 6.84582541340651,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.93313231162491
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.004222132736188338,
+      "hr_band_energy_median": 6.721950018575132,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.22372003385225
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.007318095038651276,
+      "hr_band_energy_median": 12.15510282613985,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.76975426895265
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005918482414262981,
+      "hr_band_energy_median": 9.24869522021541,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.088876398995946
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.00645925203579218,
+      "hr_band_energy_median": 7.182519483020197,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.092579996085117
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.020668006764175892,
+      "hr_band_energy_median": 17.912663293393297,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.359267340641125
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.004735824775582567,
+      "hr_band_energy_median": 16.419041319124705,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.970880590226606
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005572047181597138,
+      "hr_band_energy_median": 9.28635032668538,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.2601735215549
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005073472408486957,
+      "hr_band_energy_median": 7.056537764085121,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.230334679555085
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.004220205835745952,
+      "hr_band_energy_median": 7.43199053927352,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.608580796333825
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.010552198250693952,
+      "hr_band_energy_median": 14.827715476294664,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.797539523074796
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.008673752275959536,
+      "hr_band_energy_median": 10.19323289614529,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 38.324212992815035
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0047277769888695,
+      "hr_band_energy_median": 7.813575182542466,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.80517952342023
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.008894345982734985,
+      "hr_band_energy_median": 10.280225395655798,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.046543602040344
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.009973937517553755,
+      "hr_band_energy_median": 11.94869915043261,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.109408247743183
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.045680410421788636,
+      "hr_band_energy_median": 25.944428624317446,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.4228539373388
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.00567330408161307,
+      "hr_band_energy_median": 7.299135934904436,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.417641813858697
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0065117834297911265,
+      "hr_band_energy_median": 10.415130920772235,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.562871122535928
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005983540398388503,
+      "hr_band_energy_median": 12.314575970060911,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.9416628765199
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0035470031205373344,
+      "hr_band_energy_median": 6.6303740816958925,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.678726625829036
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.004137210704358062,
+      "hr_band_energy_median": 6.779297529510183,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.93053056777358
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.004004565035533277,
+      "hr_band_energy_median": 7.029766261024049,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.70266608039333
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03129920201299375,
+      "hr_band_energy_median": 25.622359730886753,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.398404468151256
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.017801935297357425,
+      "hr_band_energy_median": 15.643060228004686,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.375310887988206
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.011354322565957045,
+      "hr_band_energy_median": 12.303431940890464,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.16885794721813
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0052201219217256414,
+      "hr_band_energy_median": 8.59126546967379,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.78422041958364
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.006849735263693319,
+      "hr_band_energy_median": 14.86658942569912,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.410190505250554
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.006329861086124718,
+      "hr_band_energy_median": 10.354172819256217,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.065548861228812
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005951263082858018,
+      "hr_band_energy_median": 10.021591781733333,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.89122158829219
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.006703599998082167,
+      "hr_band_energy_median": 8.2924021388335,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.5675840980794
+    }
+  },
+  "legacy_mean/fixed_legacy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005202005205798339,
+      "hr_band_energy_median": 14.039313535446198,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.251960177551585
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0038391519591418847,
+      "hr_band_energy_median": 6.5196747352720585,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.96905146059783
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0043478951365342345,
+      "hr_band_energy_median": 6.84582541340651,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.93313231162491
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.004222132736188338,
+      "hr_band_energy_median": 6.721950018575132,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.22372003385225
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.007318095038651276,
+      "hr_band_energy_median": 12.15510282613985,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.76975426895265
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005918482414262981,
+      "hr_band_energy_median": 9.24869522021541,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.088876398995946
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.00645925203579218,
+      "hr_band_energy_median": 7.182519483020197,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.092579996085117
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.020668006764175892,
+      "hr_band_energy_median": 17.912663293393297,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.359267340641125
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.004735824775582567,
+      "hr_band_energy_median": 16.419041319124705,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.970880590226606
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005572047181597138,
+      "hr_band_energy_median": 9.28635032668538,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.2601735215549
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005073472408486957,
+      "hr_band_energy_median": 7.056537764085121,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.230334679555085
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.004220205835745952,
+      "hr_band_energy_median": 7.43199053927352,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.608580796333825
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.010552198250693952,
+      "hr_band_energy_median": 14.827715476294664,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.797539523074796
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.008673752275959536,
+      "hr_band_energy_median": 10.19323289614529,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 38.324212992815035
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0047277769888695,
+      "hr_band_energy_median": 7.813575182542466,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.80517952342023
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.008894345982734985,
+      "hr_band_energy_median": 10.280225395655798,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.046543602040344
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.009973937517553755,
+      "hr_band_energy_median": 11.94869915043261,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.109408247743183
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.045680410421788636,
+      "hr_band_energy_median": 25.944428624317446,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.4228539373388
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.00567330408161307,
+      "hr_band_energy_median": 7.299135934904436,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.417641813858697
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0065117834297911265,
+      "hr_band_energy_median": 10.415130920772235,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.562871122535928
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005983540398388503,
+      "hr_band_energy_median": 12.314575970060911,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.9416628765199
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0035470031205373344,
+      "hr_band_energy_median": 6.6303740816958925,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.678726625829036
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.004137210704358062,
+      "hr_band_energy_median": 6.779297529510183,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.93053056777358
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.004004565035533277,
+      "hr_band_energy_median": 7.029766261024049,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.70266608039333
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03129920201299375,
+      "hr_band_energy_median": 25.622359730886753,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.398404468151256
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.017801935297357425,
+      "hr_band_energy_median": 15.643060228004686,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.375310887988206
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.011354322565957045,
+      "hr_band_energy_median": 12.303431940890464,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.16885794721813
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0052201219217256414,
+      "hr_band_energy_median": 8.59126546967379,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.78422041958364
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.006849735263693319,
+      "hr_band_energy_median": 14.86658942569912,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.410190505250554
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.006329861086124718,
+      "hr_band_energy_median": 10.354172819256217,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.065548861228812
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.005951263082858018,
+      "hr_band_energy_median": 10.021591781733333,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.89122158829219
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.006703599998082167,
+      "hr_band_energy_median": 8.2924021388335,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.5675840980794
+    }
+  },
+  "legacy_mean/auto_nonDC": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.049549876392415794,
+      "hr_band_energy_median": 102.456507274248,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 12.904057663964629
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1511102204315647,
+      "hr_band_energy_median": 187.0272203341134,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 14.87907184103261
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.27760843795395695,
+      "hr_band_energy_median": 304.2860086985619,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 10.241077946527266
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.220120465618308,
+      "hr_band_energy_median": 202.86312733975302,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 14.500758077330508
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.20053370343249474,
+      "hr_band_energy_median": 194.30426650242418,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.04948422819178
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.18173978646118177,
+      "hr_band_energy_median": 190.5172472876224,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.30450845154753
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1076958317690154,
+      "hr_band_energy_median": 129.3583834629016,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.51025153141119
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1905486095321659,
+      "hr_band_energy_median": 158.5413828567975,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.58641577814112
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.05242747042714675,
+      "hr_band_energy_median": 113.45321084510903,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.307081337509214
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.07598142499032326,
+      "hr_band_energy_median": 67.51676923920547,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.822512176446203
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.21465950265723965,
+      "hr_band_energy_median": 209.7411377329683,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.968403633359433
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.15667575026021524,
+      "hr_band_energy_median": 173.3993320060915,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.101847192796612
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.24463416253103545,
+      "hr_band_energy_median": 202.4642740156296,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 38.07363914540346
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2477482067066526,
+      "hr_band_energy_median": 267.00941798490334,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 39.60846910694546
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.37722653822158536,
+      "hr_band_energy_median": 369.3796366603954,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 40.98735513483327
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.09908876352280872,
+      "hr_band_energy_median": 140.53595067013134,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.60610585448139
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2343959659398719,
+      "hr_band_energy_median": 216.62936800831602,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.62607918432203
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.20241294531868054,
+      "hr_band_energy_median": 140.02849348690535,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.416743549074248
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.13928180528755177,
+      "hr_band_energy_median": 148.90324446174094,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.831509001358693
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.21140331408624777,
+      "hr_band_energy_median": 254.2927935276046,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.968480779637993
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.07838447599606807,
+      "hr_band_energy_median": 104.64649412940297,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.2967457511975
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2957786231178124,
+      "hr_band_energy_median": 323.94677708046254,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.75673533069271
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.15439443911351655,
+      "hr_band_energy_median": 182.9192686953835,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.252371600382276
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.29911339854961894,
+      "hr_band_energy_median": 319.0341465933495,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.84729923256724
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.23023287630556602,
+      "hr_band_energy_median": 218.5884753542524,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.06138663239222
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.23736383783962392,
+      "hr_band_energy_median": 228.72526625538916,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.43665412559875
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1020157335615213,
+      "hr_band_energy_median": 94.30142785887392,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.08498396623987
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.14936613107309077,
+      "hr_band_energy_median": 189.90239065104169,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.75236246085114
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.11456409623515718,
+      "hr_band_energy_median": 94.4923447582595,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.73580191829403
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.14718404242525907,
+      "hr_band_energy_median": 194.07804396507805,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.07319152427229
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.24589515324962724,
+      "hr_band_energy_median": 232.05647061985235,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.96138123503132
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.07184831877317542,
+      "hr_band_energy_median": 88.30175546230572,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.13992614970984
+    }
+  },
+  "full_mean/auto_energy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.027502970338894546,
+      "hr_band_energy_median": 37.47432227423561,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 16.95118180614407
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.023284404605848498,
+      "hr_band_energy_median": 36.359750741935656,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 18.27014690896739
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.021493969155837025,
+      "hr_band_energy_median": 33.347558830387605,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.723525297070747
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.023350925523013124,
+      "hr_band_energy_median": 36.428012395172246,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.757640360169493
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03789462380142197,
+      "hr_band_energy_median": 60.843055122015514,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.34460141569178
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.050361599842931884,
+      "hr_band_energy_median": 66.20628525039336,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.201128696112747
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.8946417427081266,
+      "hr_band_energy_median": 1253.5452557734407,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.933311647936623
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.1079603021543052,
+      "hr_band_energy_median": 962.7585705338972,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.325919854228076
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.01987483701769547,
+      "hr_band_energy_median": 41.086244679599645,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.31975966631356
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.74774973641479,
+      "hr_band_energy_median": 1681.03678763166,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.44149937246684
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.049186645823321024,
+      "hr_band_energy_median": 70.00082208294802,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.831413144228996
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.039426907242379246,
+      "hr_band_energy_median": 46.84947513003743,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.854878350681652
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.021700731806334916,
+      "hr_band_energy_median": 16.696938165378086,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.90140748779476
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.039783003772161596,
+      "hr_band_energy_median": 62.71721760443947,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.488504772706335
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0401678671818694,
+      "hr_band_energy_median": 53.27469866525293,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.273751194615876
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.445180350486914,
+      "hr_band_energy_median": 1115.2694168843198,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.42678350393792
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.040389542888829864,
+      "hr_band_energy_median": 53.80882367313603,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.269888627256815
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.05325549920094388,
+      "hr_band_energy_median": 82.53368446384498,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.0187523748388
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03366263619098639,
+      "hr_band_energy_median": 43.33633100516094,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.275437330163037
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.057593960778633255,
+      "hr_band_energy_median": 56.21546729989555,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.519465833985816
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.046400634081136344,
+      "hr_band_energy_median": 51.95476404099719,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.738457707719235
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03737646635269848,
+      "hr_band_energy_median": 50.474997217599274,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.047604003546425
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.035446740393145784,
+      "hr_band_energy_median": 58.59700130426876,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.6408226873388
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.4388144665207623,
+      "hr_band_energy_median": 1368.9135589334112,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.89782572713246
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0651199846212539,
+      "hr_band_energy_median": 63.66159685137407,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.98857940021647
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.08025559220751668,
+      "hr_band_energy_median": 58.547459855048295,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.79636030766397
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0379777414635685,
+      "hr_band_energy_median": 1210.4068893304634,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.89221052873986
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0548775841200149,
+      "hr_band_energy_median": 39.74969100793752,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.95076599345984
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.6267348756150055,
+      "hr_band_energy_median": 1509.7948919986216,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.77035524709838
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03268215026469573,
+      "hr_band_energy_median": 52.70948858359171,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.81704285072771
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03719045513775363,
+      "hr_band_energy_median": 53.16005073007118,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.50056262090089
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.11969793721271595,
+      "hr_band_energy_median": 105.74980110410553,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.91370332362288
+    }
+  },
+  "full_mean/fixed_legacy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.027502970338894546,
+      "hr_band_energy_median": 37.47432227423561,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 16.95118180614407
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.023284404605848498,
+      "hr_band_energy_median": 36.359750741935656,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 18.27014690896739
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.021493969155837025,
+      "hr_band_energy_median": 33.347558830387605,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.723525297070747
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.023350925523013124,
+      "hr_band_energy_median": 36.428012395172246,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.757640360169493
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03789462380142197,
+      "hr_band_energy_median": 60.843055122015514,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.34460141569178
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.050361599842931884,
+      "hr_band_energy_median": 66.20628525039336,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.201128696112747
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.8946417427081266,
+      "hr_band_energy_median": 1253.5452557734407,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.933311647936623
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.1079603021543052,
+      "hr_band_energy_median": 962.7585705338972,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.325919854228076
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.01987483701769547,
+      "hr_band_energy_median": 41.086244679599645,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.31975966631356
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.74774973641479,
+      "hr_band_energy_median": 1681.03678763166,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.44149937246684
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.049186645823321024,
+      "hr_band_energy_median": 70.00082208294802,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.831413144228996
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.039426907242379246,
+      "hr_band_energy_median": 46.84947513003743,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.854878350681652
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.021700731806334916,
+      "hr_band_energy_median": 16.696938165378086,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.90140748779476
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.039783003772161596,
+      "hr_band_energy_median": 62.71721760443947,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.488504772706335
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0401678671818694,
+      "hr_band_energy_median": 53.27469866525293,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.273751194615876
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.445180350486914,
+      "hr_band_energy_median": 1115.2694168843198,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.42678350393792
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.040389542888829864,
+      "hr_band_energy_median": 53.80882367313603,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.269888627256815
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.05325549920094388,
+      "hr_band_energy_median": 82.53368446384498,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.0187523748388
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03366263619098639,
+      "hr_band_energy_median": 43.33633100516094,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.275437330163037
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.057593960778633255,
+      "hr_band_energy_median": 56.21546729989555,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.519465833985816
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.046400634081136344,
+      "hr_band_energy_median": 51.95476404099719,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.738457707719235
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03737646635269848,
+      "hr_band_energy_median": 50.474997217599274,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.047604003546425
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.035446740393145784,
+      "hr_band_energy_median": 58.59700130426876,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.6408226873388
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.4388144665207623,
+      "hr_band_energy_median": 1368.9135589334112,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.89782572713246
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0651199846212539,
+      "hr_band_energy_median": 63.66159685137407,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.98857940021647
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.08025559220751668,
+      "hr_band_energy_median": 58.547459855048295,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.79636030766397
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0379777414635685,
+      "hr_band_energy_median": 1210.4068893304634,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.89221052873986
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0548775841200149,
+      "hr_band_energy_median": 39.74969100793752,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.95076599345984
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.6267348756150055,
+      "hr_band_energy_median": 1509.7948919986216,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.77035524709838
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03268215026469573,
+      "hr_band_energy_median": 52.70948858359171,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.81704285072771
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03719045513775363,
+      "hr_band_energy_median": 53.16005073007118,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.50056262090089
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.11969793721271595,
+      "hr_band_energy_median": 105.74980110410553,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.91370332362288
+    }
+  },
+  "full_mean/auto_nonDC": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 30.808620778367,
+      "hr_band_energy_median": 8678.644643112639,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 10.894181644942888
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.18767855800869365,
+      "hr_band_energy_median": 196.10384556248675,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 15.504445482336957
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.14152210093736814,
+      "hr_band_energy_median": 173.90805888293727,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 14.847627895864038
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1426448312298311,
+      "hr_band_energy_median": 177.20057122466034,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 13.532033552873985
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1920330149221442,
+      "hr_band_energy_median": 214.20761415731093,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.08537077710482
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.21816365946869393,
+      "hr_band_energy_median": 241.1752771336068,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.39906517709101
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.16321510662193253,
+      "hr_band_energy_median": 201.3768993224313,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.21519378684598
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1488784196438107,
+      "hr_band_energy_median": 153.79908307611316,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.085926273489314
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 38.344798721356554,
+      "hr_band_energy_median": 15020.276306644482,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.012295332074427
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1679951051210366,
+      "hr_band_energy_median": 172.82817375378238,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.286523149640754
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.23520041734515873,
+      "hr_band_energy_median": 222.0685298139058,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.43987951651161
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.16932822171698136,
+      "hr_band_energy_median": 217.99261339629788,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.12366274986183
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2237018533531603,
+      "hr_band_energy_median": 224.44895682860766,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.6309081671426
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.23158490311971008,
+      "hr_band_energy_median": 244.78258393256948,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 42.28935395748895
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1692486404361165,
+      "hr_band_energy_median": 191.43132040224248,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 40.35844039298545
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.19475777358585764,
+      "hr_band_energy_median": 186.34038025013507,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.822469645242265
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.25936269084042174,
+      "hr_band_energy_median": 285.3144236717213,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.832906629974204
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.3852096385060917,
+      "hr_band_energy_median": 324.31629420634613,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.08885257864315
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2718150574564557,
+      "hr_band_energy_median": 300.0414317482775,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.546233865489132
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2655960621151516,
+      "hr_band_energy_median": 224.20785878821968,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.385320113877118
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2747513338690865,
+      "hr_band_energy_median": 263.5492153707295,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.180636715871405
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.22928094960666262,
+      "hr_band_energy_median": 233.6570388084914,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.08770509971444
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2517339342531759,
+      "hr_band_energy_median": 213.39970393359897,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.079103937338797
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2989717913966201,
+      "hr_band_energy_median": 256.6193243408353,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.088026134741153
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 36.45914224321168,
+      "hr_band_energy_median": 16208.094754820175,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 39.248980042718316
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2645091070917807,
+      "hr_band_energy_median": 276.0523391569828,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.345027087555266
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.21098791758188842,
+      "hr_band_energy_median": 187.73501937159836,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.834703735261606
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.18287100637074907,
+      "hr_band_energy_median": 195.89626409146365,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.59099187661201
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2872735486051991,
+      "hr_band_energy_median": 239.88229623279065,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.10065416014186
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.17433026233348303,
+      "hr_band_energy_median": 167.19969059406708,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.991381062315774
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.179345860867011,
+      "hr_band_energy_median": 186.55710893942978,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.00527977040347
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.18878457077277655,
+      "hr_band_energy_median": 221.99334600888812,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.4282923181881
+    }
+  },
+  "legacy_none/auto_energy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    }
+  },
+  "legacy_none/fixed_legacy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    }
+  },
+  "legacy_none/auto_nonDC": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.84097054230097e-05,
+      "hr_band_energy_median": 0.288592681642324,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 6.5931824854918935
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.377485263137032e-06,
+      "hr_band_energy_median": 0.02122477271533415,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 11.19721042798913
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.3081420258661078e-06,
+      "hr_band_energy_median": 0.004777982028705985,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 12.90241456337509
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.599058495112366e-07,
+      "hr_band_energy_median": 0.002654333154394805,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 15.419129830278186
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.7061092004194784e-05,
+      "hr_band_energy_median": 0.11698115504879633,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.75497845373526
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.595084071248922e-06,
+      "hr_band_energy_median": 0.019387290179927595,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.281981018561165
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.7969446851544064e-06,
+      "hr_band_energy_median": 0.009452508304183933,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.779430873480102
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.945378668103478e-07,
+      "hr_band_energy_median": 0.002574676103685499,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.129308101510688
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.00011430955536912023,
+      "hr_band_energy_median": 0.2807901730953742,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.611753580969047
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.3789103241047979e-05,
+      "hr_band_energy_median": 0.052237979306137335,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.217357049097274
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.490265230291831e-06,
+      "hr_band_energy_median": 0.02159125870643442,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.992027954011608
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.027704556386243e-06,
+      "hr_band_energy_median": 0.006008340226251635,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 18.187793184644438
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.7429378515073778e-05,
+      "hr_band_energy_median": 0.08598385779788971,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.68036468888172
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.024766806155533e-06,
+      "hr_band_energy_median": 0.016330567650878355,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.624739487380246
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.6539723152773493e-06,
+      "hr_band_energy_median": 0.004815646847538535,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 38.3828714391811
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0060997586315083e-06,
+      "hr_band_energy_median": 0.0024782150191353432,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.689418941714266
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.216600440496332e-05,
+      "hr_band_energy_median": 0.06817746733274169,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.026851942474206
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.925565937167349e-06,
+      "hr_band_energy_median": 0.011814322775725245,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.264005431904014
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.3757862464284933e-06,
+      "hr_band_energy_median": 0.005625397151045316,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.093482506793475
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.572709090627098e-07,
+      "hr_band_energy_median": 0.0020889272269865884,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.676233836703208
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.218634616968273e-05,
+      "hr_band_energy_median": 0.13606369876360208,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.40441388978445
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.300732672031086e-06,
+      "hr_band_energy_median": 0.02765982229386471,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.179595385040532
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.4329411147055965e-06,
+      "hr_band_energy_median": 0.01069657467152976,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.903101899295322
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.949710300956232e-06,
+      "hr_band_energy_median": 0.005372966567866717,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.656241148328114
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.773687034379081e-05,
+      "hr_band_energy_median": 0.2875217496883258,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.262235817174833
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.3899329935689772e-05,
+      "hr_band_energy_median": 0.0486236175019948,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.449223931466474
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.4913910095654614e-06,
+      "hr_band_energy_median": 0.01084638364429525,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.407088246131167
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.3732171168119369e-06,
+      "hr_band_energy_median": 0.00460637284741523,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.280419526068535
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.260078432484436e-05,
+      "hr_band_energy_median": 0.30514942639782067,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.821951714489686
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.181347089717637e-06,
+      "hr_band_energy_median": 0.01650012656808133,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.063595736228812
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.9301602858058477e-06,
+      "hr_band_energy_median": 0.007790934339513304,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.18900521600958
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.483126516726818e-06,
+      "hr_band_energy_median": 0.005482057018824116,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.148197209492448
+    }
+  },
+  "full_none/auto_energy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    }
+  },
+  "full_none/fixed_legacy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 0.0,
+      "phase_variance_median": 0.0,
+      "hr_band_energy_median": 0.0,
+      "fft_valid_windows": 0,
+      "fft_mae_bpm": null
+    }
+  },
+  "full_none/auto_nonDC": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.297407562553402e-05,
+      "hr_band_energy_median": 0.2315780360858175,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 6.755444713752763
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.764939663688601e-06,
+      "hr_band_energy_median": 0.019353991498176827,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 9.988361922554347
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.1416403469907239e-06,
+      "hr_band_energy_median": 0.004397036213489314,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 12.07305248825534
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 5.640800487629223e-07,
+      "hr_band_energy_median": 0.0022503005550373214,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 17.111648512343407
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.5077236467444032e-05,
+      "hr_band_energy_median": 0.10727311049317215,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.489998834170045
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.643526244448331e-06,
+      "hr_band_energy_median": 0.01823549553390503,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.466763627256817
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.727020585827357e-06,
+      "hr_band_energy_median": 0.00912597671732272,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.603539229458367
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.320028319943364e-07,
+      "hr_band_energy_median": 0.0023110346524234052,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.578824066184602
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.00010126710878721652,
+      "hr_band_energy_median": 0.266503751480396,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.275790605425573
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.2690699172784886e-05,
+      "hr_band_energy_median": 0.04964460925534567,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.34741819040162
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 5.9752179880916985e-06,
+      "hr_band_energy_median": 0.01990101824162064,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.140609815424654
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.7087601726842396e-06,
+      "hr_band_energy_median": 0.005190863456034887,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 18.000335643883567
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.664751447956986e-05,
+      "hr_band_energy_median": 0.0838018301317444,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.24082664540346
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.622010723104828e-06,
+      "hr_band_energy_median": 0.01580593488454947,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.50138690585851
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.4909830240098654e-06,
+      "hr_band_energy_median": 0.004482290717465503,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.71471586852893
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 9.819160083040506e-07,
+      "hr_band_energy_median": 0.0029330816701618485,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.89172066426401
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.107729969962449e-05,
+      "hr_band_energy_median": 0.06277035664095741,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.540651195191597
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.033336404692831e-06,
+      "hr_band_energy_median": 0.011631912646247806,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.814582877556187
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.1105120625422674e-06,
+      "hr_band_energy_median": 0.0050893432540157265,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.743108865489127
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.673944751223124e-07,
+      "hr_band_energy_median": 0.0017571535348574066,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.48392745083364
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.8351779553416894e-05,
+      "hr_band_energy_median": 0.1283116631406285,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.037608522936626
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.033621328708204e-06,
+      "hr_band_energy_median": 0.02620836654110438,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.145067531779663
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.35765425886946e-06,
+      "hr_band_energy_median": 0.009372667656385137,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.414336613969237
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.750576949623633e-06,
+      "hr_band_energy_median": 0.004679485014088865,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.802895360284637
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.459274077828822e-05,
+      "hr_band_energy_median": 0.28825565323935814,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.044335001957442
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.3570717154984739e-05,
+      "hr_band_energy_median": 0.04267760976253136,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.649673999401255
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.3593803835153743e-06,
+      "hr_band_energy_median": 0.011620932479922349,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.52324823254421
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0813219961704127e-06,
+      "hr_band_energy_median": 0.003913736738125933,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.74474527335114
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 5.950125604419184e-05,
+      "hr_band_energy_median": 0.2857286233359956,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.821951714489686
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.149620030183634e-06,
+      "hr_band_energy_median": 0.01586863088026507,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.715064825902722
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.6882148388764957e-06,
+      "hr_band_energy_median": 0.005896511802338942,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.082534427966102
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.285952374044934e-06,
+      "hr_band_energy_median": 0.004709670859871687,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.198061339927225
+    }
+  },
+  "full_none_dc/fixed_legacy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0774560959092615e-05,
+      "hr_band_energy_median": 0.04839029853018947,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 15.027948110491895
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.465456527749751e-06,
+      "hr_band_energy_median": 0.004624964784402948,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 9.734404721467392
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.2830754363586953e-07,
+      "hr_band_energy_median": 0.0008016190105030036,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 10.044231156733604
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.8063286418803878e-07,
+      "hr_band_energy_median": 0.0005668973479369564,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 13.375112696895727
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.877836783476177e-06,
+      "hr_band_energy_median": 0.017213529314095203,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.758451619496128
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.238445785688779e-07,
+      "hr_band_energy_median": 0.0027670138860928298,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.3748308826916
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.0297224049122055e-07,
+      "hr_band_energy_median": 0.0016368512928164197,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.5832984064112
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.316023925730033e-07,
+      "hr_band_energy_median": 0.0005367948144330192,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.8596494737933
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.7133964476923958e-05,
+      "hr_band_energy_median": 0.05267504770217152,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.38280487172992
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.5500089217418905e-06,
+      "hr_band_energy_median": 0.012547459618762545,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.50970589420597
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0169131407248916e-06,
+      "hr_band_energy_median": 0.0032113678470916318,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.63030071216378
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.815442263759165e-07,
+      "hr_band_energy_median": 0.000829809535853965,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.35809719279661
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.908894734572651e-06,
+      "hr_band_energy_median": 0.020899714854936798,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.322560680729545
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0849727743393463e-06,
+      "hr_band_energy_median": 0.0023127584897414595,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.57204757161938
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.3625283776574635e-07,
+      "hr_band_energy_median": 0.000943546824831817,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 39.60149406146371
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.8559154682034009e-07,
+      "hr_band_energy_median": 0.0005077874858987353,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.3465266183447
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.335944468508762e-06,
+      "hr_band_energy_median": 0.01580451634855897,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.26836009464812
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.78200231306858e-07,
+      "hr_band_energy_median": 0.001998304636148942,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.148363448208364
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.463297584440483e-07,
+      "hr_band_energy_median": 0.0007616573283494989,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.395860224184784
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.6607384634156625e-07,
+      "hr_band_energy_median": 0.000440621000147121,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.763606458985816
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.950729181858938e-06,
+      "hr_band_energy_median": 0.03774115995849653,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.734279718588798
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.2542822429594075e-06,
+      "hr_band_energy_median": 0.004094898389927814,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.072615086127488
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.012033853209937e-07,
+      "hr_band_energy_median": 0.0014832504412734845,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.9664086248388
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.851254196418057e-07,
+      "hr_band_energy_median": 0.000930413176499116,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.388119545067244
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.057439699576667e-05,
+      "hr_band_energy_median": 0.10050370580524837,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.433966455761787
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.1207199496291734e-06,
+      "hr_band_energy_median": 0.010079014205404536,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.571300864729185
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.395255055267398e-07,
+      "hr_band_energy_median": 0.0022492453078558254,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.388932675478994
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.1243494844329803e-07,
+      "hr_band_energy_median": 0.0009304362427274943,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.775222515198962
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.5645793140951875e-06,
+      "hr_band_energy_median": 0.04296830742279535,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.24269672301032
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0688693330888132e-06,
+      "hr_band_energy_median": 0.005362414646405923,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.147427257967944
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.030790567183355e-07,
+      "hr_band_energy_median": 0.0010667342330786958,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.72854325948784
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.2533706990038733e-07,
+      "hr_band_energy_median": 0.0008051154150130998,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.860476421448972
+    }
+  },
+  "full_none_dc/auto_energy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0774560959092615e-05,
+      "hr_band_energy_median": 0.04839029853018947,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 15.027948110491895
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.465456527749751e-06,
+      "hr_band_energy_median": 0.004624964784402948,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 9.734404721467392
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.2830754363586953e-07,
+      "hr_band_energy_median": 0.0008016190105030036,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 10.044231156733604
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.8063286418803878e-07,
+      "hr_band_energy_median": 0.0005668973479369564,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 13.375112696895727
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.877836783476177e-06,
+      "hr_band_energy_median": 0.017213529314095203,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.758451619496128
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.238445785688779e-07,
+      "hr_band_energy_median": 0.0027670138860928298,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.3748308826916
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.0297224049122055e-07,
+      "hr_band_energy_median": 0.0016368512928164197,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.5832984064112
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.316023925730033e-07,
+      "hr_band_energy_median": 0.0005367948144330192,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.8596494737933
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.7133964476923958e-05,
+      "hr_band_energy_median": 0.05267504770217152,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.38280487172992
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.5500089217418905e-06,
+      "hr_band_energy_median": 0.012547459618762545,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.50970589420597
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0169131407248916e-06,
+      "hr_band_energy_median": 0.0032113678470916318,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.63030071216378
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.815442263759165e-07,
+      "hr_band_energy_median": 0.000829809535853965,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.35809719279661
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.908894734572651e-06,
+      "hr_band_energy_median": 0.020899714854936798,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.322560680729545
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0849727743393463e-06,
+      "hr_band_energy_median": 0.0023127584897414595,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.57204757161938
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.3625283776574635e-07,
+      "hr_band_energy_median": 0.000943546824831817,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 39.60149406146371
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.8559154682034009e-07,
+      "hr_band_energy_median": 0.0005077874858987353,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.3465266183447
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.335944468508762e-06,
+      "hr_band_energy_median": 0.01580451634855897,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.26836009464812
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.78200231306858e-07,
+      "hr_band_energy_median": 0.001998304636148942,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.148363448208364
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.463297584440483e-07,
+      "hr_band_energy_median": 0.0007616573283494989,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.395860224184784
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.6607384634156625e-07,
+      "hr_band_energy_median": 0.000440621000147121,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.763606458985816
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.950729181858938e-06,
+      "hr_band_energy_median": 0.03774115995849653,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.734279718588798
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.2542822429594075e-06,
+      "hr_band_energy_median": 0.004094898389927814,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.072615086127488
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.012033853209937e-07,
+      "hr_band_energy_median": 0.0014832504412734845,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.9664086248388
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.851254196418057e-07,
+      "hr_band_energy_median": 0.000930413176499116,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.388119545067244
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.057439699576667e-05,
+      "hr_band_energy_median": 0.10050370580524837,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.433966455761787
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.1207199496291734e-06,
+      "hr_band_energy_median": 0.010079014205404536,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.571300864729185
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.395255055267398e-07,
+      "hr_band_energy_median": 0.0022492453078558254,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.388932675478994
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.1243494844329803e-07,
+      "hr_band_energy_median": 0.0009304362427274943,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.775222515198962
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.5645793140951875e-06,
+      "hr_band_energy_median": 0.04296830742279535,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.24269672301032
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0688693330888132e-06,
+      "hr_band_energy_median": 0.005362414646405923,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.147427257967944
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.030790567183355e-07,
+      "hr_band_energy_median": 0.0010667342330786958,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.72854325948784
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.2533706990038733e-07,
+      "hr_band_energy_median": 0.0008051154150130998,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.860476421448972
+    }
+  },
+  "full_none_dc/auto_nonDC": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.297407562553402e-05,
+      "hr_band_energy_median": 0.2315780360858175,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 6.755444713752763
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.764939663688601e-06,
+      "hr_band_energy_median": 0.019353991498176827,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 9.988361922554347
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.1416403469907239e-06,
+      "hr_band_energy_median": 0.004397036213489314,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 12.07305248825534
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 5.640800487629223e-07,
+      "hr_band_energy_median": 0.0022503005550373214,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 17.111648512343407
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.5077236467444032e-05,
+      "hr_band_energy_median": 0.10727311049317215,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.489998834170045
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.643526244448331e-06,
+      "hr_band_energy_median": 0.01823549553390503,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.466763627256817
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.727020585827357e-06,
+      "hr_band_energy_median": 0.00912597671732272,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.603539229458367
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.320028319943364e-07,
+      "hr_band_energy_median": 0.0023110346524234052,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.578824066184602
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.00010126710878721652,
+      "hr_band_energy_median": 0.266503751480396,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.275790605425573
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.2690699172784886e-05,
+      "hr_band_energy_median": 0.04964460925534567,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.34741819040162
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 5.9752179880916985e-06,
+      "hr_band_energy_median": 0.01990101824162064,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.140609815424654
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.7087601726842396e-06,
+      "hr_band_energy_median": 0.005190863456034887,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 18.000335643883567
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.664751447956986e-05,
+      "hr_band_energy_median": 0.0838018301317444,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.24082664540346
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.622010723104828e-06,
+      "hr_band_energy_median": 0.01580593488454947,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.50138690585851
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.4909830240098654e-06,
+      "hr_band_energy_median": 0.004482290717465503,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.71471586852893
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 9.819160083040506e-07,
+      "hr_band_energy_median": 0.0029330816701618485,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.89172066426401
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.107729969962449e-05,
+      "hr_band_energy_median": 0.06277035664095741,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.540651195191597
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.033336404692831e-06,
+      "hr_band_energy_median": 0.011631912646247806,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.814582877556187
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.1105120625422674e-06,
+      "hr_band_energy_median": 0.0050893432540157265,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.743108865489127
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.673944751223124e-07,
+      "hr_band_energy_median": 0.0017571535348574066,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.48392745083364
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.8351779553416894e-05,
+      "hr_band_energy_median": 0.1283116631406285,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.037608522936626
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.033621328708204e-06,
+      "hr_band_energy_median": 0.02620836654110438,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.145067531779663
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.35765425886946e-06,
+      "hr_band_energy_median": 0.009372667656385137,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.414336613969237
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.750576949623633e-06,
+      "hr_band_energy_median": 0.004679485014088865,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.802895360284637
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.459274077828822e-05,
+      "hr_band_energy_median": 0.28825565323935814,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.044335001957442
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.3570717154984739e-05,
+      "hr_band_energy_median": 0.04267760976253136,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.649673999401255
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.3593803835153743e-06,
+      "hr_band_energy_median": 0.011620932479922349,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.52324823254421
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0813219961704127e-06,
+      "hr_band_energy_median": 0.003913736738125933,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.74474527335114
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 5.950125604419184e-05,
+      "hr_band_energy_median": 0.2857286233359956,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.821951714489686
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.149620030183634e-06,
+      "hr_band_energy_median": 0.01586863088026507,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.715064825902722
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.6882148388764957e-06,
+      "hr_band_energy_median": 0.005896511802338942,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.082534427966102
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.285952374044934e-06,
+      "hr_band_energy_median": 0.004709670859871687,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.198061339927225
+    }
+  },
+  "full_mean_dc/fixed_legacy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.020953883349326054,
+      "hr_band_energy_median": 31.047733295687188,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.920166699290714
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.01984691532867379,
+      "hr_band_energy_median": 32.86586179119967,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.378120754076086
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.01827292873316446,
+      "hr_band_energy_median": 31.11971779585742,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.127281428472735
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.018264134536752026,
+      "hr_band_energy_median": 28.712594345007126,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.919945047669493
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.031237522878121628,
+      "hr_band_energy_median": 50.007792697898964,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.041272611343956
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02624434989772088,
+      "hr_band_energy_median": 34.42689423706281,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.18771157654753
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02432421933726188,
+      "hr_band_energy_median": 38.34630138418822,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.93387585206338
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.024149708318909884,
+      "hr_band_energy_median": 36.84642940874363,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.63463249009764
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.015883523172607064,
+      "hr_band_energy_median": 29.357945147913384,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.224217886422252
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02570206597069085,
+      "hr_band_energy_median": 36.1561938431708,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.84780939112012
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.024780989754695986,
+      "hr_band_energy_median": 38.885776884941315,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.97991008716378
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.024893076765622857,
+      "hr_band_energy_median": 37.531643514916944,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.837911638725128
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03305088855331095,
+      "hr_band_energy_median": 45.585495865083786,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.561606197033896
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.025430648045762706,
+      "hr_band_energy_median": 42.187790161414554,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.57170242838062
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.031584028499067635,
+      "hr_band_energy_median": 47.52435657135116,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.44046315113762
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03471069226154391,
+      "hr_band_energy_median": 44.316995460184174,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.27418499850313
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.029489982592990543,
+      "hr_band_energy_median": 44.44242016955363,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.775271019482314
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.028214238059133173,
+      "hr_band_energy_median": 45.844000797516124,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.717003054186623
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.030808063453518664,
+      "hr_band_energy_median": 41.991876502105015,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.483597995923912
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.032657397497003526,
+      "hr_band_energy_median": 41.63079719245468,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.87366929865973
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.028269395701102876,
+      "hr_band_energy_median": 39.103138303899286,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.975923740327932
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.027978260502678064,
+      "hr_band_energy_median": 34.35341354756852,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.837719492676857
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02757736621156339,
+      "hr_band_energy_median": 43.31797051166012,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.321363114291636
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02486750787158074,
+      "hr_band_energy_median": 36.942480092592554,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.754169137458547
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.053075514824080135,
+      "hr_band_energy_median": 56.29305841730812,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.67025399260777
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03309187665158315,
+      "hr_band_energy_median": 46.94215353275413,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.175674166359617
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.027074785412805155,
+      "hr_band_energy_median": 39.83570504819004,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.08465278417465
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.027544580726002375,
+      "hr_band_energy_median": 39.86997561966217,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.901798544583645
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02990087326608218,
+      "hr_band_energy_median": 46.10932419996243,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.353074336772288
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02401849698044461,
+      "hr_band_energy_median": 36.22860237170279,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.553243598010315
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.025322882341028245,
+      "hr_band_energy_median": 39.434379783382745,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.120025936118278
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02687995873227032,
+      "hr_band_energy_median": 41.33923113504733,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.55912621764462
+    }
+  },
+  "full_mean_dc/auto_energy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.020953883349326054,
+      "hr_band_energy_median": 31.047733295687188,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.920166699290714
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.01984691532867379,
+      "hr_band_energy_median": 32.86586179119967,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.378120754076086
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.01827292873316446,
+      "hr_band_energy_median": 31.11971779585742,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.127281428472735
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.018264134536752026,
+      "hr_band_energy_median": 28.712594345007126,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.919945047669493
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.031237522878121628,
+      "hr_band_energy_median": 50.007792697898964,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.041272611343956
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02624434989772088,
+      "hr_band_energy_median": 34.42689423706281,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.18771157654753
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02432421933726188,
+      "hr_band_energy_median": 38.34630138418822,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.93387585206338
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.024149708318909884,
+      "hr_band_energy_median": 36.84642940874363,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.63463249009764
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.015883523172607064,
+      "hr_band_energy_median": 29.357945147913384,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.224217886422252
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02570206597069085,
+      "hr_band_energy_median": 36.1561938431708,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.84780939112012
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.024780989754695986,
+      "hr_band_energy_median": 38.885776884941315,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.97991008716378
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.024893076765622857,
+      "hr_band_energy_median": 37.531643514916944,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.837911638725128
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03305088855331095,
+      "hr_band_energy_median": 45.585495865083786,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.561606197033896
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.025430648045762706,
+      "hr_band_energy_median": 42.187790161414554,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.57170242838062
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.031584028499067635,
+      "hr_band_energy_median": 47.52435657135116,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.44046315113762
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03471069226154391,
+      "hr_band_energy_median": 44.316995460184174,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.27418499850313
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.029489982592990543,
+      "hr_band_energy_median": 44.44242016955363,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.775271019482314
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.028214238059133173,
+      "hr_band_energy_median": 45.844000797516124,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.717003054186623
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.030808063453518664,
+      "hr_band_energy_median": 41.991876502105015,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.483597995923912
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.032657397497003526,
+      "hr_band_energy_median": 41.63079719245468,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.87366929865973
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.028269395701102876,
+      "hr_band_energy_median": 39.103138303899286,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.975923740327932
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.027978260502678064,
+      "hr_band_energy_median": 34.35341354756852,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.837719492676857
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02757736621156339,
+      "hr_band_energy_median": 43.31797051166012,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.321363114291636
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02486750787158074,
+      "hr_band_energy_median": 36.942480092592554,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.754169137458547
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.053075514824080135,
+      "hr_band_energy_median": 56.29305841730812,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.67025399260777
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03309187665158315,
+      "hr_band_energy_median": 46.94215353275413,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.175674166359617
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.027074785412805155,
+      "hr_band_energy_median": 39.83570504819004,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.08465278417465
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.027544580726002375,
+      "hr_band_energy_median": 39.86997561966217,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.901798544583645
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02990087326608218,
+      "hr_band_energy_median": 46.10932419996243,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.353074336772288
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02401849698044461,
+      "hr_band_energy_median": 36.22860237170279,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.553243598010315
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.025322882341028245,
+      "hr_band_energy_median": 39.434379783382745,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.120025936118278
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02687995873227032,
+      "hr_band_energy_median": 41.33923113504733,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.55912621764462
+    }
+  },
+  "full_mean_dc/auto_nonDC": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 30.808620778367,
+      "hr_band_energy_median": 8678.644643112639,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 10.894181644942888
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.18767855800869365,
+      "hr_band_energy_median": 196.10384556248675,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 15.504445482336957
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.14152210093736814,
+      "hr_band_energy_median": 173.90805888293727,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 14.847627895864038
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1426448312298311,
+      "hr_band_energy_median": 177.20057122466034,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 13.532033552873985
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1920330149221442,
+      "hr_band_energy_median": 214.20761415731093,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.08537077710482
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.21816365946869393,
+      "hr_band_energy_median": 241.1752771336068,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.39906517709101
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.16321510662193253,
+      "hr_band_energy_median": 201.3768993224313,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.21519378684598
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1488784196438107,
+      "hr_band_energy_median": 153.79908307611316,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.085926273489314
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 38.344798721356554,
+      "hr_band_energy_median": 15020.276306644482,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.012295332074427
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1679951051210366,
+      "hr_band_energy_median": 172.82817375378238,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.286523149640754
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.23520041734515873,
+      "hr_band_energy_median": 222.0685298139058,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.43987951651161
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.16932822171698136,
+      "hr_band_energy_median": 217.99261339629788,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.12366274986183
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2237018533531603,
+      "hr_band_energy_median": 224.44895682860766,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.6309081671426
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.23158490311971008,
+      "hr_band_energy_median": 244.78258393256948,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 42.28935395748895
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1692486404361165,
+      "hr_band_energy_median": 191.43132040224248,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 40.35844039298545
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.19475777358585764,
+      "hr_band_energy_median": 186.34038025013507,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.822469645242265
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.25936269084042174,
+      "hr_band_energy_median": 285.3144236717213,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.832906629974204
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.3852096385060917,
+      "hr_band_energy_median": 324.31629420634613,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.08885257864315
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2718150574564557,
+      "hr_band_energy_median": 300.0414317482775,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.546233865489132
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2655960621151516,
+      "hr_band_energy_median": 224.20785878821968,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.385320113877118
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2747513338690865,
+      "hr_band_energy_median": 263.5492153707295,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.180636715871405
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.22928094960666262,
+      "hr_band_energy_median": 233.6570388084914,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.08770509971444
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2517339342531759,
+      "hr_band_energy_median": 213.39970393359897,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.079103937338797
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2989717913966201,
+      "hr_band_energy_median": 256.6193243408353,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.088026134741153
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 36.45914224321168,
+      "hr_band_energy_median": 16208.094754820175,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 39.248980042718316
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2645091070917807,
+      "hr_band_energy_median": 276.0523391569828,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.345027087555266
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.21098791758188842,
+      "hr_band_energy_median": 187.73501937159836,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.834703735261606
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.18287100637074907,
+      "hr_band_energy_median": 195.89626409146365,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.59099187661201
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2872735486051991,
+      "hr_band_energy_median": 239.88229623279065,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.10065416014186
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.17433026233348303,
+      "hr_band_energy_median": 167.19969059406708,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.991381062315774
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.179345860867011,
+      "hr_band_energy_median": 186.55710893942978,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.00527977040347
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.18878457077277655,
+      "hr_band_energy_median": 221.99334600888812,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.4282923181881
+    }
+  },
+  "native_none_dc/auto_energy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.1054806906757878e-05,
+      "hr_band_energy_median": 0.04834840025206481,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 15.038758232774502
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.49831938478406e-06,
+      "hr_band_energy_median": 0.00465266338121863,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 9.87095363451087
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.527303387150169e-07,
+      "hr_band_energy_median": 0.0008091285244715002,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 9.361045015429257
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.622183918622381e-07,
+      "hr_band_energy_median": 0.0005473337240879056,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 14.381396664287031
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.7974563772066393e-06,
+      "hr_band_energy_median": 0.017366630483363465,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.656549445583085
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.126741001540627e-07,
+      "hr_band_energy_median": 0.0028036910033987375,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.171026534865515
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.9642622046756617e-07,
+      "hr_band_energy_median": 0.001562847169139992,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.86034494173729
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.332550686478391e-07,
+      "hr_band_energy_median": 0.0005376351091573949,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.951403889554165
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.7256080537161384e-05,
+      "hr_band_energy_median": 0.053895191698594205,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.351639790208182
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.553123581987432e-06,
+      "hr_band_energy_median": 0.012243350949622717,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.66255915507553
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.013481174127653e-06,
+      "hr_band_energy_median": 0.0032134018431847935,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.554765725750737
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.8012342610529004e-07,
+      "hr_band_energy_median": 0.000833640305284425,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.626991554209656
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.903122947666936e-06,
+      "hr_band_energy_median": 0.021353402449352243,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.577316115512154
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0818704347822848e-06,
+      "hr_band_energy_median": 0.002289523627891427,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.7948736585759
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.4570159222633e-07,
+      "hr_band_energy_median": 0.0009911375050541994,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 39.04103210494197
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.9340906729872617e-07,
+      "hr_band_energy_median": 0.0006088834337713766,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 36.887966835736
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.339934120420428e-06,
+      "hr_band_energy_median": 0.015967064540027928,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.574066616387253
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.712964305501149e-07,
+      "hr_band_energy_median": 0.0019847521044473256,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.04646127429532
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.458920572149552e-07,
+      "hr_band_energy_median": 0.0007640456016601857,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.299392832880436
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.623663127398978e-07,
+      "hr_band_energy_median": 0.0004299249514990609,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.91945734213799
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 9.197646395115414e-06,
+      "hr_band_energy_median": 0.03883765502025359,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.809857164240974
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.258544412482825e-06,
+      "hr_band_energy_median": 0.004147929682074126,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.9955685508014
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 5.813940595234096e-07,
+      "hr_band_energy_median": 0.001522636057044661,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.27211514657793
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.811269931441334e-07,
+      "hr_band_energy_median": 0.0009335488653617525,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.01690690919768
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.0610425717955162e-05,
+      "hr_band_energy_median": 0.09962636142084368,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.99442841228353
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.109108265489624e-06,
+      "hr_band_energy_median": 0.01017431949492452,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.3674965169031
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.571048628488637e-07,
+      "hr_band_energy_median": 0.002277340559738916,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.681646670044213
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.180535519522393e-07,
+      "hr_band_energy_median": 0.0009372536784789647,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.67332034128592
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.41537362063472e-06,
+      "hr_band_energy_median": 0.04266107192751341,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.67976363877119
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.0708531405429812e-06,
+      "hr_band_energy_median": 0.005184925047494111,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.86074247535925
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.1827339430816216e-07,
+      "hr_band_energy_median": 0.0010535059568911199,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.35282145242262
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.2118269600707226e-07,
+      "hr_band_energy_median": 0.000796086436885404,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.67120162525332
+    }
+  },
+  "native_none_dc/auto_nonDC": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.694000101067794e-05,
+      "hr_band_energy_median": 0.23434283650954527,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 6.738622363209285
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.567146341725198e-06,
+      "hr_band_energy_median": 0.019571960772221404,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 10.635313349184784
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.2319836453993325e-06,
+      "hr_band_energy_median": 0.004551667598984947,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 10.54838367032056
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 5.560368637485323e-07,
+      "hr_band_energy_median": 0.0021726439116181865,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 16.64108125690862
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.58826464551397e-05,
+      "hr_band_energy_median": 0.10943305631432676,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.11163606243091
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.658880567179213e-06,
+      "hr_band_energy_median": 0.01867154085914647,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.230443994104643
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.7390276179925305e-06,
+      "hr_band_energy_median": 0.009082354604007442,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.713474691414884
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.138010859192251e-07,
+      "hr_band_energy_median": 0.002216564103579479,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.385676987380254
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.00010476082244719082,
+      "hr_band_energy_median": 0.26661477726021776,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.690999504882093
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.168083209382028e-05,
+      "hr_band_energy_median": 0.046644634364391466,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.281776206705967
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 5.9424217157106845e-06,
+      "hr_band_energy_median": 0.02032697265123291,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.976844530098564
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.7222086976318594e-06,
+      "hr_band_energy_median": 0.005087628648299324,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 17.967854325948785
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.6572582510929367e-05,
+      "hr_band_energy_median": 0.08387316314915685,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.57846251496868
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.518086363807886e-06,
+      "hr_band_energy_median": 0.015794469363000024,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.55233799281503
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.52057282522842e-06,
+      "hr_band_energy_median": 0.004786262492297673,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 38.21937789298545
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 9.287282524230787e-07,
+      "hr_band_energy_median": 0.0025909834905551076,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 37.3502804468727
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.215705464664982e-05,
+      "hr_band_energy_median": 0.06412319346890606,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.59160228214812
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.7014476349623726e-06,
+      "hr_band_energy_median": 0.011473653548625642,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.66835325799097
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 2.1226431886921968e-06,
+      "hr_band_energy_median": 0.005090630378508894,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.337011718750002
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 6.836765503446511e-07,
+      "hr_band_energy_median": 0.0017848482305315018,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.63829226061625
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.861613596724915e-05,
+      "hr_band_energy_median": 0.1303831968527393,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.557267150654017
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 8.042975840266346e-06,
+      "hr_band_energy_median": 0.026928702561813456,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.635556662214448
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.351399139915402e-06,
+      "hr_band_energy_median": 0.009704056482667655,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 19.98787601614315
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.7885999443966392e-06,
+      "hr_band_energy_median": 0.004726722803661326,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 20.513280890175942
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 7.657918750895301e-05,
+      "hr_band_energy_median": 0.28927246157070297,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.484340097066138
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.3404356268026635e-05,
+      "hr_band_energy_median": 0.04327944209875394,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.442770127118646
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 3.37484097298044e-06,
+      "hr_band_energy_median": 0.012072989774461914,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.325371194500736
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.1062477483725447e-06,
+      "hr_band_energy_median": 0.003801480233651804,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.74474527335114
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 5.94444086031344e-05,
+      "hr_band_energy_median": 0.2901360523061168,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.923853888402725
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 4.226930614426236e-06,
+      "hr_band_energy_median": 0.016061880347009158,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.460309391120113
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.66756497446573e-06,
+      "hr_band_energy_median": 0.005973718679798554,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.054630216009578
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 1.2698883769482452e-06,
+      "hr_band_energy_median": 0.0044599480232256055,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.310968948622882
+    }
+  },
+  "native_mean_dc/auto_energy": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.019934726976650406,
+      "hr_band_energy_median": 32.60184886845319,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.582726142225496
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.019948961483183144,
+      "hr_band_energy_median": 32.08809370236983,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 21.99764351222826
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.018643519393877622,
+      "hr_band_energy_median": 31.023101221443937,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.043509349668387
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0176788323336523,
+      "hr_band_energy_median": 29.78341575545234,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.79948818625645
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.032831641706165704,
+      "hr_band_energy_median": 50.00945529894102,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.100375872213522
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02314843543526771,
+      "hr_band_energy_median": 32.394176354577745,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.816371562960576
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.024867130802458184,
+      "hr_band_energy_median": 37.635051139987965,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.65477428956338
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02381485176717672,
+      "hr_band_energy_median": 34.918449597707266,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.50381010501106
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.014727334983800716,
+      "hr_band_energy_median": 29.707791956820948,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.07717304946573
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.025283624449479188,
+      "hr_band_energy_median": 33.455717808338754,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.44574587209838
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.023474425393948426,
+      "hr_band_energy_median": 39.189076483885195,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.836805467598563
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02431920628033555,
+      "hr_band_energy_median": 39.257191701324984,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.622770674051214
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.029627982322674624,
+      "hr_band_energy_median": 46.93880268627219,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.64405354757737
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02538479441711804,
+      "hr_band_energy_median": 40.4571632517778,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.48252104251105
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.028032892451198145,
+      "hr_band_energy_median": 42.7892010013097,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.52479569189849
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.031924745984164386,
+      "hr_band_energy_median": 42.73342251394973,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.43889287893792
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03180598356570595,
+      "hr_band_energy_median": 44.906978458035454,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.866670216930732
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.031898710800262894,
+      "hr_band_energy_median": 42.9007881420341,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.514599861251842
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.029652076805442105,
+      "hr_band_energy_median": 39.36445401104202,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.9653659986413
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03237193245049909,
+      "hr_band_energy_median": 40.08639577764996,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.78619477420321
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.026204927946560787,
+      "hr_band_energy_median": 37.60189933856496,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 28.446057911523578
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.027056408756495207,
+      "hr_band_energy_median": 35.540708569571805,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.322255837785555
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.026091334874270594,
+      "hr_band_energy_median": 42.398839797142756,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.31521127429532
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.0236137339052452,
+      "hr_band_energy_median": 31.96797830755773,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.140760509741153
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.05423825904397568,
+      "hr_band_energy_median": 59.37278622385728,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.124848082281687
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.03224975842115939,
+      "hr_band_energy_median": 43.86254662145233,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.408130008750923
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02896745176220264,
+      "hr_band_energy_median": 40.2656240369596,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.326165829955784
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02667819538838058,
+      "hr_band_energy_median": 41.28007846828838,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.65981484893146
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.029989352632554332,
+      "hr_band_energy_median": 48.23809381125545,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.816831130250556
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.02392863310427563,
+      "hr_band_energy_median": 34.84679116508622,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.004704771554906
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.026731906002494144,
+      "hr_band_energy_median": 42.59295535138502,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.073745365466102
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.027823455002110906,
+      "hr_band_energy_median": 42.05806237079339,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 31.92537961438375
+    }
+  },
+  "native_mean_dc/auto_nonDC": {
+    "p01_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 31.47488974376445,
+      "hr_band_energy_median": 9392.0020715533,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 9.708382893100588
+    },
+    "p01_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.201959974268496,
+      "hr_band_energy_median": 177.2786033366815,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 16.230668308423912
+    },
+    "p01_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.13489842283855136,
+      "hr_band_energy_median": 165.26272197235417,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 13.039119064342298
+    },
+    "p01_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1315131052036466,
+      "hr_band_energy_median": 161.18362084078439,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 12.99163783276529
+    },
+    "p02_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.17634414471898835,
+      "hr_band_energy_median": 207.89258970763606,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.95714387493091
+    },
+    "p02_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.19357459877844896,
+      "hr_band_energy_median": 216.52643926821395,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.83312597872145
+    },
+    "p02_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.16699016182387638,
+      "hr_band_energy_median": 190.73230469185506,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 30.094286857498155
+    },
+    "p02_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.12575497559458979,
+      "hr_band_energy_median": 155.56482412787332,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.56820378707627
+    },
+    "p03_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 36.780790531170794,
+      "hr_band_energy_median": 14483.076696631688,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.98988534566138
+    },
+    "p03_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.19741736773069612,
+      "hr_band_energy_median": 187.27257111813864,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 29.05730270127119
+    },
+    "p03_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.20279763383761712,
+      "hr_band_energy_median": 200.14863622367795,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 26.57123141868552
+    },
+    "p03_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.20271588817080843,
+      "hr_band_energy_median": 205.81873015059614,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.327212342253134
+    },
+    "p04_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.20097234432609015,
+      "hr_band_energy_median": 215.95880972886158,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 38.2493015095339
+    },
+    "p04_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.18006840679731106,
+      "hr_band_energy_median": 201.82483463864742,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 42.3894388759672
+    },
+    "p04_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.183936854996207,
+      "hr_band_energy_median": 185.73418464409133,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 38.90384630331153
+    },
+    "p04_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.17647065842786985,
+      "hr_band_energy_median": 185.7528117236746,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 39.159748857198785
+    },
+    "p05_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.30734327292851227,
+      "hr_band_energy_median": 303.34088438676895,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.755698749539423
+    },
+    "p05_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.3880961246709959,
+      "hr_band_energy_median": 370.78759000738717,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.09708967103445
+    },
+    "p05_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2594261121097775,
+      "hr_band_energy_median": 254.16001938877923,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.450420346467393
+    },
+    "p05_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.23729583158364273,
+      "hr_band_energy_median": 228.58665200936912,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 27.2273038095293
+    },
+    "p06_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.24122628739791854,
+      "hr_band_energy_median": 263.74194591526884,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 25.476976729458364
+    },
+    "p06_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.22069253802761618,
+      "hr_band_energy_median": 216.56763206181148,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 22.814828061670966
+    },
+    "p06_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.2471904890643862,
+      "hr_band_energy_median": 207.71309864376346,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 23.060124657447492
+    },
+    "p06_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.3531154554498677,
+      "hr_band_energy_median": 344.8684019845237,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 24.826222466262895
+    },
+    "p07_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 38.93480095694561,
+      "hr_band_energy_median": 16440.1832384323,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 39.316235477500925
+    },
+    "p07_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.23149187873915666,
+      "hr_band_energy_median": 251.08054346668627,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 32.56103609179256
+    },
+    "p07_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1895352661010402,
+      "hr_band_energy_median": 187.76956668665613,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.37633077330508
+    },
+    "p07_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1609128173810448,
+      "hr_band_energy_median": 172.31458588268424,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.10738963476418
+    },
+    "p08_0.3m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.22005734570530988,
+      "hr_band_energy_median": 231.54534358603382,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 35.034205450902725
+    },
+    "p08_0.6m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.1607018336606376,
+      "hr_band_energy_median": 158.18803674268702,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.62060942681466
+    },
+    "p08_0.9m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.18308037731217025,
+      "hr_band_energy_median": 192.64436399318458,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 34.41237895518607
+    },
+    "p08_1.2m_short": {
+      "windows": 92,
+      "nonzero_feature_fraction": 1.0,
+      "phase_variance_median": 0.16587879103937292,
+      "hr_band_energy_median": 191.04700612647872,
+      "fft_valid_windows": 92,
+      "fft_mae_bpm": 33.26397506275332
+    }
+  }
+}
