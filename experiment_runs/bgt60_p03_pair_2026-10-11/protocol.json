@@ -1,0 +1,35 @@
+{
+  "subject": 3,
+  "fixed_centers": {
+    "0.3m": 14,
+    "0.6m": 22
+  },
+  "fixed_rx_zero_based": 2,
+  "neighbor_radius_bins": 2,
+  "fs_hz_assumed": 30,
+  "window_frames": 384,
+  "stride": 192,
+  "fast_time_dc": "mean",
+  "chirp_clutter": "none",
+  "offsets_s": [
+    0,
+    -60,
+    60,
+    -120,
+    120
+  ],
+  "roi_selection": "frozen prior audit; no label optimization",
+  "quality_rules": "descriptive only; no window exclusions or tuned thresholds",
+  "timing": "shared start and 30Hz unverified",
+  "training": false,
+  "vmd": false,
+  "axes": "complex[frame,rx,range,coefficient]; spectra[window,rx,range,coefficient,method,frequency]",
+  "coefficients": [
+    "first_chirp",
+    "zero_doppler"
+  ],
+  "methods": [
+    "unwrap",
+    "edacm"
+  ]
+}

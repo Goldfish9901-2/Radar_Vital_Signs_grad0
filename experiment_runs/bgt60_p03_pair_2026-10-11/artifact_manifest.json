@@ -1,0 +1,20 @@
+{
+  "kernel": "goldfish9901/bgt60-p03-complex-pair-audit",
+  "version": 2,
+  "files": [
+    {
+      "file": "p03_0.3m_windows.json.gz",
+      "rows": 5520,
+      "uncompressed_bytes": 3565429,
+      "sha256_uncompressed": "eff22278a6d326d3c3008260c32abfbf6b0cd505e9dca3546e8ba7f73685dc5d",
+      "compressed_bytes": 277586
+    },
+    {
+      "file": "p03_0.6m_windows.json.gz",
+      "rows": 5520,
+      "uncompressed_bytes": 3597032,
+      "sha256_uncompressed": "e501b85ce6e62e6fd2ebf338638a167eacf3d9011698c40b8dfcd7a269478eb3",
+      "compressed_bytes": 281192
+    }
+  ]
+}

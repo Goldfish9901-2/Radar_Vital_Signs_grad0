@@ -1,0 +1,108 @@
+{
+  "0.3m": {
+    "bytes": 24305955,
+    "sha256": "019b54529ca39ef2a7127a60b044e9c260e0168cdcda75f75a6d373359df829b",
+    "array_shapes": {
+      "complex": [
+        18000,
+        3,
+        5,
+        2
+      ],
+      "range_bins": [
+        5
+      ],
+      "time_s": [
+        18000
+      ],
+      "reference": [
+        600,
+        3
+      ],
+      "full_unwrap": [
+        18000,
+        3,
+        5,
+        2
+      ],
+      "window_starts": [
+        92
+      ],
+      "window_phases": [
+        92,
+        3,
+        5,
+        2,
+        2,
+        384
+      ],
+      "window_power": [
+        92,
+        3,
+        5,
+        2,
+        2,
+        193
+      ],
+      "frequencies_hz": [
+        193
+      ]
+    },
+    "window_rows": 5520,
+    "crc_passed": true,
+    "all_finite": true
+  },
+  "0.6m": {
+    "bytes": 24306621,
+    "sha256": "385fba54710e18c296fcc2d03932f287cc7d38abc538495f8bd8281beb289406",
+    "array_shapes": {
+      "complex": [
+        18000,
+        3,
+        5,
+        2
+      ],
+      "range_bins": [
+        5
+      ],
+      "time_s": [
+        18000
+      ],
+      "reference": [
+        600,
+        3
+      ],
+      "full_unwrap": [
+        18000,
+        3,
+        5,
+        2
+      ],
+      "window_starts": [
+        92
+      ],
+      "window_phases": [
+        92,
+        3,
+        5,
+        2,
+        2,
+        384
+      ],
+      "window_power": [
+        92,
+        3,
+        5,
+        2,
+        2,
+        193
+      ],
+      "frequencies_hz": [
+        193
+      ]
+    },
+    "window_rows": 5520,
+    "crc_passed": true,
+    "all_finite": true
+  }
+}

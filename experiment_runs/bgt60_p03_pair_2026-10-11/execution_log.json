@@ -1,0 +1,22 @@
+[{"stream_name":"stdout","time":1.866675806,"data":"Resolved code root: /kaggle/input/datasets/goldfish9901/bgt60-frontend-code/Radar_Vital_Signs_grad0\n"}
+,{"stream_name":"stdout","time":6.862119843,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.9/17.9 MB 74.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":10.419371086,"data":"Using Python 3.13.15 environment at: /usr\n"}
+,{"stream_name":"stderr","time":10.494934498,"data":"Checked 5 packages in 197ms\n"}
+,{"stream_name":"stderr","time":14.591019674,"data":"test_pair_coefficients_preserve_micro_phase (__main__.Checks.test_pair_coefficients_preserve_micro_phase) ... ok\n"}
+,{"stream_name":"stderr","time":14.594363843,"data":"test_phase_frequency (__main__.Checks.test_phase_frequency) ... ok\n"}
+,{"stream_name":"stderr","time":14.594580975,"data":"test_roi_excludes_dc (__main__.Checks.test_roi_excludes_dc) ... ok\n"}
+,{"stream_name":"stderr","time":14.594864086,"data":"test_timestamps_preserve_reference_origin (__main__.Checks.test_timestamps_preserve_reference_origin) ... ok\n"}
+,{"stream_name":"stderr","time":14.59487516,"data":"\n"}
+,{"stream_name":"stderr","time":14.594879990999999,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":14.595058677,"data":"Ran 4 tests in 0.100s\n"}
+,{"stream_name":"stderr","time":14.595065998,"data":"\n"}
+,{"stream_name":"stderr","time":14.595070837,"data":"OK\n"}
+,{"stream_name":"stdout","time":45.428899035,"data":"0.3m complete\n"}
+,{"stream_name":"stdout","time":75.010813014,"data":"0.6m complete\n"}
+,{"stream_name":"stderr","time":78.257245574,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":78.257290086,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":78.644321349,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":78.644354253,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":79.788363035,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":81.129050675,"data":"[NbConvertApp] Writing 280208 bytes to __results__.html\n"}
+]
