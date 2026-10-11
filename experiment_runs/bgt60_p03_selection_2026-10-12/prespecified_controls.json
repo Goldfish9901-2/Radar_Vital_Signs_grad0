@@ -1,0 +1,51 @@
+{
+  "0.3m": {
+    "rx0_bin14": {
+      "windows": 21,
+      "valid": 21,
+      "mae_bpm": 8.46974206349206,
+      "pearson_r": 0.20566637675436997,
+      "prediction_std_bpm": 13.14881828127066,
+      "reference_std_bpm": 3.488265745766324,
+      "low_edge_fraction": 0.047619047619047616
+    },
+    "rx1_bin14": {
+      "windows": 21,
+      "valid": 21,
+      "mae_bpm": 9.534474206349202,
+      "pearson_r": 0.33832913419517946,
+      "prediction_std_bpm": 14.674535637405002,
+      "reference_std_bpm": 3.488265745766324,
+      "low_edge_fraction": 0.09523809523809523
+    },
+    "rx2_bin14": {
+      "windows": 21,
+      "valid": 21,
+      "mae_bpm": 8.992931547619046,
+      "pearson_r": 0.17001657350403002,
+      "prediction_std_bpm": 13.437425842225368,
+      "reference_std_bpm": 3.488265745766324,
+      "low_edge_fraction": 0.047619047619047616
+    }
+  },
+  "0.6m": {
+    "rx2_bin22": {
+      "windows": 24,
+      "valid": 23,
+      "mae_bpm": 24.675849184782614,
+      "pearson_r": 0.13176382802554987,
+      "prediction_std_bpm": 16.350139500107264,
+      "reference_std_bpm": 2.972682536850005,
+      "low_edge_fraction": 0.2608695652173913
+    },
+    "rx2_bin23": {
+      "windows": 24,
+      "valid": 23,
+      "mae_bpm": 20.65349864130435,
+      "pearson_r": -0.2545643919907828,
+      "prediction_std_bpm": 22.12943609207673,
+      "reference_std_bpm": 2.972682536850005,
+      "low_edge_fraction": 0.17391304347826086
+    }
+  }
+}

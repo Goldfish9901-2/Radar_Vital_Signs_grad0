@@ -1,0 +1,34 @@
+{
+  "rules": {
+    "energy": "mean |z|^2",
+    "quality": "log(E/max(E)) + 2*log(max(p01(|z|)/median(|z|),1e-6)) - 4*jump_fraction - 0.25*switch",
+    "jump_threshold_rad": 1.5707963267948966,
+    "initial_previous": null,
+    "candidate_order": "RX major, ascending range bin; ties use first",
+    "phase": "independent per-window unwrap + linear detrend; no channel phase stitching",
+    "fft": "384 samples, 30 Hz assumed, Hann, max power in 0.75\u20132.5 Hz, no interpolation",
+    "quality_filter": "none; all windows evaluated; no ECG-dependent rules or parameters"
+  },
+  "offsets_s": [
+    0,
+    -60,
+    60,
+    -120,
+    120
+  ],
+  "records": {
+    "0.3m": {
+      "center": 14,
+      "rx": 2
+    },
+    "0.6m": {
+      "center": 22,
+      "rx": 2
+    }
+  },
+  "quality_rule_status": "new exploratory heuristic frozen before this run; not optimized on HR",
+  "scope": "p03 only, no cross-subject claim; rules require validation on other subjects",
+  "synchronization": "shared start/30Hz unverified",
+  "training": false,
+  "vmd": false
+}

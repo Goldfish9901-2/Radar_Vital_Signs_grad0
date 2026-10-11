@@ -1,0 +1,20 @@
+{
+  "python": "3.13.14",
+  "platform": "Windows",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "tests_seconds": 2.137020100002701,
+  "compute_seconds": 1.421973299999081,
+  "total_seconds": 3.7329463999994914,
+  "files_matched": [
+    "protocol.json",
+    "input_provenance.json",
+    "summary.json",
+    "prespecified_controls.json",
+    "p03_0.3m_selections.json",
+    "p03_0.6m_selections.json"
+  ],
+  "float_tolerance": 1e-08,
+  "training": false,
+  "local_policy": "known <=5 minute analyses stay local with uv"
+}

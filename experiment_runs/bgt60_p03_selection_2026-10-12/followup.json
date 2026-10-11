@@ -1,0 +1,237 @@
+{
+  "0.3m": {
+    "fixed": {
+      "paired_valid_windows": 91,
+      "mean_error_change_bpm": 0.0,
+      "improved": 0,
+      "worsened": 0,
+      "tied": 91,
+      "selection_counts": {
+        "RX2/bin14": 92
+      },
+      "switches": 0,
+      "prediction_jump_at_switch_median_bpm": null,
+      "matched_zero_r": 0.6021439202096143,
+      "matched_shift_controls": {
+        "-60": {
+          "mae_minus_zero": 1.3390388257575752,
+          "r": -0.1826117240783363
+        },
+        "60": {
+          "mae_minus_zero": 1.1311505681818184,
+          "r": 0.016394619613598657
+        },
+        "-120": {
+          "mae_minus_zero": 1.4918560606060605,
+          "r": -0.11060624837801082
+        },
+        "120": {
+          "mae_minus_zero": 1.1301231060606063,
+          "r": 0.06234425616535578
+        }
+      },
+      "note": "Prediction jumps at switches are descriptive; overlapping-window changes and channel changes are confounded."
+    },
+    "energy": {
+      "paired_valid_windows": 91,
+      "mean_error_change_bpm": -0.3465831043956041,
+      "improved": 6,
+      "worsened": 5,
+      "tied": 80,
+      "selection_counts": {
+        "RX1/bin15": 4,
+        "RX2/bin14": 50,
+        "RX1/bin14": 38
+      },
+      "switches": 8,
+      "prediction_jump_at_switch_median_bpm": 4.6875,
+      "matched_zero_r": 0.4515313230968139,
+      "matched_shift_controls": {
+        "-60": {
+          "mae_minus_zero": 1.2426373106060593,
+          "r": -0.1517371992519016
+        },
+        "60": {
+          "mae_minus_zero": 1.0347490530303025,
+          "r": -0.019883525140120588
+        },
+        "-120": {
+          "mae_minus_zero": 1.3942613636363639,
+          "r": -0.05730588558657187
+        },
+        "120": {
+          "mae_minus_zero": 1.0787499999999994,
+          "r": 0.015726641193842584
+        }
+      },
+      "note": "Prediction jumps at switches are descriptive; overlapping-window changes and channel changes are confounded."
+    },
+    "quality": {
+      "paired_valid_windows": 91,
+      "mean_error_change_bpm": 0.6300938644688647,
+      "improved": 4,
+      "worsened": 8,
+      "tied": 79,
+      "selection_counts": {
+        "RX1/bin15": 1,
+        "RX0/bin12": 5,
+        "RX2/bin14": 45,
+        "RX1/bin14": 39,
+        "RX2/bin13": 2
+      },
+      "switches": 11,
+      "prediction_jump_at_switch_median_bpm": 9.375,
+      "matched_zero_r": 0.590879703653797,
+      "matched_shift_controls": {
+        "-60": {
+          "mae_minus_zero": 1.3695785984848476,
+          "r": -0.15919802411330472
+        },
+        "60": {
+          "mae_minus_zero": 1.2923721590909083,
+          "r": -0.023266114600437964
+        },
+        "-120": {
+          "mae_minus_zero": 1.5071874999999992,
+          "r": -0.06637072670059264
+        },
+        "120": {
+          "mae_minus_zero": 1.0734943181818175,
+          "r": 0.12674903095924067
+        }
+      },
+      "note": "Prediction jumps at switches are descriptive; overlapping-window changes and channel changes are confounded."
+    },
+    "invariance": {
+      "constant_channel_rotation_choices_identical": true,
+      "max_prediction_difference_bpm": 0.0,
+      "future_modification_prefix_choices_identical": true,
+      "prefix_windows": 45,
+      "cutoff_frame": 9000
+    }
+  },
+  "0.6m": {
+    "fixed": {
+      "paired_valid_windows": 91,
+      "mean_error_change_bpm": 0.0,
+      "improved": 0,
+      "worsened": 0,
+      "tied": 91,
+      "selection_counts": {
+        "RX2/bin22": 92
+      },
+      "switches": 0,
+      "prediction_jump_at_switch_median_bpm": null,
+      "matched_zero_r": -0.026086926005437445,
+      "matched_shift_controls": {
+        "-60": {
+          "mae_minus_zero": -0.5846969696969744,
+          "r": 0.35284055241064693
+        },
+        "60": {
+          "mae_minus_zero": -0.13612689393939448,
+          "r": 0.029847693649587972
+        },
+        "-120": {
+          "mae_minus_zero": -0.4181439393939357,
+          "r": -0.16355584349667787
+        },
+        "120": {
+          "mae_minus_zero": 0.14611268939394506,
+          "r": -0.1512758300622287
+        }
+      },
+      "note": "Prediction jumps at switches are descriptive; overlapping-window changes and channel changes are confounded."
+    },
+    "energy": {
+      "paired_valid_windows": 91,
+      "mean_error_change_bpm": -2.9629292582417586,
+      "improved": 29,
+      "worsened": 21,
+      "tied": 41,
+      "selection_counts": {
+        "RX2/bin23": 30,
+        "RX0/bin23": 3,
+        "RX1/bin24": 1,
+        "RX1/bin21": 15,
+        "RX1/bin23": 1,
+        "RX2/bin21": 2,
+        "RX1/bin22": 17,
+        "RX2/bin22": 23
+      },
+      "switches": 25,
+      "prediction_jump_at_switch_median_bpm": 9.375,
+      "matched_zero_r": 0.02650583163615984,
+      "matched_shift_controls": {
+        "-60": {
+          "mae_minus_zero": -0.0009090909090900823,
+          "r": 0.1565107217764053
+        },
+        "60": {
+          "mae_minus_zero": 0.2550568181818207,
+          "r": 0.16060953131318698
+        },
+        "-120": {
+          "mae_minus_zero": -0.18830492424241996,
+          "r": 0.021436146788720647
+        },
+        "120": {
+          "mae_minus_zero": 0.27706912878788614,
+          "r": -0.21772727453316904
+        }
+      },
+      "note": "Prediction jumps at switches are descriptive; overlapping-window changes and channel changes are confounded."
+    },
+    "quality": {
+      "paired_valid_windows": 91,
+      "mean_error_change_bpm": -3.918269230769231,
+      "improved": 35,
+      "worsened": 18,
+      "tied": 38,
+      "selection_counts": {
+        "RX1/bin23": 5,
+        "RX2/bin23": 9,
+        "RX0/bin23": 1,
+        "RX0/bin20": 12,
+        "RX2/bin24": 1,
+        "RX1/bin24": 5,
+        "RX2/bin22": 21,
+        "RX0/bin24": 3,
+        "RX2/bin21": 9,
+        "RX1/bin21": 7,
+        "RX0/bin21": 2,
+        "RX0/bin22": 3,
+        "RX1/bin22": 14
+      },
+      "switches": 41,
+      "prediction_jump_at_switch_median_bpm": 14.0625,
+      "matched_zero_r": -0.16315908881844826,
+      "matched_shift_controls": {
+        "-60": {
+          "mae_minus_zero": -0.1478219696969667,
+          "r": 0.1794002399176007
+        },
+        "60": {
+          "mae_minus_zero": 0.17270833333333613,
+          "r": 0.035843577017908
+        },
+        "-120": {
+          "mae_minus_zero": -0.14860795454545794,
+          "r": 0.017292767871902235
+        },
+        "120": {
+          "mae_minus_zero": 0.2541619318181816,
+          "r": -0.15795965212534116
+        }
+      },
+      "note": "Prediction jumps at switches are descriptive; overlapping-window changes and channel changes are confounded."
+    },
+    "invariance": {
+      "constant_channel_rotation_choices_identical": true,
+      "max_prediction_difference_bpm": 0.0,
+      "future_modification_prefix_choices_identical": true,
+      "prefix_windows": 45,
+      "cutoff_frame": 9000
+    }
+  }
+}

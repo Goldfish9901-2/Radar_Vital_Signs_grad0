@@ -1,0 +1,17 @@
+[project]
+name = "radar-vital-signs-analysis"
+version = "0.1.0"
+description = "CPU radar diagnostics and reproducible experiment analysis"
+requires-python = ">=3.13,<3.15"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pandas",
+    "h5py",
+    "scikit-learn",
+    "pyyaml",
+]
+
+[tool.uv]
+package = false

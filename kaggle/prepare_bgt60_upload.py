@@ -7,7 +7,8 @@ import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-PAIR = "--pair" in sys.argv[1:]
+SELECTION = "--selection" in sys.argv[1:]
+PAIR = "--pair" in sys.argv[1:] or SELECTION
 PHASE = "--phase" in sys.argv[1:] or PAIR
 DIAGNOSTICS = "--diagnostics" in sys.argv[1:] or PHASE
 STAGING = ROOT / "tmp" / ("bgt60_diagnostic_upload" if DIAGNOSTICS else "bgt60_frontend_upload")
@@ -24,6 +25,7 @@ files = list((ROOT / "src").rglob("*.py")) + [
     ROOT / "kaggle/run_bgt60_phase.py",
     ROOT / "validate_bgt60_phase.py",
     ROOT / "kaggle/run_bgt60_pair.py",
+    ROOT / "kaggle/run_bgt60_selection.py", ROOT / "validate_bgt60_selection.py",
 ]
 calibration = ROOT / "kaggle/bgt60_calibration.json"
 if calibration.is_file():
@@ -38,7 +40,7 @@ metadata = {
     "isPrivate": True, "licenses": [{"name": "other"}],
 }
 (DATASET / "dataset-metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
-RUNNER = "run_bgt60_pair.py" if PAIR else ("run_bgt60_phase.py" if PHASE else ("run_bgt60_diagnostics.py" if DIAGNOSTICS else "run_bgt60_frontend.py"))
+RUNNER = "run_bgt60_selection.py" if SELECTION else ("run_bgt60_pair.py" if PAIR else ("run_bgt60_phase.py" if PHASE else ("run_bgt60_diagnostics.py" if DIAGNOSTICS else "run_bgt60_frontend.py")))
 shutil.copy2(ROOT / "kaggle" / RUNNER, KERNEL)
 kernel = {
     "id": "goldfish9901/bgt60-p03-complex-pair-audit" if PAIR else ("goldfish9901/bgt60-direct-phase-audit" if PHASE else ("goldfish9901/bgt60-adc-roi-phase-diagnostics" if DIAGNOSTICS else "goldfish9901/bgt60-cycleformer-frontend-ablation")),
@@ -46,8 +48,12 @@ kernel = {
     "code_file": RUNNER, "language": "python", "kernel_type": "script",
     "is_private": True, "enable_gpu": not DIAGNOSTICS, "enable_internet": True,
     "dataset_sources": ["goldfish9901/bgt60-frontend-code", "goldfish9901/bgt60tr13c-vital-signs"],
-    "competition_sources": [], "kernel_sources": [], "model_sources": [],
+    "competition_sources": [], "kernel_sources": ["goldfish9901/bgt60-p03-complex-pair-audit"] if SELECTION else [], "model_sources": [],
 }
+if SELECTION:
+    kernel["id"] = "goldfish9901/bgt60-p03-quality-selection"
+    kernel["title"] = "BGT60 P03 Quality Selection"
+    kernel["dataset_sources"] = ["goldfish9901/bgt60-frontend-code"]
 (KERNEL / "kernel-metadata.json").write_text(json.dumps(kernel, indent=2), encoding="utf-8")
 receipt = {"files": len(files), "zip_bytes": archive_path.stat().st_size,
            "sha256": hashlib.sha256(archive_path.read_bytes()).hexdigest(),

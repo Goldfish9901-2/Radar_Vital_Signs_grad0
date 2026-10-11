@@ -1,0 +1,21 @@
+[{"stream_name":"stdout","time":1.003087058,"data":"Resolved code root: /kaggle/input/datasets/goldfish9901/bgt60-frontend-code/Radar_Vital_Signs_grad0\n"}
+,{"stream_name":"stdout","time":5.435425695,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.9/17.9 MB 81.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":8.89825122,"data":"Using Python 3.13.15 environment at: /usr\n"}
+,{"stream_name":"stderr","time":8.960847366,"data":"Checked 5 packages in 182ms\n"}
+,{"stream_name":"stderr","time":11.001605501,"data":"test_causal_and_tie_stable (__main__.Checks.test_causal_and_tie_stable) ... ok\n"}
+,{"stream_name":"stderr","time":11.017756568,"data":"test_fft_matches_known_phase (__main__.Checks.test_fft_matches_known_phase) ... ok\n"}
+,{"stream_name":"stderr","time":11.018751341,"data":"test_quality_rejects_amplitude_nulls (__main__.Checks.test_quality_rejects_amplitude_nulls) ... ok\n"}
+,{"stream_name":"stderr","time":11.018774938,"data":"\n"}
+,{"stream_name":"stderr","time":11.018779957,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":11.018784758,"data":"Ran 3 tests in 0.027s\n"}
+,{"stream_name":"stderr","time":11.018789443,"data":"\n"}
+,{"stream_name":"stderr","time":11.018793795,"data":"OK\n"}
+,{"stream_name":"stdout","time":13.205415693,"data":"0.3m complete\n"}
+,{"stream_name":"stdout","time":14.432216417,"data":"0.6m complete\n"}
+,{"stream_name":"stderr","time":17.281113972,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":17.281153008,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":17.618911952,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":17.618940868,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":18.67188676,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":19.916921822,"data":"[NbConvertApp] Writing 280227 bytes to __results__.html\n"}
+]
