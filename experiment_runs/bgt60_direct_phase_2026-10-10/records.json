@@ -1,0 +1,977 @@
+[
+  {
+    "sample": "p01_0.3m",
+    "participant_id": 1,
+    "known_distance_m": 0.3,
+    "native_peak_candidates": [
+      12
+    ],
+    "selected_native_bin": 12,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p01_0.6m",
+    "participant_id": 1,
+    "known_distance_m": 0.6,
+    "native_peak_candidates": [
+      21,
+      45
+    ],
+    "selected_native_bin": 21,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p01_0.9m",
+    "participant_id": 1,
+    "known_distance_m": 0.9,
+    "native_peak_candidates": [
+      31,
+      45,
+      54,
+      92,
+      82
+    ],
+    "selected_native_bin": 31,
+    "rx": 0,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p01_1.2m",
+    "participant_id": 1,
+    "known_distance_m": 1.2,
+    "native_peak_candidates": [
+      42,
+      84,
+      105,
+      124,
+      145
+    ],
+    "selected_native_bin": 42,
+    "rx": 0,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p02_0.3m",
+    "participant_id": 2,
+    "known_distance_m": 0.3,
+    "native_peak_candidates": [
+      14
+    ],
+    "selected_native_bin": 14,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p02_0.6m",
+    "participant_id": 2,
+    "known_distance_m": 0.6,
+    "native_peak_candidates": [
+      23,
+      27,
+      53,
+      140,
+      128
+    ],
+    "selected_native_bin": 23,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p02_0.9m",
+    "participant_id": 2,
+    "known_distance_m": 0.9,
+    "native_peak_candidates": [
+      35,
+      31,
+      37
+    ],
+    "selected_native_bin": 35,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p02_1.2m",
+    "participant_id": 2,
+    "known_distance_m": 1.2,
+    "native_peak_candidates": [
+      47,
+      43
+    ],
+    "selected_native_bin": 47,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p03_0.3m",
+    "participant_id": 3,
+    "known_distance_m": 0.3,
+    "native_peak_candidates": [
+      14,
+      83,
+      95,
+      117,
+      212
+    ],
+    "selected_native_bin": 14,
+    "rx": 2,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p03_0.6m",
+    "participant_id": 3,
+    "known_distance_m": 0.6,
+    "native_peak_candidates": [
+      22,
+      51,
+      84,
+      95,
+      112,
+      114,
+      120,
+      131
+    ],
+    "selected_native_bin": 22,
+    "rx": 2,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p03_0.9m",
+    "participant_id": 3,
+    "known_distance_m": 0.9,
+    "native_peak_candidates": [
+      31,
+      39,
+      54,
+      83,
+      89,
+      107,
+      116,
+      123
+    ],
+    "selected_native_bin": 31,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p03_1.2m",
+    "participant_id": 3,
+    "known_distance_m": 1.2,
+    "native_peak_candidates": [
+      42,
+      85,
+      82,
+      96,
+      113,
+      121,
+      197,
+      207
+    ],
+    "selected_native_bin": 42,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p04_0.3m",
+    "participant_id": 4,
+    "known_distance_m": 0.3,
+    "native_peak_candidates": [
+      11,
+      65
+    ],
+    "selected_native_bin": 11,
+    "rx": 0,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p04_0.6m",
+    "participant_id": 4,
+    "known_distance_m": 0.6,
+    "native_peak_candidates": [
+      23,
+      64
+    ],
+    "selected_native_bin": 23,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p04_0.9m",
+    "participant_id": 4,
+    "known_distance_m": 0.9,
+    "native_peak_candidates": [
+      35,
+      57
+    ],
+    "selected_native_bin": 35,
+    "rx": 0,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p04_1.2m",
+    "participant_id": 4,
+    "known_distance_m": 1.2,
+    "native_peak_candidates": [
+      45,
+      126
+    ],
+    "selected_native_bin": 45,
+    "rx": 0,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p05_0.3m",
+    "participant_id": 5,
+    "known_distance_m": 0.3,
+    "native_peak_candidates": [
+      12,
+      58,
+      88,
+      56,
+      97,
+      125,
+      139
+    ],
+    "selected_native_bin": 12,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p05_0.6m",
+    "participant_id": 5,
+    "known_distance_m": 0.6,
+    "native_peak_candidates": [
+      23,
+      52,
+      90,
+      60
+    ],
+    "selected_native_bin": 23,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p05_0.9m",
+    "participant_id": 5,
+    "known_distance_m": 0.9,
+    "native_peak_candidates": [
+      30,
+      37,
+      39,
+      88,
+      60,
+      93,
+      97,
+      105
+    ],
+    "selected_native_bin": 30,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p05_1.2m",
+    "participant_id": 5,
+    "known_distance_m": 1.2,
+    "native_peak_candidates": [
+      47,
+      40,
+      86,
+      99,
+      88,
+      94,
+      101,
+      120
+    ],
+    "selected_native_bin": 47,
+    "rx": 0,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p06_0.3m",
+    "participant_id": 6,
+    "known_distance_m": 0.3,
+    "native_peak_candidates": [
+      13,
+      30,
+      86,
+      55,
+      111
+    ],
+    "selected_native_bin": 13,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p06_0.6m",
+    "participant_id": 6,
+    "known_distance_m": 0.6,
+    "native_peak_candidates": [
+      25,
+      31,
+      36,
+      60,
+      86,
+      103,
+      117,
+      137
+    ],
+    "selected_native_bin": 25,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p06_0.9m",
+    "participant_id": 6,
+    "known_distance_m": 0.9,
+    "native_peak_candidates": [
+      33,
+      40,
+      85,
+      65,
+      102,
+      113,
+      111
+    ],
+    "selected_native_bin": 33,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p06_1.2m",
+    "participant_id": 6,
+    "known_distance_m": 1.2,
+    "native_peak_candidates": [
+      47,
+      41,
+      86,
+      66,
+      99,
+      92,
+      119,
+      109
+    ],
+    "selected_native_bin": 47,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p07_0.3m",
+    "participant_id": 7,
+    "known_distance_m": 0.3,
+    "native_peak_candidates": [
+      13,
+      87,
+      83,
+      98
+    ],
+    "selected_native_bin": 13,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p07_0.6m",
+    "participant_id": 7,
+    "known_distance_m": 0.6,
+    "native_peak_candidates": [
+      20,
+      80,
+      86,
+      72,
+      90,
+      108,
+      95,
+      118
+    ],
+    "selected_native_bin": 20,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p07_0.9m",
+    "participant_id": 7,
+    "known_distance_m": 0.9,
+    "native_peak_candidates": [
+      28,
+      31,
+      87,
+      92,
+      103,
+      98,
+      125,
+      117
+    ],
+    "selected_native_bin": 28,
+    "rx": 0,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p07_1.2m",
+    "participant_id": 7,
+    "known_distance_m": 1.2,
+    "native_peak_candidates": [
+      43,
+      87,
+      89,
+      101,
+      105,
+      77,
+      125,
+      108
+    ],
+    "selected_native_bin": 43,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p08_0.3m",
+    "participant_id": 8,
+    "known_distance_m": 0.3,
+    "native_peak_candidates": [
+      12,
+      87,
+      74,
+      82,
+      120,
+      116,
+      165
+    ],
+    "selected_native_bin": 12,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p08_0.6m",
+    "participant_id": 8,
+    "known_distance_m": 0.6,
+    "native_peak_candidates": [
+      24,
+      84,
+      87,
+      73,
+      108,
+      95,
+      89,
+      127
+    ],
+    "selected_native_bin": 24,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p08_0.9m",
+    "participant_id": 8,
+    "known_distance_m": 0.9,
+    "native_peak_candidates": [
+      37,
+      35,
+      51,
+      87,
+      67,
+      82,
+      91,
+      95
+    ],
+    "selected_native_bin": 37,
+    "rx": 1,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  },
+  {
+    "sample": "p08_1.2m",
+    "participant_id": 8,
+    "known_distance_m": 1.2,
+    "native_peak_candidates": [
+      45,
+      87,
+      100,
+      76,
+      126,
+      111,
+      116,
+      141
+    ],
+    "selected_native_bin": 45,
+    "rx": 0,
+    "time_audit": {
+      "reference_first_time": 1.0,
+      "reference_last_time": 600.0,
+      "reference_rows": 600,
+      "reference_dt_median": 1.0,
+      "reference_strictly_increasing": true,
+      "radar_last_time_assumed_s": 599.9666666666667,
+      "radar_frame_rate_assumed_hz": 30.0,
+      "start_offset_verified": false,
+      "warning": "No radar timestamps or acquisition start metadata: shared start is unverified. No label-based offset optimization.",
+      "reference_header": [
+        "Time",
+        "HR (bpm)",
+        "RR (bpm)"
+      ]
+    }
+  }
+]

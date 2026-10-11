@@ -1,0 +1,11 @@
+{
+  "kernel": "goldfish9901/bgt60-direct-phase-audit",
+  "kernel_version": 2,
+  "downloaded_on": "2026-10-11",
+  "uncompressed_bytes": 60585193,
+  "uncompressed_sha256": "9c88484085a620e26ef2222239039cf72d8fc065e60f4e776171ef03240ff2c3",
+  "jsonl_rows": 176640,
+  "samples": 32,
+  "subjects": 8,
+  "compression": "lossless gzip; no raw ADC included"
+}

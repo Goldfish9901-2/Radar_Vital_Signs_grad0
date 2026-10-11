@@ -286,6 +286,7 @@ model_outputs/
 !docs/BGT60_CONFIGURATION_SEARCH.md
 !experiment_runs/bgt60_frontend_2026-10-10/REPORT.md
 !experiment_runs/bgt60_adc_diagnostics_2026-10-10/REPORT.md
+!experiment_runs/bgt60_direct_phase_2026-10-10/*.md
 !**/README.md
 .qoder/
 .marscode/

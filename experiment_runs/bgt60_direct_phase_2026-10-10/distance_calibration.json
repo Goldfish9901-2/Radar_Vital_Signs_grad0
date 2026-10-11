@@ -1,0 +1,13 @@
+{
+  "original_device_parameters": {
+    "chirp_slope_hz_per_s": null,
+    "verified": false
+  },
+  "experimental_peak_regression": {
+    "bin_per_m": 35.416666666666664,
+    "intercept_bin": 1.5625000000000075,
+    "residual_rmse_bins": 2.060605190229318,
+    "status": "exploratory association only; not used to define physical ROI or infer slope"
+  },
+  "selection": "Strongest local native DC-removed range peak above bin 1; fixed per recording; no ECG"
+}

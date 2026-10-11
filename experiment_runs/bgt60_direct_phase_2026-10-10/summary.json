@@ -1,0 +1,3182 @@
+{
+  "first_chirp/complex_real/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.763008996212122,
+        "pearson_r": -0.09976407696095295
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 25.845870028409088,
+        "pearson_r": -0.02971832067958006
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 19.7245253314394,
+        "pearson_r": 0.03864127279525335
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.00323271780302,
+        "pearson_r": 0.21246365266222528
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.121143465909093,
+        "pearson_r": -0.06935971346639466
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 20.77790127840909,
+        "pearson_r": 0.09044274732201936
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.130503077651515,
+        "pearson_r": -0.019223622360704008
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 27.437273910984853,
+        "pearson_r": -0.09420757435228395
+      }
+    ],
+    "macro_mae_bpm": 24.100432350852273
+  },
+  "first_chirp/complex_real/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.806375473484848,
+        "pearson_r": -0.14470835718100863
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 25.946582623106057,
+        "pearson_r": -0.06643230485957521
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 20.19892992424242,
+        "pearson_r": -0.024028334879069944
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.60650331439394,
+        "pearson_r": -0.13638283568254073
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.12486742424242,
+        "pearson_r": -0.014834598923357438
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 20.995484138257577,
+        "pearson_r": 0.028405765775740086
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.98540127840909,
+        "pearson_r": 0.022420929852939232
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 27.459161931818183,
+        "pearson_r": -0.016309780403798935
+      }
+    ],
+    "macro_mae_bpm": 24.265413263494317
+  },
+  "first_chirp/complex_real/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.130582386363637,
+        "pearson_r": -0.17700954563719412
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 25.985021306818183,
+        "pearson_r": 0.06716282728365887
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 20.05902698863636,
+        "pearson_r": -0.03907562482922388
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.39641098484849,
+        "pearson_r": 0.013641965261937608
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.867214725378787,
+        "pearson_r": -0.038029032816372495
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.123120265151513,
+        "pearson_r": 0.07473363786284161
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.805776515151518,
+        "pearson_r": 0.09620704134454564
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 27.209361979166665,
+        "pearson_r": 0.00815247565253418
+      }
+    ],
+    "macro_mae_bpm": 24.197064393939392
+  },
+  "first_chirp/complex_real/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.934544270833333,
+        "pearson_r": -0.19824357067907816
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 26.013590198863636,
+        "pearson_r": -0.027967098796652465
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 19.92722774621212,
+        "pearson_r": 0.08062852090135095
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.218245738636355,
+        "pearson_r": 0.11562012173279723
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.726387310606064,
+        "pearson_r": -0.03165739641606199
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 20.760178740530304,
+        "pearson_r": 0.12371219247218301
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.31195430871212,
+        "pearson_r": -0.09335215548372156
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 28.138110795454544,
+        "pearson_r": -0.10473891365804339
+      }
+    ],
+    "macro_mae_bpm": 24.25377988873106
+  },
+  "first_chirp/complex_real/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.232025331439393,
+        "pearson_r": -0.19062955556877065
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 26.74594578598485,
+        "pearson_r": -0.14969207065556006
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 19.90496803977273,
+        "pearson_r": 0.055112724094244954
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.408174715909084,
+        "pearson_r": 0.07119960892731166
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.41303740530303,
+        "pearson_r": -0.22045870201081505
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 20.57498816287879,
+        "pearson_r": 0.17492132214611583
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.37052793560606,
+        "pearson_r": 0.131495738485944
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 26.641484375,
+        "pearson_r": 0.06938579441514431
+      }
+    ],
+    "macro_mae_bpm": 24.161393968986744
+  },
+  "first_chirp/complex_imag/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.526924715909093,
+        "pearson_r": -0.1435398587513089
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 28.548575994318178,
+        "pearson_r": -0.07474129581483352
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 22.01827059659091,
+        "pearson_r": -0.011720647426108979
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.27607362689394,
+        "pearson_r": 0.1642952045894712
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.012627840909094,
+        "pearson_r": -0.08701785215966731
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.497908380681817,
+        "pearson_r": 0.06257279846837846
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.37948035037879,
+        "pearson_r": 0.12096594194200355
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 28.17920809659091,
+        "pearson_r": -0.026824740937839524
+      }
+    ],
+    "macro_mae_bpm": 25.179883700284094
+  },
+  "first_chirp/complex_imag/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.359543087121212,
+        "pearson_r": -0.11322918340816523
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 28.922155539772724,
+        "pearson_r": -0.11138553398443651
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 21.776860795454546,
+        "pearson_r": 0.12113329120650025
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.94774621212121,
+        "pearson_r": 0.00012935344916168633
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.880748106060608,
+        "pearson_r": -0.04210146297704628
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.786464251893936,
+        "pearson_r": -0.05539818508603204
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.080888967803027,
+        "pearson_r": 0.16935389010095436
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 28.240160984848487,
+        "pearson_r": -0.049590588813028885
+      }
+    ],
+    "macro_mae_bpm": 25.249320993134468
+  },
+  "first_chirp/complex_imag/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.737658617424243,
+        "pearson_r": -0.13616428682794798
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 29.099957386363638,
+        "pearson_r": -0.12605183835701514
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 22.15184659090909,
+        "pearson_r": -0.06583829210369811
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.6111268939394,
+        "pearson_r": 0.04460252929877732
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.74794152462121,
+        "pearson_r": -0.08316761743139767
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.578932291666668,
+        "pearson_r": 0.05282592375094754
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.361766098484846,
+        "pearson_r": 0.09166455376033504
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 27.67617779356061,
+        "pearson_r": -0.0656898327895777
+      }
+    ],
+    "macro_mae_bpm": 25.24567589962121
+  },
+  "first_chirp/complex_imag/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.403246922348485,
+        "pearson_r": -0.08048009971314325
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 28.66467921401515,
+        "pearson_r": -0.05355144283648123
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 21.805688920454543,
+        "pearson_r": 0.05953076208281254
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.472239583333334,
+        "pearson_r": -0.0803501971297568
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.7302959280303,
+        "pearson_r": -0.05668786028760883
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.47084398674242,
+        "pearson_r": -0.00435838118810882
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.840147964015152,
+        "pearson_r": -0.1513640864489786
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 28.371328125,
+        "pearson_r": -0.013705889790175004
+      }
+    ],
+    "macro_mae_bpm": 25.219808830492425
+  },
+  "first_chirp/complex_imag/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.84686671401515,
+        "pearson_r": -0.14462116191312377
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 29.410334990530306,
+        "pearson_r": -0.08682892494415548
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 22.272536695075758,
+        "pearson_r": -0.1409603396736614
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.76434895833332,
+        "pearson_r": -0.0027077673468628993
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.84950047348485,
+        "pearson_r": -0.09298624112176455
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.59473248106061,
+        "pearson_r": -0.008124738532236766
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.723849431818184,
+        "pearson_r": 0.07342154369579128
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 27.433678977272724,
+        "pearson_r": 0.03867906777976309
+      }
+    ],
+    "macro_mae_bpm": 25.236981090198864
+  },
+  "first_chirp/unwrap/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.254545454545454,
+        "pearson_r": 0.05078773816944538
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.363706202651514,
+        "pearson_r": -0.042406938344662665
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 14.150725615530304,
+        "pearson_r": 0.2652583713982119
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.00747987689394,
+        "pearson_r": 0.05618762864022181
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.427892992424248,
+        "pearson_r": 0.08450736909191997
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.745727982954547,
+        "pearson_r": -0.02995412403525837
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.246696259469697,
+        "pearson_r": -0.13755370714808945
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.825765861742425,
+        "pearson_r": 0.03752444527461075
+      }
+    ],
+    "macro_mae_bpm": 24.252817530776518
+  },
+  "first_chirp/unwrap/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.401567234848484,
+        "pearson_r": -0.06034469155776579
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.598654119318184,
+        "pearson_r": -0.06722669287510667
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.019214015151515,
+        "pearson_r": 0.19101983285727323
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.55712121212121,
+        "pearson_r": -0.03768110867876316
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.786062973484842,
+        "pearson_r": -0.0208562321183675
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 16.093902698863637,
+        "pearson_r": 0.06403355096789623
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.244418797348484,
+        "pearson_r": 0.03264464591149469
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.44172821969697,
+        "pearson_r": -0.05694723888729068
+      }
+    ],
+    "macro_mae_bpm": 24.642833658854165
+  },
+  "first_chirp/unwrap/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.64191287878788,
+        "pearson_r": -0.06802830505643155
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.56290482954545,
+        "pearson_r": 0.024944081338326988
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.142168560606061,
+        "pearson_r": 0.09014484525295074
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.37554450757576,
+        "pearson_r": 0.06529088606035012
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.57580137310606,
+        "pearson_r": 0.096448147243824
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 16.12991003787879,
+        "pearson_r": -0.030870941819194364
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.045329071969693,
+        "pearson_r": -0.03564712940034754
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.7312275094697,
+        "pearson_r": -0.016310701579311273
+      }
+    ],
+    "macro_mae_bpm": 24.525599846117423
+  },
+  "first_chirp/unwrap/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.115318418560607,
+        "pearson_r": -0.019640587138315894
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.36726917613636,
+        "pearson_r": -0.031274774661466206
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 14.968771306818184,
+        "pearson_r": 0.21014134457045175
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.2209209280303,
+        "pearson_r": -0.13824548070833179
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.592952178030302,
+        "pearson_r": 0.02038470933866803
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.897082149621214,
+        "pearson_r": -0.016656796934640217
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.56660392992424,
+        "pearson_r": -0.005852690529177405
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.65541666666667,
+        "pearson_r": -0.06595751784652981
+      }
+    ],
+    "macro_mae_bpm": 24.548041844223484
+  },
+  "first_chirp/unwrap/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.82637665719697,
+        "pearson_r": -0.05784435239400895
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 34.14033025568182,
+        "pearson_r": -0.04380182159404258
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.220299479166666,
+        "pearson_r": -0.007236888494517424
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.461633522727276,
+        "pearson_r": 0.048293000515591995
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.697514204545456,
+        "pearson_r": -0.029294580535656017
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 16.129287405303028,
+        "pearson_r": -0.009453210667995163
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.03166666666667,
+        "pearson_r": -0.08676533515928345
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.3913612689394,
+        "pearson_r": -0.07153106182020962
+      }
+    ],
+    "macro_mae_bpm": 24.61230868252841
+  },
+  "first_chirp/edacm/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.543951231060604,
+        "pearson_r": 0.10887380489880598
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.446940104166664,
+        "pearson_r": -0.05667621212370779
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 14.183635179924245,
+        "pearson_r": 0.2793673764669936
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.000484138257576,
+        "pearson_r": 0.03467820787447083
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.763278882575758,
+        "pearson_r": 0.02261879770989144
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.404468513257576,
+        "pearson_r": 0.0068768820043877245
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.16583214962121,
+        "pearson_r": -0.08434693050825921
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.43831321022728,
+        "pearson_r": 0.051282420726860456
+      }
+    ],
+    "macro_mae_bpm": 24.243362926136363
+  },
+  "first_chirp/edacm/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.5671875,
+        "pearson_r": 0.08550002137974531
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.732560369318186,
+        "pearson_r": -0.09180180677015988
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.122492897727273,
+        "pearson_r": 0.18381953926228123
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.49768702651515,
+        "pearson_r": 0.011553957203743212
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.05424479166666,
+        "pearson_r": -0.00500681598610415
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.86212713068182,
+        "pearson_r": 0.043280751793699127
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.271350615530302,
+        "pearson_r": 0.06978439436150621
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.95515388257576,
+        "pearson_r": -0.0012922623196122353
+      }
+    ],
+    "macro_mae_bpm": 24.632850526751895
+  },
+  "first_chirp/edacm/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.84120028409091,
+        "pearson_r": 0.05294018531474401
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.67302556818182,
+        "pearson_r": 0.011880947533048048
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.194659090909092,
+        "pearson_r": 0.11187092819189277
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.41940104166667,
+        "pearson_r": -0.02809470604977493
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.929494554924243,
+        "pearson_r": 0.033381816920521556
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.727227746212119,
+        "pearson_r": 0.019694065413959544
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.072618371212123,
+        "pearson_r": -0.12968359123722076
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.294366714015155,
+        "pearson_r": 0.007036850579054012
+      }
+    ],
+    "macro_mae_bpm": 24.518999171401518
+  },
+  "first_chirp/edacm/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.337711884469697,
+        "pearson_r": 0.09830714225226211
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.440013020833334,
+        "pearson_r": -0.06927275836723414
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.044008049242427,
+        "pearson_r": 0.20107425321204184
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.21579545454545,
+        "pearson_r": -0.13429665435219415
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.97940814393939,
+        "pearson_r": 0.019298895056060975
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.625952888257578,
+        "pearson_r": -0.001361273001476059
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.376386126893944,
+        "pearson_r": -0.06429655364451074
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.132410037878785,
+        "pearson_r": 0.013777269483208945
+      }
+    ],
+    "macro_mae_bpm": 24.518960700757575
+  },
+  "first_chirp/edacm/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.071798058712123,
+        "pearson_r": 0.04312734361912141
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 34.222981770833336,
+        "pearson_r": -0.05960517618620124
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.318980823863637,
+        "pearson_r": -0.0010380151356015684
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.44958333333333,
+        "pearson_r": 0.04037778732069611
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.08390388257576,
+        "pearson_r": -0.02704644688163257
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.798375946969697,
+        "pearson_r": -0.05351439403342077
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.66856060606061,
+        "pearson_r": 0.030069091638928062
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 31.908835227272725,
+        "pearson_r": 0.02837414267515236
+      }
+    ],
+    "macro_mae_bpm": 24.565377456202654
+  },
+  "zero_doppler/complex_real/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.763008996212122,
+        "pearson_r": -0.09976407696095295
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 25.845870028409088,
+        "pearson_r": -0.02971832067958006
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 19.68191169507576,
+        "pearson_r": 0.041715348562062146
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.09674597537879,
+        "pearson_r": 0.209279534363431
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.914462594696968,
+        "pearson_r": -0.07807361225757183
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 20.861222774621208,
+        "pearson_r": 0.09153109339788552
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.53281131628788,
+        "pearson_r": -0.04330486387599376
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 27.56243963068182,
+        "pearson_r": -0.08152961464289833
+      }
+    ],
+    "macro_mae_bpm": 24.157309126420454
+  },
+  "zero_doppler/complex_real/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.806375473484848,
+        "pearson_r": -0.14470835718100863
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 25.946582623106057,
+        "pearson_r": -0.06643230485957521
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 20.156316287878784,
+        "pearson_r": -0.022296410214688225
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.67728929924243,
+        "pearson_r": -0.13615833123543294
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.874183238636363,
+        "pearson_r": -0.012541634002334406
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.0873993844697,
+        "pearson_r": 0.005589433256749466
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.48730705492424,
+        "pearson_r": -0.027080218336314993
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 27.579178503787873,
+        "pearson_r": -0.006999696407214121
+      }
+    ],
+    "macro_mae_bpm": 24.326828983191287
+  },
+  "zero_doppler/complex_real/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.130582386363637,
+        "pearson_r": -0.17700954563719412
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 25.985021306818183,
+        "pearson_r": 0.06716282728365887
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 20.016413352272725,
+        "pearson_r": -0.03907877014960114
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.50294507575757,
+        "pearson_r": 0.010672090176570038
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.657269176136364,
+        "pearson_r": -0.04948062240816459
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.215201231060604,
+        "pearson_r": 0.06957460415199937
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.189881628787877,
+        "pearson_r": 0.08475151049037784
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 27.315896070075755,
+        "pearson_r": -0.0010094512643177595
+      }
+    ],
+    "macro_mae_bpm": 24.25165127840909
+  },
+  "zero_doppler/complex_real/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.934544270833333,
+        "pearson_r": -0.19824357067907816
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 26.013590198863636,
+        "pearson_r": -0.027967098796652465
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 19.88461410984849,
+        "pearson_r": 0.08943048311593549
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.31607954545454,
+        "pearson_r": 0.11828475009929725
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.493735795454548,
+        "pearson_r": -0.017249402710913565
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 20.845406013257573,
+        "pearson_r": 0.12000662618223439
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.671779119318185,
+        "pearson_r": -0.09495000637248768
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 28.244644886363634,
+        "pearson_r": -0.10808753294360926
+      }
+    ],
+    "macro_mae_bpm": 24.300549242424243
+  },
+  "zero_doppler/complex_real/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.232025331439393,
+        "pearson_r": -0.19062955556877065
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 26.74594578598485,
+        "pearson_r": -0.14969207065556006
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 19.862354403409093,
+        "pearson_r": 0.056379362683484625
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.51470880681817,
+        "pearson_r": 0.051560071919822696
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.214552556818184,
+        "pearson_r": -0.22744148053529778
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 20.660215435606062,
+        "pearson_r": 0.1542055309507341
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.791822916666668,
+        "pearson_r": 0.10718932409517372
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 26.748018465909094,
+        "pearson_r": 0.07982037560599203
+      }
+    ],
+    "macro_mae_bpm": 24.22120546283144
+  },
+  "zero_doppler/complex_imag/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.505700757575758,
+        "pearson_r": -0.14414412876852334
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 28.42073508522727,
+        "pearson_r": -0.07064191272733455
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 21.91606415719697,
+        "pearson_r": 0.01698439493017356
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.36130089962121,
+        "pearson_r": 0.17337272146407737
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.258342803030303,
+        "pearson_r": -0.052026501227379715
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.37237571022727,
+        "pearson_r": 0.08132448160695287
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.400787168560605,
+        "pearson_r": 0.1340765393004083
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 28.183216145833335,
+        "pearson_r": -0.026855242596510693
+      }
+    ],
+    "macro_mae_bpm": 25.17731534090909
+  },
+  "zero_doppler/complex_imag/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.330632102272727,
+        "pearson_r": -0.11174900181527683
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 28.794314630681814,
+        "pearson_r": -0.10804992527741487
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 21.719024621212125,
+        "pearson_r": 0.1326441441738953
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.03297348484848,
+        "pearson_r": -0.003033067872722232
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.185210700757573,
+        "pearson_r": -0.049175082323263355
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.713618607954544,
+        "pearson_r": -0.0563307851417176
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.102195785984847,
+        "pearson_r": 0.17233654886526467
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 28.301323390151513,
+        "pearson_r": -0.0560638875732213
+      }
+    ],
+    "macro_mae_bpm": 25.272411665482952
+  },
+  "zero_doppler/complex_imag/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.729135890151515,
+        "pearson_r": -0.1396206901014323
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 28.972116477272728,
+        "pearson_r": -0.12061360285285633
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 22.09253787878788,
+        "pearson_r": -0.0518137662859024
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.69635416666667,
+        "pearson_r": 0.053477428746332975
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.004115767045455,
+        "pearson_r": -0.05533862303510351
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.52990293560606,
+        "pearson_r": 0.038049023472018315
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.383072916666663,
+        "pearson_r": 0.10273510931868324
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 27.722969933712125,
+        "pearson_r": -0.07027319221705502
+      }
+    ],
+    "macro_mae_bpm": 25.26627574573864
+  },
+  "zero_doppler/complex_imag/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.386587357954545,
+        "pearson_r": -0.08505633841371894
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 28.53683830492424,
+        "pearson_r": -0.050161596967799434
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 21.738721590909087,
+        "pearson_r": 0.06867612425818259
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.55746685606061,
+        "pearson_r": -0.08210625424670742
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.006716382575757,
+        "pearson_r": -0.07009746518275603
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.430621448863633,
+        "pearson_r": -0.01588372102870933
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.86145478219697,
+        "pearson_r": -0.1531910712575741
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 28.386373106060606,
+        "pearson_r": -0.01536248132666129
+      }
+    ],
+    "macro_mae_bpm": 25.23809747869318
+  },
+  "zero_doppler/complex_imag/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.84641690340909,
+        "pearson_r": -0.14996036152660802
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 29.2824940814394,
+        "pearson_r": -0.08014082971566858
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 22.22054805871212,
+        "pearson_r": -0.13506701957845563
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.849576231060595,
+        "pearson_r": -0.019186510577080318
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.184597537878787,
+        "pearson_r": -0.11368336065230866
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.515838068181818,
+        "pearson_r": -0.010605651825842298
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.745156250000004,
+        "pearson_r": 0.07671299282440361
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 27.447428977272722,
+        "pearson_r": 0.03795974524328508
+      }
+    ],
+    "macro_mae_bpm": 25.261507013494317
+  },
+  "zero_doppler/unwrap/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.148011363636364,
+        "pearson_r": 0.05943743543473525
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.254480350378785,
+        "pearson_r": -0.02824076317816154
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 14.06549834280303,
+        "pearson_r": 0.26498372970031625
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.79441169507576,
+        "pearson_r": 0.1029117421931573
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.144808238636365,
+        "pearson_r": 0.023625841669553158
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.914423532196968,
+        "pearson_r": 0.03907895955370898
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.06703243371212,
+        "pearson_r": -0.13234078259796053
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.16648319128788,
+        "pearson_r": 0.041569098924960274
+      }
+    ],
+    "macro_mae_bpm": 24.31939364346591
+  },
+  "zero_doppler/unwrap/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.295033143939392,
+        "pearson_r": -0.06446984993113176
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.537361505681815,
+        "pearson_r": -0.06741235971171186
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 14.933986742424242,
+        "pearson_r": 0.19333303297034146
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.34405303030302,
+        "pearson_r": -0.04243869605179057
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.42213068181818,
+        "pearson_r": -0.022737962948475517
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 16.28476444128788,
+        "pearson_r": 0.06515191719111338
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.1252568655303,
+        "pearson_r": 0.025849851949893428
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.75973958333333,
+        "pearson_r": -0.0361783955540235
+      }
+    ],
+    "macro_mae_bpm": 24.712790749289773
+  },
+  "zero_doppler/unwrap/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.527535511363636,
+        "pearson_r": -0.05945464051672754
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.47415009469697,
+        "pearson_r": 0.03728542165564511
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.056941287878788,
+        "pearson_r": 0.09557559592697025
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.16247632575758,
+        "pearson_r": 0.07640113376051072
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.233464725378788,
+        "pearson_r": 0.09093770659238612
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 16.371233428030305,
+        "pearson_r": -0.031047798847197012
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.818648200757575,
+        "pearson_r": -0.032453080459156736
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.02603101325758,
+        "pearson_r": 0.001510067508609173
+      }
+    ],
+    "macro_mae_bpm": 24.583810073390154
+  },
+  "zero_doppler/unwrap/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.008784327651517,
+        "pearson_r": -0.011184662200357331
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.25012902462121,
+        "pearson_r": 0.008975057153823907
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 14.88354403409091,
+        "pearson_r": 0.21619678822402938
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.00785274621212,
+        "pearson_r": -0.09438131095656574
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.17248579545455,
+        "pearson_r": 0.05001030378931249
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 16.15904947916667,
+        "pearson_r": -0.04401425086637055
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.258959517045458,
+        "pearson_r": 0.01736343758780085
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.99403645833333,
+        "pearson_r": -0.06886231097641926
+      }
+    ],
+    "macro_mae_bpm": 24.591855172821973
+  },
+  "zero_doppler/unwrap/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.71984256628788,
+        "pearson_r": -0.04811795057485762
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 34.01225260416667,
+        "pearson_r": 0.004917511487546625
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.135072206439393,
+        "pearson_r": 0.0016361652829675762
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.248565340909096,
+        "pearson_r": 0.0576489610109913
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.366335227272728,
+        "pearson_r": -0.05388026110731879
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 16.338217329545454,
+        "pearson_r": -0.0011016526411073146
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.806664299242428,
+        "pearson_r": -0.1130652363007248
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.72795691287879,
+        "pearson_r": -0.07467159563252136
+      }
+    ],
+    "macro_mae_bpm": 24.669363310842805
+  },
+  "zero_doppler/edacm/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.072928503787878,
+        "pearson_r": 0.051844255912994644
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.84001065340909,
+        "pearson_r": -0.05713041943434512
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 14.559224668560608,
+        "pearson_r": 0.26567514249312013
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 37.9741962594697,
+        "pearson_r": 0.02969244456848601
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 21.852660984848484,
+        "pearson_r": -0.020941391341529413
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.6134765625,
+        "pearson_r": 0.03381988760280119
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.882674005681814,
+        "pearson_r": -0.11248995897821175
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.968291903409096,
+        "pearson_r": 0.05432383590032001
+      }
+    ],
+    "macro_mae_bpm": 24.47043294270833
+  },
+  "zero_doppler/edacm/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.125565814393939,
+        "pearson_r": -0.010582054316846704
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 34.07235677083333,
+        "pearson_r": -0.07248332756526935
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.393451704545454,
+        "pearson_r": 0.21781601539369438
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.51968039772727,
+        "pearson_r": -0.0716227210050403
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.133222064393934,
+        "pearson_r": -0.014264139765599156
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 16.045810842803032,
+        "pearson_r": 0.032197034756043165
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 31.0154296875,
+        "pearson_r": 0.02366154844332694
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.49454545454545,
+        "pearson_r": -0.018457076023030417
+      }
+    ],
+    "macro_mae_bpm": 24.8500078420928
+  },
+  "zero_doppler/edacm/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.363726325757575,
+        "pearson_r": -0.016255963651603315
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 34.04443181818181,
+        "pearson_r": 0.05565052544949507
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.57165956439394,
+        "pearson_r": 0.09343221381074718
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.29790482954545,
+        "pearson_r": 0.07626808129165774
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.035749289772724,
+        "pearson_r": 0.038152285117384235
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 16.01080965909091,
+        "pearson_r": 0.01180114049561798
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.762829071969694,
+        "pearson_r": -0.16947100613103824
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.843931107954546,
+        "pearson_r": -0.009302960612555736
+      }
+    ],
+    "macro_mae_bpm": 24.741380208333332
+  },
+  "zero_doppler/edacm/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 7.8999277935606065,
+        "pearson_r": -0.0193143411258387
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 33.87745146780303,
+        "pearson_r": -0.06752963320450073
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.35328835227273,
+        "pearson_r": 0.21888789948904755
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.179277935606066,
+        "pearson_r": -0.11171941653921723
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.008977272727275,
+        "pearson_r": 0.039243004490334334
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.801319839015154,
+        "pearson_r": 0.011794483008193421
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.987394649621216,
+        "pearson_r": -0.05412262223019515
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.66020359848485,
+        "pearson_r": 0.007291937157809222
+      }
+    ],
+    "macro_mae_bpm": 24.720980113636365
+  },
+  "zero_doppler/edacm/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 8.597650331439393,
+        "pearson_r": -0.02924309722571576
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 34.62906605113636,
+        "pearson_r": -0.038310386204879615
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 15.613398437499999,
+        "pearson_r": 0.013302177178335307
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.45934895833333,
+        "pearson_r": -0.005148048004015506
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 22.172677556818186,
+        "pearson_r": -0.07473446663173323
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 15.972038352272726,
+        "pearson_r": -0.025464421245038688
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 30.398207859848483,
+        "pearson_r": -0.06261020159426858
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.50267992424242,
+        "pearson_r": -0.01675234942080119
+      }
+    ],
+    "macro_mae_bpm": 24.793133433948864
+  },
+  "adjacent_doppler/complex_real/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 19.35977746212121,
+        "pearson_r": -0.037541722842945824
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 24.019380918560604,
+        "pearson_r": 0.19400649535862122
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 19.962257339015153,
+        "pearson_r": 0.06499838889607609
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 26.67660392992424,
+        "pearson_r": 0.012765219237730892
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.85389441287879,
+        "pearson_r": -0.17590109942009524
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 26.02981415719697,
+        "pearson_r": 0.1689745456897862
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 28.714733664772726,
+        "pearson_r": 0.10093896998708413
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 21.329913589015153,
+        "pearson_r": 0.13192818020375538
+      }
+    ],
+    "macro_mae_bpm": 23.993296934185608
+  },
+  "adjacent_doppler/complex_real/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 19.35496922348485,
+        "pearson_r": 0.007555449674525257
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 25.385718513257576,
+        "pearson_r": 0.012852790713494171
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 20.32063210227273,
+        "pearson_r": -0.01552203442876058
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 26.828394886363636,
+        "pearson_r": 0.04358150774425007
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.668146306818183,
+        "pearson_r": -0.061437306200800255
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 26.236589725378785,
+        "pearson_r": 0.043914110650779555
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 28.592498816287875,
+        "pearson_r": 0.04327528824219506
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 21.74723721590909,
+        "pearson_r": -0.02302768695611301
+      }
+    ],
+    "macro_mae_bpm": 24.266773348721593
+  },
+  "adjacent_doppler/complex_real/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 19.072353219696964,
+        "pearson_r": 0.04719606529812633
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 25.369834280303035,
+        "pearson_r": -0.016135511234420634
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 20.228960700757575,
+        "pearson_r": 0.08144334331699499
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 27.260471117424242,
+        "pearson_r": -0.1809021221684997
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.787685842803032,
+        "pearson_r": -0.15777094328909363
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 26.176432291666664,
+        "pearson_r": 0.025939516544540922
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.128241003787878,
+        "pearson_r": -0.04830455872308834
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 21.88904237689394,
+        "pearson_r": -0.06115761875417762
+      }
+    ],
+    "macro_mae_bpm": 24.36412760416667
+  },
+  "adjacent_doppler/complex_real/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 19.606289062499997,
+        "pearson_r": 0.03734409314748019
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 24.43313565340909,
+        "pearson_r": 0.12201129677936273
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 20.30388731060606,
+        "pearson_r": 0.050348426132146094
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 27.34090909090909,
+        "pearson_r": -0.20838465328230957
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.710563446969694,
+        "pearson_r": -0.0005333888677423231
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 26.120633285984848,
+        "pearson_r": 0.04798072129999525
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 28.784837831439397,
+        "pearson_r": -0.04907308583532398
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 22.196576704545457,
+        "pearson_r": -0.0924474039727003
+      }
+    ],
+    "macro_mae_bpm": 24.312104048295453
+  },
+  "adjacent_doppler/complex_real/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 19.32329663825758,
+        "pearson_r": -0.028803754211230173
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 24.97785866477273,
+        "pearson_r": 0.10560921097003603
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 20.694601089015155,
+        "pearson_r": -0.03871805195881027
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 26.93731297348485,
+        "pearson_r": 0.0166276838752237
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 25.649412878787874,
+        "pearson_r": -0.05648382732253794
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 26.067571022727275,
+        "pearson_r": 0.18382363263787416
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 29.087869318181824,
+        "pearson_r": -0.09410968541551157
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 21.663420928030302,
+        "pearson_r": 0.05645649087042006
+      }
+    ],
+    "macro_mae_bpm": 24.3001679391572
+  },
+  "adjacent_doppler/complex_imag/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 16.34614583333334,
+        "pearson_r": 0.19839658905807878
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 22.7805409564394,
+        "pearson_r": 0.014499921210754827
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 17.6639618844697,
+        "pearson_r": 0.20528637684761966
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 28.582830255681824,
+        "pearson_r": 0.007449953730777307
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.70982244318182,
+        "pearson_r": 0.03576853984740767
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 28.447939157196974,
+        "pearson_r": 0.06982730588398506
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 27.16629142992424,
+        "pearson_r": 0.076710299859387
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 21.38377722537879,
+        "pearson_r": 0.004540395575013041
+      }
+    ],
+    "macro_mae_bpm": 23.26016364820076
+  },
+  "adjacent_doppler/complex_imag/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 16.61375710227273,
+        "pearson_r": 0.17507925476013336
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 23.153296638257572,
+        "pearson_r": -0.06971846193440669
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 18.224270833333332,
+        "pearson_r": 0.06396661861146506
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 28.70731534090909,
+        "pearson_r": -0.009928547373041283
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.873766571969696,
+        "pearson_r": -0.0032897598702665704
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 28.79997987689394,
+        "pearson_r": -0.037953513590670895
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 27.15586766098485,
+        "pearson_r": 0.11177765246487009
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 22.019405776515157,
+        "pearson_r": -0.13817382802652484
+      }
+    ],
+    "macro_mae_bpm": 23.568457475142047
+  },
+  "adjacent_doppler/complex_imag/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 16.534704071969696,
+        "pearson_r": 0.17253158007302463
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 22.582601799242422,
+        "pearson_r": 0.07040485991051884
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 18.165480587121213,
+        "pearson_r": 0.1481464755401946
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 28.81744318181818,
+        "pearson_r": -0.08033744999051491
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.84153527462121,
+        "pearson_r": -0.0339064720532704
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 28.465771780303033,
+        "pearson_r": 0.08569976813719067
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 27.325688920454542,
+        "pearson_r": 0.09406073573685146
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 21.43890743371212,
+        "pearson_r": 0.046001219957663805
+      }
+    ],
+    "macro_mae_bpm": 23.3965166311553
+  },
+  "adjacent_doppler/complex_imag/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 16.9885546875,
+        "pearson_r": 0.16708714838383498
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 22.952191051136364,
+        "pearson_r": 0.07317893224680062
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 18.490191761363636,
+        "pearson_r": 0.11647430769653129
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 28.98201941287879,
+        "pearson_r": -0.16755220688042902
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.43959043560606,
+        "pearson_r": 0.15832925383596647
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 28.703109611742423,
+        "pearson_r": -0.06078608367560791
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 27.733173532196968,
+        "pearson_r": -0.08612411662969369
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 21.827563920454548,
+        "pearson_r": -0.01771604310333617
+      }
+    ],
+    "macro_mae_bpm": 23.63954930160985
+  },
+  "adjacent_doppler/complex_imag/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 16.52057410037879,
+        "pearson_r": 0.0902363018856416
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 23.01320430871212,
+        "pearson_r": 0.010266875593248626
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 18.294316998106062,
+        "pearson_r": 0.10251087283472678
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 28.449794034090907,
+        "pearson_r": 0.08565343646753161
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.208721590909093,
+        "pearson_r": -0.08507819036397657
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 28.566160037878785,
+        "pearson_r": 0.14655070745838342
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 27.962883522727275,
+        "pearson_r": -0.018087457963824258
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 21.33230350378788,
+        "pearson_r": -0.008317302313371413
+      }
+    ],
+    "macro_mae_bpm": 23.543494762073863
+  },
+  "adjacent_doppler/unwrap/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 11.629583333333333,
+        "pearson_r": 0.03621290237064648
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 30.75883877840909,
+        "pearson_r": -0.04786789855620371
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 24.769705255681824,
+        "pearson_r": 0.07228431872897384
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.448022017045446,
+        "pearson_r": -0.08081186463524181
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.106446496212126,
+        "pearson_r": 0.09309172465100102
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.101615767045455,
+        "pearson_r": 0.13242615466499613
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 35.07965080492425,
+        "pearson_r": 0.009849271118703653
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.120616714015156,
+        "pearson_r": 0.06084196943960417
+      }
+    ],
+    "macro_mae_bpm": 27.376809895833333
+  },
+  "adjacent_doppler/unwrap/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 11.733413825757577,
+        "pearson_r": -0.018128947275832922
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 30.753559422348488,
+        "pearson_r": 0.01974487049102995
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 24.749195075757576,
+        "pearson_r": 0.052615931260377294
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.990456912878784,
+        "pearson_r": -0.04300111357949483
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.246207386363636,
+        "pearson_r": 0.03833885561670804
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.343507339015154,
+        "pearson_r": -0.0362809947603886
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 34.96856178977273,
+        "pearson_r": 0.036330368694102215
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.37294981060606,
+        "pearson_r": -0.010362724131571997
+      }
+    ],
+    "macro_mae_bpm": 27.5197314453125
+  },
+  "adjacent_doppler/unwrap/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 11.827722537878786,
+        "pearson_r": 0.012853098210306273
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 30.740151515151517,
+        "pearson_r": 0.09585143064883718
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 24.911818181818184,
+        "pearson_r": 0.07371708734342339
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.64139678030303,
+        "pearson_r": 0.029733489179637623
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.11836055871212,
+        "pearson_r": -0.015497426643187467
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.485710227272723,
+        "pearson_r": -0.04934487843263488
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 34.89149384469697,
+        "pearson_r": -0.010873535549620526
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.80508877840909,
+        "pearson_r": 0.02085462875754164
+      }
+    ],
+    "macro_mae_bpm": 27.4277178030303
+  },
+  "adjacent_doppler/unwrap/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 11.748040956439393,
+        "pearson_r": -0.057663407648592103
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 30.691173058712117,
+        "pearson_r": -0.030319109761652634
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 24.43016571969697,
+        "pearson_r": 0.08681375026042636
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.42171638257575,
+        "pearson_r": 0.03536053947595087
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 23.798726325757578,
+        "pearson_r": 0.11524151583235387
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.055091145833334,
+        "pearson_r": 0.07435968019732019
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 35.09085108901515,
+        "pearson_r": -0.012774584704851924
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.58383049242425,
+        "pearson_r": 0.010991169329449258
+      }
+    ],
+    "macro_mae_bpm": 27.352449396306817
+  },
+  "adjacent_doppler/unwrap/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 12.009653172348484,
+        "pearson_r": -0.043960229497942795
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 31.423784327651518,
+        "pearson_r": 0.03094812811320742
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 24.846603929924242,
+        "pearson_r": 0.04055477103879213
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.84753551136363,
+        "pearson_r": -0.09628420344224148
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.095620265151517,
+        "pearson_r": 0.055194430267502356
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.217597064393942,
+        "pearson_r": 0.027379276128759306
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 34.609391571969695,
+        "pearson_r": 0.00494124574588483
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.36516571969697,
+        "pearson_r": 0.011748459169040574
+      }
+    ],
+    "macro_mae_bpm": 27.4269189453125
+  },
+  "adjacent_doppler/edacm/0": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 10.631498579545454,
+        "pearson_r": 0.07204532080026954
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 31.201949573863633,
+        "pearson_r": -0.004116251185243103
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 25.10384588068182,
+        "pearson_r": 0.09940120377186558
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.22797940340909,
+        "pearson_r": -0.05206738390885268
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.641290246212115,
+        "pearson_r": 0.07331837451678133
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.525448626893937,
+        "pearson_r": -0.00239369119457111
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 35.66817116477274,
+        "pearson_r": -2.3457073712558162e-07
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.439451941287885,
+        "pearson_r": -0.09901011006055274
+      }
+    ],
+    "macro_mae_bpm": 27.554954427083334
+  },
+  "adjacent_doppler/edacm/-60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 10.652438446969697,
+        "pearson_r": 0.057618348196440766
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 31.330095880681817,
+        "pearson_r": -0.0640970841912494
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 25.044777462121214,
+        "pearson_r": 0.04892591286554677
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.573941761363635,
+        "pearson_r": 0.052505283966106486
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.554543087121214,
+        "pearson_r": 0.023805989300691593
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.394991714015152,
+        "pearson_r": 0.1286027636057915
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 35.64563328598484,
+        "pearson_r": 0.047846148752156654
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.413998579545456,
+        "pearson_r": 0.10816037472089313
+      }
+    ],
+    "macro_mae_bpm": 27.576302527225376
+  },
+  "adjacent_doppler/edacm/60": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 10.792372159090908,
+        "pearson_r": 0.04634997851816758
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 31.33238162878788,
+        "pearson_r": -0.021343044696446923
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 25.032670454545453,
+        "pearson_r": 0.06471106004711791
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.55218986742424,
+        "pearson_r": 0.03456876013721357
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.547328361742426,
+        "pearson_r": -0.0487415361075246
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.85732481060606,
+        "pearson_r": -0.12724327436509786
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 35.36166429924242,
+        "pearson_r": -0.03142449249324211
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.11145241477273,
+        "pearson_r": -0.1628122993179003
+      }
+    ],
+    "macro_mae_bpm": 27.573422999526514
+  },
+  "adjacent_doppler/edacm/-120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 10.726601562499999,
+        "pearson_r": 0.013963394976295805
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 31.00195667613636,
+        "pearson_r": 0.04928144820339832
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 24.99702414772727,
+        "pearson_r": 0.0014276716884350324
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.17650804924242,
+        "pearson_r": 0.07544885145821216
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.403714488636364,
+        "pearson_r": 0.028771022071077235
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.728725142045455,
+        "pearson_r": -0.10153557577883687
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 35.609210464015156,
+        "pearson_r": 0.04214429731536131
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 33.62245265151516,
+        "pearson_r": 0.015604718301619393
+      }
+    ],
+    "macro_mae_bpm": 27.533274147727276
+  },
+  "adjacent_doppler/edacm/120": {
+    "folds": [
+      {
+        "subject": 1,
+        "windows": 220,
+        "mae_bpm": 10.877894176136364,
+        "pearson_r": 0.07097801544363905
+      },
+      {
+        "subject": 2,
+        "windows": 220,
+        "mae_bpm": 32.05463423295455,
+        "pearson_r": -0.05570445774841156
+      },
+      {
+        "subject": 3,
+        "windows": 220,
+        "mae_bpm": 25.109563210227275,
+        "pearson_r": 0.0771382519301084
+      },
+      {
+        "subject": 4,
+        "windows": 220,
+        "mae_bpm": 38.38336647727272,
+        "pearson_r": 0.10683710112626474
+      },
+      {
+        "subject": 5,
+        "windows": 220,
+        "mae_bpm": 24.815433238636363,
+        "pearson_r": -0.08913516999195098
+      },
+      {
+        "subject": 6,
+        "windows": 220,
+        "mae_bpm": 21.484715909090905,
+        "pearson_r": 0.018429967853142958
+      },
+      {
+        "subject": 7,
+        "windows": 220,
+        "mae_bpm": 35.27891098484849,
+        "pearson_r": -0.1628624427690035
+      },
+      {
+        "subject": 8,
+        "windows": 220,
+        "mae_bpm": 32.537937973484844,
+        "pearson_r": -0.04447833763356574
+      }
+    ],
+    "macro_mae_bpm": 27.56780702533144
+  }
+}

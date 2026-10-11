@@ -1,0 +1,16 @@
+{
+  "frame_rate_hz": 30,
+  "frame_rate_verified": false,
+  "window_frames": 384,
+  "stride_frames": 192,
+  "negative_offsets_s": [
+    -120,
+    -60,
+    60,
+    120
+  ],
+  "offset_selection": "fixed controls, never optimized",
+  "vmd": false,
+  "training": false,
+  "interpretation": "Exploratory; fixed energy ROI is not validated chest localization. Shared start unverified."
+}
