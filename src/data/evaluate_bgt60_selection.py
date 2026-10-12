@@ -33,6 +33,11 @@ def select_channels(z, starts):
 
 def fft_hr(trace):
     phase=detrend(np.unwrap(np.angle(trace)))
+    return phase_fft_hr(phase)
+
+
+def phase_fft_hr(phase):
+    """Shared unchanged FFT peak estimator for single or fused phase."""
     power=np.abs(np.fft.rfft(phase*np.hanning(len(phase))))**2
     f=np.fft.rfftfreq(len(phase),1/30.)
     mask=(f>=.75)&(f<=2.5)

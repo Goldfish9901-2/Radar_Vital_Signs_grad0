@@ -1,0 +1,24 @@
+{
+  "stages": {
+    "full_phase": {
+      "baseline_matches_previous": true,
+      "json_valid": true,
+      "archive_crc_shapes_finite": true,
+      "methods": 4
+    },
+    "hr_correlation": {
+      "baseline_matches_previous": true,
+      "json_valid": true,
+      "archive_crc_shapes_finite": true,
+      "methods": 6
+    },
+    "projection_controls": {
+      "baseline_matches_previous": true,
+      "json_valid": true,
+      "archive_crc_shapes_finite": true,
+      "methods": 10
+    }
+  },
+  "synthetic_tests_passed": 6,
+  "training": false
+}

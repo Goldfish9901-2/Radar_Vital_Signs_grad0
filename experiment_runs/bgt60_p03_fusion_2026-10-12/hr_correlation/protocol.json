@@ -1,0 +1,29 @@
+{
+  "source": "https://doi.org/10.3390/s26175587",
+  "source_sections": [
+    "3.2",
+    "4.1"
+  ],
+  "status": "literature-inspired component ablation; not full paper reproduction",
+  "threshold": 0.75,
+  "rule": "positive full-window detrended unwrapped phase Pearson >0.75; same RX, five local bins; correlation weights normalized; anchor always retained",
+  "anchors": [
+    "fixed RX2 center",
+    "window mean zero-Doppler power maximum over 15 cells"
+  ],
+  "sign_alignment": "positive correlation only, no negative sign flip; constant phase offsets removed by detrend",
+  "fft": "unchanged 384-frame, 30Hz assumed, Hann, 0.75\u20132.5Hz max power; no interpolation",
+  "omitted": [
+    "dynamic IQ center tracking",
+    "CEEMD",
+    "harmonic subtraction",
+    "autocorrelation estimator",
+    "time smoothing"
+  ],
+  "reference": "evaluation only, offsets 0/-60/+60/-120/+120; shared start unverified",
+  "scope": "two exploratory p03 records only",
+  "training": false,
+  "caution": "full-phase correlation can be dominated by respiration; it is not proof of HR information",
+  "hr_correlation_ablation": true,
+  "additional_rule": "same threshold/weights, but correlation uses 0.75\u20132.5 Hz FFT-projected phase; weighted output uses original detrended phase; no label optimization"
+}

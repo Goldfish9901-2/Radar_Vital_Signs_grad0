@@ -5,15 +5,19 @@
 环境使用 Windows native uv、Python 3.13 和仓库 `.venv`；`uv.lock` 固定 CPU 分析依赖，不包含 PyTorch 训练环境。
 
 ```powershell
-uv sync --python 3.13 --locked
-uv run --locked python reproduce_bgt60_selection.py
+setup_local_uv.cmd
+uv run --locked --no-sync python reproduce_bgt60_selection.py
 ```
 
 复现脚本需要已下载的两份 p03 复数 NPZ 和 Kaggle 选择实验 JSON。默认输入位于 `tmp/bgt60_p03_pair_v2_results/pair_audit`，对照位于 `tmp/bgt60_p03_selection_results/selection_audit`。可用 `--input-dir`、`--reference-dir` 和 `--output-dir` 指定其他路径。
 
 脚本先运行三项合成检查，再直接调用与 Kaggle 相同的实验模块，校验输入 SHA256、冻结协议、选择轨迹、全部窗口预测、预设对照和汇总指标。浮点比较容差为 `1e-8`；计时与版本信息写入输出目录 `reproduction_validation.json`。本地输出默认位于 `tmp/bgt60_p03_selection_local`，不会覆盖 Kaggle 原始结果。
 
-其他短分析同样使用 `uv run --locked python ...`，保留协议、耗时和校验记录。
+其他短分析同样使用 `uv run --locked --no-sync python ...`，保留协议、耗时和校验记录。更新锁定依赖后重新执行 `setup_local_uv.cmd`。
+
+当前环境不支持依赖 Python minor-version junction 的 uv 启动器。`setup_local_uv.cmd` 使用真实版本目录中的 Python，通过标准库 `venv --copies` 创建解释器，再由 uv 从 `uv.lock` 导出带哈希的依赖并以 copy 模式同步安装。`pyproject.toml` 默认设置 `link-mode = "copy"`。这里避免直接执行 `uv sync`，因为它可能重建启动器并再次引用失效别名；日常执行使用 `--no-sync` 保留复制式解释器。
+
+脚本默认真实解释器位于 `%APPDATA%\uv\python\cpython-3.13.14-windows-x86_64-none\python.exe`。如果位置不同，显式传入实际路径：`setup_local_uv.cmd "C:\真实目录\python.exe"`。脚本不会删除环境中的数据目录。
 
 ## 2026-10-12 本地复现记录
 
