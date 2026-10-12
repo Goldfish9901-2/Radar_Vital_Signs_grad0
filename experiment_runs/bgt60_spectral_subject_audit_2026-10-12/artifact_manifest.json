@@ -1,0 +1,117 @@
+[
+  {
+    "file": "peak_controls/matched_windows.json",
+    "bytes": 45624,
+    "sha256": "5f41912c4bbb556f84c357c86ba59143c50dbf350601f0a806e8646684535fec"
+  },
+  {
+    "file": "peak_controls/protocol.json",
+    "bytes": 598,
+    "sha256": "0547c0d06fde61cf91c2529d1b5abb8bd3ab7cbbc1615adf96adb80fafae1926"
+  },
+  {
+    "file": "peak_controls/REPORT.md",
+    "bytes": 1299,
+    "sha256": "fec0da7cc8b66f16c85d09aeddac7140db300fb932e8b963ae4afb449c510ccf"
+  },
+  {
+    "file": "peak_controls/summary.json",
+    "bytes": 3974,
+    "sha256": "6e985b58bdfde748b0db1e2f462f8e4e782c5a620a55b69cc79fcaf29cb79e0e"
+  },
+  {
+    "file": "peak_controls/timing.json",
+    "bytes": 89,
+    "sha256": "693b50f1cbf5e6b9b23c506fd087c16b3ea9e0aac3c604b624eda28611d269d6"
+  },
+  {
+    "file": "README.md",
+    "bytes": 4798,
+    "sha256": "cc6eb3521c10ff217621b827db38f3a8015f3e9c6f6155155d35902ebe8422a6"
+  },
+  {
+    "file": "spectral_p03/input_provenance.json",
+    "bytes": 205,
+    "sha256": "177374e105e81d37b76cb5fa151af44efd06e13692466c90142e2cfa0bb73daf"
+  },
+  {
+    "file": "spectral_p03/p03_0.3m_spectra.npz",
+    "bytes": 137343,
+    "sha256": "d6d43d4e5eacb7e4214a5044f8c82189a79f84cf07e13705960daf23bde8f0f2"
+  },
+  {
+    "file": "spectral_p03/p03_0.3m_windows.json",
+    "bytes": 151399,
+    "sha256": "de256ee8e3abbf667589ce68b7fe966222b59d2518009591bf1f6e07690a41f5"
+  },
+  {
+    "file": "spectral_p03/p03_0.6m_spectra.npz",
+    "bytes": 137534,
+    "sha256": "57256aea8612329f688c816289a314d64dc2f6df183199dc526baa35e30c2cdc"
+  },
+  {
+    "file": "spectral_p03/p03_0.6m_windows.json",
+    "bytes": 150622,
+    "sha256": "4c512db5eaa13fbe12d2871f70b8bd2dd71188d5d241fdf39d76e6f12d08c55b"
+  },
+  {
+    "file": "spectral_p03/protocol.json",
+    "bytes": 760,
+    "sha256": "b183b2efa48afc8f0de9163d31272c71611130cadaa3c5727d1f9888e91e09ff"
+  },
+  {
+    "file": "spectral_p03/REPORT.md",
+    "bytes": 1721,
+    "sha256": "f32a84e269d35274f1875e3b5f6752d7281844ab16260bb6f6918e4acc29b1af"
+  },
+  {
+    "file": "spectral_p03/summary.json",
+    "bytes": 22803,
+    "sha256": "07f1e44c5d02e36c4dae1deb7eeeffdb88f356eacfc15cf13a4ef2d9ef21ea2f"
+  },
+  {
+    "file": "spectral_p03/timing.json",
+    "bytes": 87,
+    "sha256": "283e3285d5f0858b2706437aa4c54178e9ea5f10cfbbdfb05714be863fc48373"
+  },
+  {
+    "file": "spectral_p03/validation.json",
+    "bytes": 255,
+    "sha256": "cbc7a03c3d186f692b9d6840dfbc134d45998d87ddf0ad519b85c81de821791d"
+  },
+  {
+    "file": "subject_baseline/baseline_windows.jsonl",
+    "bytes": 1004744,
+    "sha256": "792f9bde63625f3cf33c81596690214a512fa077648ad47376e9796208ab05ce"
+  },
+  {
+    "file": "subject_baseline/protocol.json",
+    "bytes": 689,
+    "sha256": "3c51fcfa2b7e1ae4af72042b6f3a12202c98d4117c02ea9fa022ee7c778ff1ac"
+  },
+  {
+    "file": "subject_baseline/REPORT.md",
+    "bytes": 933,
+    "sha256": "786ed0f9643ff79c487506055104854943912f71befec89189fc969830bc5b71"
+  },
+  {
+    "file": "subject_baseline/summary.json",
+    "bytes": 14455,
+    "sha256": "5c86a8b7d49b92735df0febf853234d43946189bb227428c72aedbecdbd30dab"
+  },
+  {
+    "file": "subject_baseline/timing.json",
+    "bytes": 86,
+    "sha256": "04d1d885602cf4edc53b4ca3b56e7d02f7ff981b48edde551090fbd39d83e780"
+  },
+  {
+    "file": "subject_baseline.png",
+    "bytes": 29625,
+    "sha256": "48360e3022949686659496278d85aea153489fc5c272ed83c8ee02ba5cf125d9"
+  },
+  {
+    "file": "validation.json",
+    "bytes": 192,
+    "sha256": "4f6e19083fb71ff09c98db6997b3a2e94544cd90067a814173658947647fe347"
+  }
+]

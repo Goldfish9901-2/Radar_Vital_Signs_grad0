@@ -1,0 +1,9 @@
+{
+  "baseline_predictions_and_labels_exact_match": true,
+  "spectra_crc_shapes_finite": true,
+  "synthetic_tests_passed": 3,
+  "subject_baseline_records": 32,
+  "subject_baseline_subjects": 8,
+  "valid_subject_windows": 2912,
+  "training": false
+}

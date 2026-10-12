@@ -1,0 +1,9 @@
+{
+  "synthetic_tests": 3,
+  "baseline_predictions_unchanged": true,
+  "spectra_crc_shape_finite": true,
+  "subjects": 8,
+  "records": 32,
+  "valid_windows": 2912,
+  "training": false
+}

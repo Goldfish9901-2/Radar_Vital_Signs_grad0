@@ -1,0 +1,5725 @@
+[
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 70.3125,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 436.5362189392175,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 295.73269685033586,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 106.89492026321128,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.2638953630106223,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 661.7958949064085
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 260.15698163841614
+      }
+    ],
+    "window_start": 0,
+    "reference_hr_bpm": null,
+    "reference_rr_bpm": null,
+    "absolute_error_bpm": null,
+    "reference_rr_error_bpm": null,
+    "prediction_near_reference_rr_harmonic": null,
+    "reference_hr_in_top3": null,
+    "reference_hr_near_harmonic": null
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 70.3125,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 973.818707655465,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 847.6369172812714,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 294.5112063401113,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.29526679175622617,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 2637.7822782927387
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 640.5315074595721
+      }
+    ],
+    "window_start": 192,
+    "reference_hr_bpm": 82.60364583333333,
+    "reference_rr_bpm": 22.966145833333332,
+    "absolute_error_bpm": 12.291145833333331,
+    "reference_rr_error_bpm": 13.591145833333332,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 65.625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 2293.225594409327,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 2002.6761855663847,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 1411.028524762781,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.49861275791970827,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 2199.3377008717935
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 2207.040181009436
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 2302.9267818645694
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 933.3111048010811
+      }
+    ],
+    "window_start": 384,
+    "reference_hr_bpm": 83.02734375,
+    "reference_rr_bpm": 23.616666666666664,
+    "absolute_error_bpm": 17.40234375,
+    "reference_rr_error_bpm": 4.866666666666664,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.390625,
+    "prediction_bpm": 79.6875,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 2554.5593370252263,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 977.6462536213305,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.953125,
+        "bpm": 117.1875,
+        "power": 461.2743079499967,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.6086956521739131,
+    "shifted_hr_grid_coverage": 0.391304347826087,
+    "harmonic_hr_energy_fraction": 0.42352807436893,
+    "harmonics": [
+      {
+        "order": 2,
+        "hz": 0.78125,
+        "energy": 1002.1159189032229
+      },
+      {
+        "order": 3,
+        "hz": 1.171875,
+        "energy": 2062.922847671144
+      },
+      {
+        "order": 4,
+        "hz": 1.5625,
+        "energy": 236.3496014921482
+      },
+      {
+        "order": 5,
+        "hz": 1.953125,
+        "energy": 939.2948555146509
+      },
+      {
+        "order": 6,
+        "hz": 2.34375,
+        "energy": 309.96625440400464
+      }
+    ],
+    "window_start": 576,
+    "reference_hr_bpm": 82.05338541666667,
+    "reference_rr_bpm": 22.674479166666668,
+    "absolute_error_bpm": 2.3658854166666714,
+    "reference_rr_error_bpm": 0.7630208333333321,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1484.2196454926407,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 894.9557218648398,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 567.5551612218254,
+        "band_endpoint": true,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.21076859605674386,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 2804.030207577226
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 1032.9697856170446
+      }
+    ],
+    "window_start": 768,
+    "reference_hr_bpm": 82.91354166666666,
+    "reference_rr_bpm": 21.696614583333332,
+    "absolute_error_bpm": 1.46145833333334,
+    "reference_rr_error_bpm": 12.321614583333332,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 2850.0287944047855,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 741.2715683140864,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 260.5169241792012,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.6757266733211027,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 3420.1030150779548
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 7373.171220535596
+      }
+    ],
+    "window_start": 960,
+    "reference_hr_bpm": 83.09557291666667,
+    "reference_rr_bpm": 20.861979166666668,
+    "absolute_error_bpm": 26.84557291666667,
+    "reference_rr_error_bpm": 11.486979166666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 2413.4453111430175,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 1646.1601912254814,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 973.8752390552912,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.8491057980756087,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 3224.4093330384158
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 4467.938392624027
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 955.1349635647884
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 1692.8632682904727
+      }
+    ],
+    "window_start": 1152,
+    "reference_hr_bpm": 82.54609375,
+    "reference_rr_bpm": 20.1640625,
+    "absolute_error_bpm": 26.296093749999997,
+    "reference_rr_error_bpm": 6.1015625,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 2347.193337195311,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1182.8939377943225,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 309.23401583786796,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.5055630794277072,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 6559.770233820339
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 2392.9717547911564
+      }
+    ],
+    "window_start": 1344,
+    "reference_hr_bpm": 82.8640625,
+    "reference_rr_bpm": 19.524739583333332,
+    "absolute_error_bpm": 35.9890625,
+    "reference_rr_error_bpm": 10.149739583333332,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 984.1437140657348,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 958.5578734429703,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 84.8004556972995,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.9334724224997858,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 2983.243136594327
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 49.751868575446956
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 234.47851843711194
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 1750.5861320848085
+      }
+    ],
+    "window_start": 1536,
+    "reference_hr_bpm": 83.0,
+    "reference_rr_bpm": 18.91015625,
+    "absolute_error_bpm": 36.125,
+    "reference_rr_error_bpm": 4.84765625,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 70.3125,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 1095.956134044041,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 669.8353061944182,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 2.421875,
+        "bpm": 145.3125,
+        "power": 140.8292529186427,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.890603374501347,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 1601.2982436656353
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 712.1512865000659
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 2620.7153873943753
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 648.2290415253558
+      }
+    ],
+    "window_start": 1728,
+    "reference_hr_bpm": 82.41145833333333,
+    "reference_rr_bpm": 18.765625,
+    "absolute_error_bpm": 12.098958333333329,
+    "reference_rr_error_bpm": 4.703125,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.546875,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 1942.7370078858105,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 696.1170933748604,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 496.5073504958242,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.391304347826087,
+    "shifted_hr_grid_coverage": 0.2608695652173913,
+    "harmonic_hr_energy_fraction": 0.2588147927776807,
+    "harmonics": [
+      {
+        "order": 2,
+        "hz": 1.09375,
+        "energy": 1036.6299966165984
+      },
+      {
+        "order": 3,
+        "hz": 1.640625,
+        "energy": 1122.6785115908147
+      },
+      {
+        "order": 4,
+        "hz": 2.1875,
+        "energy": 184.2312339576074
+      }
+    ],
+    "window_start": 1920,
+    "reference_hr_bpm": 80.36354166666666,
+    "reference_rr_bpm": 18.601041666666667,
+    "absolute_error_bpm": 28.801041666666663,
+    "reference_rr_error_bpm": 14.211458333333333,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 2332.3304216493834,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 1229.844446065056,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 1198.9477681070236,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.771596574769721,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 551.1968005014792
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 3581.9018961375637
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 2453.5531963758804
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 1067.1895740324487
+      }
+    ],
+    "window_start": 2112,
+    "reference_hr_bpm": 79.11067708333333,
+    "reference_rr_bpm": 17.721354166666668,
+    "absolute_error_bpm": 27.54817708333333,
+    "reference_rr_error_bpm": 3.658854166666668,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 93.75,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 710.0755539935773,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 542.2250294121447,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 471.57819009265035,
+        "band_endpoint": true,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5421409133422299,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 505.3245986493589
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 540.3012752216272
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1487.4948931729446
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 780.3278314860835
+      }
+    ],
+    "window_start": 2304,
+    "reference_hr_bpm": 81.65859375000001,
+    "reference_rr_bpm": 16.923697916666665,
+    "absolute_error_bpm": 12.091406249999991,
+    "reference_rr_error_bpm": 1.826302083333335,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 1354.0621878561183,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1120.723616372487,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.640625,
+        "bpm": 98.4375,
+        "power": 384.1294505088223,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.37073888130889127,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 2749.309939232662
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 1112.8867949095309
+      }
+    ],
+    "window_start": 2496,
+    "reference_hr_bpm": 85.82942708333333,
+    "reference_rr_bpm": 17.194010416666668,
+    "absolute_error_bpm": 38.95442708333333,
+    "reference_rr_error_bpm": 7.819010416666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 2748.6387225226485,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 1065.80802123434,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 1057.1319894057915,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.546387405331712,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 6227.84814644693
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 2932.272815197316
+      }
+    ],
+    "window_start": 2688,
+    "reference_hr_bpm": 90.45989583333333,
+    "reference_rr_bpm": 17.46875,
+    "absolute_error_bpm": 43.584895833333334,
+    "reference_rr_error_bpm": 8.09375,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 98.4375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.640625,
+        "bpm": 98.4375,
+        "power": 360.31755325395466,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 282.2933615068544,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 263.33899940104703,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.7004607695260006,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 521.3480443071738
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 516.9026026693846
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 601.1433719199665
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 197.3772177937541
+      }
+    ],
+    "window_start": 2880,
+    "reference_hr_bpm": 91.91901041666667,
+    "reference_rr_bpm": 17.609375,
+    "absolute_error_bpm": 6.518489583333334,
+    "reference_rr_error_bpm": 1.140625,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 1807.6173663872896,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 1324.9257086050263,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 664.6957558930154,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6310028214868124,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 4219.678816233526
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 663.216656952801
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 900.8710273245564
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 585.2667566569628
+      }
+    ],
+    "window_start": 3072,
+    "reference_hr_bpm": 88.42812500000001,
+    "reference_rr_bpm": 17.912760416666668,
+    "absolute_error_bpm": 32.17812500000001,
+    "reference_rr_error_bpm": 0.8372395833333321,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 416.5549595912067,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 372.7795566046786,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 299.6663187569273,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.46805950603660124,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 511.3838146251184
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 344.9130406009723
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 333.09454154702394
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 420.5554632994101
+      }
+    ],
+    "window_start": 3264,
+    "reference_hr_bpm": 86.13958333333333,
+    "reference_rr_bpm": 18.084635416666668,
+    "absolute_error_bpm": 39.264583333333334,
+    "reference_rr_error_bpm": 0.6653645833333321,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 1334.1658289123657,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 700.9567671169104,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 200.35335455254395,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.9159906774676366,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 2246.031290845106
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 1589.59252781054
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 456.099773573441
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 203.98725017514238
+      }
+    ],
+    "window_start": 3456,
+    "reference_hr_bpm": 84.32682291666667,
+    "reference_rr_bpm": 18.97265625,
+    "absolute_error_bpm": 37.45182291666667,
+    "reference_rr_error_bpm": 4.91015625,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 1661.2554926467437,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 398.7886878230015,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 2.34375,
+        "bpm": 140.625,
+        "power": 76.79056158816749,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.7662194381154793,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 2601.6639627683485
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 891.535520493896
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 182.73114846343742
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 74.79446254979716
+      }
+    ],
+    "window_start": 3648,
+    "reference_hr_bpm": 81.23958333333333,
+    "reference_rr_bpm": 20.382291666666667,
+    "absolute_error_bpm": 29.67708333333333,
+    "reference_rr_error_bpm": 1.6322916666666671,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 3407.790208640812,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 872.2056989441468,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 372.00751192883365,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.640697491896251,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 5043.879380487763
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 671.3706478151004
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 527.222461092547
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 402.3995588590224
+      }
+    ],
+    "window_start": 3840,
+    "reference_hr_bpm": 82.57734375,
+    "reference_rr_bpm": 20.509114583333332,
+    "absolute_error_bpm": 31.014843749999997,
+    "reference_rr_error_bpm": 1.7591145833333321,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 3766.655490404776,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 557.5915033690551,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 449.4625194057192,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.7543165997821579,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 5256.491881529576
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 952.825900756963
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 487.12928061997815
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 396.64695726521103
+      }
+    ],
+    "window_start": 4032,
+    "reference_hr_bpm": 84.56380208333333,
+    "reference_rr_bpm": 19.78046875,
+    "absolute_error_bpm": 33.00130208333333,
+    "reference_rr_error_bpm": 1.0304687500000007,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 614.6371321717136,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 509.2716622611123,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 356.32005493113616,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.6491399922557802,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 3561.617176053842
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 1184.6370544796757
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 733.9761249164779
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 257.8509391355942
+      }
+    ],
+    "window_start": 4224,
+    "reference_hr_bpm": 84.6765625,
+    "reference_rr_bpm": 19.765625,
+    "absolute_error_bpm": 33.1140625,
+    "reference_rr_error_bpm": 5.703125,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 89.0625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 865.3659223793088,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 658.8371873742876,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 618.5177937666382,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.7794300207561708,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 3880.7126412071702
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 1411.7577794585143
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 207.90314425646426
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 1769.8718962271223
+      }
+    ],
+    "window_start": 4416,
+    "reference_hr_bpm": 85.59375,
+    "reference_rr_bpm": 20.0,
+    "absolute_error_bpm": 3.46875,
+    "reference_rr_error_bpm": 5.9375,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 79.6875,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 609.0074322484204,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 587.526010249962,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 518.0730208746896,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5847630592985805,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 1108.5828136424223
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 1220.5777762823925
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 406.1046512696462
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 476.8616297180397
+      }
+    ],
+    "window_start": 4608,
+    "reference_hr_bpm": 84.66614583333333,
+    "reference_rr_bpm": 19.994270833333335,
+    "absolute_error_bpm": 4.978645833333331,
+    "reference_rr_error_bpm": 1.244270833333335,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 1323.7909655090552,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 536.4203459401976,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.640625,
+        "bpm": 98.4375,
+        "power": 181.68528337785395,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.8412028278296728,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 3662.031629567655
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 1034.2395105976734
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 394.753743980508
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 1021.3608412416567
+      }
+    ],
+    "window_start": 4800,
+    "reference_hr_bpm": 85.14713541666667,
+    "reference_rr_bpm": 19.609375,
+    "absolute_error_bpm": 38.27213541666667,
+    "reference_rr_error_bpm": 5.546875,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 107.8125,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.796875,
+        "bpm": 107.8125,
+        "power": 596.9445753741566,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 511.4548308857374,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 290.63368188383527,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.33623037140157847,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 1901.1396634729017
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 531.3413135552772
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 371.28057109056874
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 289.6782538394659
+      }
+    ],
+    "window_start": 4992,
+    "reference_hr_bpm": 87.24401041666665,
+    "reference_rr_bpm": 20.060416666666665,
+    "absolute_error_bpm": 20.568489583333346,
+    "reference_rr_error_bpm": 5.997916666666665,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 65.625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 1659.4430758391597,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 933.4953984009807,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 2.1875,
+        "bpm": 131.25,
+        "power": 372.60586773247803,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6138900053400541,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 2328.005383101153
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 3302.937592809549
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 287.4380825296631
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 304.2612739388075
+      }
+    ],
+    "window_start": 5184,
+    "reference_hr_bpm": 86.96484375,
+    "reference_rr_bpm": 21.73828125,
+    "absolute_error_bpm": 21.33984375,
+    "reference_rr_error_bpm": 2.98828125,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 1676.344186751939,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 1457.9848519643326,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1444.9225244350566,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6642619981003333,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 3681.0744837971324
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 3557.039555760388
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1442.6829912960825
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 796.2246408375291
+      }
+    ],
+    "window_start": 5376,
+    "reference_hr_bpm": 86.33463541666667,
+    "reference_rr_bpm": 22.48046875,
+    "absolute_error_bpm": 30.08463541666667,
+    "reference_rr_error_bpm": 3.73046875,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 75.0,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 1311.3453330145649,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 1251.6555933797995,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 711.3804231363549,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.3279851477670455,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 2804.567468568116
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 2119.9385879902106
+      }
+    ],
+    "window_start": 5568,
+    "reference_hr_bpm": 87.01875,
+    "reference_rr_bpm": 23.12890625,
+    "absolute_error_bpm": 12.018749999999997,
+    "reference_rr_error_bpm": 13.75390625,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 2516.877565844001,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.640625,
+        "bpm": 98.4375,
+        "power": 1248.6649350767618,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 533.9558091689225,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6350229520340367,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 3238.9137134587036
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 506.99608883638035
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1875.2461171904924
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 393.0200055048974
+      }
+    ],
+    "window_start": 5760,
+    "reference_hr_bpm": 87.50911458333333,
+    "reference_rr_bpm": 24.94140625,
+    "absolute_error_bpm": 40.63411458333333,
+    "reference_rr_error_bpm": 6.19140625,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 65.625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 1267.9573160333102,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 851.1012713692226,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 325.6010659845975,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.6796213173617854,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 10483.447207138908
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 766.7929952233877
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 2102.949376489386
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 514.8790271880016
+      }
+    ],
+    "window_start": 5952,
+    "reference_hr_bpm": 86.94088541666667,
+    "reference_rr_bpm": 25.791666666666668,
+    "absolute_error_bpm": 21.315885416666674,
+    "reference_rr_error_bpm": 11.729166666666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 2017.2653968759048,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 723.3180626017945,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 204.39437237859698,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.7746248868312079,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 4224.096825810773
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 609.2886352292685
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 64.701395249297
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 286.00382994112306
+      }
+    ],
+    "window_start": 6144,
+    "reference_hr_bpm": 85.49609375,
+    "reference_rr_bpm": 25.589583333333334,
+    "absolute_error_bpm": 29.24609375,
+    "reference_rr_error_bpm": 6.839583333333334,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 3572.0104911166472,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 785.8816524959285,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.640625,
+        "bpm": 98.4375,
+        "power": 322.86883599069614,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.46793716700383,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 3613.097384713392
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 698.2910749187811
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 499.534397528394
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 402.7261568113229
+      }
+    ],
+    "window_start": 6336,
+    "reference_hr_bpm": 84.82552083333333,
+    "reference_rr_bpm": 24.8046875,
+    "absolute_error_bpm": 37.95052083333333,
+    "reference_rr_error_bpm": 6.0546875,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 2696.0339784661246,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1027.8429414612988,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.875,
+        "bpm": 112.5,
+        "power": 207.2054242905238,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6284373082515518,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 5723.241917706244
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 1529.0198655205932
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1121.1181172613826
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 376.5841618698495
+      }
+    ],
+    "window_start": 6528,
+    "reference_hr_bpm": 86.00156249999999,
+    "reference_rr_bpm": 23.087500000000002,
+    "absolute_error_bpm": 39.12656249999999,
+    "reference_rr_error_bpm": 4.337500000000002,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 2903.5767020675635,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 774.0689031293665,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.796875,
+        "bpm": 107.8125,
+        "power": 716.0977454336627,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.7031142255559867,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 7573.201253498643
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 2972.5599031288134
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 560.175001456123
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 1453.9623376378772
+      }
+    ],
+    "window_start": 6720,
+    "reference_hr_bpm": 86.10286458333333,
+    "reference_rr_bpm": 21.924479166666668,
+    "absolute_error_bpm": 29.85286458333333,
+    "reference_rr_error_bpm": 3.174479166666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 65.625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 3901.9846129455773,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 1496.5499971384145,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 2.109375,
+        "bpm": 126.5625,
+        "power": 287.6884093362222,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5817693983528858,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 2417.7173527774917
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 2586.1420762598214
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 2835.8844333519028
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 167.8295068563839
+      }
+    ],
+    "window_start": 6912,
+    "reference_hr_bpm": 86.01145833333334,
+    "reference_rr_bpm": 22.053385416666668,
+    "absolute_error_bpm": 20.386458333333337,
+    "reference_rr_error_bpm": 3.303385416666668,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 1243.2745907075555,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 1054.547424949816,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.640625,
+        "bpm": 98.4375,
+        "power": 738.2969103514448,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6454404829152538,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 3290.2228626333103
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 913.1979052454797
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1415.0303090273742
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 919.9325364378677
+      }
+    ],
+    "window_start": 7104,
+    "reference_hr_bpm": 86.53125,
+    "reference_rr_bpm": 22.390625,
+    "absolute_error_bpm": 34.96875,
+    "reference_rr_error_bpm": 3.640625,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 5201.449154404636,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 1193.5279802153136,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.953125,
+        "bpm": 117.1875,
+        "power": 620.0457921858314,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.8428268810467658,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 6787.770770324389
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 8572.562329079523
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 2126.67241591287
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 760.5928609346688
+      }
+    ],
+    "window_start": 7296,
+    "reference_hr_bpm": 87.01302083333333,
+    "reference_rr_bpm": 21.946614583333332,
+    "absolute_error_bpm": 35.45052083333333,
+    "reference_rr_error_bpm": 7.884114583333332,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 2311.636306040684,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 1706.243014646579,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 349.46187872178757,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.6135566793655619,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 7167.124225098458
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 4039.6550964354597
+      }
+    ],
+    "window_start": 7488,
+    "reference_hr_bpm": 84.46354166666667,
+    "reference_rr_bpm": 21.540364583333332,
+    "absolute_error_bpm": 37.58854166666667,
+    "reference_rr_error_bpm": 12.165364583333332,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 1179.7843909889748,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 902.1248069856862,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 800.3916399352153,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.33132465369758646,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 2816.412372806674
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 1571.027586172119
+      }
+    ],
+    "window_start": 7680,
+    "reference_hr_bpm": 81.38906250000001,
+    "reference_rr_bpm": 22.100260416666668,
+    "absolute_error_bpm": 29.82656250000001,
+    "reference_rr_error_bpm": 12.725260416666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 641.9088792930824,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 539.1757048094732,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 243.90093229080225,
+        "band_endpoint": true,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.6319840252103455,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 882.2417184882684
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 952.6331066285002
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 421.5184049045762
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 1266.3795531063329
+      }
+    ],
+    "window_start": 7872,
+    "reference_hr_bpm": 80.51953125,
+    "reference_rr_bpm": 22.772135416666668,
+    "absolute_error_bpm": 3.85546875,
+    "reference_rr_error_bpm": 8.709635416666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 1933.0252826453984,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 2.03125,
+        "bpm": 121.875,
+        "power": 734.740908776635,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 664.4252748787382,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.709012566018554,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 2074.662467000854
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 2776.0104737887204
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 1124.4733902861117
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 999.6141382423478
+      }
+    ],
+    "window_start": 8064,
+    "reference_hr_bpm": 81.37526041666666,
+    "reference_rr_bpm": 22.446614583333332,
+    "absolute_error_bpm": 29.812760416666663,
+    "reference_rr_error_bpm": 8.384114583333332,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 103.125,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 982.4413284168434,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 545.750869955301,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.953125,
+        "bpm": 117.1875,
+        "power": 525.553022623019,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.061713213646085806,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 311.9444861002175
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 139.55329955118182
+      }
+    ],
+    "window_start": 8256,
+    "reference_hr_bpm": 83.32552083333333,
+    "reference_rr_bpm": 21.377604166666668,
+    "absolute_error_bpm": 19.79947916666667,
+    "reference_rr_error_bpm": 12.002604166666668,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 1169.0955488876084,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 217.50936447393235,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 2.03125,
+        "bpm": 121.875,
+        "power": 63.45199044098806,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6643209932640636,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 3026.1636256012916
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 124.88647651764896
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 418.46249055350137
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 87.22174163171987
+      }
+    ],
+    "window_start": 8448,
+    "reference_hr_bpm": 84.5203125,
+    "reference_rr_bpm": 20.837239583333332,
+    "absolute_error_bpm": 28.270312500000003,
+    "reference_rr_error_bpm": 2.087239583333332,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 2038.2595133545174,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1011.1206192886839,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 184.99048281287344,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6793676378293557,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 3790.080533171299
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 935.6963844990382
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 576.4038522386604
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 124.97152671889528
+      }
+    ],
+    "window_start": 8640,
+    "reference_hr_bpm": 85.58463541666667,
+    "reference_rr_bpm": 20.78125,
+    "absolute_error_bpm": 29.33463541666667,
+    "reference_rr_error_bpm": 2.03125,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 1844.5219221704633,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 461.8172956470811,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 447.3781087226443,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.8514301081362607,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 3734.233639312004
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 800.9293493666468
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 381.2235324072172
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 254.2304038435667
+      }
+    ],
+    "window_start": 8832,
+    "reference_hr_bpm": 85.43932291666665,
+    "reference_rr_bpm": 20.0625,
+    "absolute_error_bpm": 29.189322916666654,
+    "reference_rr_error_bpm": 1.3125,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 708.9004276482588,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 619.0218639391354,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 581.211492619202,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6674545297920724,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 991.0053797262123
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 1184.210352857099
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 293.9141144115848
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 409.56485498756416
+      }
+    ],
+    "window_start": 9024,
+    "reference_hr_bpm": 84.75911458333333,
+    "reference_rr_bpm": 20.416927083333334,
+    "absolute_error_bpm": 28.50911458333333,
+    "reference_rr_error_bpm": 1.6669270833333343,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1376.0812818140248,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 310.2642988690088,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 308.955625517553,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.8027508477674631,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 1791.5081924382348
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 509.5312063825012
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 639.1650890558126
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 2655.210919555059
+      }
+    ],
+    "window_start": 9216,
+    "reference_hr_bpm": 84.15104166666667,
+    "reference_rr_bpm": 22.169270833333332,
+    "absolute_error_bpm": 0.2239583333333286,
+    "reference_rr_error_bpm": 8.106770833333332,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 60.9375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 689.7271978806838,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 587.5784131308812,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 353.6652969941839,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.4360507860784799,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 1965.1912484766772
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 1148.295834538796
+      }
+    ],
+    "window_start": 9408,
+    "reference_hr_bpm": 90.04895833333335,
+    "reference_rr_bpm": 23.21276041666667,
+    "absolute_error_bpm": 29.111458333333346,
+    "reference_rr_error_bpm": 13.837760416666669,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 60.9375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 672.4034451143226,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 272.02267887346494,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.796875,
+        "bpm": 107.8125,
+        "power": 270.1834773124413,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.7168648090262368,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 1781.403735892036
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 1462.853875548435
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 857.7296258891918
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 693.1802083514489
+      }
+    ],
+    "window_start": 9600,
+    "reference_hr_bpm": 87.53802083333333,
+    "reference_rr_bpm": 22.877604166666668,
+    "absolute_error_bpm": 26.600520833333334,
+    "reference_rr_error_bpm": 8.815104166666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 1096.320152040985,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 972.9232518109944,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 406.2848516888991,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5791788788484188,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 2146.394693184734
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 584.2240494066249
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 566.6327704931084
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 538.7465887435835
+      }
+    ],
+    "window_start": 9792,
+    "reference_hr_bpm": 81.9640625,
+    "reference_rr_bpm": 21.65807291666667,
+    "absolute_error_bpm": 35.0890625,
+    "reference_rr_error_bpm": 2.9080729166666686,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 4111.951801072712,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 542.45271814035,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 427.121658358333,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.8250632003228565,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 6719.2586283824
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 745.6102550979533
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 738.962029161979
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 371.9336461152818
+      }
+    ],
+    "window_start": 9984,
+    "reference_hr_bpm": 84.13255208333334,
+    "reference_rr_bpm": 21.0,
+    "absolute_error_bpm": 27.882552083333337,
+    "reference_rr_error_bpm": 2.25,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 1808.2709868153345,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 397.9843150455566,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 287.2186923349738,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5787733805545704,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 2246.3090276102203
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 452.8155546978737
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 127.27637019072569
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 125.31369711522797
+      }
+    ],
+    "window_start": 10176,
+    "reference_hr_bpm": 84.125,
+    "reference_rr_bpm": 20.962239583333332,
+    "absolute_error_bpm": 32.5625,
+    "reference_rr_error_bpm": 2.212239583333332,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 79.6875,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 1821.2009030822005,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 1098.1430777780317,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.796875,
+        "bpm": 107.8125,
+        "power": 452.33410026594396,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6233600040462935,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 1986.1680930513928
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 2694.9261064528587
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 709.4741721966161
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 764.2947035760491
+      }
+    ],
+    "window_start": 10368,
+    "reference_hr_bpm": 85.16927083333333,
+    "reference_rr_bpm": 20.456510416666667,
+    "absolute_error_bpm": 5.481770833333329,
+    "reference_rr_error_bpm": 1.7065104166666671,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 89.0625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 4166.53843473093,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 2.109375,
+        "bpm": 126.5625,
+        "power": 555.915959545811,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 356.249743840618,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.588926894554288,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 707.5356288000067
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 38.933589927958955
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 5361.9812934315305
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 73.68726896270843
+      }
+    ],
+    "window_start": 10560,
+    "reference_hr_bpm": 86.37890625,
+    "reference_rr_bpm": 19.765625,
+    "absolute_error_bpm": 2.68359375,
+    "reference_rr_error_bpm": 1.015625,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 5092.440979978059,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 862.8152719406465,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 701.49553301143,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5024715019921204,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 5031.841728921825
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 1640.860906062897
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 373.7325929590513
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 119.6800562943807
+      }
+    ],
+    "window_start": 10752,
+    "reference_hr_bpm": 87.07682291666667,
+    "reference_rr_bpm": 19.770052083333336,
+    "absolute_error_bpm": 40.20182291666667,
+    "reference_rr_error_bpm": 1.0200520833333364,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 65.625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 826.0286553262837,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 791.8916362471002,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.640625,
+        "bpm": 98.4375,
+        "power": 526.1501402770042,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.22132683683943058,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 795.2858746570275
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 1387.1500442760166
+      }
+    ],
+    "window_start": 10944,
+    "reference_hr_bpm": 83.55078125,
+    "reference_rr_bpm": 19.524739583333332,
+    "absolute_error_bpm": 17.92578125,
+    "reference_rr_error_bpm": 10.149739583333332,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 79.6875,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 1497.7675740383406,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 532.1832147514361,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 163.2794526804734,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6286343739419061,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 842.6065345602512
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 2351.6345384911765
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 312.2873644899329
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 231.74835022334472
+      }
+    ],
+    "window_start": 11136,
+    "reference_hr_bpm": 80.42838541666667,
+    "reference_rr_bpm": 19.026041666666668,
+    "absolute_error_bpm": 0.7408854166666714,
+    "reference_rr_error_bpm": 0.27604166666666785,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1190.797867581499,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 229.2112634974298,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 2.34375,
+        "bpm": 140.625,
+        "power": 81.99976870915414,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.4740681131257461,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 282.7179131651225
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 645.4384662565992
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 454.19709373859354
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 60.145432153689875
+      }
+    ],
+    "window_start": 11328,
+    "reference_hr_bpm": 81.84765625,
+    "reference_rr_bpm": 19.0,
+    "absolute_error_bpm": 2.52734375,
+    "reference_rr_error_bpm": 0.25,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 79.6875,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 1083.5799990752118,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 261.12777296324157,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 110.12712121935787,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5701610771851467,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 160.09012614408059
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 1292.7462969294215
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 217.70238658644058
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 163.4733553195171
+      }
+    ],
+    "window_start": 11520,
+    "reference_hr_bpm": 83.3,
+    "reference_rr_bpm": 19.0,
+    "absolute_error_bpm": 3.612499999999997,
+    "reference_rr_error_bpm": 0.25,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 3615.505625919617,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 941.735673000123,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 333.6279433749349,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.5172026360333444,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 7229.404618424168
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 500.69073724444735
+      }
+    ],
+    "window_start": 11712,
+    "reference_hr_bpm": 84.87890625,
+    "reference_rr_bpm": 19.209635416666668,
+    "absolute_error_bpm": 38.00390625,
+    "reference_rr_error_bpm": 9.834635416666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 65.625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 5114.9551630401465,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 2204.818948504942,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 1318.3969135705786,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.8382626627272056,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 7254.767555173106
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 4261.277376236294
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 8338.83260425034
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 3179.4412182456454
+      }
+    ],
+    "window_start": 11904,
+    "reference_hr_bpm": 87.35885416666667,
+    "reference_rr_bpm": 19.384114583333332,
+    "absolute_error_bpm": 21.733854166666674,
+    "reference_rr_error_bpm": 5.321614583333332,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.390625,
+    "prediction_bpm": 75.0,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 4302.623695653205,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 2942.3077714092774,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 1649.5245871561372,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.6086956521739131,
+    "shifted_hr_grid_coverage": 0.391304347826087,
+    "harmonic_hr_energy_fraction": 0.6305595864306701,
+    "harmonics": [
+      {
+        "order": 2,
+        "hz": 0.78125,
+        "energy": 5318.11259747658
+      },
+      {
+        "order": 3,
+        "hz": 1.171875,
+        "energy": 7096.738699604031
+      },
+      {
+        "order": 4,
+        "hz": 1.5625,
+        "energy": 720.1118948910218
+      },
+      {
+        "order": 5,
+        "hz": 1.953125,
+        "energy": 691.0397805074398
+      },
+      {
+        "order": 6,
+        "hz": 2.34375,
+        "energy": 47.41719173288706
+      }
+    ],
+    "window_start": 12096,
+    "reference_hr_bpm": 88.88802083333333,
+    "reference_rr_bpm": 18.674479166666668,
+    "absolute_error_bpm": 13.888020833333329,
+    "reference_rr_error_bpm": 4.763020833333332,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 3056.2424095926203,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 919.0278981232035,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 2.5,
+        "bpm": 150.0,
+        "power": 432.4150771851522,
+        "band_endpoint": true,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.6180987829205858,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 14599.094141288502
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 5788.246401786078
+      }
+    ],
+    "window_start": 12288,
+    "reference_hr_bpm": 88.36536458333335,
+    "reference_rr_bpm": 18.225260416666668,
+    "absolute_error_bpm": 36.802864583333346,
+    "reference_rr_error_bpm": 8.850260416666668,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 2845.0463082154834,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 1050.7604196652696,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 466.85384371749547,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.5189745526402193,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 6127.436441505046
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 2814.768729776186
+      }
+    ],
+    "window_start": 12480,
+    "reference_hr_bpm": 86.83984375,
+    "reference_rr_bpm": 19.161979166666665,
+    "absolute_error_bpm": 39.96484375,
+    "reference_rr_error_bpm": 9.786979166666665,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 502.56723852938035,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 259.5826058091531,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 162.95572636567607,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.7560338260567662,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 945.8031567224
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 120.3367460382282
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 350.3341390475375
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 275.93577369091685
+      }
+    ],
+    "window_start": 12672,
+    "reference_hr_bpm": 86.23359375,
+    "reference_rr_bpm": 20.436197916666668,
+    "absolute_error_bpm": 34.67109375,
+    "reference_rr_error_bpm": 1.6861979166666679,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 667.8637160914329,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 235.58373801695444,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 234.28830374087548,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.4418565890460512,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 548.7648568206383
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 224.73557245738814
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 163.54295950174455
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 116.67615741043477
+      }
+    ],
+    "window_start": 12864,
+    "reference_hr_bpm": 85.29947916666667,
+    "reference_rr_bpm": 21.4734375,
+    "absolute_error_bpm": 38.42447916666667,
+    "reference_rr_error_bpm": 2.7234374999999993,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 46.875,
+    "lowest_hr_bin": true,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 845.575573068221,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 673.3498694368625,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 572.4432593214098,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6439080727355577,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 1158.1976925629506
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 1014.4961446304585
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1042.3282667163312
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 272.49388713664445
+      }
+    ],
+    "window_start": 13056,
+    "reference_hr_bpm": 83.83984375,
+    "reference_rr_bpm": 23.259114583333332,
+    "absolute_error_bpm": 36.96484375,
+    "reference_rr_error_bpm": 4.509114583333332,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 1408.3051731486512,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 1105.2397554760144,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 258.0950009087018,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.8027511740166752,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 4847.830505455824
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 2955.03688790216
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 2195.1455921920933
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 372.0135935861783
+      }
+    ],
+    "window_start": 13248,
+    "reference_hr_bpm": 83.92838541666667,
+    "reference_rr_bpm": 24.47265625,
+    "absolute_error_bpm": 27.67838541666667,
+    "reference_rr_error_bpm": 10.41015625,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 56.25,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 2557.832421979309,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1550.3977695394128,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 2.03125,
+        "bpm": 121.875,
+        "power": 669.9861000771454,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6464907340386284,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 5613.120655359577
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 1564.0019651790253
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 296.11139516876983
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 733.5390407708255
+      }
+    ],
+    "window_start": 13440,
+    "reference_hr_bpm": 83.82161458333333,
+    "reference_rr_bpm": 24.587239583333332,
+    "absolute_error_bpm": 27.57161458333333,
+    "reference_rr_error_bpm": 5.837239583333332,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 107.8125,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.796875,
+        "bpm": 107.8125,
+        "power": 1856.3548457705724,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1285.0104170266013,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 1066.474493389542,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6180247332539625,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 1939.9105477706898
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 2586.80325794277
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1210.4357502018947
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 2777.9749117906713
+      }
+    ],
+    "window_start": 13632,
+    "reference_hr_bpm": 83.74088541666667,
+    "reference_rr_bpm": 24.033854166666668,
+    "absolute_error_bpm": 24.07161458333333,
+    "reference_rr_error_bpm": 5.283854166666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 65.625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.09375,
+        "bpm": 65.625,
+        "power": 1649.958310367036,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 1015.5579309283289,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.875,
+        "bpm": 112.5,
+        "power": 955.6466461774235,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.5622562864778476,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 4044.57184249114
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 1416.5909047676028
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 2695.843126838251
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 547.0510257628337
+      }
+    ],
+    "window_start": 13824,
+    "reference_hr_bpm": 87.99348958333333,
+    "reference_rr_bpm": 23.140625,
+    "absolute_error_bpm": 22.36848958333333,
+    "reference_rr_error_bpm": 9.078125,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1084.7833977620473,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 577.6264649280259,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 288.1630954909388,
+        "band_endpoint": true,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5575307859757346,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 454.3898493194061
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 243.08736949422445
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1108.0816025861527
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 382.8305869202744
+      }
+    ],
+    "window_start": 14016,
+    "reference_hr_bpm": 89.57161458333333,
+    "reference_rr_bpm": 23.506510416666668,
+    "absolute_error_bpm": 5.196614583333329,
+    "reference_rr_error_bpm": 4.756510416666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1347.4605610261347,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 71.7560903442336,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 2.109375,
+        "bpm": 126.5625,
+        "power": 58.87627539355096,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.37166163839885313,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 134.34304252385277
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 182.52467223289904
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 595.4216942846388
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 33.89302061781591
+      }
+    ],
+    "window_start": 14208,
+    "reference_hr_bpm": 85.96276041666665,
+    "reference_rr_bpm": 22.62109375,
+    "absolute_error_bpm": 1.5877604166666544,
+    "reference_rr_error_bpm": 3.87109375,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1043.4945933942322,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 313.4552859680089,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 62.949767948024586,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5815885170128561,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 483.86377592448133
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 133.78903399476886
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1180.3516326124773
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 48.00732008011444
+      }
+    ],
+    "window_start": 14400,
+    "reference_hr_bpm": 85.29427083333333,
+    "reference_rr_bpm": 20.708333333333332,
+    "absolute_error_bpm": 0.9192708333333286,
+    "reference_rr_error_bpm": 1.9583333333333321,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 51.5625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 3598.1508032662846,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 852.0948712549987,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.875,
+        "bpm": 112.5,
+        "power": 438.25068844615294,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.7162131705451379,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 7113.0386766966785
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 2162.3412056133657
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 713.6706885861144
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 814.5472642439902
+      }
+    ],
+    "window_start": 14592,
+    "reference_hr_bpm": 86.24427083333335,
+    "reference_rr_bpm": 20.087239583333332,
+    "absolute_error_bpm": 34.681770833333346,
+    "reference_rr_error_bpm": 1.3372395833333321,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 79.6875,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 2804.8515360817737,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 423.0544040949012,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 2.1875,
+        "bpm": 131.25,
+        "power": 234.39461875621143,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.8060857522158488,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 945.846659649939
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 5711.756509589701
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 951.8369816705791
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 422.0334282411862
+      }
+    ],
+    "window_start": 14784,
+    "reference_hr_bpm": 83.44791666666667,
+    "reference_rr_bpm": 19.602864583333332,
+    "absolute_error_bpm": 3.7604166666666714,
+    "reference_rr_error_bpm": 0.8528645833333321,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 79.6875,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 784.8036629821069,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 617.9604182511392,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 284.7750606425832,
+        "band_endpoint": true,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6980155941033647,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 227.11315350895563
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 1222.5957790419914
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 840.0862634920599
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 342.46732450557283
+      }
+    ],
+    "window_start": 14976,
+    "reference_hr_bpm": 81.79427083333333,
+    "reference_rr_bpm": 19.065104166666668,
+    "absolute_error_bpm": 2.1067708333333286,
+    "reference_rr_error_bpm": 0.31510416666666785,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 79.6875,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 403.34660007908076,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 140.8097195666646,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 139.69595382133895,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.7827224138224672,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 328.19264692803915
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 137.7199994099018
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 472.0580334227703
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 549.9396562613174
+      }
+    ],
+    "window_start": 15168,
+    "reference_hr_bpm": 81.77864583333333,
+    "reference_rr_bpm": 18.158854166666668,
+    "absolute_error_bpm": 2.0911458333333286,
+    "reference_rr_error_bpm": 4.096354166666668,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 559.6101740496996,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 82.6962772997724,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 29.97043415103273,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5844419537982288,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 115.88880268179982
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 455.0719038517783
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 356.768476438898
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 15.614071355085322
+      }
+    ],
+    "window_start": 15360,
+    "reference_hr_bpm": 82.33645833333334,
+    "reference_rr_bpm": 17.196614583333332,
+    "absolute_error_bpm": 2.03854166666666,
+    "reference_rr_error_bpm": 1.5533854166666679,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 89.0625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 808.615631621316,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 359.139194848718,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.953125,
+        "bpm": 117.1875,
+        "power": 23.095880050533186,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6292890896053405,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 639.1736309839664
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 96.753414322292
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1099.3762077291146
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 48.64454285543681
+      }
+    ],
+    "window_start": 15552,
+    "reference_hr_bpm": 86.10807291666667,
+    "reference_rr_bpm": 16.790364583333332,
+    "absolute_error_bpm": 2.9544270833333286,
+    "reference_rr_error_bpm": 1.9596354166666679,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 89.0625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 906.2957368683514,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 128.80100500104965,
+        "band_endpoint": true,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 87.30358790025633,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6055325805825621,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 169.45595346802648
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 101.51928894869758
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1046.8332134025256
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 22.29350540562054
+      }
+    ],
+    "window_start": 15744,
+    "reference_hr_bpm": 87.3015625,
+    "reference_rr_bpm": 16.609375,
+    "absolute_error_bpm": 1.7609374999999972,
+    "reference_rr_error_bpm": 2.140625,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 93.75,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 1306.3317066384943,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 189.18936287487873,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 113.45977130045712,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.8760875895015355,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 329.0177231059176
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 134.42327633863638
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 2243.585909663278
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 38.509611295942506
+      }
+    ],
+    "window_start": 15936,
+    "reference_hr_bpm": 89.5703125,
+    "reference_rr_bpm": 17.013020833333332,
+    "absolute_error_bpm": 4.1796875,
+    "reference_rr_error_bpm": 1.7369791666666679,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 93.75,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 1504.5430301150896,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 1191.682703575624,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.25,
+        "bpm": 75.0,
+        "power": 196.18759622061106,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.5649128236607562,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 1272.1701986726257
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 1823.1277965280256
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 312.81376103666594
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 950.7169235425241
+      }
+    ],
+    "window_start": 16128,
+    "reference_hr_bpm": 93.61223958333333,
+    "reference_rr_bpm": 17.997395833333332,
+    "absolute_error_bpm": 0.13776041666666572,
+    "reference_rr_error_bpm": 3.934895833333332,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.234375,
+    "prediction_bpm": 89.0625,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.484375,
+        "bpm": 89.0625,
+        "power": 733.502723436551,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 306.44153497738466,
+        "band_endpoint": true,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 211.76938448281388,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.43478260869565216,
+    "shifted_hr_grid_coverage": 0.34782608695652173,
+    "harmonic_hr_energy_fraction": 0.6043634111633275,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.703125,
+        "energy": 1233.8852416224806
+      },
+      {
+        "order": 4,
+        "hz": 0.9375,
+        "energy": 302.02134557496095
+      },
+      {
+        "order": 5,
+        "hz": 1.171875,
+        "energy": 170.21942588447314
+      },
+      {
+        "order": 6,
+        "hz": 1.40625,
+        "energy": 1164.0730347467415
+      }
+    ],
+    "window_start": 16320,
+    "reference_hr_bpm": 92.91145833333333,
+    "reference_rr_bpm": 18.903645833333332,
+    "absolute_error_bpm": 3.8489583333333286,
+    "reference_rr_error_bpm": 4.841145833333332,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1299.9185886119558,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 303.5473208222784,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.78125,
+        "bpm": 46.875,
+        "power": 227.6037809876001,
+        "band_endpoint": true,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5600471425817094,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 162.63768922213382
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 832.336537013257
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 1482.1829582412763
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 135.79596983454707
+      }
+    ],
+    "window_start": 16512,
+    "reference_hr_bpm": 89.28098958333334,
+    "reference_rr_bpm": 19.653645833333332,
+    "absolute_error_bpm": 4.905989583333337,
+    "reference_rr_error_bpm": 0.9036458333333321,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": false,
+    "reference_hr_near_harmonic": true
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1127.9480309932887,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.640625,
+        "bpm": 98.4375,
+        "power": 240.52027448766216,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 107.61720380041994,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.5537789313919266,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 124.4829942824946
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 1604.7549380468288
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 348.7484837887297
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 122.74408135555454
+      }
+    ],
+    "window_start": 16704,
+    "reference_hr_bpm": 85.6796875,
+    "reference_rr_bpm": 20.540104166666666,
+    "absolute_error_bpm": 1.3046875,
+    "reference_rr_error_bpm": 1.7901041666666657,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.15625,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": true,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 2729.7616911655446,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 2.03125,
+        "bpm": 121.875,
+        "power": 534.5742122033099,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.171875,
+        "bpm": 70.3125,
+        "power": 498.37555954989665,
+        "band_endpoint": false,
+        "near_harmonic": false
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": false,
+    "harmonic_hr_grid_coverage": 0.17391304347826086,
+    "shifted_hr_grid_coverage": 0.21739130434782608,
+    "harmonic_hr_energy_fraction": 0.08373825249603191,
+    "harmonics": [
+      {
+        "order": 5,
+        "hz": 0.78125,
+        "energy": 4340.01751169437
+      },
+      {
+        "order": 6,
+        "hz": 0.9375,
+        "energy": 289.9876606638428
+      }
+    ],
+    "window_start": 16896,
+    "reference_hr_bpm": 84.15234375,
+    "reference_rr_bpm": 20.221354166666668,
+    "absolute_error_bpm": 0.22265625,
+    "reference_rr_error_bpm": 10.846354166666668,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 1551.7070039682474,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 339.7275407118929,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.015625,
+        "bpm": 60.9375,
+        "power": 250.21842875573026,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.43752865446194095,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 608.9746268839806
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 386.9237408144651
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 769.1439260896234
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 347.0592300752475
+      }
+    ],
+    "window_start": 17088,
+    "reference_hr_bpm": 84.24088541666667,
+    "reference_rr_bpm": 19.465625,
+    "absolute_error_bpm": 0.1341145833333286,
+    "reference_rr_error_bpm": 0.7156249999999993,
+    "prediction_near_reference_rr_harmonic": false,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 84.375,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.40625,
+        "bpm": 84.375,
+        "power": 412.17061327820784,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 1.5625,
+        "bpm": 93.75,
+        "power": 321.16927718202845,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 0.9375,
+        "bpm": 56.25,
+        "power": 104.80593616010246,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": false,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6414650706064107,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 160.97264890501535
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 460.5932885027494
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 571.0031591032745
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 207.4803023615836
+      }
+    ],
+    "window_start": 17280,
+    "reference_hr_bpm": 84.17838541666667,
+    "reference_rr_bpm": 19.98359375,
+    "absolute_error_bpm": 0.1966145833333286,
+    "reference_rr_error_bpm": 1.2335937500000007,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  },
+  {
+    "radar_rr_hz": 0.3125,
+    "prediction_bpm": 79.6875,
+    "lowest_hr_bin": false,
+    "rr_search_edge": false,
+    "top_hr_peaks": [
+      {
+        "hz": 1.328125,
+        "bpm": 79.6875,
+        "power": 933.778352630687,
+        "band_endpoint": false,
+        "near_harmonic": true
+      },
+      {
+        "hz": 1.71875,
+        "bpm": 103.125,
+        "power": 413.46217670245966,
+        "band_endpoint": false,
+        "near_harmonic": false
+      },
+      {
+        "hz": 0.859375,
+        "bpm": 51.5625,
+        "power": 132.50636024729707,
+        "band_endpoint": false,
+        "near_harmonic": true
+      }
+    ],
+    "prediction_near_harmonic": true,
+    "prediction_near_shifted_comb": true,
+    "harmonic_hr_grid_coverage": 0.5217391304347826,
+    "shifted_hr_grid_coverage": 0.6086956521739131,
+    "harmonic_hr_energy_fraction": 0.6757398998659615,
+    "harmonics": [
+      {
+        "order": 3,
+        "hz": 0.9375,
+        "energy": 248.3754509047774
+      },
+      {
+        "order": 4,
+        "hz": 1.25,
+        "energy": 1538.3171714152331
+      },
+      {
+        "order": 5,
+        "hz": 1.5625,
+        "energy": 364.4649738376276
+      },
+      {
+        "order": 6,
+        "hz": 1.875,
+        "energy": 165.57596090518217
+      }
+    ],
+    "window_start": 17472,
+    "reference_hr_bpm": 83.10807291666667,
+    "reference_rr_bpm": 20.541145833333335,
+    "absolute_error_bpm": 3.4205729166666714,
+    "reference_rr_error_bpm": 1.791145833333335,
+    "prediction_near_reference_rr_harmonic": true,
+    "reference_hr_in_top3": true,
+    "reference_hr_near_harmonic": false
+  }
+]

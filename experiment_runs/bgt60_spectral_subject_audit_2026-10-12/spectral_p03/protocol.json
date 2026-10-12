@@ -1,0 +1,29 @@
+{
+  "window_frames": 384,
+  "stride_frames": 192,
+  "fs_assumed_hz": 30.0,
+  "respiration_band_hz": [
+    0.1,
+    0.6
+  ],
+  "hr_band_hz": [
+    0.75,
+    2.5
+  ],
+  "top_peaks": 3,
+  "harmonic_orders": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "matching_tolerance_hz": 0.078125,
+  "error_threshold_bpm": 5.0,
+  "negative_comb": "orders + 0.5, same tolerance",
+  "peak_rule": "local maxima including HR-band endpoints; top three by power; endpoint flag retained",
+  "selection": "fixed prior p03 center/RX2, zero Doppler unwrap; no ECG-dependent selection",
+  "timing": "shared start/30Hz unverified",
+  "training": false,
+  "interpretation": "harmonic proximity is compatible with interference, not proof of respiratory origin"
+}

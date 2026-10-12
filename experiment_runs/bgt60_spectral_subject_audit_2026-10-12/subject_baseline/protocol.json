@@ -1,0 +1,9 @@
+{
+  "source": "existing completed 32-record direct-phase audit; no new ADC run",
+  "source_sha256": "3ab28a42c8dd99ffb816e133063315e8b74b3bf44763426ea82dcfe46540dc9b",
+  "baseline": "native 512 FFT, fast-time DC mean; strongest local nonDC peak; whole-record energy RX; fixed per record; zero Doppler unwrap; 384-frame Hann FFT; 30Hz assumed",
+  "evaluation": "full reference-valid windows; subject macro MAE; constant uses reference means of other seven subjects only",
+  "limitations": "all eight subjects appeared in earlier exploratory diagnostics; no untouched independent cohort; shared start/range calibration unverified",
+  "selection_changes": false,
+  "training": false
+}

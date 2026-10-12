@@ -1,0 +1,18 @@
+{
+  "thresholds_unchanged": true,
+  "tolerance_hz": 0.078125,
+  "offsets_s": [
+    0,
+    -60,
+    60,
+    -120,
+    120
+  ],
+  "coverage": "exact same windows for all offsets, complete labels",
+  "nonoverlap": "window_start mod 384 == 0; still temporally dependent",
+  "rr_agrees": "reference RR error <= one FFT bin in bpm; reference-assisted attribution stratum only",
+  "stratification": "HR error >5 bpm based on zero-offset prediction",
+  "status": "post hoc mechanism diagnostic; no bin/peak selection or threshold fitting",
+  "training": false,
+  "no_new_estimator": true
+}

@@ -291,6 +291,7 @@ model_outputs/
 !experiment_runs/bgt60_p03_pair_2026-10-11/*.md
 !experiment_runs/bgt60_p03_selection_2026-10-12/*.md
 !experiment_runs/bgt60_p03_fusion_2026-10-12/**/*.md
+!experiment_runs/bgt60_spectral_subject_audit_2026-10-12/**/*.md
 !**/README.md
 .qoder/
 .marscode/
