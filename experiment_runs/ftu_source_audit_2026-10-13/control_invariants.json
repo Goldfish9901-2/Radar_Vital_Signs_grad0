@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "elapsed_sec": 0.02903899999995474,
+  "checks": [
+    "cross-subject donors",
+    "branch isolation",
+    "paired donor identity",
+    "permutation distribution",
+    "input immutability",
+    "coherent FFT regeneration",
+    "constant versus tracking metrics",
+    "single-subject rejection",
+    "continuous 75 bpm ridge and window time grid"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "elapsed_sec": 0.43050679999942076,
+  "rows": 21120,
+  "max_recomputed_mae_error": 0.0,
+  "max_paired_donor_prediction_error": 7.62939453125e-06,
+  "same_test_windows": true,
+  "unique_rows": true,
+  "cross_subject_donors": true,
+  "inference_cpu_seconds": 117.19217462699999,
+  "local_prediction_audit_seconds": 8.082665700014331
+}

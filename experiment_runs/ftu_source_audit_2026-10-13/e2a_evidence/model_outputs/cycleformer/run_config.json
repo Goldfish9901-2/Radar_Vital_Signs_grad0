@@ -1,0 +1,101 @@
+{
+  "config": {
+    "time_channels": 7,
+    "freq_channels": 7,
+    "d_model": 64,
+    "nhead": 4,
+    "num_layers": 2,
+    "dim_feedforward": 128,
+    "dropout": 0.15,
+    "sampling_rate_hz": 20.0,
+    "use_frequency_domain": true,
+    "use_local_branch": true,
+    "local_hidden_channels": 48,
+    "local_num_blocks": 4,
+    "local_kernel_size": 7,
+    "heart_periods": [
+      8,
+      10,
+      12,
+      14,
+      16,
+      20,
+      24,
+      30
+    ],
+    "respiration_periods": [
+      40,
+      50,
+      64,
+      80,
+      100,
+      128
+    ]
+  },
+  "model": "cycleformer",
+  "label_stats": {
+    "mean": 73.62115478515625,
+    "std": 10.874382972717285
+  },
+  "train_size": 2112,
+  "val_size": 704,
+  "test_size": 704,
+  "datasets": [
+    "FTU"
+  ],
+  "parameters": 542629,
+  "device": "cuda",
+  "torch_version": "2.4.0+cu118",
+  "args": {
+    "model": "cycleformer",
+    "export_dir": "/kaggle/working/training_exports",
+    "output_dir": "/kaggle/working/model_outputs/cycleformer",
+    "datasets": [
+      "FTU"
+    ],
+    "epochs": 80,
+    "batch_size": 64,
+    "num_workers": 2,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "patience": 12,
+    "seed": 42,
+    "d_model": 64,
+    "d_ff": 128,
+    "e_layers": 2,
+    "hidden_channels": 48,
+    "num_blocks": 4,
+    "kernel_size": 7,
+    "nhead": 4,
+    "num_layers": 2,
+    "patch_len": 16,
+    "patch_stride": 8,
+    "emb_dim": 64,
+    "tslanet_depth": 3,
+    "tslanet_patch_len": 16,
+    "tslanet_patch_stride": 8,
+    "tslanet_dropout": 0.5,
+    "use_asb": true,
+    "use_icb": true,
+    "adaptive_filter": true,
+    "normalize": true,
+    "channel_mode": "joint",
+    "heart_periods": null,
+    "respiration_periods": null,
+    "dropout": 0.15,
+    "decomp_method": "moving_avg",
+    "top_k": 5,
+    "moving_avg": 25,
+    "down_sampling_layers": 3,
+    "time_only": false,
+    "limit_batches": null
+  },
+  "provenance": {
+    "git_commit": "unknown",
+    "representation": "proposed",
+    "dataset_dir": "/kaggle/working/training_exports",
+    "dataset_manifest_sha256": "c3e9e2f0e60d06d0",
+    "seed": 42,
+    "model": "cycleformer"
+  }
+}

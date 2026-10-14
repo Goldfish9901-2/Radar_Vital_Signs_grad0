@@ -1,0 +1,2 @@
+# Preserve archived evidence bytes so artifact and source SHA256 checks survive checkout.
+experiment_runs/ftu_source_audit_2026-10-13/** -text whitespace=cr-at-eol

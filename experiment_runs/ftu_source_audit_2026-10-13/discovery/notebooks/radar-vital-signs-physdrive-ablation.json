@@ -1,0 +1,22 @@
+{
+  "notebook": "goldfish9901/radar-vital-signs-physdrive-ablation",
+  "pages": 34,
+  "n_files": 6748,
+  "hits": [
+    "model_outputs/tcn_oracle_C/best.pt",
+    "model_outputs/tcn_oracle_C/final.pt",
+    "model_outputs/tcn_oracle_C/run_config.json",
+    "model_outputs/tcn_sfda_C/adapted.pt",
+    "model_outputs/tcn_sfda_C/best.pt",
+    "model_outputs/tcn_sfda_C/run_config.json",
+    "model_outputs/tcn_sfda_C_noconf/adapted.pt",
+    "model_outputs/tcn_sfda_C_noconf/best.pt",
+    "model_outputs/tcn_sfda_C_noconf/run_config.json",
+    "model_outputs/tcn_sfda_C_notemp/adapted.pt",
+    "model_outputs/tcn_sfda_C_notemp/best.pt",
+    "model_outputs/tcn_sfda_C_notemp/run_config.json",
+    "model_outputs/tcn_src_A/best.pt",
+    "model_outputs/tcn_src_A/final.pt",
+    "model_outputs/tcn_src_A/run_config.json"
+  ]
+}

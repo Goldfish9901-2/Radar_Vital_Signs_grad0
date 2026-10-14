@@ -1,0 +1,9 @@
+{
+  "notebook": "goldfish9901/temporal-t1-phase-label-gate-smoke",
+  "pages": 2,
+  "n_files": 295,
+  "hits": [
+    "preds_t1_radar.csv",
+    "preds_t1_radar_reference.csv"
+  ]
+}

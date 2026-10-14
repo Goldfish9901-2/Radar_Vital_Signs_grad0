@@ -285,6 +285,14 @@ model_outputs/
 !docs/ADC_RDA_PHYSICAL_VALIDATION.md
 !docs/BGT60_CONFIGURATION_SEARCH.md
 !docs/LOCAL_UV_ANALYSIS.md
+!docs/FTU_SOURCE_AUDIT.md
+!experiment_runs/ftu_source_audit_2026-10-13/**/*.md
+!experiment_runs/ftu_source_audit_2026-10-13/REPORT.md
+!experiment_runs/ftu_source_audit_2026-10-13/e2a_evidence/model_outputs/
+!experiment_runs/ftu_source_audit_2026-10-13/e2a_evidence/model_outputs/**
+!experiment_runs/ftu_source_audit_2026-10-13/e2a_continuous/*_signals.npz
+!experiment_runs/ftu_source_audit_2026-10-13/e2a_continuous/kernel.log
+!experiment_runs/ftu_source_audit_2026-10-13/e2a_controls/kernel.log
 !experiment_runs/bgt60_frontend_2026-10-10/REPORT.md
 !experiment_runs/bgt60_adc_diagnostics_2026-10-10/REPORT.md
 !experiment_runs/bgt60_direct_phase_2026-10-10/*.md

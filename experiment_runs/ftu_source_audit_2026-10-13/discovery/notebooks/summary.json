@@ -1,0 +1,334 @@
+{
+  "elapsed_sec": 1.178086200000024,
+  "notebooks": [
+    {
+      "notebook": "goldfish9901/radar-vital-signs-rda-front-end-pool",
+      "pages": 1,
+      "n_files": 46,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/radar-vital-signs-physdrive-ablation",
+      "pages": 34,
+      "n_files": 6748,
+      "hits": [
+        "model_outputs/tcn_oracle_C/best.pt",
+        "model_outputs/tcn_oracle_C/final.pt",
+        "model_outputs/tcn_oracle_C/run_config.json",
+        "model_outputs/tcn_sfda_C/adapted.pt",
+        "model_outputs/tcn_sfda_C/best.pt",
+        "model_outputs/tcn_sfda_C/run_config.json",
+        "model_outputs/tcn_sfda_C_noconf/adapted.pt",
+        "model_outputs/tcn_sfda_C_noconf/best.pt",
+        "model_outputs/tcn_sfda_C_noconf/run_config.json",
+        "model_outputs/tcn_sfda_C_notemp/adapted.pt",
+        "model_outputs/tcn_sfda_C_notemp/best.pt",
+        "model_outputs/tcn_sfda_C_notemp/run_config.json",
+        "model_outputs/tcn_src_A/best.pt",
+        "model_outputs/tcn_src_A/final.pt",
+        "model_outputs/tcn_src_A/run_config.json"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/radar-vital-signs-validate-physdrive",
+      "pages": 1,
+      "n_files": 5,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/radar-vital-signs-kaggle-pipeline",
+      "pages": 1,
+      "n_files": 88,
+      "hits": [
+        "model_outputs/tcn_smoke/best.pt",
+        "model_outputs/tcn_smoke/final.pt",
+        "model_outputs/tcn_smoke/run_config.json"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/bgt60-adc-roi-phase-diagnostics",
+      "pages": 1,
+      "n_files": 94,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/bgt60-cycleformer-frontend-ablation",
+      "pages": 60,
+      "n_files": 11832,
+      "hits": [
+        "models/full_mean/best.pt",
+        "models/full_mean/final.pt",
+        "models/full_mean/run_config.json",
+        "models/full_none/best.pt",
+        "models/full_none/final.pt",
+        "models/full_none/run_config.json",
+        "models/legacy_mean/best.pt",
+        "models/legacy_mean/final.pt",
+        "models/legacy_mean/run_config.json",
+        "models/legacy_none/best.pt",
+        "models/legacy_none/final.pt",
+        "models/legacy_none/run_config.json"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/bgt60-direct-phase-audit",
+      "pages": 1,
+      "n_files": 6,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/bgt60-p03-complex-pair-audit",
+      "pages": 1,
+      "n_files": 11,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/bgt60-p03-quality-selection",
+      "pages": 1,
+      "n_files": 7,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/clutter-x-range-cross-ablation",
+      "pages": 1,
+      "n_files": 3,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/edacm-isolation-validator",
+      "pages": 1,
+      "n_files": 3,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/input-mount-diag",
+      "pages": 1,
+      "n_files": 0,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/input-mount-diag-v2",
+      "pages": 1,
+      "n_files": 0,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-full-baseline-ablations",
+      "pages": 1,
+      "n_files": 0,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-full-baseline-v2",
+      "pages": 1,
+      "n_files": 5,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-group-count-ablation",
+      "pages": 1,
+      "n_files": 37,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-input-diag",
+      "pages": 1,
+      "n_files": 0,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-input-tree",
+      "pages": 1,
+      "n_files": 0,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-nn-bench-gpu",
+      "pages": 1,
+      "n_files": 9,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-p100-torch-numpy-interop-smoke",
+      "pages": 1,
+      "n_files": 0,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-p100-uv-venv-interop-smoke",
+      "pages": 1,
+      "n_files": 1,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-phase-0-rda-candidate-screening",
+      "pages": 1,
+      "n_files": 39,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-probe-subject-level-cv",
+      "pages": 1,
+      "n_files": 1,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-range-bin-oracle-vs-unsupervised-scores",
+      "pages": 1,
+      "n_files": 17,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-rda-selection-benchmark",
+      "pages": 1,
+      "n_files": 4,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-respiration-harmonic-probe",
+      "pages": 1,
+      "n_files": 37,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-spatial-combination-ridge-probe",
+      "pages": 1,
+      "n_files": 37,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-venv-smoke-v2",
+      "pages": 1,
+      "n_files": 16,
+      "hits": [
+        "venv/lib/python3.12/site-packages/_virtualenv.pth"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-venv-smoke-v3",
+      "pages": 102,
+      "n_files": 20207,
+      "hits": [
+        "venv/lib/python3.12/site-packages/_virtualenv.pth",
+        "venv/lib/python3.12/site-packages/distutils-precedence.pth"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/mmwave-897-venv-smoke-v4",
+      "pages": 1,
+      "n_files": 0,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/nn-bench-e2a-hr-adavmd-proposed-ftu",
+      "pages": 19,
+      "n_files": 3626,
+      "hits": [
+        "bench_results.json",
+        "model_outputs/cycleformer/best.pt",
+        "model_outputs/cycleformer/final.pt",
+        "model_outputs/cycleformer/run_config.json",
+        "model_outputs/tcn/best.pt",
+        "model_outputs/tcn/final.pt",
+        "model_outputs/tcn/run_config.json",
+        "preds_cycleformer_FTU_test.csv",
+        "preds_cycleformer_FTU_val.csv",
+        "preds_tcn_FTU_test.csv",
+        "preds_tcn_FTU_val.csv"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/nn-bench-e3a-within-physdrive",
+      "pages": 1,
+      "n_files": 82,
+      "hits": [
+        "bench_results.json"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/nn-bench-e3b-within-bgt60tr13c",
+      "pages": 1,
+      "n_files": 82,
+      "hits": [
+        "bench_results.json"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/phase-extraction-ablation",
+      "pages": 1,
+      "n_files": 3,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/radar-phase-feature-transfer",
+      "pages": 3,
+      "n_files": 545,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/range-selection-ablation",
+      "pages": 1,
+      "n_files": 3,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/rda-clutter-suppression-ablation",
+      "pages": 1,
+      "n_files": 3,
+      "hits": []
+    },
+    {
+      "notebook": "goldfish9901/temporal-t0-within-subject-gate",
+      "pages": 66,
+      "n_files": 13111,
+      "hits": [
+        "model_outputs/cycleformer/best.pt",
+        "model_outputs/cycleformer/final.pt",
+        "model_outputs/cycleformer/run_config.json",
+        "model_outputs/tcn/best.pt",
+        "model_outputs/tcn/final.pt",
+        "model_outputs/tcn/run_config.json",
+        "preds_cycleformer_eval.csv",
+        "preds_cycleformer_test.csv",
+        "preds_cycleformer_train.csv",
+        "preds_cycleformer_val.csv",
+        "preds_tcn_eval.csv",
+        "preds_tcn_test.csv",
+        "preds_tcn_train.csv",
+        "preds_tcn_val.csv"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/temporal-t0-within-subject-gate-smoke",
+      "pages": 2,
+      "n_files": 209,
+      "hits": [
+        "model_outputs/tcn/best.pt",
+        "model_outputs/tcn/final.pt",
+        "model_outputs/tcn/run_config.json",
+        "preds_tcn_eval.csv",
+        "preds_tcn_test.csv",
+        "preds_tcn_train.csv",
+        "preds_tcn_val.csv"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/temporal-t1-phase-gate",
+      "pages": 66,
+      "n_files": 13074,
+      "hits": [
+        "preds_t1_radar.csv",
+        "preds_t1_radar_reference.csv"
+      ]
+    },
+    {
+      "notebook": "goldfish9901/temporal-t1-phase-label-gate-smoke",
+      "pages": 2,
+      "n_files": 295,
+      "hits": [
+        "preds_t1_radar.csv",
+        "preds_t1_radar_reference.csv"
+      ]
+    }
+  ]
+}

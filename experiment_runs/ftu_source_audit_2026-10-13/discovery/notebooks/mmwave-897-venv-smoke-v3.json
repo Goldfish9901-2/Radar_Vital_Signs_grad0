@@ -1,0 +1,9 @@
+{
+  "notebook": "goldfish9901/mmwave-897-venv-smoke-v3",
+  "pages": 102,
+  "n_files": 20207,
+  "hits": [
+    "venv/lib/python3.12/site-packages/_virtualenv.pth",
+    "venv/lib/python3.12/site-packages/distutils-precedence.pth"
+  ]
+}

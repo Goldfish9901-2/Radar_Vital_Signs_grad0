@@ -1,0 +1,19 @@
+{
+  "notebook": "goldfish9901/bgt60-cycleformer-frontend-ablation",
+  "pages": 60,
+  "n_files": 11832,
+  "hits": [
+    "models/full_mean/best.pt",
+    "models/full_mean/final.pt",
+    "models/full_mean/run_config.json",
+    "models/full_none/best.pt",
+    "models/full_none/final.pt",
+    "models/full_none/run_config.json",
+    "models/legacy_mean/best.pt",
+    "models/legacy_mean/final.pt",
+    "models/legacy_mean/run_config.json",
+    "models/legacy_none/best.pt",
+    "models/legacy_none/final.pt",
+    "models/legacy_none/run_config.json"
+  ]
+}

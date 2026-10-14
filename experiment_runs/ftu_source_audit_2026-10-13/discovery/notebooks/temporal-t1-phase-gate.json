@@ -1,0 +1,9 @@
+{
+  "notebook": "goldfish9901/temporal-t1-phase-gate",
+  "pages": 66,
+  "n_files": 13074,
+  "hits": [
+    "preds_t1_radar.csv",
+    "preds_t1_radar_reference.csv"
+  ]
+}

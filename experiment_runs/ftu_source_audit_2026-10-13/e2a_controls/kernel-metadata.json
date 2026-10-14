@@ -1,0 +1,16 @@
+{
+  "id": "goldfish9901/ftu-source-signal-use-audit",
+  "title": "FTU Source Signal Use Audit",
+  "code_file": "run_ftu_audit.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "kernel_sources": [
+    "goldfish9901/nn-bench-e2a-hr-adavmd-proposed-ftu"
+  ]
+}

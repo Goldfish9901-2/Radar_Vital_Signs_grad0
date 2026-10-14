@@ -1,0 +1,55 @@
+{
+  "overall": {
+    "n": 704,
+    "label_mean": 77.50005028464578,
+    "pred_mean": 72.99215311353856,
+    "label_std": 3.8340624087142468,
+    "pred_std": 0.4301749202142659,
+    "r_var": 0.11219820502570409,
+    "pearson_r": -0.015866571966428232,
+    "mae": 4.805852424014699,
+    "rmse": 5.937891877636273,
+    "train_mean_mae": 4.324526765129783,
+    "gain_vs_train_mean": -0.4813256588849155,
+    "train_median_mae": 5.97905328057029,
+    "gain_vs_train_median": 1.1732008565555914
+  },
+  "centered_within_subject": {
+    "n": 704,
+    "label_mean": 6.459479416000911e-16,
+    "pred_mean": -1.937843824800273e-15,
+    "label_std": 3.7030036688165175,
+    "pred_std": 0.43002740769220077,
+    "r_var": 0.11612934961785706,
+    "pearson_r": -0.009403064761577916,
+    "mae": 3.006734062201721,
+    "rmse": 3.7319038697333453
+  },
+  "constants": {
+    "train_mean": 73.62115478515625,
+    "train_median": 71.62092590332031
+  },
+  "examples_for_continuous_signal_audit": {
+    "best_mae": "p01_Angle_30_deg__80_cm_r2",
+    "worst_mae": "p08_Distance_40_cm_r3",
+    "largest_hr_variation": "p08_Orientation_80_cm__left_side_r3"
+  },
+  "provenance": {
+    "tmp\\ftu_audit_discovery\\e2a_output\\preds_cycleformer_FTU_test.csv": "f3e6b590036d0da7e49ce14d2c8486eb2ff060e4ac31a7126896cad91e063d3f",
+    "tmp\\ftu_audit_discovery\\e2a_output\\training_exports\\manifest.csv": "c3e9e2f0e60d06d087476e63c3942293629c56ca2cfb3b97e72173dea8d86cc2",
+    "tmp\\ftu_audit_discovery\\e2a_output\\model_outputs\\cycleformer\\run_config.json": "8153d959377964829fb22be1fe8a0a1021e13678e8689392be0b92c26aef9814"
+  },
+  "validation": {
+    "unique_windows": true,
+    "labels_match_manifest": true,
+    "train_test_groups_disjoint": true,
+    "train_mean_matches_checkpoint": true,
+    "manifest_hash_matches_run": true
+  },
+  "elapsed_sec": 8.082665700014331,
+  "limitations": [
+    "Two-subject test results do not establish population generalization.",
+    "Undefined correlation or variance ratio is reported as null.",
+    "Record selection uses test errors for explanation, not model selection."
+  ]
+}

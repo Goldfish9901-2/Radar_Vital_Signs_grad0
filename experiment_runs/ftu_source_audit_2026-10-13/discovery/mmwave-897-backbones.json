@@ -1,0 +1,22 @@
+[
+  {
+    "name": "contiformer.py",
+    "size": 8784
+  },
+  {
+    "name": "cycleformer.py",
+    "size": 8739
+  },
+  {
+    "name": "linear_baseline.py",
+    "size": 6675
+  },
+  {
+    "name": "tcn.py",
+    "size": 4125
+  },
+  {
+    "name": "transformer.py",
+    "size": 3734
+  }
+]

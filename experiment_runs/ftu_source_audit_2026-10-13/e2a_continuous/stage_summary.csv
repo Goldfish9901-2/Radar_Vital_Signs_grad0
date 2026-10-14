@@ -1,0 +1,13 @@
+category,sample_tag,stage,ridge_mae,hr_band_fraction,ref_bin_fraction
+best_mae,p01_Angle_30_deg__80_cm_r2,RDA unwrap (top selected bin),6.1937971115112305,0.3210220366248346,0.050389143163807146
+best_mae,p01_Angle_30_deg__80_cm_r2,EDACM (same single bin),6.1937971115112305,0.32504483178547333,0.05089231574494923
+best_mae,p01_Angle_30_deg__80_cm_r2,EDACM (selected-bin fusion),6.1937971115112305,0.2933224474309997,0.040460777794560275
+best_mae,p01_Angle_30_deg__80_cm_r2,HR-AdaVMD (sum of channel powers),13.359044075012207,0.6736649279291523,0.057354566681534214
+worst_mae,p08_Distance_40_cm_r3,RDA unwrap (top selected bin),7.2617998123168945,0.023014442375718036,0.006237303755063925
+worst_mae,p08_Distance_40_cm_r3,EDACM (same single bin),9.97653865814209,0.032598547875545,0.006035898568804162
+worst_mae,p08_Distance_40_cm_r3,EDACM (selected-bin fusion),12.90622615814209,0.03287648559789647,0.005973675832827738
+worst_mae,p08_Distance_40_cm_r3,HR-AdaVMD (sum of channel powers),12.45240306854248,0.4151823992265544,0.03807297682844711
+largest_hr_variation,p08_Orientation_80_cm__left_side_r3,RDA unwrap (top selected bin),13.747957229614258,0.04457783239620103,0.0021360647077730698
+largest_hr_variation,p08_Orientation_80_cm__left_side_r3,EDACM (same single bin),18.964693069458008,0.04309465869623561,0.002069360128952562
+largest_hr_variation,p08_Orientation_80_cm__left_side_r3,EDACM (selected-bin fusion),15.316747665405273,0.15642867915405922,0.012605818272149513
+largest_hr_variation,p08_Orientation_80_cm__left_side_r3,HR-AdaVMD (sum of channel powers),13.500104904174805,0.5555232025102141,0.05315717253684123

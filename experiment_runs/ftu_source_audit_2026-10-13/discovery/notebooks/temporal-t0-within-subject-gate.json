@@ -1,0 +1,21 @@
+{
+  "notebook": "goldfish9901/temporal-t0-within-subject-gate",
+  "pages": 66,
+  "n_files": 13111,
+  "hits": [
+    "model_outputs/cycleformer/best.pt",
+    "model_outputs/cycleformer/final.pt",
+    "model_outputs/cycleformer/run_config.json",
+    "model_outputs/tcn/best.pt",
+    "model_outputs/tcn/final.pt",
+    "model_outputs/tcn/run_config.json",
+    "preds_cycleformer_eval.csv",
+    "preds_cycleformer_test.csv",
+    "preds_cycleformer_train.csv",
+    "preds_cycleformer_val.csv",
+    "preds_tcn_eval.csv",
+    "preds_tcn_test.csv",
+    "preds_tcn_train.csv",
+    "preds_tcn_val.csv"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "records": 3,
+  "stage_metric_rows": 96,
+  "max_power_recalculation_error": 2.9103830456733704e-11,
+  "all_labels_reproduced": true,
+  "prediction_file_hash_matches": true,
+  "elapsed_sec": 0.018038799998976174
+}

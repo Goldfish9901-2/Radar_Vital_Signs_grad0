@@ -1,0 +1,3526 @@
+[
+  {
+    "name": "manifest.csv",
+    "size": 64738
+  },
+  {
+    "name": "meta/p01_Angle_0_deg__80_cm_r1.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p01_Angle_0_deg__80_cm_r2.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p01_Angle_0_deg__80_cm_r3.json",
+    "size": 716
+  },
+  {
+    "name": "meta/p01_Angle_0_deg__80_cm_r4.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p01_Angle_30_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p01_Angle_30_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p01_Angle_30_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p01_Angle_30_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p01_Angle_45_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p01_Angle_45_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p01_Angle_45_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p01_Angle_45_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p01_Distance_120_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p01_Distance_120_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p01_Distance_120_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p01_Distance_120_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p01_Distance_160_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p01_Distance_160_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p01_Distance_160_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p01_Distance_160_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p01_Distance_40_cm_r1.json",
+    "size": 709
+  },
+  {
+    "name": "meta/p01_Distance_40_cm_r2.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p01_Distance_40_cm_r3.json",
+    "size": 709
+  },
+  {
+    "name": "meta/p01_Distance_40_cm_r4.json",
+    "size": 709
+  },
+  {
+    "name": "meta/p01_Distance_80_cm_r1.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p01_Distance_80_cm_r2.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p01_Distance_80_cm_r3.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p01_Distance_80_cm_r4.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__Front_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__Front_side_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__Front_side_r3.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__Front_side_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__Right_side_r1.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__Right_side_r2.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__Right_side_r3.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__Right_side_r4.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__back_r1.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__back_r2.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__back_r3.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__back_r4.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__left_side_r1.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__left_side_r2.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__left_side_r3.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p01_Orientation_80_cm__left_side_r4.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p02_Angle_0_deg__80_cm_r1.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p02_Angle_0_deg__80_cm_r2.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p02_Angle_0_deg__80_cm_r3.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p02_Angle_0_deg__80_cm_r4.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p02_Angle_30_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p02_Angle_30_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p02_Angle_30_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p02_Angle_30_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p02_Angle_45_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p02_Angle_45_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p02_Angle_45_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p02_Angle_45_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p02_Distance_120_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p02_Distance_120_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p02_Distance_120_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p02_Distance_120_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p02_Distance_160_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p02_Distance_160_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p02_Distance_160_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p02_Distance_160_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p02_Distance_40_cm_r1.json",
+    "size": 711
+  },
+  {
+    "name": "meta/p02_Distance_40_cm_r2.json",
+    "size": 710
+  },
+  {
+    "name": "meta/p02_Distance_40_cm_r3.json",
+    "size": 710
+  },
+  {
+    "name": "meta/p02_Distance_40_cm_r4.json",
+    "size": 710
+  },
+  {
+    "name": "meta/p02_Distance_80_cm_r1.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p02_Distance_80_cm_r2.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p02_Distance_80_cm_r3.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p02_Distance_80_cm_r4.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__Front_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__Front_side_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__Front_side_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__Front_side_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__Right_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__Right_side_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__Right_side_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__Right_side_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__back_r1.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__back_r2.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__back_r3.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__back_r4.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__left_side_r1.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__left_side_r2.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__left_side_r3.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p02_Orientation_80_cm__left_side_r4.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p03_Angle_0_deg__80_cm_r1.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p03_Angle_0_deg__80_cm_r2.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p03_Angle_0_deg__80_cm_r3.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p03_Angle_0_deg__80_cm_r4.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p03_Angle_30_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p03_Angle_30_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p03_Angle_30_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p03_Angle_30_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p03_Angle_45_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p03_Angle_45_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p03_Angle_45_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p03_Angle_45_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p03_Distance_120_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p03_Distance_120_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p03_Distance_120_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p03_Distance_120_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p03_Distance_160_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p03_Distance_160_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p03_Distance_160_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p03_Distance_160_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p03_Distance_40_cm_r1.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p03_Distance_40_cm_r2.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p03_Distance_40_cm_r3.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p03_Distance_40_cm_r4.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p03_Distance_80_cm_r1.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p03_Distance_80_cm_r2.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p03_Distance_80_cm_r3.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p03_Distance_80_cm_r4.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__Front_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__Front_side_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__Front_side_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__Front_side_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__Right_side_r1.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__Right_side_r2.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__Right_side_r3.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__Right_side_r4.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__back_r1.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__back_r2.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__back_r3.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__back_r4.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__left_side_r1.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__left_side_r2.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__left_side_r3.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p03_Orientation_80_cm__left_side_r4.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p04_Angle_0_deg__80_cm_r1.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p04_Angle_0_deg__80_cm_r2.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p04_Angle_0_deg__80_cm_r3.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p04_Angle_0_deg__80_cm_r4.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p04_Angle_30_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p04_Angle_30_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p04_Angle_30_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p04_Angle_30_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p04_Angle_45_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p04_Angle_45_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p04_Angle_45_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p04_Angle_45_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p04_Distance_120_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p04_Distance_120_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p04_Distance_120_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p04_Distance_120_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p04_Distance_160_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p04_Distance_160_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p04_Distance_160_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p04_Distance_160_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p04_Distance_40_cm_r1.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p04_Distance_40_cm_r2.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p04_Distance_40_cm_r3.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p04_Distance_40_cm_r4.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p04_Distance_80_cm_r1.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p04_Distance_80_cm_r2.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p04_Distance_80_cm_r3.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p04_Distance_80_cm_r4.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__Front_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__Front_side_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__Front_side_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__Front_side_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__Right_side_r1.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__Right_side_r2.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__Right_side_r3.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__Right_side_r4.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__back_r1.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__back_r2.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__back_r3.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__back_r4.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__left_side_r1.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__left_side_r2.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__left_side_r3.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p04_Orientation_80_cm__left_side_r4.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p05_Angle_0_deg__80_cm_r1.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p05_Angle_0_deg__80_cm_r2.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p05_Angle_0_deg__80_cm_r3.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p05_Angle_0_deg__80_cm_r4.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p05_Angle_30_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p05_Angle_30_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p05_Angle_30_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p05_Angle_30_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p05_Angle_45_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p05_Angle_45_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p05_Angle_45_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p05_Angle_45_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p05_Distance_120_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p05_Distance_120_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p05_Distance_120_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p05_Distance_120_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p05_Distance_160_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p05_Distance_160_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p05_Distance_160_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p05_Distance_160_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p05_Distance_40_cm_r1.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p05_Distance_40_cm_r2.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p05_Distance_40_cm_r3.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p05_Distance_40_cm_r4.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p05_Distance_80_cm_r1.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p05_Distance_80_cm_r2.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p05_Distance_80_cm_r3.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p05_Distance_80_cm_r4.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__Front_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__Front_side_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__Front_side_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__Front_side_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__Right_side_r1.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__Right_side_r2.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__Right_side_r3.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__Right_side_r4.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__back_r1.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__back_r2.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__back_r3.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__back_r4.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__left_side_r1.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__left_side_r2.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__left_side_r3.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p05_Orientation_80_cm__left_side_r4.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p06_Angle_0_deg__80_cm_r1.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p06_Angle_0_deg__80_cm_r2.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p06_Angle_0_deg__80_cm_r3.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p06_Angle_0_deg__80_cm_r4.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p06_Angle_30_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p06_Angle_30_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p06_Angle_30_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p06_Angle_30_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p06_Angle_45_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p06_Angle_45_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p06_Angle_45_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p06_Angle_45_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p06_Distance_120_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p06_Distance_120_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p06_Distance_120_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p06_Distance_120_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p06_Distance_160_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p06_Distance_160_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p06_Distance_160_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p06_Distance_160_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p06_Distance_40_cm_r1.json",
+    "size": 709
+  },
+  {
+    "name": "meta/p06_Distance_40_cm_r2.json",
+    "size": 711
+  },
+  {
+    "name": "meta/p06_Distance_40_cm_r3.json",
+    "size": 709
+  },
+  {
+    "name": "meta/p06_Distance_40_cm_r4.json",
+    "size": 709
+  },
+  {
+    "name": "meta/p06_Distance_80_cm_r1.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p06_Distance_80_cm_r2.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p06_Distance_80_cm_r3.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p06_Distance_80_cm_r4.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__Front_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__Front_side_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__Front_side_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__Front_side_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__Right_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__Right_side_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__Right_side_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__Right_side_r4.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__back_r1.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__back_r2.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__back_r3.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__back_r4.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__left_side_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__left_side_r2.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__left_side_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p06_Orientation_80_cm__left_side_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Angle_0_deg__80_cm_r1.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p07_Angle_0_deg__80_cm_r2.json",
+    "size": 716
+  },
+  {
+    "name": "meta/p07_Angle_0_deg__80_cm_r3.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p07_Angle_0_deg__80_cm_r4.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p07_Angle_30_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Angle_30_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Angle_30_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Angle_30_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Angle_45_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Angle_45_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Angle_45_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Angle_45_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Distance_120_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p07_Distance_120_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p07_Distance_120_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p07_Distance_120_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p07_Distance_160_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p07_Distance_160_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p07_Distance_160_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p07_Distance_160_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p07_Distance_40_cm_r1.json",
+    "size": 708
+  },
+  {
+    "name": "meta/p07_Distance_40_cm_r2.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p07_Distance_40_cm_r3.json",
+    "size": 708
+  },
+  {
+    "name": "meta/p07_Distance_40_cm_r4.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p07_Distance_80_cm_r1.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p07_Distance_80_cm_r2.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p07_Distance_80_cm_r3.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p07_Distance_80_cm_r4.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__Front_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__Front_side_r2.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__Front_side_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__Front_side_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__Right_side_r1.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__Right_side_r2.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__Right_side_r3.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__Right_side_r4.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__back_r1.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__back_r2.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__back_r3.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__back_r4.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__left_side_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__left_side_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__left_side_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p07_Orientation_80_cm__left_side_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Angle_0_deg__80_cm_r1.json",
+    "size": 716
+  },
+  {
+    "name": "meta/p08_Angle_0_deg__80_cm_r2.json",
+    "size": 716
+  },
+  {
+    "name": "meta/p08_Angle_0_deg__80_cm_r3.json",
+    "size": 716
+  },
+  {
+    "name": "meta/p08_Angle_0_deg__80_cm_r4.json",
+    "size": 716
+  },
+  {
+    "name": "meta/p08_Angle_30_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Angle_30_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Angle_30_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Angle_30_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Angle_45_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Angle_45_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Angle_45_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Angle_45_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Distance_120_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p08_Distance_120_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p08_Distance_120_cm_r3.json",
+    "size": 713
+  },
+  {
+    "name": "meta/p08_Distance_120_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p08_Distance_160_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p08_Distance_160_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p08_Distance_160_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p08_Distance_160_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p08_Distance_40_cm_r1.json",
+    "size": 709
+  },
+  {
+    "name": "meta/p08_Distance_40_cm_r2.json",
+    "size": 709
+  },
+  {
+    "name": "meta/p08_Distance_40_cm_r3.json",
+    "size": 709
+  },
+  {
+    "name": "meta/p08_Distance_40_cm_r4.json",
+    "size": 709
+  },
+  {
+    "name": "meta/p08_Distance_80_cm_r1.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p08_Distance_80_cm_r2.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p08_Distance_80_cm_r3.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p08_Distance_80_cm_r4.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__Front_side_r1.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__Front_side_r2.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__Front_side_r3.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__Front_side_r4.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__Right_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__Right_side_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__Right_side_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__Right_side_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__back_r1.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__back_r2.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__back_r3.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__back_r4.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__left_side_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__left_side_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__left_side_r3.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p08_Orientation_80_cm__left_side_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p09_Angle_0_deg__80_cm_r1.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p09_Angle_0_deg__80_cm_r2.json",
+    "size": 716
+  },
+  {
+    "name": "meta/p09_Angle_0_deg__80_cm_r3.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p09_Angle_0_deg__80_cm_r4.json",
+    "size": 707
+  },
+  {
+    "name": "meta/p09_Angle_30_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p09_Angle_30_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p09_Angle_30_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p09_Angle_30_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p09_Angle_45_deg__80_cm_r1.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p09_Angle_45_deg__80_cm_r2.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p09_Angle_45_deg__80_cm_r3.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p09_Angle_45_deg__80_cm_r4.json",
+    "size": 717
+  },
+  {
+    "name": "meta/p09_Distance_120_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p09_Distance_120_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p09_Distance_120_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p09_Distance_120_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p09_Distance_160_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p09_Distance_160_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p09_Distance_160_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p09_Distance_160_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p09_Distance_40_cm_r1.json",
+    "size": 710
+  },
+  {
+    "name": "meta/p09_Distance_40_cm_r2.json",
+    "size": 711
+  },
+  {
+    "name": "meta/p09_Distance_40_cm_r3.json",
+    "size": 711
+  },
+  {
+    "name": "meta/p09_Distance_40_cm_r4.json",
+    "size": 710
+  },
+  {
+    "name": "meta/p09_Distance_80_cm_r1.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p09_Distance_80_cm_r2.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p09_Distance_80_cm_r3.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p09_Distance_80_cm_r4.json",
+    "size": 703
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__Front_side_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__Front_side_r2.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__Front_side_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__Front_side_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__Right_side_r1.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__Right_side_r2.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__Right_side_r3.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__Right_side_r4.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__back_r1.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__back_r2.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__back_r3.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__back_r4.json",
+    "size": 721
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__left_side_r1.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__left_side_r2.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__left_side_r3.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p09_Orientation_80_cm__left_side_r4.json",
+    "size": 726
+  },
+  {
+    "name": "meta/p10_Angle_0_deg__80_cm_r1.json",
+    "size": 708
+  },
+  {
+    "name": "meta/p10_Angle_0_deg__80_cm_r2.json",
+    "size": 708
+  },
+  {
+    "name": "meta/p10_Angle_0_deg__80_cm_r3.json",
+    "size": 708
+  },
+  {
+    "name": "meta/p10_Angle_0_deg__80_cm_r4.json",
+    "size": 708
+  },
+  {
+    "name": "meta/p10_Angle_30_deg__80_cm_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p10_Angle_30_deg__80_cm_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p10_Angle_30_deg__80_cm_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p10_Angle_30_deg__80_cm_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p10_Angle_45_deg__80_cm_r1.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p10_Angle_45_deg__80_cm_r2.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p10_Angle_45_deg__80_cm_r3.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p10_Angle_45_deg__80_cm_r4.json",
+    "size": 718
+  },
+  {
+    "name": "meta/p10_Distance_120_cm_r1.json",
+    "size": 705
+  },
+  {
+    "name": "meta/p10_Distance_120_cm_r2.json",
+    "size": 705
+  },
+  {
+    "name": "meta/p10_Distance_120_cm_r3.json",
+    "size": 705
+  },
+  {
+    "name": "meta/p10_Distance_120_cm_r4.json",
+    "size": 705
+  },
+  {
+    "name": "meta/p10_Distance_160_cm_r1.json",
+    "size": 705
+  },
+  {
+    "name": "meta/p10_Distance_160_cm_r2.json",
+    "size": 705
+  },
+  {
+    "name": "meta/p10_Distance_160_cm_r3.json",
+    "size": 705
+  },
+  {
+    "name": "meta/p10_Distance_160_cm_r4.json",
+    "size": 705
+  },
+  {
+    "name": "meta/p10_Distance_40_cm_r1.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p10_Distance_40_cm_r2.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p10_Distance_40_cm_r3.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p10_Distance_40_cm_r4.json",
+    "size": 712
+  },
+  {
+    "name": "meta/p10_Distance_80_cm_r1.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p10_Distance_80_cm_r2.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p10_Distance_80_cm_r3.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p10_Distance_80_cm_r4.json",
+    "size": 704
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__Front_side_r1.json",
+    "size": 719
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__Front_side_r2.json",
+    "size": 719
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__Front_side_r3.json",
+    "size": 719
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__Front_side_r4.json",
+    "size": 719
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__Right_side_r1.json",
+    "size": 728
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__Right_side_r2.json",
+    "size": 728
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__Right_side_r3.json",
+    "size": 728
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__Right_side_r4.json",
+    "size": 728
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__back_r1.json",
+    "size": 722
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__back_r2.json",
+    "size": 722
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__back_r3.json",
+    "size": 722
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__back_r4.json",
+    "size": 713
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__left_side_r1.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__left_side_r2.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__left_side_r3.json",
+    "size": 727
+  },
+  {
+    "name": "meta/p10_Orientation_80_cm__left_side_r4.json",
+    "size": 727
+  },
+  {
+    "name": "samples/p01_Angle_0_deg__80_cm_r1.npz",
+    "size": 9205951
+  },
+  {
+    "name": "samples/p01_Angle_0_deg__80_cm_r2.npz",
+    "size": 9205113
+  },
+  {
+    "name": "samples/p01_Angle_0_deg__80_cm_r3.npz",
+    "size": 9183188
+  },
+  {
+    "name": "samples/p01_Angle_0_deg__80_cm_r4.npz",
+    "size": 9205519
+  },
+  {
+    "name": "samples/p01_Angle_30_deg__80_cm_r1.npz",
+    "size": 9204643
+  },
+  {
+    "name": "samples/p01_Angle_30_deg__80_cm_r2.npz",
+    "size": 9208862
+  },
+  {
+    "name": "samples/p01_Angle_30_deg__80_cm_r3.npz",
+    "size": 9206325
+  },
+  {
+    "name": "samples/p01_Angle_30_deg__80_cm_r4.npz",
+    "size": 9208072
+  },
+  {
+    "name": "samples/p01_Angle_45_deg__80_cm_r1.npz",
+    "size": 9202292
+  },
+  {
+    "name": "samples/p01_Angle_45_deg__80_cm_r2.npz",
+    "size": 9206132
+  },
+  {
+    "name": "samples/p01_Angle_45_deg__80_cm_r3.npz",
+    "size": 9207318
+  },
+  {
+    "name": "samples/p01_Angle_45_deg__80_cm_r4.npz",
+    "size": 9203401
+  },
+  {
+    "name": "samples/p01_Distance_120_cm_r1.npz",
+    "size": 9204899
+  },
+  {
+    "name": "samples/p01_Distance_120_cm_r2.npz",
+    "size": 9205452
+  },
+  {
+    "name": "samples/p01_Distance_120_cm_r3.npz",
+    "size": 9205931
+  },
+  {
+    "name": "samples/p01_Distance_120_cm_r4.npz",
+    "size": 9205598
+  },
+  {
+    "name": "samples/p01_Distance_160_cm_r1.npz",
+    "size": 9205595
+  },
+  {
+    "name": "samples/p01_Distance_160_cm_r2.npz",
+    "size": 9206049
+  },
+  {
+    "name": "samples/p01_Distance_160_cm_r3.npz",
+    "size": 9205518
+  },
+  {
+    "name": "samples/p01_Distance_160_cm_r4.npz",
+    "size": 9205800
+  },
+  {
+    "name": "samples/p01_Distance_40_cm_r1.npz",
+    "size": 9219981
+  },
+  {
+    "name": "samples/p01_Distance_40_cm_r2.npz",
+    "size": 9206214
+  },
+  {
+    "name": "samples/p01_Distance_40_cm_r3.npz",
+    "size": 9214450
+  },
+  {
+    "name": "samples/p01_Distance_40_cm_r4.npz",
+    "size": 9221398
+  },
+  {
+    "name": "samples/p01_Distance_80_cm_r1.npz",
+    "size": 9205951
+  },
+  {
+    "name": "samples/p01_Distance_80_cm_r2.npz",
+    "size": 9205113
+  },
+  {
+    "name": "samples/p01_Distance_80_cm_r3.npz",
+    "size": 9183188
+  },
+  {
+    "name": "samples/p01_Distance_80_cm_r4.npz",
+    "size": 9205519
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__Front_side_r1.npz",
+    "size": 9205951
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__Front_side_r2.npz",
+    "size": 9205113
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__Front_side_r3.npz",
+    "size": 9183188
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__Front_side_r4.npz",
+    "size": 9205519
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__Right_side_r1.npz",
+    "size": 9180898
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__Right_side_r2.npz",
+    "size": 9181167
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__Right_side_r3.npz",
+    "size": 9181563
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__Right_side_r4.npz",
+    "size": 9181026
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__back_r1.npz",
+    "size": 9200688
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__back_r2.npz",
+    "size": 9205646
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__back_r3.npz",
+    "size": 9166605
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__back_r4.npz",
+    "size": 9199944
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__left_side_r1.npz",
+    "size": 9189962
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__left_side_r2.npz",
+    "size": 9191633
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__left_side_r3.npz",
+    "size": 9191054
+  },
+  {
+    "name": "samples/p01_Orientation_80_cm__left_side_r4.npz",
+    "size": 9191556
+  },
+  {
+    "name": "samples/p02_Angle_0_deg__80_cm_r1.npz",
+    "size": 9206233
+  },
+  {
+    "name": "samples/p02_Angle_0_deg__80_cm_r2.npz",
+    "size": 9206370
+  },
+  {
+    "name": "samples/p02_Angle_0_deg__80_cm_r3.npz",
+    "size": 9205406
+  },
+  {
+    "name": "samples/p02_Angle_0_deg__80_cm_r4.npz",
+    "size": 9205705
+  },
+  {
+    "name": "samples/p02_Angle_30_deg__80_cm_r1.npz",
+    "size": 9204156
+  },
+  {
+    "name": "samples/p02_Angle_30_deg__80_cm_r2.npz",
+    "size": 9202111
+  },
+  {
+    "name": "samples/p02_Angle_30_deg__80_cm_r3.npz",
+    "size": 9202329
+  },
+  {
+    "name": "samples/p02_Angle_30_deg__80_cm_r4.npz",
+    "size": 9203083
+  },
+  {
+    "name": "samples/p02_Angle_45_deg__80_cm_r1.npz",
+    "size": 9202593
+  },
+  {
+    "name": "samples/p02_Angle_45_deg__80_cm_r2.npz",
+    "size": 9202727
+  },
+  {
+    "name": "samples/p02_Angle_45_deg__80_cm_r3.npz",
+    "size": 9205506
+  },
+  {
+    "name": "samples/p02_Angle_45_deg__80_cm_r4.npz",
+    "size": 9202665
+  },
+  {
+    "name": "samples/p02_Distance_120_cm_r1.npz",
+    "size": 9206113
+  },
+  {
+    "name": "samples/p02_Distance_120_cm_r2.npz",
+    "size": 9205453
+  },
+  {
+    "name": "samples/p02_Distance_120_cm_r3.npz",
+    "size": 9205227
+  },
+  {
+    "name": "samples/p02_Distance_120_cm_r4.npz",
+    "size": 9205563
+  },
+  {
+    "name": "samples/p02_Distance_160_cm_r1.npz",
+    "size": 9205687
+  },
+  {
+    "name": "samples/p02_Distance_160_cm_r2.npz",
+    "size": 9204898
+  },
+  {
+    "name": "samples/p02_Distance_160_cm_r3.npz",
+    "size": 9205457
+  },
+  {
+    "name": "samples/p02_Distance_160_cm_r4.npz",
+    "size": 9204698
+  },
+  {
+    "name": "samples/p02_Distance_40_cm_r1.npz",
+    "size": 9219062
+  },
+  {
+    "name": "samples/p02_Distance_40_cm_r2.npz",
+    "size": 9222114
+  },
+  {
+    "name": "samples/p02_Distance_40_cm_r3.npz",
+    "size": 9222679
+  },
+  {
+    "name": "samples/p02_Distance_40_cm_r4.npz",
+    "size": 9222648
+  },
+  {
+    "name": "samples/p02_Distance_80_cm_r1.npz",
+    "size": 9206233
+  },
+  {
+    "name": "samples/p02_Distance_80_cm_r2.npz",
+    "size": 9206370
+  },
+  {
+    "name": "samples/p02_Distance_80_cm_r3.npz",
+    "size": 9205406
+  },
+  {
+    "name": "samples/p02_Distance_80_cm_r4.npz",
+    "size": 9205705
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__Front_side_r1.npz",
+    "size": 9206233
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__Front_side_r2.npz",
+    "size": 9206370
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__Front_side_r3.npz",
+    "size": 9205406
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__Front_side_r4.npz",
+    "size": 9205705
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__Right_side_r1.npz",
+    "size": 9206106
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__Right_side_r2.npz",
+    "size": 9205779
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__Right_side_r3.npz",
+    "size": 9206010
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__Right_side_r4.npz",
+    "size": 9205204
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__back_r1.npz",
+    "size": 9203031
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__back_r2.npz",
+    "size": 9194554
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__back_r3.npz",
+    "size": 9202266
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__back_r4.npz",
+    "size": 9221440
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__left_side_r1.npz",
+    "size": 9198475
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__left_side_r2.npz",
+    "size": 9198852
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__left_side_r3.npz",
+    "size": 9199733
+  },
+  {
+    "name": "samples/p02_Orientation_80_cm__left_side_r4.npz",
+    "size": 9200102
+  },
+  {
+    "name": "samples/p03_Angle_0_deg__80_cm_r1.npz",
+    "size": 9202551
+  },
+  {
+    "name": "samples/p03_Angle_0_deg__80_cm_r2.npz",
+    "size": 9201493
+  },
+  {
+    "name": "samples/p03_Angle_0_deg__80_cm_r3.npz",
+    "size": 9201943
+  },
+  {
+    "name": "samples/p03_Angle_0_deg__80_cm_r4.npz",
+    "size": 9201564
+  },
+  {
+    "name": "samples/p03_Angle_30_deg__80_cm_r1.npz",
+    "size": 9198826
+  },
+  {
+    "name": "samples/p03_Angle_30_deg__80_cm_r2.npz",
+    "size": 9198640
+  },
+  {
+    "name": "samples/p03_Angle_30_deg__80_cm_r3.npz",
+    "size": 9196791
+  },
+  {
+    "name": "samples/p03_Angle_30_deg__80_cm_r4.npz",
+    "size": 9198401
+  },
+  {
+    "name": "samples/p03_Angle_45_deg__80_cm_r1.npz",
+    "size": 9199485
+  },
+  {
+    "name": "samples/p03_Angle_45_deg__80_cm_r2.npz",
+    "size": 9198615
+  },
+  {
+    "name": "samples/p03_Angle_45_deg__80_cm_r3.npz",
+    "size": 9196697
+  },
+  {
+    "name": "samples/p03_Angle_45_deg__80_cm_r4.npz",
+    "size": 9197921
+  },
+  {
+    "name": "samples/p03_Distance_120_cm_r1.npz",
+    "size": 9201411
+  },
+  {
+    "name": "samples/p03_Distance_120_cm_r2.npz",
+    "size": 9201346
+  },
+  {
+    "name": "samples/p03_Distance_120_cm_r3.npz",
+    "size": 9200533
+  },
+  {
+    "name": "samples/p03_Distance_120_cm_r4.npz",
+    "size": 9200956
+  },
+  {
+    "name": "samples/p03_Distance_160_cm_r1.npz",
+    "size": 9200990
+  },
+  {
+    "name": "samples/p03_Distance_160_cm_r2.npz",
+    "size": 9201405
+  },
+  {
+    "name": "samples/p03_Distance_160_cm_r3.npz",
+    "size": 9201950
+  },
+  {
+    "name": "samples/p03_Distance_160_cm_r4.npz",
+    "size": 9201577
+  },
+  {
+    "name": "samples/p03_Distance_40_cm_r1.npz",
+    "size": 9204320
+  },
+  {
+    "name": "samples/p03_Distance_40_cm_r2.npz",
+    "size": 9196827
+  },
+  {
+    "name": "samples/p03_Distance_40_cm_r3.npz",
+    "size": 9201346
+  },
+  {
+    "name": "samples/p03_Distance_40_cm_r4.npz",
+    "size": 9199443
+  },
+  {
+    "name": "samples/p03_Distance_80_cm_r1.npz",
+    "size": 9202551
+  },
+  {
+    "name": "samples/p03_Distance_80_cm_r2.npz",
+    "size": 9201493
+  },
+  {
+    "name": "samples/p03_Distance_80_cm_r3.npz",
+    "size": 9201943
+  },
+  {
+    "name": "samples/p03_Distance_80_cm_r4.npz",
+    "size": 9201564
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__Front_side_r1.npz",
+    "size": 9202551
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__Front_side_r2.npz",
+    "size": 9201493
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__Front_side_r3.npz",
+    "size": 9201943
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__Front_side_r4.npz",
+    "size": 9201564
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__Right_side_r1.npz",
+    "size": 9199206
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__Right_side_r2.npz",
+    "size": 9201587
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__Right_side_r3.npz",
+    "size": 9196399
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__Right_side_r4.npz",
+    "size": 9200454
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__back_r1.npz",
+    "size": 9200285
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__back_r2.npz",
+    "size": 9182650
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__back_r3.npz",
+    "size": 9189448
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__back_r4.npz",
+    "size": 9209022
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__left_side_r1.npz",
+    "size": 9210232
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__left_side_r2.npz",
+    "size": 9197532
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__left_side_r3.npz",
+    "size": 9198620
+  },
+  {
+    "name": "samples/p03_Orientation_80_cm__left_side_r4.npz",
+    "size": 9202115
+  },
+  {
+    "name": "samples/p04_Angle_0_deg__80_cm_r1.npz",
+    "size": 9201832
+  },
+  {
+    "name": "samples/p04_Angle_0_deg__80_cm_r2.npz",
+    "size": 9201758
+  },
+  {
+    "name": "samples/p04_Angle_0_deg__80_cm_r3.npz",
+    "size": 9201389
+  },
+  {
+    "name": "samples/p04_Angle_0_deg__80_cm_r4.npz",
+    "size": 9201714
+  },
+  {
+    "name": "samples/p04_Angle_30_deg__80_cm_r1.npz",
+    "size": 9195879
+  },
+  {
+    "name": "samples/p04_Angle_30_deg__80_cm_r2.npz",
+    "size": 9196536
+  },
+  {
+    "name": "samples/p04_Angle_30_deg__80_cm_r3.npz",
+    "size": 9195459
+  },
+  {
+    "name": "samples/p04_Angle_30_deg__80_cm_r4.npz",
+    "size": 9195327
+  },
+  {
+    "name": "samples/p04_Angle_45_deg__80_cm_r1.npz",
+    "size": 9196665
+  },
+  {
+    "name": "samples/p04_Angle_45_deg__80_cm_r2.npz",
+    "size": 9197333
+  },
+  {
+    "name": "samples/p04_Angle_45_deg__80_cm_r3.npz",
+    "size": 9196464
+  },
+  {
+    "name": "samples/p04_Angle_45_deg__80_cm_r4.npz",
+    "size": 9196668
+  },
+  {
+    "name": "samples/p04_Distance_120_cm_r1.npz",
+    "size": 9202358
+  },
+  {
+    "name": "samples/p04_Distance_120_cm_r2.npz",
+    "size": 9201985
+  },
+  {
+    "name": "samples/p04_Distance_120_cm_r3.npz",
+    "size": 9201319
+  },
+  {
+    "name": "samples/p04_Distance_120_cm_r4.npz",
+    "size": 9201482
+  },
+  {
+    "name": "samples/p04_Distance_160_cm_r1.npz",
+    "size": 9201753
+  },
+  {
+    "name": "samples/p04_Distance_160_cm_r2.npz",
+    "size": 9201391
+  },
+  {
+    "name": "samples/p04_Distance_160_cm_r3.npz",
+    "size": 9201814
+  },
+  {
+    "name": "samples/p04_Distance_160_cm_r4.npz",
+    "size": 9201776
+  },
+  {
+    "name": "samples/p04_Distance_40_cm_r1.npz",
+    "size": 9212973
+  },
+  {
+    "name": "samples/p04_Distance_40_cm_r2.npz",
+    "size": 9217064
+  },
+  {
+    "name": "samples/p04_Distance_40_cm_r3.npz",
+    "size": 9224495
+  },
+  {
+    "name": "samples/p04_Distance_40_cm_r4.npz",
+    "size": 9213725
+  },
+  {
+    "name": "samples/p04_Distance_80_cm_r1.npz",
+    "size": 9201832
+  },
+  {
+    "name": "samples/p04_Distance_80_cm_r2.npz",
+    "size": 9201758
+  },
+  {
+    "name": "samples/p04_Distance_80_cm_r3.npz",
+    "size": 9201389
+  },
+  {
+    "name": "samples/p04_Distance_80_cm_r4.npz",
+    "size": 9201714
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__Front_side_r1.npz",
+    "size": 9201832
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__Front_side_r2.npz",
+    "size": 9201758
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__Front_side_r3.npz",
+    "size": 9201389
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__Front_side_r4.npz",
+    "size": 9201714
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__Right_side_r1.npz",
+    "size": 9192748
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__Right_side_r2.npz",
+    "size": 9194531
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__Right_side_r3.npz",
+    "size": 9196353
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__Right_side_r4.npz",
+    "size": 9194872
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__back_r1.npz",
+    "size": 9201792
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__back_r2.npz",
+    "size": 9201419
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__back_r3.npz",
+    "size": 9200815
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__back_r4.npz",
+    "size": 9171342
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__left_side_r1.npz",
+    "size": 9181439
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__left_side_r2.npz",
+    "size": 9182381
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__left_side_r3.npz",
+    "size": 9182542
+  },
+  {
+    "name": "samples/p04_Orientation_80_cm__left_side_r4.npz",
+    "size": 9182764
+  },
+  {
+    "name": "samples/p05_Angle_0_deg__80_cm_r1.npz",
+    "size": 9202294
+  },
+  {
+    "name": "samples/p05_Angle_0_deg__80_cm_r2.npz",
+    "size": 9201616
+  },
+  {
+    "name": "samples/p05_Angle_0_deg__80_cm_r3.npz",
+    "size": 9201093
+  },
+  {
+    "name": "samples/p05_Angle_0_deg__80_cm_r4.npz",
+    "size": 9201495
+  },
+  {
+    "name": "samples/p05_Angle_30_deg__80_cm_r1.npz",
+    "size": 9195802
+  },
+  {
+    "name": "samples/p05_Angle_30_deg__80_cm_r2.npz",
+    "size": 9194121
+  },
+  {
+    "name": "samples/p05_Angle_30_deg__80_cm_r3.npz",
+    "size": 9195080
+  },
+  {
+    "name": "samples/p05_Angle_30_deg__80_cm_r4.npz",
+    "size": 9195547
+  },
+  {
+    "name": "samples/p05_Angle_45_deg__80_cm_r1.npz",
+    "size": 9196407
+  },
+  {
+    "name": "samples/p05_Angle_45_deg__80_cm_r2.npz",
+    "size": 9195505
+  },
+  {
+    "name": "samples/p05_Angle_45_deg__80_cm_r3.npz",
+    "size": 9195494
+  },
+  {
+    "name": "samples/p05_Angle_45_deg__80_cm_r4.npz",
+    "size": 9194853
+  },
+  {
+    "name": "samples/p05_Distance_120_cm_r1.npz",
+    "size": 9201780
+  },
+  {
+    "name": "samples/p05_Distance_120_cm_r2.npz",
+    "size": 9201552
+  },
+  {
+    "name": "samples/p05_Distance_120_cm_r3.npz",
+    "size": 9201272
+  },
+  {
+    "name": "samples/p05_Distance_120_cm_r4.npz",
+    "size": 9201706
+  },
+  {
+    "name": "samples/p05_Distance_160_cm_r1.npz",
+    "size": 9202106
+  },
+  {
+    "name": "samples/p05_Distance_160_cm_r2.npz",
+    "size": 9201513
+  },
+  {
+    "name": "samples/p05_Distance_160_cm_r3.npz",
+    "size": 9201411
+  },
+  {
+    "name": "samples/p05_Distance_160_cm_r4.npz",
+    "size": 9201989
+  },
+  {
+    "name": "samples/p05_Distance_40_cm_r1.npz",
+    "size": 9200947
+  },
+  {
+    "name": "samples/p05_Distance_40_cm_r2.npz",
+    "size": 9203706
+  },
+  {
+    "name": "samples/p05_Distance_40_cm_r3.npz",
+    "size": 9203545
+  },
+  {
+    "name": "samples/p05_Distance_40_cm_r4.npz",
+    "size": 9203844
+  },
+  {
+    "name": "samples/p05_Distance_80_cm_r1.npz",
+    "size": 9202294
+  },
+  {
+    "name": "samples/p05_Distance_80_cm_r2.npz",
+    "size": 9201616
+  },
+  {
+    "name": "samples/p05_Distance_80_cm_r3.npz",
+    "size": 9201093
+  },
+  {
+    "name": "samples/p05_Distance_80_cm_r4.npz",
+    "size": 9201495
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__Front_side_r1.npz",
+    "size": 9202294
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__Front_side_r2.npz",
+    "size": 9201616
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__Front_side_r3.npz",
+    "size": 9201093
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__Front_side_r4.npz",
+    "size": 9201495
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__Right_side_r1.npz",
+    "size": 9195291
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__Right_side_r2.npz",
+    "size": 9190650
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__Right_side_r3.npz",
+    "size": 9190710
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__Right_side_r4.npz",
+    "size": 9192088
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__back_r1.npz",
+    "size": 9199610
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__back_r2.npz",
+    "size": 9197546
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__back_r3.npz",
+    "size": 9201548
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__back_r4.npz",
+    "size": 9208286
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__left_side_r1.npz",
+    "size": 9195394
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__left_side_r2.npz",
+    "size": 9193347
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__left_side_r3.npz",
+    "size": 9193163
+  },
+  {
+    "name": "samples/p05_Orientation_80_cm__left_side_r4.npz",
+    "size": 9195306
+  },
+  {
+    "name": "samples/p06_Angle_0_deg__80_cm_r1.npz",
+    "size": 9202959
+  },
+  {
+    "name": "samples/p06_Angle_0_deg__80_cm_r2.npz",
+    "size": 9202700
+  },
+  {
+    "name": "samples/p06_Angle_0_deg__80_cm_r3.npz",
+    "size": 9203061
+  },
+  {
+    "name": "samples/p06_Angle_0_deg__80_cm_r4.npz",
+    "size": 9202917
+  },
+  {
+    "name": "samples/p06_Angle_30_deg__80_cm_r1.npz",
+    "size": 9203350
+  },
+  {
+    "name": "samples/p06_Angle_30_deg__80_cm_r2.npz",
+    "size": 9205383
+  },
+  {
+    "name": "samples/p06_Angle_30_deg__80_cm_r3.npz",
+    "size": 9205690
+  },
+  {
+    "name": "samples/p06_Angle_30_deg__80_cm_r4.npz",
+    "size": 9204190
+  },
+  {
+    "name": "samples/p06_Angle_45_deg__80_cm_r1.npz",
+    "size": 9204831
+  },
+  {
+    "name": "samples/p06_Angle_45_deg__80_cm_r2.npz",
+    "size": 9205489
+  },
+  {
+    "name": "samples/p06_Angle_45_deg__80_cm_r3.npz",
+    "size": 9205741
+  },
+  {
+    "name": "samples/p06_Angle_45_deg__80_cm_r4.npz",
+    "size": 9207275
+  },
+  {
+    "name": "samples/p06_Distance_120_cm_r1.npz",
+    "size": 9202155
+  },
+  {
+    "name": "samples/p06_Distance_120_cm_r2.npz",
+    "size": 9202413
+  },
+  {
+    "name": "samples/p06_Distance_120_cm_r3.npz",
+    "size": 9203763
+  },
+  {
+    "name": "samples/p06_Distance_120_cm_r4.npz",
+    "size": 9202492
+  },
+  {
+    "name": "samples/p06_Distance_160_cm_r1.npz",
+    "size": 9203613
+  },
+  {
+    "name": "samples/p06_Distance_160_cm_r2.npz",
+    "size": 9203106
+  },
+  {
+    "name": "samples/p06_Distance_160_cm_r3.npz",
+    "size": 9203629
+  },
+  {
+    "name": "samples/p06_Distance_160_cm_r4.npz",
+    "size": 9203086
+  },
+  {
+    "name": "samples/p06_Distance_40_cm_r1.npz",
+    "size": 9217398
+  },
+  {
+    "name": "samples/p06_Distance_40_cm_r2.npz",
+    "size": 9208839
+  },
+  {
+    "name": "samples/p06_Distance_40_cm_r3.npz",
+    "size": 9223611
+  },
+  {
+    "name": "samples/p06_Distance_40_cm_r4.npz",
+    "size": 9222655
+  },
+  {
+    "name": "samples/p06_Distance_80_cm_r1.npz",
+    "size": 9202959
+  },
+  {
+    "name": "samples/p06_Distance_80_cm_r2.npz",
+    "size": 9202700
+  },
+  {
+    "name": "samples/p06_Distance_80_cm_r3.npz",
+    "size": 9203061
+  },
+  {
+    "name": "samples/p06_Distance_80_cm_r4.npz",
+    "size": 9202917
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__Front_side_r1.npz",
+    "size": 9202959
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__Front_side_r2.npz",
+    "size": 9202700
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__Front_side_r3.npz",
+    "size": 9203061
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__Front_side_r4.npz",
+    "size": 9202917
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__Right_side_r1.npz",
+    "size": 9204435
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__Right_side_r2.npz",
+    "size": 9203116
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__Right_side_r3.npz",
+    "size": 9203157
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__Right_side_r4.npz",
+    "size": 9173847
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__back_r1.npz",
+    "size": 9203965
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__back_r2.npz",
+    "size": 9183497
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__back_r3.npz",
+    "size": 9203546
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__back_r4.npz",
+    "size": 9184045
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__left_side_r1.npz",
+    "size": 9203306
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__left_side_r2.npz",
+    "size": 9174422
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__left_side_r3.npz",
+    "size": 9202777
+  },
+  {
+    "name": "samples/p06_Orientation_80_cm__left_side_r4.npz",
+    "size": 9202911
+  },
+  {
+    "name": "samples/p07_Angle_0_deg__80_cm_r1.npz",
+    "size": 9201901
+  },
+  {
+    "name": "samples/p07_Angle_0_deg__80_cm_r2.npz",
+    "size": 9186899
+  },
+  {
+    "name": "samples/p07_Angle_0_deg__80_cm_r3.npz",
+    "size": 9202168
+  },
+  {
+    "name": "samples/p07_Angle_0_deg__80_cm_r4.npz",
+    "size": 9202132
+  },
+  {
+    "name": "samples/p07_Angle_30_deg__80_cm_r1.npz",
+    "size": 9196840
+  },
+  {
+    "name": "samples/p07_Angle_30_deg__80_cm_r2.npz",
+    "size": 9195428
+  },
+  {
+    "name": "samples/p07_Angle_30_deg__80_cm_r3.npz",
+    "size": 9195645
+  },
+  {
+    "name": "samples/p07_Angle_30_deg__80_cm_r4.npz",
+    "size": 9196687
+  },
+  {
+    "name": "samples/p07_Angle_45_deg__80_cm_r1.npz",
+    "size": 9196281
+  },
+  {
+    "name": "samples/p07_Angle_45_deg__80_cm_r2.npz",
+    "size": 9196738
+  },
+  {
+    "name": "samples/p07_Angle_45_deg__80_cm_r3.npz",
+    "size": 9196053
+  },
+  {
+    "name": "samples/p07_Angle_45_deg__80_cm_r4.npz",
+    "size": 9195249
+  },
+  {
+    "name": "samples/p07_Distance_120_cm_r1.npz",
+    "size": 9202240
+  },
+  {
+    "name": "samples/p07_Distance_120_cm_r2.npz",
+    "size": 9201832
+  },
+  {
+    "name": "samples/p07_Distance_120_cm_r3.npz",
+    "size": 9201695
+  },
+  {
+    "name": "samples/p07_Distance_120_cm_r4.npz",
+    "size": 9201420
+  },
+  {
+    "name": "samples/p07_Distance_160_cm_r1.npz",
+    "size": 9201714
+  },
+  {
+    "name": "samples/p07_Distance_160_cm_r2.npz",
+    "size": 9201488
+  },
+  {
+    "name": "samples/p07_Distance_160_cm_r3.npz",
+    "size": 9201366
+  },
+  {
+    "name": "samples/p07_Distance_160_cm_r4.npz",
+    "size": 9201642
+  },
+  {
+    "name": "samples/p07_Distance_40_cm_r1.npz",
+    "size": 9204617
+  },
+  {
+    "name": "samples/p07_Distance_40_cm_r2.npz",
+    "size": 9205853
+  },
+  {
+    "name": "samples/p07_Distance_40_cm_r3.npz",
+    "size": 9209694
+  },
+  {
+    "name": "samples/p07_Distance_40_cm_r4.npz",
+    "size": 9204784
+  },
+  {
+    "name": "samples/p07_Distance_80_cm_r1.npz",
+    "size": 9201901
+  },
+  {
+    "name": "samples/p07_Distance_80_cm_r2.npz",
+    "size": 9186899
+  },
+  {
+    "name": "samples/p07_Distance_80_cm_r3.npz",
+    "size": 9202168
+  },
+  {
+    "name": "samples/p07_Distance_80_cm_r4.npz",
+    "size": 9202132
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__Front_side_r1.npz",
+    "size": 9201901
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__Front_side_r2.npz",
+    "size": 9186899
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__Front_side_r3.npz",
+    "size": 9202168
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__Front_side_r4.npz",
+    "size": 9202132
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__Right_side_r1.npz",
+    "size": 9182950
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__Right_side_r2.npz",
+    "size": 9186432
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__Right_side_r3.npz",
+    "size": 9185624
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__Right_side_r4.npz",
+    "size": 9185017
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__back_r1.npz",
+    "size": 9182524
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__back_r2.npz",
+    "size": 9187611
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__back_r3.npz",
+    "size": 9193035
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__back_r4.npz",
+    "size": 9181498
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__left_side_r1.npz",
+    "size": 9202420
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__left_side_r2.npz",
+    "size": 9202132
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__left_side_r3.npz",
+    "size": 9201805
+  },
+  {
+    "name": "samples/p07_Orientation_80_cm__left_side_r4.npz",
+    "size": 9201869
+  },
+  {
+    "name": "samples/p08_Angle_0_deg__80_cm_r1.npz",
+    "size": 9182162
+  },
+  {
+    "name": "samples/p08_Angle_0_deg__80_cm_r2.npz",
+    "size": 9180419
+  },
+  {
+    "name": "samples/p08_Angle_0_deg__80_cm_r3.npz",
+    "size": 9181043
+  },
+  {
+    "name": "samples/p08_Angle_0_deg__80_cm_r4.npz",
+    "size": 9189335
+  },
+  {
+    "name": "samples/p08_Angle_30_deg__80_cm_r1.npz",
+    "size": 9192774
+  },
+  {
+    "name": "samples/p08_Angle_30_deg__80_cm_r2.npz",
+    "size": 9193564
+  },
+  {
+    "name": "samples/p08_Angle_30_deg__80_cm_r3.npz",
+    "size": 9191193
+  },
+  {
+    "name": "samples/p08_Angle_30_deg__80_cm_r4.npz",
+    "size": 9197451
+  },
+  {
+    "name": "samples/p08_Angle_45_deg__80_cm_r1.npz",
+    "size": 9198123
+  },
+  {
+    "name": "samples/p08_Angle_45_deg__80_cm_r2.npz",
+    "size": 9198549
+  },
+  {
+    "name": "samples/p08_Angle_45_deg__80_cm_r3.npz",
+    "size": 9198074
+  },
+  {
+    "name": "samples/p08_Angle_45_deg__80_cm_r4.npz",
+    "size": 9199631
+  },
+  {
+    "name": "samples/p08_Distance_120_cm_r1.npz",
+    "size": 9207467
+  },
+  {
+    "name": "samples/p08_Distance_120_cm_r2.npz",
+    "size": 9207236
+  },
+  {
+    "name": "samples/p08_Distance_120_cm_r3.npz",
+    "size": 9176471
+  },
+  {
+    "name": "samples/p08_Distance_120_cm_r4.npz",
+    "size": 9207279
+  },
+  {
+    "name": "samples/p08_Distance_160_cm_r1.npz",
+    "size": 9206398
+  },
+  {
+    "name": "samples/p08_Distance_160_cm_r2.npz",
+    "size": 9206643
+  },
+  {
+    "name": "samples/p08_Distance_160_cm_r3.npz",
+    "size": 9207269
+  },
+  {
+    "name": "samples/p08_Distance_160_cm_r4.npz",
+    "size": 9207199
+  },
+  {
+    "name": "samples/p08_Distance_40_cm_r1.npz",
+    "size": 9225373
+  },
+  {
+    "name": "samples/p08_Distance_40_cm_r2.npz",
+    "size": 9225463
+  },
+  {
+    "name": "samples/p08_Distance_40_cm_r3.npz",
+    "size": 9223324
+  },
+  {
+    "name": "samples/p08_Distance_40_cm_r4.npz",
+    "size": 9222635
+  },
+  {
+    "name": "samples/p08_Distance_80_cm_r1.npz",
+    "size": 9182162
+  },
+  {
+    "name": "samples/p08_Distance_80_cm_r2.npz",
+    "size": 9180419
+  },
+  {
+    "name": "samples/p08_Distance_80_cm_r3.npz",
+    "size": 9181043
+  },
+  {
+    "name": "samples/p08_Distance_80_cm_r4.npz",
+    "size": 9189335
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__Front_side_r1.npz",
+    "size": 9182162
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__Front_side_r2.npz",
+    "size": 9180419
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__Front_side_r3.npz",
+    "size": 9181043
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__Front_side_r4.npz",
+    "size": 9189335
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__Right_side_r1.npz",
+    "size": 9207760
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__Right_side_r2.npz",
+    "size": 9207232
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__Right_side_r3.npz",
+    "size": 9206474
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__Right_side_r4.npz",
+    "size": 9206429
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__back_r1.npz",
+    "size": 9221291
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__back_r2.npz",
+    "size": 9220930
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__back_r3.npz",
+    "size": 9198061
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__back_r4.npz",
+    "size": 9217629
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__left_side_r1.npz",
+    "size": 9207088
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__left_side_r2.npz",
+    "size": 9207102
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__left_side_r3.npz",
+    "size": 9188103
+  },
+  {
+    "name": "samples/p08_Orientation_80_cm__left_side_r4.npz",
+    "size": 9207112
+  },
+  {
+    "name": "samples/p09_Angle_0_deg__80_cm_r1.npz",
+    "size": 9207303
+  },
+  {
+    "name": "samples/p09_Angle_0_deg__80_cm_r2.npz",
+    "size": 9179970
+  },
+  {
+    "name": "samples/p09_Angle_0_deg__80_cm_r3.npz",
+    "size": 9207182
+  },
+  {
+    "name": "samples/p09_Angle_0_deg__80_cm_r4.npz",
+    "size": 9207418
+  },
+  {
+    "name": "samples/p09_Angle_30_deg__80_cm_r1.npz",
+    "size": 9201146
+  },
+  {
+    "name": "samples/p09_Angle_30_deg__80_cm_r2.npz",
+    "size": 9201755
+  },
+  {
+    "name": "samples/p09_Angle_30_deg__80_cm_r3.npz",
+    "size": 9201644
+  },
+  {
+    "name": "samples/p09_Angle_30_deg__80_cm_r4.npz",
+    "size": 9203616
+  },
+  {
+    "name": "samples/p09_Angle_45_deg__80_cm_r1.npz",
+    "size": 9204022
+  },
+  {
+    "name": "samples/p09_Angle_45_deg__80_cm_r2.npz",
+    "size": 9202656
+  },
+  {
+    "name": "samples/p09_Angle_45_deg__80_cm_r3.npz",
+    "size": 9204102
+  },
+  {
+    "name": "samples/p09_Angle_45_deg__80_cm_r4.npz",
+    "size": 9199020
+  },
+  {
+    "name": "samples/p09_Distance_120_cm_r1.npz",
+    "size": 9206728
+  },
+  {
+    "name": "samples/p09_Distance_120_cm_r2.npz",
+    "size": 9206863
+  },
+  {
+    "name": "samples/p09_Distance_120_cm_r3.npz",
+    "size": 9206926
+  },
+  {
+    "name": "samples/p09_Distance_120_cm_r4.npz",
+    "size": 9206667
+  },
+  {
+    "name": "samples/p09_Distance_160_cm_r1.npz",
+    "size": 9206493
+  },
+  {
+    "name": "samples/p09_Distance_160_cm_r2.npz",
+    "size": 9207033
+  },
+  {
+    "name": "samples/p09_Distance_160_cm_r3.npz",
+    "size": 9206951
+  },
+  {
+    "name": "samples/p09_Distance_160_cm_r4.npz",
+    "size": 9206763
+  },
+  {
+    "name": "samples/p09_Distance_40_cm_r1.npz",
+    "size": 9207562
+  },
+  {
+    "name": "samples/p09_Distance_40_cm_r2.npz",
+    "size": 9203724
+  },
+  {
+    "name": "samples/p09_Distance_40_cm_r3.npz",
+    "size": 9207526
+  },
+  {
+    "name": "samples/p09_Distance_40_cm_r4.npz",
+    "size": 9212611
+  },
+  {
+    "name": "samples/p09_Distance_80_cm_r1.npz",
+    "size": 9207303
+  },
+  {
+    "name": "samples/p09_Distance_80_cm_r2.npz",
+    "size": 9179970
+  },
+  {
+    "name": "samples/p09_Distance_80_cm_r3.npz",
+    "size": 9207182
+  },
+  {
+    "name": "samples/p09_Distance_80_cm_r4.npz",
+    "size": 9207418
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__Front_side_r1.npz",
+    "size": 9207303
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__Front_side_r2.npz",
+    "size": 9179970
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__Front_side_r3.npz",
+    "size": 9207182
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__Front_side_r4.npz",
+    "size": 9207418
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__Right_side_r1.npz",
+    "size": 9193862
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__Right_side_r2.npz",
+    "size": 9198910
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__Right_side_r3.npz",
+    "size": 9199676
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__Right_side_r4.npz",
+    "size": 9201300
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__back_r1.npz",
+    "size": 9204878
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__back_r2.npz",
+    "size": 9207713
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__back_r3.npz",
+    "size": 9189281
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__back_r4.npz",
+    "size": 9178357
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__left_side_r1.npz",
+    "size": 9212314
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__left_side_r2.npz",
+    "size": 9213449
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__left_side_r3.npz",
+    "size": 9197307
+  },
+  {
+    "name": "samples/p09_Orientation_80_cm__left_side_r4.npz",
+    "size": 9195436
+  },
+  {
+    "name": "samples/p10_Angle_0_deg__80_cm_r1.npz",
+    "size": 9207590
+  },
+  {
+    "name": "samples/p10_Angle_0_deg__80_cm_r2.npz",
+    "size": 9207705
+  },
+  {
+    "name": "samples/p10_Angle_0_deg__80_cm_r3.npz",
+    "size": 9207396
+  },
+  {
+    "name": "samples/p10_Angle_0_deg__80_cm_r4.npz",
+    "size": 9207791
+  },
+  {
+    "name": "samples/p10_Angle_30_deg__80_cm_r1.npz",
+    "size": 9207220
+  },
+  {
+    "name": "samples/p10_Angle_30_deg__80_cm_r2.npz",
+    "size": 9204902
+  },
+  {
+    "name": "samples/p10_Angle_30_deg__80_cm_r3.npz",
+    "size": 9203514
+  },
+  {
+    "name": "samples/p10_Angle_30_deg__80_cm_r4.npz",
+    "size": 9204393
+  },
+  {
+    "name": "samples/p10_Angle_45_deg__80_cm_r1.npz",
+    "size": 9203194
+  },
+  {
+    "name": "samples/p10_Angle_45_deg__80_cm_r2.npz",
+    "size": 9203185
+  },
+  {
+    "name": "samples/p10_Angle_45_deg__80_cm_r3.npz",
+    "size": 9203754
+  },
+  {
+    "name": "samples/p10_Angle_45_deg__80_cm_r4.npz",
+    "size": 9202609
+  },
+  {
+    "name": "samples/p10_Distance_120_cm_r1.npz",
+    "size": 9206835
+  },
+  {
+    "name": "samples/p10_Distance_120_cm_r2.npz",
+    "size": 9207338
+  },
+  {
+    "name": "samples/p10_Distance_120_cm_r3.npz",
+    "size": 9206818
+  },
+  {
+    "name": "samples/p10_Distance_120_cm_r4.npz",
+    "size": 9206904
+  },
+  {
+    "name": "samples/p10_Distance_160_cm_r1.npz",
+    "size": 9207476
+  },
+  {
+    "name": "samples/p10_Distance_160_cm_r2.npz",
+    "size": 9207064
+  },
+  {
+    "name": "samples/p10_Distance_160_cm_r3.npz",
+    "size": 9207433
+  },
+  {
+    "name": "samples/p10_Distance_160_cm_r4.npz",
+    "size": 9206770
+  },
+  {
+    "name": "samples/p10_Distance_40_cm_r1.npz",
+    "size": 9210685
+  },
+  {
+    "name": "samples/p10_Distance_40_cm_r2.npz",
+    "size": 9203653
+  },
+  {
+    "name": "samples/p10_Distance_40_cm_r3.npz",
+    "size": 9206057
+  },
+  {
+    "name": "samples/p10_Distance_40_cm_r4.npz",
+    "size": 9210856
+  },
+  {
+    "name": "samples/p10_Distance_80_cm_r1.npz",
+    "size": 9207590
+  },
+  {
+    "name": "samples/p10_Distance_80_cm_r2.npz",
+    "size": 9207705
+  },
+  {
+    "name": "samples/p10_Distance_80_cm_r3.npz",
+    "size": 9207396
+  },
+  {
+    "name": "samples/p10_Distance_80_cm_r4.npz",
+    "size": 9207791
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__Front_side_r1.npz",
+    "size": 9207590
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__Front_side_r2.npz",
+    "size": 9207705
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__Front_side_r3.npz",
+    "size": 9207396
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__Front_side_r4.npz",
+    "size": 9207791
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__Right_side_r1.npz",
+    "size": 9196988
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__Right_side_r2.npz",
+    "size": 9205868
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__Right_side_r3.npz",
+    "size": 9186471
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__Right_side_r4.npz",
+    "size": 9202483
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__back_r1.npz",
+    "size": 9221778
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__back_r2.npz",
+    "size": 9212119
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__back_r3.npz",
+    "size": 9206764
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__back_r4.npz",
+    "size": 9206872
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__left_side_r1.npz",
+    "size": 9210867
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__left_side_r2.npz",
+    "size": 9204782
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__left_side_r3.npz",
+    "size": 9212962
+  },
+  {
+    "name": "samples/p10_Orientation_80_cm__left_side_r4.npz",
+    "size": 9210172
+  }
+]

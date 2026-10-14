@@ -1,0 +1,39 @@
+[{"stream_name":"stderr","time":13.386671449,"data":"/kaggle/working/audit_code/src/models/cycleformer.py:86: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n"}
+,{"stream_name":"stderr","time":13.38685834,"data":"  self.encoder = nn.TransformerEncoder(layer, num_layers=cfg.num_layers)\n"}
+,{"stream_name":"stdout","time":22.136441109,"data":"11 original MAE 4.805852597410029 delta 0.0\n"}
+,{"stream_name":"stdout","time":25.87911497,"data":"11 reencoded MAE 4.805852619084445 delta 2.1674416281960228e-08\n"}
+,{"stream_name":"stdout","time":29.4609445,"data":"11 time_shuffle_time_only MAE 4.671815254471519 delta -0.13403734293850986\n"}
+,{"stream_name":"stdout","time":33.206316766,"data":"11 freq_shuffle_freq_only MAE 5.261381647803566 delta 0.455529050393538\n"}
+,{"stream_name":"stdout","time":36.711466302,"data":"11 time_shuffle_reencoded MAE 5.1465431451797485 delta 0.34069052609530365\n"}
+,{"stream_name":"stdout","time":40.305194395,"data":"11 circular_shift_time_only MAE 4.807353724132884 delta 0.0015011267228560014\n"}
+,{"stream_name":"stdout","time":44.002286916,"data":"11 circular_shift_reencoded MAE 4.678220131180503 delta -0.12763248790394177\n"}
+,{"stream_name":"stdout","time":47.801950799,"data":"11 replace_time_only MAE 4.801853624257174 delta -0.003998973152854226\n"}
+,{"stream_name":"stdout","time":51.635028061,"data":"11 replace_freq_only MAE 4.821118408983404 delta 0.015265811573375355\n"}
+,{"stream_name":"stdout","time":55.351143411,"data":"11 replace_both MAE 4.8164743185043335 delta 0.010621721094304865\n"}
+,{"stream_name":"stdout","time":59.171213821,"data":"29 original MAE 4.805852597410029 delta 0.0\n"}
+,{"stream_name":"stdout","time":63.007170786,"data":"29 reencoded MAE 4.805852619084445 delta 2.1674416281960228e-08\n"}
+,{"stream_name":"stdout","time":66.590254204,"data":"29 time_shuffle_time_only MAE 4.6807122447273946 delta -0.12514035268263382\n"}
+,{"stream_name":"stdout","time":70.301215297,"data":"29 freq_shuffle_freq_only MAE 5.250795537775213 delta 0.44494294036518445\n"}
+,{"stream_name":"stdout","time":73.945043846,"data":"29 time_shuffle_reencoded MAE 5.154903661121022 delta 0.3490510420365767\n"}
+,{"stream_name":"stdout","time":77.639599067,"data":"29 circular_shift_time_only MAE 4.8036262880672105 delta -0.0022263093428178267\n"}
+,{"stream_name":"stdout","time":81.374347589,"data":"29 circular_shift_reencoded MAE 4.661229903047735 delta -0.14462271603670987\n"}
+,{"stream_name":"stdout","time":84.993103567,"data":"29 replace_time_only MAE 4.818154508417303 delta 0.01230191100727428\n"}
+,{"stream_name":"stdout","time":88.859133437,"data":"29 replace_freq_only MAE 4.807689070701599 delta 0.0018364732915704901\n"}
+,{"stream_name":"stdout","time":92.671996146,"data":"29 replace_both MAE 4.821846495975148 delta 0.01599389856511896\n"}
+,{"stream_name":"stdout","time":96.486272646,"data":"47 original MAE 4.805852597410029 delta 0.0\n"}
+,{"stream_name":"stdout","time":100.332564283,"data":"47 reencoded MAE 4.805852619084445 delta 2.1674416281960228e-08\n"}
+,{"stream_name":"stdout","time":104.172608192,"data":"47 time_shuffle_time_only MAE 4.65741485899145 delta -0.1484377384185791\n"}
+,{"stream_name":"stdout","time":107.953386112,"data":"47 freq_shuffle_freq_only MAE 5.279884912750938 delta 0.4740323153409091\n"}
+,{"stream_name":"stdout","time":111.557908211,"data":"47 time_shuffle_reencoded MAE 5.135490114038641 delta 0.32963749495419586\n"}
+,{"stream_name":"stdout","time":115.253941508,"data":"47 circular_shift_time_only MAE 4.801114038987593 delta -0.004738558422435413\n"}
+,{"stream_name":"stdout","time":118.89325714,"data":"47 circular_shift_reencoded MAE 4.667917457493869 delta -0.13793516159057617\n"}
+,{"stream_name":"stdout","time":122.648800848,"data":"47 replace_time_only MAE 4.809265581044284 delta 0.0034129836342551493\n"}
+,{"stream_name":"stdout","time":126.431089409,"data":"47 replace_freq_only MAE 4.824984669685364 delta 0.01913207227533514\n"}
+,{"stream_name":"stdout","time":130.075950397,"data":"47 replace_both MAE 4.821894949132746 delta 0.016042351722717285\n"}
+,{"stream_name":"stderr","time":133.532957186,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":133.533005703,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":133.909857471,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":133.909882677,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":134.757973126,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":136.040847122,"data":"[NbConvertApp] Writing 324681 bytes to __results__.html\n"}
+]

@@ -1,0 +1,10 @@
+{
+  "notebook": "goldfish9901/radar-vital-signs-kaggle-pipeline",
+  "pages": 1,
+  "n_files": 88,
+  "hits": [
+    "model_outputs/tcn_smoke/best.pt",
+    "model_outputs/tcn_smoke/final.pt",
+    "model_outputs/tcn_smoke/run_config.json"
+  ]
+}

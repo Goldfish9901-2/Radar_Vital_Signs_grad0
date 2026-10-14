@@ -1,0 +1,95 @@
+{
+  "model": "cycleformer",
+  "checkpoint": "/kaggle/working/model_outputs/cycleformer/best.pt",
+  "provenance": {
+    "git_commit": "unknown",
+    "representation": "proposed",
+    "dataset_dir": "/kaggle/working/training_exports",
+    "dataset_manifest_sha256": "c3e9e2f0e60d06d0",
+    "seed": 42,
+    "model": "cycleformer"
+  },
+  "source_label_stats": {
+    "mean": 73.62115478515625,
+    "std": 10.874382972717285
+  },
+  "target": {
+    "export_dir": "/kaggle/working/training_exports",
+    "split": "test",
+    "datasets": [
+      "FTU"
+    ],
+    "size": 704
+  },
+  "parameters": 542629,
+  "device": "cuda",
+  "torch_version": "2.4.0+cu118",
+  "loss": 0.24845573441548782,
+  "overall": {
+    "count": 704,
+    "mae_bpm": 4.805852424014699,
+    "rmse_bpm": 5.937891877636273,
+    "pearson_r": -0.01586657196642824,
+    "within_3bpm_percent": 38.77840909090909,
+    "within_5bpm_percent": 60.08522727272727,
+    "label_mean_bpm": 77.50005028464578,
+    "pred_mean_bpm": 72.99215311353856
+  },
+  "by_dataset": {
+    "FTU": {
+      "count": 704,
+      "mae_bpm": 4.805852424014699,
+      "rmse_bpm": 5.937891877636273,
+      "pearson_r": -0.01586657196642824,
+      "within_3bpm_percent": 38.77840909090909,
+      "within_5bpm_percent": 60.08522727272727,
+      "label_mean_bpm": 77.50005028464578,
+      "pred_mean_bpm": 72.99215311353856
+    }
+  },
+  "by_participant": {
+    "1": {
+      "count": 352,
+      "mae_bpm": 3.6115032109347256,
+      "rmse_bpm": 4.4367183920652336,
+      "pearson_r": -0.009281970627637796,
+      "within_3bpm_percent": 48.86363636363637,
+      "within_5bpm_percent": 72.44318181818181,
+      "label_mean_bpm": 76.5061698176644,
+      "pred_mean_bpm": 73.00341768698259
+    },
+    "8": {
+      "count": 352,
+      "mae_bpm": 6.000201637094671,
+      "rmse_bpm": 7.129701944016154,
+      "pearson_r": -0.01022769318265593,
+      "within_3bpm_percent": 28.693181818181817,
+      "within_5bpm_percent": 47.72727272727273,
+      "label_mean_bpm": 78.49393075162715,
+      "pred_mean_bpm": 72.98088854009455
+    }
+  },
+  "by_group": {
+    "FTU/participant/1": {
+      "count": 352,
+      "mae_bpm": 3.6115032109347256,
+      "rmse_bpm": 4.4367183920652336,
+      "pearson_r": -0.009281970627637796,
+      "within_3bpm_percent": 48.86363636363637,
+      "within_5bpm_percent": 72.44318181818181,
+      "label_mean_bpm": 76.5061698176644,
+      "pred_mean_bpm": 73.00341768698259
+    },
+    "FTU/participant/8": {
+      "count": 352,
+      "mae_bpm": 6.000201637094671,
+      "rmse_bpm": 7.129701944016154,
+      "pearson_r": -0.01022769318265593,
+      "within_3bpm_percent": 28.693181818181817,
+      "within_5bpm_percent": 47.72727272727273,
+      "label_mean_bpm": 78.49393075162715,
+      "pred_mean_bpm": 72.98088854009455
+    }
+  },
+  "predictions_csv": "/kaggle/working/preds_cycleformer_FTU_test.csv"
+}

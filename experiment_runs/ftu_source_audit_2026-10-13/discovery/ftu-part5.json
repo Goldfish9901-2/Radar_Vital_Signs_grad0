@@ -1,0 +1,1766 @@
+[
+  {
+    "name": "BR_ref_human.ods",
+    "size": 7367
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/1/data_LogFile.txt",
+    "size": 52384
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/2/data_LogFile.txt",
+    "size": 52873
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/3/data_LogFile.txt",
+    "size": 53810
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/4/data_LogFile.txt",
+    "size": 54299
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/120 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/1/data_LogFile.txt",
+    "size": 55684
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/2/data_LogFile.txt",
+    "size": 56717
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/3/data_LogFile.txt",
+    "size": 58198
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/4/data_LogFile.txt",
+    "size": 58687
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/160 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/1/data_LogFile.txt",
+    "size": 46335
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/2/data_LogFile.txt",
+    "size": 47272
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/3/data_LogFile.txt",
+    "size": 47761
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/4/data_LogFile.txt",
+    "size": 48250
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/40 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/1/data_LogFile.txt",
+    "size": 49340
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/2/data_LogFile.txt",
+    "size": 50373
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/3/data_LogFile.txt",
+    "size": 50862
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/4/data_LogFile.txt",
+    "size": 51895
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_1_Distance_Scenario/1. Distance Scenario/80 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/1/data_LogFile.txt",
+    "size": 49340
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/2/data_LogFile.txt",
+    "size": 50373
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/3/data_LogFile.txt",
+    "size": 50862
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/4/data_LogFile.txt",
+    "size": 51895
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/1/data_LogFile.txt",
+    "size": 66149
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/2/data_LogFile.txt",
+    "size": 67086
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/3/data_LogFile.txt",
+    "size": 68023
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/4/data_LogFile.txt",
+    "size": 69489
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/1/data_LogFile.txt",
+    "size": 69978
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/2/data_LogFile.txt",
+    "size": 70915
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/3/data_LogFile.txt",
+    "size": 71404
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/4/data_LogFile.txt",
+    "size": 71893
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/1/data_LogFile.txt",
+    "size": 59329
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/2/data_LogFile.txt",
+    "size": 60362
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/3/data_LogFile.txt",
+    "size": 61996
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/4/data_LogFile.txt",
+    "size": 64572
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/1/data_LogFile.txt",
+    "size": 49340
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/2/data_LogFile.txt",
+    "size": 50373
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/3/data_LogFile.txt",
+    "size": 50862
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/4/data_LogFile.txt",
+    "size": 51895
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/1/data_LogFile.txt",
+    "size": 72478
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/2/data_LogFile.txt",
+    "size": 72967
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/3/data_LogFile.txt",
+    "size": 3311
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/4/data_LogFile.txt",
+    "size": 4248
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/1/data_LogFile.txt",
+    "size": 4737
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/2/data_LogFile.txt",
+    "size": 5226
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/3/data_LogFile.txt",
+    "size": 5715
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/4/data_LogFile.txt",
+    "size": 6357
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P10_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/120 cm/R1.CSV",
+    "size": 2797
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/120 cm/R2.CSV",
+    "size": 2759
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/120 cm/R3.CSV",
+    "size": 2791
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/120 cm/R4.CSV",
+    "size": 2790
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/160 cm/R1.CSV",
+    "size": 2875
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/160 cm/R2.CSV",
+    "size": 2785
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/160 cm/R3.CSV",
+    "size": 2790
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/160 cm/R4.CSV",
+    "size": 2740
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/40 cm/R1.CSV",
+    "size": 2932
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/40 cm/R2.CSV",
+    "size": 2772
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/40 cm/R3.CSV",
+    "size": 2793
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/40 cm/R4.CSV",
+    "size": 2864
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/80 cm/R1.CSV",
+    "size": 2759
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/80 cm/R2.CSV",
+    "size": 2783
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/80 cm/R3.CSV",
+    "size": 2805
+  },
+  {
+    "name": "P10_HR_refs/1. Distance Scenario/80 cm/R4.CSV",
+    "size": 2740
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- Front side/R1.CSV",
+    "size": 2759
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- Front side/R2.CSV",
+    "size": 2783
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- Front side/R3.CSV",
+    "size": 2805
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- Front side/R4.CSV",
+    "size": 2740
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- Right side/R1.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- Right side/R2.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- Right side/R3.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- Right side/R4.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- back/R1.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- back/R2.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- back/R3.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- back/R4.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- left side/R1.CSV",
+    "size": 2741
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- left side/R2.CSV",
+    "size": 2791
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- left side/R3.CSV",
+    "size": 2781
+  },
+  {
+    "name": "P10_HR_refs/2. Orientation Scenario/80 cm- left side/R4.CSV",
+    "size": 2823
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/0 deg- 80 cm/R1.CSV",
+    "size": 2759
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/0 deg- 80 cm/R2.CSV",
+    "size": 2783
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/0 deg- 80 cm/R3.CSV",
+    "size": 2805
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/0 deg- 80 cm/R4.CSV",
+    "size": 2740
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/30 deg- 80 cm/R1.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/30 deg- 80 cm/R2.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/30 deg- 80 cm/R3.CSV",
+    "size": 2070
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/30 deg- 80 cm/R4.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/45 deg- 80 cm/R1.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/45 deg- 80 cm/R2.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/45 deg- 80 cm/R3.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P10_HR_refs/3. Angle Scenario/45 deg- 80 cm/R4.CSV",
+    "size": 2061
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/1/data_LogFile.txt",
+    "size": 29942
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/2/data_LogFile.txt",
+    "size": 30431
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/3/data_LogFile.txt",
+    "size": 30920
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/4/data_LogFile.txt",
+    "size": 31409
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/120 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/1/data_LogFile.txt",
+    "size": 32346
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/2/data_LogFile.txt",
+    "size": 32835
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/3/data_LogFile.txt",
+    "size": 33324
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/4/data_LogFile.txt",
+    "size": 33813
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/160 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/1/data_LogFile.txt",
+    "size": 25486
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/2/data_LogFile.txt",
+    "size": 25975
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/3/data_LogFile.txt",
+    "size": 26464
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/4/data_LogFile.txt",
+    "size": 26953
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/40 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/1/data_LogFile.txt",
+    "size": 27442
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/2/data_LogFile.txt",
+    "size": 27931
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/3/data_LogFile.txt",
+    "size": 28420
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/4/data_LogFile.txt",
+    "size": 28909
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_1_Distance_Scenario/1. Distance Scenario/80 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/1/data_LogFile.txt",
+    "size": 27442
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/2/data_LogFile.txt",
+    "size": 27931
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/3/data_LogFile.txt",
+    "size": 28420
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/4/data_LogFile.txt",
+    "size": 28909
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Front side/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/1/data_LogFile.txt",
+    "size": 36354
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/2/data_LogFile.txt",
+    "size": 36843
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/3/data_LogFile.txt",
+    "size": 37332
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/4/data_LogFile.txt",
+    "size": 37821
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- Right side/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/1/data_LogFile.txt",
+    "size": 38605
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/2/data_LogFile.txt",
+    "size": 39094
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/3/data_LogFile.txt",
+    "size": 39583
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/4/data_LogFile.txt",
+    "size": 40072
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- back/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/1/data_LogFile.txt",
+    "size": 34302
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/2/data_LogFile.txt",
+    "size": 34887
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/3/data_LogFile.txt",
+    "size": 35376
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/4/data_LogFile.txt",
+    "size": 35865
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/1/data_LogFile.txt",
+    "size": 27442
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/2/data_LogFile.txt",
+    "size": 27931
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/3/data_LogFile.txt",
+    "size": 28420
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/4/data_LogFile.txt",
+    "size": 28909
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/0 deg- 80 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/1/data_LogFile.txt",
+    "size": 40856
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/2/data_LogFile.txt",
+    "size": 41345
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/3/data_LogFile.txt",
+    "size": 41834
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/4/data_LogFile.txt",
+    "size": 42323
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/1/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/1/data_LogFile.txt",
+    "size": 43107
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/1/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/1/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/2/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/2/data_LogFile.txt",
+    "size": 43596
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/2/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/2/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/3/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/3/data_LogFile.txt",
+    "size": 44085
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/3/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/3/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/4/data.bin",
+    "size": 0
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/4/data_LogFile.txt",
+    "size": 44574
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/4/data_Raw_0.bin",
+    "size": 614400000
+  },
+  {
+    "name": "P9_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/4/data_Raw_LogFile.csv",
+    "size": 477
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/120 cm/R1.CSV",
+    "size": 2889
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/120 cm/R2.CSV",
+    "size": 2830
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/120 cm/R3.CSV",
+    "size": 2918
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/120 cm/R4.CSV",
+    "size": 2876
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/160 cm/R1.CSV",
+    "size": 2863
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/160 cm/R2.CSV",
+    "size": 2830
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/160 cm/R3.CSV",
+    "size": 2850
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/160 cm/R4.CSV",
+    "size": 2822
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/40 cm/R1.CSV",
+    "size": 2833
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/40 cm/R2.CSV",
+    "size": 2870
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/40 cm/R3.CSV",
+    "size": 2849
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/40 cm/R4.CSV",
+    "size": 2892
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/80 cm/R1.CSV",
+    "size": 2829
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/80 cm/R2.CSV",
+    "size": 2847
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/80 cm/R3.CSV",
+    "size": 2835
+  },
+  {
+    "name": "P9_HR_refs/1. Distance Scenario/80 cm/R4.CSV",
+    "size": 2854
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- Front side/R1.CSV",
+    "size": 2829
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- Front side/R2.CSV",
+    "size": 2847
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- Front side/R3.CSV",
+    "size": 2835
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- Front side/R4.CSV",
+    "size": 2854
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- Right side/R1.CSV",
+    "size": 2863
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- Right side/R2.CSV",
+    "size": 2858
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- Right side/R3.CSV",
+    "size": 2864
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- Right side/R4.CSV",
+    "size": 2822
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- back/R1.CSV",
+    "size": 2836
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- back/R2.CSV",
+    "size": 2827
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- back/R3.CSV",
+    "size": 2946
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- back/R4.CSV",
+    "size": 2928
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- left side/R1.CSV",
+    "size": 2861
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- left side/R2.CSV",
+    "size": 2894
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- left side/R3.CSV",
+    "size": 2887
+  },
+  {
+    "name": "P9_HR_refs/2. Orientation Scenario/80 cm- left side/R4.CSV",
+    "size": 2830
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/0 deg- 80 cm/R1.CSV",
+    "size": 2829
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/0 deg- 80 cm/R2.CSV",
+    "size": 2847
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/0 deg- 80 cm/R3.CSV",
+    "size": 2835
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/0 deg- 80 cm/R4.CSV",
+    "size": 2854
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/30 deg- 80 cm/R1.CSV",
+    "size": 2862
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/30 deg- 80 cm/R2.CSV",
+    "size": 2892
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/30 deg- 80 cm/R3.CSV",
+    "size": 2926
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/30 deg- 80 cm/R4.CSV",
+    "size": 2837
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/45 deg- 80 cm/R1.CSV",
+    "size": 2862
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/45 deg- 80 cm/R2.CSV",
+    "size": 2852
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/45 deg- 80 cm/R3.CSV",
+    "size": 2850
+  },
+  {
+    "name": "P9_HR_refs/3. Angle Scenario/45 deg- 80 cm/R4.CSV",
+    "size": 2848
+  }
+]

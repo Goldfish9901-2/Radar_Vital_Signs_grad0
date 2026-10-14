@@ -1,0 +1,674 @@
+{
+  "records": [
+    {
+      "category": "best_mae",
+      "sample_tag": "p01_Angle_30_deg__80_cm_r2",
+      "source": "/kaggle/input/datasets/goldfish9901/ftu-rda-exports/samples/p01_Angle_30_deg__80_cm_r2.npz",
+      "source_sha256": "52ee4c399588178cfb09677f575da17f99e3b483166c995b53509f417dd833a0",
+      "radar_shape": [
+        1200,
+        8,
+        16,
+        8
+      ],
+      "sampling_rate_hz": 20.0,
+      "frame_rate_independently_verified": false,
+      "source_reference_time_min": 0.0,
+      "source_reference_time_max": 59.0,
+      "historical_frame_time_span": 59.0,
+      "nominal_radar_span": 59.95,
+      "label_mapping": "Historical build_frame_times/interpolate_label_to_frames reproduced; no fitted lag",
+      "max_window_label_error_bpm": 0.0,
+      "selection": {
+        "phase_method": "EDACM",
+        "edacm_top_bins": 3,
+        "target_bins_dar": [
+          [
+            4,
+            10,
+            4
+          ],
+          [
+            4,
+            9,
+            4
+          ],
+          [
+            4,
+            8,
+            4
+          ]
+        ],
+        "target_bin_weights": [
+          0.3381522297859192,
+          0.3327232897281647,
+          0.32912445068359375
+        ],
+        "phase_preprocess": "linear_detrend_zscore",
+        "target_selection_method": "rda_vital_sign_stability_score",
+        "candidate_bins": 24,
+        "score_weights": {
+          "energy": 0.35,
+          "phase_stability": 0.25,
+          "hr_band_peak": 0.25,
+          "spatial_consistency": 0.15
+        },
+        "hr_band_hz": [
+          0.75,
+          2.5
+        ],
+        "spatial_stability_segments": 4,
+        "segment_peak_bins_dar": [
+          [
+            4,
+            8,
+            4
+          ],
+          [
+            4,
+            8,
+            4
+          ],
+          [
+            4,
+            8,
+            4
+          ],
+          [
+            4,
+            8,
+            4
+          ]
+        ],
+        "target_bin_scores": [
+          0.6653586626052856,
+          0.6546764969825745,
+          0.6475952863693237
+        ],
+        "target_bin_energy": [
+          2677125632.0,
+          5221421056.0,
+          6626003456.0
+        ],
+        "target_bin_energy_score": [
+          0.6916967630386353,
+          0.9189550876617432,
+          1.0
+        ],
+        "target_bin_phase_stability_score": [
+          0.7316989302635193,
+          0.4253292679786682,
+          0.1968751698732376
+        ],
+        "target_bin_hr_band_peak_score": [
+          0.8814482092857361,
+          0.687054455280304,
+          0.39350610971450806
+        ],
+        "target_bin_spatial_consistency_score": [
+          0.13318666815757751,
+          0.36630865931510925,
+          1.0
+        ],
+        "rda_spatial_confidence": 0.6559580564498901
+      },
+      "vmd": {
+        "decomposition_method": "HR-AdaVMD",
+        "hr_adavmd_components": [
+          "physiology_guided_frequency_initialization",
+          "heart_band_mode_scoring",
+          "adaptive_mode_weighting"
+        ],
+        "hr_adavmd_init_omega": [
+          0.009999999776482582,
+          0.022499999031424522,
+          0.03999999910593033,
+          0.054999999701976776,
+          0.07250000536441803,
+          0.0949999988079071,
+          0.12000000476837158
+        ],
+        "hr_adavmd_init_center_hz": [
+          0.19999999552965164,
+          0.44999998062849045,
+          0.7999999821186066,
+          1.0999999940395355,
+          1.4500001072883606,
+          1.899999976158142,
+          2.4000000953674316
+        ],
+        "hr_band_hz": [
+          0.75,
+          2.5
+        ],
+        "resp_band_hz": [
+          0.1,
+          0.6
+        ],
+        "mode_scores": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mode_weights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mode_diagnostics": [
+          {
+            "hr_ratio": 0.6473848444990584,
+            "resp_ratio": 0.15479092547698364,
+            "high_ratio": 9.984320117176897e-13,
+            "peak_sharpness": 4.511833190917969,
+            "score": 0.5579613147966822
+          },
+          {
+            "hr_ratio": 0.6473848444990584,
+            "resp_ratio": 0.15479092547698364,
+            "high_ratio": 9.984320117176897e-13,
+            "peak_sharpness": 4.511833190917969,
+            "score": 0.5579613147966822
+          },
+          {
+            "hr_ratio": 0.6473848444990584,
+            "resp_ratio": 0.15479092547698364,
+            "high_ratio": 9.984320117176897e-13,
+            "peak_sharpness": 4.511833190917969,
+            "score": 0.5579613147966822
+          },
+          {
+            "hr_ratio": 0.6473848444990584,
+            "resp_ratio": 0.15479092547698364,
+            "high_ratio": 9.984320117176897e-13,
+            "peak_sharpness": 4.511833190917969,
+            "score": 0.5579613147966822
+          },
+          {
+            "hr_ratio": 0.6473848444990584,
+            "resp_ratio": 0.15479092547698364,
+            "high_ratio": 9.984320117176897e-13,
+            "peak_sharpness": 4.511833190917969,
+            "score": 0.5579613147966822
+          },
+          {
+            "hr_ratio": 0.6473848444990584,
+            "resp_ratio": 0.15479092547698364,
+            "high_ratio": 9.984320117176897e-13,
+            "peak_sharpness": 4.511833190917969,
+            "score": 0.5579613147966822
+          },
+          {
+            "hr_ratio": 0.6473848444990584,
+            "resp_ratio": 0.15479092547698364,
+            "high_ratio": 9.984320117176897e-13,
+            "peak_sharpness": 4.511833190917969,
+            "score": 0.5579613147966822
+          }
+        ],
+        "selected_mode_count": 7
+      },
+      "elapsed_sec": 5.195321867999155
+    },
+    {
+      "category": "worst_mae",
+      "sample_tag": "p08_Distance_40_cm_r3",
+      "source": "/kaggle/input/datasets/goldfish9901/ftu-rda-exports/samples/p08_Distance_40_cm_r3.npz",
+      "source_sha256": "03bb3e4a7fd6ddb5f6126f24105f97e5226f323f7e7d76d6d562809268337d3a",
+      "radar_shape": [
+        1200,
+        8,
+        16,
+        8
+      ],
+      "sampling_rate_hz": 20.0,
+      "frame_rate_independently_verified": false,
+      "source_reference_time_min": 0.0,
+      "source_reference_time_max": 61.0,
+      "historical_frame_time_span": 61.0,
+      "nominal_radar_span": 59.95,
+      "label_mapping": "Historical build_frame_times/interpolate_label_to_frames reproduced; no fitted lag",
+      "max_window_label_error_bpm": 0.0,
+      "selection": {
+        "phase_method": "EDACM",
+        "edacm_top_bins": 3,
+        "target_bins_dar": [
+          [
+            4,
+            7,
+            4
+          ],
+          [
+            4,
+            6,
+            4
+          ],
+          [
+            4,
+            8,
+            4
+          ]
+        ],
+        "target_bin_weights": [
+          0.36818769574165344,
+          0.3164230287075043,
+          0.31538933515548706
+        ],
+        "phase_preprocess": "linear_detrend_zscore",
+        "target_selection_method": "rda_vital_sign_stability_score",
+        "candidate_bins": 24,
+        "score_weights": {
+          "energy": 0.35,
+          "phase_stability": 0.25,
+          "hr_band_peak": 0.25,
+          "spatial_consistency": 0.15
+        },
+        "hr_band_hz": [
+          0.75,
+          2.5
+        ],
+        "spatial_stability_segments": 4,
+        "segment_peak_bins_dar": [
+          [
+            4,
+            8,
+            4
+          ],
+          [
+            4,
+            7,
+            4
+          ],
+          [
+            4,
+            7,
+            4
+          ],
+          [
+            4,
+            7,
+            4
+          ]
+        ],
+        "target_bin_scores": [
+          0.7238895893096924,
+          0.6221156716346741,
+          0.6200833320617676
+        ],
+        "target_bin_energy": [
+          7327940608.0,
+          5312447488.0,
+          7111491584.0
+        ],
+        "target_bin_energy_score": [
+          1.0,
+          0.8973181247711182,
+          0.9904285669326782
+        ],
+        "target_bin_phase_stability_score": [
+          0.343718558549881,
+          0.45516541600227356,
+          0.5205267667770386
+        ],
+        "target_bin_hr_band_peak_score": [
+          0.5518397688865662,
+          0.556912362575531,
+          0.19878505170345306
+        ],
+        "target_bin_spatial_consistency_score": [
+          1.0,
+          0.36689919233322144,
+          0.6240358948707581
+        ],
+        "rda_spatial_confidence": 0.6589466333389282
+      },
+      "vmd": {
+        "decomposition_method": "HR-AdaVMD",
+        "hr_adavmd_components": [
+          "physiology_guided_frequency_initialization",
+          "heart_band_mode_scoring",
+          "adaptive_mode_weighting"
+        ],
+        "hr_adavmd_init_omega": [
+          0.009999999776482582,
+          0.022499999031424522,
+          0.03999999910593033,
+          0.054999999701976776,
+          0.07250000536441803,
+          0.0949999988079071,
+          0.12000000476837158
+        ],
+        "hr_adavmd_init_center_hz": [
+          0.19999999552965164,
+          0.44999998062849045,
+          0.7999999821186066,
+          1.0999999940395355,
+          1.4500001072883606,
+          1.899999976158142,
+          2.4000000953674316
+        ],
+        "hr_band_hz": [
+          0.75,
+          2.5
+        ],
+        "resp_band_hz": [
+          0.1,
+          0.6
+        ],
+        "mode_scores": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mode_weights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mode_diagnostics": [
+          {
+            "hr_ratio": 0.32458360187699914,
+            "resp_ratio": 0.3646653284655736,
+            "high_ratio": 3.151314420142038e-13,
+            "peak_sharpness": 5.720874786376953,
+            "score": 0.29920521997003463
+          },
+          {
+            "hr_ratio": 0.32458360187699914,
+            "resp_ratio": 0.3646653284655736,
+            "high_ratio": 3.151314420142038e-13,
+            "peak_sharpness": 5.720874786376953,
+            "score": 0.29920521997003463
+          },
+          {
+            "hr_ratio": 0.32458360187699914,
+            "resp_ratio": 0.3646653284655736,
+            "high_ratio": 3.151314420142038e-13,
+            "peak_sharpness": 5.720874786376953,
+            "score": 0.29920521997003463
+          },
+          {
+            "hr_ratio": 0.32458360187699914,
+            "resp_ratio": 0.3646653284655736,
+            "high_ratio": 3.151314420142038e-13,
+            "peak_sharpness": 5.720874786376953,
+            "score": 0.29920521997003463
+          },
+          {
+            "hr_ratio": 0.32458360187699914,
+            "resp_ratio": 0.3646653284655736,
+            "high_ratio": 3.151314420142038e-13,
+            "peak_sharpness": 5.720874786376953,
+            "score": 0.29920521997003463
+          },
+          {
+            "hr_ratio": 0.32458360187699914,
+            "resp_ratio": 0.3646653284655736,
+            "high_ratio": 3.151314420142038e-13,
+            "peak_sharpness": 5.720874786376953,
+            "score": 0.29920521997003463
+          },
+          {
+            "hr_ratio": 0.32458360187699914,
+            "resp_ratio": 0.3646653284655736,
+            "high_ratio": 3.151314420142038e-13,
+            "peak_sharpness": 5.720874786376953,
+            "score": 0.29920521997003463
+          }
+        ],
+        "selected_mode_count": 7
+      },
+      "elapsed_sec": 1.4826378239995393
+    },
+    {
+      "category": "largest_hr_variation",
+      "sample_tag": "p08_Orientation_80_cm__left_side_r3",
+      "source": "/kaggle/input/datasets/goldfish9901/ftu-rda-exports/samples/p08_Orientation_80_cm__left_side_r3.npz",
+      "source_sha256": "03e6aa331ee15d52a92013c198927a58524009a4d935a5a4141867622d4d7a39",
+      "radar_shape": [
+        1200,
+        8,
+        16,
+        8
+      ],
+      "sampling_rate_hz": 20.0,
+      "frame_rate_independently_verified": false,
+      "source_reference_time_min": 0.0,
+      "source_reference_time_max": 61.0,
+      "historical_frame_time_span": 61.0,
+      "nominal_radar_span": 59.95,
+      "label_mapping": "Historical build_frame_times/interpolate_label_to_frames reproduced; no fitted lag",
+      "max_window_label_error_bpm": 0.0,
+      "selection": {
+        "phase_method": "EDACM",
+        "edacm_top_bins": 3,
+        "target_bins_dar": [
+          [
+            4,
+            8,
+            4
+          ],
+          [
+            4,
+            8,
+            5
+          ],
+          [
+            4,
+            9,
+            5
+          ]
+        ],
+        "target_bin_weights": [
+          0.3598301112651825,
+          0.32380786538124084,
+          0.31636208295822144
+        ],
+        "phase_preprocess": "linear_detrend_zscore",
+        "target_selection_method": "rda_vital_sign_stability_score",
+        "candidate_bins": 24,
+        "score_weights": {
+          "energy": 0.35,
+          "phase_stability": 0.25,
+          "hr_band_peak": 0.25,
+          "spatial_consistency": 0.15
+        },
+        "hr_band_hz": [
+          0.75,
+          2.5
+        ],
+        "spatial_stability_segments": 4,
+        "segment_peak_bins_dar": [
+          [
+            4,
+            8,
+            4
+          ],
+          [
+            4,
+            8,
+            4
+          ],
+          [
+            4,
+            8,
+            4
+          ],
+          [
+            4,
+            8,
+            4
+          ]
+        ],
+        "target_bin_scores": [
+          0.6587971448898315,
+          0.592845618724823,
+          0.5792134404182434
+        ],
+        "target_bin_energy": [
+          1791694208.0,
+          1437472896.0,
+          1216140032.0
+        ],
+        "target_bin_energy_score": [
+          1.0,
+          0.9193825125694275,
+          0.8581872582435608
+        ],
+        "target_bin_phase_stability_score": [
+          0.51994389295578,
+          0.24224744737148285,
+          0.23427452147006989
+        ],
+        "target_bin_hr_band_peak_score": [
+          0.11524496227502823,
+          0.6221392154693604,
+          0.7362856864929199
+        ],
+        "target_bin_spatial_consistency_score": [
+          1.0,
+          0.36643368005752563,
+          0.24138566851615906
+        ],
+        "rda_spatial_confidence": 0.6122642755508423
+      },
+      "vmd": {
+        "decomposition_method": "HR-AdaVMD",
+        "hr_adavmd_components": [
+          "physiology_guided_frequency_initialization",
+          "heart_band_mode_scoring",
+          "adaptive_mode_weighting"
+        ],
+        "hr_adavmd_init_omega": [
+          0.009999999776482582,
+          0.022499999031424522,
+          0.03999999910593033,
+          0.054999999701976776,
+          0.07250000536441803,
+          0.0949999988079071,
+          0.12000000476837158
+        ],
+        "hr_adavmd_init_center_hz": [
+          0.19999999552965164,
+          0.44999998062849045,
+          0.7999999821186066,
+          1.0999999940395355,
+          1.4500001072883606,
+          1.899999976158142,
+          2.4000000953674316
+        ],
+        "hr_band_hz": [
+          0.75,
+          2.5
+        ],
+        "resp_band_hz": [
+          0.1,
+          0.6
+        ],
+        "mode_scores": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mode_weights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mode_diagnostics": [
+          {
+            "hr_ratio": 0.488061824757709,
+            "resp_ratio": 0.30922189803909195,
+            "high_ratio": 7.595244459453587e-13,
+            "peak_sharpness": 6.197907447814941,
+            "score": 0.4334050412774446
+          },
+          {
+            "hr_ratio": 0.488061824757709,
+            "resp_ratio": 0.30922189803909195,
+            "high_ratio": 7.595244459453587e-13,
+            "peak_sharpness": 6.197907447814941,
+            "score": 0.4334050412774446
+          },
+          {
+            "hr_ratio": 0.488061824757709,
+            "resp_ratio": 0.30922189803909195,
+            "high_ratio": 7.595244459453587e-13,
+            "peak_sharpness": 6.197907447814941,
+            "score": 0.4334050412774446
+          },
+          {
+            "hr_ratio": 0.488061824757709,
+            "resp_ratio": 0.30922189803909195,
+            "high_ratio": 7.595244459453587e-13,
+            "peak_sharpness": 6.197907447814941,
+            "score": 0.4334050412774446
+          },
+          {
+            "hr_ratio": 0.488061824757709,
+            "resp_ratio": 0.30922189803909195,
+            "high_ratio": 7.595244459453587e-13,
+            "peak_sharpness": 6.197907447814941,
+            "score": 0.4334050412774446
+          },
+          {
+            "hr_ratio": 0.488061824757709,
+            "resp_ratio": 0.30922189803909195,
+            "high_ratio": 7.595244459453587e-13,
+            "peak_sharpness": 6.197907447814941,
+            "score": 0.4334050412774446
+          },
+          {
+            "hr_ratio": 0.488061824757709,
+            "resp_ratio": 0.30922189803909195,
+            "high_ratio": 7.595244459453587e-13,
+            "peak_sharpness": 6.197907447814941,
+            "score": 0.4334050412774446
+          }
+        ],
+        "selected_mode_count": 7
+      },
+      "elapsed_sec": 5.75491425600012
+    }
+  ],
+  "elapsed_sec": 36.36367206500108,
+  "prediction_sha256": "f3e6b590036d0da7e49ce14d2c8486eb2ff060e4ac31a7126896cad91e063d3f",
+  "selection_spec": {
+    "best_mae": "p01_Angle_30_deg__80_cm_r2",
+    "worst_mae": "p08_Distance_40_cm_r3",
+    "largest_hr_variation": "p08_Orientation_80_cm__left_side_r3"
+  },
+  "caveats": [
+    "Samples selected by test errors/HR variance for explanation, not independent validation.",
+    "Full-record target selection and VMD differ from original window-local model preprocessing.",
+    "RDA phase is already after the existing ADC-to-RDA conversion, not raw ADC phase.",
+    "HR-AdaVMD power sums seven channels; color scale measures spectral allocation, not amplitude gain.",
+    "Export reference-to-frame mapping is reproduced, not independent synchronization evidence.",
+    "RDA range indices are cropped, not native physical range; fixed Doppler/angle range slice.",
+    "Native 256-point frequency resolution at 20 Hz is 4.6875 bpm."
+  ]
+}
