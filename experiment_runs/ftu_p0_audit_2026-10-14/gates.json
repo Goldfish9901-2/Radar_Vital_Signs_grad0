@@ -1,0 +1,8 @@
+{
+  "mode_independence": "FAIL",
+  "time_alignment": "UNVERIFIED",
+  "retraining_allowed": false,
+  "training_launched": false,
+  "mode_reason": "All 3520 exported windows have seven identical channels and all-one weights; numerical clipping reproduced.",
+  "time_reason": "Endpoint-stretched labels; no independently established cross-device synchronization; 28 model records lack raw configuration logs."
+}

@@ -1,2 +1,9 @@
 # Preserve archived evidence bytes so artifact and source SHA256 checks survive checkout.
 experiment_runs/ftu_source_audit_2026-10-13/** -text whitespace=cr-at-eol
+experiment_runs/ftu_p0_audit_2026-10-14/** -text whitespace=cr-at-eol
+experiment_runs/ftu_sktime_baseline_2026-10-16/** -text whitespace=cr-at-eol
+# Quoted raw capture logs intentionally retain their original trailing spaces.
+experiment_runs/ftu_p0_audit_2026-10-14/raw_timing_audit.csv -whitespace
+# Preserve final blank lines in archived source snapshots as part of their hashes.
+experiment_runs/ftu_p0_audit_2026-10-14/sources/** whitespace=cr-at-eol,-blank-at-eof
+experiment_runs/ftu_sktime_baseline_2026-10-16/sources/** whitespace=cr-at-eol,-blank-at-eof

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "case": "best_mae",
+      "variant": "historical",
+      "identical": true
+    },
+    {
+      "case": "best_mae",
+      "variant": "sequential_sum_diagnostic",
+      "identical": false
+    },
+    {
+      "case": "largest_hr_variation",
+      "variant": "historical",
+      "identical": true
+    },
+    {
+      "case": "largest_hr_variation",
+      "variant": "sequential_sum_diagnostic",
+      "identical": false
+    },
+    {
+      "case": "worst_mae",
+      "variant": "historical",
+      "identical": true
+    },
+    {
+      "case": "worst_mae",
+      "variant": "sequential_sum_diagnostic",
+      "identical": false
+    },
+    {
+      "case": "synthetic_three_tone",
+      "variant": "historical",
+      "identical": true
+    },
+    {
+      "case": "synthetic_three_tone",
+      "variant": "sequential_sum_diagnostic",
+      "identical": false
+    }
+  ],
+  "elapsed_sec": 0.0441655999966315,
+  "source_sha256": "465c47744b21b7ef287cce1e05931c6b563310f99873cafa50342ee94d2f3724",
+  "meaning": "Evidence integrity verified; this does not mean the P0 scientific gates passed."
+}

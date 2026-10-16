@@ -1,0 +1,22 @@
+{
+  "sktime_version": "1.2.0",
+  "numpy_version": "2.1.3",
+  "official_source_sha256": "4933ec9e72f0f7be723fa9be729b0188057a827afc8a48299b5655a607467ee4",
+  "parameters": {
+    "alpha": 2000.0,
+    "tau": 0.0,
+    "K": 7,
+    "DC": false,
+    "init": 1,
+    "tol": 1e-07
+  },
+  "source_sha256": "5cbccf9cdc053364b093554ab363d0fb2391c0f084aa763bafccc77e0df9f6f8",
+  "implementation": "unmodified sktime.libs.vmdpy.VMD",
+  "note": "Uniform initialization. HR-band scoring is applied AFTER official VMD; not the legacy physiology-initialized solver.",
+  "cap_note": "499 omega rows flags the iteration cap; it does not prove the final update failed the tolerance check.",
+  "training_launched": false,
+  "elapsed_sec": 172.244298775,
+  "manifest_sha256": "c3e9e2f0e60d06d087476e63c3942293629c56ca2cfb3b97e72173dea8d86cc2",
+  "records": 440,
+  "selection": "first manifest window of every record"
+}

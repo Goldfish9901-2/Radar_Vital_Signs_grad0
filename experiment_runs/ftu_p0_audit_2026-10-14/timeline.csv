@@ -1,0 +1,4 @@
+case,n_frames,reference_n,reference_start,reference_end,reference_span_s,nonpositive_reference_steps,min_reference_step_s,max_reference_step_s,nominal_frame_span_s,implied_label_frame_rate_hz,max_same_start_time_difference_s,saved_label_reproduction_max_bpm,clock_synchronization_verified
+best_mae,1200,60,0.0,59.0,59.0,0,1.0,1.0,59.95,20.322033898305083,0.9500000000000028,6.3516199588775635e-06,False
+largest_hr_variation,1200,62,0.0,61.0,61.0,0,1.0,1.0,59.95,19.65573770491803,1.0499999999999972,6.128102540969849e-06,False
+worst_mae,1200,62,0.0,61.0,61.0,0,1.0,1.0,59.95,19.65573770491803,1.0499999999999972,5.632638931274414e-06,False

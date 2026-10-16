@@ -1,0 +1,15 @@
+{
+  "elapsed_sec": 3.456606699997792,
+  "rows": 34528,
+  "records": 440,
+  "windows": 3520,
+  "source_sha256": "ad81665a2fc9c2441c18463312d38fe173eda97b0e4fdf390c5cd96606f62d17",
+  "manifest_sha256": "c3e9e2f0e60d06d087476e63c3942293629c56ca2cfb3b97e72173dea8d86cc2",
+  "timing_audit_sha256": "bc293598d3596b7070c95fb7ea39c1cbbb7ff394600b86bf01e271861ca9869e",
+  "mapping_contract_checks_passed": true,
+  "scenarios": "fixed offsets -4,-2,-1,0,+1,+2,+4 seconds; negative header difference and +/-1 second",
+  "caveat": "Offsets are sensitivity assumptions, not measured synchronization. Header scenarios cover 412 records; fixed scenarios cover 440.",
+  "selected_best_offset": null,
+  "synchronization_verified": false,
+  "retraining_allowed": false
+}

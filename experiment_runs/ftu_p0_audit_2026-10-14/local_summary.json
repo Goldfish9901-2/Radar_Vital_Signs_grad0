@@ -1,0 +1,16 @@
+{
+  "elapsed_sec": 1.6351579999991372,
+  "inputs": {
+    "experiment_runs\\ftu_source_audit_2026-10-13\\e2a_continuous\\best_mae_signals.npz": "8e25f2b5ac93111724bbcc60803176c1ed4620263af739ff137b5690ab13a93e",
+    "experiment_runs\\ftu_source_audit_2026-10-13\\e2a_continuous\\largest_hr_variation_signals.npz": "16818ee855269acda9c6029ebe6bd3c95df031a48692ba401222640b5ff4c30f",
+    "experiment_runs\\ftu_source_audit_2026-10-13\\e2a_continuous\\worst_mae_signals.npz": "8802a8244df707c3d83c5827215a167817e9957d99c6cccab1b0436f02435dcf"
+  },
+  "archived_feature_source_matches": true,
+  "instrumentation_exact_reproduction": true,
+  "mode_gate": "FAIL",
+  "timing_gate": "UNVERIFIED",
+  "retraining_allowed": false,
+  "scope": "Three full records and synthetic signal; exported training windows audited separately.",
+  "diagnostic_change": "Update sum_modes after each mode. Not a production fix or validated reference VMD.",
+  "source_sha256": "c83e5ea90ce1700e02b421715973cd514ade1c5d84bc802360324a5f0d557dd3"
+}

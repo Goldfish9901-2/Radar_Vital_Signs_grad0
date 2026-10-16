@@ -1,0 +1,18 @@
+[{"stream_name":"stdout","time":4.667092598,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 75.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":4.708950371,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.6/162.6 kB 5.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.812225924,"data":"records 0\n"}
+,{"stream_name":"stderr","time":32.613221436,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":32.613686681,"data":"  File \"/kaggle/src/script.py\", line 9, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":32.613701012,"data":"    kaggle(out)\n"}
+,{"stream_name":"stderr","time":32.61370723,"data":"    ~~~~~~^^^^^\n"}
+,{"stream_name":"stderr","time":32.613712366,"data":"  File \"/kaggle/working/audit_code/src/data/experiment_ftu_sktime.py\", line 129, in kaggle\n"}
+,{"stream_name":"stderr","time":32.613717719,"data":"    if err\u003e1e-4: raise ValueError(f'Legacy window reproduction failed {row.sample_tag}: {err}')\n"}
+,{"stream_name":"stderr","time":32.613722953999996,"data":"                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":32.613727979,"data":"ValueError: Legacy window reproduction failed p01_Distance_160_cm_r3: 0.001832723617553711\n"}
+,{"stream_name":"stderr","time":35.757987684,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":35.758024537,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":36.112623549,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":36.11265288,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":37.222831107,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":38.514485163,"data":"[NbConvertApp] Writing 298432 bytes to __results__.html\n"}
+]

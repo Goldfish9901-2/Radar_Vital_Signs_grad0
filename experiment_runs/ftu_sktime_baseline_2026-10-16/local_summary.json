@@ -1,0 +1,26 @@
+{
+  "sktime_version": "1.2.0",
+  "numpy_version": "2.5.4",
+  "official_source_sha256": "4933ec9e72f0f7be723fa9be729b0188057a827afc8a48299b5655a607467ee4",
+  "parameters": {
+    "alpha": 2000.0,
+    "tau": 0.0,
+    "K": 7,
+    "DC": false,
+    "init": 1,
+    "tol": 1e-07
+  },
+  "source_sha256": "5cbccf9cdc053364b093554ab363d0fb2391c0f084aa763bafccc77e0df9f6f8",
+  "implementation": "unmodified sktime.libs.vmdpy.VMD",
+  "note": "Uniform initialization. HR-band scoring is applied AFTER official VMD; not the legacy physiology-initialized solver.",
+  "cap_note": "499 omega rows flags the iteration cap; it does not prove the final update failed the tolerance check.",
+  "training_launched": false,
+  "elapsed_sec": 2.697121299999708,
+  "inputs": {
+    "experiment_runs\\ftu_source_audit_2026-10-13\\e2a_continuous\\best_mae_signals.npz": "8e25f2b5ac93111724bbcc60803176c1ed4620263af739ff137b5690ab13a93e",
+    "experiment_runs\\ftu_source_audit_2026-10-13\\e2a_continuous\\largest_hr_variation_signals.npz": "16818ee855269acda9c6029ebe6bd3c95df031a48692ba401222640b5ff4c30f",
+    "experiment_runs\\ftu_source_audit_2026-10-13\\e2a_continuous\\worst_mae_signals.npz": "8802a8244df707c3d83c5827215a167817e9957d99c6cccab1b0436f02435dcf"
+  },
+  "signals": 33,
+  "scope": "3 full records + 24 excerpts of full-record EDACM + 6 synthetic controls; excerpts do not reproduce window-local target selection."
+}

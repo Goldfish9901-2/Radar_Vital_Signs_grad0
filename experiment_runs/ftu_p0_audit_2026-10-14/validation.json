@@ -1,0 +1,425 @@
+{
+  "elapsed_sec": 1.0177325000040582,
+  "manifest_rows": 3520,
+  "mode_rows": 3520,
+  "identical_channels_examples": [
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__0__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__0__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__128__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__128__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__256__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__256__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__384__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__384__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__512__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__512__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__640__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__640__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__768__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__768__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__896__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p01_Angle_30_deg__80_cm_r2__896__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__0__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__0__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__128__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__128__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__256__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__256__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__384__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__384__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__512__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__512__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__640__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__640__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__768__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__768__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__896__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Distance_40_cm_r3__896__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__0__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__0__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__128__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__128__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__256__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__256__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__384__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__384__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__512__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__512__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__640__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__640__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__768__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__768__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__896__x_time",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        256
+      ]
+    },
+    {
+      "key": "p08_Orientation_80_cm__left_side_r3__896__x_freq",
+      "all_channels_identical": true,
+      "shape": [
+        7,
+        129
+      ]
+    }
+  ],
+  "record_count": 456,
+  "unmatched_sources": [],
+  "raw_label_reproduction_max_bpm": 7.62939453125e-06,
+  "raw_label_matched_records": 440,
+  "raw_label_mismatch_records": 0,
+  "model_records_without_raw_config": 28,
+  "capture_logs_with_zero_filling": 0,
+  "capture_logs_out_of_sequence": 0,
+  "checked_raw_sidecars": 1312,
+  "configured_fs_counts": {
+    "20.0": 428
+  },
+  "reference_span_counts": {
+    "59.0": 192,
+    "61.0": 148,
+    "60.0": 82,
+    "62.0": 22,
+    "64.0": 7,
+    "63.0": 5
+  },
+  "header_offset_counts": {
+    "1.0": 213,
+    "0.0": 125,
+    "2.0": 87,
+    "4.0": 1,
+    "3.0": 1,
+    "-1.0": 1
+  },
+  "synchronization_verified": false,
+  "retraining_allowed": false,
+  "frame_period_documentation": "https://www.ti.com/content/dam/videos/external-videos/en-us/2/3816841626001/5427375477001.mp4/subassets/mmWave_Radar_Programming_Model.pdf",
+  "documentation_rule": "framePeriodicity LSB = 5 ns; configured cadence is not measured per-frame timing",
+  "header_offset_caveat": "Different clocks and integer-second headers: diagnostic offsets, not calibrated synchronization",
+  "source_sha256": "58b3917bc0b0f8da5af0b6905f78c284cdab9fc56276e82e0b32dcbee8428086"
+}

@@ -1,0 +1,7 @@
+{
+  "legacy_mode_gate": "FAIL",
+  "official_baseline": "NUMERICAL_COMPARISON_COMPLETED",
+  "time_alignment": "UNVERIFIED",
+  "retraining_allowed": false,
+  "training_launched": false
+}

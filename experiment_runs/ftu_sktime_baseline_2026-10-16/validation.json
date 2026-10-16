@@ -1,0 +1,20 @@
+{
+  "elapsed_sec": 15.715697100000398,
+  "records": 440,
+  "official_duplicate_records": 0,
+  "official_rank_counts": {
+    "7": 440
+  },
+  "at_iteration_cap": 6,
+  "reconstruction_error_median": 0.28171153989871267,
+  "reconstruction_error_max": 0.40760053330580753,
+  "legacy_feature_mismatches": 32,
+  "legacy_feature_max_error": 0.097441554069519,
+  "target_bin_mismatches": 0,
+  "legacy_rebuilt_duplicate_records": 440,
+  "validated_phase_mode_arrays": 440,
+  "source_sha256": "85a99e2192315b76d5060f03f66fcdffa7b44cf6bc70a12676ce8e8d9208a70e",
+  "caveat": "Spectral ridge comparison is descriptive, uses historical unsynchronized labels and first window per record, not subject-level tracking or NN validation.",
+  "time_alignment_gate": "UNVERIFIED",
+  "retraining_allowed": false
+}

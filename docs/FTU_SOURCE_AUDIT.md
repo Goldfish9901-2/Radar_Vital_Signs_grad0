@@ -1,5 +1,9 @@
 # FTU frozen source-model audit
 
+2026-10-14 更新：[P0 模态与时间轴审计](FTU_P0_AUDIT.md)发现 HR-AdaVMD
+数值退化。此前连续谱图中的 AdaVMD 频带能量变化不能作为有效模态分解或心跳增强的证据。
+历史预测审计数值仍保留，但不能据此排除原始雷达中的心跳信息，或判定 backbone 无效。
+
 暂停 BGT60 局部算法调整。先回答模型是否跟踪组内 HR、是否依赖输入信息；不训练、不适配。
 
 ## Artifact identity

@@ -1,0 +1,7 @@
+method,windows,ridge_mae_bpm
+EDACM,440,24.674667731198397
+legacy_rebuilt,440,16.7819146676497
+sktime_raw_power,440,22.892543523961848
+sktime_scored_power,440,24.063958142020486
+train_mean_constant,440,9.336591560050806
+train_median_constant,440,10.234718608856202

@@ -1,0 +1,22 @@
+{
+  "id": "goldfish9901/ftu-p0-mode-time-audit",
+  "title": "FTU P0 Mode Time Audit",
+  "code_file": "run_p0.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "competition_sources": [],
+  "model_sources": [],
+  "dataset_sources": [
+    "goldfish9901/ftu-part1",
+    "goldfish9901/ftu-part2",
+    "goldfish9901/ftu-part3",
+    "goldfish9901/ftu-part4",
+    "goldfish9901/ftu-part5"
+  ],
+  "kernel_sources": [
+    "goldfish9901/nn-bench-e2a-hr-adavmd-proposed-ftu"
+  ]
+}

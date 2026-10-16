@@ -286,6 +286,13 @@ model_outputs/
 !docs/BGT60_CONFIGURATION_SEARCH.md
 !docs/LOCAL_UV_ANALYSIS.md
 !docs/FTU_SOURCE_AUDIT.md
+!docs/FTU_P0_AUDIT.md
+!experiment_runs/ftu_sktime_baseline_2026-10-16/REPORT.md
+!experiment_runs/ftu_sktime_baseline_2026-10-16/*.npz
+!experiment_runs/ftu_sktime_baseline_2026-10-16/*.log
+!experiment_runs/ftu_p0_audit_2026-10-14/REPORT.md
+!experiment_runs/ftu_p0_audit_2026-10-14/*.npz
+!experiment_runs/ftu_p0_audit_2026-10-14/kernel.log
 !experiment_runs/ftu_source_audit_2026-10-13/**/*.md
 !experiment_runs/ftu_source_audit_2026-10-13/REPORT.md
 !experiment_runs/ftu_source_audit_2026-10-13/e2a_evidence/model_outputs/
