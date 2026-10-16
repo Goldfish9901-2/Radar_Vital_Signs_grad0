@@ -1,0 +1,28 @@
+{
+  "sampling_rate_hz": 20,
+  "start_offset_s": 0,
+  "synchronization": "assumed_unverified",
+  "offsets_s": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "window": 256,
+  "stride": 128,
+  "min_coverage": 0.8,
+  "sensitivity_comparison": "intersection of windows >=80% coverage at every offset",
+  "reference": "original RDA export time and HR arrays; no time stretching or extrapolation",
+  "representation": "edacm_only",
+  "normalization": "none after representation z-score",
+  "peak_band_bpm": [
+    45,
+    150
+  ],
+  "top3_tolerance_bpm": 5,
+  "negative_control": "roll window labels by 4 windows (25.6 s); circular diagnostic, not synchronization",
+  "split": "frozen historical E2a groups; exploratory, not untouched test subjects",
+  "history_sha256": "c3e9e2f0e60d06d087476e63c3942293629c56ca2cfb3b97e72173dea8d86cc2",
+  "training_launched": false
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "elapsed_sec": 0.22368349999942438,
+  "checks": [
+    "formal export",
+    "frozen group",
+    "physical time",
+    "boundary NaN",
+    "dual branches"
+  ]
+}

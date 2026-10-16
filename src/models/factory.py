@@ -136,6 +136,8 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
             else CycleFormerConfig.respiration_periods
         )
         cfg = CycleFormerConfig(
+            time_channels=getattr(args, "time_channels", 7),
+            freq_channels=getattr(args, "freq_channels", 7),
             d_model=args.d_model,
             nhead=args.nhead,
             num_layers=args.num_layers,
@@ -164,6 +166,8 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
         return HeartTimeMixer(cfg), cfg
     if args.model == "tcn":
         cfg = TCNConfig(
+            time_channels=getattr(args, "time_channels", 7),
+            freq_channels=getattr(args, "freq_channels", 7),
             hidden_channels=args.hidden_channels,
             num_blocks=args.num_blocks,
             kernel_size=args.kernel_size,
@@ -194,6 +198,8 @@ def create_model_and_config(args: Any) -> Tuple[nn.Module, ModelConfig]:
         return TimesNetHeartRateModel(cfg), cfg
     if args.model == "transformer":
         cfg = TransformerConfig(
+            time_channels=getattr(args, "time_channels", 7),
+            freq_channels=getattr(args, "freq_channels", 7),
             d_model=args.d_model,
             nhead=args.nhead,
             num_layers=args.num_layers,

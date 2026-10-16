@@ -1,0 +1,11 @@
+{
+  "windows": 3520,
+  "raw_csv_label_max_abs_error": 3.0517578295530257e-06,
+  "split_matches_history": true,
+  "frequency_recomputed": true,
+  "frequency_max_abs_error": 1.4901161193847656e-06,
+  "frequency_windows_above_1e_minus6": 4,
+  "frequency_acceptance_atol": 1e-05,
+  "local_numpy_version": "2.5.4",
+  "elapsed_sec": 2.9727452999995876
+}

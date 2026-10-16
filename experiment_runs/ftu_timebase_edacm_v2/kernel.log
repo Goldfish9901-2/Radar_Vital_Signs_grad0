@@ -1,0 +1,508 @@
+[{"stream_name":"stdout","time":11.526729107,"data":"\n"}
+,{"stream_name":"stdout","time":11.526793801,"data":"[builder] Stage 1/4: collect exported samples\n"}
+,{"stream_name":"stdout","time":11.711447136,"data":"[builder] collected 440 exported sample(s)\n"}
+,{"stream_name":"stdout","time":11.742014909,"data":"\n"}
+,{"stream_name":"stdout","time":11.742053064,"data":"[builder] Stage 2/4: build fixed windows\n"}
+,{"stream_name":"stdout","time":12.345993673,"data":"[builder] [------------------------]   0.2% 1/440 FTU/p01_Angle_0_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":12.80675765,"data":"[builder] [------------------------]   0.5% 2/440 FTU/p01_Angle_0_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":13.31889724,"data":"[builder] [------------------------]   0.7% 3/440 FTU/p01_Angle_0_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":13.889550448,"data":"[builder] [------------------------]   0.9% 4/440 FTU/p01_Angle_0_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":14.405121365,"data":"[builder] [------------------------]   1.1% 5/440 FTU/p01_Angle_30_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":14.889571821,"data":"[builder] [------------------------]   1.4% 6/440 FTU/p01_Angle_30_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":15.332309157,"data":"[builder] [------------------------]   1.6% 7/440 FTU/p01_Angle_30_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":15.795158866,"data":"[builder] [------------------------]   1.8% 8/440 FTU/p01_Angle_30_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":16.254571352,"data":"[builder] [------------------------]   2.0% 9/440 FTU/p01_Angle_45_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":16.707559369,"data":"[builder] [#-----------------------]   2.3% 10/440 FTU/p01_Angle_45_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":17.111928886,"data":"[builder] [#-----------------------]   2.5% 11/440 FTU/p01_Angle_45_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":17.574261533,"data":"[builder] [#-----------------------]   2.7% 12/440 FTU/p01_Angle_45_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":18.108736748,"data":"[builder] [#-----------------------]   3.0% 13/440 FTU/p01_Distance_120_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":18.520967236,"data":"[builder] [#-----------------------]   3.2% 14/440 FTU/p01_Distance_120_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":18.913915811,"data":"[builder] [#-----------------------]   3.4% 15/440 FTU/p01_Distance_120_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":19.357924465,"data":"[builder] [#-----------------------]   3.6% 16/440 FTU/p01_Distance_120_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":19.750487404,"data":"[builder] [#-----------------------]   3.9% 17/440 FTU/p01_Distance_160_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":20.183720376,"data":"[builder] [#-----------------------]   4.1% 18/440 FTU/p01_Distance_160_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":20.609001903,"data":"[builder] [#-----------------------]   4.3% 19/440 FTU/p01_Distance_160_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":20.937650836,"data":"[builder] [#-----------------------]   4.5% 20/440 FTU/p01_Distance_160_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":21.521788049,"data":"[builder] [#-----------------------]   4.8% 21/440 FTU/p01_Distance_40_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":21.993820621,"data":"[builder] [#-----------------------]   5.0% 22/440 FTU/p01_Distance_40_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":22.397816844,"data":"[builder] [#-----------------------]   5.2% 23/440 FTU/p01_Distance_40_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":22.842223025,"data":"[builder] [#-----------------------]   5.5% 24/440 FTU/p01_Distance_40_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":23.290302762,"data":"[builder] [#-----------------------]   5.7% 25/440 FTU/p01_Distance_80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":23.795547991,"data":"[builder] [#-----------------------]   5.9% 26/440 FTU/p01_Distance_80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":24.235043521,"data":"[builder] [#-----------------------]   6.1% 27/440 FTU/p01_Distance_80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":24.74789117,"data":"[builder] [##----------------------]   6.4% 28/440 FTU/p01_Distance_80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":25.219964305,"data":"[builder] [##----------------------]   6.6% 29/440 FTU/p01_Orientation_80_cm__Front_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":25.712470788,"data":"[builder] [##----------------------]   6.8% 30/440 FTU/p01_Orientation_80_cm__Front_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":26.206252924,"data":"[builder] [##----------------------]   7.0% 31/440 FTU/p01_Orientation_80_cm__Front_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":26.65131845,"data":"[builder] [##----------------------]   7.3% 32/440 FTU/p01_Orientation_80_cm__Front_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":27.14166317,"data":"[builder] [##----------------------]   7.5% 33/440 FTU/p01_Orientation_80_cm__Right_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":27.650201294,"data":"[builder] [##----------------------]   7.7% 34/440 FTU/p01_Orientation_80_cm__Right_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":28.22767431,"data":"[builder] [##----------------------]   8.0% 35/440 FTU/p01_Orientation_80_cm__Right_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":28.75228774,"data":"[builder] [##----------------------]   8.2% 36/440 FTU/p01_Orientation_80_cm__Right_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":29.243244495,"data":"[builder] [##----------------------]   8.4% 37/440 FTU/p01_Orientation_80_cm__back_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":29.728803826,"data":"[builder] [##----------------------]   8.6% 38/440 FTU/p01_Orientation_80_cm__back_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":30.210943107,"data":"[builder] [##----------------------]   8.9% 39/440 FTU/p01_Orientation_80_cm__back_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":30.718685669,"data":"[builder] [##----------------------]   9.1% 40/440 FTU/p01_Orientation_80_cm__back_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":31.208945942,"data":"[builder] [##----------------------]   9.3% 41/440 FTU/p01_Orientation_80_cm__left_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":31.610780314,"data":"[builder] [##----------------------]   9.5% 42/440 FTU/p01_Orientation_80_cm__left_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":32.09753549,"data":"[builder] [##----------------------]   9.8% 43/440 FTU/p01_Orientation_80_cm__left_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":32.558498045,"data":"[builder] [##----------------------]  10.0% 44/440 FTU/p01_Orientation_80_cm__left_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":33.071032953,"data":"[builder] [##----------------------]  10.2% 45/440 FTU/p02_Angle_0_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":33.506415421,"data":"[builder] [###---------------------]  10.5% 46/440 FTU/p02_Angle_0_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":33.910457928,"data":"[builder] [###---------------------]  10.7% 47/440 FTU/p02_Angle_0_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":34.309551688,"data":"[builder] [###---------------------]  10.9% 48/440 FTU/p02_Angle_0_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":34.768066644,"data":"[builder] [###---------------------]  11.1% 49/440 FTU/p02_Angle_30_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":35.427142051,"data":"[builder] [###---------------------]  11.4% 50/440 FTU/p02_Angle_30_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":35.833734477,"data":"[builder] [###---------------------]  11.6% 51/440 FTU/p02_Angle_30_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":36.243661226,"data":"[builder] [###---------------------]  11.8% 52/440 FTU/p02_Angle_30_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":36.707846465,"data":"[builder] [###---------------------]  12.0% 53/440 FTU/p02_Angle_45_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":37.14765264,"data":"[builder] [###---------------------]  12.3% 54/440 FTU/p02_Angle_45_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":37.547500335,"data":"[builder] [###---------------------]  12.5% 55/440 FTU/p02_Angle_45_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":38.03906826,"data":"[builder] [###---------------------]  12.7% 56/440 FTU/p02_Angle_45_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":38.524818578,"data":"[builder] [###---------------------]  13.0% 57/440 FTU/p02_Distance_120_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":38.926162492,"data":"[builder] [###---------------------]  13.2% 58/440 FTU/p02_Distance_120_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":39.339039596,"data":"[builder] [###---------------------]  13.4% 59/440 FTU/p02_Distance_120_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":39.734020857,"data":"[builder] [###---------------------]  13.6% 60/440 FTU/p02_Distance_120_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":40.166765698,"data":"[builder] [###---------------------]  13.9% 61/440 FTU/p02_Distance_160_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":40.563085473,"data":"[builder] [###---------------------]  14.1% 62/440 FTU/p02_Distance_160_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":40.961518312,"data":"[builder] [###---------------------]  14.3% 63/440 FTU/p02_Distance_160_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":41.425938481,"data":"[builder] [###---------------------]  14.5% 64/440 FTU/p02_Distance_160_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":41.769561197,"data":"[builder] [####--------------------]  14.8% 65/440 FTU/p02_Distance_40_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":42.182103138,"data":"[builder] [####--------------------]  15.0% 66/440 FTU/p02_Distance_40_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":42.657364912,"data":"[builder] [####--------------------]  15.2% 67/440 FTU/p02_Distance_40_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":43.150276841,"data":"[builder] [####--------------------]  15.5% 68/440 FTU/p02_Distance_40_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":43.53403991,"data":"[builder] [####--------------------]  15.7% 69/440 FTU/p02_Distance_80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":43.950492038,"data":"[builder] [####--------------------]  15.9% 70/440 FTU/p02_Distance_80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":44.381475285,"data":"[builder] [####--------------------]  16.1% 71/440 FTU/p02_Distance_80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":44.756326628,"data":"[builder] [####--------------------]  16.4% 72/440 FTU/p02_Distance_80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":45.167034859,"data":"[builder] [####--------------------]  16.6% 73/440 FTU/p02_Orientation_80_cm__Front_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":45.559641662,"data":"[builder] [####--------------------]  16.8% 74/440 FTU/p02_Orientation_80_cm__Front_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":45.905622448,"data":"[builder] [####--------------------]  17.0% 75/440 FTU/p02_Orientation_80_cm__Front_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":46.274080408,"data":"[builder] [####--------------------]  17.3% 76/440 FTU/p02_Orientation_80_cm__Front_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":46.64883912,"data":"[builder] [####--------------------]  17.5% 77/440 FTU/p02_Orientation_80_cm__Right_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":47.028653591,"data":"[builder] [####--------------------]  17.7% 78/440 FTU/p02_Orientation_80_cm__Right_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":47.445542085,"data":"[builder] [####--------------------]  18.0% 79/440 FTU/p02_Orientation_80_cm__Right_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":47.878656965,"data":"[builder] [####--------------------]  18.2% 80/440 FTU/p02_Orientation_80_cm__Right_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":48.254691078,"data":"[builder] [####--------------------]  18.4% 81/440 FTU/p02_Orientation_80_cm__back_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":48.693051588,"data":"[builder] [####--------------------]  18.6% 82/440 FTU/p02_Orientation_80_cm__back_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":49.064719336,"data":"[builder] [#####-------------------]  18.9% 83/440 FTU/p02_Orientation_80_cm__back_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":49.516788297,"data":"[builder] [#####-------------------]  19.1% 84/440 FTU/p02_Orientation_80_cm__back_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":49.889454116,"data":"[builder] [#####-------------------]  19.3% 85/440 FTU/p02_Orientation_80_cm__left_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":50.32515309,"data":"[builder] [#####-------------------]  19.5% 86/440 FTU/p02_Orientation_80_cm__left_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":50.76369124,"data":"[builder] [#####-------------------]  19.8% 87/440 FTU/p02_Orientation_80_cm__left_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":51.19066194,"data":"[builder] [#####-------------------]  20.0% 88/440 FTU/p02_Orientation_80_cm__left_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":51.598367835,"data":"[builder] [#####-------------------]  20.2% 89/440 FTU/p03_Angle_0_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":51.906813995,"data":"[builder] [#####-------------------]  20.5% 90/440 FTU/p03_Angle_0_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":52.225218098,"data":"[builder] [#####-------------------]  20.7% 91/440 FTU/p03_Angle_0_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":52.712400835,"data":"[builder] [#####-------------------]  20.9% 92/440 FTU/p03_Angle_0_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":53.119553354,"data":"[builder] [#####-------------------]  21.1% 93/440 FTU/p03_Angle_30_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":53.464966726,"data":"[builder] [#####-------------------]  21.4% 94/440 FTU/p03_Angle_30_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":53.896320238,"data":"[builder] [#####-------------------]  21.6% 95/440 FTU/p03_Angle_30_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":54.303646674,"data":"[builder] [#####-------------------]  21.8% 96/440 FTU/p03_Angle_30_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":54.747013539,"data":"[builder] [#####-------------------]  22.0% 97/440 FTU/p03_Angle_45_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":55.096810869,"data":"[builder] [#####-------------------]  22.3% 98/440 FTU/p03_Angle_45_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":55.540017495,"data":"[builder] [#####-------------------]  22.5% 99/440 FTU/p03_Angle_45_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":55.861234881,"data":"[builder] [#####-------------------]  22.7% 100/440 FTU/p03_Angle_45_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":56.298239687,"data":"[builder] [######------------------]  23.0% 101/440 FTU/p03_Distance_120_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":56.6993494,"data":"[builder] [######------------------]  23.2% 102/440 FTU/p03_Distance_120_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":57.102238002,"data":"[builder] [######------------------]  23.4% 103/440 FTU/p03_Distance_120_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":57.427407856,"data":"[builder] [######------------------]  23.6% 104/440 FTU/p03_Distance_120_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":57.784702741,"data":"[builder] [######------------------]  23.9% 105/440 FTU/p03_Distance_160_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":58.223093294,"data":"[builder] [######------------------]  24.1% 106/440 FTU/p03_Distance_160_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":58.602292246,"data":"[builder] [######------------------]  24.3% 107/440 FTU/p03_Distance_160_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":59.030888323,"data":"[builder] [######------------------]  24.5% 108/440 FTU/p03_Distance_160_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":59.460854971,"data":"[builder] [######------------------]  24.8% 109/440 FTU/p03_Distance_40_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":59.865886571,"data":"[builder] [######------------------]  25.0% 110/440 FTU/p03_Distance_40_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":60.207137976,"data":"[builder] [######------------------]  25.2% 111/440 FTU/p03_Distance_40_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":60.582651667,"data":"[builder] [######------------------]  25.5% 112/440 FTU/p03_Distance_40_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":60.952021229,"data":"[builder] [######------------------]  25.7% 113/440 FTU/p03_Distance_80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":61.357779302,"data":"[builder] [######------------------]  25.9% 114/440 FTU/p03_Distance_80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":61.798722692,"data":"[builder] [######------------------]  26.1% 115/440 FTU/p03_Distance_80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":62.262162749,"data":"[builder] [######------------------]  26.4% 116/440 FTU/p03_Distance_80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":62.633623943,"data":"[builder] [######------------------]  26.6% 117/440 FTU/p03_Orientation_80_cm__Front_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":63.117673331,"data":"[builder] [######------------------]  26.8% 118/440 FTU/p03_Orientation_80_cm__Front_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":63.558713026,"data":"[builder] [######------------------]  27.0% 119/440 FTU/p03_Orientation_80_cm__Front_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":64.026622268,"data":"[builder] [#######-----------------]  27.3% 120/440 FTU/p03_Orientation_80_cm__Front_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":64.415418276,"data":"[builder] [#######-----------------]  27.5% 121/440 FTU/p03_Orientation_80_cm__Right_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":64.930290745,"data":"[builder] [#######-----------------]  27.7% 122/440 FTU/p03_Orientation_80_cm__Right_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":65.407797389,"data":"[builder] [#######-----------------]  28.0% 123/440 FTU/p03_Orientation_80_cm__Right_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":65.956799613,"data":"[builder] [#######-----------------]  28.2% 124/440 FTU/p03_Orientation_80_cm__Right_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":66.460416682,"data":"[builder] [#######-----------------]  28.4% 125/440 FTU/p03_Orientation_80_cm__back_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":66.970663449,"data":"[builder] [#######-----------------]  28.6% 126/440 FTU/p03_Orientation_80_cm__back_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":67.530529172,"data":"[builder] [#######-----------------]  28.9% 127/440 FTU/p03_Orientation_80_cm__back_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":68.133517227,"data":"[builder] [#######-----------------]  29.1% 128/440 FTU/p03_Orientation_80_cm__back_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":68.747411217,"data":"[builder] [#######-----------------]  29.3% 129/440 FTU/p03_Orientation_80_cm__left_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":69.277549068,"data":"[builder] [#######-----------------]  29.5% 130/440 FTU/p03_Orientation_80_cm__left_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":69.811326703,"data":"[builder] [#######-----------------]  29.8% 131/440 FTU/p03_Orientation_80_cm__left_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":70.4114199,"data":"[builder] [#######-----------------]  30.0% 132/440 FTU/p03_Orientation_80_cm__left_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":70.932406101,"data":"[builder] [#######-----------------]  30.2% 133/440 FTU/p04_Angle_0_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":71.428390832,"data":"[builder] [#######-----------------]  30.5% 134/440 FTU/p04_Angle_0_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":72.061039024,"data":"[builder] [#######-----------------]  30.7% 135/440 FTU/p04_Angle_0_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":72.646481369,"data":"[builder] [#######-----------------]  30.9% 136/440 FTU/p04_Angle_0_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":73.232371543,"data":"[builder] [#######-----------------]  31.1% 137/440 FTU/p04_Angle_30_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":73.776695727,"data":"[builder] [########----------------]  31.4% 138/440 FTU/p04_Angle_30_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":74.372635623,"data":"[builder] [########----------------]  31.6% 139/440 FTU/p04_Angle_30_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":74.923581123,"data":"[builder] [########----------------]  31.8% 140/440 FTU/p04_Angle_30_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":75.509792484,"data":"[builder] [########----------------]  32.0% 141/440 FTU/p04_Angle_45_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":76.113278033,"data":"[builder] [########----------------]  32.3% 142/440 FTU/p04_Angle_45_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":76.604366169,"data":"[builder] [########----------------]  32.5% 143/440 FTU/p04_Angle_45_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":77.122213769,"data":"[builder] [########----------------]  32.7% 144/440 FTU/p04_Angle_45_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":77.654455678,"data":"[builder] [########----------------]  33.0% 145/440 FTU/p04_Distance_120_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":78.152004749,"data":"[builder] [########----------------]  33.2% 146/440 FTU/p04_Distance_120_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":78.640831628,"data":"[builder] [########----------------]  33.4% 147/440 FTU/p04_Distance_120_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":79.503199074,"data":"[builder] [########----------------]  33.6% 148/440 FTU/p04_Distance_120_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":79.915194907,"data":"[builder] [########----------------]  33.9% 149/440 FTU/p04_Distance_160_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":80.325979338,"data":"[builder] [########----------------]  34.1% 150/440 FTU/p04_Distance_160_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":80.783375876,"data":"[builder] [########----------------]  34.3% 151/440 FTU/p04_Distance_160_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":81.192061116,"data":"[builder] [########----------------]  34.5% 152/440 FTU/p04_Distance_160_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":81.615264118,"data":"[builder] [########----------------]  34.8% 153/440 FTU/p04_Distance_40_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":82.044660033,"data":"[builder] [########----------------]  35.0% 154/440 FTU/p04_Distance_40_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":82.392659058,"data":"[builder] [########----------------]  35.2% 155/440 FTU/p04_Distance_40_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":82.869444159,"data":"[builder] [#########---------------]  35.5% 156/440 FTU/p04_Distance_40_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":83.393377481,"data":"[builder] [#########---------------]  35.7% 157/440 FTU/p04_Distance_80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":83.798291733,"data":"[builder] [#########---------------]  35.9% 158/440 FTU/p04_Distance_80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":84.237567002,"data":"[builder] [#########---------------]  36.1% 159/440 FTU/p04_Distance_80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":84.638114971,"data":"[builder] [#########---------------]  36.4% 160/440 FTU/p04_Distance_80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":85.038790138,"data":"[builder] [#########---------------]  36.6% 161/440 FTU/p04_Orientation_80_cm__Front_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":85.471100129,"data":"[builder] [#########---------------]  36.8% 162/440 FTU/p04_Orientation_80_cm__Front_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":85.926554313,"data":"[builder] [#########---------------]  37.0% 163/440 FTU/p04_Orientation_80_cm__Front_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":86.262188622,"data":"[builder] [#########---------------]  37.3% 164/440 FTU/p04_Orientation_80_cm__Front_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":86.674243832,"data":"[builder] [#########---------------]  37.5% 165/440 FTU/p04_Orientation_80_cm__Right_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":87.066484447,"data":"[builder] [#########---------------]  37.7% 166/440 FTU/p04_Orientation_80_cm__Right_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":87.494711483,"data":"[builder] [#########---------------]  38.0% 167/440 FTU/p04_Orientation_80_cm__Right_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":87.961642927,"data":"[builder] [#########---------------]  38.2% 168/440 FTU/p04_Orientation_80_cm__Right_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":88.431429913,"data":"[builder] [#########---------------]  38.4% 169/440 FTU/p04_Orientation_80_cm__back_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":88.916570007,"data":"[builder] [#########---------------]  38.6% 170/440 FTU/p04_Orientation_80_cm__back_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":89.404153367,"data":"[builder] [#########---------------]  38.9% 171/440 FTU/p04_Orientation_80_cm__back_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":89.879165142,"data":"[builder] [#########---------------]  39.1% 172/440 FTU/p04_Orientation_80_cm__back_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":90.258271186,"data":"[builder] [#########---------------]  39.3% 173/440 FTU/p04_Orientation_80_cm__left_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":90.632267001,"data":"[builder] [#########---------------]  39.5% 174/440 FTU/p04_Orientation_80_cm__left_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":91.004187181,"data":"[builder] [##########--------------]  39.8% 175/440 FTU/p04_Orientation_80_cm__left_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":91.409719061,"data":"[builder] [##########--------------]  40.0% 176/440 FTU/p04_Orientation_80_cm__left_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":91.762719893,"data":"[builder] [##########--------------]  40.2% 177/440 FTU/p05_Angle_0_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":92.137809132,"data":"[builder] [##########--------------]  40.5% 178/440 FTU/p05_Angle_0_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":92.455849396,"data":"[builder] [##########--------------]  40.7% 179/440 FTU/p05_Angle_0_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":92.891677909,"data":"[builder] [##########--------------]  40.9% 180/440 FTU/p05_Angle_0_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":93.266799242,"data":"[builder] [##########--------------]  41.1% 181/440 FTU/p05_Angle_30_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":93.639754105,"data":"[builder] [##########--------------]  41.4% 182/440 FTU/p05_Angle_30_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":94.006840915,"data":"[builder] [##########--------------]  41.6% 183/440 FTU/p05_Angle_30_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":94.37563937,"data":"[builder] [##########--------------]  41.8% 184/440 FTU/p05_Angle_30_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":94.740871746,"data":"[builder] [##########--------------]  42.0% 185/440 FTU/p05_Angle_45_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":95.076247432,"data":"[builder] [##########--------------]  42.3% 186/440 FTU/p05_Angle_45_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":95.5034787,"data":"[builder] [##########--------------]  42.5% 187/440 FTU/p05_Angle_45_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":95.851509217,"data":"[builder] [##########--------------]  42.7% 188/440 FTU/p05_Angle_45_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":96.275484806,"data":"[builder] [##########--------------]  43.0% 189/440 FTU/p05_Distance_120_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":96.708470562,"data":"[builder] [##########--------------]  43.2% 190/440 FTU/p05_Distance_120_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":97.023880966,"data":"[builder] [##########--------------]  43.4% 191/440 FTU/p05_Distance_120_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":97.40215225,"data":"[builder] [##########--------------]  43.6% 192/440 FTU/p05_Distance_120_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":97.781747314,"data":"[builder] [###########-------------]  43.9% 193/440 FTU/p05_Distance_160_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":98.128627013,"data":"[builder] [###########-------------]  44.1% 194/440 FTU/p05_Distance_160_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":98.466618947,"data":"[builder] [###########-------------]  44.3% 195/440 FTU/p05_Distance_160_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":98.879521755,"data":"[builder] [###########-------------]  44.5% 196/440 FTU/p05_Distance_160_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":99.163587864,"data":"[builder] [###########-------------]  44.8% 197/440 FTU/p05_Distance_40_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":99.518283194,"data":"[builder] [###########-------------]  45.0% 198/440 FTU/p05_Distance_40_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":99.858499832,"data":"[builder] [###########-------------]  45.2% 199/440 FTU/p05_Distance_40_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":100.236510336,"data":"[builder] [###########-------------]  45.5% 200/440 FTU/p05_Distance_40_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":100.553271606,"data":"[builder] [###########-------------]  45.7% 201/440 FTU/p05_Distance_80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":100.901870007,"data":"[builder] [###########-------------]  45.9% 202/440 FTU/p05_Distance_80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":101.352321374,"data":"[builder] [###########-------------]  46.1% 203/440 FTU/p05_Distance_80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":101.697291949,"data":"[builder] [###########-------------]  46.4% 204/440 FTU/p05_Distance_80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":102.046159629,"data":"[builder] [###########-------------]  46.6% 205/440 FTU/p05_Orientation_80_cm__Front_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":102.448375366,"data":"[builder] [###########-------------]  46.8% 206/440 FTU/p05_Orientation_80_cm__Front_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":102.761809049,"data":"[builder] [###########-------------]  47.0% 207/440 FTU/p05_Orientation_80_cm__Front_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":103.186810366,"data":"[builder] [###########-------------]  47.3% 208/440 FTU/p05_Orientation_80_cm__Front_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":103.558148607,"data":"[builder] [###########-------------]  47.5% 209/440 FTU/p05_Orientation_80_cm__Right_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":103.841061893,"data":"[builder] [###########-------------]  47.7% 210/440 FTU/p05_Orientation_80_cm__Right_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":104.20929239,"data":"[builder] [############------------]  48.0% 211/440 FTU/p05_Orientation_80_cm__Right_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":104.582817709,"data":"[builder] [############------------]  48.2% 212/440 FTU/p05_Orientation_80_cm__Right_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":104.925711629,"data":"[builder] [############------------]  48.4% 213/440 FTU/p05_Orientation_80_cm__back_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":105.269802844,"data":"[builder] [############------------]  48.6% 214/440 FTU/p05_Orientation_80_cm__back_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":105.620076303,"data":"[builder] [############------------]  48.9% 215/440 FTU/p05_Orientation_80_cm__back_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":105.985953306,"data":"[builder] [############------------]  49.1% 216/440 FTU/p05_Orientation_80_cm__back_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":106.417635601,"data":"[builder] [############------------]  49.3% 217/440 FTU/p05_Orientation_80_cm__left_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":106.78443336,"data":"[builder] [############------------]  49.5% 218/440 FTU/p05_Orientation_80_cm__left_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":107.12395265,"data":"[builder] [############------------]  49.8% 219/440 FTU/p05_Orientation_80_cm__left_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":107.465165443,"data":"[builder] [############------------]  50.0% 220/440 FTU/p05_Orientation_80_cm__left_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":107.74799256,"data":"[builder] [############------------]  50.2% 221/440 FTU/p06_Angle_0_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":108.154531287,"data":"[builder] [############------------]  50.5% 222/440 FTU/p06_Angle_0_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":108.469504109,"data":"[builder] [############------------]  50.7% 223/440 FTU/p06_Angle_0_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":108.873648015,"data":"[builder] [############------------]  50.9% 224/440 FTU/p06_Angle_0_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":109.153912593,"data":"[builder] [############------------]  51.1% 225/440 FTU/p06_Angle_30_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":109.523275421,"data":"[builder] [############------------]  51.4% 226/440 FTU/p06_Angle_30_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":109.866823124,"data":"[builder] [############------------]  51.6% 227/440 FTU/p06_Angle_30_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":110.235441957,"data":"[builder] [############------------]  51.8% 228/440 FTU/p06_Angle_30_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":110.583744565,"data":"[builder] [############------------]  52.0% 229/440 FTU/p06_Angle_45_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":110.954284314,"data":"[builder] [#############-----------]  52.3% 230/440 FTU/p06_Angle_45_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":111.380909881,"data":"[builder] [#############-----------]  52.5% 231/440 FTU/p06_Angle_45_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":111.728796218,"data":"[builder] [#############-----------]  52.7% 232/440 FTU/p06_Angle_45_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":112.04950323,"data":"[builder] [#############-----------]  53.0% 233/440 FTU/p06_Distance_120_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":112.353780212,"data":"[builder] [#############-----------]  53.2% 234/440 FTU/p06_Distance_120_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":112.751681625,"data":"[builder] [#############-----------]  53.4% 235/440 FTU/p06_Distance_120_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":113.095542583,"data":"[builder] [#############-----------]  53.6% 236/440 FTU/p06_Distance_120_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":113.441046573,"data":"[builder] [#############-----------]  53.9% 237/440 FTU/p06_Distance_160_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":113.724504436,"data":"[builder] [#############-----------]  54.1% 238/440 FTU/p06_Distance_160_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":114.004442778,"data":"[builder] [#############-----------]  54.3% 239/440 FTU/p06_Distance_160_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":114.312751183,"data":"[builder] [#############-----------]  54.5% 240/440 FTU/p06_Distance_160_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":114.62618206,"data":"[builder] [#############-----------]  54.8% 241/440 FTU/p06_Distance_40_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":115.018410675,"data":"[builder] [#############-----------]  55.0% 242/440 FTU/p06_Distance_40_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":115.414862341,"data":"[builder] [#############-----------]  55.2% 243/440 FTU/p06_Distance_40_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":115.75323886,"data":"[builder] [#############-----------]  55.5% 244/440 FTU/p06_Distance_40_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":116.127022066,"data":"[builder] [#############-----------]  55.7% 245/440 FTU/p06_Distance_80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":116.445155823,"data":"[builder] [#############-----------]  55.9% 246/440 FTU/p06_Distance_80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":116.757645208,"data":"[builder] [#############-----------]  56.1% 247/440 FTU/p06_Distance_80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":117.091332746,"data":"[builder] [##############----------]  56.4% 248/440 FTU/p06_Distance_80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":117.410511603,"data":"[builder] [##############----------]  56.6% 249/440 FTU/p06_Orientation_80_cm__Front_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":117.70814836,"data":"[builder] [##############----------]  56.8% 250/440 FTU/p06_Orientation_80_cm__Front_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":118.043945836,"data":"[builder] [##############----------]  57.0% 251/440 FTU/p06_Orientation_80_cm__Front_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":118.332889856,"data":"[builder] [##############----------]  57.3% 252/440 FTU/p06_Orientation_80_cm__Front_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":118.662861591,"data":"[builder] [##############----------]  57.5% 253/440 FTU/p06_Orientation_80_cm__Right_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":118.965961794,"data":"[builder] [##############----------]  57.7% 254/440 FTU/p06_Orientation_80_cm__Right_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":119.284083781,"data":"[builder] [##############----------]  58.0% 255/440 FTU/p06_Orientation_80_cm__Right_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":119.60203909,"data":"[builder] [##############----------]  58.2% 256/440 FTU/p06_Orientation_80_cm__Right_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":119.956973863,"data":"[builder] [##############----------]  58.4% 257/440 FTU/p06_Orientation_80_cm__back_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":120.366704602,"data":"[builder] [##############----------]  58.6% 258/440 FTU/p06_Orientation_80_cm__back_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":120.716281377,"data":"[builder] [##############----------]  58.9% 259/440 FTU/p06_Orientation_80_cm__back_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":121.004817398,"data":"[builder] [##############----------]  59.1% 260/440 FTU/p06_Orientation_80_cm__back_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":121.324172983,"data":"[builder] [##############----------]  59.3% 261/440 FTU/p06_Orientation_80_cm__left_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":121.643164577,"data":"[builder] [##############----------]  59.5% 262/440 FTU/p06_Orientation_80_cm__left_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":122.013122778,"data":"[builder] [##############----------]  59.8% 263/440 FTU/p06_Orientation_80_cm__left_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":122.309022611,"data":"[builder] [##############----------]  60.0% 264/440 FTU/p06_Orientation_80_cm__left_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":122.641268135,"data":"[builder] [##############----------]  60.2% 265/440 FTU/p07_Angle_0_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":122.968700345,"data":"[builder] [###############---------]  60.5% 266/440 FTU/p07_Angle_0_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":123.299686077,"data":"[builder] [###############---------]  60.7% 267/440 FTU/p07_Angle_0_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":123.591186885,"data":"[builder] [###############---------]  60.9% 268/440 FTU/p07_Angle_0_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":123.930184784,"data":"[builder] [###############---------]  61.1% 269/440 FTU/p07_Angle_30_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":124.242793267,"data":"[builder] [###############---------]  61.4% 270/440 FTU/p07_Angle_30_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":124.562578331,"data":"[builder] [###############---------]  61.6% 271/440 FTU/p07_Angle_30_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":124.873317985,"data":"[builder] [###############---------]  61.8% 272/440 FTU/p07_Angle_30_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":125.312028945,"data":"[builder] [###############---------]  62.0% 273/440 FTU/p07_Angle_45_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":125.656933528,"data":"[builder] [###############---------]  62.3% 274/440 FTU/p07_Angle_45_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":125.972233991,"data":"[builder] [###############---------]  62.5% 275/440 FTU/p07_Angle_45_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":126.347691834,"data":"[builder] [###############---------]  62.7% 276/440 FTU/p07_Angle_45_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":126.694057482,"data":"[builder] [###############---------]  63.0% 277/440 FTU/p07_Distance_120_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":127.008794457,"data":"[builder] [###############---------]  63.2% 278/440 FTU/p07_Distance_120_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":127.377765099,"data":"[builder] [###############---------]  63.4% 279/440 FTU/p07_Distance_120_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":127.748624545,"data":"[builder] [###############---------]  63.6% 280/440 FTU/p07_Distance_120_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":128.031837022,"data":"[builder] [###############---------]  63.9% 281/440 FTU/p07_Distance_160_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":128.352947565,"data":"[builder] [###############---------]  64.1% 282/440 FTU/p07_Distance_160_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":128.752221157,"data":"[builder] [###############---------]  64.3% 283/440 FTU/p07_Distance_160_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":129.157054369,"data":"[builder] [###############---------]  64.5% 284/440 FTU/p07_Distance_160_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":129.560399037,"data":"[builder] [################--------]  64.8% 285/440 FTU/p07_Distance_40_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":129.960256793,"data":"[builder] [################--------]  65.0% 286/440 FTU/p07_Distance_40_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":130.276537071,"data":"[builder] [################--------]  65.2% 287/440 FTU/p07_Distance_40_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":130.566920998,"data":"[builder] [################--------]  65.5% 288/440 FTU/p07_Distance_40_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":130.951697324,"data":"[builder] [################--------]  65.7% 289/440 FTU/p07_Distance_80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":131.294360891,"data":"[builder] [################--------]  65.9% 290/440 FTU/p07_Distance_80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":131.608978183,"data":"[builder] [################--------]  66.1% 291/440 FTU/p07_Distance_80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":132.043769278,"data":"[builder] [################--------]  66.4% 292/440 FTU/p07_Distance_80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":132.386761579,"data":"[builder] [################--------]  66.6% 293/440 FTU/p07_Orientation_80_cm__Front_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":132.758334602,"data":"[builder] [################--------]  66.8% 294/440 FTU/p07_Orientation_80_cm__Front_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":133.150419838,"data":"[builder] [################--------]  67.0% 295/440 FTU/p07_Orientation_80_cm__Front_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":133.475893591,"data":"[builder] [################--------]  67.3% 296/440 FTU/p07_Orientation_80_cm__Front_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":133.820521915,"data":"[builder] [################--------]  67.5% 297/440 FTU/p07_Orientation_80_cm__Right_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":134.134332297,"data":"[builder] [################--------]  67.7% 298/440 FTU/p07_Orientation_80_cm__Right_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":134.452456729,"data":"[builder] [################--------]  68.0% 299/440 FTU/p07_Orientation_80_cm__Right_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":134.907995208,"data":"[builder] [################--------]  68.2% 300/440 FTU/p07_Orientation_80_cm__Right_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":135.397302608,"data":"[builder] [################--------]  68.4% 301/440 FTU/p07_Orientation_80_cm__back_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":135.832293478,"data":"[builder] [################--------]  68.6% 302/440 FTU/p07_Orientation_80_cm__back_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":136.292002206,"data":"[builder] [#################-------]  68.9% 303/440 FTU/p07_Orientation_80_cm__back_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":136.749424383,"data":"[builder] [#################-------]  69.1% 304/440 FTU/p07_Orientation_80_cm__back_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":137.222913679,"data":"[builder] [#################-------]  69.3% 305/440 FTU/p07_Orientation_80_cm__left_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":137.660345763,"data":"[builder] [#################-------]  69.5% 306/440 FTU/p07_Orientation_80_cm__left_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":138.103123502,"data":"[builder] [#################-------]  69.8% 307/440 FTU/p07_Orientation_80_cm__left_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":138.510198668,"data":"[builder] [#################-------]  70.0% 308/440 FTU/p07_Orientation_80_cm__left_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":138.959577276,"data":"[builder] [#################-------]  70.2% 309/440 FTU/p08_Angle_0_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":139.347585609,"data":"[builder] [#################-------]  70.5% 310/440 FTU/p08_Angle_0_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":139.778423863,"data":"[builder] [#################-------]  70.7% 311/440 FTU/p08_Angle_0_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":140.229935823,"data":"[builder] [#################-------]  70.9% 312/440 FTU/p08_Angle_0_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":140.734174953,"data":"[builder] [#################-------]  71.1% 313/440 FTU/p08_Angle_30_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":141.215014929,"data":"[builder] [#################-------]  71.4% 314/440 FTU/p08_Angle_30_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":141.685255718,"data":"[builder] [#################-------]  71.6% 315/440 FTU/p08_Angle_30_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":142.190915319,"data":"[builder] [#################-------]  71.8% 316/440 FTU/p08_Angle_30_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":142.618693559,"data":"[builder] [#################-------]  72.0% 317/440 FTU/p08_Angle_45_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":143.120466986,"data":"[builder] [#################-------]  72.3% 318/440 FTU/p08_Angle_45_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":143.471905361,"data":"[builder] [#################-------]  72.5% 319/440 FTU/p08_Angle_45_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":143.879635391,"data":"[builder] [#################-------]  72.7% 320/440 FTU/p08_Angle_45_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":144.310326329,"data":"[builder] [##################------]  73.0% 321/440 FTU/p08_Distance_120_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":144.745078321,"data":"[builder] [##################------]  73.2% 322/440 FTU/p08_Distance_120_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":145.145665319,"data":"[builder] [##################------]  73.4% 323/440 FTU/p08_Distance_120_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":145.610247763,"data":"[builder] [##################------]  73.6% 324/440 FTU/p08_Distance_120_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":146.015337527,"data":"[builder] [##################------]  73.9% 325/440 FTU/p08_Distance_160_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":146.441521764,"data":"[builder] [##################------]  74.1% 326/440 FTU/p08_Distance_160_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":146.841566178,"data":"[builder] [##################------]  74.3% 327/440 FTU/p08_Distance_160_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":147.300887785,"data":"[builder] [##################------]  74.5% 328/440 FTU/p08_Distance_160_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":147.699181971,"data":"[builder] [##################------]  74.8% 329/440 FTU/p08_Distance_40_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":147.982557262,"data":"[builder] [##################------]  75.0% 330/440 FTU/p08_Distance_40_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":148.379350003,"data":"[builder] [##################------]  75.2% 331/440 FTU/p08_Distance_40_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":148.87868255,"data":"[builder] [##################------]  75.5% 332/440 FTU/p08_Distance_40_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":149.254894948,"data":"[builder] [##################------]  75.7% 333/440 FTU/p08_Distance_80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":149.685339749,"data":"[builder] [##################------]  75.9% 334/440 FTU/p08_Distance_80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":150.079159818,"data":"[builder] [##################------]  76.1% 335/440 FTU/p08_Distance_80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":150.535248882,"data":"[builder] [##################------]  76.4% 336/440 FTU/p08_Distance_80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":151.015805853,"data":"[builder] [##################------]  76.6% 337/440 FTU/p08_Orientation_80_cm__Front_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":151.382363165,"data":"[builder] [##################------]  76.8% 338/440 FTU/p08_Orientation_80_cm__Front_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":151.786345392,"data":"[builder] [##################------]  77.0% 339/440 FTU/p08_Orientation_80_cm__Front_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":152.214592916,"data":"[builder] [###################-----]  77.3% 340/440 FTU/p08_Orientation_80_cm__Front_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":152.565890834,"data":"[builder] [###################-----]  77.5% 341/440 FTU/p08_Orientation_80_cm__Right_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":152.945183962,"data":"[builder] [###################-----]  77.7% 342/440 FTU/p08_Orientation_80_cm__Right_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":153.444759794,"data":"[builder] [###################-----]  78.0% 343/440 FTU/p08_Orientation_80_cm__Right_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":153.814093746,"data":"[builder] [###################-----]  78.2% 344/440 FTU/p08_Orientation_80_cm__Right_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":154.23434814,"data":"[builder] [###################-----]  78.4% 345/440 FTU/p08_Orientation_80_cm__back_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":154.628884787,"data":"[builder] [###################-----]  78.6% 346/440 FTU/p08_Orientation_80_cm__back_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":154.999824544,"data":"[builder] [###################-----]  78.9% 347/440 FTU/p08_Orientation_80_cm__back_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":155.429491182,"data":"[builder] [###################-----]  79.1% 348/440 FTU/p08_Orientation_80_cm__back_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":155.821291335,"data":"[builder] [###################-----]  79.3% 349/440 FTU/p08_Orientation_80_cm__left_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":156.142132699,"data":"[builder] [###################-----]  79.5% 350/440 FTU/p08_Orientation_80_cm__left_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":156.524507971,"data":"[builder] [###################-----]  79.8% 351/440 FTU/p08_Orientation_80_cm__left_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":156.923459673,"data":"[builder] [###################-----]  80.0% 352/440 FTU/p08_Orientation_80_cm__left_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":157.320662404,"data":"[builder] [###################-----]  80.2% 353/440 FTU/p09_Angle_0_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":157.69623226,"data":"[builder] [###################-----]  80.5% 354/440 FTU/p09_Angle_0_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":158.101782532,"data":"[builder] [###################-----]  80.7% 355/440 FTU/p09_Angle_0_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":158.458196758,"data":"[builder] [###################-----]  80.9% 356/440 FTU/p09_Angle_0_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":158.860377945,"data":"[builder] [###################-----]  81.1% 357/440 FTU/p09_Angle_30_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":159.208810156,"data":"[builder] [####################----]  81.4% 358/440 FTU/p09_Angle_30_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":159.556230542,"data":"[builder] [####################----]  81.6% 359/440 FTU/p09_Angle_30_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":159.904296106,"data":"[builder] [####################----]  81.8% 360/440 FTU/p09_Angle_30_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":160.248824856,"data":"[builder] [####################----]  82.0% 361/440 FTU/p09_Angle_45_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":160.559273619,"data":"[builder] [####################----]  82.3% 362/440 FTU/p09_Angle_45_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":160.928433619,"data":"[builder] [####################----]  82.5% 363/440 FTU/p09_Angle_45_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":161.362843003,"data":"[builder] [####################----]  82.7% 364/440 FTU/p09_Angle_45_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":161.737343475,"data":"[builder] [####################----]  83.0% 365/440 FTU/p09_Distance_120_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":162.044694803,"data":"[builder] [####################----]  83.2% 366/440 FTU/p09_Distance_120_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":162.382715966,"data":"[builder] [####################----]  83.4% 367/440 FTU/p09_Distance_120_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":162.78033092,"data":"[builder] [####################----]  83.6% 368/440 FTU/p09_Distance_120_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":163.151339694,"data":"[builder] [####################----]  83.9% 369/440 FTU/p09_Distance_160_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":163.534453716,"data":"[builder] [####################----]  84.1% 370/440 FTU/p09_Distance_160_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":163.889989111,"data":"[builder] [####################----]  84.3% 371/440 FTU/p09_Distance_160_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":164.236198364,"data":"[builder] [####################----]  84.5% 372/440 FTU/p09_Distance_160_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":164.583307234,"data":"[builder] [####################----]  84.8% 373/440 FTU/p09_Distance_40_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":164.911008762,"data":"[builder] [####################----]  85.0% 374/440 FTU/p09_Distance_40_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":165.280683432,"data":"[builder] [####################----]  85.2% 375/440 FTU/p09_Distance_40_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":165.617625509,"data":"[builder] [#####################---]  85.5% 376/440 FTU/p09_Distance_40_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":166.023202677,"data":"[builder] [#####################---]  85.7% 377/440 FTU/p09_Distance_80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":166.429266597,"data":"[builder] [#####################---]  85.9% 378/440 FTU/p09_Distance_80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":166.797804229,"data":"[builder] [#####################---]  86.1% 379/440 FTU/p09_Distance_80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":167.143792432,"data":"[builder] [#####################---]  86.4% 380/440 FTU/p09_Distance_80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":167.529397141,"data":"[builder] [#####################---]  86.6% 381/440 FTU/p09_Orientation_80_cm__Front_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":168.037985264,"data":"[builder] [#####################---]  86.8% 382/440 FTU/p09_Orientation_80_cm__Front_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":168.52037339,"data":"[builder] [#####################---]  87.0% 383/440 FTU/p09_Orientation_80_cm__Front_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":168.905239461,"data":"[builder] [#####################---]  87.3% 384/440 FTU/p09_Orientation_80_cm__Front_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":169.258333811,"data":"[builder] [#####################---]  87.5% 385/440 FTU/p09_Orientation_80_cm__Right_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":169.677155757,"data":"[builder] [#####################---]  87.7% 386/440 FTU/p09_Orientation_80_cm__Right_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":170.1568211,"data":"[builder] [#####################---]  88.0% 387/440 FTU/p09_Orientation_80_cm__Right_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":170.477527864,"data":"[builder] [#####################---]  88.2% 388/440 FTU/p09_Orientation_80_cm__Right_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":170.881796995,"data":"[builder] [#####################---]  88.4% 389/440 FTU/p09_Orientation_80_cm__back_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":171.279805046,"data":"[builder] [#####################---]  88.6% 390/440 FTU/p09_Orientation_80_cm__back_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":171.677792031,"data":"[builder] [#####################---]  88.9% 391/440 FTU/p09_Orientation_80_cm__back_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":172.025623821,"data":"[builder] [#####################---]  89.1% 392/440 FTU/p09_Orientation_80_cm__back_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":172.398976725,"data":"[builder] [#####################---]  89.3% 393/440 FTU/p09_Orientation_80_cm__left_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":172.767430321,"data":"[builder] [#####################---]  89.5% 394/440 FTU/p09_Orientation_80_cm__left_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":173.152747556,"data":"[builder] [######################--]  89.8% 395/440 FTU/p09_Orientation_80_cm__left_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":173.658494805,"data":"[builder] [######################--]  90.0% 396/440 FTU/p09_Orientation_80_cm__left_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":174.098357767,"data":"[builder] [######################--]  90.2% 397/440 FTU/p10_Angle_0_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":174.434909997,"data":"[builder] [######################--]  90.5% 398/440 FTU/p10_Angle_0_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":174.78956474,"data":"[builder] [######################--]  90.7% 399/440 FTU/p10_Angle_0_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":175.109376853,"data":"[builder] [######################--]  90.9% 400/440 FTU/p10_Angle_0_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":175.487955543,"data":"[builder] [######################--]  91.1% 401/440 FTU/p10_Angle_30_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":175.9105876,"data":"[builder] [######################--]  91.4% 402/440 FTU/p10_Angle_30_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":176.253529279,"data":"[builder] [######################--]  91.6% 403/440 FTU/p10_Angle_30_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":176.633117325,"data":"[builder] [######################--]  91.8% 404/440 FTU/p10_Angle_30_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":177.058916108,"data":"[builder] [######################--]  92.0% 405/440 FTU/p10_Angle_45_deg__80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":177.5400678,"data":"[builder] [######################--]  92.3% 406/440 FTU/p10_Angle_45_deg__80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":177.912255571,"data":"[builder] [######################--]  92.5% 407/440 FTU/p10_Angle_45_deg__80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":178.378813686,"data":"[builder] [######################--]  92.7% 408/440 FTU/p10_Angle_45_deg__80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":178.880987677,"data":"[builder] [######################--]  93.0% 409/440 FTU/p10_Distance_120_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":179.282836314,"data":"[builder] [######################--]  93.2% 410/440 FTU/p10_Distance_120_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":179.712805924,"data":"[builder] [######################--]  93.4% 411/440 FTU/p10_Distance_120_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":180.096395086,"data":"[builder] [######################--]  93.6% 412/440 FTU/p10_Distance_120_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":180.552547334,"data":"[builder] [#######################-]  93.9% 413/440 FTU/p10_Distance_160_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":180.951904733,"data":"[builder] [#######################-]  94.1% 414/440 FTU/p10_Distance_160_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":181.384335662,"data":"[builder] [#######################-]  94.3% 415/440 FTU/p10_Distance_160_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":181.771564442,"data":"[builder] [#######################-]  94.5% 416/440 FTU/p10_Distance_160_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":182.083758293,"data":"[builder] [#######################-]  94.8% 417/440 FTU/p10_Distance_40_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":182.521298495,"data":"[builder] [#######################-]  95.0% 418/440 FTU/p10_Distance_40_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":183.001722327,"data":"[builder] [#######################-]  95.2% 419/440 FTU/p10_Distance_40_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":183.401537665,"data":"[builder] [#######################-]  95.5% 420/440 FTU/p10_Distance_40_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":183.888730138,"data":"[builder] [#######################-]  95.7% 421/440 FTU/p10_Distance_80_cm_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":184.320375619,"data":"[builder] [#######################-]  95.9% 422/440 FTU/p10_Distance_80_cm_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":184.754321006,"data":"[builder] [#######################-]  96.1% 423/440 FTU/p10_Distance_80_cm_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":185.208460392,"data":"[builder] [#######################-]  96.4% 424/440 FTU/p10_Distance_80_cm_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":185.610732717,"data":"[builder] [#######################-]  96.6% 425/440 FTU/p10_Orientation_80_cm__Front_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":185.956238127,"data":"[builder] [#######################-]  96.8% 426/440 FTU/p10_Orientation_80_cm__Front_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":186.319667433,"data":"[builder] [#######################-]  97.0% 427/440 FTU/p10_Orientation_80_cm__Front_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":186.776396825,"data":"[builder] [#######################-]  97.3% 428/440 FTU/p10_Orientation_80_cm__Front_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":187.143185214,"data":"[builder] [#######################-]  97.5% 429/440 FTU/p10_Orientation_80_cm__Right_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":187.597549312,"data":"[builder] [#######################-]  97.7% 430/440 FTU/p10_Orientation_80_cm__Right_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":188.000064895,"data":"[builder] [########################]  98.0% 431/440 FTU/p10_Orientation_80_cm__Right_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":188.462791681,"data":"[builder] [########################]  98.2% 432/440 FTU/p10_Orientation_80_cm__Right_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":188.831776276,"data":"[builder] [########################]  98.4% 433/440 FTU/p10_Orientation_80_cm__back_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":189.25377759,"data":"[builder] [########################]  98.6% 434/440 FTU/p10_Orientation_80_cm__back_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":189.575304302,"data":"[builder] [########################]  98.9% 435/440 FTU/p10_Orientation_80_cm__back_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":189.980348859,"data":"[builder] [########################]  99.1% 436/440 FTU/p10_Orientation_80_cm__back_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":190.377507766,"data":"[builder] [########################]  99.3% 437/440 FTU/p10_Orientation_80_cm__left_side_r1 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":190.817072483,"data":"[builder] [########################]  99.5% 438/440 FTU/p10_Orientation_80_cm__left_side_r2 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":191.207418904,"data":"[builder] [########################]  99.8% 439/440 FTU/p10_Orientation_80_cm__left_side_r3 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":191.606259613,"data":"[builder] [########################] 100.0% 440/440 FTU/p10_Orientation_80_cm__left_side_r4 -\u003e 8 window(s)\n"}
+,{"stream_name":"stdout","time":191.606294692,"data":"\n"}
+,{"stream_name":"stdout","time":191.606301172,"data":"[builder] Stage 3/4: write manifest and config\n"}
+,{"stream_name":"stdout","time":191.643883219,"data":"\n"}
+,{"stream_name":"stdout","time":191.643914717,"data":"[builder] Stage 4/4: write summary\n"}
+,{"stream_name":"stdout","time":191.64426983,"data":"{\n"}
+,{"stream_name":"stdout","time":191.64429459,"data":"  \"samples_seen\": 440,\n"}
+,{"stream_name":"stdout","time":191.644300507,"data":"  \"samples_used\": 440,\n"}
+,{"stream_name":"stdout","time":191.644305463,"data":"  \"windows_written\": 3520,\n"}
+,{"stream_name":"stdout","time":191.644310612,"data":"  \"windows_skipped_label\": 0,\n"}
+,{"stream_name":"stdout","time":191.64431542,"data":"  \"windows_skipped_short\": 0,\n"}
+,{"stream_name":"stdout","time":191.644336516,"data":"  \"by_dataset\": {\n"}
+,{"stream_name":"stdout","time":191.644340703,"data":"    \"FTU\": {\n"}
+,{"stream_name":"stdout","time":191.64434393,"data":"      \"samples_used\": 440,\n"}
+,{"stream_name":"stdout","time":191.644347105,"data":"      \"windows_written\": 3520,\n"}
+,{"stream_name":"stdout","time":191.644350212,"data":"      \"windows_skipped_label\": 0\n"}
+,{"stream_name":"stdout","time":191.644353189,"data":"    }\n"}
+,{"stream_name":"stdout","time":191.644356136,"data":"  },\n"}
+,{"stream_name":"stdout","time":191.64435909,"data":"  \"by_split\": {\n"}
+,{"stream_name":"stdout","time":191.64436216000001,"data":"    \"train\": 2112,\n"}
+,{"stream_name":"stdout","time":191.644365157,"data":"    \"val\": 704,\n"}
+,{"stream_name":"stdout","time":191.644368055,"data":"    \"test\": 704\n"}
+,{"stream_name":"stdout","time":191.64437098,"data":"  },\n"}
+,{"stream_name":"stdout","time":191.644373829,"data":"  \"groups_by_dataset_split\": {\n"}
+,{"stream_name":"stdout","time":191.644376883,"data":"    \"FTU\": {\n"}
+,{"stream_name":"stdout","time":191.644379923,"data":"      \"train\": [\n"}
+,{"stream_name":"stdout","time":191.644382997,"data":"        \"FTU/participant/2\",\n"}
+,{"stream_name":"stdout","time":191.644386213,"data":"        \"FTU/participant/3\",\n"}
+,{"stream_name":"stdout","time":191.644389103,"data":"        \"FTU/participant/4\",\n"}
+,{"stream_name":"stdout","time":191.644392019,"data":"        \"FTU/participant/5\",\n"}
+,{"stream_name":"stdout","time":191.644394889,"data":"        \"FTU/participant/7\",\n"}
+,{"stream_name":"stdout","time":191.644397871,"data":"        \"FTU/participant/9\"\n"}
+,{"stream_name":"stdout","time":191.6444008,"data":"      ],\n"}
+,{"stream_name":"stdout","time":191.644403717,"data":"      \"val\": [\n"}
+,{"stream_name":"stdout","time":191.644406639,"data":"        \"FTU/participant/10\",\n"}
+,{"stream_name":"stdout","time":191.644409599,"data":"        \"FTU/participant/6\"\n"}
+,{"stream_name":"stdout","time":191.644412475,"data":"      ],\n"}
+,{"stream_name":"stdout","time":191.644415276,"data":"      \"test\": [\n"}
+,{"stream_name":"stdout","time":191.644418258,"data":"        \"FTU/participant/1\",\n"}
+,{"stream_name":"stdout","time":191.644421179,"data":"        \"FTU/participant/8\"\n"}
+,{"stream_name":"stdout","time":191.644424157,"data":"      ]\n"}
+,{"stream_name":"stdout","time":191.644427075,"data":"    }\n"}
+,{"stream_name":"stdout","time":191.64442987,"data":"  },\n"}
+,{"stream_name":"stdout","time":191.644432677,"data":"  \"group_label_means\": {},\n"}
+,{"stream_name":"stdout","time":191.6444356,"data":"  \"split_label_means\": {\n"}
+,{"stream_name":"stdout","time":191.644438577,"data":"    \"FTU\": {\n"}
+,{"stream_name":"stdout","time":191.644441457,"data":"      \"train\": null,\n"}
+,{"stream_name":"stdout","time":191.644444401,"data":"      \"val\": null,\n"}
+,{"stream_name":"stdout","time":191.644447385,"data":"      \"test\": null\n"}
+,{"stream_name":"stdout","time":191.644450587,"data":"    }\n"}
+,{"stream_name":"stdout","time":191.644453543,"data":"  }\n"}
+,{"stream_name":"stdout","time":191.644456383,"data":"}\n"}
+,{"stream_name":"stdout","time":191.644459324,"data":"[builder] output_dir: /kaggle/working/ftu_timebase_edacm_v2/training_exports_ftu_edacm_v2\n"}
+,{"stream_name":"stderr","time":285.959270192,"data":"/kaggle/working/code/src/models/transformer.py:52: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n"}
+,{"stream_name":"stderr","time":285.959348202,"data":"  self.encoder = nn.TransformerEncoder(layer, num_layers=cfg.num_layers)\n"}
+,{"stream_name":"stderr","time":286.021117369,"data":"/kaggle/working/code/src/models/cycleformer.py:86: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n"}
+,{"stream_name":"stderr","time":286.021155796,"data":"  self.encoder = nn.TransformerEncoder(layer, num_layers=cfg.num_layers)\n"}
+,{"stream_name":"stderr","time":291.129578121,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":291.12966007,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":291.525509199,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":291.525543064,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":292.552154751,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":293.982494747,"data":"[NbConvertApp] Writing 354002 bytes to __results__.html\n"}
+]

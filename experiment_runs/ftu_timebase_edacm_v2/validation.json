@@ -1,0 +1,44 @@
+{
+  "records": 440,
+  "windows": 3520,
+  "common_offset_windows": 3520,
+  "elapsed_sec": 275.065715941,
+  "finite_features": true,
+  "label_recomputed": true,
+  "frequency_recomputed": true,
+  "split_group_disjoint": true,
+  "single_channel_forward": {
+    "tcn": [
+      2
+    ],
+    "transformer": [
+      2
+    ],
+    "cycleformer": [
+      2
+    ]
+  },
+  "sensitivity": {
+    "-2": {
+      "mean_abs_change": 0.37230224198363854,
+      "max_abs_change": 4.123828125000017
+    },
+    "-1": {
+      "mean_abs_change": 0.18513883099901288,
+      "max_abs_change": 2.1390625000000085
+    },
+    "0": {
+      "mean_abs_change": 0.0,
+      "max_abs_change": 0.0
+    },
+    "1": {
+      "mean_abs_change": 0.20626664595170469,
+      "max_abs_change": 2.306640625
+    },
+    "2": {
+      "mean_abs_change": 0.4020949394495014,
+      "max_abs_change": 4.4609375
+    }
+  },
+  "training_launched": false
+}

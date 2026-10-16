@@ -287,6 +287,10 @@ model_outputs/
 !docs/LOCAL_UV_ANALYSIS.md
 !docs/FTU_SOURCE_AUDIT.md
 !docs/FTU_P0_AUDIT.md
+!PLAN.md
+!experiment_runs/ftu_timebase_edacm_v2/REPORT.md
+!experiment_runs/ftu_timebase_edacm_v2/full_artifacts.zip
+!experiment_runs/ftu_timebase_edacm_v2/kernel.log
 !experiment_runs/ftu_sktime_baseline_2026-10-16/REPORT.md
 !experiment_runs/ftu_sktime_baseline_2026-10-16/*.npz
 !experiment_runs/ftu_sktime_baseline_2026-10-16/*.log

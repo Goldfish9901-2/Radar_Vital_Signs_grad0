@@ -89,6 +89,14 @@ def radar_to_feature_bundle(
         x = np.abs(radar).astype(np.float32)
     elif representation == "log_magnitude":
         x = np.log1p(np.abs(radar)).astype(np.float32)
+    elif representation == "edacm_only":
+        phase, phase_meta = target_edacm_signal(radar)
+        x_time = phase[None, :].astype(np.float32)
+        x_freq, freq_hz, freq_meta = frequency_features(x_time)
+        return {"x": x_time, "x_time": x_time, "x_freq": x_freq,
+                "freq_hz": freq_hz, "meta": {**phase_meta, **freq_meta,
+                "representation_alias": representation, "decomposition_method": "none",
+                "feature_domains": ["time", "frequency"]}}
     elif representation == "target_edacm":
         phase, phase_meta = target_edacm_signal(radar)
         x = phase[None, :].astype(np.float32)

@@ -335,6 +335,14 @@ def main() -> None:
 
     dataset_filter = set(args.datasets) if args.datasets else None
     train_ds, val_ds, test_ds, stats = build_datasets(args.export_dir, datasets=dataset_filter)
+    if args.model in {"tcn", "transformer", "cycleformer"}:
+        example = train_ds[0]
+        args.time_channels = int(example["x_time"].shape[0])
+        args.freq_channels = int(example["x_freq"].shape[0])
+        for dataset in (val_ds, test_ds):
+            check = dataset[0]
+            if (check["x_time"].shape[0], check["x_freq"].shape[0]) != (args.time_channels, args.freq_channels):
+                raise ValueError("Feature channel counts differ across splits")
     loader_kwargs = {
         "batch_size": args.batch_size,
         "num_workers": args.num_workers,

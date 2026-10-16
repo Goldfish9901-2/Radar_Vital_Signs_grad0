@@ -29,6 +29,8 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from src.data.ftu_timebase import frame_times, labels_at_frames
+
 from src.features.edacm import (
     DEFAULT_EDACM_CANDIDATE_MULTIPLIER,
     DEFAULT_EDACM_TOP_BINS,
@@ -94,6 +96,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--window-size", type=int, default=DEFAULT_WINDOW_SIZE)
     parser.add_argument("--stride", type=int, default=DEFAULT_STRIDE)
+    parser.add_argument("--ftu-start-offset-s", type=float, default=0.0,
+                        help="Assumed radar start on the HR relative clock; not calibrated synchronization.")
     parser.add_argument(
         "--representation",
         choices=[
@@ -101,6 +105,7 @@ def parse_args() -> argparse.Namespace:
             "plain_vmd",
             "target_edacm_vmd",
             "target_edacm",
+            "edacm_only",
             "log_magnitude",
             "magnitude",
             "real_imag",
@@ -146,6 +151,8 @@ def parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--split-manifest", type=Path, default=None,
+                        help="Freeze group assignments from a previous training manifest.")
     parser.add_argument(
         "--split-ratios",
         type=float,
@@ -1314,7 +1321,7 @@ def build_training_dataset(args: argparse.Namespace) -> None:
     bgt_long_participants = collect_bgt_long_participants(samples)
     print(f"[builder] collected {len(samples)} exported sample(s)", flush=True)
     group_label_means: Dict[str, float] = {}
-    if args.split_mode == "balanced_grouped":
+    if args.split_mode == "balanced_grouped" and not args.split_manifest:
         print_stage("Stage 1/4: scan group label means for balanced split")
         group_label_means = compute_group_label_means(samples, show_progress=True)
     domain_split_map = build_domain_split_map(
@@ -1325,6 +1332,15 @@ def build_training_dataset(args: argparse.Namespace) -> None:
         split_mode=args.split_mode,
         group_label_means=group_label_means,
     )
+    if args.split_manifest:
+        frozen = {}
+        for row in read_manifest(args.split_manifest):
+            group = row["group_key"]
+            split = row.get("split") or row["domain_split"]
+            if split not in {"train", "val", "test"} or (group in frozen and frozen[group] != split):
+                raise ValueError(f"Invalid or overlapping frozen group: {group}")
+            frozen[group] = split
+        domain_split_map = {get_group_key(s): frozen[get_group_key(s)] for s in samples}
     if bgt_long_participants:
         print(
             (
@@ -1368,14 +1384,24 @@ def build_training_dataset(args: argparse.Namespace) -> None:
         try:
             data = np.load(npz_path, allow_pickle=False)
             radar = data["radar"]
+            if not np.isfinite(radar).all():
+                raise ValueError("Nonfinite radar values")
             ref_time = data["time"]
-            frame_time = build_frame_times(ref_time, int(radar.shape[0]))
-            frame_labels = {
-                "heart_rate": interpolate_label_to_frames(
-                    data["heart_rate"], ref_time, frame_time
-                ),
-            }
+            if dataset == "FTU":
+                frame_time = frame_times(int(radar.shape[0]), 20.0,
+                    radar_start_on_reference_clock_s=args.ftu_start_offset_s)
+                frame_labels = {"heart_rate": labels_at_frames(ref_time, data["heart_rate"], frame_time)}
+                time_mapping = {"method": "physical_frame_rate", "sampling_rate_hz": 20.0,
+                    "start_offset_s": args.ftu_start_offset_s, "synchronization": "assumed_unverified",
+                    "reference_time": np.asarray(ref_time).tolist(),
+                    "record_label_coverage": label_coverage(frame_labels["heart_rate"])}
+            else:
+                frame_time = build_frame_times(ref_time, int(radar.shape[0]))
+                frame_labels = {"heart_rate": interpolate_label_to_frames(data["heart_rate"], ref_time, frame_time)}
+                time_mapping = {"method": "legacy_reference_span"}
         except Exception as exc:  # noqa: BLE001
+            if dataset == "FTU":
+                raise ValueError(f"Invalid FTU record {sample_key}") from exc
             print_progress(sample_idx, len(samples), f"skip {sample_key}: {exc}")
             continue
 
@@ -1447,6 +1473,7 @@ def build_training_dataset(args: argparse.Namespace) -> None:
                 "label_reduction": args.label_reduction,
                 "label_coverage": coverage,
                 "feature_meta": feature_meta,
+                "time_mapping": time_mapping,
             }
             save_window(
                 path=out_path,
@@ -1498,6 +1525,8 @@ def build_training_dataset(args: argparse.Namespace) -> None:
             "datasets": list(args.datasets),
             "window_size": args.window_size,
             "stride": args.stride,
+            "ftu_start_offset_s": args.ftu_start_offset_s,
+            "ftu_time_mapping": "20 Hz; explicit assumed offset; no extrapolation",
             "representation": args.representation,
             "target": args.target,
             "required_targets": list(required),
@@ -1524,10 +1553,12 @@ def build_training_dataset(args: argparse.Namespace) -> None:
             "sampling_rate_hz": DEFAULT_SAMPLING_RATE_HZ,
             "x_rda_representation": DEFAULT_RDA_REPRESENTATION,
             "output_arrays": ["x", "x_time", "x_freq", "x_rda", "freq_hz"],
-            "method_pipeline": list(METHOD_PIPELINE),
+            "method_pipeline": (["target_selection", "EDACM", "time_frequency_features"]
+                                if args.representation == "edacm_only" else list(METHOD_PIPELINE)),
             "innovation_modules": list(INNOVATION_MODULES),
             "domain_adaptation_method": DOMAIN_ADAPTATION_METHOD,
             "split_mode": args.split_mode,
+            "split_manifest": str(args.split_manifest) if args.split_manifest else None,
             "grouping": {
                 "FTU": "participant_id",
                 "BGT60TR13C": "participant_id",

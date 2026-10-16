@@ -1,0 +1,47 @@
+{
+  "samples_seen": 440,
+  "samples_used": 440,
+  "windows_written": 3520,
+  "windows_skipped_label": 0,
+  "windows_skipped_short": 0,
+  "by_dataset": {
+    "FTU": {
+      "samples_used": 440,
+      "windows_written": 3520,
+      "windows_skipped_label": 0
+    }
+  },
+  "by_split": {
+    "train": 2112,
+    "val": 704,
+    "test": 704
+  },
+  "groups_by_dataset_split": {
+    "FTU": {
+      "train": [
+        "FTU/participant/2",
+        "FTU/participant/3",
+        "FTU/participant/4",
+        "FTU/participant/5",
+        "FTU/participant/7",
+        "FTU/participant/9"
+      ],
+      "val": [
+        "FTU/participant/10",
+        "FTU/participant/6"
+      ],
+      "test": [
+        "FTU/participant/1",
+        "FTU/participant/8"
+      ]
+    }
+  },
+  "group_label_means": {},
+  "split_label_means": {
+    "FTU": {
+      "train": null,
+      "val": null,
+      "test": null
+    }
+  }
+}

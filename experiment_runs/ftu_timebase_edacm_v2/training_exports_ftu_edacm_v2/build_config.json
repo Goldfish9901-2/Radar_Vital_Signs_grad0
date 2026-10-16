@@ -1,0 +1,98 @@
+{
+  "exports_dir": "/kaggle/working/ftu_timebase_edacm_v2/input_manifest",
+  "output_dir": "/kaggle/working/ftu_timebase_edacm_v2/training_exports_ftu_edacm_v2",
+  "datasets": [
+    "FTU"
+  ],
+  "window_size": 256,
+  "stride": 128,
+  "ftu_start_offset_s": 0.0,
+  "ftu_time_mapping": "20 Hz; explicit assumed offset; no extrapolation",
+  "representation": "edacm_only",
+  "target": "heart_rate",
+  "required_targets": [
+    "heart_rate"
+  ],
+  "label_reduction": "mean",
+  "min_label_coverage": 0.8,
+  "normalize": "none",
+  "edacm_top_bins": 3,
+  "edacm_candidate_multiplier": 8,
+  "target_selection_method": "rda_vital_sign_stability_score",
+  "target_selection_score_weights": {
+    "energy": 0.35,
+    "phase_stability": 0.25,
+    "hr_band_peak": 0.25,
+    "spatial_consistency": 0.15
+  },
+  "hr_band_hz": [
+    0.75,
+    2.5
+  ],
+  "rda_stability_segments": 4,
+  "vmd_k": 7,
+  "vmd_alpha": 2000.0,
+  "vmd_max_iter": 120,
+  "vmd_tol": 1e-05,
+  "resp_band_hz": [
+    0.1,
+    0.6
+  ],
+  "sampling_rate_hz": 20.0,
+  "x_rda_representation": "log_magnitude",
+  "output_arrays": [
+    "x",
+    "x_time",
+    "x_freq",
+    "x_rda",
+    "freq_hz"
+  ],
+  "method_pipeline": [
+    "target_selection",
+    "EDACM",
+    "time_frequency_features"
+  ],
+  "innovation_modules": [
+    "EDACM target phase representation",
+    "HR-AdaVMD radar micro-motion decomposition",
+    "CycleFormer physiological period-token modeling",
+    "Pseudo-label temporal adaptation for cross-dataset heart-rate estimation"
+  ],
+  "domain_adaptation_method": "Pseudo-label adaptation + temporal confidence weighting",
+  "split_mode": "stable_grouped",
+  "split_manifest": "/kaggle/input/notebooks/goldfish9901/nn-bench-e2a-hr-adavmd-proposed-ftu/training_exports/manifest.csv",
+  "grouping": {
+    "FTU": "participant_id",
+    "BGT60TR13C": "participant_id",
+    "PhysDrive": "session_id"
+  },
+  "ftu_special_case_policy": {
+    "mode": "soft_balance_across_splits",
+    "special_participants": [
+      "2",
+      "5",
+      "6"
+    ],
+    "special_participants_note": {
+      "2": "experienced meditator",
+      "5": "asthma",
+      "6": "asthma"
+    },
+    "elevated_hr_participants": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "rule": "Keep participant groups intact; softly prefer placing at least one known special participant in each of train/val/test when feasible, while balancing HR label means."
+  },
+  "bgt_long_split": "test",
+  "bgt_long_participants": [],
+  "split_ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "seed": 42,
+  "max_windows_per_sample": null
+}

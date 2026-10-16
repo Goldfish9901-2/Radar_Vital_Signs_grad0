@@ -36,6 +36,10 @@ def resolve_window_path(raw_path: str, export_dir: Path) -> Path:
         return path
     marker = "training_exports/"
     text = raw_path.replace("\\", "/")
+    if "/windows/" in text:
+        candidate = export_dir / "windows" / text.split("/windows/", 1)[1]
+        if candidate.exists():
+            return candidate
     if marker in text:
         rel = text.split(marker, 1)[1]
         candidate = export_dir / rel
