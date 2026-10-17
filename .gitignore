@@ -288,6 +288,10 @@ model_outputs/
 !docs/FTU_SOURCE_AUDIT.md
 !docs/FTU_P0_AUDIT.md
 !PLAN.md
+!experiment_runs/ftu_record_learnability/REPORT.md
+!experiment_runs/ftu_record_learnability/*.log
+!experiment_runs/ftu_record_learnability/*.npz
+!experiment_runs/ftu_record_learnability/*.pt
 !experiment_runs/ftu_position_abcd/REPORT.md
 !experiment_runs/ftu_position_abcd/kernel.log
 !experiment_runs/ftu_position_abcd/*.npz

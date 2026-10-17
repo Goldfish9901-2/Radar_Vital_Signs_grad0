@@ -1,0 +1,57 @@
+{
+  "named_records": 264,
+  "unique_captures": 216,
+  "duplicate_aliases_removed": 48,
+  "windows": 1728,
+  "split_records": {
+    "train": 108,
+    "evaluation": 54,
+    "val": 54
+  },
+  "subjects": [
+    {
+      "subject": "FTU/participant/2",
+      "unique_dates": 1,
+      "min_start_gap_s": 80.0,
+      "unique_captures": 36,
+      "missing_radar_start": 0
+    },
+    {
+      "subject": "FTU/participant/3",
+      "unique_dates": 1,
+      "min_start_gap_s": 80.0,
+      "unique_captures": 36,
+      "missing_radar_start": 20
+    },
+    {
+      "subject": "FTU/participant/4",
+      "unique_dates": 1,
+      "min_start_gap_s": 80.0,
+      "unique_captures": 36,
+      "missing_radar_start": 0
+    },
+    {
+      "subject": "FTU/participant/5",
+      "unique_dates": 1,
+      "min_start_gap_s": 81.0,
+      "unique_captures": 36,
+      "missing_radar_start": 0
+    },
+    {
+      "subject": "FTU/participant/7",
+      "unique_dates": 1,
+      "min_start_gap_s": 83.0,
+      "unique_captures": 36,
+      "missing_radar_start": 0
+    },
+    {
+      "subject": "FTU/participant/9",
+      "unique_dates": 1,
+      "min_start_gap_s": 84.0,
+      "unique_captures": 36,
+      "missing_radar_start": 0
+    }
+  ],
+  "elapsed_sec": 0.8139026999997441,
+  "uses_labels_for_split": false
+}

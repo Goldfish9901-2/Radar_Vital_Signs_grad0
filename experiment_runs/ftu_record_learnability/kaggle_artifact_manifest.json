@@ -1,0 +1,15 @@
+{
+  "execution.json": "ff7148f070d2a093daee99198e94fc91f4c080918c9c43aea7da8a898e7629bf",
+  "summary.csv": "7e9014d04f1f00773a8b5a9036791f5807b76633f77d8a70d8226912965d5e41",
+  "synthetic_seed44_true.pt": "767a2f9c43def525ab75e1dd0ea19ef48b0d3f427f6d6c6a71abb6b1355c33d2",
+  "predictions.csv": "237a11fd7c243b4f2e7f4d1096b646568562aac6e386a19187e75bf1d288f20e",
+  "record_split.csv": "64b90334733236ccca348ad42bfbbd1bac355f65f0c7dee4a044f64e9287fe94",
+  "permutations.csv": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "synthetic_inputs.csv": "e937120bd4317ec146eb0e463530f1722b6a74726875594958ad6f5898726559",
+  "protocol.json": "7dc06e77af696999f575c16f8a76d7a9e24a1d450d0b536c16aaf80d831f5238",
+  "history.csv": "44803f4c9a4f8dd3b2770e73b8b374b6ef492cbee3092f7d7572d4c4149a1e95",
+  "synthetic_seed43_true.pt": "3500d07c48bb86fe379e9b2813155073cc6708dc458ff002c5b9695ec5451b6e",
+  "source_manifest.json": "fa3bc48976591c0d67f1ea5577fcabeb7ec4a38a159acdaaf37e7f58ad9c4fd8",
+  "synthetic_features.npz": "c94e4b86b5990bdec414d90bf6a7bd870b8d530a170b90f93b28974bb0ca9e71",
+  "synthetic_seed42_true.pt": "2af91b1c926aaae6cb4f8796300dd14a706711bee8025bb2efff5bd6390cc38d"
+}

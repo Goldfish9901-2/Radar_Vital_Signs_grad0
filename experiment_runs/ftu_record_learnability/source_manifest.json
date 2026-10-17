@@ -1,0 +1,15 @@
+{
+  "files": {
+    "src/__init__.py": "6a8e79275cf3eef7e95048b5019fc9cf646a3c049314dea02980369380155abd",
+    "src/training/__init__.py": "bf83a02824c4600f477d222de97fb722f6442316afe207b6dac17f7d0d310597",
+    "src/training/ftu_position_protocol.py": "8e38aa11dbc6739c8689e92a5142634313e6a15002d7802b48a6470c781b8fed",
+    "src/training/run_ftu_record.py": "3fc410402a75f2117ff403e9127b5fc81355afd307721c47947257bd52fdb7c4",
+    "src/features/edacm.py": "c3ce6da34fc70be9df09f4550570cf427b27ccfa80311be6b43565be34af5dbc",
+    "src/features/hr_adavmd.py": "d23e479fd196f19ec2cd5b85e6d90b328d29d32dde42afd6447c264ee3c0092c",
+    "src/features/representations.py": "10457cb849cebe216b97fca2e7cbe4e53e9c1f8bd6585a77eb1711824c5b46d4",
+    "src/features/__init__.py": "2691b3c07255195547c0d6451ebe0f76ba55093ddd24ffe03e609da9dec6ae1e",
+    "protocol.json": "7dc06e77af696999f575c16f8a76d7a9e24a1d450d0b536c16aaf80d831f5238",
+    "record_split.csv": "64b90334733236ccca348ad42bfbbd1bac355f65f0c7dee4a044f64e9287fe94"
+  },
+  "base_commit": "2b8b288ab35bcadbd3b7471ad6deb2e5e7f65551"
+}

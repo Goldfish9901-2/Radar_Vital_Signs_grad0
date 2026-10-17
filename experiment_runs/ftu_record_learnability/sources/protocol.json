@@ -1,0 +1,60 @@
+{
+  "model": "MLP 129->64->32->1; GELU; dropout .15",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "shuffle_seeds": [
+    101,
+    202,
+    303
+  ],
+  "epochs": 60,
+  "patience": 12,
+  "batch_size": 64,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "optimizer": "AdamW",
+  "loss": "SmoothL1 beta=.5",
+  "clip_grad_norm": 1.0,
+  "scheduler": "ReduceLROnPlateau factor=.5 patience=4 on validation centered RMSE",
+  "feature_processing": "unchanged exported x_freq; per-bin StandardScaler fitted on new training captures only",
+  "selection": "minimum validation record-centered RMSE using correct labels in all arms",
+  "shuffle": "fixed per-record permutation of 8 training labels; same label multiset; validation/evaluation always correct",
+  "capture_group": "same subject/date/reference start plus exact time+frequency feature equality; canonical lexicographic alias only",
+  "split": "stable SHA256 rank 20261017|capture_key within subject/condition; 2 train, 1 val, 1 evaluation",
+  "subjects": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    9
+  ],
+  "exclusions": "original validation/test subjects never enter this experiment",
+  "scope": "same-subject same-visit cross-triggered-capture diagnostic; NOT cross-visit/session generalization",
+  "continuous_capture_evidence": "Separate finite 1200-frame sensor starts where logs exist; no overlapping unique start intervals; p03 partial missing radar logs noted",
+  "synthetic": {
+    "train_records": 96,
+    "val_records": 24,
+    "evaluation_records": 24,
+    "windows_per_record": 8,
+    "train_grid_hz": "0.75 + .05*k, k=0..35",
+    "val_grid_hz": "0.775 + .05*k, k=0..34",
+    "evaluation_grid_hz": "0.7625 or 0.7875 + .05*k, k=0..34",
+    "phase": "uniform 0..2pi",
+    "amplitude": "uniform .5..2",
+    "noise": "Gaussian std uniform 0...3 times amplitude",
+    "feature": "same zscore_1d -> frequency_features pipeline",
+    "gate": "all three seeds: validation AND evaluation centered RMSE <=4.6875 bpm AND centered r >=.9",
+    "groups": "independent synthetic groups of eight signals, not physiological continuous recordings"
+  },
+  "inference": "seeds are optimization replicates, not independent subjects; report subject-level paired differences; no window-level significance claims",
+  "interpretation": [
+    "synthetic failure: stop before real-data training",
+    "synthetic pass with real train-only fit: investigate frontend/labels/cross-record stability",
+    "consistent held-out-capture advantage over shuffles: then investigate cross-subject transfer",
+    "true and shuffled similar: no reproducible dynamic signal evidence in this representation"
+  ]
+}
