@@ -1,0 +1,19 @@
+{
+  "elapsed_sec": 39.715662469999984,
+  "torch_version": "2.11.0+cu128",
+  "gpu": "Tesla T4",
+  "initialization_hashes": {
+    "A_seed42": "f28302f30499cc69f1995e0815cd1a6dd27713f94fbe9ac537dfcd9b36749bfd",
+    "A_seed43": "711c6ea1b6def39c2bfc962b791fd345ed65b5edbc48d821f1de55c6eb34b3b0",
+    "A_seed44": "4aa96ab997eeeabc5289b2d53b7416d05f9fd2b5c51cab844831a06e7f8fe0cb",
+    "B_seed42": "f28302f30499cc69f1995e0815cd1a6dd27713f94fbe9ac537dfcd9b36749bfd",
+    "B_seed43": "711c6ea1b6def39c2bfc962b791fd345ed65b5edbc48d821f1de55c6eb34b3b0",
+    "B_seed44": "4aa96ab997eeeabc5289b2d53b7416d05f9fd2b5c51cab844831a06e7f8fe0cb",
+    "C_seed42": "f28302f30499cc69f1995e0815cd1a6dd27713f94fbe9ac537dfcd9b36749bfd",
+    "C_seed43": "711c6ea1b6def39c2bfc962b791fd345ed65b5edbc48d821f1de55c6eb34b3b0",
+    "C_seed44": "4aa96ab997eeeabc5289b2d53b7416d05f9fd2b5c51cab844831a06e7f8fe0cb",
+    "D_seed42": "f28302f30499cc69f1995e0815cd1a6dd27713f94fbe9ac537dfcd9b36749bfd",
+    "D_seed43": "711c6ea1b6def39c2bfc962b791fd345ed65b5edbc48d821f1de55c6eb34b3b0",
+    "D_seed44": "4aa96ab997eeeabc5289b2d53b7416d05f9fd2b5c51cab844831a06e7f8fe0cb"
+  }
+}

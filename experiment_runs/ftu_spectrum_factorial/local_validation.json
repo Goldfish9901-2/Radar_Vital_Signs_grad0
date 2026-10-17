@@ -1,0 +1,9 @@
+{
+  "elapsed_sec": 1.8227901999925962,
+  "verified_original_hashes": 24,
+  "verified_prediction_groups": 60,
+  "exact_original_features": true,
+  "max_metric_float32_csv_delta": 4.1513570225859553e-07,
+  "A_reproduction_max_rmse_delta": 4.414728334012352e-07,
+  "selected_arm": "D"
+}

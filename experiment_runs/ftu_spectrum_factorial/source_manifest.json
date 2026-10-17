@@ -1,0 +1,13 @@
+{
+  "files": {
+    "src/__init__.py": "6a8e79275cf3eef7e95048b5019fc9cf646a3c049314dea02980369380155abd",
+    "src/training/__init__.py": "bf83a02824c4600f477d222de97fb722f6442316afe207b6dac17f7d0d310597",
+    "src/training/ftu_spectrum_factorial.py": "ebd715181dd30663d296e5fbc42628e42079a605f4f2d4d56e66a5af7090e1cb",
+    "src/features/edacm.py": "c3ce6da34fc70be9df09f4550570cf427b27ccfa80311be6b43565be34af5dbc",
+    "src/features/hr_adavmd.py": "d23e479fd196f19ec2cd5b85e6d90b328d29d32dde42afd6447c264ee3c0092c",
+    "src/features/representations.py": "10457cb849cebe216b97fca2e7cbe4e53e9c1f8bd6585a77eb1711824c5b46d4",
+    "src/features/__init__.py": "2691b3c07255195547c0d6451ebe0f76ba55093ddd24ffe03e609da9dec6ae1e",
+    "reference_features.npz": "c94e4b86b5990bdec414d90bf6a7bd870b8d530a170b90f93b28974bb0ca9e71"
+  },
+  "base_commit": "ab3bba97f293eddbb8f2ea46d41db760db5c1dc0"
+}

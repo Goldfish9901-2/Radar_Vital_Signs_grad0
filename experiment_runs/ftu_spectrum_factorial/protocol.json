@@ -1,0 +1,71 @@
+{
+  "arms": {
+    "A": {
+      "scale": true,
+      "band": false
+    },
+    "B": {
+      "scale": false,
+      "band": false
+    },
+    "C": {
+      "scale": true,
+      "band": true
+    },
+    "D": {
+      "scale": false,
+      "band": true
+    }
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 60,
+  "patience": 12,
+  "batch_size": 64,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "model": "129->64->32->1 GELU dropout .15; unchanged",
+  "loss": "SmoothL1 beta .5",
+  "scheduler": "ReduceLROnPlateau factor .5 patience 4; validation centered RMSE",
+  "clip": 1.0,
+  "preprocessing": "original per-window zscore preserved; optional train-only per-bin StandardScaler; then mask",
+  "band_hz": [
+    0.5,
+    2.75
+  ],
+  "mask": "inclusive bin-center frequencies; all other bins zero AFTER optional scaling",
+  "training_data": "exact previous 768 signals; RNG 20261017; validation unchanged 192 signals",
+  "checkpoint_selection": "minimum validation centered RMSE separately per arm/seed",
+  "configuration_selection": "lowest mean validation centered RMSE across three seeds; alphabetic tie break",
+  "evaluation": "previous evaluation is development evidence only; fresh frozen final set generated AFTER configuration selection",
+  "final_seed": 20261018,
+  "final_groups_per_grid": 24,
+  "signals_per_group": 8,
+  "final_grids": {
+    "on_grid": "0.75+.05*k k=0..35",
+    "between_grid": "0.7625/.7875+.05*k k=0..34"
+  },
+  "generation": "uniform grid draw, phase uniform [0,2pi], amplitude uniform [.5,2], relative Gaussian noise std uniform [0,.3]",
+  "metrics": "raw and group-centered RMSE/r/population std ratio; MAE; center over full artificial group BEFORE stratification",
+  "strata": {
+    "frequency_edges_hz": [
+      0.75,
+      1.25,
+      1.75,
+      2.25,
+      2.50001
+    ],
+    "noise_edges": [
+      0,
+      0.1,
+      0.2,
+      0.300001
+    ]
+  },
+  "contrasts": "paired A-B,A-C,C-D,B-D; positive RMSE difference means second arm improves; report each seed, no seed-as-subject inference",
+  "success_reference": "report old reference RMSE<=4.6875 and r>=.9 descriptively; no real-data training in this experiment",
+  "scope": "synthetic readout only; no causal claim that low-variance noise bins explain all errors"
+}

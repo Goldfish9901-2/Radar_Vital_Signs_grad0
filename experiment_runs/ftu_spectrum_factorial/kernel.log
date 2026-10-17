@@ -1,0 +1,19 @@
+[{"stream_name":"stdout","time":33.789710718,"data":"A_seed42 best_epoch 31 validation 6.463762562306588\n"}
+,{"stream_name":"stdout","time":35.471500484,"data":"A_seed43 best_epoch 26 validation 6.433552630215675\n"}
+,{"stream_name":"stdout","time":37.949760668,"data":"A_seed44 best_epoch 51 validation 6.587768297734678\n"}
+,{"stream_name":"stdout","time":40.591863979,"data":"B_seed42 best_epoch 58 validation 4.635801842511482\n"}
+,{"stream_name":"stdout","time":43.141763472,"data":"B_seed43 best_epoch 60 validation 3.7555690941964825\n"}
+,{"stream_name":"stdout","time":45.626383456,"data":"B_seed44 best_epoch 60 validation 4.430308252300242\n"}
+,{"stream_name":"stdout","time":48.235142845,"data":"C_seed42 best_epoch 60 validation 4.14386568109468\n"}
+,{"stream_name":"stdout","time":50.722288058,"data":"C_seed43 best_epoch 60 validation 3.803535342585241\n"}
+,{"stream_name":"stdout","time":53.361596643,"data":"C_seed44 best_epoch 60 validation 4.051593222980992\n"}
+,{"stream_name":"stdout","time":55.906213663,"data":"D_seed42 best_epoch 60 validation 2.837598186533022\n"}
+,{"stream_name":"stdout","time":58.462691094,"data":"D_seed43 best_epoch 60 validation 2.59505579014973\n"}
+,{"stream_name":"stdout","time":60.948741992,"data":"D_seed44 best_epoch 60 validation 2.734415971032827\n"}
+,{"stream_name":"stderr","time":71.521073814,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":71.521145678,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":71.969369822,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":71.969408279,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":72.88485218,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":74.232686668,"data":"[NbConvertApp] Writing 1030170 bytes to __results__.html\n"}
+]

@@ -1,4 +1,6 @@
 # Preserve archived evidence bytes so artifact and source SHA256 checks survive checkout.
+experiment_runs/ftu_spectrum_factorial/** -text whitespace=cr-at-eol
+experiment_runs/ftu_spectrum_factorial/sources/** whitespace=cr-at-eol,-blank-at-eof
 experiment_runs/ftu_record_learnability/** -text whitespace=cr-at-eol
 experiment_runs/ftu_record_learnability/sources/** whitespace=cr-at-eol,-blank-at-eof
 experiment_runs/ftu_source_audit_2026-10-13/** -text whitespace=cr-at-eol
