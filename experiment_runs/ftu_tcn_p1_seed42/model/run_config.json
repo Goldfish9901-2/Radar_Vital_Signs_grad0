@@ -1,0 +1,79 @@
+{
+  "config": {
+    "time_channels": 1,
+    "freq_channels": 1,
+    "hidden_channels": 48,
+    "num_blocks": 4,
+    "kernel_size": 7,
+    "dropout": 0.15,
+    "use_frequency_domain": true
+  },
+  "model": "tcn",
+  "label_stats": {
+    "mean": 73.62093353271484,
+    "std": 10.873780250549316
+  },
+  "train_size": 2112,
+  "val_size": 704,
+  "test_size": 704,
+  "datasets": [
+    "FTU"
+  ],
+  "parameters": 252193,
+  "device": "cuda",
+  "torch_version": "2.11.0+cu128",
+  "args": {
+    "model": "tcn",
+    "export_dir": "/kaggle/working/frozen_data/training_exports_ftu_edacm_v2",
+    "output_dir": "/kaggle/working/ftu_tcn_p1/model",
+    "datasets": [
+      "FTU"
+    ],
+    "epochs": 30,
+    "batch_size": 64,
+    "num_workers": 0,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "patience": 8,
+    "seed": 42,
+    "d_model": 64,
+    "d_ff": 128,
+    "e_layers": 2,
+    "hidden_channels": 48,
+    "num_blocks": 4,
+    "kernel_size": 7,
+    "nhead": 4,
+    "num_layers": 2,
+    "patch_len": 16,
+    "patch_stride": 8,
+    "emb_dim": 64,
+    "tslanet_depth": 3,
+    "tslanet_patch_len": 16,
+    "tslanet_patch_stride": 8,
+    "tslanet_dropout": 0.5,
+    "use_asb": true,
+    "use_icb": true,
+    "adaptive_filter": true,
+    "normalize": true,
+    "channel_mode": "joint",
+    "heart_periods": null,
+    "respiration_periods": null,
+    "dropout": 0.15,
+    "decomp_method": "moving_avg",
+    "top_k": 5,
+    "moving_avg": 25,
+    "down_sampling_layers": 3,
+    "time_only": false,
+    "limit_batches": null,
+    "time_channels": 1,
+    "freq_channels": 1
+  },
+  "provenance": {
+    "git_commit": "unknown",
+    "representation": "edacm_only",
+    "dataset_dir": "/kaggle/working/frozen_data/training_exports_ftu_edacm_v2",
+    "dataset_manifest_sha256": "86098dd6f68c4376",
+    "seed": 42,
+    "model": "tcn"
+  }
+}

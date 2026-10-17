@@ -394,6 +394,7 @@ def main() -> None:
         scheduler.step(val_metrics["mae_bpm"])
         row = {"epoch": epoch, "train": train_metrics, "val": val_metrics, "lr": optimizer.param_groups[0]["lr"]}
         history.append(row)
+        (args.output_dir / "history.json").write_text(json.dumps(history, indent=2), encoding="utf-8")
         print(
             f"epoch {epoch:03d} | train MAE {train_metrics['mae_bpm']:.3f} RMSE {train_metrics['rmse_bpm']:.3f} BPM "
             f"| val MAE {val_metrics['mae_bpm']:.3f} RMSE {val_metrics['rmse_bpm']:.3f} BPM | lr {row['lr']:.2e}",
@@ -410,7 +411,6 @@ def main() -> None:
                 print(f"early stopping at epoch {epoch}", flush=True)
                 break
 
-        (args.output_dir / "history.json").write_text(json.dumps(history, indent=2), encoding="utf-8")
 
     checkpoint = torch.load(args.output_dir / "best.pt", map_location=device, weights_only=False)
     model.load_state_dict(checkpoint["model_state"])

@@ -1,0 +1,55 @@
+{
+  "loss": 0.3067756715145978,
+  "mae_bpm": 5.4987545230171895,
+  "rmse_bpm": 6.459360101006248,
+  "within_3bpm_percent": 35.08522727272727,
+  "within_5bpm_percent": 52.98295454545455,
+  "by_participant": {
+    "1": {
+      "count": 352,
+      "mae_bpm": 3.9402557503093374,
+      "rmse_bpm": 4.77299448903283,
+      "pearson_r": 0.10642620166243219,
+      "within_3bpm_percent": 43.18181818181818,
+      "within_5bpm_percent": 66.76136363636364,
+      "within_10bpm_percent": 97.44318181818181,
+      "label_mean_bpm": 76.49555316838351,
+      "pred_mean_bpm": 72.60306926207109
+    },
+    "8": {
+      "count": 352,
+      "mae_bpm": 7.057253100655296,
+      "rmse_bpm": 8.432828917948155,
+      "pearson_r": -0.3060765003553952,
+      "within_3bpm_percent": 26.988636363636363,
+      "within_5bpm_percent": 39.20454545454545,
+      "within_10bpm_percent": 66.19318181818181,
+      "label_mean_bpm": 78.51920056343079,
+      "pred_mean_bpm": 71.79460003159262
+    }
+  },
+  "by_group": {
+    "FTU/participant/1": {
+      "count": 352,
+      "mae_bpm": 3.9402557503093374,
+      "rmse_bpm": 4.77299448903283,
+      "pearson_r": 0.10642620166243219,
+      "within_3bpm_percent": 43.18181818181818,
+      "within_5bpm_percent": 66.76136363636364,
+      "within_10bpm_percent": 97.44318181818181,
+      "label_mean_bpm": 76.49555316838351,
+      "pred_mean_bpm": 72.60306926207109
+    },
+    "FTU/participant/8": {
+      "count": 352,
+      "mae_bpm": 7.057253100655296,
+      "rmse_bpm": 8.432828917948155,
+      "pearson_r": -0.3060765003553952,
+      "within_3bpm_percent": 26.988636363636363,
+      "within_5bpm_percent": 39.20454545454545,
+      "within_10bpm_percent": 66.19318181818181,
+      "label_mean_bpm": 78.51920056343079,
+      "pred_mean_bpm": 71.79460003159262
+    }
+  }
+}

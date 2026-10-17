@@ -1,0 +1,16 @@
+{
+  "id": "goldfish9901/ftu-edacm-tcn-p1-seed42",
+  "title": "FTU EDACM TCN P1 Seed42",
+  "code_file": "run.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "kernel_sources": [
+    "goldfish9901/ftu-timebase-edacm-v2"
+  ],
+  "competition_sources": [],
+  "model_sources": []
+}

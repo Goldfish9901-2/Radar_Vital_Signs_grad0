@@ -1,0 +1,49 @@
+{
+  "seed": 42,
+  "max_epochs": 30,
+  "patience": 8,
+  "batch_size": 64,
+  "num_workers": 0,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "dropout": 0.15,
+  "hidden_channels": 48,
+  "num_blocks": 4,
+  "kernel_size": 7,
+  "model": "tcn",
+  "time_channels": 1,
+  "freq_channels": 1,
+  "checkpoint_selection": "minimum validation MAE; never test or tracking metrics",
+  "train_subjects": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    9
+  ],
+  "val_subjects": [
+    6,
+    10
+  ],
+  "test_subjects": [
+    1,
+    8
+  ],
+  "negative_control": "swap p01/p08 matching record suffix and window_start; both branches together",
+  "dynamic_metrics": "within-record Pearson r and std(pred)/std(HR); pooled record-centered metrics",
+  "limitations": [
+    "single seed",
+    "two previously explored test subjects",
+    "eight overlapping windows per record",
+    "offset zero assumed, not calibrated synchronization"
+  ],
+  "input_archive_sha256": "24dd08e8c8fda3fd438df37305cfc8dfefd845f3c0297e1ef06995d30fc91810",
+  "manifest_sha256": "86098dd6f68c4376bf5b89e4dc49e81b0ec1d69f7d0b06cd18f6f0b05030e50f",
+  "numpy_version": "2.1.3",
+  "torch_version": "2.11.0+cu128",
+  "cuda_version": "12.8",
+  "gpu": "Tesla T4",
+  "deterministic_algorithms": "enabled_warn_only",
+  "source_manifest_sha256": "df0d733e33a064328861555377c97dedab7f23d0c3255304a701fdd5801b8c64"
+}

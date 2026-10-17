@@ -288,6 +288,9 @@ model_outputs/
 !docs/FTU_SOURCE_AUDIT.md
 !docs/FTU_P0_AUDIT.md
 !PLAN.md
+!experiment_runs/ftu_tcn_p1_seed42/REPORT.md
+!experiment_runs/ftu_tcn_p1_seed42/kernel.log
+!experiment_runs/ftu_tcn_p1_seed42/model/*.pt
 !experiment_runs/ftu_timebase_edacm_v2/REPORT.md
 !experiment_runs/ftu_timebase_edacm_v2/full_artifacts.zip
 !experiment_runs/ftu_timebase_edacm_v2/kernel.log

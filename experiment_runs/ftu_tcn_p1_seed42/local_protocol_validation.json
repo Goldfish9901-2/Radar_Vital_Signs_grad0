@@ -1,0 +1,8 @@
+{
+  "test_windows": 704,
+  "swap_pairs": 352,
+  "labels_not_used": true,
+  "permutation_involution": true,
+  "record_centering_sanity": true,
+  "elapsed_sec": 0.02110519999951066
+}
