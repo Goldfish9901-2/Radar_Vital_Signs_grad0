@@ -1,0 +1,7 @@
+{
+  "train_freq_min": -4.330542087554932,
+  "train_freq_max": 6.2281975746154785,
+  "synthetic_single_bin_max": 11.313708305358887,
+  "warning": "Fixed-time artificial spectra break branch consistency and can be OOD; paired sine is also synthetic.",
+  "theoretical_tcn_receptive_field": 181
+}

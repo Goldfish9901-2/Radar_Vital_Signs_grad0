@@ -1,0 +1,9 @@
+{
+  "input_hashes_match": true,
+  "manifest_matches": true,
+  "ridge_predictions_recomputed": true,
+  "val_selection_verified": true,
+  "donor_mapping_verified": true,
+  "selected_record_verified": true,
+  "elapsed_sec": 8.748723400000017
+}

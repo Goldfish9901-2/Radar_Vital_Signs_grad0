@@ -1,0 +1,9 @@
+sample_tag,group_key,window_start,label_bpm,pred_bpm
+p05_Distance_40_cm_r3,FTU/participant/5,0,95.029296875,95.020355
+p05_Distance_40_cm_r3,FTU/participant/5,128,85.90859375,85.90587
+p05_Distance_40_cm_r3,FTU/participant/5,256,78.17578125,78.17687
+p05_Distance_40_cm_r3,FTU/participant/5,384,75.51953125,75.52135
+p05_Distance_40_cm_r3,FTU/participant/5,512,73.916015625,73.91796
+p05_Distance_40_cm_r3,FTU/participant/5,640,73.08203125,73.08503
+p05_Distance_40_cm_r3,FTU/participant/5,768,73.478515625,73.47847
+p05_Distance_40_cm_r3,FTU/participant/5,896,73.798828125,73.802315

@@ -1,0 +1,23 @@
+{
+  "elapsed_sec": 26.690664997,
+  "B_alpha": 10000.0,
+  "C_best_epoch": 1,
+  "C_epochs": 9,
+  "D_best_step": 100,
+  "D_steps": 125,
+  "D_best_eval_mae": 0.0028810501098632812,
+  "D_fit_threshold": 0.1,
+  "D_pass": true,
+  "selected_training_record": "p05_Distance_40_cm_r3",
+  "training_runs": {
+    "ridge_candidates": 7,
+    "MLP": 1,
+    "single_record_TCN": 1
+  },
+  "label_stats": {
+    "mean": 73.62093353271484,
+    "std": 10.873780250549316
+  },
+  "parameters_C": 10433,
+  "parameters_D": 252193
+}

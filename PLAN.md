@@ -366,6 +366,8 @@ VMD 处理后的原始模态、标准化模态、评分权重需要分别保存�
 
 P1 受控 TCN 已完成（2026-10-17）：固定种子 42、最多 30 epochs，实际 9 epochs 早停，按验证集 MAE 选择 epoch 1。测试 MAE 5.4988 bpm；记录内去均值 r=-0.0321、R_var=0.2574；跨受试者双分支替换 ΔMAE=+0.0567 bpm。本轮未观察到可靠动态跟踪，未扩展 E03—E05 或跨域训练。详见 [P1 报告](experiment_runs/ftu_tcn_p1_seed42/REPORT.md)。
 
+A–D 位置与拟合诊断已完成（2026-10-17）：冻结 TCN 的 HR 区间单 bin 移峰输出跨度仅 0.1100–0.1546 bpm；Ridge / 频域 MLP 测试 MAE 分别为 4.3612 / 4.0027 bpm，记录内去均值 r 分别为 0.0109 / 0.0237，仍无可靠跟踪证据。训练记录 p05_Distance_40_cm_r3 的专门过拟合诊断达到 0.002881 bpm。低 MAE 与可记忆八个样本均不代表动态泛化；详见 [A–D 报告](experiment_runs/ftu_position_abcd/REPORT.md)。
+
 执行记录：[FTU 时间轴与 EDACM-only v2 报告](experiment_runs/ftu_timebase_edacm_v2/REPORT.md)。
 
 440 条记录、3,520 个新版窗口已导出；原始 Polar CSV 独立标签复核通过，固定偏移对照及无训练基线已完成。TCN / Transformer / CycleFormer 单通道工厂前向检查通过；本轮未训练模型。谱峰诊断仍未显示可靠动态跟踪能力，不将其解释为 FTU 不可学习。

@@ -4,6 +4,8 @@ experiment_runs/ftu_p0_audit_2026-10-14/** -text whitespace=cr-at-eol
 experiment_runs/ftu_sktime_baseline_2026-10-16/** -text whitespace=cr-at-eol
 experiment_runs/ftu_timebase_edacm_v2/** -text whitespace=cr-at-eol
 experiment_runs/ftu_tcn_p1_seed42/** -text whitespace=cr-at-eol
+experiment_runs/ftu_position_abcd/** -text whitespace=cr-at-eol
+experiment_runs/ftu_position_abcd/sources/** whitespace=cr-at-eol,-blank-at-eof
 experiment_runs/ftu_tcn_p1_seed42/sources/** whitespace=cr-at-eol,-blank-at-eof
 experiment_runs/ftu_timebase_edacm_v2/sources/** whitespace=cr-at-eol,-blank-at-eof
 # Quoted raw capture logs intentionally retain their original trailing spaces.

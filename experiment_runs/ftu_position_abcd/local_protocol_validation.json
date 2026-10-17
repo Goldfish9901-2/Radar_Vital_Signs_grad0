@@ -1,0 +1,18 @@
+{
+  "selected_record": "p05_Distance_40_cm_r3",
+  "labels": [
+    95.029296875,
+    85.90859375,
+    78.17578125,
+    75.51953125,
+    73.916015625,
+    73.08203125,
+    73.478515625,
+    73.798828125
+  ],
+  "population_hr_std": 7.371174057855076,
+  "windows": 8,
+  "distinct_frequency_vectors": 8,
+  "synthetic_argmax_and_normalization": true,
+  "elapsed_sec": 0.6852174000014202
+}

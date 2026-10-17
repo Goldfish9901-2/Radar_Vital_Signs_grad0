@@ -1,0 +1,12 @@
+[
+  {
+    "condition": "single_bin",
+    "hr_band_max_distance_from_bin16": 2.699099063873291,
+    "anchor_norm": 61.36045837402344
+  },
+  {
+    "condition": "gaussian_sigma2",
+    "hr_band_max_distance_from_bin16": 2.247748374938965,
+    "anchor_norm": 42.928192138671875
+  }
+]
