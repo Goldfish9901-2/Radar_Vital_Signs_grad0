@@ -1,0 +1,26 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "shuffle_seeds": [
+    101,
+    202,
+    303
+  ],
+  "epochs": 60,
+  "patience": 12,
+  "model": "fresh MLP 129-64-32-1 GELU dropout .15; no synthetic pretraining",
+  "preprocessing": "original window normalization; NO per-bin scaler; retain 29 bin centers in [.5,2.75] Hz; zero rest; no renormalization",
+  "training": "AdamW lr .0003 weight_decay .0001 batch64 SmoothL1 beta .5 clip1",
+  "scheduler": "ReduceLROnPlateau factor .5 patience4 on validation centered RMSE",
+  "selection": "minimum correct-label validation record-centered RMSE; evaluation never used for selection",
+  "split": "unchanged deduplicated 216 captures / 1728 windows, 108/54/54 captures",
+  "scope": "same-subject same-visit cross-triggered-capture; p03 partial radar-start logs missing",
+  "shuffle": "fixed within-training-record label permutations; correct validation/evaluation labels; paired initialization and batch order",
+  "signal_baseline": "argmax ORIGINAL frequency vector within same 29-bin .5-2.75Hz mask; bin center*60; no peak interpolation or tuning",
+  "constants": "training global mean/median; no evaluation label information",
+  "outcomes": "raw MAE/RMSE/r/std ratio and record-centered RMSE/R2/r/std ratio; pooled plus six subjects and subject-equal macro",
+  "interpretation": "held-out true-label advantage over shuffles plus positive centered R2 across subjects; diagnostic not permutation significance; no synthetic thresholds"
+}

@@ -1,0 +1,19 @@
+{
+  "elapsed_sec": 0.7929890999948839,
+  "windows": 1728,
+  "captures": 216,
+  "split_counts": {
+    "evaluation": 432,
+    "train": 864,
+    "val": 432
+  },
+  "original_record_hashes_verified": true,
+  "subjects": [
+    "FTU/participant/2",
+    "FTU/participant/3",
+    "FTU/participant/4",
+    "FTU/participant/5",
+    "FTU/participant/7",
+    "FTU/participant/9"
+  ]
+}
