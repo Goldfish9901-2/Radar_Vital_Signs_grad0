@@ -30,3 +30,6 @@ experiment_runs/ftu_adc_phase/sources/** -whitespace
 experiment_runs/ftu_adc_phase/config_evidence/** -whitespace
 experiment_runs/ftu_adc_phase/provenance/data_LogFile.txt -whitespace
 experiment_runs/ftu_adc_phase/provenance/data_Raw_LogFile.csv -whitespace
+experiment_runs/ftu_adc_controlled/** -text whitespace=cr-at-eol
+experiment_runs/ftu_adc_controlled/sources/** -whitespace
+experiment_runs/ftu_adc_controlled/evidence/** -whitespace

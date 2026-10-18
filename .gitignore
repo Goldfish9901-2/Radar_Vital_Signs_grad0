@@ -352,3 +352,7 @@ ref/
 !experiment_runs/ftu_adc_phase/REPORT.md
 !experiment_runs/ftu_adc_phase/*.npz
 !experiment_runs/ftu_adc_phase/provenance/*.npz
+!experiment_runs/ftu_adc_controlled/REPORT.md
+!experiment_runs/ftu_adc_controlled/CORRECTIONS.md
+!experiment_runs/ftu_adc_controlled/*.npz
+!experiment_runs/ftu_adc_controlled/signals/*.npz

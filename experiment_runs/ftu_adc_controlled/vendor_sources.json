@@ -1,0 +1,12 @@
+{
+  "url": "https://www.ti.com/lit/an/swra581b/swra581b.pdf",
+  "title": "TI SWRA581B, revision October2018",
+  "access_date": "2026-10-18",
+  "sections": [
+    "6/figure11,p10",
+    "9.2,pp16-17",
+    "9,p15 packet reorder/header removal precondition"
+  ],
+  "independent_basis": "deviceAR1642 +DCA1000 two-lane logs select the documented2I2Q format; reader port built from vendor pseudocode,not second copy of loader",
+  "limitation": "no hardware known-tone injection; p03 radar log unavailable; payload ordering supported by capture logs and exact file size but not proved by identical readers"
+}
