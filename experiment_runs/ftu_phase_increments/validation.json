@@ -1,0 +1,10 @@
+{
+  "elapsed_sec": 4.884250299997802,
+  "independent_angle_difference_max_error": 1.1901880636600026e-07,
+  "p0_amplitude_identity_max_error": 2.9583103113850484e-06,
+  "all_saved_peaks_recomputed": true,
+  "labels_recomputed": true,
+  "identities_weights_exact": true,
+  "scored_windows_per_condition": 324,
+  "scored_records": 54
+}

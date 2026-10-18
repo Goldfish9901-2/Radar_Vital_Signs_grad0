@@ -1,0 +1,10 @@
+{
+  "elapsed_sec": 11.487904900001013,
+  "records": 54,
+  "positive_control_passed": true,
+  "p0_array_tolerance": 2e-05,
+  "p0_readouts_exact": true,
+  "input_hashes_verified": 56,
+  "training": false,
+  "common_scored_windows": 324
+}

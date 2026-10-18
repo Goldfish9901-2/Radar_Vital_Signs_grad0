@@ -1,0 +1,23 @@
+{
+  "records": 54,
+  "source": "experiment_runs\\ftu_target_audit",
+  "methods": [
+    "P0",
+    "P1",
+    "P2"
+  ],
+  "arms": [
+    "A",
+    "B"
+  ],
+  "training": false,
+  "selection": "reuse saved identities and weights; never call selector",
+  "scoring": "original scored mask AND all targets valid in both arms",
+  "invalid": "zero/nonfinite complex samples invalidate adjacent increments; NaN retained; entire window excluded in all six conditions",
+  "boundary": "first increment zero by window convention; excluded from increment diagnostics",
+  "precision": "P0 original float32; P1/P2 complex128 product of saved complex64 then float32 increments; cumulative float32",
+  "downstream": "original cumulative/detrend/fusion/zscore/Hann power; fixed .5-2.75Hz argmax; no interpolation",
+  "time": "original frame/20 + 0s assumption; no offset search",
+  "examples": "lowest selection hash per subject",
+  "decision": "only numerical improvement AND consistent reference correspondence warrant frontend revision; otherwise upstream audit, no training"
+}
