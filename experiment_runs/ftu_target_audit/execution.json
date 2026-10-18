@@ -1,0 +1,8 @@
+{
+  "elapsed_sec": 90.82626759600001,
+  "records": 54,
+  "A_matches_original_export": true,
+  "source_archive_sha256": "24dd08e8c8fda3fd438df37305cfc8dfefd845f3c0297e1ef06995d30fc91810",
+  "training": false,
+  "offset_search": false
+}

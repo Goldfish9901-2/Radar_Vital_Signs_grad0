@@ -1,0 +1,14 @@
+{
+  "elapsed_sec": 4.7121673000001465,
+  "original_artifact_hashes": 172,
+  "records": 54,
+  "scored_windows_per_arm": 324,
+  "scored_overlap_pairs_per_arm": 270,
+  "same_labels_windows": true,
+  "frozen_targets_weights": true,
+  "initial_AB_equal": true,
+  "fusion_recomputed": true,
+  "fixed_overlap_complex_and_delta_exact": true,
+  "reference_mapping_recomputed": true,
+  "protocol_selection_unchanged": true
+}

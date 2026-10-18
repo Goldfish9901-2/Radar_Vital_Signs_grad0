@@ -1,0 +1,16 @@
+{
+  "files": {
+    "src/__init__.py": "6a8e79275cf3eef7e95048b5019fc9cf646a3c049314dea02980369380155abd",
+    "src/data/__init__.py": "c89faef1fdd2dc6b5afcd951fd91da67d89c3845ed119676ae9aaf1756913aa5",
+    "src/data/ftu_timebase.py": "dfa350caec69c55878f51426a555a4f9e3bd1b28f7657d34d9aed952aa9ed19b",
+    "src/data/audit_ftu_targets.py": "3cc08fe16843dbeb93d76f17bda8026f243e1f4b8d097e933341e4782dbe75a5",
+    "src/features/edacm.py": "c3ce6da34fc70be9df09f4550570cf427b27ccfa80311be6b43565be34af5dbc",
+    "src/features/hr_adavmd.py": "d23e479fd196f19ec2cd5b85e6d90b328d29d32dde42afd6447c264ee3c0092c",
+    "src/features/representations.py": "10457cb849cebe216b97fca2e7cbe4e53e9c1f8bd6585a77eb1711824c5b46d4",
+    "src/features/__init__.py": "2691b3c07255195547c0d6451ebe0f76ba55093ddd24ffe03e609da9dec6ae1e",
+    "selected_records.csv": "f1fd369e431458f8f66782efe508cf7f847c19bdbdcd91cdbff71aa3863c1fd1",
+    "protocol.json": "84b3611fb85e1f046e6eb489d0be32d5e526e78668891722365dcd9e5af47bd3"
+  },
+  "base_commit": "4ba546d9db102eb04b330e35fa8f814f0d286bbb",
+  "input_archive_sha256": "24dd08e8c8fda3fd438df37305cfc8dfefd845f3c0297e1ef06995d30fc91810"
+}

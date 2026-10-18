@@ -1,0 +1,1154 @@
+[
+  {
+    "arm": "A",
+    "window_start": 0,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.5619191527366638,
+        0.5110028982162476,
+        0.4957283139228821
+      ],
+      "target_bin_energy": [
+        904307840.0,
+        199729024.0,
+        890322368.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.31063616275787354,
+        0.9928850531578064
+      ],
+      "target_bin_phase_stability_score": [
+        0.24767662584781647,
+        0.7083783745765686,
+        0.25115060806274414
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.0,
+        0.9007413387298584,
+        0.12099605053663254
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        1.9072940631303936e-06,
+        0.3678792417049408
+      ],
+      "rda_spatial_confidence": 0.5244149565696716
+    }
+  },
+  {
+    "arm": "A",
+    "window_start": 128,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.7109028100967407,
+        0.6133437156677246,
+        0.5050569772720337
+      ],
+      "target_bin_energy": [
+        883668352.0,
+        868283136.0,
+        624959808.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.9919918179512024,
+        0.8420544862747192
+      ],
+      "target_bin_phase_stability_score": [
+        0.17473676800727844,
+        0.14125283062458038,
+        0.13356952369213104
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.6688746809959412,
+        0.7026058435440063,
+        0.7077822685241699
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        0.3678792417049408,
+        3.8027433646448117e-08
+      ],
+      "rda_spatial_confidence": 0.6213599443435669
+    }
+  },
+  {
+    "arm": "A",
+    "window_start": 256,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.6984596252441406,
+        0.6555131673812866,
+        0.5249022245407104
+      ],
+      "target_bin_energy": [
+        876332672.0,
+        860764544.0,
+        567607424.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.9918137192726135,
+        0.8016518950462341
+      ],
+      "target_bin_phase_stability_score": [
+        0.16972504556179047,
+        0.2711341977119446,
+        0.2243034988641739
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.6241132616996765,
+        0.7416518330574036,
+        0.6717916131019592
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        0.3678792417049408,
+        0.1353350430727005
+      ],
+      "rda_spatial_confidence": 0.6349893808364868
+    }
+  },
+  {
+    "arm": "A",
+    "window_start": 384,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.6421030759811401,
+        0.617383599281311,
+        0.49080890417099
+      ],
+      "target_bin_energy": [
+        874192576.0,
+        858172608.0,
+        565520896.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.9914882779121399,
+        0.7995561957359314
+      ],
+      "target_bin_phase_stability_score": [
+        0.08614089339971542,
+        0.18453466892242432,
+        0.21393336355686188
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.4822714626789093,
+        0.6761887073516846,
+        0.5487224459648132
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        0.3678792417049408,
+        0.1353350430727005
+      ],
+      "rda_spatial_confidence": 0.5909585952758789
+    }
+  },
+  {
+    "arm": "A",
+    "window_start": 512,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.572396457195282,
+        0.4657380282878876,
+        0.4515286087989807
+      ],
+      "target_bin_energy": [
+        871678592.0,
+        855516480.0,
+        563526912.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.9912905097007751,
+        0.7970204949378967
+      ],
+      "target_bin_phase_stability_score": [
+        0.050809845328330994,
+        0.06232848018407822,
+        0.09919575601816177
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.23877599835395813,
+        0.19208943843841553,
+        0.5098890066146851
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        0.3678792417049408,
+        0.1353350430727005
+      ],
+      "rda_spatial_confidence": 0.5024140477180481
+    }
+  },
+  {
+    "arm": "A",
+    "window_start": 640,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.6346163153648376,
+        0.5509157180786133,
+        0.4185482859611511
+      ],
+      "target_bin_energy": [
+        867898112.0,
+        852701248.0,
+        614043584.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.9917988181114197,
+        0.8393697142601013
+      ],
+      "target_bin_phase_stability_score": [
+        0.03444136679172516,
+        0.04491114243865013,
+        0.03757143393158913
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.5040239095687866,
+        0.5495059490203857,
+        0.46150410175323486
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        0.3678792417049408,
+        3.8027433646448117e-08
+      ],
+      "rda_spatial_confidence": 0.5494915843009949
+    }
+  },
+  {
+    "arm": "A",
+    "window_start": 768,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.6305370926856995,
+        0.5732458829879761,
+        0.448550820350647
+      ],
+      "target_bin_energy": [
+        865957824.0,
+        851068992.0,
+        561509952.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.9919690489768982,
+        0.7994013428688049
+      ],
+      "target_bin_phase_stability_score": [
+        0.07994084805250168,
+        0.08578149229288101,
+        0.13109107315540314
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.44220757484436035,
+        0.5977180600166321,
+        0.462749183177948
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        0.3678792417049408,
+        0.1353350430727005
+      ],
+      "rda_spatial_confidence": 0.56125807762146
+    }
+  },
+  {
+    "arm": "A",
+    "window_start": 896,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.7747883796691895,
+        0.5807490348815918,
+        0.5685802698135376
+      ],
+      "target_bin_energy": [
+        862525504.0,
+        846525248.0,
+        610929088.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.9912998676300049,
+        0.8397535085678101
+      ],
+      "target_bin_phase_stability_score": [
+        0.10292605310678482,
+        0.09717155247926712,
+        0.09866602718830109
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.9962274432182312,
+        0.6172773241996765,
+        1.0
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        0.3678792417049408,
+        3.8027433646448117e-08
+      ],
+      "rda_spatial_confidence": 0.6552873849868774
+    }
+  },
+  {
+    "arm": "B",
+    "window_start": 0,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.5619191527366638,
+        0.5110028982162476,
+        0.4957283139228821
+      ],
+      "target_bin_energy": [
+        904307840.0,
+        199729024.0,
+        890322368.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.31063616275787354,
+        0.9928850531578064
+      ],
+      "target_bin_phase_stability_score": [
+        0.24767662584781647,
+        0.7083783745765686,
+        0.25115060806274414
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.0,
+        0.9007413387298584,
+        0.12099605053663254
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        1.9072940631303936e-06,
+        0.3678792417049408
+      ],
+      "rda_spatial_confidence": 0.5244149565696716
+    }
+  },
+  {
+    "arm": "B",
+    "window_start": 128,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.5619191527366638,
+        0.5110028982162476,
+        0.4957283139228821
+      ],
+      "target_bin_energy": [
+        904307840.0,
+        199729024.0,
+        890322368.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.31063616275787354,
+        0.9928850531578064
+      ],
+      "target_bin_phase_stability_score": [
+        0.24767662584781647,
+        0.7083783745765686,
+        0.25115060806274414
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.0,
+        0.9007413387298584,
+        0.12099605053663254
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        1.9072940631303936e-06,
+        0.3678792417049408
+      ],
+      "rda_spatial_confidence": 0.5244149565696716
+    }
+  },
+  {
+    "arm": "B",
+    "window_start": 256,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.5619191527366638,
+        0.5110028982162476,
+        0.4957283139228821
+      ],
+      "target_bin_energy": [
+        904307840.0,
+        199729024.0,
+        890322368.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.31063616275787354,
+        0.9928850531578064
+      ],
+      "target_bin_phase_stability_score": [
+        0.24767662584781647,
+        0.7083783745765686,
+        0.25115060806274414
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.0,
+        0.9007413387298584,
+        0.12099605053663254
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        1.9072940631303936e-06,
+        0.3678792417049408
+      ],
+      "rda_spatial_confidence": 0.5244149565696716
+    }
+  },
+  {
+    "arm": "B",
+    "window_start": 384,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.5619191527366638,
+        0.5110028982162476,
+        0.4957283139228821
+      ],
+      "target_bin_energy": [
+        904307840.0,
+        199729024.0,
+        890322368.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.31063616275787354,
+        0.9928850531578064
+      ],
+      "target_bin_phase_stability_score": [
+        0.24767662584781647,
+        0.7083783745765686,
+        0.25115060806274414
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.0,
+        0.9007413387298584,
+        0.12099605053663254
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        1.9072940631303936e-06,
+        0.3678792417049408
+      ],
+      "rda_spatial_confidence": 0.5244149565696716
+    }
+  },
+  {
+    "arm": "B",
+    "window_start": 512,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.5619191527366638,
+        0.5110028982162476,
+        0.4957283139228821
+      ],
+      "target_bin_energy": [
+        904307840.0,
+        199729024.0,
+        890322368.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.31063616275787354,
+        0.9928850531578064
+      ],
+      "target_bin_phase_stability_score": [
+        0.24767662584781647,
+        0.7083783745765686,
+        0.25115060806274414
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.0,
+        0.9007413387298584,
+        0.12099605053663254
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        1.9072940631303936e-06,
+        0.3678792417049408
+      ],
+      "rda_spatial_confidence": 0.5244149565696716
+    }
+  },
+  {
+    "arm": "B",
+    "window_start": 640,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.5619191527366638,
+        0.5110028982162476,
+        0.4957283139228821
+      ],
+      "target_bin_energy": [
+        904307840.0,
+        199729024.0,
+        890322368.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.31063616275787354,
+        0.9928850531578064
+      ],
+      "target_bin_phase_stability_score": [
+        0.24767662584781647,
+        0.7083783745765686,
+        0.25115060806274414
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.0,
+        0.9007413387298584,
+        0.12099605053663254
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        1.9072940631303936e-06,
+        0.3678792417049408
+      ],
+      "rda_spatial_confidence": 0.5244149565696716
+    }
+  },
+  {
+    "arm": "B",
+    "window_start": 768,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.5619191527366638,
+        0.5110028982162476,
+        0.4957283139228821
+      ],
+      "target_bin_energy": [
+        904307840.0,
+        199729024.0,
+        890322368.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.31063616275787354,
+        0.9928850531578064
+      ],
+      "target_bin_phase_stability_score": [
+        0.24767662584781647,
+        0.7083783745765686,
+        0.25115060806274414
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.0,
+        0.9007413387298584,
+        0.12099605053663254
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        1.9072940631303936e-06,
+        0.3678792417049408
+      ],
+      "rda_spatial_confidence": 0.5244149565696716
+    }
+  },
+  {
+    "arm": "B",
+    "window_start": 896,
+    "selection": {
+      "target_selection_method": "rda_vital_sign_stability_score",
+      "candidate_bins": 24,
+      "score_weights": {
+        "energy": 0.35,
+        "phase_stability": 0.25,
+        "hr_band_peak": 0.25,
+        "spatial_consistency": 0.15
+      },
+      "hr_band_hz": [
+        0.75,
+        2.5
+      ],
+      "spatial_stability_segments": 4,
+      "segment_peak_bins_dar": [
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "target_bin_scores": [
+        0.5619191527366638,
+        0.5110028982162476,
+        0.4957283139228821
+      ],
+      "target_bin_energy": [
+        904307840.0,
+        199729024.0,
+        890322368.0
+      ],
+      "target_bin_energy_score": [
+        1.0,
+        0.31063616275787354,
+        0.9928850531578064
+      ],
+      "target_bin_phase_stability_score": [
+        0.24767662584781647,
+        0.7083783745765686,
+        0.25115060806274414
+      ],
+      "target_bin_hr_band_peak_score": [
+        0.0,
+        0.9007413387298584,
+        0.12099605053663254
+      ],
+      "target_bin_spatial_consistency_score": [
+        1.0,
+        1.9072940631303936e-06,
+        0.3678792417049408
+      ],
+      "rda_spatial_confidence": 0.5244149565696716
+    }
+  }
+]
