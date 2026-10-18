@@ -1,0 +1,9 @@
+{
+  "elapsed_sec": 165.23113853900009,
+  "records": 6,
+  "training": false,
+  "delay_search": false,
+  "candidate_gate_passed": true,
+  "vendor_raw_match": true,
+  "scored_windows_per_arm": 36
+}

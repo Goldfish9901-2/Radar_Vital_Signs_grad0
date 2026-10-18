@@ -1,0 +1,14 @@
+[{"stream_name":"stdout","time":212.023380543,"data":"Official p03 restored {\"official_member\": \"Human/Radar data/Participant 3/1. Distance Scenario/40 cm/3/data_Raw_0.bin\", \"member_offset\": 62505870664, \"compressed_bytes\": 425660324, \"unpacked_bytes\": 614400000, \"compressed_payload_sha256\": \"b3be769bd8dff85b4620476b3c096cd550cfaec77663b2cb71ba18f350a8873b\", \"raw_sha256\": \"a746b5eaf5c46cafcb69c445295fa8a47ab889f76391cecb98ca84e1b1e86a37\", \"elapsed_sec\": 208.45332940600008, \"non_solid\": true, \"libarchive_crc_checked\": true, \"selection_unchanged\": true}\n"}
+,{"stream_name":"stdout","time":246.24180997,"data":"p02_Orientation_80_cm__left_side_r4 complete\n"}
+,{"stream_name":"stdout","time":267.813635251,"data":"p03_Distance_40_cm_r3 complete\n"}
+,{"stream_name":"stdout","time":296.54886061,"data":"p04_Distance_40_cm_r4 complete\n"}
+,{"stream_name":"stdout","time":323.887466634,"data":"p05_Distance_160_cm_r1 complete\n"}
+,{"stream_name":"stdout","time":350.442845603,"data":"p07_Angle_45_deg__80_cm_r4 complete\n"}
+,{"stream_name":"stdout","time":377.238653513,"data":"p09_Angle_30_deg__80_cm_r2 complete\n"}
+,{"stream_name":"stderr","time":380.786796868,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":380.786847578,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":381.310365139,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":381.31040489,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":383.777306345,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":385.244187504,"data":"[NbConvertApp] Writing 329978 bytes to __results__.html\n"}
+]

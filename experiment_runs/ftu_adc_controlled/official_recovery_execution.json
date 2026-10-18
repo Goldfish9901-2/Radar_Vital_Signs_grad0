@@ -1,0 +1,12 @@
+{
+  "official_member": "Human/Radar data/Participant 3/1. Distance Scenario/40 cm/3/data_Raw_0.bin",
+  "member_offset": 62505870664,
+  "compressed_bytes": 425660324,
+  "unpacked_bytes": 614400000,
+  "compressed_payload_sha256": "b3be769bd8dff85b4620476b3c096cd550cfaec77663b2cb71ba18f350a8873b",
+  "raw_sha256": "a746b5eaf5c46cafcb69c445295fa8a47ab889f76391cecb98ca84e1b1e86a37",
+  "elapsed_sec": 208.45332940600008,
+  "non_solid": true,
+  "libarchive_crc_checked": true,
+  "selection_unchanged": true
+}

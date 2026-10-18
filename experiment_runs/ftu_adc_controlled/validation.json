@@ -1,0 +1,11 @@
+{
+  "elapsed_sec": 2.889895300002536,
+  "records": 6,
+  "protocol_unchanged": true,
+  "frozen_bundle_verified": true,
+  "selection_weights_recomputed": true,
+  "all_postprocessing_arrays_exact": true,
+  "labels_peaks_recomputed": true,
+  "model_training": false,
+  "expansion_criterion_met": false
+}

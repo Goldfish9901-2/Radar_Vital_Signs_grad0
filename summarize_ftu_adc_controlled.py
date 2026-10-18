@@ -107,8 +107,9 @@ for tag in selected.sample_tag:
         axes[2].set(title='First scored window, pre-z fused phase',xlabel='Window time(s)',ylabel='Detrended phase(rad)')
         for ax in axes:ax.legend(fontsize=6)
     fig.suptitle(tag);fig.tight_layout();fig.savefig(root/'figures'/f'{tag}.png',dpi=130);plt.close(fig)
-fused=stats[(stats.kind=='fused')&(stats.scope=='all_six')];syn=pd.read_csv(root/'synthetic_metrics.csv');timing=pd.read_csv(root/'previous_timing_correction.csv');precision=pd.read_csv(root/'previous_precision_recheck.csv')
+fused=stats[(stats.kind=='fused')&(stats.scope=='all_six')];five=stats[(stats.kind=='fused')&(stats.scope=='five_with_config_logs')];syn=pd.read_csv(root/'synthetic_metrics.csv');timing=pd.read_csv(root/'previous_timing_correction.csv');precision=pd.read_csv(root/'previous_precision_recheck.csv')
 execution=json.loads((root/'execution.json').read_text());sgate=json.loads((root/'synthetic_gate.json').read_text());raw=pd.read_csv(root/'raw_verification.csv')
+recovery=json.loads((root/'official_recovery_execution.json').read_text())
 expanded=bool(decision.expansion_criterion_met.any())
 corrections=f'''# Corrections to b6bd9ba ADC phase report
 
@@ -139,9 +140,17 @@ report=f'''# FTU six-record ADC phase-controlled 2×2
 
 {md(fused[['variant','coverage','n','mae','centered_rmse','centered_r','reference_centered_std','prediction_centered_std','centered_std_ratio','centered_r2','near_reference_power_fraction']])}
 
+候选去均值RMSE虽然降低，预测波动仍约参考的9倍，且相关性为负；旧对照正相关也伴随约14倍波动和强负R²，不能据正相关宣称恢复跟踪。full_mean为DC均值消除的预期机制对照，全部窗口低于数值幅度门槛而弃权；不是把有限浮点残差的相角解释为生理相位，也不是对全部Doppler输出的信息否定。
+
 {md(pairs[pairs.kind=='fused'].drop(columns=['kind']))}
 
+排除缺设备日志的p03后，候选MAE及参考附近功率反而更差；总体功率的小幅增加主要由p03贡献，没有一致收益。
+
+{md(five[['variant','n','mae','centered_rmse','centered_r','near_reference_power_fraction']])}
+
 跨记录联合改善要求：同一候选至少5/6条记录在≥4个共同有效窗口上，同时降低MAE、降低去均值RMSE、提高正确参考附近功率，且合并去均值相关性>0、RMSE优于legacy_mean。单纯幅度增大、曲线平滑或有峰不能通过。R²只作合并诊断，不平均逐记录R²。参考动态波动小、256点峰值分辨率4.6875bpm、窗口重叠，均限制动态评价；未做独立窗口显著性检验。
+
+![冻结名单首条记录；其余五条同目录](figures/p02_Orientation_80_cm__left_side_r4.png)
 
 ## Fixed region and pipeline
 
@@ -169,10 +178,10 @@ report=f'''# FTU six-record ADC phase-controlled 2×2
 
 ## Execution and verification
 
-本地uv合成耗时{sgate['elapsed_sec']:.3f}秒；缺少本地原始数据，真实六记录仅在Kaggle CPU运行，耗时{execution['elapsed_sec']:.3f}秒；没有训练。逐块TI-port与生产loader一致、选点权重重算、全部保存后处理数组/峰值/标签重算、原始RDA哈希与上轮清单核对均通过；本地复核耗时记录在validation.json。运行配置、输入哈希、逐窗口表、六条完整轨迹图和源码均归档。
+本地uv合成耗时{sgate['elapsed_sec']:.3f}秒；缺少本地原始数据，真实六记录仅在Kaggle CPU运行，处理耗时{execution['elapsed_sec']:.3f}秒，另有官方p03范围下载及校验解压耗时{recovery['elapsed_sec']:.3f}秒；没有训练。逐块TI-port与生产loader一致、选点权重重算、全部保存后处理数组/峰值/标签重算、原始RDA哈希与上轮清单核对均通过；本地复核耗时记录在validation.json。运行配置、输入哈希、逐窗口表、六条完整轨迹图和源码均归档。
 '''
 (root/'REPORT.md').write_text(report,encoding='utf-8')
-plan=Path('PLAN.md');text=plan.read_text(encoding='utf-8');marker='## 2026-10-18 六记录ADC候选与机制对照'
+plan=Path('PLAN.md');text=plan.read_text(encoding='utf-8');marker='## 2026-10-19 六记录ADC候选与机制对照'
 if marker not in text:plan.write_text(text+'\n\n'+marker+'\n\n协议53a1be7区分候选门控与已知失败对照；独立TI读取路径与生产loader在六条原始记录全部帧一致。两个不减均值候选通过弱微动非整频合成门控，完成共同校准空间区域下真实2×2。'+('至少一个候选达到六记录扩展判据；尚未运行54条。' if expanded else '候选未达到跨记录联合参考对应收益门槛，不扩展54条、不重训。')+'积分时刻与0.1564口径已在新报告明确修正。详见 [报告](experiment_runs/ftu_adc_controlled/REPORT.md)。\n',encoding='utf-8')
 for script in ['summarize_ftu_adc_controlled.py','correct_ftu_adc_reporting.py','bundle_ftu_adc_controlled.py','fetch_ftu_adc_controlled.py']:shutil.copyfile(script,root/'sources'/script)
 shutil.copyfile(runner,root/'sources/kaggle_runner.py')
