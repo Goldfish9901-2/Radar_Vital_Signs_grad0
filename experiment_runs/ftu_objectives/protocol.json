@@ -1,0 +1,37 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "shuffle_seeds": [
+    101,
+    202,
+    303
+  ],
+  "epochs": 60,
+  "objectives": [
+    "absolute",
+    "dynamic"
+  ],
+  "batch_records": 8,
+  "windows_per_record": 8,
+  "model": "fresh MLP129-64-32-1 GELU dropout .15; no synthetic pretraining",
+  "preprocessing": "unchanged D: original window normalization, no per-bin scaler, same 29-bin mask, no renormalization",
+  "optimizer": "AdamW lr .0003 weight_decay .0001; CONSTANT learning rate for all60 epochs, no scheduler or early stopping",
+  "loss": "both SmoothL1 beta .5, clip1, identical global training label mean/std; dynamic centers prediction and target separately inside each complete training record",
+  "batching": "8 complete records x8 windows; final batch4 records; same initialization/dropout RNG and per-epoch record order across targets and shuffles",
+  "selection": "minimum correct-label validation record-centered RMSE; best checkpoint only for evaluation",
+  "split": "unchanged216 captures/1728 windows,108/54/54 captures, original six training subjects",
+  "shuffle": "same fixed within-record permutations101/202/303 as prior run; validation/evaluation labels correct",
+  "calibration": "dynamic output offset unconstrained; raw HR metrics diagnostic only, no claim of absolute calibration; evaluation means only for scoring",
+  "budget": "exactly60 epochs per run,24 runs; save best and epoch60 checkpoints; epoch60 predictions train/val only, never choose via evaluation",
+  "baseline": "unchanged training-global mean/median and same29-bin original-spectrum peak",
+  "scope": "same-subject same-visit cross-triggered-capture; p03 incomplete radar-start logs; overlap precludes formal permutation significance",
+  "interpretation": [
+    "train and unseen-capture improvement with consistent true-over-shuffle advantage supports objective bottleneck",
+    "train-only improvement supports dynamic fitting but insufficient cross-capture stability",
+    "no train improvement OR evaluation close to shuffle: end MLP tuning and audit continuous frontend/time correspondence"
+  ],
+  "historical_comparison": "new absolute arm also changes batching, fixes60 epochs and constant lr versus previous early-stop/plateau run; not a one-factor early-stop ablation"
+}

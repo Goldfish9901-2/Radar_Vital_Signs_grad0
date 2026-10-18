@@ -1,0 +1,27 @@
+{
+  "elapsed_sec": 1.1482671999997365,
+  "record_shape": [
+    108,
+    8
+  ],
+  "batch_records": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    4
+  ],
+  "centering_shift_invariant": true,
+  "shared_label_scale": 10.849030271523702,
+  "shared_label_mean": 73.59535499855325,
+  "original_capture_hashes_verified": true
+}
