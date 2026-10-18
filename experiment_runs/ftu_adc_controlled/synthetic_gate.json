@@ -1,0 +1,8 @@
+{
+  "elapsed_sec": 30.934376699995482,
+  "candidates_pass": true,
+  "controls_required_to_pass": false,
+  "independent_vendor_reader_matches_production": true,
+  "real_ablation_allowed": true,
+  "training": false
+}

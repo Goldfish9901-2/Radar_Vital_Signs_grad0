@@ -1,5 +1,7 @@
 # FTU ADC→complex RDA phase fidelity and source audit
 
+2026-10-18 修订：积分时刻、带分母下限统计量和候选门控的更正见 [CORRECTIONS.md](../ftu_adc_controlled/CORRECTIONS.md)。原始数值与历史协议保持可追溯。
+
 ## Decision
 
 本轮确认了一个会抹掉已知微动相位的导出环节：**帧内 chirp 均值消除**。在受控单目标 ADC 中，帧内恒相位目标完全归零；按条件性 PRI 加入帧内连续微动后，完整 Doppler FFT 的 DC 仍归零，legacy 截断残差则不再忠实保留相位。按结果前冻结的停止规则，**暂停六条真实记录的 HR 2×2 评分、54 条扩展和模型训练**。本轮仍完成一条真实原始记录的来源复现，该操作只验证导出来源，没有评价 HR 或挑选目标。
@@ -51,7 +53,7 @@
 
 ## Stage localization and checks
 
-保存 ADC 观测、clutter 后观测、range FFT、Doppler DC、angle FFT 五阶段的幅度及相位轨迹（stage_phase_metrics.csv / stage_phase_traces.npz）。独立实现用直接复数求和核对 Doppler DC/boresight，最大相对 L2 差为 0.15640092，原始大幅度 FFT 单位最大绝对差 52；相对误差来自 float32 求和与 FFT 的计算顺序。现有生产合成检查10项全部通过，计时与输出在 synthetic_validation.json / production_checks.txt。
+保存 ADC 观测、clutter 后观测、range FFT、Doppler DC、angle FFT 五阶段的幅度及相位轨迹（stage_phase_metrics.csv / stage_phase_traces.npz）。旧复核的最大值 0.15640092 实际是差值 L2 / max(参考 L2,1)，不可称有效信号的相对误差；它来自近零 full_mean 条件。最大绝对差 52 则发生在约6400万幅度的另一条件。分条件参考范数、complex128 求和和理论相干增益归一化误差见上述更正，不能用一个最大值归因所有条件。现有生产合成检查10项全部通过，计时与输出在 synthetic_validation.json / production_checks.txt。
 
 ![非均匀 chirp 时间上的频率响应](figures/doppler_physical_response.png)
 

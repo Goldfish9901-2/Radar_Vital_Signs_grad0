@@ -16,6 +16,8 @@ def table(df):
     return '| '+' | '.join(df.columns)+' |\n| '+' | '.join(['---']*len(df.columns))+' |\n'+'\n'.join('| '+' | '.join(fmt(v) for v in row)+' |' for row in df.itertuples(index=False,name=None))
 report=f'''# FTU ADC→complex RDA phase fidelity and source audit
 
+2026-10-18 修订：积分时刻、带分母下限统计量和候选门控的更正见 [CORRECTIONS.md](../ftu_adc_controlled/CORRECTIONS.md)。
+
 ## Decision
 
 本轮确认了一个会抹掉已知微动相位的导出环节：**帧内 chirp 均值消除**。在受控单目标 ADC 中，帧内恒相位目标完全归零；按条件性 PRI 加入帧内连续微动后，完整 Doppler FFT 的 DC 仍归零，legacy 截断残差则不再忠实保留相位。按结果前冻结的停止规则，**暂停六条真实记录的 HR 2×2 评分、54 条扩展和模型训练**。本轮仍完成一条真实原始记录的来源复现，该操作只验证导出来源，没有评价 HR 或挑选目标。
@@ -58,7 +60,7 @@ report=f'''# FTU ADC→complex RDA phase fidelity and source audit
 
 ## Stage localization and checks
 
-保存 ADC 观测、clutter 后观测、range FFT、Doppler DC、angle FFT 五阶段的幅度及相位轨迹（stage_phase_metrics.csv / stage_phase_traces.npz）。独立实现用直接复数求和核对 Doppler DC/boresight，最大相对 L2 差为 {validation['independent_stage_final_max_relative_l2']:.8g}，原始大幅度 FFT 单位最大绝对差 {validation['independent_stage_final_max_abs_error']:.8g}；相对误差来自 float32 求和与 FFT 的计算顺序。现有生产合成检查10项全部通过，计时与输出在 synthetic_validation.json / production_checks.txt。
+保存 ADC 观测、clutter 后观测、range FFT、Doppler DC、angle FFT 五阶段的幅度及相位轨迹（stage_phase_metrics.csv / stage_phase_traces.npz）。旧复核最大值 {validation['independent_stage_final_max_relative_l2']:.8g} 实际是差值 L2 / max(参考 L2,1)，不能称有效信号的相对误差。最大绝对差 {validation['independent_stage_final_max_abs_error']:.8g} 发生在另一个条件；分条件参考范数、complex128 与理论增益归一化误差见更正，不把所有差异统称浮点相对误差。现有生产合成检查10项全部通过，计时与输出在 synthetic_validation.json / production_checks.txt。
 
 ![非均匀 chirp 时间上的频率响应](figures/doppler_physical_response.png)
 
