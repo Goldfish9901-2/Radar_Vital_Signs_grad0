@@ -487,3 +487,8 @@ Kaggle 完成三个种子的固定 MLP 合成正对照：评估去均值 RMSE 7.
 ## 2026-10-18 冻结目标相位增量对照
 
 54条记录 A/B × P0/P1/P2 无训练对照完成。幅度比去除压低异常增量，但融合峰值 MAE 仍约31–33 bpm、记录内 R² 远小于零，未恢复可靠参考对应。不重训；继续上游复数RDA相位含义/构建与参考时间轴审计。详见 [报告](experiment_runs/ftu_phase_increments/REPORT.md)。
+
+
+## 2026-10-18 ADC→RDA 相位保真门控
+
+协议4154b82下完成FTU配置合成2×2及单条原始记录全1200帧历史导出复现。chirp_mean消除帧内恒相位目标；连续微动下完整FFT DC归零，legacy残差相位RMSE2.225rad。关闭均值消除保留已知相位，但尚无真实HR收益证据。门控未通过，暂停六记录HR评分/54条扩展/重训，继续I/Q布局、相干性与保相位clutter审计。详见 [报告](experiment_runs/ftu_adc_phase/REPORT.md)。

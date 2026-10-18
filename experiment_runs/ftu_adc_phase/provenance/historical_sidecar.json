@@ -1,0 +1,46 @@
+{
+  "dataset": "FTU",
+  "participant_id": 2,
+  "scenario": "Orientation",
+  "distance": "80 cm- left side",
+  "repeat": 4,
+  "radar_shape": [
+    1200,
+    8,
+    16,
+    8
+  ],
+  "radar_dtype": "complex64",
+  "radar_axes": [
+    "frames",
+    "doppler",
+    "angle",
+    "range"
+  ],
+  "radar_source_shape": [
+    1200,
+    4,
+    128,
+    250
+  ],
+  "radar_source_dtype": "complex64",
+  "radar_preprocess": "raw_iq_to_rda_fft",
+  "range_selection_method": "global_energy_center_contiguous_window",
+  "range_center_bin": 47,
+  "range_selected_bins": [
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "reference_len": 61,
+  "reference_fields": [
+    "time",
+    "heart_rate",
+    "respiration_rate"
+  ]
+}

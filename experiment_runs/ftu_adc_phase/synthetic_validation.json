@@ -1,0 +1,8 @@
+{
+  "elapsed_sec": 4.796973999997135,
+  "independent_stage_final_max_abs_error": 52.0,
+  "independent_stage_final_max_relative_l2": 0.1564009189605713,
+  "production_checks_elapsed_sec": 0.7342953999977908,
+  "production_checks_passed": true,
+  "training": false
+}

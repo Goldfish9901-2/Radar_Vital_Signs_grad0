@@ -1,0 +1,18 @@
+{
+  "sample_tag": "p02_Orientation_80_cm__left_side_r4",
+  "raw_file": "/kaggle/input/datasets/goldfish9901/ftu-part1/P2_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/4/data_Raw_0.bin",
+  "raw_sha256": "469cbc5047fbd89af5b2d669d0d48b019de3ae5fcb9f7263cd5436007f6de9ab",
+  "raw_bytes": 614400000,
+  "historical_rda_sha256": "6ed21109fefe1338d205887280754dc6f72995a640aae04444f934767195ff6f",
+  "sidecar_sha256": "9cc917550010eda787caa98cdc65c52cb8c203358f376ce0c1b088b678b15f9b",
+  "frames": 1200,
+  "loader_arrays_equal": true,
+  "recomputed_global_range_center": 47,
+  "saved_global_range_center": 47,
+  "max_relative_l2": 0.0,
+  "max_abs_error": 0.0,
+  "numerical_reproduction_passed": true,
+  "elapsed_sec": 20.711481397,
+  "training": false,
+  "provenance_limit": "numeric equivalence of archived candidate and existing export; original generating command/commit not recorded in sidecar"
+}

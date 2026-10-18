@@ -1,0 +1,9 @@
+case,variant,amplitude_fraction,valid_phase,low_amplitude_frames,phase_rmse_rad,increment_rmse_rad,peak_bpm
+frame_constant,legacy_chirp_mean,0.0,False,400,,,
+frame_constant,full_fft_crop_chirp_mean,0.0,False,400,,,
+frame_constant,legacy_none,1.0000091791152954,True,0,2.3872136480041862e-05,3.355211859302335e-05,72.00000000000001
+frame_constant,full_fft_crop_none,1.0000091791152954,True,0,2.3872136480041862e-05,3.355211859302335e-05,72.00000000000001
+continuous_motion,legacy_chirp_mean,0.0034406897611916065,True,0,2.2251804754950557,1.0776312175642397,72.00000000000001
+continuous_motion,full_fft_crop_chirp_mean,3.167261375044972e-12,False,400,,,
+continuous_motion,legacy_none,1.0000025033950806,True,0,0.0007419203252159001,0.0001615545169377412,72.00000000000001
+continuous_motion,full_fft_crop_none,0.999999463558197,True,0,0.006633585729358414,0.0014370949698800934,72.00000000000001

@@ -1,0 +1,9 @@
+{
+  "protocol_pre_results_commit": "4154b82",
+  "protocol_unchanged": true,
+  "frozen_source_hashes_verified": 15,
+  "original_rda_hash_verified": true,
+  "synthetic_stop_obeyed": true,
+  "real_hr_ablation": false,
+  "training": false
+}

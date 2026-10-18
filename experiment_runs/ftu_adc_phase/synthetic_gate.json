@@ -1,0 +1,15 @@
+{
+  "elapsed_sec": 8.940964299996267,
+  "training": false,
+  "raw_packing_roundtrip": true,
+  "gate_passed": false,
+  "failed_conditions": [
+    "legacy_chirp_mean:frame_constant",
+    "full_fft_crop_chirp_mean:frame_constant",
+    "legacy_chirp_mean:continuous_motion",
+    "full_fft_crop_chirp_mean:continuous_motion"
+  ],
+  "real_hr_ablation_allowed": false,
+  "decision": "STOP real HR ablation: audit identified signal-null/phase-distortion stage; do not train",
+  "note": "packing roundtrip validates implementation against its own declared layout, not vendor layout independently"
+}

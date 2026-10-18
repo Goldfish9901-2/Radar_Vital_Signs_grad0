@@ -1,0 +1,17 @@
+{
+  "id": "goldfish9901/ftu-adc-phase-provenance",
+  "title": "FTU ADC Phase Provenance",
+  "code_file": "run.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "goldfish9901/ftu-rda-exports",
+    "goldfish9901/ftu-part1"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}

@@ -1,0 +1,15 @@
+test_angle_peak_for_uniform_half_wavelength_array (__main__.SyntheticADCChecks.test_angle_peak_for_uniform_half_wavelength_array) ... ok
+test_fast_time_dc_is_separate_from_chirp_mean (__main__.SyntheticADCChecks.test_fast_time_dc_is_separate_from_chirp_mean) ... ok
+test_fixed_roi_does_not_follow_stronger_reflector (__main__.SyntheticADCChecks.test_fixed_roi_does_not_follow_stronger_reflector) ... ok
+test_frame_phase_and_heart_peak (__main__.SyntheticADCChecks.test_frame_phase_and_heart_peak) ... ok
+test_invalid_arguments (__main__.SyntheticADCChecks.test_invalid_arguments) ... ok
+test_late_chirps_used (__main__.SyntheticADCChecks.test_late_chirps_used) ... ok
+test_legacy_matches_previous_formula (__main__.SyntheticADCChecks.test_legacy_matches_previous_formula) ... ok
+test_native_sampling_is_independent_of_doppler_policy (__main__.SyntheticADCChecks.test_native_sampling_is_independent_of_doppler_policy) ... ok
+test_odd_and_zero_padded_doppler (__main__.SyntheticADCChecks.test_odd_and_zero_padded_doppler) ... ok
+test_range_and_doppler_peak (__main__.SyntheticADCChecks.test_range_and_doppler_peak) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.540s
+
+OK
