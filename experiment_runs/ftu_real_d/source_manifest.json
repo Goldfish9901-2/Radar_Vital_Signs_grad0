@@ -1,0 +1,11 @@
+{
+  "files": {
+    "src/__init__.py": "6a8e79275cf3eef7e95048b5019fc9cf646a3c049314dea02980369380155abd",
+    "src/training/__init__.py": "bf83a02824c4600f477d222de97fb722f6442316afe207b6dac17f7d0d310597",
+    "src/training/ftu_position_protocol.py": "8e38aa11dbc6739c8689e92a5142634313e6a15002d7802b48a6470c781b8fed",
+    "src/training/ftu_spectrum_factorial.py": "ebd715181dd30663d296e5fbc42628e42079a605f4f2d4d56e66a5af7090e1cb",
+    "src/training/run_ftu_real_d.py": "c781b361bfe20f6a7529d5c65750397a53a5d976d8a828145326a370b4a6dbe8",
+    "record_split.csv": "64b90334733236ccca348ad42bfbbd1bac355f65f0c7dee4a044f64e9287fe94"
+  },
+  "base_commit": "97f5697ccbeecf8f453c7e472996eb23b4f16ac7"
+}

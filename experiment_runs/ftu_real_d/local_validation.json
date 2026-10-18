@@ -1,0 +1,10 @@
+{
+  "elapsed_sec": 7.796601899999814,
+  "original_files_verified": 23,
+  "prediction_groups_verified": 36,
+  "max_metric_delta": 7.09353232201948e-07,
+  "exact_split": true,
+  "frozen_protocol_semantically_unchanged": true,
+  "permutation_records_verified": true,
+  "mask_verified": true
+}

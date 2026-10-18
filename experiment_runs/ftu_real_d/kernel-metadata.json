@@ -1,0 +1,16 @@
+{
+  "id": "goldfish9901/ftu-real-d-controls",
+  "title": "FTU Real D Controls",
+  "code_file": "run.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "kernel_sources": [
+    "goldfish9901/ftu-timebase-edacm-v2"
+  ],
+  "competition_sources": [],
+  "model_sources": []
+}

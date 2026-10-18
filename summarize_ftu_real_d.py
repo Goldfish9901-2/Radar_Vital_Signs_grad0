@@ -1,5 +1,5 @@
 """Independent real-data metrics and paired controls; no fitting."""
-import json,time,zipfile,hashlib,shutil
+import json,time,zipfile,hashlib,shutil,subprocess
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -15,6 +15,8 @@ with zipfile.ZipFile('tmp/ftu_real_d_result/results.zip') as z:
         assert '/' not in name and '\\' not in name
         (root/('kaggle_artifact_manifest.json' if name=='artifact_manifest.json' else name)).write_bytes(z.read(name))
 shutil.copyfile('tmp/ftu_real_d_result/kernel.log',root/'kernel.log')
+assert json.loads((root/'protocol.json').read_text())==json.loads(subprocess.check_output(
+    ['git','show','b04aa8e:experiment_runs/ftu_real_d/protocol.json']))
 f=pd.read_csv(root/'inputs.csv');p=pd.read_csv(root/'predictions.csv');s=pd.read_csv(root/'summary.csv')
 old=Path('experiment_runs/ftu_record_learnability/record_split.csv')
 assert (root/'record_split.csv').read_bytes()==old.read_bytes()
@@ -79,7 +81,7 @@ pd.DataFrame(paired).to_csv(root/'paired_contrasts.csv',index=False)
 fig,axes=plt.subplots(1,2,figsize=(11,4))
 subjects=sorted(f.group_key.unique())
 for ax,metric in zip(axes,['centered_r2','centered_rmse']):
-    for arm in ['true','shuffle','mean','peak']:
+    for arm in ['true','shuffle','mean']:
         g=aggregate[(aggregate.arm==arm)&(aggregate.split=='evaluation')].set_index('subject').loc[subjects]
         ax.plot(range(6),g[metric],'o-',label=arm)
     ax.set_xticks(range(6),[t.rsplit('/',1)[-1] for t in subjects]);ax.set(xlabel='Subject',ylabel=metric);ax.legend()
@@ -90,6 +92,9 @@ for ax,split in zip(axes,['train','val']):
         ax.plot(g.epoch,g.centered_r2,alpha=.8 if run.endswith('_true') else .3,
                 color='tab:blue' if run.endswith('_true') else 'tab:orange')
     ax.axhline(0,color='gray',ls='--');ax.set(title=split,xlabel='Epoch',ylabel='Record-centered R2 (correct labels)')
+    from matplotlib.lines import Line2D
+    ax.legend(handles=[Line2D([0],[0],color='tab:blue',label='True labels'),
+                       Line2D([0],[0],color='tab:orange',label='Shuffled labels')])
 fig.tight_layout();fig.savefig(root/'learning_curves.png',dpi=170);plt.close(fig)
 fig,axes=plt.subplots(3,2,figsize=(11,9))
 for ax,subject in zip(axes.flat,subjects):
@@ -103,7 +108,7 @@ for ax,subject in zip(axes.flat,subjects):
 fig.tight_layout();fig.savefig(root/'example_trajectories.png',dpi=150);plt.close(fig)
 (root/'local_validation.json').write_text(json.dumps(dict(elapsed_sec=time.perf_counter()-start,
     original_files_verified=len(manifest),prediction_groups_verified=len(s),max_metric_delta=maxdelta,
-    exact_split=True,permutation_records_verified=True,mask_verified=True),indent=2))
+    exact_split=True,frozen_protocol_semantically_unchanged=True,permutation_records_verified=True,mask_verified=True),indent=2))
 print(aggregate[(aggregate.subject.isin(['pooled','equal_subject_mean']))].to_string(index=False))
 print('TRUE/SHUFFLE EVALUATION SUBJECTS')
 print(aggregate[(aggregate.split=='evaluation')&aggregate.arm.isin(['true','shuffle'])].to_string(index=False))
