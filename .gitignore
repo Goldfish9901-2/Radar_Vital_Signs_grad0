@@ -288,6 +288,9 @@ model_outputs/
 !docs/FTU_SOURCE_AUDIT.md
 !docs/FTU_P0_AUDIT.md
 !PLAN.md
+!experiment_runs/ftu_target_audit/REPORT.md
+!experiment_runs/ftu_target_audit/*.log
+!experiment_runs/ftu_target_audit/signals/*.npz
 !experiment_runs/ftu_objectives/REPORT.md
 !experiment_runs/ftu_objectives/*.log
 !experiment_runs/ftu_objectives/*.npz

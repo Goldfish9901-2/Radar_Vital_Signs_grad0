@@ -1,0 +1,8 @@
+{
+  "elapsed_sec": 0.00796600000012404,
+  "records": 54,
+  "per_subject": 9,
+  "training_only": true,
+  "selection_uses_labels": false,
+  "source_split_sha256": "64b90334733236ccca348ad42bfbbd1bac355f65f0c7dee4a044f64e9287fe94"
+}
