@@ -39,10 +39,10 @@ def process(z,weights,post,valid):
     signal=post[1](fused) if np.isfinite(fused).all() else np.full(256,np.nan,dtype=np.float32)
     return delta,cum,phase,fused,signal
 def readout(trace,label):
-    hz=np.fft.rfftfreq(256,.05);band=(hz>=.5)&(hz<=2.75)
-    power=abs(np.fft.rfft(trace*np.hanning(256)))**2
+    n=len(trace);hz=np.fft.rfftfreq(n,.05);band=(hz>=.5)&(hz<=2.75)
+    power=abs(np.fft.rfft(trace*np.hanning(n)))**2
     return dict(peak_bpm=float(hz[band][power[band].argmax()]*60),
-        reference_near_power_fraction=float(power[abs(hz-label/60)<=20/256].sum()/(power[band].sum()+1e-20)))
+        reference_near_power_fraction=float(power[abs(hz-label/60)<=20/n].sum()/(power[band].sum()+1e-20)))
 def synthetic(code,out):
     started=time.perf_counter();out.mkdir(exist_ok=True,parents=True)
     cfg=json.loads((code/'protocol.json').read_text());ci=np.array(cfg['chirp_indices']);pri=cfg['pri_s']
