@@ -1,0 +1,31 @@
+[{"stream_name":"stdout","time":38.294308364,"data":"absolute_seed42_true epoch 3 validation centered RMSE 2.329675128446302\n"}
+,{"stream_name":"stdout","time":41.448534801,"data":"absolute_seed42_shuffle101 epoch 2 validation centered RMSE 2.331945481635175\n"}
+,{"stream_name":"stdout","time":44.439647567,"data":"absolute_seed42_shuffle202 epoch 2 validation centered RMSE 2.332342013599014\n"}
+,{"stream_name":"stdout","time":47.501133299,"data":"absolute_seed42_shuffle303 epoch 2 validation centered RMSE 2.332842888489699\n"}
+,{"stream_name":"stdout","time":50.543016056,"data":"absolute_seed43_true epoch 1 validation centered RMSE 2.343465435381237\n"}
+,{"stream_name":"stdout","time":53.632472056,"data":"absolute_seed43_shuffle101 epoch 1 validation centered RMSE 2.343316616461702\n"}
+,{"stream_name":"stdout","time":56.694072014,"data":"absolute_seed43_shuffle202 epoch 1 validation centered RMSE 2.3437280927168676\n"}
+,{"stream_name":"stdout","time":59.586534385,"data":"absolute_seed43_shuffle303 epoch 1 validation centered RMSE 2.343777810230231\n"}
+,{"stream_name":"stdout","time":62.498313402,"data":"absolute_seed44_true epoch 4 validation centered RMSE 2.3037401873464476\n"}
+,{"stream_name":"stdout","time":65.573272458,"data":"absolute_seed44_shuffle101 epoch 4 validation centered RMSE 2.3063483070119957\n"}
+,{"stream_name":"stdout","time":68.629118743,"data":"absolute_seed44_shuffle202 epoch 2 validation centered RMSE 2.3086557126308636\n"}
+,{"stream_name":"stdout","time":71.600961255,"data":"absolute_seed44_shuffle303 epoch 4 validation centered RMSE 2.30647626853085\n"}
+,{"stream_name":"stdout","time":74.690317566,"data":"dynamic_seed42_true epoch 7 validation centered RMSE 2.319405248863826\n"}
+,{"stream_name":"stdout","time":77.724842916,"data":"dynamic_seed42_shuffle101 epoch 2 validation centered RMSE 2.3314326610502634\n"}
+,{"stream_name":"stdout","time":80.928081139,"data":"dynamic_seed42_shuffle202 epoch 8 validation centered RMSE 2.3119717807365343\n"}
+,{"stream_name":"stdout","time":84.165601056,"data":"dynamic_seed42_shuffle303 epoch 1 validation centered RMSE 2.336473719826488\n"}
+,{"stream_name":"stdout","time":87.164092792,"data":"dynamic_seed43_true epoch 8 validation centered RMSE 2.337703695705937\n"}
+,{"stream_name":"stdout","time":90.200727342,"data":"dynamic_seed43_shuffle101 epoch 5 validation centered RMSE 2.338765400639614\n"}
+,{"stream_name":"stdout","time":93.383520049,"data":"dynamic_seed43_shuffle202 epoch 14 validation centered RMSE 2.320397898475772\n"}
+,{"stream_name":"stdout","time":96.573063053,"data":"dynamic_seed43_shuffle303 epoch 1 validation centered RMSE 2.3423776334632165\n"}
+,{"stream_name":"stdout","time":99.726678323,"data":"dynamic_seed44_true epoch 3 validation centered RMSE 2.3208728360894635\n"}
+,{"stream_name":"stdout","time":102.895422465,"data":"dynamic_seed44_shuffle101 epoch 3 validation centered RMSE 2.3224179982026647\n"}
+,{"stream_name":"stdout","time":106.118898217,"data":"dynamic_seed44_shuffle202 epoch 10 validation centered RMSE 2.3175114326303676\n"}
+,{"stream_name":"stdout","time":109.342992997,"data":"dynamic_seed44_shuffle303 epoch 3 validation centered RMSE 2.3224082892666185\n"}
+,{"stream_name":"stderr","time":116.520510609,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":116.52054157,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":116.834586763,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":116.834613986,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":117.677579181,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":118.796406272,"data":"[NbConvertApp] Writing 307659 bytes to __results__.html\n"}
+]
