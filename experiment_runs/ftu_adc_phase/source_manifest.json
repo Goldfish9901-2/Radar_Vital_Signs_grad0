@@ -1,0 +1,17 @@
+{
+  "config_evidence/p02_Orientation_80_cm__left_side_r4_data_LogFile.txt": "63816d3b3e7621b77d17cc1c06c84c2f902326a6fca50b54f287b017a278f212",
+  "config_evidence/p04_Distance_40_cm_r4_data_LogFile.txt": "52efe08851f7a6d7f45ca9bf8e86c4e7bbdacb28c3541729278104ba911fb479",
+  "config_evidence/p05_Distance_160_cm_r1_data_LogFile.txt": "5962b10addfccb7a9eb87d45cefb24936c4c6bd8a28cdd16a0b5858ebea9d7be",
+  "config_evidence/p07_Angle_45_deg__80_cm_r4_data_LogFile.txt": "8c2ae4f11526268a7a4ea901f38c768cf94af71b28a9bf81d724795a66d36ae3",
+  "config_evidence/p09_Angle_30_deg__80_cm_r2_data_LogFile.txt": "c83deb87d0369a29c800eea7926efa9e0c6361ee9fc3032a5215814d2cc3bb87",
+  "sources/archived_export.py": "e6c629e059d40225e02782f86a45d445eb9bae402ea6d9813d3bd18c88c2a968",
+  "sources/archived_ftu_loader.py": "81709fa5e7913a12a99d8f4439dfc3b0e016e1bdedd394b7174f7452eb0ab779",
+  "sources/audit_ftu_adc_phase.py": "38bf462816278c2e2a84845f15433235106dec934e0577f96f1232f4a1ce81d2",
+  "sources/current_export.py": "a91fd352b924e84794c394933e3cfd4203115d6138f5cd01ee3bd0b088ec1999",
+  "sources/current_ftu_loader.py": "81709fa5e7913a12a99d8f4439dfc3b0e016e1bdedd394b7174f7452eb0ab779",
+  "sources/prepare_ftu_adc_phase.py": "7bf36895cdbb1cf3b1059dc5c5da906e7b517b47155b40f59f8d43554532d68c",
+  "selected_records.csv": "c4ad9baec6dc67d58fd9258abb08d109b89a0ebe049e21b62f7a17026c49b88a",
+  "expected_rda_hashes.json": "202dff958f360fda656fa6a0c7aa54dca551795bda06c71d94a7b9e73203f9e9",
+  "configuration_evidence.json": "9b2e9a71603bff22902bd5e7d51961861e9a385fda0c361f3c9f26b97c31bbc7",
+  "protocol.json": "7224451d418dd2485214a75c3afd2798d50a151e691b977d84f032644f0a4975"
+}

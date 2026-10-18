@@ -349,3 +349,6 @@ ref/
 !experiment_runs/ftu_phase_increments/REPORT.md
 !experiment_runs/ftu_phase_increments/*.npz
 !experiment_runs/ftu_phase_increments/signals/*.npz
+!experiment_runs/ftu_adc_phase/REPORT.md
+!experiment_runs/ftu_adc_phase/*.npz
+!experiment_runs/ftu_adc_phase/provenance/*.npz

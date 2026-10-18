@@ -25,3 +25,7 @@ experiment_runs/ftu_p0_audit_2026-10-14/sources/** whitespace=cr-at-eol,-blank-a
 experiment_runs/ftu_sktime_baseline_2026-10-16/sources/** whitespace=cr-at-eol,-blank-at-eof
 experiment_runs/ftu_phase_increments/** -text whitespace=cr-at-eol
 experiment_runs/ftu_phase_increments/sources/** whitespace=cr-at-eol,-blank-at-eof
+experiment_runs/ftu_adc_phase/** -text whitespace=cr-at-eol
+experiment_runs/ftu_adc_phase/sources/** -whitespace
+experiment_runs/ftu_adc_phase/config_evidence/** -whitespace
+experiment_runs/ftu_adc_phase/provenance/data_LogFile.txt -whitespace

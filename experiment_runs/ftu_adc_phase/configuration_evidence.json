@@ -1,0 +1,166 @@
+[
+  {
+    "sample_tag": "p02_Orientation_80_cm__left_side_r4",
+    "log_available": true,
+    "source": "/kaggle/input/datasets/goldfish9901/ftu-part1/P2_2_Orientation_Scenario/2. Orientation Scenario/80 cm- left side/4/data_LogFile.txt",
+    "sha256": "63816d3b3e7621b77d17cc1c06c84c2f902326a6fca50b54f287b017a278f212",
+    "last_config_lines": {
+      "ProfileConfig": [
+        "18-Dec-2023 12:55:44: API:ProfileConfig,0,1435384036,700,600,5000,0,0,1657,0,250,6250,0,0,30,0,"
+      ],
+      "ChannelConfig": [
+        "18-Dec-2023 10:34:14: API:ChannelConfig,3,15,0,"
+      ],
+      "AdcOutConfig": [
+        "18-Dec-2023 10:34:14: API:AdcOutConfig,2,1,0,"
+      ],
+      "DataFmtConfig": [
+        "18-Dec-2023 10:34:14: API:DataFmtConfig,15,2,1,0,1,0,"
+      ],
+      "ChirpConfig": [
+        "18-Dec-2023 12:55:45: API:ChirpConfig,0,0,0,0,0,0,0,3,0,"
+      ],
+      "FrameConfig": [
+        "18-Dec-2023 12:55:46: API:FrameConfig,0,0,1200,128,10000000,0,500,0,"
+      ],
+      "LaneConfig": [
+        "18-Dec-2023 10:34:43: API:LaneConfig,3,0,"
+      ],
+      "LvdsLaneConfig": [
+        "18-Dec-2023 10:34:43: API:LvdsLaneConfig,0,1,0,"
+      ]
+    }
+  },
+  {
+    "sample_tag": "p03_Distance_40_cm_r3",
+    "log_available": false
+  },
+  {
+    "sample_tag": "p04_Distance_40_cm_r4",
+    "log_available": true,
+    "source": "/kaggle/input/datasets/goldfish9901/ftu-part2/P4_1_Distance_Scenario/1. Distance Scenario/40 cm/4/data_LogFile.txt",
+    "sha256": "52efe08851f7a6d7f45ca9bf8e86c4e7bbdacb28c3541729278104ba911fb479",
+    "last_config_lines": {
+      "ProfileConfig": [
+        "18-Dec-2023 16:14:01: API:ProfileConfig,0,1435384036,700,600,5000,0,0,1657,0,250,6250,0,0,30,0,"
+      ],
+      "ChannelConfig": [
+        "18-Dec-2023 14:37:23: API:ChannelConfig,3,15,0,"
+      ],
+      "AdcOutConfig": [
+        "18-Dec-2023 14:37:23: API:AdcOutConfig,2,1,0,"
+      ],
+      "DataFmtConfig": [
+        "18-Dec-2023 14:37:23: API:DataFmtConfig,15,2,1,0,1,0,"
+      ],
+      "ChirpConfig": [
+        "18-Dec-2023 16:14:03: API:ChirpConfig,0,0,0,0,0,0,0,3,0,"
+      ],
+      "FrameConfig": [
+        "18-Dec-2023 16:14:05: API:FrameConfig,0,0,1200,128,10000000,0,500,0,"
+      ],
+      "LaneConfig": [
+        "18-Dec-2023 14:37:48: API:LaneConfig,3,0,"
+      ],
+      "LvdsLaneConfig": [
+        "18-Dec-2023 14:37:48: API:LvdsLaneConfig,0,1,0,"
+      ]
+    }
+  },
+  {
+    "sample_tag": "p05_Distance_160_cm_r1",
+    "log_available": true,
+    "source": "/kaggle/input/datasets/goldfish9901/ftu-part3/P5_1_Distance_Scenario/1. Distance Scenario/160 cm/1/data_LogFile.txt",
+    "sha256": "5962b10addfccb7a9eb87d45cefb24936c4c6bd8a28cdd16a0b5858ebea9d7be",
+    "last_config_lines": {
+      "ProfileConfig": [
+        "18-Dec-2023 17:56:38: API:ProfileConfig,0,1435384036,700,600,5000,0,0,1657,0,250,6250,0,0,30,0,"
+      ],
+      "ChannelConfig": [
+        "18-Dec-2023 14:37:23: API:ChannelConfig,3,15,0,"
+      ],
+      "AdcOutConfig": [
+        "18-Dec-2023 14:37:23: API:AdcOutConfig,2,1,0,"
+      ],
+      "DataFmtConfig": [
+        "18-Dec-2023 14:37:23: API:DataFmtConfig,15,2,1,0,1,0,"
+      ],
+      "ChirpConfig": [
+        "18-Dec-2023 17:56:41: API:ChirpConfig,0,0,0,0,0,0,0,3,0,"
+      ],
+      "FrameConfig": [
+        "18-Dec-2023 17:56:43: API:FrameConfig,0,0,1200,128,10000000,0,500,0,"
+      ],
+      "LaneConfig": [
+        "18-Dec-2023 14:37:48: API:LaneConfig,3,0,"
+      ],
+      "LvdsLaneConfig": [
+        "18-Dec-2023 14:37:48: API:LvdsLaneConfig,0,1,0,"
+      ]
+    }
+  },
+  {
+    "sample_tag": "p07_Angle_45_deg__80_cm_r4",
+    "log_available": true,
+    "source": "/kaggle/input/datasets/goldfish9901/ftu-part4/P7_3_Angle_Scenario/3. Angle Scenario/45 deg- 80 cm/4/data_LogFile.txt",
+    "sha256": "8c2ae4f11526268a7a4ea901f38c768cf94af71b28a9bf81d724795a66d36ae3",
+    "last_config_lines": {
+      "ProfileConfig": [
+        "19-Dec-2023 19:43:52: API:ProfileConfig,0,1435384036,700,600,5000,0,0,1657,0,250,6250,0,0,30,0,"
+      ],
+      "ChannelConfig": [
+        "19-Dec-2023 18:03:53: API:ChannelConfig,3,15,0,"
+      ],
+      "AdcOutConfig": [
+        "19-Dec-2023 18:03:53: API:AdcOutConfig,2,1,0,"
+      ],
+      "DataFmtConfig": [
+        "19-Dec-2023 18:03:53: API:DataFmtConfig,15,2,1,0,1,0,"
+      ],
+      "ChirpConfig": [
+        "19-Dec-2023 19:43:54: API:ChirpConfig,0,0,0,0,0,0,0,3,0,"
+      ],
+      "FrameConfig": [
+        "19-Dec-2023 19:43:55: API:FrameConfig,0,0,1200,128,10000000,0,500,0,"
+      ],
+      "LaneConfig": [
+        "19-Dec-2023 18:04:25: API:LaneConfig,3,0,"
+      ],
+      "LvdsLaneConfig": [
+        "19-Dec-2023 18:04:25: API:LvdsLaneConfig,0,1,0,"
+      ]
+    }
+  },
+  {
+    "sample_tag": "p09_Angle_30_deg__80_cm_r2",
+    "log_available": true,
+    "source": "/kaggle/input/datasets/goldfish9901/ftu-part5/P9_3_Angle_Scenario/3. Angle Scenario/30 deg- 80 cm/2/data_LogFile.txt",
+    "sha256": "c83deb87d0369a29c800eea7926efa9e0c6361ee9fc3032a5215814d2cc3bb87",
+    "last_config_lines": {
+      "ProfileConfig": [
+        "24-Dec-2023 15:53:49: API:ProfileConfig,0,1435384036,700,600,5000,0,0,1657,0,250,6250,0,0,30,0,"
+      ],
+      "ChannelConfig": [
+        "24-Dec-2023 13:15:24: API:ChannelConfig,3,15,0,"
+      ],
+      "AdcOutConfig": [
+        "24-Dec-2023 13:15:24: API:AdcOutConfig,2,1,0,"
+      ],
+      "DataFmtConfig": [
+        "24-Dec-2023 13:15:24: API:DataFmtConfig,15,2,1,0,1,0,"
+      ],
+      "ChirpConfig": [
+        "24-Dec-2023 15:53:50: API:ChirpConfig,0,0,0,0,0,0,0,3,0,"
+      ],
+      "FrameConfig": [
+        "24-Dec-2023 15:53:52: API:FrameConfig,0,0,1200,128,10000000,0,500,0,"
+      ],
+      "LaneConfig": [
+        "24-Dec-2023 13:15:38: API:LaneConfig,3,0,"
+      ],
+      "LvdsLaneConfig": [
+        "24-Dec-2023 13:15:38: API:LvdsLaneConfig,0,1,0,"
+      ]
+    }
+  }
+]
