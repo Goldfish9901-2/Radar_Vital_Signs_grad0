@@ -95,7 +95,7 @@ def synthetic(code,out):
     gate=dict(elapsed_sec=time.perf_counter()-started,candidates_pass=passed,controls_required_to_pass=False,
         independent_vendor_reader_matches_production=True,real_ablation_allowed=passed,training=False)
     (out/'synthetic_gate.json').write_text(json.dumps(gate,indent=2));print(results.to_string(index=False));assert passed
-def real(input_root,code,out):
+def real(input_root,code,out,supplement_root=None):
     started=time.perf_counter();out.mkdir(exist_ok=True,parents=True);(out/'signals').mkdir(exist_ok=True);(out/'evidence').mkdir(exist_ok=True)
     gate=json.loads((code/'synthetic_gate.json').read_text());assert gate['real_ablation_allowed']
     selected=pd.read_csv(code/'selected_records.csv');prod=load_conversion(code/'sources/current_export.py');unpack=load_unpack(code/'sources/current_ftu_loader.py');post=load_post(code/'sources/edacm.py')
@@ -106,6 +106,8 @@ def real(input_root,code,out):
         meta_path=next(p for p in input_root.rglob(tag+'.json') if p.parent.name=='meta' and 'ftu-rda-exports' in str(p));meta=json.loads(meta_path.read_text())
         scenario={'Distance':'1. Distance Scenario','Orientation':'2. Orientation Scenario','Angle':'3. Angle Scenario'}[meta['scenario']]
         files=[p for p in input_root.rglob('data_Raw_0.bin') if f'P{pid}_' in str(p) and p.parent.name==str(meta['repeat']) and p.parent.parent.name==meta['distance'] and scenario in str(p)]
+        if not files and supplement_root is not None:
+            files=[p for p in supplement_root.rglob('data_Raw_0.bin') if f'P{pid}_' in str(p) and p.parent.name==str(meta['repeat']) and p.parent.parent.name==meta['distance'] and scenario in str(p)]
         assert len(files)==1,[str(p) for p in files];path=files[0];raw=np.memmap(path,dtype='<i2',mode='r');assert raw.size==1200*words
         oldpath=next(p for p in input_root.rglob(tag+'.npz') if 'ftu-rda-exports' in str(p))
         hashes[tag]=dict(raw_sha256=digest(path),rda_sha256=digest(oldpath),raw_bytes=path.stat().st_size)
@@ -168,6 +170,7 @@ def real(input_root,code,out):
             out_of_sequence=re.findall(r'Out of sequence count\s*-\s*(\d+)',rawlog),elapsed_sec=time.perf_counter()-record_start,**hashes[tag]))
         print(tag,'complete',flush=True)
     pd.DataFrame(readouts).to_csv(out/'readouts.csv',index=False);pd.DataFrame(quality).to_csv(out/'signal_quality.csv',index=False)
+    if supplement_root is not None and (supplement_root/'recovery.json').exists():shutil.copyfile(supplement_root/'recovery.json',out/'official_recovery_execution.json')
     pd.DataFrame(inputrows).to_csv(out/'raw_verification.csv',index=False);(out/'selection.json').write_text(json.dumps(selection,indent=2))
     (out/'input_hashes.json').write_text(json.dumps(hashes,indent=2));(out/'execution.json').write_text(json.dumps(dict(elapsed_sec=time.perf_counter()-started,
         records=6,training=False,delay_search=False,candidate_gate_passed=True,vendor_raw_match=True,scored_windows_per_arm=36),indent=2))

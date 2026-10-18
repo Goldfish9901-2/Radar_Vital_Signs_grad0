@@ -1,0 +1,17 @@
+{
+  "offset": 194587025413,
+  "header": {
+    "type": 3,
+    "flags": 6,
+    "header_size": 21,
+    "extra_size": 0,
+    "data_size": 61378,
+    "file_flags": 0,
+    "unpacked_size": 61378,
+    "name": "QO",
+    "compression": 0,
+    "solid": false,
+    "method": 0
+  },
+  "target_name_offset": 19790
+}

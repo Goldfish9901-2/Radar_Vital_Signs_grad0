@@ -1,0 +1,16 @@
+{
+  "status": 206,
+  "headers": {
+    "Server": "nginx/1.20.1",
+    "Date": "Sun, 18 Oct 2026 15:51:07 GMT",
+    "Content-Type": "application/octet-stream",
+    "Content-Length": "65536",
+    "Connection": "close",
+    "Content-Range": "bytes 0-65535/194587086820",
+    "Content-disposition": "filename*=UTF-8''Human_Vital_Signs_Detection.rar",
+    "Accept-Ranges": "bytes",
+    "ETag": "\"a14491a92836d49f58eabd0699616bb5-5800\"",
+    "Last-Modified": "Thu, 11 Apr 2024 22:49:42 GMT",
+    "Strict-Transport-Security": "max-age=63072000"
+  }
+}

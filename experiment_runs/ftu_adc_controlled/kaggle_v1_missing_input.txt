@@ -1,0 +1,16 @@
+[{"stream_name":"stdout","time":55.262038541,"data":"p02_Orientation_80_cm__left_side_r4 complete\n"}
+,{"stream_name":"stderr","time":59.126111707,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":59.126633411,"data":"  File \"/kaggle/src/script.py\", line 7, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":59.126649976,"data":"    real(Path('/kaggle/input'),code,Path('/kaggle/working/ftu_adc_controlled'))\n"}
+,{"stream_name":"stderr","time":59.126656124,"data":"    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":59.126661399,"data":"  File \"/kaggle/working/code/sources/audit_ftu_adc_controlled.py\", line 109, in real\n"}
+,{"stream_name":"stderr","time":59.126667048,"data":"    assert len(files)==1,[str(p) for p in files];path=files[0];raw=np.memmap(path,dtype='\u003ci2',mode='r');assert raw.size==1200*words\n"}
+,{"stream_name":"stderr","time":59.126670769,"data":"           ^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":59.126673822,"data":"AssertionError: []\n"}
+,{"stream_name":"stderr","time":62.347697477,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":62.347738312,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":62.777263968,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":62.77729474,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":64.680191458,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":66.100860929,"data":"[NbConvertApp] Writing 323476 bytes to __results__.html\n"}
+]

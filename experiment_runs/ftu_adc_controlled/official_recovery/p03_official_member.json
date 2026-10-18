@@ -1,0 +1,17 @@
+{
+  "type": 2,
+  "flags": 3,
+  "header_size": 115,
+  "extra_size": 11,
+  "data_size": 425660324,
+  "file_flags": 4,
+  "unpacked_size": 614400000,
+  "name": "Human/Radar data/Participant 3/1. Distance Scenario/40 cm/3/data_Raw_0.bin",
+  "compression": 8576,
+  "solid": false,
+  "method": 3,
+  "offset": 62505870664,
+  "download_url": "https://data.4tu.nl/file/48acba04-96bc-4131-b52f-9e18458ad92b/f4bbc47a-f7d8-4e17-a6cc-5c49cde2934b",
+  "data_offset": 62505870779,
+  "official_archive_uuid": "f4bbc47a-f7d8-4e17-a6cc-5c49cde2934b"
+}

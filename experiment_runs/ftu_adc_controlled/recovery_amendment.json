@@ -1,0 +1,11 @@
+{
+  "reason": "frozen p03 Distance ADC absent in5Kaggleparts; version1 stopped before six-record evaluation",
+  "same_record": true,
+  "selection_changed": false,
+  "processing_changed": false,
+  "thresholds_changed": false,
+  "official_source": "https://data.4tu.nl/v2/articles/48acba04-96bc-4131-b52f-9e18458ad92b/files",
+  "recovery": "HTTPRange exact non-solid RAR member,CRC verified extraction; no other record substitution",
+  "synthetic_gate_unchanged": true,
+  "original_protocol": "53a1be7"
+}

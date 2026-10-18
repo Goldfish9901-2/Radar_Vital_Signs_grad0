@@ -356,3 +356,4 @@ ref/
 !experiment_runs/ftu_adc_controlled/CORRECTIONS.md
 !experiment_runs/ftu_adc_controlled/*.npz
 !experiment_runs/ftu_adc_controlled/signals/*.npz
+!experiment_runs/ftu_adc_controlled/official_recovery/*.bin

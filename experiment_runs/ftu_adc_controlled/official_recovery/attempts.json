@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://data.4tu.nl/v2/articles/48acba04-96bc-4131-b52f-9e18458ad92b",
+    "status": 200,
+    "bytes": 7219,
+    "preview": "{\"files\": [{\"id\": null, \"uuid\": \"f4bbc47a-f7d8-4e17-a6cc-5c49cde2934b\", \"name\": "
+  },
+  {
+    "url": "https://data.4tu.nl/v2/articles/48acba04-96bc-4131-b52f-9e18458ad92b/files",
+    "status": 200,
+    "bytes": 704,
+    "preview": "[{\"id\": null, \"uuid\": \"f4bbc47a-f7d8-4e17-a6cc-5c49cde2934b\", \"name\": \"Human_Vit"
+  },
+  {
+    "url": "https://data.4tu.nl/v3/datasets/48acba04-96bc-4131-b52f-9e18458ad92b",
+    "error": "HTTP Error 404: NOT FOUND"
+  }
+]
