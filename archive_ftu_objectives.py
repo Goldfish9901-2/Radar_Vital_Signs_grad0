@@ -1,4 +1,4 @@
-﻿"""Archive submitted sources and final evidence hashes."""
+"""Archive submitted sources and final evidence hashes."""
 import ast,base64,hashlib,io,json,zipfile
 from pathlib import Path
 root=Path('experiment_runs/ftu_objectives')
@@ -17,4 +17,3 @@ manifest={p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdiges
           for p in root.rglob('*') if p.is_file() and p.name!='artifact_manifest.json'}
 (root/'artifact_manifest.json').write_text(json.dumps(manifest,indent=2))
 print('Archived',len(manifest),'files')
-
