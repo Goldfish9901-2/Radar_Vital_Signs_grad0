@@ -1,0 +1,10 @@
+{
+  "elapsed_seconds": 0.8403192999976454,
+  "original_csv_matches": 6,
+  "support_window_rows_checked": 8208,
+  "label_window_rows_checked": 1602,
+  "maximum_label_error": 1.4210854715202004e-14,
+  "control_selection_independently_verified": true,
+  "radar_scores_accessed": false,
+  "original_source_index_sha256": "072943c01706fabc60d27fd0b5673f9118c2907b8c62a0fb8139a59c4c167312"
+}

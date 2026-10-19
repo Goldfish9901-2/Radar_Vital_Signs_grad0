@@ -1,0 +1,9 @@
+{
+  "elapsed_seconds": 0.006969699999899603,
+  "cached_headers": 457,
+  "quickopen_sha256": "a733fe86b266c6eb87eb0b36546bc96923fd407e7a02d5139730e7e5fbe35e78",
+  "matching_names": [
+    "Human/BR_Ref_Values/BR_ref_human.ods"
+  ],
+  "limitation": "Entire locally cached QuickOpen block parsed with CRC checks; cache need not contain every RAR member. No payload read; no claim of absent unpublished/full references."
+}

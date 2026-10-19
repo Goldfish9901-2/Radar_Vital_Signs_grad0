@@ -1,0 +1,10 @@
+{
+  "primary_length": 512,
+  "evaluable_records": 0,
+  "required_records": 5,
+  "stage2_authorized_by_data_gate": false,
+  "stage2_executed": false,
+  "radar_scores_computed": false,
+  "decision": "do not reconstruct/score extended RDA; investigate reference coverage and synchronization provenance",
+  "selection_sha256": "03e8c014803cd98a03e71aa83fe4ca29c53c78edb6c2b5c4e2432e4cd252e8a2"
+}

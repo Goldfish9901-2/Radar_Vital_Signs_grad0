@@ -1,0 +1,9 @@
+{
+  "elapsed_seconds": 0.49462550000316696,
+  "command": "uv run --locked --no-sync python audit_ftu_reference_support.py labels",
+  "local": true,
+  "radar_arrays_accessed": false,
+  "radar_scores_accessed": false,
+  "numpy": "2.5.4",
+  "pandas": "3.0.6"
+}

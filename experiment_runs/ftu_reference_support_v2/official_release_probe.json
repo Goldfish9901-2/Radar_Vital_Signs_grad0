@@ -1,0 +1,18 @@
+{
+  "url": "https://data.4tu.nl/v2/articles/48acba04-96bc-4131-b52f-9e18458ad92b/files",
+  "status": 200,
+  "files": [
+    {
+      "name": "Human_Vital_Signs_Detection.rar",
+      "size": 194587086820,
+      "uuid": "f4bbc47a-f7d8-4e17-a6cc-5c49cde2934b"
+    },
+    {
+      "name": "Read_me.txt",
+      "size": 2915,
+      "uuid": "79f35333-d235-4894-91a1-19576bca90a6"
+    }
+  ],
+  "elapsed_seconds": 0.8578645000015968,
+  "limitation": "Top-level file list only; RAR internals not exhaustively searched. No claim that longer HR or synchronization data are unpublished."
+}

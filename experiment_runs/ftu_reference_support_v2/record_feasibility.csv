@@ -1,0 +1,13 @@
+record,length,common_windows,support_evaluable,distinguishable_all_offsets_all_controls,evaluable,reason
+p02_Orientation_80_cm__left_side_r4,512,13,True,False,False,insufficient_label_separation
+p02_Orientation_80_cm__left_side_r4,768,0,False,False,False,insufficient_common_support
+p03_Distance_40_cm_r3,512,12,True,False,False,insufficient_label_separation
+p03_Distance_40_cm_r3,768,0,False,False,False,insufficient_common_support
+p04_Distance_40_cm_r4,512,12,True,False,False,insufficient_label_separation
+p04_Distance_40_cm_r4,768,0,False,False,False,insufficient_common_support
+p05_Distance_160_cm_r1,512,12,True,False,False,insufficient_label_separation
+p05_Distance_160_cm_r1,768,0,False,False,False,insufficient_common_support
+p07_Angle_45_deg__80_cm_r4,512,14,True,False,False,insufficient_label_separation
+p07_Angle_45_deg__80_cm_r4,768,1,False,False,False,insufficient_common_support
+p09_Angle_30_deg__80_cm_r2,512,14,True,False,False,insufficient_label_separation
+p09_Angle_30_deg__80_cm_r2,768,1,False,False,False,insufficient_common_support
