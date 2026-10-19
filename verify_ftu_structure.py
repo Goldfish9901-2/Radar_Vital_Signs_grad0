@@ -16,7 +16,8 @@ SRC=Path('experiment_runs/ftu_adc_controlled')
 
 
 def main():
-    begin=time.perf_counter(); checks=[]; maxerr=0.; maskchecks=0
+    begin=time.perf_counter(); checks=[]; maxerr=0.; maskchecks=0; metricchecks=0
+    metrics=pd.read_csv(ROOT/'record_metrics.csv')
     for path in sorted((ROOT/'spectra').glob('*.npz')):
         d=np.load(SRC/'signals'/path.name); a=np.load(path)
         ref=d['full_none_DC_roi'].transpose(1,2,0).reshape(128,1200)
@@ -56,6 +57,28 @@ def main():
                             ys[off,q,j]=np.mean(np.interp(t,d['reference_time'],d['reference_hr'],left=np.nan,right=np.nan))
                 np.testing.assert_allclose(ys,a[f'labels_{length}'],atol=1e-10,equal_nan=True)
                 np.testing.assert_array_equal(common,np.isfinite(ys).all(axis=(0,1))&(starts>=256))
+                for off in range(3):
+                    for q,shift in enumerate([0,-20,-15,15,20]):
+                        row=metrics[(metrics.record==path.stem)&(metrics.arm==arm)&(metrics.length==length)
+                                    &(metrics.kind=='panel')&(metrics.offset==off)&(metrics['shift']==shift)].iloc[0]
+                        p=a[f'{arm}_{length}_phase_panel'][:,common]
+                        valid=a[f'{arm}_{length}_valid_panel'][:,common]
+                        y=ys[off,q,common]
+                        if not len(y):
+                            assert pd.isna(row.mae) and pd.isna(row.coverage)
+                            continue
+                        error=[];near=[];hit=[]
+                        for c in range(8):
+                            use=valid[c]&np.isfinite(p[c]).all(axis=-1)
+                            if not use.any():continue
+                            peak=a['frequency_bpm'][p[c,use].argmax(axis=-1)]
+                            error.append(abs(peak-y[use]).mean());hit.append((abs(peak-y[use])<=5).mean())
+                            near.append(np.mean([power[abs(a['frequency_bpm']-target)<=1200/length].sum()
+                                                for power,target in zip(p[c,use],y[use])]))
+                        for key,vals in [('mae',error),('near_power',near),('within5',hit)]:
+                            expected=np.mean(vals) if vals else np.nan
+                            np.testing.assert_allclose(row[key],expected,atol=2e-7,equal_nan=True)
+                            metricchecks+=1
                 checks.append(dict(record=path.stem,arm=arm,length=length,common_windows=int(common.sum())))
         # Continuous raw evidence, no z-score or phase-origin comparison.
         fig,axes=plt.subplots(3,8,figsize=(20,7),sharex=True)
@@ -81,7 +104,7 @@ def main():
         independent.append(dict(record=rec,arm=arm,record_pass=expected))
     result=dict(elapsed_seconds=time.perf_counter()-begin,spectrum_max_abs_error=maxerr,
                 independent_spectrum_checks=checks,reliability_mask_checks=maskchecks,
-                labels_and_common_windows_verified=True,independent_gate=independent)
+                labels_and_common_windows_verified=True,primary_metric_checks=metricchecks,independent_gate=independent)
     (ROOT/'independent_validation.json').write_text(json.dumps(result,indent=2))
     print(json.dumps(dict(spectrum_max_abs_error=maxerr,reliability_mask_checks=maskchecks,
                          passed_records={arm:sum(x['record_pass'] for x in independent if x['arm']==arm) for arm in ['legacy_none','full_none']}),indent=2))

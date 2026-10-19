@@ -1,0 +1,287 @@
+{
+  "elapsed_seconds": 40.528890599998704,
+  "spectrum_max_abs_error": 3.6216355470131134e-09,
+  "independent_spectrum_checks": [
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "legacy_mean",
+      "length": 512,
+      "common_windows": 20
+    },
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "legacy_mean",
+      "length": 768,
+      "common_windows": 7
+    },
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "legacy_none",
+      "length": 512,
+      "common_windows": 20
+    },
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "legacy_none",
+      "length": 768,
+      "common_windows": 7
+    },
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "full_none",
+      "length": 512,
+      "common_windows": 20
+    },
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "full_none",
+      "length": 768,
+      "common_windows": 7
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "legacy_mean",
+      "length": 512,
+      "common_windows": 0
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "legacy_mean",
+      "length": 768,
+      "common_windows": 0
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "legacy_none",
+      "length": 512,
+      "common_windows": 0
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "legacy_none",
+      "length": 768,
+      "common_windows": 0
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "full_none",
+      "length": 512,
+      "common_windows": 0
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "full_none",
+      "length": 768,
+      "common_windows": 0
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "legacy_mean",
+      "length": 512,
+      "common_windows": 0
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "legacy_mean",
+      "length": 768,
+      "common_windows": 0
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "legacy_none",
+      "length": 512,
+      "common_windows": 0
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "legacy_none",
+      "length": 768,
+      "common_windows": 0
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "full_none",
+      "length": 512,
+      "common_windows": 0
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "full_none",
+      "length": 768,
+      "common_windows": 0
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "legacy_mean",
+      "length": 512,
+      "common_windows": 0
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "legacy_mean",
+      "length": 768,
+      "common_windows": 0
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "legacy_none",
+      "length": 512,
+      "common_windows": 0
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "legacy_none",
+      "length": 768,
+      "common_windows": 0
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "full_none",
+      "length": 512,
+      "common_windows": 0
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "full_none",
+      "length": 768,
+      "common_windows": 0
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "legacy_mean",
+      "length": 512,
+      "common_windows": 21
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "legacy_mean",
+      "length": 768,
+      "common_windows": 8
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "legacy_none",
+      "length": 512,
+      "common_windows": 21
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "legacy_none",
+      "length": 768,
+      "common_windows": 8
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "full_none",
+      "length": 512,
+      "common_windows": 21
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "full_none",
+      "length": 768,
+      "common_windows": 8
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "legacy_mean",
+      "length": 512,
+      "common_windows": 21
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "legacy_mean",
+      "length": 768,
+      "common_windows": 8
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "legacy_none",
+      "length": 512,
+      "common_windows": 21
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "legacy_none",
+      "length": 768,
+      "common_windows": 8
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "full_none",
+      "length": 512,
+      "common_windows": 21
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "full_none",
+      "length": 768,
+      "common_windows": 8
+    }
+  ],
+  "reliability_mask_checks": 8208,
+  "labels_and_common_windows_verified": true,
+  "primary_metric_checks": 810,
+  "independent_gate": [
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "full_none",
+      "record_pass": false
+    },
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "legacy_none",
+      "record_pass": false
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "full_none",
+      "record_pass": false
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "legacy_none",
+      "record_pass": false
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "full_none",
+      "record_pass": false
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "legacy_none",
+      "record_pass": false
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "full_none",
+      "record_pass": false
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "legacy_none",
+      "record_pass": false
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "full_none",
+      "record_pass": false
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "legacy_none",
+      "record_pass": false
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "full_none",
+      "record_pass": false
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "legacy_none",
+      "record_pass": false
+    }
+  ]
+}

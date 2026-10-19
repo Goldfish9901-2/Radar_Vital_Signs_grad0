@@ -1,0 +1,150 @@
+{
+  "input_hashes_verified": 10,
+  "original_mask_comparisons": [
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "legacy_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "full_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "legacy_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p02_Orientation_80_cm__left_side_r4",
+      "arm": "full_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "legacy_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "full_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "legacy_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p03_Distance_40_cm_r3",
+      "arm": "full_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "legacy_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "full_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "legacy_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p04_Distance_40_cm_r4",
+      "arm": "full_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "legacy_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "full_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "legacy_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p05_Distance_160_cm_r1",
+      "arm": "full_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "legacy_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "full_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "legacy_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p07_Angle_45_deg__80_cm_r4",
+      "arm": "full_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "legacy_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "full_mean",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "legacy_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    },
+    {
+      "record": "p09_Angle_30_deg__80_cm_r2",
+      "arm": "full_none",
+      "original_masks_equal": true,
+      "targets_equal": true
+    }
+  ],
+  "calibration_panel_verified": true
+}

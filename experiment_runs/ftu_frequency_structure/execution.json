@@ -1,0 +1,13 @@
+{
+  "elapsed_seconds": 101.45188159999816,
+  "protocol_commit": "c4a409135ea401d48be735afc2b96c84e2eb4c80",
+  "python_versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2"
+  },
+  "local": true,
+  "training": false,
+  "new_exports": false,
+  "command": "uv run --locked --no-sync python audit_ftu_structure.py"
+}
