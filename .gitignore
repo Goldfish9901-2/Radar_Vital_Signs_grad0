@@ -359,4 +359,5 @@ ref/
 !experiment_runs/ftu_adc_controlled/official_recovery/*.bin
 !experiment_runs/ftu_frequency_structure/REPORT.md
 !experiment_runs/ftu_frequency_structure/SUPPORT_ADDENDUM.md
+!experiment_runs/ftu_reference_support_v2/REPORT.md
 !experiment_runs/ftu_frequency_structure/spectra/*.npz

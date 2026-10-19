@@ -35,3 +35,4 @@ experiment_runs/ftu_adc_controlled/sources/** -whitespace
 experiment_runs/ftu_adc_controlled/evidence/** -whitespace
 experiment_runs/ftu_adc_controlled/official_recovery/official_readme.txt -whitespace
 experiment_runs/ftu_frequency_structure/** -text whitespace=cr-at-eol
+experiment_runs/ftu_reference_support_v2/** -text whitespace=cr-at-eol
