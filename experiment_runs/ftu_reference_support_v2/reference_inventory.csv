@@ -1,0 +1,7 @@
+record,points,first_second,last_second,median_step,maximum_gap
+p02_Orientation_80_cm__left_side_r4,61,0.0,60.0,1.0,1.0
+p03_Distance_40_cm_r3,60,0.0,59.0,1.0,1.0
+p04_Distance_40_cm_r4,60,0.0,59.0,1.0,1.0
+p05_Distance_160_cm_r1,60,0.0,59.0,1.0,1.0
+p07_Angle_45_deg__80_cm_r4,62,0.0,61.0,1.0,1.0
+p09_Angle_30_deg__80_cm_r2,62,0.0,61.0,1.0,1.0

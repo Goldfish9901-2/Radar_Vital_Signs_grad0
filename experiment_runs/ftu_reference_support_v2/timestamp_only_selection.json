@@ -1,0 +1,66 @@
+{
+  "512": {
+    "shifts": [
+      -20,
+      -15,
+      -10,
+      -5
+    ],
+    "support_records": 6,
+    "record_counts": [
+      13,
+      12,
+      12,
+      12,
+      14,
+      14
+    ],
+    "sorted_records": [
+      "p02_Orientation_80_cm__left_side_r4",
+      "p03_Distance_40_cm_r3",
+      "p04_Distance_40_cm_r4",
+      "p05_Distance_160_cm_r1",
+      "p07_Angle_45_deg__80_cm_r4",
+      "p09_Angle_30_deg__80_cm_r2"
+    ],
+    "ranking_score": [
+      6,
+      12,
+      77,
+      5,
+      50
+    ]
+  },
+  "768": {
+    "shifts": [
+      -20,
+      -15,
+      -10,
+      -5
+    ],
+    "support_records": 0,
+    "record_counts": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "sorted_records": [
+      "p02_Orientation_80_cm__left_side_r4",
+      "p03_Distance_40_cm_r3",
+      "p04_Distance_40_cm_r4",
+      "p05_Distance_160_cm_r1",
+      "p07_Angle_45_deg__80_cm_r4",
+      "p09_Angle_30_deg__80_cm_r2"
+    ],
+    "ranking_score": [
+      0,
+      0,
+      2,
+      5,
+      50
+    ]
+  }
+}
