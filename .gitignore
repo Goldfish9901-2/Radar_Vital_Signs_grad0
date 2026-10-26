@@ -360,4 +360,6 @@ ref/
 !experiment_runs/ftu_frequency_structure/REPORT.md
 !experiment_runs/ftu_frequency_structure/SUPPORT_ADDENDUM.md
 !experiment_runs/ftu_reference_support_v2/REPORT.md
+!experiment_runs/ftu_evaluation_controls/REPORT.md
+!experiment_runs/ftu_evaluation_controls/signals/*.npz
 !experiment_runs/ftu_frequency_structure/spectra/*.npz

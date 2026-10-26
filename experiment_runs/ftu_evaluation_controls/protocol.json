@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-26",
+  "base_commit": "d4082b10ff4851711e7daf348c3efbe954892914",
+  "purpose": "Calibrate frozen evaluation sensitivity using reference-derived synthetic signals, not radar performance",
+  "old_0_of_6_unchanged": true,
+  "training": false,
+  "new_radar_data": false,
+  "rule_changes": false,
+  "source_files": {
+    "experiment_runs/ftu_reference_support_v2/polar_reference_values.csv": "496406df1f895d12a6bec833380b3bd9123a3abf8612e75c417794d7dc73cb85",
+    "experiment_runs/ftu_reference_support_v2/selected_support.csv": "6f5326aa499cadf254c70f17deb3d6408b484cc7244b6eeeba4cfcb02691613e",
+    "experiment_runs/ftu_reference_support_v2/timestamp_only_selection.json": "03e8c014803cd98a03e71aa83fe4ca29c53c78edb6c2b5c4e2432e4cd252e8a2",
+    "experiment_runs/ftu_reference_support_v2/record_feasibility.csv": "58b13bacdcbc2e90b189691cf70df387e7a4757376a0d13cfef57b647e72e336",
+    "experiment_runs/ftu_reference_support_v2/decision.json": "66a836605643beaa3b3f5adb209766d4987a741ddef88dba979f44bd80d80daa",
+    "audit_ftu_structure.py": "d1a2c48cc3a5b79686774ec429f49a84c1b28cd968887e2604945da943e0d2ad"
+  },
+  "fs_hz": 20,
+  "frames": 1200,
+  "window_lengths": [
+    512,
+    768
+  ],
+  "hop_frames": 20,
+  "nfft": 4096,
+  "hann": "numpy.hanning(length), same as audit_ftu_structure.spectrum",
+  "band_bpm": [
+    45,
+    150
+  ],
+  "preprocessing": "Representation-level periodic real trace, per-window linear detrend, Hann, exact existing spectrum/scalar_metrics functions; no ADC/RDA or phase-extractor claim",
+  "reference": "interpolate existing finite HR only within observed bounds; no extrapolation, no circular labels; use previous exact common windows",
+  "generators": {
+    "positive": "frequency(t)=piecewise-linear reference HR(t); phase=initial_phase+2*pi*trapezoidal integral frequency/60; trace=cos(phase)",
+    "constant": "frequency=arithmetic mean of all recorded HR samples; intentionally oracle-centered mean-only comparator, not deployable baseline",
+    "trend": "frequency(t)=OLS linear trend of HR vs reference time; all HR residuals removed; trend comparator is not necessarily physiologically independent of labels"
+  },
+  "noise_sigma": [
+    0.0,
+    0.25
+  ],
+  "seeds": [
+    20261026,
+    20261027,
+    20261028
+  ],
+  "randomization": "same initial phase and standard-normal noise within each record/seed across generators and matched-offset conditions; unit cosine amplitude, noise SD given above; no tuning",
+  "generation_modes": {
+    "primary": "generate using radar time t aligned to reference time t, score at all0/1/2s assumptions",
+    "matched_secondary": "positive only: separately generate frequency from HR(t+1) or HR(t+2) and score at that matching offset, to separate known time-origin mismatch from rule failure"
+  },
+  "scoring": "exact common-window labels and shifts -20/-15/-10/-5 from frozen timestamp-only selection; no new shift selection, no radar scores",
+  "metrics": [
+    "MAE",
+    "peak within5bpm",
+    "near-reference band power +/-one native bin",
+    "centered RMSE/r/std ratio",
+    "power and MAE differences for EACH shifted label",
+    "peak versus mean and Hann-energy-weighted mean HR"
+  ],
+  "native_bin_bpm": {
+    "length512": 2.34375,
+    "length768": 1.5625
+  },
+  "display_grid_bpm": 0.29296875,
+  "score_rule": "coverage>=.9; peak within5>=.6; near-power advantage>=.01 over each4controls; MAE strictly smaller than each4controls",
+  "admission": "Report score-rule diagnostics separately from existing reference-admission gate. Existing0/6 admission remains, so no formal real-data pass or54record expansion.",
+  "calibration_acceptance": "Primary512 noiseless: positive must pass score rule in>=5/6records for each seed at offset0 and in all-offset primary sensitivity; no constant/trend record may pass in any seed at offset0. Matched positive sensitivity reported separately and cannot rescue primary. Noisysigma.25 descriptive robustness. If positive fails or comparator passes, rules are not calibrated for a dynamic tracking claim.",
+  "secondary768": "preserve0/1 common-window support; no pass decision below5windows; no shorter-window rescue",
+  "development": "All six are previously examined development records. No replacement scoring rule is selected or validated this round; any future rule needs development then preregistered independent-record validation.",
+  "metadata_questions": [
+    "same-acquisition radar/Polar trigger relationship and clock mapping",
+    "whether original RR or ECG is recorded/released",
+    "HR calculation, window, filtering, smoothing, latency and export path"
+  ]
+}
