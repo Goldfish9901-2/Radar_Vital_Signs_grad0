@@ -1,0 +1,38 @@
+[
+  {
+    "name": "dataset_paper_html",
+    "url": "https://arxiv.org/html/2405.12659v1",
+    "final_url": "https://arxiv.org/html/2405.12659v1",
+    "status": 200,
+    "bytes": 153186,
+    "sha256": "51ba42989a5cad4451148a3e3c7fa4ac1a6b2270b12394dc802525565182d529",
+    "elapsed_seconds": 0.81722660000014
+  },
+  {
+    "name": "polar_flow_export",
+    "url": "https://support.polar.com/en/support/how_do_i_export_individual_training_sessions_from_polar_flow_web_service",
+    "final_url": "https://support.polar.com/en/export-training-sessions-flow",
+    "status": 200,
+    "bytes": 141828,
+    "sha256": "ada04ff21005aafc238a4263336437c77c83e43d2021508b2feaa24919516051",
+    "elapsed_seconds": 4.102175299998635
+  },
+  {
+    "name": "polar_sdk_readme",
+    "url": "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/README.md",
+    "final_url": "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/README.md",
+    "status": 200,
+    "bytes": 19391,
+    "sha256": "5153e7ca13fd3c6c8332869ddf7f97b0f772530270ee30dce7165e1ba4a23eb2",
+    "elapsed_seconds": 1.2122787999996945
+  },
+  {
+    "name": "polar_h10_product",
+    "url": "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/documentation/products/PolarH10.md",
+    "final_url": "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/documentation/products/PolarH10.md",
+    "status": 200,
+    "bytes": 826,
+    "sha256": "26c6e49f2886ce67960b8326a7573d241a0a49cad8970d4c81582e3c21490994",
+    "elapsed_seconds": 0.9152598999990005
+  }
+]

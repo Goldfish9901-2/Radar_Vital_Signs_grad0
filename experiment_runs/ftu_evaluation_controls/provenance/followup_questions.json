@@ -1,0 +1,10 @@
+{
+  "purpose": "Concrete follow-up questions only; no contact/message sent",
+  "questions": [
+    "For each frozen record, how were radar and Polar Beat recording starts/stops coordinated? Is there a shared trigger/event, host/device time log, or measured offset/uncertainty?",
+    "Were original R-R intervals or raw ECG acquired for those exact sessions? If so, where are files and device timestamps, and how do they map to the exported CSV/session IDs?",
+    "Which H10 firmware, Beat/Flow versions, recording modes and export options were used?",
+    "How were reported HR values computed from beats: averaging/filter length, artifact rejection, resampling, temporal anchor and effective delay?",
+    "Do longer same-session reference records exist beyond the minute-long CSVs, without concatenating independent captures?"
+  ]
+}

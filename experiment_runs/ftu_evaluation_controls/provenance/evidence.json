@@ -1,0 +1,32 @@
+[
+  {
+    "question": "同次采集触发与时钟映射",
+    "status": "部分过程说明；逐记录关系未解决",
+    "source": "https://arxiv.org/html/2405.12659v1",
+    "sections": "VI-A and VI-C2",
+    "evidence": "One operator ran mmWave Studio; another ensured synchronized measurements via Polar Beat. Reference recorded with Beat, saved/accessed via Flow.",
+    "missing": "Shared trigger/event IDs, clock discipline, precise per-record start mapping, transport latency and uncertainty are not specified in the examined sections. Flow synchronization must not be equated with radar/Polar clock synchronization."
+  },
+  {
+    "question": "原始RR间期/ECG是否存在",
+    "status": "传感器具备能力；本次采集/发布未确认",
+    "source": "https://raw.githubusercontent.com/polarofficial/polar-ble-sdk/master/documentation/products/PolarH10.md",
+    "evidence": "Current SDK documents HR and RR intervals in ms and ECG130Hz; dataset paper describes minute-long time+HR CSVs, not released raw ECG/RR.",
+    "missing": "Whether raw RR/ECG were recorded by the actual Beat/app/firmware version, retained, or separately released; current device capability does not prove historical acquisition. RR interval is distinct from respiratory-rate reference."
+  },
+  {
+    "question": "HR计算/平滑与导出",
+    "status": "导出路径已明确；算法、时窗和平滑/延迟未知",
+    "source": "https://arxiv.org/html/2405.12659v1",
+    "sections": "VI-C2",
+    "evidence": "Beat to Flow website Diary Export session CSV, approximately2KB, initial metadata3rows then time+integer HR; stops from00:00:59 to00:01:02.",
+    "missing": "Instantaneous60/RR vs averaged beats, effective filter/window, artifact rejection, resampling, temporal anchor and latency are not given in the examined sources. A1Hz CSV is not evidence of unsmoothed beat-to-beat HR."
+  },
+  {
+    "question": "Polar Flow官方导出说明",
+    "status": "可确认导出选项；不确认本数据集HR处理",
+    "source": "https://support.polar.com/en/export-training-sessions-flow",
+    "evidence": "Documents Diary Export, CSV/TCX/FIT/GPX options and HR export; examined page does not specify this dataset HR computation/smoothing.",
+    "missing": "Need actual acquisition settings, app and firmware versions and data-owner confirmation."
+  }
+]

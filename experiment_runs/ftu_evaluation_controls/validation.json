@@ -1,0 +1,10 @@
+{
+  "elapsed_seconds": 4.67922069999986,
+  "independent_signal_checks": 180,
+  "maximum_signal_difference": 3.410605131648481e-13,
+  "independent_metric_checks": 10560,
+  "maximum_metric_difference": 1.1102230246251565e-15,
+  "independent_score_gate_checks": 396,
+  "previous_0_of_6_preserved": true,
+  "new_radar_data_read": false
+}

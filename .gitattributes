@@ -38,3 +38,4 @@ experiment_runs/ftu_frequency_structure/** -text whitespace=cr-at-eol
 experiment_runs/ftu_reference_support_v2/** -text whitespace=cr-at-eol
 experiment_runs/ftu_reference_support_v2/official_readme.txt -whitespace
 experiment_runs/ftu_evaluation_controls/** -text whitespace=cr-at-eol
+experiment_runs/ftu_evaluation_controls/provenance/*.txt -whitespace

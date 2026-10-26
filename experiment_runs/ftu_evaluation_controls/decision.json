@@ -1,0 +1,10 @@
+{
+  "calibration_adequate": false,
+  "previous_reference_admission": "0/6 unchanged",
+  "real_radar_performance_claim": false,
+  "independent_validation": false,
+  "replacement_rule_selected": false,
+  "next_step": "develop and independently freeze better evaluation before dynamic tracking claims",
+  "full_rda_reconstruction": false,
+  "training": false
+}

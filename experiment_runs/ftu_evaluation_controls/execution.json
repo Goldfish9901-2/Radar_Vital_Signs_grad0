@@ -1,0 +1,12 @@
+{
+  "elapsed_seconds": 2.4961583000003884,
+  "command": "uv run --locked --no-sync python audit_ftu_evaluation_controls.py",
+  "protocol_commit": "a37e447",
+  "runtime_git_head": "a37e4471592f41a9c3077154a0e4e7a83deb7055",
+  "numpy": "2.5.4",
+  "pandas": "3.0.6",
+  "local": true,
+  "training": false,
+  "new_radar_read": false,
+  "verified_input_hashes": 6
+}
