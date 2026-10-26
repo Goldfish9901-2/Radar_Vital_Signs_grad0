@@ -362,4 +362,6 @@ ref/
 !experiment_runs/ftu_reference_support_v2/REPORT.md
 !experiment_runs/ftu_evaluation_controls/REPORT.md
 !experiment_runs/ftu_evaluation_controls/signals/*.npz
+!experiment_runs/ftu_residual_calibration/REPORT.md
+!experiment_runs/ftu_residual_calibration/signals/*.npz
 !experiment_runs/ftu_frequency_structure/spectra/*.npz
