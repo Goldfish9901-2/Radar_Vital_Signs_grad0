@@ -1,0 +1,50 @@
+[
+  {
+    "name": "GDN0002/GDN0002_1_Resting.mat",
+    "size": 42952616,
+    "compressed_size": 42952616,
+    "crc32": 1702427467,
+    "sha256": "91679f86cbf82702c47c214b7c4ed0247da920cda0ac54c2e5557ae65931faf7",
+    "download_seconds": 3.4345364760000052
+  },
+  {
+    "name": "GDN0002/GDN0002_2_Valsalva.mat",
+    "size": 68520917,
+    "compressed_size": 68520917,
+    "crc32": 4009252756,
+    "sha256": "b8c7e65441cf509a28f0a14e5bddc92413791d04646cc65b7be3ebccde7e80f7",
+    "download_seconds": 4.490156745999997
+  },
+  {
+    "name": "GDN0006/GDN0006_1_Resting.mat",
+    "size": 42344006,
+    "compressed_size": 42344006,
+    "crc32": 2874058808,
+    "sha256": "7eb8c24bb01ad7121404552b5d6371285b2451ec7179a96d9ce0c97ba1bdc59e",
+    "download_seconds": 3.6392113309999843
+  },
+  {
+    "name": "GDN0006/GDN0006_2_Valsalva.mat",
+    "size": 90690149,
+    "compressed_size": 90690149,
+    "crc32": 700461986,
+    "sha256": "e09e9dd91bb5f618b5bc8d8524fe96bfbb82efdcdd1029f0e06f92cc178fb29a",
+    "download_seconds": 8.71660860999998
+  },
+  {
+    "name": "GDN0007/GDN0007_1_Resting.mat",
+    "size": 44104001,
+    "compressed_size": 44104001,
+    "crc32": 1533263548,
+    "sha256": "eff7bd858e476f8aff9fa9e53a6ea5bdfb3d07093c99b6a17ab223dbedb5cd46",
+    "download_seconds": 3.5034331569999893
+  },
+  {
+    "name": "GDN0007/GDN0007_2_Valsalva.mat",
+    "size": 68825821,
+    "compressed_size": 68825821,
+    "crc32": 3642474139,
+    "sha256": "2198631ae318b98453f8767ecf6be9d04530b65eee0e8cd426e2b5df973d791a",
+    "download_seconds": 4.637715522000008
+  }
+]

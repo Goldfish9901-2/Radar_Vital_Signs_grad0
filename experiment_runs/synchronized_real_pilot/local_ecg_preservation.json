@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "file": "tmp/sync_real_results/sync_real_pilot/GDN0002_1_Resting_reference_ecg.npz",
+      "sha256": "4ad7eec472452bc65eec858cb4aca12bee62bb76769d14dee161904d54af596e",
+      "bytes": 5608500
+    },
+    {
+      "file": "tmp/sync_real_results/sync_real_pilot/GDN0002_2_Valsalva_reference_ecg.npz",
+      "sha256": "863229f2ee3b3c33c7467c73b16b074fea52ba10908cf931d4055477067a910d",
+      "bytes": 5616813
+    },
+    {
+      "file": "tmp/sync_real_results/sync_real_pilot/GDN0007_1_Resting_reference_ecg.npz",
+      "sha256": "5a5fab22cd43ab19f58edc05e25c7021c069bbbedc83d9b502d56e6c8e8d4138",
+      "bytes": 5613781
+    },
+    {
+      "file": "tmp/sync_real_results/sync_real_pilot/GDN0007_2_Valsalva_reference_ecg.npz",
+      "sha256": "1b0a1d80dcd7ddd5875f6055f30928988bf2c2dceb4fe6129e895e223572cbc1",
+      "bytes": 5610657
+    },
+    {
+      "file": "tmp/sync_real_results/sync_real_pilot/GDN0006_1_Resting_reference_ecg.npz",
+      "sha256": "180e0e436e29a6c9342f96d88a861daab176e4505791a0941737c4389e6f836f",
+      "bytes": 5626408
+    },
+    {
+      "file": "tmp/sync_real_results/sync_real_pilot/GDN0006_2_Valsalva_reference_ecg.npz",
+      "sha256": "03fbafdfbc759e3fdebf511eb4cb450c690c45e065f6b8eabdc6ed670c9abcf5",
+      "bytes": 5629745
+    }
+  ],
+  "elapsed_seconds": 0.8617248000009567,
+  "raw_ecg_changed": false,
+  "detector_changed": false,
+  "manual_adjudication": false,
+  "matching_tolerance_is_diagnostic_not_accuracy_bound": true
+}

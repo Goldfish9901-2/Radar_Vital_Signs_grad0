@@ -1,0 +1,16 @@
+{
+  "new_radar_records": 6,
+  "new_subjects": 3,
+  "training": false,
+  "old_ftu_synthetic_calibration": false,
+  "real_tracking_success_claim": false,
+  "fixed_readout_increment_demonstrated": false,
+  "reference_disagreement_subjects": [
+    "GDN0006",
+    "GDN0007"
+  ],
+  "reference_manually_adjudicated": false,
+  "clock_error_bound_established": false,
+  "next_prerequisite": "Audit ECG reference independently and establish synchronization uncertainty before stronger dynamic claims; preserve other subjects untouched",
+  "no_posthoc_detector_frontend_or_subject_replacement": true
+}

@@ -1,0 +1,9 @@
+{
+  "run_synchronized_real_pilot.py": "616fc6b424a01b9ee3de122551b3b8b55d0c1431b33b789b1ce4c191de353d27",
+  "verify_synchronized_real_pilot.py": "bbbfec0ac2487e4d46e0cdfd07025c59dbf0ed1224e01d590e55ded7c2aed30c",
+  "summarize_synchronized_real_pilot.py": "40414da4d864060be66826f46315c9f4285261ceff11fc90f87d7d665ed62cad",
+  "inspect_synchronized_reference.py": "da18c02b7ba928a70be1057e4787559f51fbad3da3a3b985f46e8642d5f9ab0e",
+  "probe_synchronized_dataset.py": "681f5031013a48dfad65a60fa262387c1e82bce1b57e6b21fa7c755ddf4e27e9",
+  "prepare_synchronized_real_pilot.py": "354f2b19332d3ab75468f67362546e5ef0cf3386c0a38077490d798adc06ea93",
+  "kaggle/prepare_synchronized_real_pilot.py": "22f053561c1fcef8db8a9de0afb4e7579340026dbdbe501d5408ca6473a29dcd"
+}

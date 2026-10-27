@@ -1,0 +1,13 @@
+{
+  "elapsed_seconds": 0.3162013000001025,
+  "window_readouts_checked": 1404,
+  "maximum_reference_error_bpm": 9.237055564881302e-14,
+  "maximum_fft_error_bpm": 0.0,
+  "maximum_summary_error": 3.9968028886505635e-14,
+  "completed_records": 6,
+  "failed_records": 0,
+  "source_and_protocol_hash_verified": true,
+  "source_snapshots_verified": 7,
+  "reference_detection_independently_adjudicated": false,
+  "clock_error_bound_verified": false
+}

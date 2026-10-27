@@ -76,7 +76,7 @@ def main():
                             print('ZIP METADATA BYTES', remote.bytes_read, flush=True)
                         except Exception as exc:
                             (root/'archive_metadata_error.json').write_text(json.dumps({'error': repr(exc)}))
-                    
+
                 for source in ['README.md', 'TechnicalValidation.m', 'plotData.m', 'utils/getInterventions.m', 'utils/rpeak.m']:
                     code_url = 'https://gitlab.com/api/v4/projects/sven_schellenberger%2Fscidata_phase1/repository/files/'+source.replace('/', '%2F')+'/raw?ref=master'
                     try:

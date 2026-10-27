@@ -1,0 +1,251 @@
+[
+  {
+    "origin": [
+      15.106189886728922,
+      -881.5594391822815
+    ],
+    "scale": [
+      1257.9123748406155,
+      969.399228013261
+    ],
+    "ellipse_center": [
+      0.8668783240327369,
+      1.2214984873381085
+    ],
+    "ellipse_transform": [
+      [
+        0.5726594150575178,
+        0.01914373147388577
+      ],
+      [
+        0.019143731473885768,
+        0.39480889897837906
+      ]
+    ],
+    "calibration_radial_rmse": 0.1361615175070997,
+    "low_amplitude_fraction": 0.0,
+    "phase_increment_q999_rad": 0.01178290868891432,
+    "subject": "GDN0002",
+    "scenario": "Resting",
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "score_start_s": 30.0,
+    "score_end_s": 210.0,
+    "intervention_pulses_s": [],
+    "clock_error_bound_s": null,
+    "synchronization": "Published Gold-code resampling and lag correction; no retained sync sequence for independent residual bound",
+    "ecg_reference": "NeuroKit2 0.2.12 uncorrected R peaks; not manually adjudicated",
+    "elapsed_seconds": 1.456154940999994
+  },
+  {
+    "origin": [
+      499.95271158218384,
+      -1165.5836222966511
+    ],
+    "scale": [
+      1145.6845467862115,
+      1257.3790062471458
+    ],
+    "ellipse_center": [
+      -1184713099032121.5,
+      -1432960571799277.0
+    ],
+    "ellipse_transform": [
+      [
+        6.782879016709493e-16,
+        0.0
+      ],
+      [
+        0.0,
+        4.153648144492288e-16
+      ]
+    ],
+    "calibration_radial_rmse": 9.180119046931658e-16,
+    "low_amplitude_fraction": 0.0,
+    "phase_increment_q999_rad": 1.4399117221211693e-16,
+    "subject": "GDN0002",
+    "scenario": "Valsalva",
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "score_start_s": 78.965,
+    "score_end_s": 258.96500000000003,
+    "intervention_pulses_s": [
+      26.714,
+      48.965,
+      350.6365,
+      370.493,
+      670.4395,
+      691.5805
+    ],
+    "clock_error_bound_s": null,
+    "synchronization": "Published Gold-code resampling and lag correction; no retained sync sequence for independent residual bound",
+    "ecg_reference": "NeuroKit2 0.2.12 uncorrected R peaks; not manually adjudicated",
+    "elapsed_seconds": 1.618793595999989
+  },
+  {
+    "origin": [
+      1654.2541557947795,
+      1787.2457383473713
+    ],
+    "scale": [
+      357.28482094744743,
+      320.957554973025
+    ],
+    "ellipse_center": [
+      418192301182867.5,
+      3610828866641352.5
+    ],
+    "ellipse_transform": [
+      [
+        3.715919682578814e-16,
+        -3.046796689471152e-17
+      ],
+      [
+        -3.046796689471151e-17,
+        2.8018806757374684e-16
+      ]
+    ],
+    "calibration_radial_rmse": 2.9378635445232025e-16,
+    "low_amplitude_fraction": 0.0,
+    "phase_increment_q999_rad": 4.5862971685278116e-17,
+    "subject": "GDN0006",
+    "scenario": "Resting",
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "score_start_s": 30.0,
+    "score_end_s": 210.0,
+    "intervention_pulses_s": [],
+    "clock_error_bound_s": null,
+    "synchronization": "Published Gold-code resampling and lag correction; no retained sync sequence for independent residual bound",
+    "ecg_reference": "NeuroKit2 0.2.12 uncorrected R peaks; not manually adjudicated",
+    "elapsed_seconds": 1.1490260360000093
+  },
+  {
+    "origin": [
+      2154.1516122817993,
+      1860.2102006276448
+    ],
+    "scale": [
+      860.2998869991237,
+      787.4054769160263
+    ],
+    "ellipse_center": [
+      -1558809401061868.8,
+      -9399807646736200.0
+    ],
+    "ellipse_transform": [
+      [
+        1.9121580129616488e-16,
+        -1.4777005172259547e-17
+      ],
+      [
+        -1.4777005172259547e-17,
+        1.0747943865336078e-16
+      ]
+    ],
+    "calibration_radial_rmse": 1.7757785040961707e-16,
+    "low_amplitude_fraction": 0.0,
+    "phase_increment_q999_rad": 6.565601099030245e-17,
+    "subject": "GDN0006",
+    "scenario": "Valsalva",
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "score_start_s": 87.29849999999999,
+    "score_end_s": 267.2985,
+    "intervention_pulses_s": [
+      35.7325,
+      57.2985,
+      630.1525,
+      651.29475,
+      981.722,
+      1003.13875
+    ],
+    "clock_error_bound_s": null,
+    "synchronization": "Published Gold-code resampling and lag correction; no retained sync sequence for independent residual bound",
+    "ecg_reference": "NeuroKit2 0.2.12 uncorrected R peaks; not manually adjudicated",
+    "elapsed_seconds": 2.0407767920000026
+  },
+  {
+    "origin": [
+      1486.8307903607686,
+      1265.4739836057026
+    ],
+    "scale": [
+      717.1824008350264,
+      635.8241585486745
+    ],
+    "ellipse_center": [
+      3313275605849028.5,
+      -995538932404966.0
+    ],
+    "ellipse_transform": [
+      [
+        2.7589578801565015e-16,
+        -3.6086754225778045e-17
+      ],
+      [
+        -3.6086754225778027e-17,
+        1.9341177835672892e-16
+      ]
+    ],
+    "calibration_radial_rmse": 8.187647041226405e-16,
+    "low_amplitude_fraction": 0.0,
+    "phase_increment_q999_rad": 8.0101884675847e-17,
+    "subject": "GDN0007",
+    "scenario": "Resting",
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "score_start_s": 30.0,
+    "score_end_s": 210.0,
+    "intervention_pulses_s": [],
+    "clock_error_bound_s": null,
+    "synchronization": "Published Gold-code resampling and lag correction; no retained sync sequence for independent residual bound",
+    "ecg_reference": "NeuroKit2 0.2.12 uncorrected R peaks; not manually adjudicated",
+    "elapsed_seconds": 1.2023814709999954
+  },
+  {
+    "origin": [
+      1559.0932933489482,
+      1339.0505981445312
+    ],
+    "scale": [
+      968.9005700152231,
+      908.7369462689217
+    ],
+    "ellipse_center": [
+      -65641308041101.086,
+      -1.084408953363794e+16
+    ],
+    "ellipse_transform": [
+      [
+        1.2189655326929235e-16,
+        -7.470322320018499e-18
+      ],
+      [
+        -7.470322320018502e-18,
+        9.201526398921834e-17
+      ]
+    ],
+    "calibration_radial_rmse": 2.6978647938375713e-16,
+    "low_amplitude_fraction": 0.0,
+    "phase_increment_q999_rad": 1.9658617293995918e-17,
+    "subject": "GDN0007",
+    "scenario": "Valsalva",
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "score_start_s": 78.31325,
+    "score_end_s": 258.31325,
+    "intervention_pulses_s": [
+      26.21775,
+      48.31325,
+      348.5585,
+      368.88775,
+      668.91425,
+      688.69425
+    ],
+    "clock_error_bound_s": null,
+    "synchronization": "Published Gold-code resampling and lag correction; no retained sync sequence for independent residual bound",
+    "ecg_reference": "NeuroKit2 0.2.12 uncorrected R peaks; not manually adjudicated",
+    "elapsed_seconds": 1.6113260369999978
+  }
+]
