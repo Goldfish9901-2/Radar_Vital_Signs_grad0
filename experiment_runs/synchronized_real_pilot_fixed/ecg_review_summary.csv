@@ -1,0 +1,7 @@
+record,primary_lead,review_start_s,review_end_s,reviewed_peak_count,technical_quality,notes
+GDN0002_1_Resting,2,28.0,212.0,209,QRS visible; no clear missed or extra automatic detections found,"Baseline drift and transients around188-208s; sharp QRS remain identifiable and coincide with auto markers. No smoothing, beat removal, or exclusion."
+GDN0002_2_Valsalva,2,76.965,260.96500000000003,193,QRS visible; no clear missed or extra automatic detections found,"Primary QRS morphology and marker correspondence remain clear across the full saved interval, including boundaries."
+GDN0006_1_Resting,1,28.0,212.0,174,QRS visible; no clear missed or extra automatic detections found,"Primary QRS morphology and marker correspondence remain clear across the full saved interval, including boundaries."
+GDN0006_2_Valsalva,1,85.2985,269.2985,176,QRS visible; no clear missed or extra automatic detections found,"Primary QRS morphology and marker correspondence remain clear across the full saved interval, including boundaries."
+GDN0007_1_Resting,2,28.0,212.0,185,QRS visible; no clear missed or extra automatic detections found,Primary ECG2 has distinguishable narrow QRS and later broad T waves; markers follow QRS in reviewed strips. No replacement by ECG1.
+GDN0007_2_Valsalva,2,76.313,260.313,183,QRS visible; no clear missed or extra automatic detections found,Primary ECG2 has distinguishable narrow QRS and later broad T waves; markers follow QRS in reviewed strips. No replacement by ECG1.
