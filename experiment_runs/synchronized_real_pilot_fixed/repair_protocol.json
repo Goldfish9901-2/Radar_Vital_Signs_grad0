@@ -1,0 +1,91 @@
+{
+  "version": 2,
+  "parent_protocol_commit": "46fc91b",
+  "parent_result_commit": "7e357da",
+  "date": "2026-10-27",
+  "status": "frozen before corrected radar outcomes",
+  "defect": "Original singular generalized eigensystem discarded eigenvalues and admitted infinite-eigenvalue degenerate conics; radial residual alone cannot detect unit-circle point collapse",
+  "changed": "Only ellipse candidate validation and support checks; no new fitting objective, calibration interval or selection by HR",
+  "unchanged_protocol_sha256": "7dafe6fd4341f32dab37c5c0b20f6f1e6c5d0ea5cbed47f527f8b9834171e50d",
+  "members": [
+    {
+      "name": "GDN0002/GDN0002_1_Resting.mat",
+      "size": 42952616,
+      "compressed_size": 42952616,
+      "crc32": 1702427467
+    },
+    {
+      "name": "GDN0002/GDN0002_2_Valsalva.mat",
+      "size": 68520917,
+      "compressed_size": 68520917,
+      "crc32": 4009252756
+    },
+    {
+      "name": "GDN0006/GDN0006_1_Resting.mat",
+      "size": 42344006,
+      "compressed_size": 42344006,
+      "crc32": 2874058808
+    },
+    {
+      "name": "GDN0006/GDN0006_2_Valsalva.mat",
+      "size": 90690149,
+      "compressed_size": 90690149,
+      "crc32": 700461986
+    },
+    {
+      "name": "GDN0007/GDN0007_1_Resting.mat",
+      "size": 44104001,
+      "compressed_size": 44104001,
+      "crc32": 1533263548
+    },
+    {
+      "name": "GDN0007/GDN0007_2_Valsalva.mat",
+      "size": 68825821,
+      "compressed_size": 68825821,
+      "crc32": 3642474139
+    }
+  ],
+  "subjects": [
+    "GDN0002",
+    "GDN0007",
+    "GDN0006"
+  ],
+  "ecg_primary_lead": {
+    "GDN0002": 2,
+    "GDN0007": 2,
+    "GDN0006": 1
+  },
+  "unchanged": [
+    "original record bytes",
+    "first30s calibration",
+    "score intervals",
+    "512-frame windows and2s hops",
+    "45-150bpm band",
+    "FFT readout",
+    "main ECG leads and frozen automatic peaks",
+    "fixed reference offsets"
+  ],
+  "failure_policy": "No valid calibration => record failure with no HR output and no replacement; preserve all failures",
+  "guards": {
+    "finite_generalized_eigenvalue": "homogeneous beta >64epsilon*(abs(alpha)+abs(beta))",
+    "eigenpair_backward_error_max": 1e-07,
+    "quadratic_norm_fraction_min": 1e-10,
+    "mapped_largest_centered_std_min": 0.001,
+    "mapped_smallest_centered_std_min": 1e-06,
+    "mapped_circular_variance_min": 1e-06,
+    "mapped_unwrapped_q99_q01_span_min_rad": 0.01,
+    "original_radial_rmse_max": 0.2,
+    "original_axis_ratio_max": 100
+  },
+  "guard_interpretation": "Numerical degeneracy guards only, not physiological correctness or full ellipse identifiability guarantees",
+  "source_hashes": {
+    "synchronized_ellipse_fixed.py": "3ba237bd76860fdd4f94b2f7c3558da220283d3b3107fdce6497bd9580eb37cf",
+    "validate_synchronized_ellipse_fixed.py": "e369944a00da8019c87330933d7189d246512482efbd36f5329dc7fa4bc504b8",
+    "run_synchronized_real_pilot_fixed.py": "85f27bc55f093e49b0f171b22f50dffa5b3fe7de4f366359d1d229ab50bcc919",
+    "run_synchronized_real_pilot.py": "616fc6b424a01b9ee3de122551b3b8b55d0c1431b33b789b1ce4c191de353d27"
+  },
+  "no_other_subject_access": true,
+  "training": false,
+  "reference_review": "ECG-only materials; no corrected radar outputs opened before signed review decisions; reviewer had seen previous defective-run predictions, so not retrospectively blinded to old study",
+  "clock_error_bound_s": null
+}

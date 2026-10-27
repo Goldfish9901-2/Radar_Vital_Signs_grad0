@@ -1,0 +1,113 @@
+{
+  "elapsed_seconds": 0.011401499999919906,
+  "real_radar_or_hr_read": false,
+  "cases": [
+    {
+      "case": "full_ellipse",
+      "phase_rmse_rad": 1.3639840944333825e-14,
+      "passed": true,
+      "circular_variance": 0.9971969995234206,
+      "rejections": [
+        {
+          "candidate": 1,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ]
+    },
+    {
+      "case": "noisy_ellipse",
+      "phase_rmse_rad": 0.0020856237412697686,
+      "passed": true,
+      "circular_variance": 0.9972248384905479,
+      "rejections": [
+        {
+          "candidate": 1,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ],
+      "original_phase_rmse_rad": 254.62559833855735,
+      "original_radial_rmse": 1.1102230246251565e-16
+    },
+    {
+      "case": "partial_breathing_arc",
+      "phase_rmse_rad": 5.684831582242141e-15,
+      "passed": true,
+      "circular_variance": 0.4378919369330184,
+      "rejections": [
+        {
+          "candidate": 0,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ]
+    },
+    {
+      "case": "constant",
+      "passed": true,
+      "rejected": "Constant I/Q calibration"
+    },
+    {
+      "case": "line",
+      "passed": true,
+      "rejected": "Collinear I/Q calibration"
+    },
+    {
+      "case": "nonfinite",
+      "passed": true,
+      "rejected": "Invalid calibration input"
+    },
+    {
+      "case": "unit_circle_point_collapse",
+      "radial_rmse": 0.0,
+      "passed": true,
+      "rejected": "Mapped calibration collapses to a point or degenerate arc"
+    }
+  ]
+}

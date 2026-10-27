@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-27",
+  "scope": "All184s saved raw primary-lead ECG per six records, including scoring boundaries",
+  "allowed_inputs": [
+    "raw primary ECG",
+    "native sample rate/time origin",
+    "original automatic R peaks",
+    "fixed record and window definitions"
+  ],
+  "forbidden_inputs": [
+    "corrected radar predictions",
+    "radar errors",
+    "radar spectra",
+    "secondary lead selection to improve outcomes"
+  ],
+  "review": "Visual technical adjudication of all10s strips, including start/end support; optional filtered ECG trace only for morphology visibility; preserve original signal",
+  "decisions": "Accept clear QRS detections; add/delete/refine only with explicit ECG morphology evidence and recorded times/reasons. Mark uncertain spans unscorable; never edit for HR smoothness or radar agreement.",
+  "abnormal_beats": "Do not remove plausible ectopic morphology solely for RR irregularity; retain existing0.3-2s scoring QC and flag ambiguous intervals",
+  "comparison": "Keep original automatic peaks and score both references on common support after review freeze",
+  "limitation": "Technical research waveform review by the assistant, not independent expert clinical annotation; previous defective-run predictions were already visible",
+  "other_subjects": "27 remain untouched"
+}

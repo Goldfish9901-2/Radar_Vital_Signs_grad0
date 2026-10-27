@@ -1,0 +1,222 @@
+{
+  "elapsed_seconds": 8.13561910000135,
+  "radar_inputs_read": false,
+  "pages": [
+    {
+      "record": "GDN0002_1_Resting",
+      "primary_lead": 2,
+      "page": 1,
+      "start_s": 28.0,
+      "end_s": 88.0,
+      "file": "tmp/ecg_only_review/GDN0002_1_Resting_page1.png",
+      "sha256": "75bccaf6411e0120955ff861639172c54b795443aa3ef7ecb3480c916435dfab"
+    },
+    {
+      "record": "GDN0002_1_Resting",
+      "primary_lead": 2,
+      "page": 2,
+      "start_s": 88.0,
+      "end_s": 148.0,
+      "file": "tmp/ecg_only_review/GDN0002_1_Resting_page2.png",
+      "sha256": "c7e6dc613fd1c621109e6812b717e2cabe5c5e5af34a9d53452ee7680767b22b"
+    },
+    {
+      "record": "GDN0002_1_Resting",
+      "primary_lead": 2,
+      "page": 3,
+      "start_s": 148.0,
+      "end_s": 208.0,
+      "file": "tmp/ecg_only_review/GDN0002_1_Resting_page3.png",
+      "sha256": "79b921b7e3e63a7a912522463c7585da5d7cc84420e12976068490279105b6b0"
+    },
+    {
+      "record": "GDN0002_1_Resting",
+      "primary_lead": 2,
+      "page": 4,
+      "start_s": 208.0,
+      "end_s": 212.0,
+      "file": "tmp/ecg_only_review/GDN0002_1_Resting_page4.png",
+      "sha256": "7118f7fd4daf554d6823ececa43ef1213c6180d4ef229d75b7fd35440adf819d"
+    },
+    {
+      "record": "GDN0002_2_Valsalva",
+      "primary_lead": 2,
+      "page": 1,
+      "start_s": 76.965,
+      "end_s": 136.965,
+      "file": "tmp/ecg_only_review/GDN0002_2_Valsalva_page1.png",
+      "sha256": "16fe66eb979e1c97fba041f3b88a3409a5645c70a7b665c1e4070fe88c057531"
+    },
+    {
+      "record": "GDN0002_2_Valsalva",
+      "primary_lead": 2,
+      "page": 2,
+      "start_s": 136.965,
+      "end_s": 196.965,
+      "file": "tmp/ecg_only_review/GDN0002_2_Valsalva_page2.png",
+      "sha256": "6bd3a53d9d6f0025bb52e15930801ced90339341f13f87583a6a558c5abc0eec"
+    },
+    {
+      "record": "GDN0002_2_Valsalva",
+      "primary_lead": 2,
+      "page": 3,
+      "start_s": 196.965,
+      "end_s": 256.96500000000003,
+      "file": "tmp/ecg_only_review/GDN0002_2_Valsalva_page3.png",
+      "sha256": "b0970f7c17c06c597ffeee02f68f4073bba3a61fce9a24f70d59fcb8dcdc1ee5"
+    },
+    {
+      "record": "GDN0002_2_Valsalva",
+      "primary_lead": 2,
+      "page": 4,
+      "start_s": 256.96500000000003,
+      "end_s": 260.96500000000003,
+      "file": "tmp/ecg_only_review/GDN0002_2_Valsalva_page4.png",
+      "sha256": "f877e7dd3b5769e104f063643093ea0b153dd12932b9d401f2e8aee3403d8451"
+    },
+    {
+      "record": "GDN0006_1_Resting",
+      "primary_lead": 1,
+      "page": 1,
+      "start_s": 28.0,
+      "end_s": 88.0,
+      "file": "tmp/ecg_only_review/GDN0006_1_Resting_page1.png",
+      "sha256": "70b4d6cec03f410d9d775dd02933decab6a316a93d0eed5416905b066c6aa2c4"
+    },
+    {
+      "record": "GDN0006_1_Resting",
+      "primary_lead": 1,
+      "page": 2,
+      "start_s": 88.0,
+      "end_s": 148.0,
+      "file": "tmp/ecg_only_review/GDN0006_1_Resting_page2.png",
+      "sha256": "898495f3d1a779c3dd163bce09bab7aad52c446112746db5764348ad16b16153"
+    },
+    {
+      "record": "GDN0006_1_Resting",
+      "primary_lead": 1,
+      "page": 3,
+      "start_s": 148.0,
+      "end_s": 208.0,
+      "file": "tmp/ecg_only_review/GDN0006_1_Resting_page3.png",
+      "sha256": "91cf9c7bff984d265fd19927eb27bf66b660b90ad2ddee0de3b35cba84358ef0"
+    },
+    {
+      "record": "GDN0006_1_Resting",
+      "primary_lead": 1,
+      "page": 4,
+      "start_s": 208.0,
+      "end_s": 212.0,
+      "file": "tmp/ecg_only_review/GDN0006_1_Resting_page4.png",
+      "sha256": "0feafd5d261faeb27cdfb5c3ccefae26d26cd5e6ef8a901da96b53f11850624b"
+    },
+    {
+      "record": "GDN0006_2_Valsalva",
+      "primary_lead": 1,
+      "page": 1,
+      "start_s": 85.2985,
+      "end_s": 145.2985,
+      "file": "tmp/ecg_only_review/GDN0006_2_Valsalva_page1.png",
+      "sha256": "03355c08fa5d0cdd9d536ef8c3669d1808960f32985f30e48a92e74a4d00c832"
+    },
+    {
+      "record": "GDN0006_2_Valsalva",
+      "primary_lead": 1,
+      "page": 2,
+      "start_s": 145.2985,
+      "end_s": 205.2985,
+      "file": "tmp/ecg_only_review/GDN0006_2_Valsalva_page2.png",
+      "sha256": "743a3e5b60c667980f95f0d661b2d9ab111eeb250ff93d72ed64da8f4394d2e9"
+    },
+    {
+      "record": "GDN0006_2_Valsalva",
+      "primary_lead": 1,
+      "page": 3,
+      "start_s": 205.2985,
+      "end_s": 265.2985,
+      "file": "tmp/ecg_only_review/GDN0006_2_Valsalva_page3.png",
+      "sha256": "02da7d9086a786467ba5576d33f92ef50b52deefadcdf1dad74c21c070a2a972"
+    },
+    {
+      "record": "GDN0006_2_Valsalva",
+      "primary_lead": 1,
+      "page": 4,
+      "start_s": 265.2985,
+      "end_s": 269.2985,
+      "file": "tmp/ecg_only_review/GDN0006_2_Valsalva_page4.png",
+      "sha256": "8451959821d1d8cafe83272d2919e0e13185fd67d11fa84a8126eb302e52e290"
+    },
+    {
+      "record": "GDN0007_1_Resting",
+      "primary_lead": 2,
+      "page": 1,
+      "start_s": 28.0,
+      "end_s": 88.0,
+      "file": "tmp/ecg_only_review/GDN0007_1_Resting_page1.png",
+      "sha256": "c93c49531c039692143ecd5d0eb98cd6b992c07bbafcb1801cebd61d53e36b9a"
+    },
+    {
+      "record": "GDN0007_1_Resting",
+      "primary_lead": 2,
+      "page": 2,
+      "start_s": 88.0,
+      "end_s": 148.0,
+      "file": "tmp/ecg_only_review/GDN0007_1_Resting_page2.png",
+      "sha256": "eedf64e7613280dd76d1eb8220fd3e774f76a23acc005eadd171e7233845732d"
+    },
+    {
+      "record": "GDN0007_1_Resting",
+      "primary_lead": 2,
+      "page": 3,
+      "start_s": 148.0,
+      "end_s": 208.0,
+      "file": "tmp/ecg_only_review/GDN0007_1_Resting_page3.png",
+      "sha256": "8ff84374be3647c99bb8d57cf5bf12c4b784eb3918fb8ac696a1ff5c47581f9b"
+    },
+    {
+      "record": "GDN0007_1_Resting",
+      "primary_lead": 2,
+      "page": 4,
+      "start_s": 208.0,
+      "end_s": 212.0,
+      "file": "tmp/ecg_only_review/GDN0007_1_Resting_page4.png",
+      "sha256": "a6de2d06594882737d4f53332ecc9ace260aabfe46fa267232f6bfee26beced2"
+    },
+    {
+      "record": "GDN0007_2_Valsalva",
+      "primary_lead": 2,
+      "page": 1,
+      "start_s": 76.313,
+      "end_s": 136.313,
+      "file": "tmp/ecg_only_review/GDN0007_2_Valsalva_page1.png",
+      "sha256": "6adb4ac5352254b5d5f76cc7a8cdbf9a60ed37fe533bd3ec202dd928d4ad1c54"
+    },
+    {
+      "record": "GDN0007_2_Valsalva",
+      "primary_lead": 2,
+      "page": 2,
+      "start_s": 136.313,
+      "end_s": 196.313,
+      "file": "tmp/ecg_only_review/GDN0007_2_Valsalva_page2.png",
+      "sha256": "1ef37dcac116e00f5eea1607f5940dcd5d27444cbbaab86deb1fc71b913f8d26"
+    },
+    {
+      "record": "GDN0007_2_Valsalva",
+      "primary_lead": 2,
+      "page": 3,
+      "start_s": 196.313,
+      "end_s": 256.313,
+      "file": "tmp/ecg_only_review/GDN0007_2_Valsalva_page3.png",
+      "sha256": "798b3e03462adf6c18c85015bc45f3249d1ca83f6b608badb977d69653cb35c6"
+    },
+    {
+      "record": "GDN0007_2_Valsalva",
+      "primary_lead": 2,
+      "page": 4,
+      "start_s": 256.313,
+      "end_s": 260.313,
+      "file": "tmp/ecg_only_review/GDN0007_2_Valsalva_page4.png",
+      "sha256": "637f6ee902264d0358369ce9287f4f04b26efdfbb5d1ae2b090765426fbb708b"
+    }
+  ]
+}

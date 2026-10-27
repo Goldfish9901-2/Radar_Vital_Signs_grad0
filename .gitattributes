@@ -43,3 +43,7 @@ experiment_runs/ftu_residual_calibration/** -text whitespace=cr-at-eol
 experiment_runs/synchronized_real_pilot/** -text whitespace=cr-at-eol
 experiment_runs/synchronized_real_pilot/provenance/** -whitespace
 run_synchronized_real_pilot.py text eol=lf
+synchronized_ellipse_fixed.py text eol=lf
+validate_synchronized_ellipse_fixed.py text eol=lf
+run_synchronized_real_pilot_fixed.py text eol=lf
+experiment_runs/synchronized_real_pilot_fixed/** -text whitespace=cr-at-eol
