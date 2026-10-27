@@ -364,4 +364,5 @@ ref/
 !experiment_runs/ftu_evaluation_controls/signals/*.npz
 !experiment_runs/ftu_residual_calibration/REPORT.md
 !experiment_runs/ftu_residual_calibration/signals/*.npz
+!experiment_runs/synchronized_real_pilot/REPORT.md
 !experiment_runs/ftu_frequency_structure/spectra/*.npz

@@ -1,0 +1,21 @@
+{
+  "elapsed_seconds": 9.82502443200002,
+  "metadata_only": true,
+  "radar_or_ecg_arrays_read": false,
+  "results": [
+    {
+      "name": "clinical_article",
+      "url": "https://api.figshare.com/v2/articles/12186516",
+      "ok": true,
+      "bytes": 9759,
+      "sha256": "aeb3d2e411fab7e8fba50eed0b74edef6d788c95b2f562d577c32755325d7483"
+    },
+    {
+      "name": "clinical_code_tree",
+      "url": "https://gitlab.com/api/v4/projects/sven_schellenberger%2Fscidata_phase1/repository/tree?recursive=true&per_page=100",
+      "ok": true,
+      "bytes": 7018,
+      "sha256": "ef6b4ae038326e703473115b49088773dd4fa804bf277bfb3f1e60ca35c46aca"
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+[
+  {
+    "name": "GDN0001/",
+    "size": 0,
+    "compressed_size": 0,
+    "crc32": 0
+  },
+  {
+    "name": "GDN0001/GDN0001_1_Resting.mat",
+    "size": 42020805,
+    "compressed_size": 42020805,
+    "crc32": 2867635141
+  },
+  {
+    "name": "GDN0001/GDN0001_2_Valsalva.mat",
+    "size": 69248059,
+    "compressed_size": 69248059,
+    "crc32": 3469472115
+  },
+  {
+    "name": "GDN0001/GDN0001_3_TiltUp.mat",
+    "size": 6813819,
+    "compressed_size": 6813819,
+    "crc32": 3925400358
+  },
+  {
+    "name": "GDN0001/GDN0001_4_TiltDown.mat",
+    "size": 47239282,
+    "compressed_size": 47239282,
+    "crc32": 2819900648
+  },
+  {
+    "name": "GDN0002/",
+    "size": 0,
+    "compressed_size": 0,
+    "crc32": 0
+  },
+  {
+    "name": "GDN0002/GDN0002_1_Resting.mat",
+    "size": 42952616,
+    "compressed_size": 42952616,
+    "crc32": 1702427467
+  },
+  {
+    "name": "GDN0002/GDN0002_2_Valsalva.mat",
+    "size": 68520917,
+    "compressed_size": 68520917,
+    "crc32": 4009252756
+  },
+  {
+    "name": "GDN0002/GDN0002_3_TiltUp.mat",
+    "size": 40766118,
+    "compressed_size": 40766118,
+    "crc32": 655158974
+  },
+  {
+    "name": "GDN0002/GDN0002_4_TiltDown.mat",
+    "size": 28694190,
+    "compressed_size": 28694190,
+    "crc32": 954793989
+  },
+  {
+    "name": "GDN0003/",
+    "size": 0,
+    "compressed_size": 0,
+    "crc32": 0
+  },
+  {
+    "name": "GDN0003/GDN0003_1_Resting.mat",
+    "size": 41489449,
+    "compressed_size": 41489449,
+    "crc32": 3825716462
+  },
+  {
+    "name": "GDN0003/GDN0003_2_Valsalva.mat",
+    "size": 72775705,
+    "compressed_size": 72775705,
+    "crc32": 545310496
+  },
+  {
+    "name": "GDN0003/GDN0003_3_TiltUp.mat",
+    "size": 53030922,
+    "compressed_size": 53030922,
+    "crc32": 969298675
+  },
+  {
+    "name": "GDN0003/GDN0003_4_TiltDown.mat",
+    "size": 44216546,
+    "compressed_size": 44216546,
+    "crc32": 2450400519
+  },
+  {
+    "name": "GDN0004/",
+    "size": 0,
+    "compressed_size": 0,
+    "crc32": 0
+  },
+  {
+    "name": "GDN0004/GDN0004_1_Resting.mat",
+    "size": 41661581,
+    "compressed_size": 41661581,
+    "crc32": 1367285472
+  },
+  {
+    "name": "GDN0004/GDN0004_2_Valsalva.mat",
+    "size": 75215582,
+    "compressed_size": 75215582,
+    "crc32": 3705288200
+  },
+  {
+    "name": "GDN0004/GDN0004_3_Apnea.mat",
+    "size": 10215740,
+    "compressed_size": 10215740,
+    "crc32": 58128314
+  },
+  {
+    "name": "GDN0004/GDN0004_4_TiltUp.mat",
+    "size": 48140777,
+    "compressed_size": 48140777,
+    "crc32": 2337846376
+  },
+  {
+    "name": "GDN0004/GDN0004_5_TiltDown.mat",
+    "size": 45809497,
+    "compressed_size": 45809497,
+    "crc32": 347720471
+  },
+  {
+    "name": "GDN0005/",
+    "size": 0,
+    "compressed_size": 0,
+    "crc32": 0
+  },
+  {
+    "name": "GDN0005/GDN0005_1_Resting.mat",
+    "size": 42370080,
+    "compressed_size": 42370080,
+    "crc32": 2569215123
+  },
+  {
+    "name": "GDN0005/GDN0005_2_Valsalva.mat",
+    "size": 75324606,
+    "compressed_size": 75324606,
+    "crc32": 3597416191
+  },
+  {
+    "name": "GDN0005/GDN0005_3_Apnea.mat",
+    "size": 10524633,
+    "compressed_size": 10524633,
+    "crc32": 1145258767
+  },
+  {
+    "name": "GDN0005/GDN0005_4_TiltUp.mat",
+    "size": 31092541,
+    "compressed_size": 31092541,
+    "crc32": 110652667
+  },
+  {
+    "name": "GDN0005/GDN0005_5_TiltDown.mat",
+    "size": 42023542,
+    "compressed_size": 42023542,
+    "crc32": 2451664120
+  },
+  {
+    "name": "GDN0006/",
+    "size": 0,
+    "compressed_size": 0,
+    "crc32": 0
+  },
+  {
+    "name": "GDN0006/GDN0006_1_Resting.mat",
+    "size": 42344006,
+    "compressed_size": 42344006,
+    "crc32": 2874058808
+  },
+  {
+    "name": "GDN0006/GDN0006_2_Valsalva.mat",
+    "size": 90690149,
+    "compressed_size": 90690149,
+    "crc32": 700461986
+  },
+  {
+    "name": "GDN0006/GDN0006_3_Apnea.mat",
+    "size": 10066201,
+    "compressed_size": 10066201,
+    "crc32": 3143052277
+  },
+  {
+    "name": "GDN0006/GDN0006_4_TiltUp.mat",
+    "size": 55291735,
+    "compressed_size": 55291735,
+    "crc32": 868280685
+  },
+  {
+    "name": "GDN0006/GDN0006_5_TiltDown.mat",
+    "size": 46374605,
+    "compressed_size": 46374605,
+    "crc32": 3702763427
+  },
+  {
+    "name": "GDN0007/",
+    "size": 0,
+    "compressed_size": 0,
+    "crc32": 0
+  },
+  {
+    "name": "GDN0007/GDN0007_1_Resting.mat",
+    "size": 44104001,
+    "compressed_size": 44104001,
+    "crc32": 1533263548
+  },
+  {
+    "name": "GDN0007/GDN0007_2_Valsalva.mat",
+    "size": 68825821,
+    "compressed_size": 68825821,
+    "crc32": 3642474139
+  },
+  {
+    "name": "GDN0007/GDN0007_3_Apnea.mat",
+    "size": 12959439,
+    "compressed_size": 12959439,
+    "crc32": 2578530701
+  },
+  {
+    "name": "GDN0007/GDN0007_4_TiltUp.mat",
+    "size": 44005262,
+    "compressed_size": 44005262,
+    "crc32": 1677197973
+  },
+  {
+    "name": "GDN0007/GDN0007_5_TiltDown.mat",
+    "size": 44785498,
+    "compressed_size": 44785498,
+    "crc32": 1373894407
+  },
+  {
+    "name": "GDN0008/",
+    "size": 0,
+    "compressed_size": 0,
+    "crc32": 0
+  },
+  {
+    "name": "GDN0008/GDN0008_1_Resting.mat",
+    "size": 42970037,
+    "compressed_size": 42970037,
+    "crc32": 3535857088
+  },
+  {
+    "name": "GDN0008/GDN0008_2_Valsalva.mat",
+    "size": 68539554,
+    "compressed_size": 68539554,
+    "crc32": 474695580
+  },
+  {
+    "name": "GDN0008/GDN0008_3_Apnea.mat",
+    "size": 7371400,
+    "compressed_size": 7371400,
+    "crc32": 183442472
+  },
+  {
+    "name": "GDN0008/GDN0008_4_TiltUp.mat",
+    "size": 49128633,
+    "compressed_size": 49128633,
+    "crc32": 1037141450
+  },
+  {
+    "name": "GDN0008/GDN0008_5_TiltDown.mat",
+    "size": 45798894,
+    "compressed_size": 45798894,
+    "crc32": 3871723482
+  },
+  {
+    "name": "GDN0009/",
+    "size": 0,
+    "compressed_size": 0,
+    "crc32": 0
+  },
+  {
+    "name": "GDN0009/GDN0009_1_Resting.mat",
+    "size": 45025446,
+    "compressed_size": 45025446,
+    "crc32": 3944188228
+  },
+  {
+    "name": "GDN0009/GDN0009_2_Valsalva.mat",
+    "size": 67742994,
+    "compressed_size": 67742994,
+    "crc32": 3188268935
+  },
+  {
+    "name": "GDN0009/GDN0009_3_Apnea.mat",
+    "size": 15903668,
+    "compressed_size": 15903668,
+    "crc32": 1714011219
+  },
+  {
+    "name": "GDN0009/GDN0009_4_TiltUp.mat",
+    "size": 44291355,
+    "compressed_size": 44291355,
+    "crc32": 4039989548
+  },
+  {
+    "name": "GDN0009/GDN0009_5_TiltDown.mat",
+    "size": 43743359,
+    "compressed_size": 43743359,
+    "crc32": 1550359978
+  },
+  {
+    "name": "GDN0010/",
+    "size": 0,
+    "compressed_size": 0,
+    "crc32": 0
+  },
+  {
+    "name": "GDN0010/GDN0010_1_Resting.mat",
+    "size": 44267494,
+    "compressed_size": 44267494,
+    "crc32": 3248277880
+  },
+  {
+    "name": "GDN0010/GDN0010_2_Valsalva.mat",
+    "size": 68792840,
+    "compressed_size": 68792840,
+    "crc32": 3660199053
+  },
+  {
+    "name": "GDN0010/GDN0010_3_Apnea.mat",
+    "size": 18537699,
+    "compressed_size": 18537699,
+    "crc32": 1629171749
+  },
+  {
+    "name": "GDN0010/GDN0010_4_TiltUp.mat",
+    "size": 44646735,
+    "compressed_size": 44646735,
+    "crc32": 2370366448
+  },
+  {
+    "name": "GDN0010/GDN0010_5_TiltDown.mat",
+    "size": 44432308,
+    "compressed_size": 44432308,
+    "crc32": 4039318725
+  }
+]
