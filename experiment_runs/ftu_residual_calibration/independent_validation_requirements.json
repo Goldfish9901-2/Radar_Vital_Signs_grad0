@@ -1,0 +1,21 @@
+{
+  "status": "No independent validation dataset accessed or designated by posthoc resplit",
+  "development_records": [
+    "p02_Orientation_80_cm__left_side_r4",
+    "p03_Distance_40_cm_r3",
+    "p04_Distance_40_cm_r4",
+    "p05_Distance_160_cm_r1",
+    "p07_Angle_45_deg__80_cm_r4",
+    "p09_Angle_30_deg__80_cm_r2"
+  ],
+  "freeze_required_before_validation": true,
+  "requirements": [
+    "Untouched records from subjects not used in rule/model development preferred; external dataset acceptable",
+    "Same-acquisition radar/reference trigger or measured clock mapping with uncertainty",
+    "Raw RR/ECG or explicitly traceable HR generation, filtering, window anchor and latency",
+    "Freeze target, frequency readout, record inclusion, primary metrics and conditional uncertainty convention before examining validation scores",
+    "Retain all difficult controls and prespecified records; analyze at record/subject level; no window-level sample inflation"
+  ],
+  "existing_FTU_resplit_is_not_independent": true,
+  "prior_controls_and_0_01_unchanged": true
+}

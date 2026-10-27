@@ -1,0 +1,11 @@
+{
+  "phase_mean_identity_pass": true,
+  "maximum_phase_mean_error_bpm": 1.9610979506978765e-12,
+  "old_reference_gate": "0/6 unchanged",
+  "new_5_of_6_gate": false,
+  "independent_validation": false,
+  "new_radar_read": false,
+  "training": false,
+  "rule_deletion": false,
+  "exit": "Development-only per-record residual calibration complete; no detailed real tracking claim; mean-HR/structure scope retained until genuinely independent traceable-reference data."
+}

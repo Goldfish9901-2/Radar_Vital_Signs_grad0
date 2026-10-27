@@ -1,0 +1,15 @@
+{
+  "elapsed_seconds": 9.767210500001966,
+  "signals_checked": 1536,
+  "window_readouts_checked": 20224,
+  "paired_metric_checks": 24576,
+  "conditional_quantile_checks": 2880,
+  "precision_floor_checks": 16,
+  "retained_shift_rows": 46080,
+  "maximum_trace_difference": 6.366292042148114e-12,
+  "maximum_phase_mean_error_bpm": 1.9610979506978765e-12,
+  "maximum_metric_difference": 3.6637359812630166e-13,
+  "old_0_of_6_preserved": true,
+  "new_radar_read": false,
+  "independent_validation_of_real_tracking": false
+}

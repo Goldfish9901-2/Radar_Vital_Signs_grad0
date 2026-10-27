@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 8.391339000001608,
+  "command": "uv run --locked --no-sync python audit_ftu_residual_calibration.py",
+  "protocol_commit": "5623878",
+  "runtime_head": "5623878d38e813420a2941e14136af9155130fc0",
+  "local": true,
+  "numpy": "2.5.4",
+  "pandas": "3.0.6",
+  "new_radar_read": false,
+  "training": false
+}
