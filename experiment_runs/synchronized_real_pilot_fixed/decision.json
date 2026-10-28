@@ -1,0 +1,12 @@
+{
+  "calibration_valid": 2,
+  "calibration_failed_no_hr": 4,
+  "technical_ecg_review_complete": true,
+  "expert_clinical_adjudication": false,
+  "peak_edits": 0,
+  "old_outputs_preserved": true,
+  "remaining27_accessed": false,
+  "enter_remaining27_validation": false,
+  "tracking_success_claim": false,
+  "reason": "Limited calibration coverage and no amplitude-correct dynamic recovery; clock error budget unresolved"
+}

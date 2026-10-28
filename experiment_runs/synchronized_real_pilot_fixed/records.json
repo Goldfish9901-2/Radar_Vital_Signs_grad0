@@ -1,0 +1,145 @@
+[
+  {
+    "mapped_centered_singular_values": [
+      0.5711778740660117,
+      0.3933169861148618
+    ],
+    "mapped_circular_variance": 0.2636833938969473,
+    "mapped_phase_q99_q01_span_rad": 12.086430194452992,
+    "calibration_radial_rmse": 0.1361615175070997,
+    "generalized_eigenvalue": 1417.3528066055585,
+    "generalized_eigenpair_relative_residual": 5.415905821891743e-17,
+    "rejected_candidates": [
+      {
+        "candidate": 1,
+        "reason": "Not an ellipse"
+      },
+      {
+        "candidate": 2,
+        "reason": "Not an ellipse"
+      },
+      {
+        "candidate": 3,
+        "reason": "Nonfinite generalized eigenvalue"
+      },
+      {
+        "candidate": 4,
+        "reason": "Nonfinite generalized eigenvalue"
+      },
+      {
+        "candidate": 5,
+        "reason": "Nonfinite generalized eigenvalue"
+      }
+    ],
+    "origin": [
+      15.106189886728922,
+      -881.5594391822815
+    ],
+    "scale": [
+      1257.9123748406155,
+      969.399228013261
+    ],
+    "ellipse_center": [
+      0.866878324032737,
+      1.2214984873381085
+    ],
+    "ellipse_transform": [
+      [
+        0.5726594150575177,
+        0.01914373147388576
+      ],
+      [
+        0.019143731473885754,
+        0.39480889897837906
+      ]
+    ],
+    "low_amplitude_fraction": 0.0,
+    "phase_increment_q999_rad": 0.011782908688914321,
+    "subject": "GDN0002",
+    "scenario": "Resting",
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "score_start_s": 30.0,
+    "score_end_s": 210.0,
+    "intervention_pulses_s": [],
+    "clock_error_bound_s": null,
+    "synchronization": "Published Gold-code resampling and lag correction; no retained sync sequence for independent residual bound",
+    "ecg_reference": "NeuroKit2 0.2.12 uncorrected R peaks; not manually adjudicated",
+    "elapsed_seconds": 1.2737445770000022
+  },
+  {
+    "mapped_centered_singular_values": [
+      0.6094385629293889,
+      0.4877170398697852
+    ],
+    "mapped_circular_variance": 0.36600940554207717,
+    "mapped_phase_q99_q01_span_rad": 10.969541391595557,
+    "calibration_radial_rmse": 0.15651068314086264,
+    "generalized_eigenvalue": 1034.1320885863647,
+    "generalized_eigenpair_relative_residual": 4.9682774310574994e-17,
+    "rejected_candidates": [
+      {
+        "candidate": 1,
+        "reason": "Not an ellipse"
+      },
+      {
+        "candidate": 2,
+        "reason": "Not an ellipse"
+      },
+      {
+        "candidate": 3,
+        "reason": "Nonfinite generalized eigenvalue"
+      },
+      {
+        "candidate": 4,
+        "reason": "Nonfinite generalized eigenvalue"
+      },
+      {
+        "candidate": 5,
+        "reason": "Nonfinite generalized eigenvalue"
+      }
+    ],
+    "origin": [
+      499.95271158218384,
+      -1165.5836222966511
+    ],
+    "scale": [
+      1145.6845467862115,
+      1257.3790062471458
+    ],
+    "ellipse_center": [
+      0.3312553348495947,
+      0.9948637107925594
+    ],
+    "ellipse_transform": [
+      [
+        0.5111341758878003,
+        0.03145668803529887
+      ],
+      [
+        0.03145668803529891,
+        0.5845891271761153
+      ]
+    ],
+    "low_amplitude_fraction": 1.3085382118322052e-05,
+    "phase_increment_q999_rad": 0.011708377389517154,
+    "subject": "GDN0002",
+    "scenario": "Valsalva",
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "score_start_s": 78.965,
+    "score_end_s": 258.96500000000003,
+    "intervention_pulses_s": [
+      26.714,
+      48.965,
+      350.6365,
+      370.493,
+      670.4395,
+      691.5805
+    ],
+    "clock_error_bound_s": null,
+    "synchronization": "Published Gold-code resampling and lag correction; no retained sync sequence for independent residual bound",
+    "ecg_reference": "NeuroKit2 0.2.12 uncorrected R peaks; not manually adjudicated",
+    "elapsed_seconds": 1.6933034959999986
+  }
+]

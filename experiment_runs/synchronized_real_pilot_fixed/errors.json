@@ -1,0 +1,18 @@
+[
+  {
+    "record": "GDN0006_1_Resting.mat",
+    "error": "ValueError(\"No valid calibration ellipse: [{'candidate': 0, 'reason': 'Radial residual exceeds original limit'}, {'candidate': 1, 'reason': 'Not an ellipse'}, {'candidate': 2, 'reason': 'Not an ellipse'}, {'candidate': 3, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 4, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 5, 'reason': 'Nonfinite generalized eigenvalue'}]\")"
+  },
+  {
+    "record": "GDN0006_2_Valsalva.mat",
+    "error": "ValueError(\"No valid calibration ellipse: [{'candidate': 0, 'reason': 'Radial residual exceeds original limit'}, {'candidate': 1, 'reason': 'Not an ellipse'}, {'candidate': 2, 'reason': 'Not an ellipse'}, {'candidate': 3, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 4, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 5, 'reason': 'Nonfinite generalized eigenvalue'}]\")"
+  },
+  {
+    "record": "GDN0007_1_Resting.mat",
+    "error": "ValueError(\"No valid calibration ellipse: [{'candidate': 0, 'reason': 'Radial residual exceeds original limit'}, {'candidate': 1, 'reason': 'Not an ellipse'}, {'candidate': 2, 'reason': 'Not an ellipse'}, {'candidate': 3, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 4, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 5, 'reason': 'Nonfinite generalized eigenvalue'}]\")"
+  },
+  {
+    "record": "GDN0007_2_Valsalva.mat",
+    "error": "ValueError(\"No valid calibration ellipse: [{'candidate': 0, 'reason': 'Radial residual exceeds original limit'}, {'candidate': 1, 'reason': 'Not an ellipse'}, {'candidate': 2, 'reason': 'Not an ellipse'}, {'candidate': 3, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 4, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 5, 'reason': 'Nonfinite generalized eigenvalue'}]\")"
+  }
+]

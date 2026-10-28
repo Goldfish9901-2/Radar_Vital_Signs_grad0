@@ -1,0 +1,14 @@
+{
+  "elapsed_seconds": 1.8966521999999486,
+  "same_raw_file_hashes": 6,
+  "same_reference_and_windows_rows": 468,
+  "maximum_reviewed_reference_difference_bpm": 7.105427357601002e-14,
+  "original_artifact_hashes_preserved": 54,
+  "no_hr_for_failed_calibrations": 4,
+  "reviewed_records": 6,
+  "peak_edits": 0,
+  "source_hashes_match_frozen_repair": true,
+  "repair_protocol_text_identical_after_newline_transport": true,
+  "downloaded_repair_byte_sha256": "0c81afd9aa3c30a46fe73b1c6cfa6db4f1d29c80979141ff2baec8f917fc05a8",
+  "frozen_repair_byte_sha256": "303124b4e15a5a93793daef286fbad26d2ffee8427713565de5e2afa7bf67627"
+}
