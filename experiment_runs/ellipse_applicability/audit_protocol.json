@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-28",
+  "status": "frozen before new applicability audit outputs",
+  "parent_commit": "938723a",
+  "records": [
+    {
+      "record": "GDN0002_1_Resting",
+      "score_start_s": 30.0,
+      "score_end_s": 210.0,
+      "intervention_pulses_s": [],
+      "previous_primary_valid": true
+    },
+    {
+      "record": "GDN0002_2_Valsalva",
+      "score_start_s": 78.965,
+      "score_end_s": 258.96500000000003,
+      "intervention_pulses_s": [
+        26.714,
+        48.965,
+        350.6365,
+        370.493,
+        670.4395,
+        691.5805
+      ],
+      "previous_primary_valid": true
+    },
+    {
+      "record": "GDN0006_1_Resting",
+      "score_start_s": 30.0,
+      "score_end_s": 210.0,
+      "intervention_pulses_s": [],
+      "previous_primary_valid": false
+    },
+    {
+      "record": "GDN0006_2_Valsalva",
+      "score_start_s": 87.29849999999999,
+      "score_end_s": 267.2985,
+      "intervention_pulses_s": [
+        35.7325,
+        57.2985,
+        630.1525,
+        651.29475,
+        981.722,
+        1003.13875
+      ],
+      "previous_primary_valid": false
+    },
+    {
+      "record": "GDN0007_1_Resting",
+      "score_start_s": 30.0,
+      "score_end_s": 210.0,
+      "intervention_pulses_s": [],
+      "previous_primary_valid": false
+    },
+    {
+      "record": "GDN0007_2_Valsalva",
+      "score_start_s": 78.31325,
+      "score_end_s": 258.31325,
+      "intervention_pulses_s": [
+        26.21775,
+        48.31325,
+        348.5585,
+        368.88775,
+        668.91425,
+        688.69425
+      ],
+      "previous_primary_valid": false
+    }
+  ],
+  "members": [
+    {
+      "name": "GDN0002/GDN0002_1_Resting.mat",
+      "size": 42952616,
+      "compressed_size": 42952616,
+      "crc32": 1702427467
+    },
+    {
+      "name": "GDN0002/GDN0002_2_Valsalva.mat",
+      "size": 68520917,
+      "compressed_size": 68520917,
+      "crc32": 4009252756
+    },
+    {
+      "name": "GDN0006/GDN0006_1_Resting.mat",
+      "size": 42344006,
+      "compressed_size": 42344006,
+      "crc32": 2874058808
+    },
+    {
+      "name": "GDN0006/GDN0006_2_Valsalva.mat",
+      "size": 90690149,
+      "compressed_size": 90690149,
+      "crc32": 700461986
+    },
+    {
+      "name": "GDN0007/GDN0007_1_Resting.mat",
+      "size": 44104001,
+      "compressed_size": 44104001,
+      "crc32": 1533263548
+    },
+    {
+      "name": "GDN0007/GDN0007_2_Valsalva.mat",
+      "size": 68825821,
+      "compressed_size": 68825821,
+      "crc32": 3642474139
+    }
+  ],
+  "other27_subjects": "No signal or outcome access",
+  "fit_intervals": [
+    [
+      "cal_0_30",
+      0.0,
+      30.0
+    ],
+    [
+      "front_0_15",
+      0.0,
+      15.0
+    ],
+    [
+      "back_15_30",
+      15.0,
+      30.0
+    ],
+    [
+      "post_30_60",
+      30.0,
+      60.0
+    ]
+  ],
+  "evaluation_intervals": [
+    [
+      "cal_block1",
+      0.0,
+      5.0
+    ],
+    [
+      "cal_block2",
+      5.0,
+      10.0
+    ],
+    [
+      "cal_block3",
+      10.0,
+      15.0
+    ],
+    [
+      "cal_block4",
+      15.0,
+      20.0
+    ],
+    [
+      "cal_block5",
+      20.0,
+      25.0
+    ],
+    [
+      "cal_block6",
+      25.0,
+      30.0
+    ],
+    [
+      "front",
+      0.0,
+      15.0
+    ],
+    [
+      "back",
+      15.0,
+      30.0
+    ],
+    [
+      "cal_whole",
+      0.0,
+      30.0
+    ],
+    [
+      "post",
+      30.0,
+      60.0
+    ],
+    [
+      "later",
+      60.0,
+      90.0
+    ]
+  ],
+  "additional_evaluation": "Six fixed30s blocks and full180s in the already frozen scoring interval; radar-only metrics, no HR scoring",
+  "transfer_pairs": [
+    [
+      "front_0_15",
+      "back_15_30"
+    ],
+    [
+      "cal_0_30",
+      "post_30_60"
+    ]
+  ],
+  "sampling": "100Hz index subsample identical to original calibration (no new filtering); save points for0..max(90,score_end). Not a new antialiased signal representation.",
+  "candidate_policy": "Save all6 homogeneous eigenpairs per fit, including all finite rejected candidates. Preserve undefined ellipse diagnostics as null+reason for hyperbolae/imaginary conics, never zero error.",
+  "numeric_outputs": [
+    "homogeneous alpha/beta",
+    "finite eigenvalue/vector",
+    "coefficients",
+    "center normalized/native mV",
+    "ellipse semi-axes normalized/native mV and orientation",
+    "design/scatter/quadratic/shape condition numbers",
+    "radial residual",
+    "mapped centered singular values",
+    "circular variance",
+    "95percent circular angular support arc",
+    "chronological unwrapped span",
+    "unchanged guard reasons and acceptance"
+  ],
+  "production_policy": "Import immutable fixed solver only for acceptance checks. Diagnostic partial fits and rejected ellipses never replace production calibration. No HR output, band/peak/window change or guard relaxation.",
+  "time_exit": {
+    "support": "Unique proper finite ellipse at both intervals, at least6 common10degree angle bins (>=10points each), and each local95percent arc>=180degrees",
+    "time_dependent_mismatch": "Both local fits pass unchanged guards, matched-angle median absolute radius change>=0.10, max cross-fit RMSE penalty>=0.10, and center shift>=0.25 early-radius units or log-shape change>=0.25",
+    "stable_geometry": "On supported arcs, matched-angle change<=0.05, transfer penalty<=0.05, center shift<=0.10 and log-shape change<=0.10",
+    "otherwise": "Inconclusive/mixed; limited arc and changing angular sampling can make parameter changes non-identifiable",
+    "interpretation": "Descriptive diagnostic conventions, not statistical significance, physiological thresholds or new acceptance gates",
+    "next": "Time-dependent evidence => study fixed-model applicability. Stable geometry but high mismatch => investigate model/solver/guard rationale, validate any proposed modification on known phase before real rerun. Mixed => retain uncertainty. Do not change HR rules or visit untouched subjects in this audit."
+  },
+  "source_hashes": {
+    "audit_ellipse_applicability.py": "3c33e78aee941649fa1d1f48c85b15ecdbc3d804597ec2c607a84c65f567f074",
+    "run_ellipse_applicability.py": "60589a7341a84294c60c5635bb457e6bffa72df6ba0651ce0896436dbfe48d4f",
+    "synchronized_ellipse_fixed.py": "3ba237bd76860fdd4f94b2f7c3558da220283d3b3107fdce6497bd9580eb37cf",
+    "run_synchronized_real_pilot.py": "616fc6b424a01b9ee3de122551b3b8b55d0c1431b33b789b1ce4c191de353d27"
+  },
+  "reference_inputs": "No ECG/HR decoded. Existing record timing and intervention markers only; known jump catalogue is separate and never a calibration input."
+}

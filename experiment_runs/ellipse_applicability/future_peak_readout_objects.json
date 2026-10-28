@@ -1,0 +1,43 @@
+{
+  "record": "GDN0002_2_Valsalva",
+  "source_commit": "938723a",
+  "events": [
+    {
+      "from_window": {
+        "start_s": 114.965,
+        "end_s": 140.565,
+        "center_s": 127.765,
+        "prediction": 66.796875
+      },
+      "to_window": {
+        "start_s": 116.965,
+        "end_s": 142.565,
+        "center_s": 129.765,
+        "prediction": 45.1171875
+      },
+      "event": "enter lower-band bins"
+    },
+    {
+      "from_window": {
+        "start_s": 118.965,
+        "end_s": 144.565,
+        "center_s": 131.765,
+        "prediction": 45.1171875
+      },
+      "to_window": {
+        "start_s": 120.965,
+        "end_s": 146.565,
+        "center_s": 133.765,
+        "prediction": 60.64453125
+      },
+      "event": "exit lower-band bins"
+    }
+  ],
+  "diagnosis_this_round": false,
+  "do_not_change": [
+    "calibration",
+    "frequency band",
+    "peak rule"
+  ],
+  "boundary_flag_le46bpm_is_catalogue_only": true
+}
