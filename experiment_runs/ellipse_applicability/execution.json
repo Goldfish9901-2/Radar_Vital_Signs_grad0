@@ -1,0 +1,13 @@
+{
+  "elapsed_seconds": 35.74113993000003,
+  "records": 6,
+  "decoded_mat_variables": [
+    "radar_i",
+    "radar_q",
+    "fs_radar"
+  ],
+  "ecg_or_hr_arrays_decoded": false,
+  "hr_predictions_generated": false,
+  "production_code_changed": false,
+  "other27_subjects_read": false
+}

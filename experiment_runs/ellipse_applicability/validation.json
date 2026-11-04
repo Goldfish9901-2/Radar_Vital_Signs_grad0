@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "record_count": 6,
+  "fits": 24,
+  "all_eigenpairs": 144,
+  "finite_candidates": 72,
+  "proper_ellipses": 24,
+  "undefined_nonellipse_candidates": 48,
+  "block_metrics": 432,
+  "transfer_pairs": 12,
+  "max_absolute_numeric_discrepancy": 6.661338147750939e-16,
+  "original_artifacts_unchanged": {
+    "synchronized_real_pilot": 54,
+    "synchronized_real_pilot_fixed": 67
+  },
+  "acquisition_sha256_match": true,
+  "executed_protocol_equal": true,
+  "production_source_unchanged": true,
+  "elapsed_seconds": 5.277283000000352,
+  "scope": "Independent algebra/radius/coverage/shape checks and immutable production replay; not physiological validation"
+}
