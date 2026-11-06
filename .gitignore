@@ -370,4 +370,6 @@ ref/
 !experiment_runs/synchronized_real_pilot_fixed/signals/*.npz
 !experiment_runs/ellipse_applicability/REPORT.md
 !experiment_runs/ellipse_applicability/clouds/*.npz
+!experiment_runs/ellipse_phase_controls/REPORT.md
+!experiment_runs/ellipse_phase_controls/signals/*.npz
 !experiment_runs/ftu_frequency_structure/spectra/*.npz
