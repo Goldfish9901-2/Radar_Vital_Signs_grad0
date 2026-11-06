@@ -1,0 +1,19 @@
+{
+  "elapsed_seconds": 0.43540139999822713,
+  "windows": 156,
+  "peaks": 13603,
+  "decoded_csv_columns": [
+    "subject",
+    "scenario",
+    "start_s",
+    "end_s",
+    "center_s",
+    "reference_offset_s",
+    "prediction",
+    "radar_valid",
+    "low_amplitude_fraction",
+    "common_support"
+  ],
+  "ecg_reference_columns_decoded": false,
+  "original_predictions_exact": true
+}
