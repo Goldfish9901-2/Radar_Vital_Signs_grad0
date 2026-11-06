@@ -1,0 +1,11 @@
+{
+  "audit_real_band_truncation.py": "4e3832fcaf861a0ab1eda938cd426787733b4d3b159a7329d6d063323e2ee343",
+  "score_real_band_truncation.py": "b4567863b319f2a783bda6a162e1416bdbdd3ced96c0bc7bf0a9e72e2458470e",
+  "run_ellipse_readout_controls.py": "2a449da70d75a1eb018a71949c8a10de00e7e11c2d7b2c63efd365c626040685",
+  "run_synchronized_real_pilot.py": "616fc6b424a01b9ee3de122551b3b8b55d0c1431b33b789b1ce4c191de353d27",
+  "experiment_runs/real_band_truncation/protocol.json": "5072e33910fcd5bc9c527f1188b5666a538248cebea1d3ded3c5712b074ffa16",
+  "experiment_runs/synchronized_real_pilot_fixed/window_predictions.csv": "2514e50b6bd733a9c845f7b23b09c23ef57f6061a12a2911ed398220daf5d132",
+  "experiment_runs/synchronized_real_pilot_fixed/signals/GDN0002_1_Resting_phase20.npz": "3955ec05c6cfb9b96877f157bd9fcb8a719f569d6517e48e072cc764efd65aca",
+  "experiment_runs/synchronized_real_pilot_fixed/signals/GDN0002_2_Valsalva_phase20.npz": "d8a1b9a03355b7e721bd06a3b31ceb4388179ba89a5ffcfb5c0095a1e2c66f8a",
+  "experiment_runs/ellipse_applicability/future_peak_readout_objects.json": "04ff7b111e56b6202b397ba30d73b2a5fbab51bed9f0133f30f2b66244837049"
+}

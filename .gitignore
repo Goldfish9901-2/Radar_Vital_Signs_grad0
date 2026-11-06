@@ -374,4 +374,6 @@ ref/
 !experiment_runs/ellipse_phase_controls/signals/*.npz
 !experiment_runs/ellipse_readout_controls/REPORT.md
 !experiment_runs/ellipse_readout_controls/signals/*.npz
+!experiment_runs/real_band_truncation/REPORT.md
+!experiment_runs/real_band_truncation/radar/*.npz
 !experiment_runs/ftu_frequency_structure/spectra/*.npz
