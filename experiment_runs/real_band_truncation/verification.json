@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "elapsed_seconds": 2.319498199998634,
+  "windows": 156,
+  "all_frozen_peaks": 13603,
+  "focus_windows": 4,
+  "original_predictions_and_references_exact": true,
+  "original_mae_reproduced": true,
+  "radar_catalogue_unchanged_after_annotation": true,
+  "periodogram_max_relative_power_difference": 1.0104423341261323e-15,
+  "max_absolute_metric_difference": 5.820766091346741e-11,
+  "original_artifacts_unchanged": {
+    "synchronized_real_pilot": 54,
+    "synchronized_real_pilot_fixed": 67,
+    "ellipse_applicability": 40,
+    "ellipse_phase_controls": 67,
+    "ellipse_readout_controls": 82
+  }
+}

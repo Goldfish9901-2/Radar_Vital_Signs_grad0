@@ -1,0 +1,8 @@
+{
+  "elapsed_seconds": 0.4714638000004925,
+  "windows": 156,
+  "peaks": 13603,
+  "radar_freeze_commit": "132d503c07e068918325a563a2577cd30e296c83",
+  "radar_outputs_unchanged": true,
+  "reference_source": "Existing primary ECG window labels at0s; no new ECG processing"
+}

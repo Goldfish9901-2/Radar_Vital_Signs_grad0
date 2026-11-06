@@ -1,0 +1,3 @@
+record,windows,original_scored,original_mae_bpm,error_windows,over5_windows,boundary_windows,boundary_error_windows,cut_flank_error_windows,error_windows_with_full_reference_peak,error_windows_with_qualified_reference_peak,boundary_hidden_candidates,secondary5_boundary_candidates,hidden_cut_flank
+GDN0002_1_Resting,78,78,13.904710884168894,62,55,26,26,18,37,34,12,22,11
+GDN0002_2_Valsalva,78,78,1.367208453210532,9,3,2,2,2,5,5,2,2,2
