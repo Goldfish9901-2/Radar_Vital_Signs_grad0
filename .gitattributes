@@ -52,3 +52,5 @@ run_ellipse_applicability.py text eol=lf
 experiment_runs/ellipse_applicability/** -text whitespace=cr-at-eol
 run_ellipse_phase_controls.py text eol=lf
 experiment_runs/ellipse_phase_controls/** -text whitespace=cr-at-eol
+run_ellipse_readout_controls.py text eol=lf
+experiment_runs/ellipse_readout_controls/** -text whitespace=cr-at-eol
