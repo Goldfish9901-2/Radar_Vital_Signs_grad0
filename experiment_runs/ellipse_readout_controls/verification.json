@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "elapsed_seconds": 2.445114200003445,
+  "windows": 360,
+  "all_window_peaks_checked": true,
+  "conditions": 60,
+  "source_runs": 120,
+  "paired_positive_runs": 30,
+  "exit_counts": {
+    "both_normal": 30
+  },
+  "all_present_inputs_exactly_reused": true,
+  "absent_noise_and_observation_pairing_verified": true,
+  "max_absolute_numeric_difference": 4.955229195718891e-11,
+  "independent_detrend_power_max_difference": 1.2784084901795723e-10,
+  "original_artifacts_unchanged": {
+    "synchronized_real_pilot": 54,
+    "synchronized_real_pilot_fixed": 67,
+    "ellipse_applicability": 40,
+    "ellipse_phase_controls": 67
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "elapsed_seconds": 1.1025029000011273,
+  "paired_inputs": 30,
+  "input_conditions": 60,
+  "sources": 2,
+  "windows": 360,
+  "real_signal_arrays_read": false,
+  "environment": "local uv-managed .venv",
+  "source_hashes": {
+    "run_ellipse_readout_controls.py": "2a449da70d75a1eb018a71949c8a10de00e7e11c2d7b2c63efd365c626040685",
+    "synchronized_ellipse_fixed.py": "3ba237bd76860fdd4f94b2f7c3558da220283d3b3107fdce6497bd9580eb37cf",
+    "run_synchronized_real_pilot.py": "616fc6b424a01b9ee3de122551b3b8b55d0c1431b33b789b1ce4c191de353d27",
+    "experiment_runs/ellipse_readout_controls/protocol.json": "f14e127161a48820da84ca24868992a8d9f72d08541d8665b6797a4b4eb30281",
+    "experiment_runs/ellipse_phase_controls/protocol.json": "9abe09e356408d44a726e1c69270e1f287dc82cbded69d1d0be50bdcce492f76",
+    "experiment_runs/ellipse_phase_controls/artifact_manifest.json": "9550cf18ca7ef6d17fd904fd9f6367dc84226f319d91981c1c4400cb995f546d"
+  }
+}
