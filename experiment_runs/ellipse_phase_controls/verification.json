@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "elapsed_seconds": 3.4715581000200473,
+  "runs": 42,
+  "fits": 168,
+  "eigenpairs": 1008,
+  "finite_candidates": 504,
+  "proper_ellipses": 168,
+  "transfers": 84,
+  "blocks": 252,
+  "max_absolute_numeric_difference": 2.7000623958883807e-13,
+  "paired_truth_and_noise_verified": true,
+  "calibration_only_alignment_verified": true,
+  "original_artifacts_unchanged": {
+    "synchronized_real_pilot": 54,
+    "synchronized_real_pilot_fixed": 67,
+    "ellipse_applicability": 40
+  },
+  "scope": "Saved synthetic observation laws, alternate unwrap/scoring and diagnostic checks"
+}

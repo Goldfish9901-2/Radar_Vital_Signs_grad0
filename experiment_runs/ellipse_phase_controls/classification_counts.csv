@@ -1,0 +1,15 @@
+case,pair,inconclusive,stable_geometry_supported,time_dependent_mismatch_supported
+A,cal_0_30->post_30_60,0,6,0
+A,front_0_15->back_15_30,0,6,0
+B_arc,cal_0_30->post_30_60,0,6,0
+B_arc,front_0_15->back_15_30,6,0,0
+B_dwell,cal_0_30->post_30_60,0,6,0
+B_dwell,front_0_15->back_15_30,0,6,0
+C_0.3,cal_0_30->post_30_60,6,0,0
+C_0.3,front_0_15->back_15_30,5,1,0
+C_1.0,cal_0_30->post_30_60,0,0,6
+C_1.0,front_0_15->back_15_30,0,0,6
+D_radial,cal_0_30->post_30_60,0,6,0
+D_radial,front_0_15->back_15_30,0,6,0
+D_warp,cal_0_30->post_30_60,0,6,0
+D_warp,front_0_15->back_15_30,0,6,0
