@@ -1,0 +1,13 @@
+{
+  "elapsed_seconds": 0.7392014000001836,
+  "source_files_verified": 111,
+  "real_windows_verified": 156,
+  "unchanged_genuine": 136,
+  "cut_flank": 20,
+  "synthetic_windows_verified": 180,
+  "independent_method": "Previously frozen full-spectrum peak catalogue; direct error differences; synthetic phase periodogram and strict-neighbour extrema",
+  "max_metric_difference": 3.552713678800501e-15,
+  "max_synthetic_relative_power_difference": 9.424414850764963e-16,
+  "focus_second_peaks_preserved": true,
+  "original_archives_unchanged": true
+}

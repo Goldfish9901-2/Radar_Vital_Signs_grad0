@@ -1,0 +1,13 @@
+{
+  "cut_flank_windows.csv": "45e3d9e10ee73e87e74c7dfd72e2b2fa7ed2e5c35079de7d712c6599d96fc902",
+  "execution.json": "f45cf8c9287c501c6768fb2bdf5f2f22a8b76a2699b958fd8bb9c7ba8ac7fe46",
+  "protocol.json": "553ec5f03270f2fb08ef9f19b835ac6e5f57e3aee7d5a4eb9ea24ffda926f29a",
+  "registered_focus.csv": "7c9f40165dd91fa3bc474d0dad73f3fcac678ee70f6d390610353eaf92a6c7a5",
+  "REPORT.md": "400af150e3f35784933443c9d737aa40b420aadd619d931be5ec2021db689534",
+  "source_hashes.json": "f524bef908d8d2b4e7a02484e56a00faf6d7676fd4446ac882a1291970933a3e",
+  "summary.csv": "059da9e2f8540cc104f4040ce150611135a875da2ded50e1894b9adc9dc2c7e7",
+  "synthetic72.csv": "4b6eacfd0d931365058e056d2331d55dc785fe1da4df56a637b6fae9c28949f8",
+  "verification.json": "334a41eeb59a494a9b447c61948777fa77fbdff1c43a44614f233fb9dd6bb128",
+  "windows.csv": "701b99c2a1aded0e01dc36423eb0fd4262f82bfc599199cfe452c44aff025c77",
+  "plots/comparison.png": "814faf75361fb6873962ba47843a2ac5a813180156b4491736d6a6f0211a6ce7"
+}

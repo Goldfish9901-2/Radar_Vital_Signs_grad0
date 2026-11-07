@@ -1,0 +1,10 @@
+{
+  "freeze_commit": "2366d0e95b83d33fc5b4526a3a2f3a94283e0da6",
+  "elapsed_seconds": 0.3912697999999182,
+  "environment": "local uv-managed .venv",
+  "real_windows": 156,
+  "synthetic_windows": 180,
+  "unchanged_genuine": 136,
+  "no_training": true,
+  "new_subjects_accessed": false
+}
