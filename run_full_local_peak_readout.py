@@ -67,7 +67,8 @@ def main():
     tracked = ['run_full_local_peak_readout.py', (ROOT/'protocol.json').as_posix(), (ROOT/'source_hashes.json').as_posix()]
     for name in tracked:
         committed = subprocess.run(['git', 'show', 'HEAD:'+name], check=True, capture_output=True).stdout
-        assert hashlib.sha256(committed).hexdigest() == digest(Path(name)), name
+        # Git stores LF while Windows text writes may use CRLF.
+        assert committed.replace(b'\r\n', b'\n') == Path(name).read_bytes().replace(b'\r\n', b'\n'), name
     frozen = subprocess.run(['git', 'rev-parse', 'HEAD'], check=True, capture_output=True, text=True).stdout.strip()
     for name, expected in json.loads((ROOT/'source_hashes.json').read_text()).items():
         assert digest(Path(name)) == expected, name
