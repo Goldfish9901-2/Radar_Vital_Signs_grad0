@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-07",
+  "status": "frozen before execution",
+  "parent_commit": "ed3d5ae4316d3310a81f95f3745920fa144e76e3",
+  "scope": "Existing two GDN0002 development records, all78 windows each. Other27 subjects remain reserved. No training or new signal acquisition.",
+  "only_change": "Find internal local maxima on full archived power spectrum using scipy.signal.find_peaks with default plateau midpoint. Retain45<=bpm<=150; choose largest power, ties smallest bin. No prominence, amplitude, width, reliability or ECG gate. No candidate means NaN/no output.",
+  "fixed": "Archived phase,20Hz,512sample25.6s windows,2s hop,linear detrend,periodic Hann,4096rFFT,45-150bpm band,existing0s primary ECG reference and original predictions/scores.",
+  "metrics": "Per record all78 rows retained. MAE on finite outputs with denominator reported; paired original MAE on same support if missing. Adjacent change RMSE=sqrt(mean(((new[i]-new[i-1])-(ref[i]-ref[i-1]))^2)) for original chronological adjacent rows with both outputs finite; never bridge gaps. Report pair count. Absolute error>5bpm count, coverage, improved/worsened/equal absolute error (tolerance1e-10bpm), and no-output counts.",
+  "strata": "Report all156, original20cut-descending-flank rows and remaining136genuine-full-local winners. All136must remain exactly unchanged. Retain all rows, failures and original errors.",
+  "focus": "Preserve previously registered4window starts including116.965/118.965s. Strongest genuine peaks must remain67.08984375/67.96875bpm at the two low-value windows; never use ECG to choose third-ranked peaks.",
+  "synthetic": "Reuse ALL archived heartbeat-present inputs in ellipse_readout_controls,30conditions x2phase sources x3windows=180. Apply same selector on archived power; compare original readout and72bpm half-native-bin tolerance1.171875bpm. No new synthetic data or fitting.",
+  "diagnostics": "Archive selected peak full-spectrum prominence, prominence/power, amplitude relative to original and power/median. Never filter or score-select using these quantities.",
+  "interpretation": "Descriptive paired development evidence, one subject and overlapping windows. No independent validation or significance claims. Improvement limited to eliminating crop endpoint candidates; no new tracking rule. Retain original archive and hashes.",
+  "execution": "Local uv-managed environment; expected under5minutes; record runtime and independent verification. Freeze protocol, runner and source hashes in git before execution."
+}
