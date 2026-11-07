@@ -10,7 +10,8 @@ for name, expected in sources.items():
     content = Path(name).read_bytes()
     assert hashlib.sha256(content).hexdigest() == expected, name
     bundle[Path(name).name] = content.decode('utf-8')
-bundle['protocol.json'] = Path('experiment_runs/synchronized_real_pilot/protocol.json').read_text(encoding='utf-8')
+# protocol.json is already bundled byte-for-byte above. Reading it again in
+# text mode would normalize CRLF and break the frozen input digest on Linux.
 bundle['validation_protocol.json'] = (ROOT/'protocol.json').read_text(encoding='utf-8')
 stage = Path('tmp/peak_subject_validation_upload')
 stage.mkdir(exist_ok=True)
