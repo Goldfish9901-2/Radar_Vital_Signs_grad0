@@ -377,3 +377,5 @@ ref/
 !experiment_runs/real_band_truncation/REPORT.md
 !experiment_runs/real_band_truncation/radar/*.npz
 !experiment_runs/ftu_frequency_structure/spectra/*.npz
+!experiment_runs/peak_subject_validation/REPORT.md
+!experiment_runs/peak_subject_validation/signals/*.npz

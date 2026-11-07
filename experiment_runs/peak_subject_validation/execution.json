@@ -1,0 +1,17 @@
+{
+  "elapsed_seconds": 65.02444420400002,
+  "subjects": [
+    "GDN0003",
+    "GDN0008",
+    "GDN0016",
+    "GDN0018",
+    "GDN0022",
+    "GDN0025"
+  ],
+  "intended_records": 12,
+  "intended_windows": 936,
+  "actual_rows": 2808,
+  "neurokit2": "0.2.12",
+  "training": false,
+  "remaining21_signals_accessed": false
+}

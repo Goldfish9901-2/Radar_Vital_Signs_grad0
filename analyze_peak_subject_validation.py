@@ -182,7 +182,7 @@ def main():
         for j, scenario in enumerate(['Resting', 'Valsalva']):
             g = windows[(windows.subject == subject) & (windows.scenario == scenario) & (windows.offset_s == 0)].sort_values('start_s')
             ax = axes[n, j]
-            ax.set_title(subject+' '+scenario)
+            ax.set_title(subject+' '+scenario+f' (paired {int(g.common_valid.sum())}/78)')
             if len(g):
                 x = g.start_s+12.8
                 ax.plot(x, g.reference.where(g.reference_valid), color='black', label='ECG valid')
@@ -190,6 +190,8 @@ def main():
                 ax.plot(x, g.candidate.where(g.radar_valid), color='tab:blue', label='Full local peak', alpha=.8)
                 if not g.radar_valid.any():
                     ax.text(.5, .4, 'No reliable radar output', transform=ax.transAxes, ha='center')
+                if not g.reference_valid.any():
+                    ax.text(.5, .4, 'No valid ECG window reference', transform=ax.transAxes, ha='center')
             else:
                 ax.text(.5, .5, 'Record unavailable', transform=ax.transAxes, ha='center')
             ax.set_xlabel('Window centre (s)')

@@ -1,0 +1,792 @@
+[
+  {
+    "subject": "GDN0003",
+    "scenario": "Resting",
+    "record": "GDN0003_1_Resting",
+    "interval_valid": true,
+    "score_start_s": 30.0,
+    "score_end_s": 210.0,
+    "pulses": [],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 2,
+    "selected_lead": 2,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      0.7948717948717948,
+      1.0
+    ],
+    "reference_valid_windows": 78,
+    "reference_disagreement_windows": 0,
+    "reference_any_valid": true,
+    "reference_80pct_valid": true,
+    "calibration_passed": true,
+    "calibration": {
+      "mapped_centered_singular_values": [
+        0.7345894535635702,
+        0.5391881912722155
+      ],
+      "mapped_circular_variance": 0.587911403381051,
+      "mapped_phase_q99_q01_span_rad": 7.003126579499054,
+      "calibration_radial_rmse": 0.018783135038084167,
+      "generalized_eigenvalue": 6.656258310784348,
+      "generalized_eigenpair_relative_residual": 5.441589799009719e-17,
+      "rejected_candidates": [
+        {
+          "candidate": 1,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ],
+      "origin": [
+        -400.65073076883954,
+        785.1827761332194
+      ],
+      "scale": [
+        1608.142163231912,
+        2015.5445688977206
+      ],
+      "ellipse_center": [
+        0.48433732125190077,
+        -0.42463103531932656
+      ],
+      "ellipse_transform": [
+        [
+          0.5526264779848962,
+          -0.00560113988674615
+        ],
+        [
+          -0.0056011398867461485,
+          0.7260647034825839
+        ]
+      ],
+      "low_amplitude_fraction": 0.0,
+      "phase_increment_q999_rad": 0.005251979631660145
+    },
+    "elapsed_seconds": 1.4012524219999705
+  },
+  {
+    "subject": "GDN0003",
+    "scenario": "Valsalva",
+    "record": "GDN0003_2_Valsalva",
+    "interval_valid": true,
+    "score_start_s": 72.07124999999999,
+    "score_end_s": 252.07125,
+    "pulses": [
+      16.48025,
+      42.07125,
+      394.57375,
+      415.4975,
+      731.95525,
+      752.77125
+    ],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 2,
+    "selected_lead": 2,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      1.0
+    ],
+    "reference_valid_windows": 78,
+    "reference_disagreement_windows": 0,
+    "reference_any_valid": true,
+    "reference_80pct_valid": true,
+    "calibration_passed": true,
+    "calibration": {
+      "mapped_centered_singular_values": [
+        0.7590948107598297,
+        0.6477132509232618
+      ],
+      "mapped_circular_variance": 0.9207944647990741,
+      "mapped_phase_q99_q01_span_rad": 14.689112279319133,
+      "calibration_radial_rmse": 0.18728595072659893,
+      "generalized_eigenvalue": 338.91436221446185,
+      "generalized_eigenpair_relative_residual": 1.9107333685912919e-16,
+      "rejected_candidates": [
+        {
+          "candidate": 1,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ],
+      "origin": [
+        398.8612238566081,
+        103.44998391469319
+      ],
+      "scale": [
+        931.3858509201673,
+        746.5409805425
+      ],
+      "ellipse_center": [
+        -0.0870025426551991,
+        -0.013351596327604754
+      ],
+      "ellipse_transform": [
+        [
+          0.7406309389410105,
+          0.0033287188012379055
+        ],
+        [
+          0.003328718801237912,
+          0.6679565928320864
+        ]
+      ],
+      "low_amplitude_fraction": 0.0,
+      "phase_increment_q999_rad": 0.015509474689031598
+    },
+    "elapsed_seconds": 1.9892975100000285
+  },
+  {
+    "subject": "GDN0008",
+    "scenario": "Resting",
+    "record": "GDN0008_1_Resting",
+    "interval_valid": true,
+    "score_start_s": 30.0,
+    "score_end_s": 210.0,
+    "pulses": [],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 2,
+    "selected_lead": 2,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      1.0
+    ],
+    "reference_valid_windows": 78,
+    "reference_disagreement_windows": 0,
+    "reference_any_valid": true,
+    "reference_80pct_valid": true,
+    "calibration_passed": true,
+    "calibration": {
+      "mapped_centered_singular_values": [
+        0.5010282645100402,
+        0.4399948138286872
+      ],
+      "mapped_circular_variance": 0.2437493955254001,
+      "mapped_phase_q99_q01_span_rad": 10.79684227529155,
+      "calibration_radial_rmse": 0.11929856339980344,
+      "generalized_eigenvalue": 998.2225581915011,
+      "generalized_eigenpair_relative_residual": 3.7234316420533315e-17,
+      "rejected_candidates": [
+        {
+          "candidate": 1,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ],
+      "origin": [
+        1827.007450580597,
+        435.9444851875305
+      ],
+      "scale": [
+        613.2840480370273,
+        616.6085968676675
+      ],
+      "ellipse_center": [
+        -1.1403461051757742,
+        1.1387153629052844
+      ],
+      "ellipse_transform": [
+        [
+          0.44070627743181257,
+          0.00948533777112091
+        ],
+        [
+          0.009485337771120903,
+          0.5012425122592526
+        ]
+      ],
+      "low_amplitude_fraction": 0.0,
+      "phase_increment_q999_rad": 0.010664782710312157
+    },
+    "elapsed_seconds": 1.2881259050000153
+  },
+  {
+    "subject": "GDN0008",
+    "scenario": "Valsalva",
+    "record": "GDN0008_2_Valsalva",
+    "interval_valid": true,
+    "score_start_s": 73.67525,
+    "score_end_s": 253.67525,
+    "pulses": [
+      23.49725,
+      43.67525,
+      344.25975,
+      364.63475,
+      664.9275,
+      684.9525
+    ],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 2,
+    "selected_lead": 2,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      1.0
+    ],
+    "reference_valid_windows": 55,
+    "reference_disagreement_windows": 23,
+    "reference_any_valid": true,
+    "reference_80pct_valid": false,
+    "calibration_passed": false,
+    "calibration_error": "ValueError(\"No valid calibration ellipse: [{'candidate': 0, 'reason': 'Radial residual exceeds original limit'}, {'candidate': 1, 'reason': 'Not an ellipse'}, {'candidate': 2, 'reason': 'Not an ellipse'}, {'candidate': 3, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 4, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 5, 'reason': 'Nonfinite generalized eigenvalue'}]\")",
+    "elapsed_seconds": 1.2127547680000816
+  },
+  {
+    "subject": "GDN0016",
+    "scenario": "Resting",
+    "record": "GDN0016_1_Resting",
+    "interval_valid": true,
+    "score_start_s": 30.0,
+    "score_end_s": 210.0,
+    "pulses": [],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 2,
+    "selected_lead": 2,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      1.0
+    ],
+    "reference_valid_windows": 78,
+    "reference_disagreement_windows": 0,
+    "reference_any_valid": true,
+    "reference_80pct_valid": true,
+    "calibration_passed": true,
+    "calibration": {
+      "mapped_centered_singular_values": [
+        0.7096204713583301,
+        0.5523439666220851
+      ],
+      "mapped_circular_variance": 0.5529332220844598,
+      "mapped_phase_q99_q01_span_rad": 8.339763696403162,
+      "calibration_radial_rmse": 0.14932312259463704,
+      "generalized_eigenvalue": 253.3930363583873,
+      "generalized_eigenpair_relative_residual": 5.711789847153213e-17,
+      "rejected_candidates": [
+        {
+          "candidate": 1,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ],
+      "origin": [
+        701.884970664978,
+        -371.77094173431396
+      ],
+      "scale": [
+        1342.919094222983,
+        1616.7897008978944
+      ],
+      "ellipse_center": [
+        -0.3842858493517291,
+        0.5418749084698983
+      ],
+      "ellipse_transform": [
+        [
+          0.5974265518313242,
+          -0.008484231090684044
+        ],
+        [
+          -0.00848423109068406,
+          0.6758359677758334
+        ]
+      ],
+      "low_amplitude_fraction": 0.0,
+      "phase_increment_q999_rad": 0.00683080210948057
+    },
+    "elapsed_seconds": 1.3090441989999135
+  },
+  {
+    "subject": "GDN0016",
+    "scenario": "Valsalva",
+    "record": "GDN0016_2_Valsalva",
+    "interval_valid": true,
+    "score_start_s": 74.62725,
+    "score_end_s": 254.62725,
+    "pulses": [
+      23.79175,
+      44.62725,
+      345.00575,
+      366.74975,
+      666.15625,
+      686.2895
+    ],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 2,
+    "selected_lead": 2,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      1.0
+    ],
+    "reference_valid_windows": 78,
+    "reference_disagreement_windows": 0,
+    "reference_any_valid": true,
+    "reference_80pct_valid": true,
+    "calibration_passed": false,
+    "calibration_error": "ValueError(\"No valid calibration ellipse: [{'candidate': 0, 'reason': 'Radial residual exceeds original limit'}, {'candidate': 1, 'reason': 'Not an ellipse'}, {'candidate': 2, 'reason': 'Not an ellipse'}, {'candidate': 3, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 4, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 5, 'reason': 'Nonfinite generalized eigenvalue'}]\")",
+    "elapsed_seconds": 1.3197149220000028
+  },
+  {
+    "subject": "GDN0018",
+    "scenario": "Resting",
+    "record": "GDN0018_1_Resting",
+    "interval_valid": true,
+    "score_start_s": 30.0,
+    "score_end_s": 210.0,
+    "pulses": [],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 2,
+    "selected_lead": 2,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      1.0
+    ],
+    "reference_valid_windows": 0,
+    "reference_disagreement_windows": 78,
+    "reference_any_valid": false,
+    "reference_80pct_valid": false,
+    "calibration_passed": true,
+    "calibration": {
+      "mapped_centered_singular_values": [
+        0.7059846603009392,
+        0.5250863798222541
+      ],
+      "mapped_circular_variance": 0.5236805279924425,
+      "mapped_phase_q99_q01_span_rad": 11.39972354366046,
+      "calibration_radial_rmse": 0.048144709769612465,
+      "generalized_eigenvalue": 39.6690038678087,
+      "generalized_eigenpair_relative_residual": 1.0934124056271277e-16,
+      "rejected_candidates": [
+        {
+          "candidate": 1,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ],
+      "origin": [
+        -1243.6941095987956,
+        -527.2981444994608
+      ],
+      "scale": [
+        1386.3271854700195,
+        1541.8901469380914
+      ],
+      "ellipse_center": [
+        0.590491468091965,
+        0.3264295089564097
+      ],
+      "ellipse_transform": [
+        [
+          0.6417057582242583,
+          0.06753465193689419
+        ],
+        [
+          0.06753465193689417,
+          0.6594357194225918
+        ]
+      ],
+      "low_amplitude_fraction": 0.05860214631078266,
+      "phase_increment_q999_rad": 0.11963533798892506
+    },
+    "elapsed_seconds": 1.3896648280000363
+  },
+  {
+    "subject": "GDN0018",
+    "scenario": "Valsalva",
+    "record": "GDN0018_2_Valsalva",
+    "interval_valid": true,
+    "score_start_s": 99.08,
+    "score_end_s": 279.08,
+    "pulses": [
+      45.44775,
+      69.08,
+      410.25375,
+      433.1915,
+      769.2415,
+      791.6305
+    ],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 2,
+    "selected_lead": 2,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      1.0
+    ],
+    "reference_valid_windows": 0,
+    "reference_disagreement_windows": 78,
+    "reference_any_valid": false,
+    "reference_80pct_valid": false,
+    "calibration_passed": true,
+    "calibration": {
+      "mapped_centered_singular_values": [
+        0.7532532496749808,
+        0.44943736125440104
+      ],
+      "mapped_circular_variance": 0.5165266204733208,
+      "mapped_phase_q99_q01_span_rad": 9.191854510330511,
+      "calibration_radial_rmse": 0.0694219736466378,
+      "generalized_eigenvalue": 87.46395724217194,
+      "generalized_eigenpair_relative_residual": 1.0486052434141861e-16,
+      "rejected_candidates": [
+        {
+          "candidate": 1,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ],
+      "origin": [
+        -1200.0254526138306,
+        -311.8151421546936
+      ],
+      "scale": [
+        1363.469073347761,
+        1549.3143338589891
+      ],
+      "ellipse_center": [
+        0.661500026088335,
+        0.19697931234110105
+      ],
+      "ellipse_transform": [
+        [
+          0.6561285381389833,
+          0.06708122306185678
+        ],
+        [
+          0.06708122306185668,
+          0.6626310610152596
+        ]
+      ],
+      "low_amplitude_fraction": 3.451102195763772e-05,
+      "phase_increment_q999_rad": 0.007023317594412915
+    },
+    "elapsed_seconds": 2.268865527999992
+  },
+  {
+    "subject": "GDN0022",
+    "scenario": "Resting",
+    "record": "GDN0022_1_Resting",
+    "interval_valid": true,
+    "score_start_s": 30.0,
+    "score_end_s": 210.0,
+    "pulses": [],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 1,
+    "selected_lead": 1,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      0.8076923076923077
+    ],
+    "reference_valid_windows": 13,
+    "reference_disagreement_windows": 65,
+    "reference_any_valid": true,
+    "reference_80pct_valid": false,
+    "calibration_passed": true,
+    "calibration": {
+      "mapped_centered_singular_values": [
+        0.4124034237575772,
+        0.35422720251525375
+      ],
+      "mapped_circular_variance": 0.15759784113474096,
+      "mapped_phase_q99_q01_span_rad": 4.269141799138694,
+      "calibration_radial_rmse": 0.05025400538378694,
+      "generalized_eigenvalue": 305.3655155078833,
+      "generalized_eigenpair_relative_residual": 7.584218519567313e-17,
+      "rejected_candidates": [
+        {
+          "candidate": 1,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ],
+      "origin": [
+        1083.6699641545613,
+        534.9984259605408
+      ],
+      "scale": [
+        634.4569270730018,
+        670.894815599188
+      ],
+      "ellipse_center": [
+        -2.0581177440123777,
+        1.0001126849745081
+      ],
+      "ellipse_transform": [
+        [
+          0.4041008804675657,
+          0.04693733367811295
+        ],
+        [
+          0.04693733367811294,
+          0.39425338891630746
+        ]
+      ],
+      "low_amplitude_fraction": 0.0,
+      "phase_increment_q999_rad": 0.0076479313902699814
+    },
+    "elapsed_seconds": 1.4018612470000562
+  },
+  {
+    "subject": "GDN0022",
+    "scenario": "Valsalva",
+    "record": "GDN0022_2_Valsalva",
+    "interval_valid": true,
+    "score_start_s": 61.327,
+    "score_end_s": 241.327,
+    "pulses": [
+      10.15725,
+      31.327,
+      348.832,
+      368.70875,
+      688.87225,
+      708.0725
+    ],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 1,
+    "selected_lead": 1,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      1.0
+    ],
+    "reference_valid_windows": 0,
+    "reference_disagreement_windows": 78,
+    "reference_any_valid": false,
+    "reference_80pct_valid": false,
+    "calibration_passed": true,
+    "calibration": {
+      "mapped_centered_singular_values": [
+        0.6650584884747088,
+        0.594945086763362
+      ],
+      "mapped_circular_variance": 0.5189259560721311,
+      "mapped_phase_q99_q01_span_rad": 8.848935868666816,
+      "calibration_radial_rmse": 0.17895080252594234,
+      "generalized_eigenvalue": 524.9962626104226,
+      "generalized_eigenpair_relative_residual": 7.9882132797645e-17,
+      "rejected_candidates": [
+        {
+          "candidate": 1,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 2,
+          "reason": "Not an ellipse"
+        },
+        {
+          "candidate": 3,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 4,
+          "reason": "Nonfinite generalized eigenvalue"
+        },
+        {
+          "candidate": 5,
+          "reason": "Nonfinite generalized eigenvalue"
+        }
+      ],
+      "origin": [
+        12.177617073059082,
+        346.3807994524638
+      ],
+      "scale": [
+        989.4512793475953,
+        1136.4263776420134
+      ],
+      "ellipse_center": [
+        -0.053169478464287497,
+        0.7006937374327791
+      ],
+      "ellipse_transform": [
+        [
+          0.6147305618927148,
+          0.04505983558994532
+        ],
+        [
+          0.04505983558994539,
+          0.6475973401072901
+        ]
+      ],
+      "low_amplitude_fraction": 0.000204132891882635,
+      "phase_increment_q999_rad": 0.00975668190857637
+    },
+    "elapsed_seconds": 2.1166049180000073
+  },
+  {
+    "subject": "GDN0025",
+    "scenario": "Resting",
+    "record": "GDN0025_1_Resting",
+    "interval_valid": true,
+    "score_start_s": 30.0,
+    "score_end_s": 210.0,
+    "pulses": [],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 2,
+    "selected_lead": 2,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      1.0
+    ],
+    "reference_valid_windows": 78,
+    "reference_disagreement_windows": 0,
+    "reference_any_valid": true,
+    "reference_80pct_valid": true,
+    "calibration_passed": false,
+    "calibration_error": "ValueError(\"No valid calibration ellipse: [{'candidate': 0, 'reason': 'Radial residual exceeds original limit'}, {'candidate': 1, 'reason': 'Not an ellipse'}, {'candidate': 2, 'reason': 'Not an ellipse'}, {'candidate': 3, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 4, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 5, 'reason': 'Nonfinite generalized eigenvalue'}]\")",
+    "elapsed_seconds": 0.9196882169999299
+  },
+  {
+    "subject": "GDN0025",
+    "scenario": "Valsalva",
+    "record": "GDN0025_2_Valsalva",
+    "interval_valid": true,
+    "score_start_s": 71.95750000000001,
+    "score_end_s": 251.9575,
+    "pulses": [
+      19.8675,
+      41.9575,
+      357.62775,
+      378.727,
+      692.59675,
+      714.08675
+    ],
+    "fs_radar": 2000.0,
+    "fs_ecg": 2000.0,
+    "primary_lead": 2,
+    "selected_lead": 2,
+    "backup_switched": false,
+    "lead_common_offset_coverage": [
+      1.0,
+      1.0
+    ],
+    "reference_valid_windows": 78,
+    "reference_disagreement_windows": 0,
+    "reference_any_valid": true,
+    "reference_80pct_valid": true,
+    "calibration_passed": false,
+    "calibration_error": "ValueError(\"No valid calibration ellipse: [{'candidate': 0, 'reason': 'Radial residual exceeds original limit'}, {'candidate': 1, 'reason': 'Not an ellipse'}, {'candidate': 2, 'reason': 'Not an ellipse'}, {'candidate': 3, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 4, 'reason': 'Nonfinite generalized eigenvalue'}, {'candidate': 5, 'reason': 'Nonfinite generalized eigenvalue'}]\")",
+    "elapsed_seconds": 1.3391506489999756
+  }
+]

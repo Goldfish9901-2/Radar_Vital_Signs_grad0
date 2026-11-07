@@ -1,0 +1,26 @@
+{
+  "verification_seconds": 6.150484900000265,
+  "records_intended": 12,
+  "windows_intended": 936,
+  "calibration_passed": 8,
+  "reference_any_valid_records": 9,
+  "reference80_valid_records": 7,
+  "reference_windows": 614,
+  "original_output_windows": 624,
+  "candidate_output_windows": 624,
+  "common_windows": 325,
+  "real_spectra_verified": 624,
+  "max_reference_difference": 1.2789769243681803e-13,
+  "max_relative_spectrum_difference": 5.985694350171437e-15,
+  "backup_switches": 0,
+  "new_subjects": [
+    "GDN0003",
+    "GDN0008",
+    "GDN0016",
+    "GDN0018",
+    "GDN0022",
+    "GDN0025"
+  ],
+  "reserved21_unchanged": true,
+  "verification_and_plots_seconds": 7.315930100000514
+}

@@ -1,0 +1,11 @@
+{
+  "kernel": "https://www.kaggle.com/code/goldfish9901/frozen-peak-subject-validation",
+  "version": 2,
+  "protocol_commit": "b7eaec2",
+  "final_packaging_commit": "577bca9",
+  "kaggle_code": "source/",
+  "retained": "All selected phase20 and spectra (8calibration-passing records),12lead-pairbeatdiagnostics,raw2808offsetwindowrows,12recordmetadata,CRC32/SHA256rawacquisitioninventory.",
+  "ecg_waveforms": "All12rawscoringECGarchives remain inKaggleversion2outputs. Not duplicated inGit. Local fulloutput download was interrupted; only complete requiredphase/spectrum/beat/CSVfiles were used forverification. No newmanualECGadjudication.",
+  "independent_local_scorer": "analyze_peak_subject_validation.py",
+  "source_archives": "OfficialGUARDIANfigshareDOI10.6084/m9.figshare.12186516.v2; acquisition.json maps exact members and original hashes."
+}

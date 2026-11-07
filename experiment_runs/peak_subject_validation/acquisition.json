@@ -1,0 +1,134 @@
+[
+  {
+    "subject": "GDN0003",
+    "scenario": "Resting",
+    "name": "GDN0003/GDN0003_1_Resting.mat",
+    "archive": "https://ndownloader.figshare.com/files/22515785",
+    "ok": true,
+    "size": 41489449,
+    "crc32": 3825716462,
+    "sha256": "5f46863c568ba059b9e627f3f47950ba61d4b5bb61816dec86590cce6fe59f27",
+    "elapsed_seconds": 2.04062227899999
+  },
+  {
+    "subject": "GDN0003",
+    "scenario": "Valsalva",
+    "name": "GDN0003/GDN0003_2_Valsalva.mat",
+    "archive": "https://ndownloader.figshare.com/files/22515785",
+    "ok": true,
+    "size": 72775705,
+    "crc32": 545310496,
+    "sha256": "f416ad85f522f9c28d9276f818a21c37e0d226356c9be0c5d140c89d5bcae11a",
+    "elapsed_seconds": 2.7356323909999674
+  },
+  {
+    "subject": "GDN0008",
+    "scenario": "Resting",
+    "name": "GDN0008/GDN0008_1_Resting.mat",
+    "archive": "https://ndownloader.figshare.com/files/22515785",
+    "ok": true,
+    "size": 42970037,
+    "crc32": 3535857088,
+    "sha256": "5861436b6b82e290f2cea5f38d4c94e05290725f44b1a7338431dcea09286a9c",
+    "elapsed_seconds": 2.405150568999943
+  },
+  {
+    "subject": "GDN0008",
+    "scenario": "Valsalva",
+    "name": "GDN0008/GDN0008_2_Valsalva.mat",
+    "archive": "https://ndownloader.figshare.com/files/22515785",
+    "ok": true,
+    "size": 68539554,
+    "crc32": 474695580,
+    "sha256": "bde4a86dae14feb0e1dcd13a809c7cb789cf32afef2db795ca787f7f769d2377",
+    "elapsed_seconds": 2.7963031500000852
+  },
+  {
+    "subject": "GDN0016",
+    "scenario": "Resting",
+    "name": "GDN0016/GDN0016_1_Resting.mat",
+    "archive": "https://ndownloader.figshare.com/files/22516136",
+    "ok": true,
+    "size": 42415877,
+    "crc32": 592030723,
+    "sha256": "0601f429480118aada54e5c35fb60263575dd1af57f2c85fdbdee8707c5bb60c",
+    "elapsed_seconds": 2.6285228330000336
+  },
+  {
+    "subject": "GDN0016",
+    "scenario": "Valsalva",
+    "name": "GDN0016/GDN0016_2_Valsalva.mat",
+    "archive": "https://ndownloader.figshare.com/files/22516136",
+    "ok": true,
+    "size": 68974837,
+    "crc32": 4046700176,
+    "sha256": "f88835b28ad237d1eb82e9f8bd9ca23a02766db7eafb3162d342df83b2b9b649",
+    "elapsed_seconds": 2.799161067
+  },
+  {
+    "subject": "GDN0018",
+    "scenario": "Resting",
+    "name": "GDN0018/GDN0018_1_Resting.mat",
+    "archive": "https://ndownloader.figshare.com/files/22516136",
+    "ok": true,
+    "size": 44451793,
+    "crc32": 464432720,
+    "sha256": "0bc5eebdf62c5beb6757383a47e9ccca11dcf7ea21d5dedb4a3d068ec5b8898e",
+    "elapsed_seconds": 2.2853125689999843
+  },
+  {
+    "subject": "GDN0018",
+    "scenario": "Valsalva",
+    "name": "GDN0018/GDN0018_2_Valsalva.mat",
+    "archive": "https://ndownloader.figshare.com/files/22516136",
+    "ok": true,
+    "size": 81203408,
+    "crc32": 3143365242,
+    "sha256": "ee2605846e436dbea4d6a0ff637d1541c2cabe8e403b97fe33d372a28ce50ca7",
+    "elapsed_seconds": 2.8743307109999705
+  },
+  {
+    "subject": "GDN0022",
+    "scenario": "Resting",
+    "name": "GDN0022/GDN0022_1_Resting.mat",
+    "archive": "https://ndownloader.figshare.com/files/22521941",
+    "ok": true,
+    "size": 45941837,
+    "crc32": 3279703791,
+    "sha256": "73e7f4fe4542e26bfed805fbe055ab19d9f1f3a451449819594bd3bba6e63be8",
+    "elapsed_seconds": 1.9359201659999599
+  },
+  {
+    "subject": "GDN0022",
+    "scenario": "Valsalva",
+    "name": "GDN0022/GDN0022_2_Valsalva.mat",
+    "archive": "https://ndownloader.figshare.com/files/22521941",
+    "ok": true,
+    "size": 76255379,
+    "crc32": 1183080286,
+    "sha256": "059c99963e8df58124c7746b54c45db6ea889e73cc6887abf3e83f8391d1b29c",
+    "elapsed_seconds": 3.125261247000026
+  },
+  {
+    "subject": "GDN0025",
+    "scenario": "Resting",
+    "name": "GDN0025/GDN0025_1_Resting.mat",
+    "archive": "https://ndownloader.figshare.com/files/22521941",
+    "ok": true,
+    "size": 43256051,
+    "crc32": 171297993,
+    "sha256": "e53b1e378535fc350be57bd159e66a80c216d509bced2dc0c3400c901c3b2532",
+    "elapsed_seconds": 2.3778888370000004
+  },
+  {
+    "subject": "GDN0025",
+    "scenario": "Valsalva",
+    "name": "GDN0025/GDN0025_2_Valsalva.mat",
+    "archive": "https://ndownloader.figshare.com/files/22521941",
+    "ok": true,
+    "size": 71891599,
+    "crc32": 2061692442,
+    "sha256": "990f17ca29efdc473cbc3ff4dedd3002e2527a03d78e847b656f4027bdcd9362",
+    "elapsed_seconds": 2.8417773679999527
+  }
+]
