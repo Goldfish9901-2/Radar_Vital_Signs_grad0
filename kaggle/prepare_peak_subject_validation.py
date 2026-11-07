@@ -24,7 +24,7 @@ script += "for name,digest in expected.items(): assert hashlib.sha256((root/name
 script += "subprocess.run([sys.executable,'-m','pip','install','--quiet','neurokit2==0.2.12'],check=True)\n"
 script += "subprocess.run([sys.executable,str(root/'run_peak_subject_validation.py')],check=True)\n"
 (stage/'launch.py').write_text(script, encoding='utf-8')
-(stage/'kernel-metadata.json').write_text(json.dumps(dict(id='goldfish9901/peak-subject-validation',
+(stage/'kernel-metadata.json').write_text(json.dumps(dict(id='goldfish9901/frozen-peak-subject-validation',
     title='Frozen Peak Subject Validation', code_file='launch.py', language='python', kernel_type='script',
     is_private=True, enable_gpu=False, enable_internet=True, dataset_sources=[], competition_sources=[], kernel_sources=[]), indent=2))
 print(stage)
